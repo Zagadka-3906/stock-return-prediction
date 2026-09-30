@@ -1,0 +1,107 @@
+{
+  "arms": {
+    "fixed": {
+      "five_year_equal_mean": 0.4279237830807771,
+      "worst_year": 2024,
+      "worst_year_score": 0.4155129211692754,
+      "best_year": 2022,
+      "best_year_score": 0.4437839900641881,
+      "annual_score_std": 0.011708756776616917,
+      "winning_years": [
+        2021,
+        2024
+      ],
+      "losing_years": [
+        2020,
+        2022,
+        2023
+      ],
+      "tied_years": [],
+      "annual_metric_equal_means": {
+        "ic_mean": 0.11688551933798139,
+        "ic_std": 0.10750503962661635,
+        "icir": 1.1244269978239738,
+        "ic_positive_ratio": 0.870434989626909,
+        "annual_excess": 0.305760047928401,
+        "top1_annual_ret": 0.3310873568092957,
+        "mean_turnover": 0.03519479677645242,
+        "final_score": 0.4279237830807771
+      }
+    },
+    "monthly": {
+      "five_year_equal_mean": 0.4272187123312207,
+      "worst_year": 2024,
+      "worst_year_score": 0.4096341927953897,
+      "best_year": 2022,
+      "best_year_score": 0.4457414790408871,
+      "annual_score_std": 0.013916532836370274,
+      "winning_years": [
+        2020,
+        2022,
+        2023
+      ],
+      "losing_years": [
+        2021,
+        2024
+      ],
+      "tied_years": [],
+      "annual_metric_equal_means": {
+        "ic_mean": 0.11815906086406155,
+        "ic_std": 0.10612752299741202,
+        "icir": 1.140567970017699,
+        "ic_positive_ratio": 0.8745570179913615,
+        "annual_excess": 0.30126935965724,
+        "top1_annual_ret": 0.3265966685381347,
+        "mean_turnover": 0.03475239970525276,
+        "final_score": 0.4272187123312207
+      }
+    }
+  },
+  "decision": {
+    "rule": "All four conditions must pass; otherwise retain fixed slow-only8.",
+    "checks": {
+      "five_year_equal_mean_delta_positive": {
+        "rule": "monthly - fixed > 0",
+        "observed": -0.0007050707495563247,
+        "passed": false
+      },
+      "at_least_three_positive_years": {
+        "rule": "count(annual monthly - fixed > 0) >= 3",
+        "observed": 3,
+        "passed": true
+      },
+      "worst_annual_score_not_lower": {
+        "rule": "min(monthly annual scores) >= min(fixed annual scores)",
+        "monthly_worst_score": 0.4096341927953897,
+        "fixed_worst_score": 0.4155129211692754,
+        "observed": -0.0058787283738857,
+        "passed": false
+      },
+      "bootstrap_lower_bound_positive": {
+        "rule": "five-year equal-mean delta percentile CI95 lower bound > 0",
+        "observed": -0.003515517314599828,
+        "passed": false
+      }
+    },
+    "conditions_passed": 1,
+    "adopt_monthly": false,
+    "recommended_arm": "fixed",
+    "primary_by_mean": "fixed",
+    "failed_conditions": [
+      "five_year_equal_mean_delta_positive",
+      "worst_annual_score_not_lower",
+      "bootstrap_lower_bound_positive"
+    ],
+    "not_a_new_blind_test": true,
+    "not_selection_adjusted": true,
+    "no_claim_of_proven_future_superiority": true
+  },
+  "limitations": [
+    "Previously viewed validation years; not a new independent blind test.",
+    "No 2025--2026 observations, labels or scores enter this comparison or its adoption decision.",
+    "Descriptive intervals conditional on fitted models and recorded years; no repeated-selection correction.",
+    "No resampling of training data, model seeds or shared cross-year training history; independent conditional yearly bootstrap draws.",
+    "Positive resampling share is not a probability of winning on future data.",
+    "Original metric denominators remain fixed; block-boundary weights can shift bootstrap means away from point estimates."
+  ]
+}

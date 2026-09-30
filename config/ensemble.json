@@ -1,0 +1,61 @@
+{
+  "name": "xgboost_peer67_slow16",
+  "base_feature_count": 63,
+  "peer_features": [
+    "PEER_RET1",
+    "PEER_RET1_L1",
+    "PEER_RET3",
+    "PEER_DEV"
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040,
+    2041
+  ],
+  "xgboost_params": {
+    "n_estimators": 360,
+    "max_depth": 7,
+    "learning_rate": 0.025,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "reg_lambda": 5.0,
+    "tree_method": "hist",
+    "n_jobs": 16
+  },
+  "model_directory": "models/ensemble",
+  "feature_cache": "data/peer_features.parquet",
+  "combination": "equal_weight_per_day_cross_sectional_rank_average",
+  "postprocess": {
+    "alpha": 0.9,
+    "bonus": 0.3,
+    "restore_lower": true,
+    "top_current_weight": 1.0
+  },
+  "auxiliary": {
+    "algorithm": "lightgbm",
+    "file": "auxiliary.txt",
+    "rounds": 180,
+    "mode": "top_only",
+    "weight": 0.25,
+    "target": "per_day_1_99_percentile_clip_center_then_training_pooled_RMS"
+  },
+  "prediction": {
+    "float_precision": 17,
+    "rank_affine_scale": 0.04,
+    "rank_center": 0.5,
+    "invalid_value": -0.05
+  }
+}

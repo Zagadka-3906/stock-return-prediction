@@ -1,0 +1,10 @@
+# Optional dependencies for historical experiment programs.
+-r requirements.txt
+optuna==5.0.0
+matplotlib==3.11.2
+
+# Sequence-model feasibility probe (experiments/sequence_model.py, sequence_training.py).
+# The cu128 build is required for the Blackwell GPU (compute capability 12.0) and is not
+# on PyPI, so install it from the PyTorch index rather than from this file:
+#   .venv\Scripts\python.exe -m pip install torch==2.11.0+cu128 --index-url https://download.pytorch.org/whl/cu128
+# Install the appropriate PyTorch build separately; the original build was 2.11.0+cu128.
