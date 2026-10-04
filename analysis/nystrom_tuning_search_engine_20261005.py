@@ -32,7 +32,8 @@ def install(number,namespace):
         WAVES=(269,270,271,272) if number==65 else (273,274,275),
         NUMBER=number,ROLES=ROLES,WEIGHTS=WEIGHTS,RETENTIONS=RETENTIONS,
         read=bank.read,dump=bank.dump,sha=bank.sha,log=bank.log,
-        root_model_sources=root_model_sources,state_mapping_path=state_mapping_path)
+        root_model_sources=root_model_sources,state_mapping_path=state_mapping_path,
+        future_native_sources=native_sources)
     for key in ('HERE','YEARS','KEYS','BASE_POST','ARCHIVE','RANKERS','weights_from_name'):
         namespace[key]=getattr(previous,key)
     namespace['FIELDS']=previous.FIELDS+(namespace['GRAPH_FIELD'],)
@@ -98,11 +99,18 @@ def install(number,namespace):
             ROOT/'analysis/finalize_optimization.py',ROOT/'analysis/score_calibrated_candidates_20261003.py',
             ROOT/'analysis/nystrom_ridge_complete_output_search_plan_20261004.json',
             ROOT/'analysis/verify_nystrom_ridge_search_generators_20261004.py',
+            ROOT/'analysis/nystrom_tuning_model_sources_20261005.py',
+            ROOT/'analysis/agreement_gated_weights_20261005.py',
+            ROOT/'analysis/nystrom_future_codec_adapter_20261005.py',
+            ROOT/'analysis/run_nystrom_tuning_round_20261005.py',
+            ROOT/'analysis/verify_nystrom_tuning_search_generators_20261005.py',
+            ROOT/'analysis/nystrom_tuning_complete_search_plan_20261005.json',
             bank.OUT/'protocol.json',ROOT/'后续选模标准.md',ROOT/'active_release.json',state_mapping_path(),
             ns.PREVIOUS/'protocol.json',ns.PREVIOUS/'selection.json',ns.PREVIOUS/'selected_validation.npy',
             ROOT/f'candidates/optimization_20261003_r{number-1}/verification.json',
             ROOT/f'candidates/optimization_20261003_r{number-1}/manifest.json',proof,*gates]
         sources += [Path(path) for path in ns.read(ns.PREVIOUS/'protocol.json')['input_sha256']]
+        sources += [Path(path) for path in ns.read(bank.OUT/'protocol.json')['input_sha256']]
         sources += list(bank.OUT.glob('*/info_202[0-4].json'))+list(bank.OUT.glob('*/model_202[0-4].joblib'))+list(bank.OUT.glob('*/raw_202[0-4].parquet'))
         sources += [Path(bank.native.__file__),bank.native.SOURCE]
         native_universe=native(cfg)
@@ -128,7 +136,7 @@ def install(number,namespace):
             'all_validation_years_previously_viewed':True,'selection_bias_uncorrected':True,
             'global_resource_exhaustion_established':False,
             'input_sha256':{str(path.resolve()):ns.sha(path) for path in dict.fromkeys(sources)}},immutable=True)
-    def prefix_controls(ctx,cfg,counts=(80,275,975)):
+    def prefix_controls(ctx,cfg,counts=(80,260,975)):
         return graph_controls(ctx,graph(cfg),counts)
     def build():
         import numpy as np
@@ -141,17 +149,24 @@ def install(number,namespace):
         assert ctx.score(pred)==ns.read(ns.PREVIOUS/'selection.json')['winner']['metrics']
         controls=[prefix_controls(ctx,cfg)]
         for name in ns.MODELS:
-            case=deepcopy(cfg)
-            if number==65:node(case)['specs']['rest']={'model':name,'weight':.025}
-            else:case=standalone_cfg(name)
-            controls.append(prefix_controls(ctx,case,counts=(80,275)))
+            for role in ROLES if number==65 else ('standalone',):
+                case=deepcopy(cfg)
+                if number==65:node(case)['specs'][role]={'model':name,'weight':.025}
+                else:case=standalone_cfg(name)
+                controls.append({'model':name,'role':role,**prefix_controls(ctx,case,counts=(80,260))})
         from predict_nystrom_tuning_scheme_20261005 import predict
         record={'winner':{**cfg,'connected_final_score':None},'frozen_sha256':{'active_release.json':ns.sha(ROOT/'active_release.json')}}
         predict(ns,record,candidate_path=ns.OUT/'baseline_future_control',mapping_path=ns.PREVIOUS/'future_return_mapping.json')
         assert ns.sha(ns.OUT/'baseline_future_control/submission.csv')==ns.sha(ROOT/f'candidates/optimization_20261003_r{number-1}/submission.csv')
+        changed=deepcopy(cfg)
+        if number==65:node(changed)['specs']['rest']={'model':ns.MODELS[0],'weight':.025}
+        else:changed=standalone_cfg(ns.MODELS[0])
+        record={'winner':{**changed,'connected_final_score':None},'frozen_sha256':{'active_release.json':ns.sha(ROOT/'active_release.json')}}
+        predict(ns,record,candidate_path=ns.OUT/'changed_future_control',mapping_path=ns.PREVIOUS/'future_return_mapping.json')
         ns.dump(ns.OUT/'component_audit.json',{'status':'passed','actual_previous_complete_validation_bit_identical':True,
             'all8_previous_official_metrics_exact':True,'actual_previous_future_csv_byte_identical':True,
             'all10_new_native_models_cold_prefix_andpoisoning_controls':controls,'models_trained':0,'test_labels_read':False,
+            'actual_changed_complete_future_CSV_andcold80_controls_passed':True,
             'output_sha256':{str(path.resolve()):ns.sha(path) for path in paths.values()}},immutable=True)
     def evaluate(ctx,cfg):
         assert previous.configuration(cfg)==previous.configuration(ns.baseline())

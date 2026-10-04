@@ -11,7 +11,7 @@ def source_dir(name):
     return native.OUT/name if name in NEW_CONFIGS else previous.source_dir(name)
 
 def model_path(name,year):return source_dir(name)/f'model_{year}.joblib'
-def train_one(name,year):return native.train_one(name,year) if name in NEW_CONFIGS else previous.train_one(name,year)
+def train_one(name,year):return native.native.train_one(name,year) if name in NEW_CONFIGS else previous.train_one(name,year)
 def load_bundle(path):return previous.load_bundle(path)
 def predict_arrays(bundle,x,dates=None,valid=None):
     if bundle['kind']=='ridge_nystrom':return native.predict_arrays(bundle,x)
