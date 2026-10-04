@@ -1,0 +1,159 @@
+{
+  "status": "prepared_official_rounds_not_yet_queued",
+  "frozen_at_local": "2026-10-04T13:34:48",
+  "model_configurations": {
+    "rank512_drop000_lr0005_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.0005,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 32,
+      "seed": 20261007
+    },
+    "rank512_drop000_seed07_e64": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 64,
+      "seed": 20261007
+    },
+    "rank512_drop000_lr0005_e64": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.0005,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 64,
+      "seed": 20261007
+    },
+    "rank512_drop000_wd001_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 32,
+      "seed": 20261007
+    }
+  },
+  "new_native_models": 4,
+  "new_annual_fits": 20,
+  "actual_previous_selection_required": {
+    "55": 54,
+    "56": 55
+  },
+  "waves": {
+    "55": [
+      233,
+      234,
+      235,
+      236
+    ],
+    "56": [
+      237,
+      238,
+      239
+    ]
+  },
+  "records_per_wave": {
+    "55": [
+      49,
+      8,
+      18,
+      25
+    ],
+    "56": [
+      25,
+      56,
+      17
+    ]
+  },
+  "expected_total_records": {
+    "55": 100,
+    "56": 98
+  },
+  "roles": [
+    "membership",
+    "top",
+    "rest"
+  ],
+  "role_weights": [
+    0.005,
+    0.025,
+    0.075,
+    0.2
+  ],
+  "role_floor_choices": [
+    0.0,
+    0.97,
+    0.98,
+    0.984,
+    0.99
+  ],
+  "extra_limit_delta_choices": [
+    -0.04,
+    -0.02,
+    0.0,
+    0.02,
+    0.04
+  ],
+  "standalone_initial_alpha_choices": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "standalone_initial_auxiliary_choices": [
+    0.0,
+    0.25
+  ],
+  "standalone_initial_bonus": 0.3,
+  "each_adaptive_coordinate_anchor_frozen_before_scoring": true,
+  "actual_generator_control_status": "passed",
+  "complete5635800_row_validation_andcausal_calibration_required": true,
+  "actual_previous1599600_row_future_CSV_byte_identity_required_before_quality_search": true,
+  "new_role_inserted_before_frozen_final_temporal_transform": true,
+  "standalone_replacement_discards_old_root_andall_old_role_layers": true,
+  "scoring_target": ".4*IC_mean+.3*annual_excess+.3*(1-mean_turnover)",
+  "same_continuous_validation_dates": "2020–2024;5635800 rows;1212 days;no year-boundary turnover reset",
+  "forecast_calibration": "Mature past-only; actual one-day-return CSV scored by original official evaluator",
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "global_resource_exhaustion_established": false,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\freeze_neural_interaction_search_plan_20261004.py": "9dc5732468eed7ebe059be62ff971797c8081eece027eb593c21fd8b5a030948",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_interaction_bank_20261004\\protocol.json": "784cc11c841018991fc854fa3887db7f10cf05308e0527388f84191dc3dc0c77",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_interaction_search_generator_preflight_20261004\\verification.json": "d9c0452fa9048336cacb3cd5d07be6d7f53b497a14844828be9c70244b55871a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_interaction_preflight_20261004\\verification.json": "dbc95af2e4513462201a3fa12edf7ed46b65efbe2754c7a64b00d184e9d46a9d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_interaction_adapter_generation_20261004.json": "ecfa78f7e3d8faa7d52b8d7610aa4ef9e35fc8ca83e7b4c1152231542decefb7",
+    "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_20261003_r31.json": "8a0dd959ef9175814491b7a454d4dcb0df0874dc19c120dc6ce31f47f0540e91",
+    "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_20261003_r35.json": "c948badceefc951ccb83276d9e08f11a1f2db254b162b141f60df29e11132517"
+  }
+}

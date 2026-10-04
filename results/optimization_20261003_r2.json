@@ -1,0 +1,496 @@
+{
+  "status": "complete",
+  "scope": "waves44-46",
+  "winner": {
+    "wave": 45,
+    "arm": "round_curve31_r90",
+    "donor": "round_curve31_r90",
+    "recipe": {
+      "type": "model",
+      "family": "round_curve31",
+      "rounds": 90,
+      "params": {},
+      "seed": 2026,
+      "fraction": 0.175,
+      "samples": 8
+    },
+    "slow16_weight": 0.25,
+    "retention": 0.985,
+    "limit_up_delta": 0.1,
+    "connected_final_score": 0.44609097824245914,
+    "metrics": {
+      "ic_mean": 0.11902683730122401,
+      "ic_std": 0.11184029641946215,
+      "icir": 1.0642571694803848,
+      "ic_positive_ratio": 0.8861386138613861,
+      "annual_excess": 0.36014667985813426,
+      "top1_annual_ret": 0.38564043391839176,
+      "mean_turnover": 0.0318792021182359,
+      "final_score": 0.44609097824245914
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.985,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 179,
+      "swaps": 89546,
+      "mean_retention_ratio": 0.9837816959471853
+    }
+  },
+  "baseline_score": 0.4459608624088246,
+  "score_gain": 0.0001301158336345365,
+  "scored_records": 28,
+  "total_scored_records_including_repeats": 831,
+  "fold_models": 20,
+  "checkpoint_predictions": 40,
+  "original_180_round_controls_passed": 5,
+  "boundary_label_maturity_audit": {
+    "status": "passed",
+    "scope": "historical training-label maturity near each validation-year boundary",
+    "test_data_read": false,
+    "method": "Using the supplied training CSV only: within December20-January10 windows, inspect each finite-label training row and the next per-stock panel date/close; next close must be available no later than the purged cutoff.",
+    "boundaries": [
+      {
+        "exclusive_cutoff": 20191231,
+        "finite_label_rows_checked": 25243,
+        "missing_next_close": 0,
+        "latest_next_date": 20191231
+      },
+      {
+        "exclusive_cutoff": 20201231,
+        "finite_label_rows_checked": 30751,
+        "missing_next_close": 0,
+        "latest_next_date": 20201231
+      },
+      {
+        "exclusive_cutoff": 20211231,
+        "finite_label_rows_checked": 37502,
+        "missing_next_close": 0,
+        "latest_next_date": 20211231
+      },
+      {
+        "exclusive_cutoff": 20221230,
+        "finite_label_rows_checked": 34229,
+        "missing_next_close": 0,
+        "latest_next_date": 20221230
+      },
+      {
+        "exclusive_cutoff": 20231229,
+        "finite_label_rows_checked": 31626,
+        "missing_next_close": 0,
+        "latest_next_date": 20231229
+      }
+    ]
+  },
+  "official_metric_change": {
+    "ic_mean": 0.0008464588349038904,
+    "annual_excess": -0.0008220808447460537,
+    "mean_turnover": -0.00012718851032250678
+  },
+  "score_contribution_change": {
+    "IC": 0.00033858353396155617,
+    "excess": -0.0002466242534238161,
+    "turnover": 3.815655309675203e-05
+  },
+  "selection_rule": "highest connected2020-2024 official composite; no other research gate",
+  "validation": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.11902683730122401,
+      "ic_std": 0.11184029641946215,
+      "icir": 1.0642571694803848,
+      "ic_positive_ratio": 0.8861386138613861,
+      "annual_excess": 0.36014667985813426,
+      "top1_annual_ret": 0.38564043391839176,
+      "mean_turnover": 0.0318792021182359,
+      "final_score": 0.44609097824245914
+    },
+    "rows": 5635800,
+    "days": 1212,
+    "fold_calibration_boundaries": {
+      "2020": {
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "validation_first_date": 20200102,
+        "method": "first-fold distribution-based affine fallback from pre2020 training labels; not fitted conditional mean",
+        "ranks_identical": true
+      },
+      "2021": {
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "validation_first_date": 20210104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2022": {
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "validation_first_date": 20220104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2023": {
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "validation_first_date": 20230103,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2024": {
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "validation_first_date": 20240102,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      }
+    },
+    "year_boundary_turnover_included": true,
+    "test_labels_read": false,
+    "future_append_prefix_invariance": [
+      {
+        "through_date": 20200506,
+        "days": 80,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20210126,
+        "days": 260,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20240108,
+        "days": 975,
+        "bit_identical": true
+      }
+    ],
+    "new_model_training_boundary_proofs": [
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      },
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      },
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      },
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      },
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      },
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      },
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      },
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      }
+    ],
+    "csv_sha256": "71e2458f049df73b2e3231afcb9481b4d57a7146173dade2ddb58b37f8087865",
+    "final_map_sha256": "bc73b9dcef98b37d9bc74f5f764483e855134209ef7215105eddc9d43ff45386"
+  },
+  "prediction": {
+    "status": "passed",
+    "csv_sha256": "8ff031513b07200a7028203a4bf1c6ed722030c35fded60abb3fc02fd7b0c978",
+    "rows": 1599600,
+    "days": 344,
+    "codes": 4650,
+    "model_reload_bit_identical": true,
+    "csv_replay_byte_identical": true,
+    "csv_ranks_unchanged": true,
+    "models": {
+      "selected": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r2\\model_selected.txt",
+        "sha256": "0b43dc5d6091750f9e1c04b13f18d6d8f0f18e64b4f154d0d844f7d4c36e659e"
+      }
+    },
+    "validation_score": 0.44609097824245914,
+    "test_labels_read": false,
+    "old_delivery_pointer_unchanged": true,
+    "construction": {
+      "days": 344,
+      "m_frac": 0.985,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 35,
+      "swaps": 4800,
+      "mean_retention_ratio": 0.9863223780667221
+    }
+  },
+  "candidate_submission": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r2\\submission.csv",
+  "test_labels_read_this_round": false,
+  "test_score_of_this_candidate": null,
+  "historical_test_best": {
+    "arm": "wave13",
+    "score": 0.417099224
+  },
+  "historical_test_best_scope": "previously disclosed written-CSV scoring results; not used for selection",
+  "all_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true,
+  "previous_complete_delivery_and_pointers_preserved": true,
+  "source_sha256": {
+    "analysis/optimize_training_round2.py": "8b81bd8c8616f9fb2ce8074b0ddc09677da54af1f5ae16ec6d30919a16f141d2",
+    "analysis/finalize_training_round2.py": "ecf966cb58412f125e619ced37527dc651c0e70574d96d05d95feef9f388ee2d",
+    "analysis/summarize_training_round2.py": "66c5a9f4afdc5918d108689ed3eab713957b0dd362dff5c3eb6dfccae8dd60e4"
+  }
+}

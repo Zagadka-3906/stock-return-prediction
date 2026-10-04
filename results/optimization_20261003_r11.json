@@ -1,0 +1,1803 @@
+{
+  "status": "complete",
+  "scope": "waves71–76",
+  "winner": {
+    "wave": 76,
+    "arm": "limit_shift0.095",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.24,
+    "slow16_weight": 0.2,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "top",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.095,
+    "donor": "baseline",
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.449041870533273,
+    "metrics": {
+      "ic_mean": 0.12008015155444325,
+      "ic_std": 0.11160886273079383,
+      "icir": 1.0759015782114238,
+      "ic_positive_ratio": 0.8836633663366337,
+      "annual_excess": 0.3687461247943105,
+      "top1_annual_ret": 0.39423987885456796,
+      "mean_turnover": 0.03204675842265826,
+      "final_score": 0.449041870533273
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.984,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 188,
+      "swaps": 94648,
+      "mean_retention_ratio": 0.9836941781305582
+    }
+  },
+  "baseline_score": 0.44882887216021156,
+  "score_gain": 0.00021299837306143488,
+  "methods_independently_compared_to_same_baseline": [
+    {
+      "wave": 71,
+      "method": "Top/其余股票分别细调模型权重",
+      "scored_records": 16,
+      "best_including_control": {
+        "top_ensemble_name": "lgb1_xgb0.75_two0_gru1",
+        "ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 0.75,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44896051851094604,
+        "metrics": {
+          "ic_mean": 0.12035393353156745,
+          "ic_std": 0.11168263297973798,
+          "icir": 1.0776423363281797,
+          "ic_positive_ratio": 0.8861386138613861,
+          "annual_excess": 0.3680730312494406,
+          "top1_annual_ret": 0.39356678530969796,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.44896051851094604
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      "best_changed_configuration": {
+        "top_ensemble_name": "lgb1_xgb0.75_two0_gru1",
+        "ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 0.75,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44896051851094604,
+        "metrics": {
+          "ic_mean": 0.12035393353156745,
+          "ic_std": 0.11168263297973798,
+          "icir": 1.0776423363281797,
+          "ic_positive_ratio": 0.8861386138613861,
+          "annual_excess": 0.3680730312494406,
+          "top1_annual_ret": 0.39356678530969796,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.44896051851094604
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      "best_changed_gain": 0.00013164635073448228,
+      "best_gain": 0.00013164635073448228
+    },
+    {
+      "wave": 72,
+      "method": "Top/其余股票分别调整slow16排序权重",
+      "scored_records": 9,
+      "best_including_control": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.18,
+        "slow16_weight": 0.25,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4488717638158866,
+        "metrics": {
+          "ic_mean": 0.12025089433692804,
+          "ic_std": 0.1116196978193875,
+          "icir": 1.0773268221125873,
+          "ic_positive_ratio": 0.8853135313531353,
+          "annual_excess": 0.36791456785876164,
+          "top1_annual_ret": 0.3934083219190191,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.4488717638158866
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      "best_changed_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.18,
+        "slow16_weight": 0.25,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4488717638158866,
+        "metrics": {
+          "ic_mean": 0.12025089433692804,
+          "ic_std": 0.1116196978193875,
+          "icir": 1.0773268221125873,
+          "ic_positive_ratio": 0.8853135313531353,
+          "annual_excess": 0.36791456785876164,
+          "top1_annual_ret": 0.3934083219190191,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.4488717638158866
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      "best_changed_gain": 4.289165567505915e-05,
+      "best_gain": 4.289165567505915e-05
+    },
+    {
+      "wave": 73,
+      "method": "更换留存补入与剔除信号",
+      "scored_records": 19,
+      "best_including_control": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44882887216021156,
+        "metrics": {
+          "ic_mean": 0.1202452027515457,
+          "ic_std": 0.11164975101922453,
+          "icir": 1.0769858566978905,
+          "ic_positive_ratio": 0.886963696369637,
+          "annual_excess": 0.36777918445368785,
+          "top1_annual_ret": 0.39327293851394535,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.44882887216021156
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      "best_changed_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.05,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "slow_finished",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44882887216021156,
+        "metrics": {
+          "ic_mean": 0.1202452027515457,
+          "ic_std": 0.11164975101922453,
+          "icir": 1.0769858566978905,
+          "ic_positive_ratio": 0.886963696369637,
+          "annual_excess": 0.36777918445368785,
+          "top1_annual_ret": 0.39327293851394535,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.44882887216021156
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      "best_changed_gain": 0.0,
+      "best_gain": 0.0
+    },
+    {
+      "wave": 74,
+      "method": "持仓信号融合",
+      "scored_records": 13,
+      "best_including_control": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4490418643189332,
+        "metrics": {
+          "ic_mean": 0.12008013601859381,
+          "ic_std": 0.11169340865166313,
+          "icir": 1.075087039317479,
+          "ic_positive_ratio": 0.8836633663366337,
+          "annual_excess": 0.3687461247943105,
+          "top1_annual_ret": 0.39423987885456796,
+          "mean_turnover": 0.03204675842265826,
+          "final_score": 0.4490418643189332
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 188,
+          "swaps": 94648,
+          "mean_retention_ratio": 0.9836941781305582
+        }
+      },
+      "best_changed_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4490418643189332,
+        "metrics": {
+          "ic_mean": 0.12008013601859381,
+          "ic_std": 0.11169340865166313,
+          "icir": 1.075087039317479,
+          "ic_positive_ratio": 0.8836633663366337,
+          "annual_excess": 0.3687461247943105,
+          "top1_annual_ret": 0.39423987885456796,
+          "mean_turnover": 0.03204675842265826,
+          "final_score": 0.4490418643189332
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 188,
+          "swaps": 94648,
+          "mean_retention_ratio": 0.9836941781305582
+        }
+      },
+      "best_changed_gain": 0.00021299215872166988,
+      "best_gain": 0.00021299215872166988
+    }
+  ],
+  "combination_protocol": {
+    "method_winners": [
+      {
+        "top_ensemble_name": "lgb1_xgb0.75_two0_gru1",
+        "ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 0.75,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44896051851094604,
+        "metrics": {
+          "ic_mean": 0.12035393353156745,
+          "ic_std": 0.11168263297973798,
+          "icir": 1.0776423363281797,
+          "ic_positive_ratio": 0.8861386138613861,
+          "annual_excess": 0.3680730312494406,
+          "top1_annual_ret": 0.39356678530969796,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.44896051851094604
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.18,
+        "slow16_weight": 0.25,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4488717638158866,
+        "metrics": {
+          "ic_mean": 0.12025089433692804,
+          "ic_std": 0.1116196978193875,
+          "icir": 1.0773268221125873,
+          "ic_positive_ratio": 0.8853135313531353,
+          "annual_excess": 0.36791456785876164,
+          "top1_annual_ret": 0.3934083219190191,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.4488717638158866
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.0,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44882887216021156,
+        "metrics": {
+          "ic_mean": 0.1202452027515457,
+          "ic_std": 0.11164975101922453,
+          "icir": 1.0769858566978905,
+          "ic_positive_ratio": 0.886963696369637,
+          "annual_excess": 0.36777918445368785,
+          "top1_annual_ret": 0.39327293851394535,
+          "mean_turnover": 0.032009880921710185,
+          "final_score": 0.44882887216021156
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 181,
+          "swaps": 95833,
+          "mean_retention_ratio": 0.9837144494647172
+        }
+      },
+      {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.2,
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "priority_signal": "top",
+        "membership_signal": "top",
+        "donor": "baseline",
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4490418643189332,
+        "metrics": {
+          "ic_mean": 0.12008013601859381,
+          "ic_std": 0.11169340865166313,
+          "icir": 1.075087039317479,
+          "ic_positive_ratio": 0.8836633663366337,
+          "annual_excess": 0.3687461247943105,
+          "top1_annual_ret": 0.39423987885456796,
+          "mean_turnover": 0.03204675842265826,
+          "final_score": 0.4490418643189332
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 188,
+          "swaps": 94648,
+          "mean_retention_ratio": 0.9836941781305582
+        }
+      }
+    ],
+    "unique_arms": [
+      [
+        "methods0000",
+        {
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.24,
+          "slow16_weight": 0.2,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.0,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ],
+      [
+        "methods0001",
+        {
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.24,
+          "slow16_weight": 0.2,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ],
+      [
+        "methods0100",
+        {
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.18,
+          "slow16_weight": 0.25,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.0,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ],
+      [
+        "methods0101",
+        {
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.18,
+          "slow16_weight": 0.25,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ],
+      [
+        "methods1000",
+        {
+          "top_ensemble_name": "lgb1_xgb0.75_two0_gru1",
+          "ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.24,
+          "slow16_weight": 0.2,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.0,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ],
+      [
+        "methods1001",
+        {
+          "top_ensemble_name": "lgb1_xgb0.75_two0_gru1",
+          "ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.24,
+          "slow16_weight": 0.2,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ],
+      [
+        "methods1100",
+        {
+          "top_ensemble_name": "lgb1_xgb0.75_two0_gru1",
+          "ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.18,
+          "slow16_weight": 0.25,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.0,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ],
+      [
+        "methods1101",
+        {
+          "top_ensemble_name": "lgb1_xgb0.75_two0_gru1",
+          "ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.18,
+          "slow16_weight": 0.25,
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "priority_signal": "top",
+          "membership_signal": "top"
+        }
+      ]
+    ],
+    "deduplication": "exact configuration"
+  },
+  "scored_records": 75,
+  "records_per_wave": {
+    "71": 16,
+    "72": 9,
+    "73": 19,
+    "74": 13,
+    "75": 8,
+    "76": 10
+  },
+  "distinct_output_configurations": 66,
+  "repeat_records": 9,
+  "total_scored_records_including_repeats": 1375,
+  "new_fold_models_trained": 0,
+  "pruned_member_excluded": true,
+  "metric_change_vs_baseline": {
+    "ic_mean": -0.00016505119710244487,
+    "annual_excess": 0.0009669403406226684,
+    "mean_turnover": 3.687750094807235e-05
+  },
+  "score_contributions_vs_baseline": {
+    "RankIC": -6.602047884097794e-05,
+    "annual_excess": 0.0002900821021868005,
+    "turnover": -1.1063250284421705e-05
+  },
+  "component_audit": {
+    "status": "passed",
+    "baseline_role_rankers_bit_identical": true,
+    "baseline_complete_prediction_bit_identical": true,
+    "new_model_training": false,
+    "test_data_read": false,
+    "pruned_member_excluded": true,
+    "output_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb0.75_xgb1_two0_gru1.npy": "9bd6e8564013e61d45129197f3e71a272dd87284675bd267ab128197bdfc7db0",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb0.75_xgb1_two1_gru2.25.npy": "c1e4e8224d4305df422f1b1bc4bb5409418e3b75f28f49d99af3c69ebed7f521",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1.25_xgb1_two0_gru1.npy": "8ee65f297c1e43967c62fea1532d767cece596a743032874570952bbe85bf49f",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1.25_xgb1_two1_gru2.25.npy": "2899628709f81b768df7f27c9f924e48bd687002778b25dabcd568b106d32c8a",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb0.75_two0_gru1.npy": "4bb9c0ff36b1e5a03a8fe496d90b66c3e57d34894af5f71b7f7cb49129641d24",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb0.75_two1_gru2.25.npy": "0bb09dc088c030d5039dd601309b02ec78d39141e5374a9361e96323cbcd9912",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1.25_two0_gru1.npy": "000bd502716ed3be64c4f98ebc6b09fab10f18d23e9215955c61727f59059d72",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1.25_two1_gru2.25.npy": "0cbf7034a2fb3e77b1e6151a65fa9c6fd84d4f1c3302d028c4a7c2e11fa60f0a",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two0.75_gru2.25.npy": "40d80bdaff991defe84f6eacf2cbc1a26f4d2366d3fe3ed73ae1fb6bd19ce5da",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two0_gru0.75.npy": "fa4271dc649e442c09ad59ee8f09fd22a7a626e210154039ae8fc4f67cc9d30c",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two0_gru1.25.npy": "f1ccdef0c479fe1f45525eb2dceb538ab6e6deb81140134f60fd0209540d7274",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two0_gru1.npy": "f34d3ff5069934945d3afb6320af5ab5adfcdb3f6814a19990a9068c941587cf",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two1.25_gru2.25.npy": "87ca2febc717c4543aaed1154dda026cf5775878a49d08808eb23ff01ba53034",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two1_gru2.25.npy": "47255cfa28dd9771447c495abb4124a9127b7b73e0add4e37f2ee78da02b573e",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two1_gru2.5.npy": "88e2d3d426dfdc556e14fe52926afb4095cb72974d2dc797bef2407b6414f35d",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r11\\rankers\\lgb1_xgb1_two1_gru2.npy": "e0169ebf0d2fdfdc6af96a0c96dec1f087bfeb3c643ac52145c5e33fb0ddf2a9"
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12008015155444325,
+      "ic_std": 0.11160886273079383,
+      "icir": 1.0759015782114238,
+      "ic_positive_ratio": 0.8836633663366337,
+      "annual_excess": 0.3687461247943105,
+      "top1_annual_ret": 0.39423987885456796,
+      "mean_turnover": 0.03204675842265826,
+      "final_score": 0.449041870533273
+    },
+    "rows": 5635800,
+    "days": 1212,
+    "fold_calibration_boundaries": {
+      "2020": {
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "validation_first_date": 20200102,
+        "method": "first-fold distribution-based affine fallback from pre2020 training labels; not fitted conditional mean",
+        "ranks_identical": true
+      },
+      "2021": {
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "validation_first_date": 20210104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2022": {
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "validation_first_date": 20220104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2023": {
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "validation_first_date": 20230103,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2024": {
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "validation_first_date": 20240102,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      }
+    },
+    "year_boundary_turnover_included": true,
+    "test_labels_read": false,
+    "future_append_prefix_invariance": [
+      {
+        "through_date": 20200506,
+        "days": 80,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20210126,
+        "days": 260,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20240108,
+        "days": 975,
+        "bit_identical": true
+      }
+    ],
+    "new_model_training_boundary_proofs": [
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      }
+    ],
+    "csv_sha256": "83a5f2e117ac9deae938261c822006c1f7602d6a714d9af8336c275b30b909a2",
+    "final_map_sha256": "71dd9be7acabb022c93a387f36b9a55009a7006cf3d81b0eac7008b2ce1a343e"
+  },
+  "calibrated_written_csv": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12008015155444325,
+      "ic_std": 0.11160886273079383,
+      "icir": 1.0759015782114238,
+      "ic_positive_ratio": 0.8836633663366337,
+      "annual_excess": 0.3687461247943105,
+      "top1_annual_ret": 0.39423987885456796,
+      "mean_turnover": 0.03204675842265826,
+      "final_score": 0.449041870533273
+    },
+    "csv_sha256": "83a5f2e117ac9deae938261c822006c1f7602d6a714d9af8336c275b30b909a2",
+    "test_labels_read": false
+  },
+  "nonzero_method_causal_checks": {
+    "status": "passed",
+    "controls": [
+      {
+        "priority_signal": "slow_finished",
+        "membership_signal": "top",
+        "membership_mode": "within_block",
+        "add_priority_weight": 0.05,
+        "drop_priority_weight": 0.5,
+        "membership_weight": 0.25,
+        "label_poisoning_bit_identical": true,
+        "active_control_changes_prediction": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          },
+          {
+            "days": 975,
+            "through_date": 20240108,
+            "bit_identical": true
+          }
+        ],
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 185,
+          "swaps": 94608,
+          "mean_retention_ratio": 0.9837214884628729
+        }
+      },
+      {
+        "priority_signal": "rest",
+        "membership_signal": "rest",
+        "membership_mode": "global",
+        "add_priority_weight": 0.05,
+        "drop_priority_weight": 0.5,
+        "membership_weight": 0.25,
+        "label_poisoning_bit_identical": true,
+        "active_control_changes_prediction": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          },
+          {
+            "days": 975,
+            "through_date": 20240108,
+            "bit_identical": true
+          }
+        ],
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 184,
+          "swaps": 94288,
+          "mean_retention_ratio": 0.9836759867309552
+        }
+      }
+    ],
+    "test_data_read": false,
+    "new_scored_records": 0,
+    "verification_script_sha256": "12ede85757629064fe7be5202a4a1210a0b639183610e4cc3825d25faaf4314e"
+  },
+  "prediction": {
+    "status": "passed",
+    "csv_sha256": "2884125c2410b205d87018d7ace0bac70423651684d705a0d6cda0f34f627f30",
+    "rows": 1599600,
+    "days": 344,
+    "codes": 4650,
+    "models": {
+      "seed2026_f0.175_r90": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r11\\model_seed2026_f0.175_r90.txt",
+        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r10\\model_seed2026_f0.175_r90.txt",
+          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+          "original": {
+            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r9\\model_seed2026_f0.175_r90.txt",
+            "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+            "original": {
+              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r90.txt",
+              "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+              "original": {
+                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r90.txt",
+                "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                "rounds": 90,
+                "provenance": {
+                  "method": "reuse independently verified full-training tree prefix",
+                  "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+                  "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                  "prefix90_matches_separately_trained90_bit_identically": true
+                }
+              },
+              "weight": 0.25
+            },
+            "weight": 0.25
+          },
+          "weight": 0.25
+        },
+        "weight": 0.25
+      },
+      "seed2026_f0.175_r180": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r11\\model_seed2026_f0.175_r180.txt",
+        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r10\\model_seed2026_f0.175_r180.txt",
+          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+          "original": {
+            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r9\\model_seed2026_f0.175_r180.txt",
+            "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+            "original": {
+              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r180.txt",
+              "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+              "original": {
+                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r180.txt",
+                "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                "rounds": 180,
+                "provenance": {
+                  "method": "reuse independently verified full-training tree prefix",
+                  "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+                  "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                  "prefix90_matches_separately_trained90_bit_identically": true
+                }
+              },
+              "weight": 0.75
+            },
+            "weight": 0.75
+          },
+          "weight": 0.75
+        },
+        "weight": 0.75
+      }
+    },
+    "model_reload_bit_identical": true,
+    "pipeline_replay_bit_identical": true,
+    "csv_replay_byte_identical": true,
+    "csv_ranks_unchanged": true,
+    "validation_score": 0.449041870533273,
+    "test_labels_read": false,
+    "role_ensembles_split": true,
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "priority_signal": "top",
+    "membership_signal": "top",
+    "membership_w5a_weight": 0.75,
+    "membership_mode": "global",
+    "rest_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "pruned_member_excluded": true,
+    "source_predictions_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\pooled_rms25\\backbone_raw.parquet": "e7b47b9c5254527afff11ed2a0561b291ac05d283615c6a4a37bd6f17449cf45",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\T2f_xgboost_test_raw.parquet": "680b9f9c17a5e3d50fde8e8b6b74063c27db8b08d997834de1c7f75b9acd72e0",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2c_two_day_test_raw.parquet": "413bff6bbe8fd760190029271f929a20fb92e5762ae3d8ae083b3e3fa63c162e",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2d_pruned_test_raw.parquet": "39cdc79a5fdac947f255da4075161e91c2fa9bee75092d2e821fe85ba058c3da",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\connected_validation_20261002\\w5a_test\\gru_raw_test.npy": "011b7f69f8d2a7d7784f82f8d40e276fc1d4668e398d14e19dbf0f5b2df88594"
+    },
+    "construction": {
+      "days": 344,
+      "m_frac": 0.984,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 33,
+      "swaps": 6249,
+      "mean_retention_ratio": 0.9854802455053466
+    },
+    "old_delivery_pointer_unchanged": true
+  },
+  "candidate_submission": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r11\\submission.csv",
+  "test_labels_read_this_round": false,
+  "test_score_of_this_candidate": null,
+  "old_deliveries_preserved": true,
+  "all_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true
+}

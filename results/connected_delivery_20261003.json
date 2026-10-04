@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "delivery_id": "connected_topk0175_20261003",
+  "completed_at_local": "2026-10-03T08:49:14+08:00",
+  "scheme": {
+    "donor_topk_training_fraction": 0.175,
+    "donor_seed": 2026,
+    "donor_rounds": 180,
+    "promotion_fraction": 0.1,
+    "reranker": "peer67_slow16 at released settings",
+    "orderer": "0.75 W5a + 0.25 peer67_slow16 daily rank blend at alpha0 bonus0",
+    "retention_fraction": 0.985,
+    "tie_epsilon": 1e-09,
+    "calibration": "monotone isotonic on training OOF predictions plus epsilon percentile"
+  },
+  "validation_score": 0.4459160901521865,
+  "retrospective_score": 0.41486920701044105,
+  "test_highest_recorded": {
+    "scheme": "wave13 W5a-only ordering",
+    "score": 0.417099224,
+    "scope": "existing official written-CSV scoring records; retrospective only"
+  },
+  "source_snapshot_note": "Audit snapshots; run scripts from the project root with the local frozen experiment caches.",
+  "submission_verification": "saved model raw predictions bit-identical; label-free pipeline replay byte-identical",
+  "report": {
+    "total_pages": 10,
+    "body_pages": 8,
+    "font": "宋体10.5pt",
+    "line_spacing": 1.5,
+    "pdf_measured_spacing_pt": 22.2,
+    "word_measured_spacing_pt": 20.4
+  },
+  "preserved_historical_files": 365,
+  "official_preservation_check_files": 369,
+  "platform_upload_performed": false,
+  "submission_sha256": "33f7c552b520e7e51bfee1f1cb84b72c7598118ed62f53928b2b3d5d83c32244"
+}

@@ -1,0 +1,2526 @@
+{
+  "status": "complete",
+  "round": 30,
+  "round_label": "完整方案各层模型权重与后处理联合复搜",
+  "waves": [
+    145,
+    146,
+    147
+  ],
+  "winner": {
+    "wave": 147,
+    "arm": "slow16_weight_2_0.025",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.265,
+    "slow16_weight": 0.255,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "independent",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.075,
+    "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+    "membership_slow_weight": 0.24,
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "membership_power": 1.0,
+    "membership_memory": 0.025,
+    "diverse_augmentation": {
+      "membership": {
+        "model": "rank64_e32",
+        "weight": 0.005,
+        "blend": "score"
+      },
+      "top": {
+        "model": "pair_rank128_e32",
+        "weight": 0.35,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "rank512_e32",
+        "weight": 0.125,
+        "blend": "rank"
+      }
+    },
+    "secondary_augmentation": {
+      "membership": {
+        "model": "rank512_seed17_e32",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "top": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "csrank256_e32",
+        "weight": 0.175,
+        "blend": "score"
+      }
+    },
+    "standalone": null,
+    "final_augmentation": {
+      "membership": {
+        "model": "tail_bce128_e32",
+        "weight": 0.0125
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0,
+        "regime": "return_dispersion",
+        "low": 0.2,
+        "high": 0.0
+      },
+      "rest": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.15,
+        "regime": "return_dispersion",
+        "low": 0.0,
+        "high": 0.1
+      }
+    },
+    "final_limit_delta": 0.0,
+    "standalone_replacement": false,
+    "linear_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "return_ridge_l1",
+        "weight": 0.025
+      }
+    },
+    "linear_limit_delta": -0.02,
+    "donor": "baseline",
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.4508028811246302,
+    "metrics": {
+      "ic_mean": 0.12158028352662809,
+      "ic_std": 0.11064034616811237,
+      "icir": 1.0988783724690543,
+      "ic_positive_ratio": 0.8910891089108911,
+      "annual_excess": 0.37285731556999197,
+      "top1_annual_ret": 0.39835106963024947,
+      "mean_turnover": 0.032288089856728916,
+      "final_score": 0.4508028811246302
+    },
+    "construction": {
+      "foundation": {
+        "days": 1212,
+        "m_frac": 0.984,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 187,
+        "swaps": 93109,
+        "mean_retention_ratio": 0.9836875764424351
+      },
+      "final_augmentation": {
+        "extra_role_augmentation": true,
+        "second_retention": 0.984,
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 187,
+          "swaps": 3842,
+          "mean_retention_ratio": 0.9835701857477712
+        },
+        "additional_limit_shift": 0.0
+      },
+      "linear_augmentation": {
+        "extra_role_augmentation": true,
+        "second_retention": 0.0,
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.0,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 0,
+          "swaps": 0,
+          "mean_retention_ratio": 0.9835701857477712
+        },
+        "additional_limit_shift": -0.02
+      }
+    },
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+      "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+    },
+    "causal_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "parallel_execution": {
+      "worker_slot": 1,
+      "worker_pid": 43496,
+      "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+      "same_declared_configuration": true
+    }
+  },
+  "baseline_score": 0.45075722406964824,
+  "score_gain": 4.565705498194017e-05,
+  "sequential_stage_results": [
+    {
+      "wave": 145,
+      "stage": "各层有效权重独立比较",
+      "scored_records": 55,
+      "best_arm": "diverse_augmentation_rest_1_w0.1",
+      "best_scored_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.23,
+        "priority_signal": "top",
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_signal": "independent",
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "membership_slow_weight": 0.24,
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "diverse_augmentation": {
+          "membership": {
+            "model": "rank64_e32",
+            "weight": 0.005,
+            "blend": "score"
+          },
+          "top": {
+            "model": "pair_rank128_e32",
+            "weight": 0.35,
+            "blend": "rank"
+          },
+          "rest": {
+            "model": "rank512_e32",
+            "weight": 0.1,
+            "blend": "rank"
+          }
+        },
+        "secondary_augmentation": {
+          "membership": {
+            "model": "rank512_seed17_e32",
+            "weight": 0.025,
+            "blend": "rank"
+          },
+          "top": {
+            "model": "rank512_seed18_e64",
+            "weight": 0.025,
+            "blend": "rank"
+          },
+          "rest": {
+            "model": "csrank256_e32",
+            "weight": 0.15,
+            "blend": "score"
+          }
+        },
+        "standalone": null,
+        "final_augmentation": {
+          "membership": {
+            "model": "tail_bce128_e32",
+            "weight": 0.0125
+          },
+          "top": {
+            "model": "none",
+            "weight": 0.0,
+            "regime": "return_dispersion",
+            "low": 0.2,
+            "high": 0.0
+          },
+          "rest": {
+            "model": "rank512_seed18_e64",
+            "weight": 0.125,
+            "regime": "return_dispersion",
+            "low": 0.0,
+            "high": 0.1
+          }
+        },
+        "final_limit_delta": 0.0,
+        "standalone_replacement": false,
+        "linear_augmentation": {
+          "membership": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "top": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "rest": {
+            "model": "return_ridge_l1",
+            "weight": 0.025
+          }
+        },
+        "linear_limit_delta": -0.02,
+        "donor": "baseline",
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "membership_ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.45076699443938245,
+        "metrics": {
+          "ic_mean": 0.12155004790060031,
+          "ic_std": 0.11097489558827216,
+          "icir": 1.0952931945217863,
+          "ic_positive_ratio": 0.8910891089108911,
+          "annual_excess": 0.37277795021576904,
+          "top1_annual_ret": 0.39827170427602643,
+          "mean_turnover": 0.032288032618628025,
+          "final_score": 0.45076699443938245
+        },
+        "construction": {
+          "foundation": {
+            "days": 1212,
+            "m_frac": 0.984,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 187,
+            "swaps": 93109,
+            "mean_retention_ratio": 0.9836875764424351
+          },
+          "final_augmentation": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.984,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 188,
+              "swaps": 3834,
+              "mean_retention_ratio": 0.9835702095762445
+            },
+            "additional_limit_shift": 0.0
+          },
+          "linear_augmentation": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835702095762445
+            },
+            "additional_limit_shift": -0.02
+          }
+        },
+        "official_score_cache": {
+          "cache_hit": false,
+          "cache_key": "e9a792cb38eea86b97664c9b6644d61d9ab790743f4574abcc8915e1b6114fed",
+          "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_3\\identical_official_scores\\e9a792cb38eea86b97664c9b6644d61d9ab790743f4574abcc8915e1b6114fed.json"
+        },
+        "causal_return_mapping": {
+          "actual_return_mapped_csv_scored": true,
+          "within_day_ranks_bit_identical": true,
+          "boundaries": [
+            {
+              "year": 2020,
+              "mapping_last_label_date": 20191230,
+              "exclusive_cutoff": 20191231,
+              "method": "prevalidation training moments affine fallback"
+            },
+            {
+              "year": 2021,
+              "mapping_last_label_date": 20201230,
+              "exclusive_cutoff": 20201231,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2022,
+              "mapping_last_label_date": 20211230,
+              "exclusive_cutoff": 20211231,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2023,
+              "mapping_last_label_date": 20221229,
+              "exclusive_cutoff": 20221230,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2024,
+              "mapping_last_label_date": 20231228,
+              "exclusive_cutoff": 20231229,
+              "method": "past mature OOF isotonic"
+            }
+          ],
+          "test_labels_read": false,
+          "cross_round_identical_official_reuse": {
+            "cross_round_cache_hit": false
+          }
+        },
+        "parallel_execution": {
+          "worker_slot": 3,
+          "worker_pid": 44572,
+          "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_3\\scoring_validation_only",
+          "same_declared_configuration": true
+        }
+      },
+      "cumulative_best": 0.45076699443938245,
+      "gain_from_previous_stage": 9.770369734207751e-06
+    },
+    {
+      "wave": 146,
+      "stage": "完整重新计算的坐标细搜",
+      "scored_records": 54,
+      "best_arm": "final_augmentation_rest_5_w0.15",
+      "best_scored_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.23,
+        "priority_signal": "top",
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_signal": "independent",
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "membership_slow_weight": 0.24,
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "diverse_augmentation": {
+          "membership": {
+            "model": "rank64_e32",
+            "weight": 0.005,
+            "blend": "score"
+          },
+          "top": {
+            "model": "pair_rank128_e32",
+            "weight": 0.35,
+            "blend": "rank"
+          },
+          "rest": {
+            "model": "rank512_e32",
+            "weight": 0.125,
+            "blend": "rank"
+          }
+        },
+        "secondary_augmentation": {
+          "membership": {
+            "model": "rank512_seed17_e32",
+            "weight": 0.025,
+            "blend": "rank"
+          },
+          "top": {
+            "model": "rank512_seed18_e64",
+            "weight": 0.025,
+            "blend": "rank"
+          },
+          "rest": {
+            "model": "csrank256_e32",
+            "weight": 0.175,
+            "blend": "score"
+          }
+        },
+        "standalone": null,
+        "final_augmentation": {
+          "membership": {
+            "model": "tail_bce128_e32",
+            "weight": 0.0125
+          },
+          "top": {
+            "model": "none",
+            "weight": 0.0,
+            "regime": "return_dispersion",
+            "low": 0.2,
+            "high": 0.0
+          },
+          "rest": {
+            "model": "rank512_seed18_e64",
+            "weight": 0.15,
+            "regime": "return_dispersion",
+            "low": 0.0,
+            "high": 0.1
+          }
+        },
+        "final_limit_delta": 0.0,
+        "standalone_replacement": false,
+        "linear_augmentation": {
+          "membership": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "top": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "rest": {
+            "model": "return_ridge_l1",
+            "weight": 0.025
+          }
+        },
+        "linear_limit_delta": -0.02,
+        "donor": "baseline",
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "membership_ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4507802393061353,
+        "metrics": {
+          "ic_mean": 0.12157877055469303,
+          "ic_std": 0.1106508585471918,
+          "icir": 1.0987603001999353,
+          "ic_positive_ratio": 0.8927392739273927,
+          "annual_excess": 0.3727838601375892,
+          "top1_annual_ret": 0.39827761419784663,
+          "mean_turnover": 0.032288089856728916,
+          "final_score": 0.4507802393061353
+        },
+        "construction": {
+          "foundation": {
+            "days": 1212,
+            "m_frac": 0.984,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 187,
+            "swaps": 93109,
+            "mean_retention_ratio": 0.9836875764424351
+          },
+          "final_augmentation": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.984,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 3863,
+              "mean_retention_ratio": 0.9835701857477712
+            },
+            "additional_limit_shift": 0.0
+          },
+          "linear_augmentation": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835701857477712
+            },
+            "additional_limit_shift": -0.02
+          }
+        },
+        "official_score_cache": {
+          "cache_hit": false,
+          "cache_key": "3b00da50f0b850f1e533fe4e94eadd2373b459939db7b13bbce08e050bd562eb",
+          "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_2\\identical_official_scores\\3b00da50f0b850f1e533fe4e94eadd2373b459939db7b13bbce08e050bd562eb.json"
+        },
+        "causal_return_mapping": {
+          "actual_return_mapped_csv_scored": true,
+          "within_day_ranks_bit_identical": true,
+          "boundaries": [
+            {
+              "year": 2020,
+              "mapping_last_label_date": 20191230,
+              "exclusive_cutoff": 20191231,
+              "method": "prevalidation training moments affine fallback"
+            },
+            {
+              "year": 2021,
+              "mapping_last_label_date": 20201230,
+              "exclusive_cutoff": 20201231,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2022,
+              "mapping_last_label_date": 20211230,
+              "exclusive_cutoff": 20211231,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2023,
+              "mapping_last_label_date": 20221229,
+              "exclusive_cutoff": 20221230,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2024,
+              "mapping_last_label_date": 20231228,
+              "exclusive_cutoff": 20231229,
+              "method": "past mature OOF isotonic"
+            }
+          ],
+          "test_labels_read": false,
+          "cross_round_identical_official_reuse": {
+            "cross_round_cache_hit": false
+          }
+        },
+        "parallel_execution": {
+          "worker_slot": 2,
+          "worker_pid": 2836,
+          "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_2\\scoring_validation_only",
+          "same_declared_configuration": true
+        }
+      },
+      "cumulative_best": 0.4507802393061353,
+      "gain_from_previous_stage": 1.3244866752859519e-05
+    },
+    {
+      "wave": 147,
+      "stage": "完整输出参数细调",
+      "scored_records": 37,
+      "best_arm": "slow16_weight_2_0.025",
+      "best_scored_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.265,
+        "slow16_weight": 0.255,
+        "priority_signal": "top",
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_signal": "independent",
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "membership_slow_weight": 0.24,
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "diverse_augmentation": {
+          "membership": {
+            "model": "rank64_e32",
+            "weight": 0.005,
+            "blend": "score"
+          },
+          "top": {
+            "model": "pair_rank128_e32",
+            "weight": 0.35,
+            "blend": "rank"
+          },
+          "rest": {
+            "model": "rank512_e32",
+            "weight": 0.125,
+            "blend": "rank"
+          }
+        },
+        "secondary_augmentation": {
+          "membership": {
+            "model": "rank512_seed17_e32",
+            "weight": 0.025,
+            "blend": "rank"
+          },
+          "top": {
+            "model": "rank512_seed18_e64",
+            "weight": 0.025,
+            "blend": "rank"
+          },
+          "rest": {
+            "model": "csrank256_e32",
+            "weight": 0.175,
+            "blend": "score"
+          }
+        },
+        "standalone": null,
+        "final_augmentation": {
+          "membership": {
+            "model": "tail_bce128_e32",
+            "weight": 0.0125
+          },
+          "top": {
+            "model": "none",
+            "weight": 0.0,
+            "regime": "return_dispersion",
+            "low": 0.2,
+            "high": 0.0
+          },
+          "rest": {
+            "model": "rank512_seed18_e64",
+            "weight": 0.15,
+            "regime": "return_dispersion",
+            "low": 0.0,
+            "high": 0.1
+          }
+        },
+        "final_limit_delta": 0.0,
+        "standalone_replacement": false,
+        "linear_augmentation": {
+          "membership": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "top": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "rest": {
+            "model": "return_ridge_l1",
+            "weight": 0.025
+          }
+        },
+        "linear_limit_delta": -0.02,
+        "donor": "baseline",
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "membership_ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4508028811246302,
+        "metrics": {
+          "ic_mean": 0.12158028352662809,
+          "ic_std": 0.11064034616811237,
+          "icir": 1.0988783724690543,
+          "ic_positive_ratio": 0.8910891089108911,
+          "annual_excess": 0.37285731556999197,
+          "top1_annual_ret": 0.39835106963024947,
+          "mean_turnover": 0.032288089856728916,
+          "final_score": 0.4508028811246302
+        },
+        "construction": {
+          "foundation": {
+            "days": 1212,
+            "m_frac": 0.984,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 187,
+            "swaps": 93109,
+            "mean_retention_ratio": 0.9836875764424351
+          },
+          "final_augmentation": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.984,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 3842,
+              "mean_retention_ratio": 0.9835701857477712
+            },
+            "additional_limit_shift": 0.0
+          },
+          "linear_augmentation": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835701857477712
+            },
+            "additional_limit_shift": -0.02
+          }
+        },
+        "official_score_cache": {
+          "cache_hit": false,
+          "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+          "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+        },
+        "causal_return_mapping": {
+          "actual_return_mapped_csv_scored": true,
+          "within_day_ranks_bit_identical": true,
+          "boundaries": [
+            {
+              "year": 2020,
+              "mapping_last_label_date": 20191230,
+              "exclusive_cutoff": 20191231,
+              "method": "prevalidation training moments affine fallback"
+            },
+            {
+              "year": 2021,
+              "mapping_last_label_date": 20201230,
+              "exclusive_cutoff": 20201231,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2022,
+              "mapping_last_label_date": 20211230,
+              "exclusive_cutoff": 20211231,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2023,
+              "mapping_last_label_date": 20221229,
+              "exclusive_cutoff": 20221230,
+              "method": "past mature OOF isotonic"
+            },
+            {
+              "year": 2024,
+              "mapping_last_label_date": 20231228,
+              "exclusive_cutoff": 20231229,
+              "method": "past mature OOF isotonic"
+            }
+          ],
+          "test_labels_read": false,
+          "cross_round_identical_official_reuse": {
+            "cross_round_cache_hit": false
+          }
+        },
+        "parallel_execution": {
+          "worker_slot": 1,
+          "worker_pid": 43496,
+          "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+          "same_declared_configuration": true
+        }
+      },
+      "cumulative_best": 0.4508028811246302,
+      "gain_from_previous_stage": 2.26418184948729e-05
+    }
+  ],
+  "scored_records": 146,
+  "records_per_wave": {
+    "145": 55,
+    "146": 54,
+    "147": 37
+  },
+  "distinct_output_configurations": 108,
+  "repeat_records": 38,
+  "official_score_reuse": {
+    "records_with_cache_provenance": 146,
+    "identical_csv_reuse_records": 44,
+    "fresh_official_evaluations_in_scored_records": 102,
+    "distinct_csv_scoring_input_capsules": 103
+  },
+  "calibration_cache_recovery": null,
+  "new_fold_model_training": false,
+  "metric_change_vs_baseline": {
+    "ic_mean": 6.983611978528259e-05,
+    "annual_excess": 6.622808519612944e-05,
+    "mean_turnover": 7.152728303386202e-06
+  },
+  "score_contributions_vs_baseline": {
+    "RankIC": 2.7934447914113037e-05,
+    "annual_excess": 1.986842555883883e-05,
+    "turnover": -2.1458184910158604e-06
+  },
+  "component_audit": {
+    "status": "passed",
+    "complete_previous_output_recomputed_bit_identically": true,
+    "controls": {
+      "standalone": null,
+      "label_poisoning_bit_identical": true,
+      "future_append_prefix_invariance": [
+        {
+          "days": 80,
+          "through_date": 20200506,
+          "bit_identical": true,
+          "postprocessing_recomputed_from_prefix": true
+        },
+        {
+          "days": 260,
+          "through_date": 20210126,
+          "bit_identical": true,
+          "postprocessing_recomputed_from_prefix": true
+        },
+        {
+          "days": 975,
+          "through_date": 20240108,
+          "bit_identical": true,
+          "postprocessing_recomputed_from_prefix": true
+        }
+      ],
+      "cold_prefix_controls": [
+        {
+          "days": 80,
+          "through_date": 20200506,
+          "new_model_signal_and_regime_caches_empty": true,
+          "bit_identical": true
+        },
+        {
+          "days": 260,
+          "through_date": 20210126,
+          "new_model_signal_and_regime_caches_empty": true,
+          "bit_identical": true
+        },
+        {
+          "days": 975,
+          "through_date": 20240108,
+          "new_model_signal_and_regime_caches_empty": true,
+          "bit_identical": true
+        }
+      ]
+    },
+    "models_trained": 0,
+    "test_data_read": false,
+    "output_sha256": {}
+  },
+  "validation": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12158028352662809,
+      "ic_std": 0.11064034616811237,
+      "icir": 1.0988783724690543,
+      "ic_positive_ratio": 0.8910891089108911,
+      "annual_excess": 0.37285731556999197,
+      "top1_annual_ret": 0.39835106963024947,
+      "mean_turnover": 0.032288089856728916,
+      "final_score": 0.4508028811246302
+    },
+    "rows": 5635800,
+    "days": 1212,
+    "fold_calibration_boundaries": {
+      "2020": {
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "validation_first_date": 20200102,
+        "method": "first-fold distribution-based affine fallback from pre2020 training labels; not fitted conditional mean",
+        "ranks_identical": true
+      },
+      "2021": {
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "validation_first_date": 20210104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2022": {
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "validation_first_date": 20220104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2023": {
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "validation_first_date": 20230103,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2024": {
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "validation_first_date": 20240102,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      }
+    },
+    "year_boundary_turnover_included": true,
+    "test_labels_read": false,
+    "future_append_prefix_invariance": [
+      {
+        "through_date": 20200506,
+        "days": 80,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20210126,
+        "days": 260,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20240108,
+        "days": 975,
+        "bit_identical": true
+      }
+    ],
+    "new_model_training_boundary_proofs": [],
+    "csv_sha256": "9b6dfbcf24a92913370654db2e7d38b38d8bcc742b3f0dac7594840b45fd8ca7",
+    "final_map_sha256": "bf2e7b4cf1963ad0bf5ad2e45c7d937dddc0cbd08d629eaba5adc262d57927a5"
+  },
+  "calibrated_written_csv": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12158028352662809,
+      "ic_std": 0.11064034616811237,
+      "icir": 1.0988783724690543,
+      "ic_positive_ratio": 0.8910891089108911,
+      "annual_excess": 0.37285731556999197,
+      "top1_annual_ret": 0.39835106963024947,
+      "mean_turnover": 0.032288089856728916,
+      "final_score": 0.4508028811246302
+    },
+    "csv_sha256": "9b6dfbcf24a92913370654db2e7d38b38d8bcc742b3f0dac7594840b45fd8ca7",
+    "test_labels_read": false
+  },
+  "method_causal_checks": {
+    "status": "passed",
+    "selected_output_bit_identical": true,
+    "controls": {
+      "standalone": null,
+      "label_poisoning_bit_identical": true,
+      "future_append_prefix_invariance": [
+        {
+          "days": 80,
+          "through_date": 20200506,
+          "bit_identical": true,
+          "postprocessing_recomputed_from_prefix": true
+        },
+        {
+          "days": 260,
+          "through_date": 20210126,
+          "bit_identical": true,
+          "postprocessing_recomputed_from_prefix": true
+        },
+        {
+          "days": 975,
+          "through_date": 20240108,
+          "bit_identical": true,
+          "postprocessing_recomputed_from_prefix": true
+        }
+      ],
+      "cold_prefix_controls": [
+        {
+          "days": 80,
+          "through_date": 20200506,
+          "new_model_signal_and_regime_caches_empty": true,
+          "bit_identical": true
+        },
+        {
+          "days": 260,
+          "through_date": 20210126,
+          "new_model_signal_and_regime_caches_empty": true,
+          "bit_identical": true
+        },
+        {
+          "days": 975,
+          "through_date": 20240108,
+          "new_model_signal_and_regime_caches_empty": true,
+          "bit_identical": true
+        }
+      ]
+    },
+    "new_model_training": false,
+    "test_data_read": false,
+    "new_scored_records": 0
+  },
+  "prediction": {
+    "status": "passed",
+    "csv_sha256": "c907f3cc6b9586000f134e28a6c30cf41d148c5c1a5d88410269869c01080696",
+    "rows": 1599600,
+    "days": 344,
+    "codes": 4650,
+    "models": {
+      "seed2026_f0.175_r90": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_seed2026_f0.175_r90.txt",
+        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r29\\model_seed2026_f0.175_r90.txt",
+          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+          "original": {
+            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r23\\model_seed2026_f0.175_r90.txt",
+            "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+            "original": {
+              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r22\\model_seed2026_f0.175_r90.txt",
+              "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+              "original": {
+                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r21\\model_seed2026_f0.175_r90.txt",
+                "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                "original": {
+                  "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r20\\model_seed2026_f0.175_r90.txt",
+                  "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                  "original": {
+                    "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r19\\model_seed2026_f0.175_r90.txt",
+                    "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                    "original": {
+                      "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r18\\model_seed2026_f0.175_r90.txt",
+                      "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                      "original": {
+                        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r17\\model_seed2026_f0.175_r90.txt",
+                        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                        "original": {
+                          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r16\\model_seed2026_f0.175_r90.txt",
+                          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                          "original": {
+                            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r15\\model_seed2026_f0.175_r90.txt",
+                            "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                            "original": {
+                              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r14\\model_seed2026_f0.175_r90.txt",
+                              "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                              "original": {
+                                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r13\\model_seed2026_f0.175_r90.txt",
+                                "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                                "original": {
+                                  "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r12\\model_seed2026_f0.175_r90.txt",
+                                  "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                                  "original": {
+                                    "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r11\\model_seed2026_f0.175_r90.txt",
+                                    "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                                    "original": {
+                                      "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r10\\model_seed2026_f0.175_r90.txt",
+                                      "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                                      "original": {
+                                        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r9\\model_seed2026_f0.175_r90.txt",
+                                        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                                        "original": {
+                                          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r90.txt",
+                                          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                                          "original": {
+                                            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r90.txt",
+                                            "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                                            "rounds": 90,
+                                            "provenance": {
+                                              "method": "reuse independently verified full-training tree prefix",
+                                              "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+                                              "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                              "prefix90_matches_separately_trained90_bit_identically": true
+                                            }
+                                          },
+                                          "weight": 0.25
+                                        },
+                                        "weight": 0.25
+                                      },
+                                      "weight": 0.25
+                                    },
+                                    "weight": 0.25
+                                  },
+                                  "weight": 0.25
+                                },
+                                "weight": 0.25
+                              },
+                              "weight": 0.25
+                            },
+                            "weight": 0.25
+                          },
+                          "weight": 0.25
+                        },
+                        "weight": 0.25
+                      },
+                      "weight": 0.25
+                    },
+                    "weight": 0.25
+                  },
+                  "weight": 0.25
+                },
+                "weight": 0.25
+              },
+              "weight": 0.25
+            },
+            "weight": 0.25
+          },
+          "weight": 0.25,
+          "foundation_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r28\\model_seed2026_f0.175_r90.txt",
+          "previous_candidate_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r27\\model_seed2026_f0.175_r90.txt"
+        },
+        "weight": 0.25
+      },
+      "seed2026_f0.175_r180": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_seed2026_f0.175_r180.txt",
+        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r29\\model_seed2026_f0.175_r180.txt",
+          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+          "original": {
+            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r23\\model_seed2026_f0.175_r180.txt",
+            "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+            "original": {
+              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r22\\model_seed2026_f0.175_r180.txt",
+              "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+              "original": {
+                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r21\\model_seed2026_f0.175_r180.txt",
+                "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                "original": {
+                  "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r20\\model_seed2026_f0.175_r180.txt",
+                  "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                  "original": {
+                    "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r19\\model_seed2026_f0.175_r180.txt",
+                    "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                    "original": {
+                      "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r18\\model_seed2026_f0.175_r180.txt",
+                      "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                      "original": {
+                        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r17\\model_seed2026_f0.175_r180.txt",
+                        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                        "original": {
+                          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r16\\model_seed2026_f0.175_r180.txt",
+                          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                          "original": {
+                            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r15\\model_seed2026_f0.175_r180.txt",
+                            "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                            "original": {
+                              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r14\\model_seed2026_f0.175_r180.txt",
+                              "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                              "original": {
+                                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r13\\model_seed2026_f0.175_r180.txt",
+                                "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                "original": {
+                                  "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r12\\model_seed2026_f0.175_r180.txt",
+                                  "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                  "original": {
+                                    "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r11\\model_seed2026_f0.175_r180.txt",
+                                    "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                    "original": {
+                                      "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r10\\model_seed2026_f0.175_r180.txt",
+                                      "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                      "original": {
+                                        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r9\\model_seed2026_f0.175_r180.txt",
+                                        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                        "original": {
+                                          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r180.txt",
+                                          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                          "original": {
+                                            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r180.txt",
+                                            "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                            "rounds": 180,
+                                            "provenance": {
+                                              "method": "reuse independently verified full-training tree prefix",
+                                              "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+                                              "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                                              "prefix90_matches_separately_trained90_bit_identically": true
+                                            }
+                                          },
+                                          "weight": 0.75
+                                        },
+                                        "weight": 0.75
+                                      },
+                                      "weight": 0.75
+                                    },
+                                    "weight": 0.75
+                                  },
+                                  "weight": 0.75
+                                },
+                                "weight": 0.75
+                              },
+                              "weight": 0.75
+                            },
+                            "weight": 0.75
+                          },
+                          "weight": 0.75
+                        },
+                        "weight": 0.75
+                      },
+                      "weight": 0.75
+                    },
+                    "weight": 0.75
+                  },
+                  "weight": 0.75
+                },
+                "weight": 0.75
+              },
+              "weight": 0.75
+            },
+            "weight": 0.75
+          },
+          "weight": 0.75,
+          "foundation_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r28\\model_seed2026_f0.175_r180.txt",
+          "previous_candidate_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r27\\model_seed2026_f0.175_r180.txt"
+        },
+        "weight": 0.75
+      },
+      "diverse_csrank256_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_csrank256_e32.joblib",
+        "sha256": "35d7df9fb78e98b40eb5e3c61c2c6480e71d8203fc6bca96fbc88c2b9914dd71",
+        "training_info": {
+          "status": "passed",
+          "model": "csrank256_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "target": "y_rank",
+            "hidden": [
+              256,
+              128
+            ],
+            "epochs": 32,
+            "seed": 20261006
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "566e6a33513a13a460006a04eefc5391f9a059e5d084771664999b327bb4c5a5",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 34.71899999999732,
+          "model_sha256": "35d7df9fb78e98b40eb5e3c61c2c6480e71d8203fc6bca96fbc88c2b9914dd71",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 37.98400000000038
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\cross_section_bank_20261003\\csrank256_e32\\model_2025.joblib"
+      },
+      "diverse_pair_rank128_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_pair_rank128_e32.joblib",
+        "sha256": "c3811eb992d5cc671ff49106e95ca3ba8ddbc0d611f13f45b80ec58b9f3fd0f4",
+        "training_info": {
+          "status": "passed",
+          "model": "pair_rank128_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "hidden": [
+              128,
+              64
+            ],
+            "epochs": 32,
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "objective": "same_day_ranknet",
+            "temperature": 0.1,
+            "mse_weight": 0.1,
+            "seed": 20261012
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 56.42099999999846,
+          "model_sha256": "c3811eb992d5cc671ff49106e95ca3ba8ddbc0d611f13f45b80ec58b9f3fd0f4",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 60.39099999999962
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\objective_bank_20261003\\pair_rank128_e32\\model_2025.joblib"
+      },
+      "diverse_rank512_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_rank512_e32.joblib",
+        "sha256": "515ecf800f2df38d548a7a62ea815bc9661f1a840bbcdaf90106a17bb3241a85",
+        "training_info": {
+          "status": "passed",
+          "model": "rank512_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "hidden": [
+              512,
+              256,
+              128
+            ],
+            "epochs": 32,
+            "seed": 20261007
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 121.20300000000134,
+          "model_sha256": "515ecf800f2df38d548a7a62ea815bc9661f1a840bbcdaf90106a17bb3241a85",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 124.71800000000076
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_bank_20261003\\rank512_e32\\model_2025.joblib"
+      },
+      "diverse_rank512_seed17_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_rank512_seed17_e32.joblib",
+        "sha256": "6dd7e2095f2d8a8a85bb47330fc0d39879d97bb1b082535b96fc8585200c179d",
+        "training_info": {
+          "status": "passed",
+          "model": "rank512_seed17_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "hidden": [
+              512,
+              256,
+              128
+            ],
+            "epochs": 32,
+            "seed": 20261017
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 66.09399999999732,
+          "model_sha256": "6dd7e2095f2d8a8a85bb47330fc0d39879d97bb1b082535b96fc8585200c179d",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 70.15600000000268
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_seed_bank_20261003\\rank512_seed17_e32\\model_2025.joblib"
+      },
+      "diverse_rank512_seed18_e64": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_rank512_seed18_e64.joblib",
+        "sha256": "a7071d2ffa81c75805685ac26f5ac927196e46043e48316ea6f57f3f95873d30",
+        "training_info": {
+          "status": "passed",
+          "model": "rank512_seed18_e64",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "hidden": [
+              512,
+              256,
+              128
+            ],
+            "epochs": 64,
+            "seed": 20261018
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 113.76599999999598,
+          "model_sha256": "a7071d2ffa81c75805685ac26f5ac927196e46043e48316ea6f57f3f95873d30",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 118.17199999999866
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_seed_bank_20261003\\rank512_seed18_e64\\model_2025.joblib"
+      },
+      "diverse_rank64_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_rank64_e32.joblib",
+        "sha256": "e0f6285c8c1f24102738e33fcda653f7f4f86e9f1e51834a6c2cad888c2710ac",
+        "training_info": {
+          "status": "passed",
+          "model": "rank64_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "hidden": [
+              64,
+              32
+            ],
+            "epochs": 32,
+            "seed": 20261005
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 21.64099999999962,
+          "model_sha256": "e0f6285c8c1f24102738e33fcda653f7f4f86e9f1e51834a6c2cad888c2710ac",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 25.51599999999962
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_bank_20261003\\rank64_e32\\model_2025.joblib"
+      },
+      "diverse_return_ridge_l1": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_return_ridge_l1.joblib",
+        "sha256": "2faef88e74c650b5c79823190c8748af1d127c7dab239061917498244bbf0a8e",
+        "training_info": {
+          "status": "passed",
+          "model": "return_ridge_l1",
+          "year": 2025,
+          "configuration": {
+            "kind": "ridge_linear",
+            "target": "y_ret_1d",
+            "ridge_lambda": 1.0,
+            "chunk_rows": 32768,
+            "clip_z": 8.0,
+            "return_quantiles": [
+              0.005,
+              0.995
+            ]
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "ec3f6526f91526085a06e84bbea1ae5acbb508a92644fcec13386230f84c6de1",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 9.312999999994645,
+          "model_sha256": "2faef88e74c650b5c79823190c8748af1d127c7dab239061917498244bbf0a8e",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 14.014999999999418
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_bank_20261003\\return_ridge_l1\\model_2025.joblib"
+      },
+      "diverse_tail_bce128_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\model_diverse_tail_bce128_e32.joblib",
+        "sha256": "1f32ec5e70fa71d3197c00ebf177675f8e25f0323029c62131fcea1ae0402a74",
+        "training_info": {
+          "status": "passed",
+          "model": "tail_bce128_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "hidden": [
+              128,
+              64
+            ],
+            "epochs": 32,
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "objective": "top_decile_bce",
+            "positive_weight": 9.0,
+            "seed": 20261010
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 23.093999999997322,
+          "model_sha256": "1f32ec5e70fa71d3197c00ebf177675f8e25f0323029c62131fcea1ae0402a74",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 27.32800000000134
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\objective_bank_20261003\\tail_bce128_e32\\model_2025.joblib"
+      }
+    },
+    "model_reload_bit_identical": true,
+    "pipeline_replay_bit_identical": true,
+    "csv_replay_byte_identical": true,
+    "csv_ranks_unchanged": true,
+    "validation_score": 0.4508028811246302,
+    "test_labels_read": false,
+    "role_ensembles_split": true,
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "priority_signal": "top",
+    "membership_signal": "independent",
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "membership_slow_weight": 0.24,
+    "membership_power": 1.0,
+    "membership_memory": 0.025,
+    "diverse_augmentation": {
+      "membership": {
+        "model": "rank64_e32",
+        "weight": 0.005,
+        "blend": "score"
+      },
+      "top": {
+        "model": "pair_rank128_e32",
+        "weight": 0.35,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "rank512_e32",
+        "weight": 0.125,
+        "blend": "rank"
+      }
+    },
+    "secondary_augmentation": {
+      "membership": {
+        "model": "rank512_seed17_e32",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "top": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "csrank256_e32",
+        "weight": 0.175,
+        "blend": "score"
+      }
+    },
+    "final_augmentation": {
+      "membership": {
+        "model": "tail_bce128_e32",
+        "weight": 0.0125
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0,
+        "regime": "return_dispersion",
+        "low": 0.2,
+        "high": 0.0
+      },
+      "rest": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.15,
+        "regime": "return_dispersion",
+        "low": 0.0,
+        "high": 0.1
+      }
+    },
+    "linear_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "return_ridge_l1",
+        "weight": 0.025
+      }
+    },
+    "new_fulltrain_models": 8,
+    "membership_w5a_weight": 0.75,
+    "membership_mode": "global",
+    "rest_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "pruned_member_excluded": true,
+    "source_predictions_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\pooled_rms25\\backbone_raw.parquet": "e7b47b9c5254527afff11ed2a0561b291ac05d283615c6a4a37bd6f17449cf45",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\T2f_xgboost_test_raw.parquet": "680b9f9c17a5e3d50fde8e8b6b74063c27db8b08d997834de1c7f75b9acd72e0",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2c_two_day_test_raw.parquet": "413bff6bbe8fd760190029271f929a20fb92e5762ae3d8ae083b3e3fa63c162e",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2d_pruned_test_raw.parquet": "39cdc79a5fdac947f255da4075161e91c2fa9bee75092d2e821fe85ba058c3da",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\connected_validation_20261002\\w5a_test\\gru_raw_test.npy": "011b7f69f8d2a7d7784f82f8d40e276fc1d4668e398d14e19dbf0f5b2df88594"
+    },
+    "construction": {
+      "foundation": {
+        "days": 344,
+        "m_frac": 0.984,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 33,
+        "swaps": 6358,
+        "mean_retention_ratio": 0.9854930466267869
+      },
+      "final_augmentation": {
+        "extra_role_augmentation": true,
+        "second_retention": 0.984,
+        "construction": {
+          "days": 344,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 33,
+          "swaps": 270,
+          "mean_retention_ratio": 0.9852951478052726
+        },
+        "additional_limit_shift": 0.0
+      },
+      "linear_augmentation": {
+        "extra_role_augmentation": true,
+        "second_retention": 0.0,
+        "construction": {
+          "days": 344,
+          "m_frac": 0.0,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 0,
+          "swaps": 0,
+          "mean_retention_ratio": 0.9852951478052726
+        },
+        "additional_limit_shift": -0.02
+      }
+    },
+    "market_regime_mapping_sha256": "5adbdb071e851f9ca52414f8d745fcb0e7399be1593ec491803db19746206b05",
+    "old_delivery_pointer_unchanged": true
+  },
+  "candidate_submission": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r30\\submission.csv",
+  "test_labels_read_this_round": false,
+  "test_score_of_this_candidate": null,
+  "old_deliveries_preserved": true,
+  "all_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true
+}

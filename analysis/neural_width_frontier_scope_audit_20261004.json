@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "actual_resource_control_status": "passed",
+  "at_local": "2026-10-05T04:25:28",
+  "actual_original_mature_training_batch_reconstructed_exactly": true,
+  "batch_matches_earlier_successful_control": true,
+  "controls": [
+    {
+      "width": 16384,
+      "execution_status": "completed",
+      "actual_training_step_status": "one_step_completed",
+      "actual_training_step_completed": true,
+      "stop_reason": null,
+      "exit_code": 0,
+      "total_fit_seconds": 9.160747300000367,
+      "own_tensor_allocation_peak_GiB": 11.709702968597412,
+      "own_allocator_reservation_peak_GiB": 14.7109375,
+      "reported_device_total_GiB": 11.91351318359375,
+      "minimum_available_host_GiB_sampled": 15.30194091796875,
+      "actual_background_official_worker_count_samples": {
+        "0": 51
+      },
+      "global_physical_exhaustion_proved": false
+    },
+    {
+      "width": 32768,
+      "execution_status": "stopped_at_declared_control_boundary",
+      "actual_training_step_status": null,
+      "actual_training_step_completed": false,
+      "stop_reason": "declared_wall_time_budget",
+      "exit_code": 15,
+      "total_fit_seconds": null,
+      "own_tensor_allocation_peak_GiB": null,
+      "own_allocator_reservation_peak_GiB": null,
+      "reported_device_total_GiB": null,
+      "minimum_available_host_GiB_sampled": 5.553138732910156,
+      "actual_background_official_worker_count_samples": {
+        "0": 699
+      },
+      "global_physical_exhaustion_proved": false
+    }
+  ],
+  "actual_CUDA_OOM_widths": [],
+  "unattempted_widths": [
+    65536
+  ],
+  "own_allocated_andreserved_statistics_are_not_dedicated_resident_VRAM_measurements": true,
+  "guards_timeouts_andunexpected_failures_not_called_hardware_maxima": true,
+  "CUDA_OOM_is_only_the_observed_layout_batch_allocator_andbackground_boundary": true,
+  "full_fold_feasibility_andglobal_resource_exhaustion_not_established": true,
+  "scope_audit_pass_does_not_turn_failed_orunattempted_workloads_into_successes": true,
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\audit_neural_width_frontier_scope_20261004.py": "cc7edad1199f9f424f986deaf78089c33e139dbdfcda9ca645c449cdb8c050d0",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\protocol.json": "ef9bf888b993a372e850dcf1331fd337bd6d61432a4229a34b43fce1d01254e6",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\verification.json": "791d33863490eb5c9c7dbe917d4646499ddbf693b612941d20806c355128e626",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\mature_training_batch.npz": "588f84e586c29b09ed1bb3541916656ad5264f90a013f737afbf34710554699e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\mature_training_batch_keys.parquet": "f0865603a07f0283ab9f8af71af482280174f284a1e8ea8863cb492f085aa033",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_prepared_plan_20261004.json": "1fb1191ad56b9006ee001150bb8269476aeecc4351a7b75ca5a293ef314aaba5",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_capacity_20261004\\protocol.json": "2850f35ca6720d7fca5f47ae475af0cb667202f5fd33e82ce8941057c85f52e9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width16384_result.json": "849916387c9d7f9d7b1ee73575a25a016ac472b1d9b1ebb678eb21fc6c8a1213",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width16384_samples.jsonl": "f368af4aac8b265493fb668a212ef2b2b5f961ebeee064e0fa480bfcdb393903",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width16384.stdout.log": "60c0a245ea8630ef4ae495bb4c3dc72a460e0f931919c86d556d46a0300744d9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width16384.stderr.log": "eed654941c8ab76cea8d451d22a555efaa392ba7429a44353b8698bef9083583",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width16384_child_result.json": "eef12628585dc55b3057b9c1f9ea8f9f98c51d3634148332d4ca431d54046648",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width32768_result.json": "af9fa510e5e1ec514190e44a64ec4bf6a109bd918919062d2cd557dcd0609699",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width32768_samples.jsonl": "d09bc78fab4c5f6b0ace41069edb85f08f09d995a909ccdb44feb5ef4db32874",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width32768.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_width_frontier_20261004\\width32768.stderr.log": "eed654941c8ab76cea8d451d22a555efaa392ba7429a44353b8698bef9083583"
+  }
+}

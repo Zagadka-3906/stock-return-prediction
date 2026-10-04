@@ -1,0 +1,160 @@
+{
+  "status": "prepared_actual_complete_output_quality_and_inference_not_run",
+  "prepared_at_local": "2026-10-05T03:56:31",
+  "planned_round": 63,
+  "predecessor_round": 62,
+  "predecessor_must_pass_full_scientific_and_scoped_completion": true,
+  "method": "Recompute all actual active graph axes after the latest families; baseline, independent changes, forward and reverse coordinates, historical membership retention, final temporal grid.",
+  "actual_axes_frozen_again_from_selected_r62_before_first_score": true,
+  "current_r59_reference_axes": [
+    {
+      "round": 30,
+      "group": "diverse_augmentation",
+      "role": "membership",
+      "model": "rank64_e32",
+      "anchor": 0.005
+    },
+    {
+      "round": 30,
+      "group": "diverse_augmentation",
+      "role": "top",
+      "model": "pair_rank128_e32",
+      "anchor": 0.35
+    },
+    {
+      "round": 30,
+      "group": "diverse_augmentation",
+      "role": "rest",
+      "model": "rank512_e32",
+      "anchor": 0.1375
+    },
+    {
+      "round": 30,
+      "group": "secondary_augmentation",
+      "role": "top",
+      "model": "rank512_seed18_e64",
+      "anchor": 0.025
+    },
+    {
+      "round": 30,
+      "group": "secondary_augmentation",
+      "role": "rest",
+      "model": "csrank256_e32",
+      "anchor": 0.19999999999999998
+    },
+    {
+      "round": 30,
+      "group": "final_augmentation",
+      "role": "membership",
+      "model": "tail_bce128_e32",
+      "anchor": 0.0125
+    },
+    {
+      "round": 30,
+      "group": "final_augmentation",
+      "role": "rest",
+      "model": "rank512_seed18_e64",
+      "anchor": 0.1625
+    },
+    {
+      "round": 30,
+      "group": "linear_augmentation",
+      "role": "rest",
+      "model": "return_ridge_l1",
+      "anchor": 0.037500000000000006
+    },
+    {
+      "round": 31,
+      "group": "regularization_augmentation",
+      "role": "rest",
+      "model": "rank512_drop000_e32",
+      "anchor": 0.025
+    },
+    {
+      "round": 35,
+      "group": "neural_tuning_augmentation",
+      "role": "rest",
+      "model": "rank512_o05_lr0005_e32",
+      "anchor": 0.037500000000000006
+    },
+    {
+      "round": 37,
+      "group": "catboost_tuning_augmentation",
+      "role": "rest",
+      "model": "cat_rank10_e600",
+      "anchor": 0.2
+    },
+    {
+      "round": 53,
+      "group": "no_dropout_seed_augmentation",
+      "role": "rest",
+      "model": "rank512_drop000_seed18_e64",
+      "anchor": 0.037500000000000006
+    },
+    {
+      "round": 55,
+      "group": "neural_interaction_augmentation",
+      "role": "rest",
+      "model": "rank512_drop000_lr0005_e64",
+      "anchor": 0.037500000000000006
+    }
+  ],
+  "current_reference_retention_axes": [
+    {
+      "kind": "root",
+      "round": 30
+    }
+  ],
+  "current_reference_expected_records": 260,
+  "actual_expected_records_formula": "1 + 18 * actual_active_weight_axes + 5 * actual_membership_retention_axes + 20",
+  "weights": "zero,half,anchor,double,anchor+0.0125,anchor+0.025; clipped[0,0.8]",
+  "retentions": [
+    0.0,
+    0.97,
+    0.98,
+    0.984,
+    0.99
+  ],
+  "adaptive_coordinate_anchor_frozen_before_each_six_arm_evaluation": true,
+  "same_validation": {
+    "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "rows": 5635800,
+    "continuous_days": 1212
+  },
+  "selection": "Highest actual complete official connected-output S; exact ties prefer fewer active model branches.",
+  "all_previous_folds_preprocessing_and_maturity_preserved": true,
+  "quality_gates": [
+    "full baseline OOF output bit-identical to r62",
+    "all8 official baseline metrics exact",
+    "baseline fullfuture CSV byte-identical",
+    "actual all-arm continuous official scoring",
+    "complete scheme frozen before future inference",
+    "actual fullfuture reload and cold-prefix controls",
+    "selected full-vector, cold-prefix and label-poisoning checks",
+    "full input end rehash and ranking QA"
+  ],
+  "new_model_fits": 0,
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "all_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true,
+  "global_resource_exhaustion_established": false,
+  "finite_coordinate_grid_does_not_exhaust_all_possible_ensembles": true,
+  "coverage_input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\audit_latest_graph_joint_coverage_20261005.py": "6d58da15cdb3cb3d589d216d1fd8ccaa88e06449c5ee594d223969a8be0431ce",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\latest_graph_joint_axes_20261005.py": "fec777241a72ffc1c99c87f5a827d5792a77a43b1b33f1c9a9bef343cf2a16e0",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r59\\selection.json": "e751ae4463b1c8ce36d86069d112a10fd1ce769b58c3751e47eed68d48b933a2",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r50\\protocol.json": "653b04641336b25538f05e3d3cc49310dac1b7a9a052b7a42459312bb605141d",
+    "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_20261003_r59.json": "0de92ee9a9331ad3336e912cd41a8854b9e670cec0b869341e2ec379a4f33378",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r59\\provenance_scope_execution.json": "c4a030d50632c687c5f7c03a10038ef720974dc992991ec06524122c70c38e88",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\round59_restart_recovery_20261005\\verification.json": "73ff16b40f51ca91f64bdabb3fd039938365a899e70283b1913905dfb5040a05",
+    "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r59\\verification.json": "34a2c7d7d3cd1efc011e4332da50cef5654256589c480ce58a22330033be9292"
+  }
+}

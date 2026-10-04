@@ -1,0 +1,229 @@
+{
+  "status": "sources_andactual_generators_prepared_official_rounds_not_yet_queued",
+  "frozen_at_local": "2026-10-04T12:45:24",
+  "model_configurations": {
+    "rank512_drop000_seed16_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 32,
+      "seed": 20261016
+    },
+    "rank512_drop000_seed17_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 32,
+      "seed": 20261017
+    },
+    "rank512_drop000_seed18_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 32,
+      "seed": 20261018
+    },
+    "rank512_drop000_seed18_e64": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "epochs": 64,
+      "seed": 20261018
+    },
+    "nn512_drop000_three32_rawmean": {
+      "kind": "neural_ensemble",
+      "target": "y_rank",
+      "members": [
+        "rank512_drop000_e32",
+        "rank512_drop000_seed16_e32",
+        "rank512_drop000_seed17_e32"
+      ],
+      "aggregation": "rawmean",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "nn512_drop000_three32_rankmean": {
+      "kind": "neural_ensemble",
+      "target": "y_rank",
+      "members": [
+        "rank512_drop000_e32",
+        "rank512_drop000_seed16_e32",
+        "rank512_drop000_seed17_e32"
+      ],
+      "aggregation": "rankmean",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "nn512_drop000_all5_rawmean": {
+      "kind": "neural_ensemble",
+      "target": "y_rank",
+      "members": [
+        "rank512_drop000_e32",
+        "rank512_drop000_seed16_e32",
+        "rank512_drop000_seed17_e32",
+        "rank512_drop000_seed18_e32",
+        "rank512_drop000_seed18_e64"
+      ],
+      "aggregation": "rawmean",
+      "weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    "nn512_drop000_all5_rankmean": {
+      "kind": "neural_ensemble",
+      "target": "y_rank",
+      "members": [
+        "rank512_drop000_e32",
+        "rank512_drop000_seed16_e32",
+        "rank512_drop000_seed17_e32",
+        "rank512_drop000_seed18_e32",
+        "rank512_drop000_seed18_e64"
+      ],
+      "aggregation": "rankmean",
+      "weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ]
+    }
+  },
+  "new_native_models": 4,
+  "new_virtual_models": 4,
+  "new_annual_fits": 20,
+  "annual_forecast_artifacts": 40,
+  "actual_previous_selection_required": {
+    "53": 52,
+    "54": 53
+  },
+  "waves": {
+    "53": [
+      226,
+      227,
+      228,
+      229
+    ],
+    "54": [
+      230,
+      231,
+      232
+    ]
+  },
+  "records_per_wave": {
+    "53": [
+      97,
+      8,
+      18,
+      25
+    ],
+    "54": [
+      49,
+      112,
+      17
+    ]
+  },
+  "expected_total_records": {
+    "53": 148,
+    "54": 178
+  },
+  "role_weights": [
+    0.005,
+    0.025,
+    0.075,
+    0.2
+  ],
+  "roles": [
+    "membership",
+    "top",
+    "rest"
+  ],
+  "role_floor_choices": [
+    0.0,
+    0.97,
+    0.98,
+    0.984,
+    0.99
+  ],
+  "extra_limit_delta_choices": [
+    -0.04,
+    -0.02,
+    0.0,
+    0.02,
+    0.04
+  ],
+  "standalone_initial_alpha_choices": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "standalone_initial_auxiliary_choices": [
+    0.0,
+    0.25
+  ],
+  "standalone_initial_bonus": 0.3,
+  "each_adaptive_coordinate_anchor_frozen_before_scoring": true,
+  "actual_generator_control_status": "passed",
+  "complete5635800_row_validation_andcausal_calibration_required": true,
+  "actual_previous1599600_row_future_CSV_byte_identity_required_before_quality_search": true,
+  "new_role_inserted_before_frozen_final_temporal_transform": true,
+  "standalone_replacement_discards_old_root_andall_old_role_layers": true,
+  "scoring_target": ".4*IC_mean+.3*annual_excess+.3*(1-mean_turnover)",
+  "same_continuous_validation_dates": "2020–2024;5635800 rows;1212 days;no year-boundary turnover reset",
+  "forecast_calibration": "Mature past-only; actual one-day-return CSV scored by original official evaluator",
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "global_resource_exhaustion_established": false,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\freeze_no_dropout_complete_search_plan_20261004.py": "4482e32216a32ff16aefeb6667ef2e714ba30f5b9ff1e1e6f4e893a63b07846a",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37",
+    "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_20261003_r31.json": "8a0dd959ef9175814491b7a454d4dcb0df0874dc19c120dc6ce31f47f0540e91",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\no_dropout_seed_bank_20261004\\protocol.json": "9437c452aa859501d2fad36c3034beac83dc3c45377e8d61f6074ca2eb6b585f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\no_dropout_ensemble_bank_20261004\\protocol.json": "d39d421c8e670acc25abb07a483c2f67e7f2d4fb6b6143e7236a4edab28b1b76",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\no_dropout_seed_preflight_20261004\\verification.json": "be75f03d3f88929cedc38c5414bcdc6d6e3f8af2ed66cc3763d2fe96c3220d98",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\no_dropout_seed_search_generator_preflight_20261004\\verification.json": "285b485341ab59b2f4dae8048011bdfe0b80d6c0608fade33faafecce61f27d2",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\no_dropout_seed_adapter_generation_20261004.json": "26a1af5e7c23f61604ec72455359c9ee9df570b9cb2ee13c15e64139348087c2"
+  }
+}

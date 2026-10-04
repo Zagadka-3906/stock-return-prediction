@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "at_local": "2026-10-04T11:59:13",
+  "actual_completed_control_jobs": 64,
+  "execution_controls": [
+    {
+      "workers": 4,
+      "jobs": 16,
+      "observed_records_per_minute": 9.868839281217744,
+      "minimum_available_ram_GiB_sampled": 11.38360595703125,
+      "maximum_own_worker_rss_sum_GiB_sampled": 6.555301666259766,
+      "actual_background_official_worker_count_samples": {
+        "0": 312
+      },
+      "background_stage_samples": [
+        "{\"31\": \"verify_methods_round31.main\"}"
+      ],
+      "all_eight_metrics_bit_identical": true
+    },
+    {
+      "workers": 5,
+      "jobs": 16,
+      "observed_records_per_minute": 9.600820774167122,
+      "minimum_available_ram_GiB_sampled": 9.21670150756836,
+      "maximum_own_worker_rss_sum_GiB_sampled": 8.493965148925781,
+      "actual_background_official_worker_count_samples": {
+        "0": 312
+      },
+      "background_stage_samples": [
+        "{\"32\": \"freeze\"}",
+        "{\"31\": \"publication_and_ranking_qa\"}",
+        "{\"31\": \"verify_methods_round31.main\"}",
+        "{\"31\": \"publication_and_ranking_qa\", \"32\": \"freeze\"}"
+      ],
+      "all_eight_metrics_bit_identical": true
+    },
+    {
+      "workers": 6,
+      "jobs": 16,
+      "observed_records_per_minute": 11.071073266585007,
+      "minimum_available_ram_GiB_sampled": 10.14883804321289,
+      "maximum_own_worker_rss_sum_GiB_sampled": 9.720375061035156,
+      "actual_background_official_worker_count_samples": {
+        "0": 279
+      },
+      "background_stage_samples": [
+        "{\"32\": \"freeze\"}",
+        "{\"32\": \"build\"}",
+        "{\"32\": \"independent\"}"
+      ],
+      "all_eight_metrics_bit_identical": true
+    },
+    {
+      "workers": 8,
+      "jobs": 16,
+      "observed_records_per_minute": 9.789701038103098,
+      "minimum_available_ram_GiB_sampled": 5.392894744873047,
+      "maximum_own_worker_rss_sum_GiB_sampled": 12.462852478027344,
+      "actual_background_official_worker_count_samples": {
+        "0": 87,
+        "4": 192
+      },
+      "background_stage_samples": [
+        "{\"32\": \"independent\"}"
+      ],
+      "all_eight_metrics_bit_identical": true
+    }
+  ],
+  "same5635800_row_actual_training_return_CSV_for_every_count": true,
+  "all_completed_jobs_eight_metrics_bit_identical": true,
+  "background_stages_and_worker_counts_differ_between_counts": true,
+  "causal_isolated_throughput_winner_not_established": true,
+  "larger_than_eight_worker_counts_not_tested": true,
+  "full_forecast_construction_andmodel_training_throughput_not_tested": true,
+  "memory_start_andstop_reserves_are_scheduling_rules_not_hardware_limits": true,
+  "sum_RSS_may_include_shared_pages_more_than_once": true,
+  "declared_production_rounds_preserve_frozen_four_worker_execution": true,
+  "physical_resource_boundary_established": false,
+  "global_search_exhaustion_established": false,
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\audit_official_extended_capacity_scope_20261004.py": "0c0b7bfea505cd6809d7a19ade22b02164480871b639942d4130300188d562c7",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\verification.json": "b1ad37bc76d0c4f97053957fc637e4dd55382d789ded8f6945c35c7a6fd9f96e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\diagnostic_frozen_before_scoring.json": "7372f499455f4e39517bd2a87d32480161c89622fa89f5e0cbebfec9bd70fcd8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\calibrated_csv_official.json": "8a7932cdbcd3d99911ad39c092af174a3d91a983e8817507724a4b938ca980aa",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers4_result.json": "7c7bd76143069ef2c3f7299ddb7592a6f04b3ba1e2e610d8c8bef2b37ce5bcab",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers4_samples.jsonl": "fdb693c1cb1ee505cdbb54b2c3aecf963af5d2b9b798f3f5ae4e054706949f5c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers5_result.json": "98b3f1abba75630674b6d29d1f5b34b5d91e208f04a4dd3102368e53ec82cabb",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers5_samples.jsonl": "0a040f5a92ea6d346f97749f69d54ec9d7190bda6b791106a7c92635b64b0bb9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers6_result.json": "9fea81892c5a20856df0de96f03cada0fef4f1545bc98d7403cdef5438da4fc9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers6_samples.jsonl": "91df471c517007e7df236c93c20960d3325a9acbc2833b00910e992d046b4fc2",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers8_result.json": "ca1ac003f73b87dc0f063c9d3c268c209bb61eca5dd7d76c9f58504ef69110c9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\official_extended_capacity_qa_20261004\\workers8_samples.jsonl": "b502a3bfe12b00a070f632a2f25ab93b9070e769b39e21d0a2f7cab779eff08e"
+  }
+}

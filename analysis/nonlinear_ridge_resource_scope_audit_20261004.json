@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "verified_at_local": "2026-10-04T07:37:11",
+  "families": [
+    {
+      "family": "additive",
+      "samples": 1150,
+      "minimum_available_ram_GiB_sampled": 2.8847198486328125,
+      "maximum_tracked_python_rss_sum_GiB_sampled": 17.309093475341797,
+      "maximum_gpu_memory_miB_sampled": 2007,
+      "summary_sha256": "1e3238a4a45176429c94adf50fc548a0b490e845f1ff0b6dac455ea81cdb96e6"
+    },
+    {
+      "family": "fourier",
+      "samples": 760,
+      "minimum_available_ram_GiB_sampled": 9.553794860839844,
+      "maximum_tracked_python_rss_sum_GiB_sampled": 11.299690246582031,
+      "maximum_gpu_memory_miB_sampled": 2394,
+      "summary_sha256": "45404ee28d50e8052c8b122b6d883560b3202799e51c24ee15977c4f36a819d1"
+    }
+  ],
+  "fourier_sampling_period": {
+    "start": "2026-10-04T07:15:14",
+    "finish": "2026-10-04T07:27:53"
+  },
+  "fourier_phase_had_no_four_worker_official_scoring_overlap": true,
+  "basis_for_workload_interpretation": "R25 shuts down its pool before select; Fourier sampling starts after select. R26 remained in build until after sampling ended. R25 serial official calibration/evaluation and causal checking did overlap.",
+  "fourier_sampler_legacy_counter_field": "completed_additive_annual_fits means Fourier annual artifacts in this sampler; its bank path is fourier_ridge_bank_20261004.",
+  "raw_sampler_four_worker_scope_wording_not_used_as_capacity_evidence": true,
+  "resource_efficiency_comparison_not_controlled_for_workload": true,
+  "chosen8GiB_fit_reserve_not_a_physical_resource_boundary": true,
+  "global_resource_exhaustion_established": false,
+  "test_labels_read": false,
+  "event_log_snapshots": [
+    {
+      "path": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round25_four_20261004_041525.stdout.log",
+      "captured_prefix_bytes": 138547,
+      "captured_prefix_sha256": "47aa4e0cade00a724e4c3e602c67a2053e8454cf6d9f66b6645f8909eddff67b"
+    },
+    {
+      "path": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round26_four_20261004_041525.stdout.log",
+      "captured_prefix_bytes": 92926,
+      "captured_prefix_sha256": "36b22da3a500706b7afae45e006278850f78739500eed62bad0a4ed8291c0d3c"
+    }
+  ],
+  "source_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\audit_nonlinear_ridge_resource_scope_20261004.py": "752ffd034d4812248f4d01a74964faaee1296918134851b9ee1eb7d7706ad708",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_training_round25_pipeline.py": "f5ebeb35432e7c5d68c2b51e48beb0bf70b81e07d764a41a070d66c92ec5cac4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "finding": "W5a historical OOF ensemble includes W2d features chosen from full-model gain importance, not per-fold selectors.",
+  "direct_evidence": "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\experiments\\final_sweep_eval\\protocol_wave2.json",
+  "original_instruction": "the twenty lowest total split-gain features from validation/feature_importance.csv of the released full model",
+  "affected": "W5a and any complete validation output that depends on its historical OOF column, including the earlier R1–R6 leaders.",
+  "historical_best_uncorrected_validation": 0.44740649979403346,
+  "handling": "Retain all original scores and submissions as evidence; do not call them certified causal OOF results. Optimize the repaired fold-local pipeline separately.",
+  "repair_audit": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r7\\component_audit.json",
+  "original_scores_overwritten": false,
+  "test_labels_read": false
+}

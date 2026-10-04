@@ -1,0 +1,87 @@
+{
+  "status": "queued_withactual_predecessor_andend_to_end_gates",
+  "at_local": "2026-10-04T11:16:44.287525",
+  "rounds": [
+    {
+      "round": 51,
+      "pid": 48248,
+      "script": "analysis/run_training_round51_pipeline.py",
+      "script_args": [],
+      "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round51_basis_20261004_111643.stdout.log",
+      "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round51_basis_20261004_111643.stderr.log",
+      "launched_at_local": "2026-10-04T11:16:43",
+      "prospective_official_workers": 4,
+      "generator_preflight": "analysis/additive_basis_search_generator_preflight_20261004/verification.json",
+      "complete_scheme_preflight": "analysis/additive_basis_complete_scheme_preflight_20261004/verification.json",
+      "expected_official_records": 196
+    },
+    {
+      "round": 52,
+      "pid": 10328,
+      "script": "analysis/run_training_round52_pipeline.py",
+      "script_args": [],
+      "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round52_basis_20261004_111643.stdout.log",
+      "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round52_basis_20261004_111643.stderr.log",
+      "launched_at_local": "2026-10-04T11:16:43",
+      "prospective_official_workers": 4,
+      "generator_preflight": "analysis/additive_basis_search_generator_preflight_20261004/verification.json",
+      "complete_scheme_preflight": "analysis/additive_basis_complete_scheme_preflight_20261004/verification.json",
+      "expected_official_records": 258
+    }
+  ],
+  "active_registry": "analysis/resumed_rounds_additive_basis_schemes_20261004.json",
+  "actual_generated_records": {
+    "51": 196,
+    "52": 258
+  },
+  "complete_scheme_QA_status": "running_orwaiting_for_future_native_gate",
+  "current_new_quality_scores": 0,
+  "test_labels_read": false,
+  "original_design_snapshot_preserved": true,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\additive_basis_search_generator_preflight_20261004\\verification.json": "f399dc86b3c7d500b76a90961a66c7f6b7f4667276619cfd3a6ae718064f0aa9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\additive_basis_complete_output_search_plan_20261004.json": "23f12b48f9f6c0c832aa6ebb053f76cc76ab23456c5878234a8effd73523e4a4",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\additive_basis_search_engine_20261004.py": "6d4a806a1c3db7e2fe734004ddd27f7cf1344bacbb191e6ce90b20cb5f9f0a85",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\additive_basis_scheme_runtime_20261004.py": "e29794d862aa3d1f72a470597a4d47f219f3da6582e1647e6bc9486bd4686554",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_additive_basis_complete_scheme_20261004.py": "28d4b2e4a8a595e67ec8758ae69448068fe36aab52e8dc06bdc3317814e7c5ce"
+  },
+  "active_run_registry": "analysis/resumed_rounds_joint_basis_locked_20261004.json",
+  "queued_effective_driver": "analysis/run_joint_and_basis_locked_pipeline_v2_20261004.py",
+  "queued_effective_rounds": [
+    51,
+    52
+  ],
+  "actual_new_entries": [
+    {
+      "script": "analysis/run_joint_and_basis_locked_pipeline_v2_20261004.py",
+      "prospective_official_workers": 4,
+      "pid": 22056,
+      "round": 51,
+      "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round51_joint_basis_locked_20261004_165844.stderr.log",
+      "launched_at_local": "2026-10-04T16:58:44",
+      "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round51_joint_basis_locked_20261004_165844.stdout.log",
+      "wrapper_preflight": "analysis/joint_and_basis_frozen_provenance_preflight_v2_20261004/verification.json",
+      "script_args": [
+        "51"
+      ],
+      "previous_root_pid": 48248,
+      "previous_script": "analysis/run_training_round51_pipeline.py"
+    },
+    {
+      "script": "analysis/run_joint_and_basis_locked_pipeline_v2_20261004.py",
+      "prospective_official_workers": 4,
+      "pid": 16376,
+      "round": 52,
+      "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round52_joint_basis_locked_20261004_165844.stderr.log",
+      "launched_at_local": "2026-10-04T16:58:44",
+      "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\round52_joint_basis_locked_20261004_165844.stdout.log",
+      "wrapper_preflight": "analysis/joint_and_basis_frozen_provenance_preflight_v2_20261004/verification.json",
+      "script_args": [
+        "52"
+      ],
+      "previous_root_pid": 10328,
+      "previous_script": "analysis/run_training_round52_pipeline.py"
+    }
+  ],
+  "production_scope_execution_pending": true
+}

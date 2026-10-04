@@ -1,0 +1,95 @@
+{
+  "status": "observed",
+  "at_local": "2026-10-04T07:56:17",
+  "round": 26,
+  "pipeline_state": {
+    "round": 26,
+    "stage": "independent",
+    "status": "running",
+    "updated_at_local": "2026-10-04T07:36:32",
+    "continuous_optimization_authorized": true,
+    "test_labels_read": false
+  },
+  "official_python_descendants": [
+    {
+      "pid": 36940,
+      "parent_pid": 9032,
+      "command_line": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "analysis/run_training_round26_pipeline.py"
+      ],
+      "rss_bytes": 707510272,
+      "cpu_seconds": 823.28125
+    },
+    {
+      "pid": 16596,
+      "parent_pid": 36940,
+      "command_line": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=36940, pipe_handle=1904)",
+        "--multiprocessing-fork"
+      ],
+      "rss_bytes": 2587942912,
+      "cpu_seconds": 1187.375
+    },
+    {
+      "pid": 37300,
+      "parent_pid": 36940,
+      "command_line": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=36940, pipe_handle=1716)",
+        "--multiprocessing-fork"
+      ],
+      "rss_bytes": 2853457920,
+      "cpu_seconds": 1188.46875
+    },
+    {
+      "pid": 39388,
+      "parent_pid": 36940,
+      "command_line": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=36940, pipe_handle=1692)",
+        "--multiprocessing-fork"
+      ],
+      "rss_bytes": 3309809664,
+      "cpu_seconds": 1189.125
+    },
+    {
+      "pid": 22128,
+      "parent_pid": 36940,
+      "command_line": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=36940, pipe_handle=992)",
+        "--multiprocessing-fork"
+      ],
+      "rss_bytes": 2527592448,
+      "cpu_seconds": 1189.671875
+    }
+  ],
+  "meta_artifacts_at_snapshot": 60,
+  "meta_distinct_fits_at_snapshot": 24,
+  "available_ram_bytes": 5176520704,
+  "sampler_protocol_sha256": "3aef61a93a5706fe7f2ca60fab2d08e6cdfa75ca31b037dd3cd1f953fe97ee64",
+  "interpretation": "Observed process topology and progress during67-child annual training; neither a utilization benchmark nor global capacity limit.",
+  "global_resource_exhaustion_established": false,
+  "test_data_read": false
+}

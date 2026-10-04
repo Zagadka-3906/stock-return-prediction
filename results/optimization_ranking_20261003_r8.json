@@ -1,0 +1,3568 @@
+{
+  "status": "complete",
+  "ranking": [
+    {
+      "wave": 64,
+      "arm": "limit_shift0.095",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.095,
+      "connected_final_score": 0.4486144884288789,
+      "metrics": {
+        "ic_mean": 0.12019753401318595,
+        "ic_std": 0.11140091728652829,
+        "icir": 1.078963593307157,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486144884288789
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1_xgb1_two0.75_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4486098555212077,
+      "metrics": {
+        "ic_mean": 0.12018595174400784,
+        "ic_std": 0.11132461788211079,
+        "icir": 1.0795990503311759,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486098555212077
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "alpha0.9",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4486098555212077,
+      "metrics": {
+        "ic_mean": 0.12018595174400784,
+        "ic_std": 0.11132461788211079,
+        "icir": 1.0795990503311759,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486098555212077
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "aux0.2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.2,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4486098555212077,
+      "metrics": {
+        "ic_mean": 0.12018595174400784,
+        "ic_std": 0.11132461788211079,
+        "icir": 1.0795990503311759,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486098555212077
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "aux0.25",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4486098555212077,
+      "metrics": {
+        "ic_mean": 0.12018595174400784,
+        "ic_std": 0.11132461788211079,
+        "icir": 1.0795990503311759,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486098555212077
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "aux0.3",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.3,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4486098555212077,
+      "metrics": {
+        "ic_mean": 0.12018595174400784,
+        "ic_std": 0.11132461788211079,
+        "icir": 1.0795990503311759,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486098555212077
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "early90_weight0.25",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4486098555212077,
+      "metrics": {
+        "ic_mean": 0.12018595174400784,
+        "ic_std": 0.11132461788211079,
+        "icir": 1.0795990503311759,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486098555212077
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "limit_shift0.115",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4486098555212077,
+      "metrics": {
+        "ic_mean": 0.12018595174400784,
+        "ic_std": 0.11132461788211079,
+        "icir": 1.0795990503311759,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486098555212077
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "limit_shift0.135",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.135,
+      "connected_final_score": 0.4486027943021898,
+      "metrics": {
+        "ic_mean": 0.12016829869646313,
+        "ic_std": 0.1112515781740953,
+        "icir": 1.0801491598475506,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4486027943021898
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "limit_shift0.155",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.155,
+      "connected_final_score": 0.4485936968928244,
+      "metrics": {
+        "ic_mean": 0.12014555517304966,
+        "ic_std": 0.11118014534752092,
+        "icir": 1.0806385870202377,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36712813033372543,
+        "top1_annual_ret": 0.3926218843939828,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4485936968928244
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1_xgb1_two1.25_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1.25_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.25,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4485026573446731,
+      "metrics": {
+        "ic_mean": 0.12008282262035275,
+        "ic_std": 0.11177776811752875,
+        "icir": 1.0742996987924436,
+        "ic_positive_ratio": 0.8877887788778878,
+        "annual_excess": 0.366908308576817,
+        "top1_annual_ret": 0.3924020626370744,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4485026573446731
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two1_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4484976799982422,
+      "metrics": {
+        "ic_mean": 0.12014941084087749,
+        "ic_std": 0.11156633908486432,
+        "icir": 1.0769324495758918,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.36680293312801426,
+        "top1_annual_ret": 0.3922966871882717,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4484976799982422
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1_xgb1_two1_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4484976799982422,
+      "metrics": {
+        "ic_mean": 0.12014941084087749,
+        "ic_std": 0.11156633908486432,
+        "icir": 1.0769324495758918,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.36680293312801426,
+        "top1_annual_ret": 0.3922966871882717,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4484976799982422
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1_xgb1_two1_gru2.25",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 2.25
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44849424912957037,
+      "metrics": {
+        "ic_mean": 0.12025104656333689,
+        "ic_std": 0.11149702536222032,
+        "icir": 1.0785134955186237,
+        "ic_positive_ratio": 0.886963696369637,
+        "annual_excess": 0.36665598260249566,
+        "top1_annual_ret": 0.3921497366627532,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.44849424912957037
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two0_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44849385786252716,
+      "metrics": {
+        "ic_mean": 0.11940766700733488,
+        "ic_std": 0.11037251589317953,
+        "icir": 1.081860516098951,
+        "ic_positive_ratio": 0.8886138613861386,
+        "annual_excess": 0.3677791844536878,
+        "top1_annual_ret": 0.39327293851394535,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.44849385786252716
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1_xgb0.75_two1_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb0.75_two1_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 0.75,
+        "two": 1.0,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4484446505140326,
+      "metrics": {
+        "ic_mean": 0.12019797212923367,
+        "ic_std": 0.11160955928625639,
+        "icir": 1.0769505130017556,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.366561419796174,
+        "top1_annual_ret": 0.3920551738564315,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4484446505140326
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1.25_xgb1_two1_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1.25_xgb1_two1_gru2",
+      "ensemble_weights": {
+        "lgb": 1.25,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4484335415548363,
+      "metrics": {
+        "ic_mean": 0.12000640906672744,
+        "ic_std": 0.11151284553698437,
+        "icir": 1.0761666827605623,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.3667798073488613,
+        "top1_annual_ret": 0.3922735614091186,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4484335415548363
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1_xgb1.25_two1_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1.25_two1_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.25,
+        "two": 1.0,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.448422548242013,
+      "metrics": {
+        "ic_mean": 0.12008550478545732,
+        "ic_std": 0.11151078783844062,
+        "icir": 1.076895851183833,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.3666377020144773,
+        "top1_annual_ret": 0.39213145607473476,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.448422548242013
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb0.75_xgb1_two1_gru2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb0.75_xgb1_two1_gru2",
+      "ensemble_weights": {
+        "lgb": 0.75,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44839767985702217,
+      "metrics": {
+        "ic_mean": 0.12028442605627324,
+        "ic_std": 0.1116119781476274,
+        "icir": 1.0777017668943645,
+        "ic_positive_ratio": 0.886963696369637,
+        "annual_excess": 0.36628957903675313,
+        "top1_annual_ret": 0.39178333309701063,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.44839767985702217
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two1_gru1.5",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru1.5",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 1.5
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44834923268116533,
+      "metrics": {
+        "ic_mean": 0.11978471884891877,
+        "ic_std": 0.11165898043751583,
+        "icir": 1.072772815760664,
+        "ic_positive_ratio": 0.8886138613861386,
+        "annual_excess": 0.3667943647270363,
+        "top1_annual_ret": 0.3922881187872938,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.44834923268116533
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb0_xgb1_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb0_xgb1_two1_gru1",
+      "ensemble_weights": {
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4482609815669198,
+      "metrics": {
+        "ic_mean": 0.12004554420587672,
+        "ic_std": 0.11224606165044734,
+        "icir": 1.069485578743228,
+        "ic_positive_ratio": 0.8836633663366337,
+        "annual_excess": 0.36615242720360736,
+        "top1_annual_ret": 0.3916461812638648,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4482609815669198
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two0.5_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.5_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.5,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4482342244062373,
+      "metrics": {
+        "ic_mean": 0.11933221076153883,
+        "ic_std": 0.11112532998753792,
+        "icir": 1.0738524760729282,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.36701434792711607,
+        "top1_annual_ret": 0.3925081019873735,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4482342244062373
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 63,
+      "arm": "lgb1_xgb1_two1_gru1.75",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru1.75",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 1.75
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44822921328948817,
+      "metrics": {
+        "ic_mean": 0.11999658918533146,
+        "ic_std": 0.11162217505361242,
+        "icir": 1.075024645664688,
+        "ic_positive_ratio": 0.8877887788778878,
+        "annual_excess": 0.36611180630622886,
+        "top1_annual_ret": 0.3916055603664863,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.44822921328948817
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "early90_weight0.3",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.3
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.7
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4481636517815258,
+      "metrics": {
+        "ic_mean": 0.12021081929653624,
+        "ic_std": 0.1114199449721826,
+        "icir": 1.078898569969213,
+        "ic_positive_ratio": 0.886963696369637,
+        "annual_excess": 0.36559366188607206,
+        "top1_annual_ret": 0.3910874159463295,
+        "mean_turnover": 0.031995915009701024,
+        "final_score": 0.4481636517815258
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 180,
+        "swaps": 94474,
+        "mean_retention_ratio": 0.9837219490722524
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb0_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb0_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44813731201370444,
+      "metrics": {
+        "ic_mean": 0.119448016508211,
+        "ic_std": 0.11219692339184409,
+        "icir": 1.0646282705189938,
+        "ic_positive_ratio": 0.8844884488448845,
+        "annual_excess": 0.3665368989564437,
+        "top1_annual_ret": 0.39203065301670115,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.44813731201370444
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb0.5_xgb1_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb0.5_xgb1_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 0.5,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4481100727032594,
+      "metrics": {
+        "ic_mean": 0.11954788305632477,
+        "ic_std": 0.11194770749037478,
+        "icir": 1.0678904082658722,
+        "ic_positive_ratio": 0.8844884488448845,
+        "annual_excess": 0.3663129458574753,
+        "top1_annual_ret": 0.3918066999177327,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4481100727032594
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "alpha0.925",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.925,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4480009966835406,
+      "metrics": {
+        "ic_mean": 0.11859053213234923,
+        "ic_std": 0.11109185611470235,
+        "icir": 1.0674997815312808,
+        "ic_positive_ratio": 0.8836633663366337,
+        "annual_excess": 0.36513612601650874,
+        "top1_annual_ret": 0.39062988007676613,
+        "mean_turnover": 0.029920179914505563,
+        "final_score": 0.4480009966835406
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 186,
+        "swaps": 51985,
+        "mean_retention_ratio": 0.9847844953272947
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "early90_weight0.2",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.2
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.8
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44799821321319644,
+      "metrics": {
+        "ic_mean": 0.12012818232769312,
+        "ic_std": 0.1113594260467939,
+        "icir": 1.0787428293426597,
+        "ic_positive_ratio": 0.886963696369637,
+        "annual_excess": 0.365186705938813,
+        "top1_annual_ret": 0.3906804599990704,
+        "mean_turnover": 0.03203023833174905,
+        "final_score": 0.44799821321319644
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 178,
+        "swaps": 94809,
+        "mean_retention_ratio": 0.983703450498877
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "early90_weight0.35",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.35
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.65
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44788439225511445,
+      "metrics": {
+        "ic_mean": 0.12023061471026847,
+        "ic_std": 0.11129173425202964,
+        "icir": 1.0803193563144229,
+        "ic_positive_ratio": 0.886963696369637,
+        "annual_excess": 0.36461865847200453,
+        "top1_annual_ret": 0.3901124125322619,
+        "mean_turnover": 0.0319781705686477,
+        "final_score": 0.44788439225511445
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 184,
+        "swaps": 93276,
+        "mean_retention_ratio": 0.9837309315335415
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4477441201313571,
+      "metrics": {
+        "ic_mean": 0.11909120977630876,
+        "ic_std": 0.11166119205057111,
+        "icir": 1.0665407344242985,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36570200165782246,
+        "top1_annual_ret": 0.3911957557180799,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4477441201313571
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "early90_weight0.15",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.15
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.85
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44768045107874327,
+      "metrics": {
+        "ic_mean": 0.12001109618992885,
+        "ic_std": 0.11123109441174665,
+        "icir": 1.0789347783065144,
+        "ic_positive_ratio": 0.8886138613861386,
+        "annual_excess": 0.3643074736204145,
+        "top1_annual_ret": 0.3898012276806718,
+        "mean_turnover": 0.03205409827784216,
+        "final_score": 0.44768045107874327
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 183,
+        "swaps": 95827,
+        "mean_retention_ratio": 0.9836901974003577
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb0.5_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb0.5_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 0.5,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4476714476616633,
+      "metrics": {
+        "ic_mean": 0.11929401982449321,
+        "ic_std": 0.11192765627073173,
+        "icir": 1.0658136138930994,
+        "ic_positive_ratio": 0.8844884488448845,
+        "annual_excess": 0.3651893466945969,
+        "top1_annual_ret": 0.39068310075485435,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4476714476616633
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1.5_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1.5_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.5,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4475606497815686,
+      "metrics": {
+        "ic_mean": 0.11888276038003283,
+        "ic_std": 0.11142015400225809,
+        "icir": 1.0669771680411022,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.365368366353562,
+        "top1_annual_ret": 0.3908621204138195,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4475606497815686
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1.5_xgb1_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1.5_xgb1_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 1.5,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.447502822553988,
+      "metrics": {
+        "ic_mean": 0.11868250066881848,
+        "ic_std": 0.11140927193205111,
+        "icir": 1.0652838727929517,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.36544262187657894,
+        "top1_annual_ret": 0.39093637593683644,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.447502822553988
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb2_xgb1_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb2_xgb1_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 2.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4473178595433791,
+      "metrics": {
+        "ic_mean": 0.11832805867789192,
+        "ic_std": 0.11118906882296467,
+        "icir": 1.064205860616514,
+        "ic_positive_ratio": 0.8861386138613861,
+        "annual_excess": 0.3652986678291181,
+        "top1_annual_ret": 0.3907924218893755,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4473178595433791
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two1.5_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1.5_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.5,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4473141213453639,
+      "metrics": {
+        "ic_mean": 0.1187969684961875,
+        "ic_std": 0.11206582669730873,
+        "icir": 1.060064178324938,
+        "ic_positive_ratio": 0.8828382838283828,
+        "annual_excess": 0.3646609940780067,
+        "top1_annual_ret": 0.39015474813826406,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4473141213453639
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb2_two1_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb2_two1_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 2.0,
+        "two": 1.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4473120594828597,
+      "metrics": {
+        "ic_mean": 0.11868811853055755,
+        "ic_std": 0.11120637434535023,
+        "icir": 1.0672780155746544,
+        "ic_positive_ratio": 0.8853135313531353,
+        "annual_excess": 0.36479925449049905,
+        "top1_annual_ret": 0.3902930085507565,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4473120594828597
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two2_gru1",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two2_gru1",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 2.0,
+        "gru": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4468905798158106,
+      "metrics": {
+        "ic_mean": 0.1184929641236263,
+        "ic_std": 0.11237872015476331,
+        "icir": 1.0544074888950745,
+        "ic_positive_ratio": 0.8820132013201321,
+        "annual_excess": 0.36365452814291066,
+        "top1_annual_ret": 0.38914828220316816,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4468905798158106
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two1_gru0.5",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru0.5",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0,
+        "gru": 0.5
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44634429492208566,
+      "metrics": {
+        "ic_mean": 0.11784663698718861,
+        "ic_std": 0.1115064375226677,
+        "icir": 1.056859492647965,
+        "ic_positive_ratio": 0.8836633663366337,
+        "annual_excess": 0.362695348012411,
+        "top1_annual_ret": 0.38818910207266843,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.44634429492208566
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    },
+    {
+      "wave": 64,
+      "arm": "alpha0.875",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.875,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 0.75,
+        "gru": 2.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.44513965468969663,
+      "metrics": {
+        "ic_mean": 0.12099138228655724,
+        "ic_std": 0.11115374582006392,
+        "icir": 1.0885047678232862,
+        "ic_positive_ratio": 0.891914191419142,
+        "annual_excess": 0.3547665148205071,
+        "top1_annual_ret": 0.38026026888076453,
+        "mean_turnover": 0.03228950890359466,
+        "final_score": 0.44513965468969663
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 167,
+        "swaps": 139827,
+        "mean_retention_ratio": 0.9835673498793769
+      }
+    },
+    {
+      "wave": 62,
+      "arm": "lgb1_xgb1_two1_gru0",
+      "donor": "baseline",
+      "recipe": {
+        "type": "raw_rank_mix",
+        "components": [
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 90,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.25
+          },
+          {
+            "type": "model",
+            "seed": 2026,
+            "fraction": 0.175,
+            "rounds": 180,
+            "params": {},
+            "samples": 8,
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            },
+            "weight": 0.75
+          }
+        ],
+        "postprocessing": {
+          "alpha": 0.9,
+          "bonus": 0.3,
+          "mode": "top_only",
+          "weight": 0.25,
+          "restore_lower": true,
+          "top_current_weight": 1.0
+        }
+      },
+      "ensemble_name": "lgb1_xgb1_two1_gru0",
+      "ensemble_weights": {
+        "lgb": 1.0,
+        "xgb": 1.0,
+        "two": 1.0
+      },
+      "fold_local_pruning_repaired": true,
+      "pruned_member_excluded": true,
+      "membership_w5a_weight": 0.0,
+      "membership_mode": "global",
+      "top_slow_weight": 0.24,
+      "slow16_weight": 0.2,
+      "retention": 0.9845,
+      "limit_up_delta": 0.115,
+      "connected_final_score": 0.4438958065498275,
+      "metrics": {
+        "ic_mean": 0.11564188310283029,
+        "ic_std": 0.11106034251169795,
+        "icir": 1.041252714402981,
+        "ic_positive_ratio": 0.8762376237623762,
+        "annual_excess": 0.357473391950695,
+        "top1_annual_ret": 0.38296714601095244,
+        "mean_turnover": 0.032009880921710185,
+        "final_score": 0.4438958065498275
+      },
+      "construction": {
+        "days": 1212,
+        "m_frac": 0.9845,
+        "retention": null,
+        "boundary_tie_days": 0,
+        "eligibility_limited_days": 181,
+        "swaps": 95833,
+        "mean_retention_ratio": 0.9837144494647172
+      }
+    }
+  ]
+}

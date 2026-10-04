@@ -1,0 +1,349 @@
+{
+  "status": "complete",
+  "scope": "waves62–64",
+  "winner": {
+    "wave": 64,
+    "arm": "limit_shift0.095",
+    "donor": "baseline",
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "ensemble_name": "lgb1_xgb1_two0.75_gru2",
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 0.75,
+      "gru": 2.0
+    },
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "membership_w5a_weight": 0.0,
+    "membership_mode": "global",
+    "top_slow_weight": 0.24,
+    "slow16_weight": 0.2,
+    "retention": 0.9845,
+    "limit_up_delta": 0.095,
+    "connected_final_score": 0.4486144884288789,
+    "metrics": {
+      "ic_mean": 0.12019753401318595,
+      "ic_std": 0.11140091728652829,
+      "icir": 1.078963593307157,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.36712813033372543,
+      "top1_annual_ret": 0.3926218843939828,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4486144884288789
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.9845,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 181,
+      "swaps": 95833,
+      "mean_retention_ratio": 0.9837144494647172
+    }
+  },
+  "baseline_score": 0.4477441201313571,
+  "score_gain": 0.0008703682975217952,
+  "scored_records": 41,
+  "records_per_wave": {
+    "62": 17,
+    "63": 9,
+    "64": 15
+  },
+  "total_scored_records_including_repeats": 1232,
+  "new_fold_models_trained": 0,
+  "ensemble_components": {
+    "lgb": 1.0,
+    "xgb": 1.0,
+    "two": 0.75,
+    "gru": 2.0
+  },
+  "pruned_member_excluded": true,
+  "metric_change_vs_baseline": {
+    "ic_mean": 0.0011063242368771903,
+    "annual_excess": 0.0014261286759029712,
+    "mean_turnover": 0.0
+  },
+  "score_contributions_vs_baseline": {
+    "RankIC": 0.0004425296947508761,
+    "annual_excess": 0.00042783860277089135,
+    "turnover": -0.0
+  },
+  "component_audit": {
+    "status": "passed",
+    "baseline_ranker_bit_identical": true,
+    "baseline_promote_bit_identical": true,
+    "baseline_complete_prediction_bit_identical": true,
+    "test_data_read": false,
+    "new_model_training": false,
+    "pruned_member_excluded": true,
+    "output_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb0.5_xgb1_two1_gru1.npy": "1ae8982ff57ccc4f0598792f02519518ca6ec2038b4c941d0530bdd25f3613cb",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb0_xgb1_two1_gru1.npy": "40967b28dc9ad89afe5a9011a20e4fa4de0f3c4ae4b1a8cb19d0a269792dd9a0",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1.5_xgb1_two1_gru1.npy": "aaf55cc3ab19584e3fe9adc0ba62a8eab2ccf1e3490f81caea88391f59453c50",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb0.5_two1_gru1.npy": "35162975d37beffe75b89be2fafe274e918b898a0d93b5d68eb413489f7667e5",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb0_two1_gru1.npy": "6d6350eb34ce03e9242447bf21b2464a3d8dbeba90daa2479a3d37eeebe93839",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1.5_two1_gru1.npy": "9ea9d27081193611b6295141006c5a5f7731b1859ced5a961ebe1f7d2fbcd972",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two0.5_gru1.npy": "2b443ff892816d710b69bff3a48dc7d6c04b1bb88717f1a8a9b793d97716ff71",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two0_gru1.npy": "f34d3ff5069934945d3afb6320af5ab5adfcdb3f6814a19990a9068c941587cf",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two1.5_gru1.npy": "5d6478336fc81463933d011ed737581c27c1b5f81115e5f276d574257f60565a",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two1_gru0.5.npy": "8774d79b13baf108284c7fa8ae4b7f725c846f5e956c532e955c143fccc5cea3",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two1_gru0.npy": "66355b2541627121361fdb790ae61bbd54383b14bbe860429ecf2e5aebd2c302",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two1_gru1.5.npy": "402c0136f482950642965ec0dc2247cce88756c243c5dbe8fa3328d1b019e379",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two1_gru1.npy": "de0454c4a1232d340978609fea55597a33a601c86f2992cda56c62223375b0d5",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two1_gru2.npy": "e0169ebf0d2fdfdc6af96a0c96dec1f087bfeb3c643ac52145c5e33fb0ddf2a9",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb1_two2_gru1.npy": "42f0f03dcfa8f6b2c051fa16709116f623b1b5a31721f70eccfe6f4c7a4079e7",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb1_xgb2_two1_gru1.npy": "60054753f2956a6d1e5293846a7fc6c5440397fc6034fa447706b5bc3d1c287f",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\rankers\\lgb2_xgb1_two1_gru1.npy": "028b430d618e3513ffa051da1f834da6bd7bdc988c034cdd69e47a2ce39cd82c",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r8\\promote\\cee068fa163592854517.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706"
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12019753401318595,
+      "ic_std": 0.11140091728652829,
+      "icir": 1.078963593307157,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.36712813033372543,
+      "top1_annual_ret": 0.3926218843939828,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4486144884288789
+    },
+    "rows": 5635800,
+    "days": 1212,
+    "fold_calibration_boundaries": {
+      "2020": {
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "validation_first_date": 20200102,
+        "method": "first-fold distribution-based affine fallback from pre2020 training labels; not fitted conditional mean",
+        "ranks_identical": true
+      },
+      "2021": {
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "validation_first_date": 20210104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2022": {
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "validation_first_date": 20220104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2023": {
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "validation_first_date": 20230103,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2024": {
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "validation_first_date": 20240102,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      }
+    },
+    "year_boundary_turnover_included": true,
+    "test_labels_read": false,
+    "future_append_prefix_invariance": [
+      {
+        "through_date": 20200506,
+        "days": 80,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20210126,
+        "days": 260,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20240108,
+        "days": 975,
+        "bit_identical": true
+      }
+    ],
+    "new_model_training_boundary_proofs": [
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      }
+    ],
+    "csv_sha256": "95f0a652f3c0689be161cb7cd593b4a6ae89bce3f4bb217778f171fe4ebf9d95",
+    "final_map_sha256": "7e3a1a47d48e8bfc48e40b491e3141b07fe2b26fb1be2d6d6fbaecb773bec4d0"
+  },
+  "calibrated_written_csv": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12019753401318595,
+      "ic_std": 0.11140091728652829,
+      "icir": 1.078963593307157,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.36712813033372543,
+      "top1_annual_ret": 0.3926218843939828,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4486144884288789
+    },
+    "csv_sha256": "95f0a652f3c0689be161cb7cd593b4a6ae89bce3f4bb217778f171fe4ebf9d95",
+    "test_labels_read": false
+  },
+  "prediction": {
+    "status": "passed",
+    "csv_sha256": "39db1581ef875b20e623460d8d2a0283973df8b193c5b6dc38268e81f9ca8a63",
+    "rows": 1599600,
+    "days": 344,
+    "codes": 4650,
+    "models": {
+      "seed2026_f0.175_r90": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r90.txt",
+        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r90.txt",
+          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+          "rounds": 90,
+          "provenance": {
+            "method": "reuse independently verified full-training tree prefix",
+            "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+            "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+            "prefix90_matches_separately_trained90_bit_identically": true
+          }
+        },
+        "weight": 0.25
+      },
+      "seed2026_f0.175_r180": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r180.txt",
+        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r180.txt",
+          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+          "rounds": 180,
+          "provenance": {
+            "method": "reuse independently verified full-training tree prefix",
+            "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+            "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+            "prefix90_matches_separately_trained90_bit_identically": true
+          }
+        },
+        "weight": 0.75
+      }
+    },
+    "model_reload_bit_identical": true,
+    "pipeline_replay_bit_identical": true,
+    "csv_replay_byte_identical": true,
+    "csv_ranks_unchanged": true,
+    "validation_score": 0.4486144884288789,
+    "test_labels_read": false,
+    "fold_local_pruning_repaired": true,
+    "final_pruned_features_match_train_only_selector": true,
+    "source_predictions_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\pooled_rms25\\backbone_raw.parquet": "e7b47b9c5254527afff11ed2a0561b291ac05d283615c6a4a37bd6f17449cf45",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\T2f_xgboost_test_raw.parquet": "680b9f9c17a5e3d50fde8e8b6b74063c27db8b08d997834de1c7f75b9acd72e0",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2c_two_day_test_raw.parquet": "413bff6bbe8fd760190029271f929a20fb92e5762ae3d8ae083b3e3fa63c162e",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2d_pruned_test_raw.parquet": "39cdc79a5fdac947f255da4075161e91c2fa9bee75092d2e821fe85ba058c3da",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\connected_validation_20261002\\w5a_test\\gru_raw_test.npy": "011b7f69f8d2a7d7784f82f8d40e276fc1d4668e398d14e19dbf0f5b2df88594"
+    },
+    "construction": {
+      "days": 344,
+      "m_frac": 0.9845,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 32,
+      "swaps": 6678,
+      "mean_retention_ratio": 0.9854738946820004
+    },
+    "old_delivery_pointer_unchanged": true
+  },
+  "candidate_submission": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\submission.csv",
+  "test_labels_read_this_round": false,
+  "test_score_of_this_candidate": null,
+  "old_deliveries_preserved": true,
+  "all_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true,
+  "followup_directions": [
+    "Test independent Top/rest ensemble weights after fixing the donor.",
+    "Evaluate alternative causal retention/drop/add rules.",
+    "Test new TopK checkpoints on the pruning-free weighted pipeline."
+  ]
+}

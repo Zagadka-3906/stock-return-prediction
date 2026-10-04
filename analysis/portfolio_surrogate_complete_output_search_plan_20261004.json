@@ -1,0 +1,181 @@
+{
+  "status": "prepared_official_rounds_not_yet_queued",
+  "frozen_at_local": "2026-10-04T16:32:24",
+  "model_configurations": {
+    "portfolio512_ic_ret_tau01_e4": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "dropout": 0.0,
+      "seed": 20261007,
+      "batch_size": 32768,
+      "epochs": 32,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "training_objective": "warm_checkpoint_portfolio_proxy",
+      "fine_tune_epochs": 4,
+      "tau_fraction": 0.1,
+      "turnover_weight": 0.0,
+      "gradient_clip_norm": 1.0
+    },
+    "portfolio512_ic_ret_turn_tau01_e4": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "dropout": 0.0,
+      "seed": 20261007,
+      "batch_size": 32768,
+      "epochs": 32,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "training_objective": "warm_checkpoint_portfolio_proxy",
+      "fine_tune_epochs": 4,
+      "tau_fraction": 0.1,
+      "turnover_weight": 0.3,
+      "gradient_clip_norm": 1.0
+    },
+    "portfolio512_ic_ret_turn_tau005_e4": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "dropout": 0.0,
+      "seed": 20261007,
+      "batch_size": 32768,
+      "epochs": 32,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "training_objective": "warm_checkpoint_portfolio_proxy",
+      "fine_tune_epochs": 4,
+      "tau_fraction": 0.05,
+      "turnover_weight": 0.3,
+      "gradient_clip_norm": 1.0
+    },
+    "portfolio512_ic_ret_turn_tau01_e8": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "hidden": [
+        512,
+        256,
+        128
+      ],
+      "dropout": 0.0,
+      "seed": 20261007,
+      "batch_size": 32768,
+      "epochs": 32,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "training_objective": "warm_checkpoint_portfolio_proxy",
+      "fine_tune_epochs": 8,
+      "tau_fraction": 0.1,
+      "turnover_weight": 0.3,
+      "gradient_clip_norm": 1.0
+    }
+  },
+  "new_native_models": 4,
+  "new_annual_fits": 20,
+  "training_bank_protocol_frozen_by_driver_before_first_annual_fit": true,
+  "warm_start_old_checkpoint_fits_reused_not_counted_as_new": true,
+  "actual_previous_selection_required": {
+    "59": 58,
+    "60": 59
+  },
+  "waves": {
+    "59": [
+      247,
+      248,
+      249,
+      250
+    ],
+    "60": [
+      251,
+      252,
+      253
+    ]
+  },
+  "records_per_wave": {
+    "59": [
+      49,
+      8,
+      18,
+      25
+    ],
+    "60": [
+      25,
+      56,
+      17
+    ]
+  },
+  "expected_total_records": {
+    "59": 100,
+    "60": 98
+  },
+  "roles": [
+    "membership",
+    "top",
+    "rest"
+  ],
+  "role_weights": [
+    0.005,
+    0.025,
+    0.075,
+    0.2
+  ],
+  "role_floor_choices": [
+    0.0,
+    0.97,
+    0.98,
+    0.984,
+    0.99
+  ],
+  "extra_limit_delta_choices": [
+    -0.04,
+    -0.02,
+    0.0,
+    0.02,
+    0.04
+  ],
+  "standalone_initial_alpha_choices": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "standalone_initial_auxiliary_choices": [
+    0.0,
+    0.25
+  ],
+  "standalone_initial_bonus": 0.3,
+  "each_adaptive_coordinate_anchor_frozen_before_scoring": true,
+  "actual_generator_control_status": "passed",
+  "complete5635800_row_validation_andcausal_calibration_required": true,
+  "actual_previous1599600_row_future_CSV_byte_identity_required_before_quality_search": true,
+  "new_role_inserted_before_frozen_final_temporal_transform": true,
+  "standalone_replacement_discards_old_root_andall_old_role_layers": true,
+  "scoring_target": ".4*IC_mean+.3*annual_excess+.3*(1-mean_turnover)",
+  "same_continuous_validation_dates": "2020–2024;5635800 rows;1212 days;no year-boundary turnover reset",
+  "forecast_calibration": "Mature past-only; actual one-day-return CSV scored by original official evaluator",
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "global_resource_exhaustion_established": false,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\freeze_portfolio_surrogate_search_plan_20261004.py": "c43bd075fbb1b07f2952b7f7d275c34ddf9744e752d2d3de8d045419c041340c",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_portfolio_surrogate_bank_20261004.py": "d1c975a0cbab3c8e45723b0a86893dc8d8c8e4856a88eff0d95dac1e36e4571d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\portfolio_surrogate_search_generator_preflight_20261004\\verification.json": "f648d540080649053543e392ea740389c95bfd45da7daf21dc6a871f5efdb0d3",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\portfolio_bank_implementation_preflight_20261004\\verification.json": "9825817c5096faa061b7c2e75047a7d4d8d411b2d176ae953fbe5ebb6dc0404b",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\portfolio_surrogate_adapter_generation_20261004.json": "666ffe8e6d9bca0b0c4b1851f787c78c326bac83eddc1c5610b1eb3f31366edc",
+    "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_20261003_r31.json": "8a0dd959ef9175814491b7a454d4dcb0df0874dc19c120dc6ce31f47f0540e91",
+    "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_20261003_r35.json": "c948badceefc951ccb83276d9e08f11a1f2db254b162b141f60df29e11132517"
+  }
+}
