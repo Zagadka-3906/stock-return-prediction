@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "metrics": {
+    "ic_mean": 0.12189689111564944,
+    "ic_std": 0.10933322634410834,
+    "icir": 1.1149116804803603,
+    "ic_positive_ratio": 0.8952145214521452,
+    "annual_excess": 0.37300598389605344,
+    "top1_annual_ret": 0.3984997379563108,
+    "mean_turnover": 0.032304884612709174,
+    "final_score": 0.450969086231263
+  },
+  "rows": 5635800,
+  "days": 1212,
+  "fold_calibration_boundaries": {
+    "2020": {
+      "mapping_last_label_date": 20191230,
+      "exclusive_cutoff": 20191231,
+      "validation_first_date": 20200102,
+      "method": "first-fold distribution-based affine fallback from pre2020 training labels; not fitted conditional mean",
+      "ranks_identical": true
+    },
+    "2021": {
+      "mapping_last_label_date": 20201230,
+      "exclusive_cutoff": 20201231,
+      "validation_first_date": 20210104,
+      "method": "isotonic trained only on earlier OOF folds and mature labels",
+      "ranks_identical": true
+    },
+    "2022": {
+      "mapping_last_label_date": 20211230,
+      "exclusive_cutoff": 20211231,
+      "validation_first_date": 20220104,
+      "method": "isotonic trained only on earlier OOF folds and mature labels",
+      "ranks_identical": true
+    },
+    "2023": {
+      "mapping_last_label_date": 20221229,
+      "exclusive_cutoff": 20221230,
+      "validation_first_date": 20230103,
+      "method": "isotonic trained only on earlier OOF folds and mature labels",
+      "ranks_identical": true
+    },
+    "2024": {
+      "mapping_last_label_date": 20231228,
+      "exclusive_cutoff": 20231229,
+      "validation_first_date": 20240102,
+      "method": "isotonic trained only on earlier OOF folds and mature labels",
+      "ranks_identical": true
+    }
+  },
+  "year_boundary_turnover_included": true,
+  "test_labels_read": false,
+  "future_append_prefix_invariance": [
+    {
+      "through_date": 20200506,
+      "days": 80,
+      "bit_identical": true
+    },
+    {
+      "through_date": 20210126,
+      "days": 260,
+      "bit_identical": true
+    },
+    {
+      "through_date": 20240108,
+      "days": 975,
+      "bit_identical": true
+    }
+  ],
+  "new_model_training_boundary_proofs": [],
+  "csv_sha256": "953c123256a9027ea9d94a835c42f18efbd40d6b127e5ef9b62074d70e06b57a",
+  "final_map_sha256": "7a70368908afc6fb0326d310222de73e733bc7badd08c0861f81acaf76d013aa"
+}
