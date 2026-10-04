@@ -1,2 +1,12 @@
 # Normalize source, configuration and result records to LF.
 * text=auto eol=lf
+
+# Frozen scientific hashes refer to original bytes, including line endings.
+/analysis/** -text
+/experiments/** -text
+/src/** -text
+/config/** -text
+/*.py -text
+/results/** -text
+/README.md -text
+/active_release.json -text
