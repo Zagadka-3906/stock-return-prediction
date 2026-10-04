@@ -1,0 +1,1486 @@
+{
+  "status": "complete",
+  "round": 17,
+  "round_label": "头部识别与同日成对排序神经网络集成",
+  "waves": [
+    97,
+    98,
+    99,
+    100
+  ],
+  "winner": {
+    "wave": 100,
+    "arm": "top0.24_rest0.27",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.24,
+    "slow16_weight": 0.27,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "independent",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.075,
+    "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+    "membership_slow_weight": 0.24,
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "membership_power": 1.0,
+    "membership_memory": 0.025,
+    "diverse_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "pair_rank128_e32",
+        "weight": 0.35
+      },
+      "rest": {
+        "model": "rank512_e32",
+        "weight": 0.2
+      }
+    },
+    "donor": "baseline",
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.4499609711045616,
+    "metrics": {
+      "ic_mean": 0.12078494495682308,
+      "ic_std": 0.11045258225541281,
+      "icir": 1.0935456871213523,
+      "ic_positive_ratio": 0.8877887788778878,
+      "annual_excess": 0.37088916394283467,
+      "top1_annual_ret": 0.3963829180030921,
+      "mean_turnover": 0.032065853536726606,
+      "final_score": 0.4499609711045616
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.984,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 189,
+      "swaps": 92790,
+      "mean_retention_ratio": 0.9836860016845211
+    },
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "816f727143c01b1198481f66e4493746c374712f28e6aeaa8be78150f3184dc0",
+      "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\identical_official_scores\\816f727143c01b1198481f66e4493746c374712f28e6aeaa8be78150f3184dc0.json"
+    }
+  },
+  "baseline_score": 0.44960545533516877,
+  "score_gain": 0.0003555157693928557,
+  "sequential_stage_results": [
+    {
+      "wave": 97,
+      "stage": "三个用途独立集成",
+      "scored_records": 37,
+      "best_arm": "top_pair_rank128_e32_w0.3",
+      "best_scored_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.26,
+        "slow16_weight": 0.27,
+        "priority_signal": "top",
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_signal": "independent",
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "membership_slow_weight": 0.24,
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "diverse_augmentation": {
+          "membership": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "top": {
+            "model": "pair_rank128_e32",
+            "weight": 0.3
+          },
+          "rest": {
+            "model": "rank512_e32",
+            "weight": 0.2
+          }
+        },
+        "donor": "baseline",
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "membership_ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44970628019179415,
+        "metrics": {
+          "ic_mean": 0.12078725407667149,
+          "ic_std": 0.11045512687874422,
+          "icir": 1.093541399932207,
+          "ic_positive_ratio": 0.8877887788778878,
+          "annual_excess": 0.37003711540714523,
+          "top1_annual_ret": 0.39553086946740273,
+          "mean_turnover": 0.032065853536726606,
+          "final_score": 0.44970628019179415
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 189,
+          "swaps": 92790,
+          "mean_retention_ratio": 0.9836860016845211
+        },
+        "official_score_cache": {
+          "cache_hit": false,
+          "cache_key": "a6d9b34948e650c1f61c6db0f4c971dc66f857cd9dc496da96e3a2805857df39",
+          "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\identical_official_scores\\a6d9b34948e650c1f61c6db0f4c971dc66f857cd9dc496da96e3a2805857df39.json"
+        }
+      },
+      "cumulative_best": 0.44970628019179415,
+      "gain_from_previous_stage": 0.0001008248566253811
+    },
+    {
+      "wave": 98,
+      "stage": "用途最优设置组合",
+      "scored_records": 8,
+      "best_arm": "on_010",
+      "best_scored_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.26,
+        "slow16_weight": 0.27,
+        "priority_signal": "top",
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_signal": "independent",
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "membership_slow_weight": 0.24,
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "diverse_augmentation": {
+          "membership": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "top": {
+            "model": "pair_rank128_e32",
+            "weight": 0.3
+          },
+          "rest": {
+            "model": "rank512_e32",
+            "weight": 0.2
+          }
+        },
+        "donor": "baseline",
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "membership_ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44970628019179415,
+        "metrics": {
+          "ic_mean": 0.12078725407667149,
+          "ic_std": 0.11045512687874422,
+          "icir": 1.093541399932207,
+          "ic_positive_ratio": 0.8877887788778878,
+          "annual_excess": 0.37003711540714523,
+          "top1_annual_ret": 0.39553086946740273,
+          "mean_turnover": 0.032065853536726606,
+          "final_score": 0.44970628019179415
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 189,
+          "swaps": 92790,
+          "mean_retention_ratio": 0.9836860016845211
+        },
+        "official_score_cache": {
+          "cache_hit": true,
+          "cache_key": "a6d9b34948e650c1f61c6db0f4c971dc66f857cd9dc496da96e3a2805857df39",
+          "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\identical_official_scores\\a6d9b34948e650c1f61c6db0f4c971dc66f857cd9dc496da96e3a2805857df39.json"
+        }
+      },
+      "cumulative_best": 0.44970628019179415,
+      "gain_from_previous_stage": 0.0
+    },
+    {
+      "wave": 99,
+      "stage": "集成权重细搜",
+      "scored_records": 18,
+      "best_arm": "top_4_w0.35",
+      "best_scored_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.26,
+        "slow16_weight": 0.27,
+        "priority_signal": "top",
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_signal": "independent",
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "membership_slow_weight": 0.24,
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "diverse_augmentation": {
+          "membership": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "top": {
+            "model": "pair_rank128_e32",
+            "weight": 0.35
+          },
+          "rest": {
+            "model": "rank512_e32",
+            "weight": 0.2
+          }
+        },
+        "donor": "baseline",
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "membership_ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.44993581236703933,
+        "metrics": {
+          "ic_mean": 0.12078478492760628,
+          "ic_std": 0.11045272296648663,
+          "icir": 1.093542845152442,
+          "ic_positive_ratio": 0.8877887788778878,
+          "annual_excess": 0.37080551485671615,
+          "top1_annual_ret": 0.3962992689169736,
+          "mean_turnover": 0.032065853536726606,
+          "final_score": 0.44993581236703933
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 189,
+          "swaps": 92790,
+          "mean_retention_ratio": 0.9836860016845211
+        },
+        "official_score_cache": {
+          "cache_hit": false,
+          "cache_key": "d463ab9ddcf8d97007090f5f150f22102eda8738ba312ea8f798bfb7c2d1b24b",
+          "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\identical_official_scores\\d463ab9ddcf8d97007090f5f150f22102eda8738ba312ea8f798bfb7c2d1b24b.json"
+        }
+      },
+      "cumulative_best": 0.44993581236703933,
+      "gain_from_previous_stage": 0.000229532175245184
+    },
+    {
+      "wave": 100,
+      "stage": "输出细调",
+      "scored_records": 20,
+      "best_arm": "top0.24_rest0.27",
+      "best_scored_configuration": {
+        "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+        "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+        "top_slow_weight": 0.24,
+        "slow16_weight": 0.27,
+        "priority_signal": "top",
+        "add_priority_weight": 0.0,
+        "drop_priority_weight": 0.0,
+        "membership_signal": "independent",
+        "membership_mode": "global",
+        "membership_w5a_weight": 0.75,
+        "retention": 0.984,
+        "limit_up_delta": 0.075,
+        "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+        "membership_slow_weight": 0.24,
+        "recipe": {
+          "type": "raw_rank_mix",
+          "components": [
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 90,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.25
+            },
+            {
+              "type": "model",
+              "seed": 2026,
+              "fraction": 0.175,
+              "rounds": 180,
+              "params": {},
+              "samples": 8,
+              "postprocessing": {
+                "alpha": 0.9,
+                "bonus": 0.3,
+                "mode": "top_only",
+                "weight": 0.25,
+                "restore_lower": true,
+                "top_current_weight": 1.0
+              },
+              "weight": 0.75
+            }
+          ],
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          }
+        },
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "diverse_augmentation": {
+          "membership": {
+            "model": "none",
+            "weight": 0.0
+          },
+          "top": {
+            "model": "pair_rank128_e32",
+            "weight": 0.35
+          },
+          "rest": {
+            "model": "rank512_e32",
+            "weight": 0.2
+          }
+        },
+        "donor": "baseline",
+        "ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "top_ensemble_weights": {
+          "lgb": 1.0,
+          "xgb": 1.0,
+          "gru": 1.0
+        },
+        "membership_ensemble_weights": {
+          "lgb": 0.75,
+          "xgb": 1.0,
+          "two": 1.0,
+          "gru": 2.25
+        },
+        "role_ensembles_split": true,
+        "fold_local_pruning_repaired": true,
+        "pruned_member_excluded": true,
+        "connected_final_score": 0.4499609711045616,
+        "metrics": {
+          "ic_mean": 0.12078494495682308,
+          "ic_std": 0.11045258225541281,
+          "icir": 1.0935456871213523,
+          "ic_positive_ratio": 0.8877887788778878,
+          "annual_excess": 0.37088916394283467,
+          "top1_annual_ret": 0.3963829180030921,
+          "mean_turnover": 0.032065853536726606,
+          "final_score": 0.4499609711045616
+        },
+        "construction": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 189,
+          "swaps": 92790,
+          "mean_retention_ratio": 0.9836860016845211
+        },
+        "official_score_cache": {
+          "cache_hit": false,
+          "cache_key": "816f727143c01b1198481f66e4493746c374712f28e6aeaa8be78150f3184dc0",
+          "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\identical_official_scores\\816f727143c01b1198481f66e4493746c374712f28e6aeaa8be78150f3184dc0.json"
+        }
+      },
+      "cumulative_best": 0.4499609711045616,
+      "gain_from_previous_stage": 2.5158737522290586e-05
+    }
+  ],
+  "scored_records": 83,
+  "records_per_wave": {
+    "97": 37,
+    "98": 8,
+    "99": 18,
+    "100": 20
+  },
+  "distinct_output_configurations": 68,
+  "repeat_records": 15,
+  "official_score_reuse": {
+    "records_with_cache_provenance": 83,
+    "identical_csv_reuse_records": 15,
+    "fresh_official_evaluations_in_scored_records": 68,
+    "distinct_csv_scoring_input_capsules": 68
+  },
+  "calibration_cache_recovery": null,
+  "new_fold_model_training": true,
+  "metric_change_vs_baseline": {
+    "ic_mean": -6.286240697983558e-07,
+    "annual_excess": 0.0011858907300691945,
+    "mean_turnover": 0.0
+  },
+  "score_contributions_vs_baseline": {
+    "RankIC": -2.5144962791934237e-07,
+    "annual_excess": 0.00035576721902075834,
+    "turnover": -0.0
+  },
+  "component_audit": {
+    "status": "passed",
+    "baseline_complete_output_bit_identical": true,
+    "active_augmentation_prefix_and_poisoning_controls": [
+      {
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "membership_mode": "global",
+        "label_poisoning_bit_identical": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          }
+        ]
+      },
+      {
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "membership_mode": "global",
+        "label_poisoning_bit_identical": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          }
+        ]
+      },
+      {
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "membership_mode": "global",
+        "label_poisoning_bit_identical": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          }
+        ]
+      }
+    ],
+    "models_trained": 15,
+    "test_data_read": false,
+    "output_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\rankers\\pair_rank128_e32.npy": "18fdd95115089f55108ad0ea5f2357cdc44c300ffcb1046feea05d98df8d2dd1",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\rankers\\tail_bce128_e32.npy": "09fd09c25aa2a8e0a1cf69946d2fde307452db7de4d52f496edd06a98a81fe4c",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r17\\rankers\\tail_mse128_e32.npy": "e4cc5758948f3741e785bf289a0a34beee26c8d8516a97a29956004826b982d5"
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12078494495682308,
+      "ic_std": 0.11045258225541281,
+      "icir": 1.0935456871213523,
+      "ic_positive_ratio": 0.8877887788778878,
+      "annual_excess": 0.37088916394283467,
+      "top1_annual_ret": 0.3963829180030921,
+      "mean_turnover": 0.032065853536726606,
+      "final_score": 0.4499609711045616
+    },
+    "rows": 5635800,
+    "days": 1212,
+    "fold_calibration_boundaries": {
+      "2020": {
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "validation_first_date": 20200102,
+        "method": "first-fold distribution-based affine fallback from pre2020 training labels; not fitted conditional mean",
+        "ranks_identical": true
+      },
+      "2021": {
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "validation_first_date": 20210104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2022": {
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "validation_first_date": 20220104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2023": {
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "validation_first_date": 20230103,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2024": {
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "validation_first_date": 20240102,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      }
+    },
+    "year_boundary_turnover_included": true,
+    "test_labels_read": false,
+    "future_append_prefix_invariance": [
+      {
+        "through_date": 20200506,
+        "days": 80,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20210126,
+        "days": 260,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20240108,
+        "days": 975,
+        "bit_identical": true
+      }
+    ],
+    "new_model_training_boundary_proofs": [],
+    "csv_sha256": "f3f613524e07389877b06adb26916f27de1916d1045dbd6dc7c4a9096cb918db",
+    "final_map_sha256": "7ff3122fe24cf2c566de2c91f05e3ec7ef0f30ed3d2b27f2308512ff4145a4c7"
+  },
+  "calibrated_written_csv": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.12078494495682308,
+      "ic_std": 0.11045258225541281,
+      "icir": 1.0935456871213523,
+      "ic_positive_ratio": 0.8877887788778878,
+      "annual_excess": 0.37088916394283467,
+      "top1_annual_ret": 0.3963829180030921,
+      "mean_turnover": 0.032065853536726606,
+      "final_score": 0.4499609711045616
+    },
+    "csv_sha256": "f3f613524e07389877b06adb26916f27de1916d1045dbd6dc7c4a9096cb918db",
+    "test_labels_read": false
+  },
+  "method_causal_checks": {
+    "status": "passed",
+    "controls": [
+      {
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "membership_mode": "global",
+        "label_poisoning_bit_identical": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          },
+          {
+            "days": 975,
+            "through_date": 20240108,
+            "bit_identical": true
+          }
+        ]
+      },
+      {
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "membership_mode": "global",
+        "label_poisoning_bit_identical": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          },
+          {
+            "days": 975,
+            "through_date": 20240108,
+            "bit_identical": true
+          }
+        ]
+      },
+      {
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "membership_mode": "global",
+        "label_poisoning_bit_identical": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          },
+          {
+            "days": 975,
+            "through_date": 20240108,
+            "bit_identical": true
+          }
+        ]
+      },
+      {
+        "membership_power": 1.0,
+        "membership_memory": 0.025,
+        "membership_mode": "global",
+        "label_poisoning_bit_identical": true,
+        "future_append_prefix_invariance": [
+          {
+            "days": 80,
+            "through_date": 20200506,
+            "bit_identical": true
+          },
+          {
+            "days": 260,
+            "through_date": 20210126,
+            "bit_identical": true
+          },
+          {
+            "days": 975,
+            "through_date": 20240108,
+            "bit_identical": true
+          }
+        ]
+      }
+    ],
+    "new_model_inference_prefix_checks": [
+      {
+        "model": "tail_bce128_e32",
+        "year": 2020,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20191231
+      },
+      {
+        "model": "tail_bce128_e32",
+        "year": 2021,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20201231
+      },
+      {
+        "model": "tail_bce128_e32",
+        "year": 2022,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20211231
+      },
+      {
+        "model": "tail_bce128_e32",
+        "year": 2023,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20221230
+      },
+      {
+        "model": "tail_bce128_e32",
+        "year": 2024,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20231229
+      },
+      {
+        "model": "tail_mse128_e32",
+        "year": 2020,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20191231
+      },
+      {
+        "model": "tail_mse128_e32",
+        "year": 2021,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20201231
+      },
+      {
+        "model": "tail_mse128_e32",
+        "year": 2022,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20211231
+      },
+      {
+        "model": "tail_mse128_e32",
+        "year": 2023,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20221230
+      },
+      {
+        "model": "tail_mse128_e32",
+        "year": 2024,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20231229
+      },
+      {
+        "model": "pair_rank128_e32",
+        "year": 2020,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20191231
+      },
+      {
+        "model": "pair_rank128_e32",
+        "year": 2021,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20201231
+      },
+      {
+        "model": "pair_rank128_e32",
+        "year": 2022,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20211231
+      },
+      {
+        "model": "pair_rank128_e32",
+        "year": 2023,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20221230
+      },
+      {
+        "model": "pair_rank128_e32",
+        "year": 2024,
+        "rows": 32781,
+        "raw_inference_prefix_bit_identical": true,
+        "last_label_end": 20231229
+      }
+    ],
+    "selected_output_bit_identical": true,
+    "test_data_read": false,
+    "new_scored_records": 0,
+    "verification_script_sha256": "736c7f130f5b2645b45afb86ab2e31100eed80079e77f1cd8ced692dfe2363c3"
+  },
+  "prediction": {
+    "status": "passed",
+    "csv_sha256": "6f342cdcb915cbef11473952934c7c0778aad3afe1cd8172da3bce9a9d4a0155",
+    "rows": 1599600,
+    "days": 344,
+    "codes": 4650,
+    "models": {
+      "seed2026_f0.175_r90": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r17\\model_seed2026_f0.175_r90.txt",
+        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r16\\model_seed2026_f0.175_r90.txt",
+          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+          "original": {
+            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r15\\model_seed2026_f0.175_r90.txt",
+            "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+            "original": {
+              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r14\\model_seed2026_f0.175_r90.txt",
+              "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+              "original": {
+                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r13\\model_seed2026_f0.175_r90.txt",
+                "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                "original": {
+                  "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r12\\model_seed2026_f0.175_r90.txt",
+                  "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                  "original": {
+                    "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r11\\model_seed2026_f0.175_r90.txt",
+                    "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                    "original": {
+                      "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r10\\model_seed2026_f0.175_r90.txt",
+                      "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                      "original": {
+                        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r9\\model_seed2026_f0.175_r90.txt",
+                        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                        "original": {
+                          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r90.txt",
+                          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                          "original": {
+                            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r90.txt",
+                            "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+                            "rounds": 90,
+                            "provenance": {
+                              "method": "reuse independently verified full-training tree prefix",
+                              "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+                              "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                              "prefix90_matches_separately_trained90_bit_identically": true
+                            }
+                          },
+                          "weight": 0.25
+                        },
+                        "weight": 0.25
+                      },
+                      "weight": 0.25
+                    },
+                    "weight": 0.25
+                  },
+                  "weight": 0.25
+                },
+                "weight": 0.25
+              },
+              "weight": 0.25
+            },
+            "weight": 0.25
+          },
+          "weight": 0.25
+        },
+        "weight": 0.25
+      },
+      "seed2026_f0.175_r180": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r17\\model_seed2026_f0.175_r180.txt",
+        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r16\\model_seed2026_f0.175_r180.txt",
+          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+          "original": {
+            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r15\\model_seed2026_f0.175_r180.txt",
+            "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+            "original": {
+              "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r14\\model_seed2026_f0.175_r180.txt",
+              "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+              "original": {
+                "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r13\\model_seed2026_f0.175_r180.txt",
+                "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                "original": {
+                  "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r12\\model_seed2026_f0.175_r180.txt",
+                  "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                  "original": {
+                    "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r11\\model_seed2026_f0.175_r180.txt",
+                    "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                    "original": {
+                      "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r10\\model_seed2026_f0.175_r180.txt",
+                      "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                      "original": {
+                        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r9\\model_seed2026_f0.175_r180.txt",
+                        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                        "original": {
+                          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r8\\model_seed2026_f0.175_r180.txt",
+                          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                          "original": {
+                            "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r180.txt",
+                            "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                            "rounds": 180,
+                            "provenance": {
+                              "method": "reuse independently verified full-training tree prefix",
+                              "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+                              "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+                              "prefix90_matches_separately_trained90_bit_identically": true
+                            }
+                          },
+                          "weight": 0.75
+                        },
+                        "weight": 0.75
+                      },
+                      "weight": 0.75
+                    },
+                    "weight": 0.75
+                  },
+                  "weight": 0.75
+                },
+                "weight": 0.75
+              },
+              "weight": 0.75
+            },
+            "weight": 0.75
+          },
+          "weight": 0.75
+        },
+        "weight": 0.75
+      },
+      "diverse_pair_rank128_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r17\\model_diverse_pair_rank128_e32.joblib",
+        "sha256": "c3811eb992d5cc671ff49106e95ca3ba8ddbc0d611f13f45b80ec58b9f3fd0f4",
+        "training_info": {
+          "status": "passed",
+          "model": "pair_rank128_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "hidden": [
+              128,
+              64
+            ],
+            "epochs": 32,
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "objective": "same_day_ranknet",
+            "temperature": 0.1,
+            "mse_weight": 0.1,
+            "seed": 20261012
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 56.42099999999846,
+          "model_sha256": "c3811eb992d5cc671ff49106e95ca3ba8ddbc0d611f13f45b80ec58b9f3fd0f4",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 60.39099999999962
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\objective_bank_20261003\\pair_rank128_e32\\model_2025.joblib"
+      },
+      "diverse_rank512_e32": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r17\\model_diverse_rank512_e32.joblib",
+        "sha256": "515ecf800f2df38d548a7a62ea815bc9661f1a840bbcdaf90106a17bb3241a85",
+        "training_info": {
+          "status": "passed",
+          "model": "rank512_e32",
+          "year": 2025,
+          "configuration": {
+            "kind": "mlp",
+            "target": "y_rank",
+            "batch_size": 32768,
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "dropout": 0.05,
+            "hidden": [
+              512,
+              256,
+              128
+            ],
+            "epochs": 32,
+            "seed": 20261007
+          },
+          "training_meta": {
+            "rows": 6754006,
+            "days": 1698,
+            "first": 20180102,
+            "last": 20241230,
+            "cutoff_exclusive": 20241231,
+            "last_label_end": 20241231,
+            "validation_year": 2025,
+            "training_matrix_sha256": "ff916b7ce1d3af02591ada3f393fca40dd337784d64a2db34efeec5a9f0aedc3",
+            "training_target_sha256": "e0d0e97b9da444fe53a9eb7006ec9a331178a35e3a33e1b245d7bdbb09e9c851",
+            "training_keys_sha256": "1e357fb341f35586d2a3a69323578ac2b3306c519da0140261255754497de0d9",
+            "features": [
+              "KMID",
+              "KLEN",
+              "KMID2",
+              "KUP",
+              "KUP2",
+              "KLOW",
+              "KLOW2",
+              "KSFT",
+              "KSFT2",
+              "OPEN0",
+              "HIGH0",
+              "LOW0",
+              "ROC5",
+              "MA5",
+              "STD5",
+              "VMA5",
+              "VSTD5",
+              "ROC10",
+              "MA10",
+              "STD10",
+              "VMA10",
+              "VSTD10",
+              "ROC20",
+              "MA20",
+              "STD20",
+              "VMA20",
+              "VSTD20",
+              "ROC60",
+              "MA60",
+              "STD60",
+              "VMA60",
+              "VSTD60",
+              "RET1",
+              "RET2",
+              "RET3",
+              "RET5",
+              "RET10",
+              "RET20",
+              "RET60",
+              "AMT_RATIO5",
+              "VOL_RATIO5",
+              "AMT_RATIO20",
+              "VOL_RATIO20",
+              "AMT_RATIO60",
+              "VOL_RATIO60",
+              "LOG_AMOUNT",
+              "LOG_VOL",
+              "PRICE_TO_20D_HIGH",
+              "PRICE_TO_60D_HIGH",
+              "ILLIQ",
+              "UP_COUNT5",
+              "UP_COUNT10",
+              "UP_COUNT20",
+              "RVOL5",
+              "RVOL20",
+              "flag_limit_up",
+              "flag_limit_down",
+              "CS_RET1",
+              "CS_RET5",
+              "CS_RET20",
+              "CS_KLEN",
+              "CS_LOG_AMOUNT",
+              "CS_RVOL20"
+            ]
+          },
+          "fit_seconds": 121.20300000000134,
+          "model_sha256": "515ecf800f2df38d548a7a62ea815bc9661f1a840bbcdaf90106a17bb3241a85",
+          "test_data_read": false,
+          "fulltraining_only_test_prediction_not_generated": true,
+          "elapsed_seconds": 124.71800000000076
+        },
+        "reload_bit_identical": true,
+        "original": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_bank_20261003\\rank512_e32\\model_2025.joblib"
+      }
+    },
+    "model_reload_bit_identical": true,
+    "pipeline_replay_bit_identical": true,
+    "csv_replay_byte_identical": true,
+    "csv_ranks_unchanged": true,
+    "validation_score": 0.4499609711045616,
+    "test_labels_read": false,
+    "role_ensembles_split": true,
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "priority_signal": "top",
+    "membership_signal": "independent",
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "membership_slow_weight": 0.24,
+    "membership_power": 1.0,
+    "membership_memory": 0.025,
+    "diverse_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "pair_rank128_e32",
+        "weight": 0.35
+      },
+      "rest": {
+        "model": "rank512_e32",
+        "weight": 0.2
+      }
+    },
+    "new_fulltrain_models": 2,
+    "membership_w5a_weight": 0.75,
+    "membership_mode": "global",
+    "rest_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "pruned_member_excluded": true,
+    "source_predictions_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\pooled_rms25\\backbone_raw.parquet": "e7b47b9c5254527afff11ed2a0561b291ac05d283615c6a4a37bd6f17449cf45",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\T2f_xgboost_test_raw.parquet": "680b9f9c17a5e3d50fde8e8b6b74063c27db8b08d997834de1c7f75b9acd72e0",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2c_two_day_test_raw.parquet": "413bff6bbe8fd760190029271f929a20fb92e5762ae3d8ae083b3e3fa63c162e",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2d_pruned_test_raw.parquet": "39cdc79a5fdac947f255da4075161e91c2fa9bee75092d2e821fe85ba058c3da",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\connected_validation_20261002\\w5a_test\\gru_raw_test.npy": "011b7f69f8d2a7d7784f82f8d40e276fc1d4668e398d14e19dbf0f5b2df88594"
+    },
+    "construction": {
+      "days": 344,
+      "m_frac": 0.984,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 33,
+      "swaps": 6429,
+      "mean_retention_ratio": 0.9854675142743641
+    },
+    "old_delivery_pointer_unchanged": true
+  },
+  "candidate_submission": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r17\\submission.csv",
+  "test_labels_read_this_round": false,
+  "test_score_of_this_candidate": null,
+  "old_deliveries_preserved": true,
+  "all_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true
+}

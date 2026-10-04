@@ -1,0 +1,3914 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-05T00:21:00",
+  "winner": {
+    "wave": 230,
+    "arm": "baseline",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.265,
+    "slow16_weight": 0.255,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "independent",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.075,
+    "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+    "membership_slow_weight": 0.24,
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "membership_power": 1.0,
+    "membership_memory": 0.025,
+    "diverse_augmentation": {
+      "membership": {
+        "model": "rank64_e32",
+        "weight": 0.005,
+        "blend": "score"
+      },
+      "top": {
+        "model": "pair_rank128_e32",
+        "weight": 0.35,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "rank512_e32",
+        "weight": 0.125,
+        "blend": "rank"
+      }
+    },
+    "secondary_augmentation": {
+      "membership": {
+        "model": "rank512_seed17_e32",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "top": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "csrank256_e32",
+        "weight": 0.175,
+        "blend": "score"
+      }
+    },
+    "standalone": null,
+    "final_augmentation": {
+      "membership": {
+        "model": "tail_bce128_e32",
+        "weight": 0.0125
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0,
+        "regime": "return_dispersion",
+        "low": 0.2,
+        "high": 0.0
+      },
+      "rest": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.15,
+        "regime": "return_dispersion",
+        "low": 0.0,
+        "high": 0.1
+      }
+    },
+    "final_limit_delta": 0.0,
+    "standalone_replacement": false,
+    "linear_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "return_ridge_l1",
+        "weight": 0.025
+      }
+    },
+    "linear_limit_delta": -0.02,
+    "regularization_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "rank512_drop000_e32",
+        "weight": 0.025
+      }
+    },
+    "regularization_limit_delta": 0.0,
+    "stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "stacking_limit_delta": 0.0,
+    "neural_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "rank512_o05_lr0005_e32",
+        "weight": 0.037500000000000006
+      }
+    },
+    "neural_tuning_limit_delta": 0.0,
+    "catboost_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "cat_rank10_e600",
+        "weight": 0.2
+      }
+    },
+    "catboost_tuning_limit_delta": -0.02,
+    "expanded_stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "expanded_stacking_limit_delta": 0.0,
+    "additive_ridge_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "additive_ridge_limit_delta": 0.0,
+    "fourier_ridge_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "fourier_ridge_limit_delta": 0.0,
+    "nonlinear_stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "nonlinear_stacking_limit_delta": 0.0,
+    "fourier_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "fourier_tuning_limit_delta": 0.0,
+    "temporal_postprocessing": {
+      "alpha": 0.97,
+      "mix": 0.0,
+      "power": 1.0
+    },
+    "whole_scheme_graph": {
+      "through_round": 49,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "basis_role_scheme_graph": {
+      "through_round": 51,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_basis",
+          "round": 51,
+          "group": "additive_basis_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.0,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "basis_standalone_scheme_graph": {
+      "through_round": 51,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_basis",
+          "round": 51,
+          "group": "additive_basis_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.0,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "no_dropout_role_scheme_graph": {
+      "through_round": 53,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_basis",
+          "round": 51,
+          "group": "additive_basis_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.0,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "no_dropout_seed",
+          "round": 53,
+          "group": "no_dropout_seed_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_seed18_e64",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.0,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "no_dropout_standalone_scheme_graph": {
+      "through_round": 53,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_basis",
+          "round": 51,
+          "group": "additive_basis_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.0,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "no_dropout_seed",
+          "round": 53,
+          "group": "no_dropout_seed_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_seed18_e64",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.0,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "donor": "baseline",
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.4509431359174659,
+    "metrics": {
+      "ic_mean": 0.12183201533115653,
+      "ic_std": 0.10954362163277134,
+      "icir": 1.1121780849968628,
+      "ic_positive_ratio": 0.8935643564356436,
+      "annual_excess": 0.37300598389605344,
+      "top1_annual_ret": 0.3984997379563108,
+      "mean_turnover": 0.032304884612709174,
+      "final_score": 0.4509431359174659
+    },
+    "construction": {
+      "whole_selected_scheme_recomputed": true,
+      "root_round": 30,
+      "root": {
+        "foundation": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 192,
+          "swaps": 92920,
+          "mean_retention_ratio": 0.9836784444452706
+        },
+        "final_augmentation": {
+          "extra_role_augmentation": true,
+          "second_retention": 0.984,
+          "construction": {
+            "days": 1212,
+            "m_frac": 0.984,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 192,
+            "swaps": 3875,
+            "mean_retention_ratio": 0.9835610221189631
+          },
+          "additional_limit_shift": 0.0
+        },
+        "linear_augmentation": {
+          "extra_role_augmentation": true,
+          "second_retention": 0.0,
+          "construction": {
+            "days": 1212,
+            "m_frac": 0.0,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 0,
+            "swaps": 0,
+            "mean_retention_ratio": 0.9835610221189631
+          },
+          "additional_limit_shift": -0.02
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "configuration": {
+            "name": "regularization",
+            "round": 31,
+            "group": "regularization_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "rank512_drop000_e32",
+                "weight": 0.025
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "stacking",
+          "configuration": {
+            "name": "stacking",
+            "round": 33,
+            "group": "stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "neural_tuning",
+          "configuration": {
+            "name": "neural_tuning",
+            "round": 35,
+            "group": "neural_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "rank512_o05_lr0005_e32",
+                "weight": 0.037500000000000006
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "catboost_tuning",
+          "configuration": {
+            "name": "catboost_tuning",
+            "round": 37,
+            "group": "catboost_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "cat_rank10_e600",
+                "weight": 0.2
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": -0.02
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": -0.02
+          }
+        },
+        {
+          "name": "expanded_stacking",
+          "configuration": {
+            "name": "expanded_stacking",
+            "round": 39,
+            "group": "expanded_stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "additive_ridge",
+          "configuration": {
+            "name": "additive_ridge",
+            "round": 41,
+            "group": "additive_ridge_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "fourier_ridge",
+          "configuration": {
+            "name": "fourier_ridge",
+            "round": 43,
+            "group": "fourier_ridge_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "nonlinear_stacking",
+          "configuration": {
+            "name": "nonlinear_stacking",
+            "round": 45,
+            "group": "nonlinear_stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "fourier_tuning",
+          "configuration": {
+            "name": "fourier_tuning",
+            "round": 47,
+            "group": "fourier_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "additive_basis",
+          "configuration": {
+            "name": "additive_basis",
+            "round": 51,
+            "group": "additive_basis_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.0,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "no_dropout_seed",
+          "configuration": {
+            "name": "no_dropout_seed",
+            "round": 53,
+            "group": "no_dropout_seed_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "rank512_drop000_seed18_e64",
+                "weight": 0.037500000000000006
+              }
+            },
+            "retention": 0.0,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": 0.0
+          }
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      }
+    },
+    "official_score_cache": {
+      "cache_hit": true,
+      "cache_key": "ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3",
+      "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r54\\parallel_official_workers\\worker_1\\identical_official_scores\\ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3.json"
+    },
+    "causal_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": true,
+        "cache_key": "ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3",
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r53\\identical_official_scores\\ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3.json",
+        "source_sha256": "a2fda6ce727800e32cb04d8ee1c2f5898bf6e2ae3346763c030a025e673f0b41",
+        "copied_capsule": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r54\\parallel_official_workers\\worker_1\\identical_official_scores\\ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3.json",
+        "capsule_byte_identical": true,
+        "original_official_evaluation_timestamp_preserved": true
+      }
+    },
+    "parallel_execution": {
+      "worker_slot": 1,
+      "worker_pid": 38360,
+      "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r54\\parallel_official_workers\\worker_1\\scoring_validation_only",
+      "same_declared_configuration": true
+    }
+  },
+  "scored_records": 178,
+  "baseline_score": 0.4509431359174659,
+  "score_gain": 0.0,
+  "current_parameter_authority": "no_dropout_standalone_scheme_graph",
+  "flat_predecessor_configurations_are_history_only": true,
+  "pruned_member_excluded": true,
+  "fold_local_pruning_repaired": true,
+  "test_labels_read": false,
+  "selection_rule": "Highest actual complete official connected score; exact ties prefer fewer active model branches",
+  "frozen_sha256": {
+    "analysis/no_dropout_seed_release_engine_20261004.py": "8e35aa98f3df60fc67a0a217fb3c5d8ebc39f09777dc5077f6861c5ef8227f8a",
+    "analysis/finalize_training_round54.py": "77a2850212d6df0e0eb902f4faa522088a34f58d96b4170c8088e138b071a129",
+    "analysis/optimization_20261003_r54/protocol.json": "f9976a05617c39dbc5fe1b298e42622db74470ff6321456b70ee7bf444957ec2",
+    "analysis/optimization_20261003_r54/component_audit.json": "b14da2654431539744ec31bcaad6fe80832541e53133c4ffdf81a777eeebd873",
+    "analysis/optimization_20261003_r54/wave230_results.json": "4e9fc971a207af76e6bebfc6f53730f4d24ab1ead9ba385e1c4502cdf2457d40",
+    "analysis/optimization_20261003_r54/wave231_results.json": "afbb2ad29e023c6180c1fad7ca54e36fcf0296289cef99412e169dffd787ad98",
+    "analysis/optimization_20261003_r54/wave232_results.json": "1b24c227dcdf526859d5dcc1223649075f508a12a1e1219a41e7723e9e508dea",
+    "analysis/optimization_20261003_r54/model_refinement_protocol.json": "7cbf6f53c6c8ad2a4c9110b980991072cbe2066397aa24a4cb03515b67e3c000",
+    "analysis/optimization_20261003_r54/model_retention_nn512_drop000_all5_rankmean_protocol.json": "26691dff93079dd38c23bbbe985f8beb16cddf3752bc3994a40bb09c4030b5e1",
+    "analysis/optimization_20261003_r54/model_retention_nn512_drop000_all5_rawmean_protocol.json": "7a641791a5d88dad1f034c0540e894f8ae221ddfda7d8b22711cf46488ae2135",
+    "analysis/optimization_20261003_r54/model_retention_nn512_drop000_three32_rankmean_protocol.json": "a53a89f3c74531f96eaa9be130b63305da2a263bbfa2b0a88b30de8e783758b8",
+    "analysis/optimization_20261003_r54/model_retention_nn512_drop000_three32_rawmean_protocol.json": "70f403236df25e2080543613fe3cbeae7b2a00f6dbfa5180e91f7e8b5482f1dc",
+    "analysis/optimization_20261003_r54/model_retention_rank512_drop000_seed16_e32_protocol.json": "57c7e3b054c168daf7d376b08a80f276cd2f8b34d2277574918868c5b18ace8c",
+    "analysis/optimization_20261003_r54/model_retention_rank512_drop000_seed17_e32_protocol.json": "ead69fb53d4b8edab44f37edaba3ae9548f47a791e77e8991ee934f9eea4c986",
+    "analysis/optimization_20261003_r54/model_retention_rank512_drop000_seed18_e32_protocol.json": "d1172d0f0bed181715699996781a5d1abe064c392a17b75c801d8c21e279c825",
+    "analysis/optimization_20261003_r54/model_retention_rank512_drop000_seed18_e64_protocol.json": "068e58791e24d7912b80a88a1d069e16f9d41956d53cf933ffc0320353a3e1f2",
+    "analysis/optimization_20261003_r54/refinement_protocol.json": "504c8e784f9a5d3f5d2182ae50156408efd6dc8b9993216e48b7ff35f1205aba",
+    "analysis/optimization_20261003_r54/selected_validation.npy": "e09153a22afca99036e9031e2f9ea2f2a15adac97a9cac1e3efe1daf19acbc8a",
+    "analysis/optimization_20261003_r54/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "analysis/optimization_20261003_r53/selection.json": "53274dda0c0c3ad400cc9f6e92faf724432f69baaf25a8ffab89a0718df77125",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "candidates/optimization_20261003_r53/verification.json": "0379abf21191337a4aac80e3a4d1ead0aa1a6fcd98fb876560748c8aaa3542ee",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3.json": "a2fda6ce727800e32cb04d8ee1c2f5898bf6e2ae3346763c030a025e673f0b41",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/689d5ea6b87ddf6a7c9b3bee041fe90d576aff95e29882a0c49639bc80615a01.json": "e171e5346708aca604ae8a8d104ca2fdb1807fdc69986f57bd2b169a2f03a6de",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/0f7f6681a405e54d05d56dbc13c86622a7edecab338676364147a6b8c3abcf39.json": "04d7fcaece4ede5a761830d4b20831d89fac19048eaa8c7e94b8d5e0acefff86",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/3ccaf487e6dc9a62230e6554773c090c4b07ef27e069ff33ddaab6e9f3e41397.json": "3f46d37ab1827172df14f27b4dcc0a9dcf78fc6686c6727c8bb51abcb24493d3",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/f99727ea2cf5efbd8b37aca82ddb4acd8f9251fc56c2349facbd6da1af91b7df.json": "e9571044061b412eaf4ca9498dc0d3730cb3790684437c7ca953018d64c5b461",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/0625ae1c6816202a52286998e6b87b343835e2af7c1815993a1a98a115dc0b2a.json": "bcb65213d27b9f60b7ed3ea23de3e490587e8f412e004ba83febea6378264933",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/80182d6a872c79399c193c8c1040999ade4a60488ff190d9361d293fa684ff22.json": "4497f9afa237bf674a29715377257973ec631f1bc4517d09d2334f1e251ae051",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/1e02530ad94c4bdc12c8d30b635530c6180ffd4ce0ebc6e8eff43cce9736b314.json": "4d122ccf16acea6bae004a95ecbf4ef23bc428a6b567714557be975f77caf496",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/d1e415d8248bdbcd5f2097c6e774f63991f08285d932207813230fe577dafdf7.json": "9cfd1b24df94ecb9d5c6f43a777f2a23943021c919dbf1a507b709d4e419203d",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/762842b6487a2496399c926f1788a33f181ac02acf844a4b836c1557c162c997.json": "a3f6687fd6f58e0c4872f74499637a2d12a4c3b2a8b9a3b3964dd8aadbd8bb0b",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/bc3b8e64259e8b6f20ee1ce93b8b78e97f64d8e5b7a3fe592995a1fbbb59d15e.json": "07e156ddeef6cd9e74b211c6128082da7b821d355774769299f9c1a99018a312",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/dc74540b063caa34f3e3365843b1ec64c34ba6ef61879c274f4550a4c05ee841.json": "e1319db4a64b38b5ab416ed6eed581fbc2f34e863dbe15359f0d4ae51587ec37",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/4b06a2ff3e3caf376f91c3647a08f14c89083fdc361d9256de7754692e9f1a6d.json": "4510e9a67a991ba62264b425a94e38483d47955299167974ce959848eba05e89",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/6426062ccd1d475ed8a73595c8d517ca11316522fe6cfa953f943bb5cf6dc5db.json": "c067603fc46d4215ecc8aeda420317a0d736231de699f845727e7af2ecfffb92",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/58486d93c32341e39d4e7ae7a858da85103c8213c0bad9baab98ae64d660b269.json": "ccd9e9c8e88aea50fe2488c050dc605d36bf90851f4e93a2f178d04932589365",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/a2479393719e4cacb09752cdfd939e21d1a420222b04d413315b9a51bb5176e3.json": "85522969e66b65b656294d485b861ed4ff5f7be90fb806900ad9a782ee3ef287",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/64488b09c58e42fcd42c59805f203473a39b6c7ea66f1b727de5ac2be7879e38.json": "2572c0f5e766e63eae8c04e0020375376ffe9c76835541ab08c669a882149ffa",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/51b847bf2897492792e9a6959eb3b6b5e96582c2e05c0eaf638ee587e5a8b351.json": "fe81f8911600732b3dff85c85453a3c188b0daa1846f9eb45569158a4f4e63a5",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/9abe22142165a03b78ecc2cf74764089c0b95c38235c2d1f635ded6d2c908206.json": "67b5e0ed72b815f0fc9821596d71cbb362b861ba8a425e73e1e18e75db8d847a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/85b9212ffe6249dac67d6d890bdf20b6578137da3bc00dfbda8203cee2b7dced.json": "1029b77e7bebce4758fd03d99101888f4fb50f83a6c590d461a57047ce739de4",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/4929fb6cf565de69cece2614d915026b44a088b0b98937bbe039936e668ddee0.json": "70af03fd282cf6e8c0614a118ae8f4d6f8709ee065ab07d5f2ed898a641e164b",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/5feed99cd4216e382983008e269edb015f15e621eaf62bc30dd8e6035d2b6408.json": "e40f1aa4f10dd0e9794fe984c60b3db91c23763fcaeb6c9a94a5ebc9e484b674",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/52d6e0e493d525da3ef19898eded57d448f1e0e17743a87a8d2f541d7810c7fc.json": "a8df5246d0769f27df6611c7751572a0d67d3b156e65ea00d7ce5796d4836777",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/b685f14eb425186167f0e4f931041f747023e332bdfa82027bf2ad0eaf42b608.json": "b85625920c0b90fff1a8232eba45390dc5e31bb7408ab2c7879c473f41daa82b",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/1cd4a15a26beed9270587778c111708b30419c95187a56aa31c734b62327a2f7.json": "786052ccb9dfa5ef1a8837739bd3d2d3dc4b11749f272abc71689f3ff51bfc63",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/f84445038f05d93e68e8beb5df850d91d2275716b0337d7bf0d448ed3eef1da7.json": "6bedf4ced6332e756e19f653aa0a3b0a8d7393a0654081f86c89f7043a526ba2",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/a1fa94b83f47e95c9106dc621cdfc52e71c81b99d9886b76439279a13e2ecd1c.json": "5880fe58a3457195d8d726e65ea1da4be1ca1cfaf0c102093fb56ba9c547b0d9",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/a6457a954b18062f54acc38ac23d33fb02612d567b6ff5c7d66e3ea3b2156e42.json": "3fd2d66e4fba51d5076eec1e8e774b0f7dac3b0f793d0a7067314746d6902d68",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/3fc850542c4f4b8aecf3d8a1867afd115299266224dcbbcba6bfc1e98e52b7d2.json": "afa7d2b5bf407f6d0fb0dba36f342c8f95029553c8c6c0654474ec3a74d703a2",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/cbb8c7c57cdcb41003e6f350a341a8c78c2dd09aef1185467bc0d8ce584dc57e.json": "f19385c819c53ada304dab52d33fd382259c2dbef16901d4b1c86626b4b0b845",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/3741561c939e43166ff964b0dc3efce4cf28ff657fa4f8ab0cc9b7b3b67e0e9f.json": "3dfa5715939de30d6e6bddef8007adaf57d3ee8384d1603a846d6f7100abdcab",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/b93bf5387af1820f2ef16b0d9f20089a1fe53fbff6e029106b0fb7bd208bbef8.json": "84a3e7fe04ab97210804a897577598b3161c40d3bfb2991a71c624ad8e1bb919",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/ec5ac372453880f1ad9abe698870ce4e5234297be69065d23440af4680b95573.json": "1c70d22174dfc58bf9521b740d7097dc85b52b1bee66bacdacb96a54d5a1b752",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/c23bd14dee339718face947f67c5cf8005bed4b925abf3720989138902039079.json": "33248949430a74c3fd37cb63d6354c1572ac29b7d20e077a9201c467de8fcb62",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/7e0f9ba02ca3ead20981cbcd5655fea6ae0b50b31235f49cdba35273c5dd0a60.json": "60a0d30c583b3db5a9ec59120f66eeca4f17ce80f6159e27c096442aa94da467",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/5e86fbd30804d19c2f19c917c8e37f7def37ca6ca8cb5c6c187ebb5d29f7df1c.json": "a80af9a96df70e6c8eb5a8c07711d39528e883f355eb080a29ea297af54cf9e0",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/ad4bc28fced3355c425eebfcac84d8ce0b2cf8f4128e07d4f961e5981dd7e2a6.json": "0b2c65b9ef0c61d706a734b36c723619458897fa93d78c5b86c0b40f45be84de",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/f0350b83beff21332a9a05c19b5609e561f46cd547ce6dbaea28922122552823.json": "dd541d1fb6f3787046bebd7de382a409fbb542e961c58dbc32cf0db0a51c3364",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/0246d336cb922dfd4c2ef18860bfed45fb02ebe14a8d9a0b4fbe0e49fcfb767f.json": "0682ded35f822f00a5196e5939a25b51a68805311995d1676ef2d3b781b20a8a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/7f0830bd66799ee4db53554fbe1ab2564aa448a1ed26cbf10858c21718483aee.json": "fa1ed1ca9db66e2b45889372ad61ad37955b9df3483e9bd668acb50ee80e71fd",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/ea4dd3a0e0202feaf291861ce1fa4d68f6913507e5677065562a33549d163cd7.json": "54404f98a553e945a7a41af3ea4cc861ab27fcc8d4c5f28d4876bc161f57e08d",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/4e68ccde29f261ab5a524f24c4c213fdab2ae2b887b5a0497cb3f0dfb0f3052f.json": "16b4993b95fc5378ded0fd5d423d3a2a7df07c7ad77fd1ade11ba404f870af5d",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/e5005d7036186ce34c60fbeeaa5d1e93bc9df38bd4a4474cab1b2fa1ae121ad6.json": "80abfde8d1e739660b60d7eabed143244aea3fdb5b2c1d39f6ed658ca5b20e1c",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/a1f867c9b28ad13333138f237e91360a9a4a5f7305a9147729b2d8a657d9ec93.json": "76c4a3ff220126eaacf1403a504454f4dc095f4268d125d75e3bec34cd4999b1",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/1beb60f230f7186db68098d087b084ff63beb467bb9748c76dd6d2f814f5f687.json": "56a12873c8a3124822aad905cc9d3086a205f8f02e4352e1f876b92551550693",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/8eb38b1ffd1f504ef857b1633305fa69c32e6b83a56214bcd95c1121312385ef.json": "ebdbf74d0eb7e94d16f2ad1c74814d1b01534f450b145eb4998b7c599cb9a5ee",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/3d16a7dd147d0c099758f67500717b1e8a72ec1c4390367f5fb1bc297040f929.json": "645bc15b84e91325d62c699dcea2e9ed5abbb29b14a25229f55b7c8e0ac3a323",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/f8060554e4e8514c746ce6c8ef022c2ef2e0861d75bee5794919e5ea0cc2bd00.json": "de47c4e5603c59af85246c9d4537c97434a0d2023c95f7167578af21187782cd",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/2c26714c552207709b7aeac2d8892a58a49995bf92adcf8d6a30cfcc340fd773.json": "b27f6dda316d203043c507a9bfb59a295781230a7d33ec6daa1c0326167e3474",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/8633102afb680ee767ee314b734491d1875c2d76d5881d0dfd125715574033b0.json": "6bc0faf6a37bd208721775592eaecbdfc3d5b9d5ae4ec122031e4ad05336c070",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/6728789698ec1657f0e01f913de899906718a4eba1931087d3f1e8a18acc09cc.json": "b336b23e4b484593a6d53b39bfc91d5719d8892a00062942e5d8f46446eae75f",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/d91695f3f223e40066009993c0910b92d6d97d35df437b7bd51c876981be54ff.json": "4c0d5719acdbeab46fef584431569401f54c7daddcf292903317c4d48763271a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/b9fb687474b76cf0b1460ba2894c13653ef1b7a3c733e2f26d77c17c3e9d286a.json": "e62a3374d13a78ddfdac8d22c1f6796ac1ed7343d81e1d66e7dc106d29971320",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/9059d23521f00f02d8bb5548fc51bfb26c73f2cd9eddf3405b214d0c49b26d56.json": "77d19d7b8f1c67401ff68ca1ef32ba951fa5e6d272f37556c1489c3bc3fb5d32",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/80182d6a872c79399c193c8c1040999ade4a60488ff190d9361d293fa684ff22.json": "4497f9afa237bf674a29715377257973ec631f1bc4517d09d2334f1e251ae051",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/75467d72f3cd499c1a644e23b2549565574a294bfbe85f05dcd5970d938c33d6.json": "57b5d2e58998859bcd8beffee9884e225650c500bd8376d27b4e182fe34fbd8e",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/de1d3b9fdb55a7f08760ce0aab2b3eee47ecb9c45547727f734e8e9c3f4fa504.json": "31556dc11a132a886c25eb21976d7ad7d9f16e53ba5e55fca30bead14ede49ad",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/fca07debd99775a08072ba5a140280f60397d399a2e443a095afe2aa686c7b48.json": "e7ed3314073cd46c833648f943df0c6ed6782e47e8ba085ac8033f96c3e69730",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/2bfdbf77cade2e1612798dffa75c12266d49d0b58209916fa435f9df9280b2be.json": "c5f423fc717d2188ee958a5d2e4e8603f55f23c33ae1f748bc789322a0d2ff62",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/5b8521825e81d1a0e7bcc933f72e59ac96a5876c6d4f292bc89639e3a646483f.json": "795057655ff44c916469f7735e13cfe6b104e57af43aeb7d5264d14a3a2e8074",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/f42bc4aad75bb21372b6de57b147dddfd591c967c31bf715f9e0e171be9d0e01.json": "90143d4afdd19fb5357aa883123e261c878d351c2f64489b707668b50cae9943",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/9ba6e7130f1c7d2befdbc6750d5a2f609d351580fbd2774ef571818f3dbc65b5.json": "2bc112a168a0183b05d861aada565f264c68f3496ca824d9212563add953977e",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/789747c9c755b027baf15cbd1c4431a1a63a9a372270c3f737ccdd6518b8d678.json": "525fde273fa270350539e9ad3a813d79234d994d3722fef3a9ef60133ec580db",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/71776caa35dcde9b64158c597f2a9429e5dc769538853e57f485c50c80121343.json": "de381624eea80d239f44410862b5a0fd2e8d158d673f59b50bc741f0fecf421c",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/5bbe1c6ddc5e38395de4629ab49172cf1facbc89d1684bc39e1ba332b21281c3.json": "657acaa70d3a1aeed4386bf69e2e3044284c012c9f67da9942bab6be0516558b",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/ac62b6b66dc9c8e30685d74cf85668704a2b6caeddecb8f8e2e9e698d5a8c338.json": "9023233d9e51bae28db1c173cd89ae540757ed87ba8ef568116b57b8aafdf58c",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/3cabdd8fb9e03f764548cc412d21f709cba4ab9445267868517fb6cadd72640f.json": "b93204de3a564999cc0905a561ca231ff43d68fa19186d89060f7a83e12bbdab",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/4b06a2ff3e3caf376f91c3647a08f14c89083fdc361d9256de7754692e9f1a6d.json": "4510e9a67a991ba62264b425a94e38483d47955299167974ce959848eba05e89",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/2e8b20469464e7c329d93b361cdf4b6e71178e8ea99b4fdf4432e3b9284a5004.json": "2a45e7039fb85639c977cc2c52d53fd10c6e6b0a021353ade59dcee9eedf8a83",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/c95909697ea848558819c37662ec5a69b647ecaeb26905bb00e4fa9e87ab5e1b.json": "1ff1ab4dc9a8de8ceb2b3f913494fea5ad577c7282123ecd376a6356394e182d",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/c1b175cbbadbe994640fb9ef07755e7ed41d51549de7453b9304a7685fb6a759.json": "2102c36eda89fb1300aaeac994808d95baad75e8427805fa1ec66059bbb62f52",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/dab27ac94f49366c0d7166123f8a70d8a53ed11eeea157a8e861abda0db191c3.json": "7583d96ef45c20637c73092bec56ce9f4089dee92e7af48c3f2edd7339290265",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/6f5114a847a69800eacb90ba4887ffcf4396bb233bcf2c6dff6dba5a1c0203c8.json": "59d61871b5601d2d800d73f9652cefd8433b2509f1fdc3eacc19476a78d9c575",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/789747c9c755b027baf15cbd1c4431a1a63a9a372270c3f737ccdd6518b8d678.json": "525fde273fa270350539e9ad3a813d79234d994d3722fef3a9ef60133ec580db",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/9a05b4c1d57d536e29fb3251b730adbda8c054bf38920a75850803e023cc4a8b.json": "fcd173aa935d100d93349ed414f3253dd97c0c634df0ed8c99a3c85718b9901a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/b41c77b8c1df349ddfb5e8151afc2e367bee2b62c6d1a62eeb715356059b249c.json": "9396296418d6b1e2930b4fd41ad36eac90508e182e36043f927000c1dc1d7ce1",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/7cc5b0f947e3f7d1aa4fb1a67114a60699d462f7bcc0e06edf8915e8fbd31053.json": "f4d0ceb89c5652988311dfb6fdb7712a38a4f47ce7a6566ebc922affe7a79d32",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/a4f7d42c06f5a517f253dba3f1a4a7cfc80f986af210d82b6f40505ab6ec57cc.json": "62f34db732af18577fe9e647a5fadfbe581bcd2bee35566b361f294859f96408",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/27e7c19b3555bafc522ff840053ad56dda064d2a19582ca6cf7842f4c713ac30.json": "b0209bafa35c896bf428f257b537e1083985453364166dacd33ea9c88177efec",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/65158055db6c4c6d2e8cc94ec529d4906f479741664db4a1b3ca7bb0cb3dc3af.json": "823664752932741c75f9e2729a9abb8aa46586c17c3d124e2f48eddeb36f4c28",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/54512166eb06a4ee0a7f3295f9a0bf441d3a00d3461d5f835e0756c9b045526a.json": "3c00cfbe040fabe16626480cb035086b1e1c1ab730d1f4139d4c4855e54d6b03",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/71f76ce5daabb1820fb5f6c69818d4997d61427268e1fc5874cf808614cb6a4b.json": "4550b3e3811f5697d6510e3eb91b3334530b1aaea40153425b56cc2ea25d75d6",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/0a056d6b538b0f800282eb7b67f0557f2ee5c91559b0f2399fc8e1a00f637eb7.json": "23f0defb7f6cd5dd302129d9085f4aebf2e2c46e565ae22dbbd91127c33a7483",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/1a94746121f0d1bd1fb6bcbccb3518166882d561245592879d77b7005a3e01e5.json": "4e343ee2895ba06e2ecdd7cc1a95e27e90623c517300099e9e834aecad086e4e",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/aedb7bd8816417a8825fb3e7c873f619b643c5e42981144346dd3957122e0db7.json": "367b297e2a914dd49fb81378383c8befbfe25ebd8a0dcedd7b36d927b0f43470",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/3276500da47c2b16ba888d995db0bf54ec1d83b8b336f01251cff7c4a83fdc7e.json": "95fc3925d3f24fa758eee21815a493b943bda783d0a799c5b1d5a219b2232425",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/9abe22142165a03b78ecc2cf74764089c0b95c38235c2d1f635ded6d2c908206.json": "67b5e0ed72b815f0fc9821596d71cbb362b861ba8a425e73e1e18e75db8d847a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/6fc682477bf6a7671d630faf7b1731abb31a4e3542bec80513f0dcc7e460b23b.json": "0d0215c37142012ab08dae06be42dc0f2b47ebe28fc7d9890abcb95a64b1a722",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/7a80f2d20fd4f5a8fd2fd8977f3a532ab8a766595b9886b3c036b4ac93e26cc5.json": "f7e863030b49b8a676146c9573138e412664626e6162666c36b5eea070507572",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/a091ccf54cd75c3ce11c0a69d2ce89ff4e4a3b5ef67b7fd0fc1a28e660a5a3a0.json": "62095b79931c4cdc9a1d0d335bd674010568bc57eb16844258c7a8256fc855ae",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/37d2ca141e5de601a7cf971ecdf7a617d1a22c0bf7e004a5750b232be7e1976e.json": "34570bbdcf1dada0c4bac668db38227e164a8f6a4d1044a9e76381e7ff276532",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/f91f739aa31677b371a53e026134aeed5f3d1643430b31e561101be9585120a8.json": "38ac4224fb4150b908b8b7f47266f945a4f12e5a1824afdbbc14048aa1501bbc",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/f885c8afe10e91c3f46a0767d2841f117ccfa8a55fb26ca0230c04cc56386203.json": "d7e5dfadba8e7ece8d6afdde77af409bd2f5814e935d7ea6eef46732b7eed44a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/57285df5fc40f5f94a25904c55784156c8ce9fa46003ea9cbefafdd14ac4b081.json": "1b4a3a7a1865651ad02deb5f3ec3d04749e1092a6f0a56eab87663de359a677b",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/1cd4a15a26beed9270587778c111708b30419c95187a56aa31c734b62327a2f7.json": "786052ccb9dfa5ef1a8837739bd3d2d3dc4b11749f272abc71689f3ff51bfc63",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/7c2d07f4e13d841d6ca2ed90b146cf9a6fdc6df2c315bfd35167ecb702c4490f.json": "0d15b13884ac5c5d959c3fa45f50fa42f40ef6ec8446d76129af7ed6954132f9",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/34a51a37c54be2e12f59bd37ddd397814930468a7f2cbe1b1a073a2fa30a435a.json": "0aa73be016d6702cb45485a0c47f7bdefa5f62ce4fb812aeb9522ed66e860688",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/7daec3886b3691b6aa434204aac4476940835416c3d70e1f7f1065326156453a.json": "a0973deaaa8ebdb45988b0030b686cc9b953a198f97e124f5d624e42a5b5dadc",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/e08b18265889204219804fc2006f860698d93458bd501a49dc774687bb0391e2.json": "bf3bfdab65b745f012203bff23087c8118d771f0f21df043201d9120ebe0e3f7",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/0670bc97333b0c8023338c98fdf8e87e0b0a8d6a9e8110d0c7f75bb625f76ef7.json": "8daf5353e85af885002bdcfa03a6ab3c9684a0ef1fa9da44365ce4e4dfe005d1",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/a091ccf54cd75c3ce11c0a69d2ce89ff4e4a3b5ef67b7fd0fc1a28e660a5a3a0.json": "62095b79931c4cdc9a1d0d335bd674010568bc57eb16844258c7a8256fc855ae",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/d7020c98142f44dceb26266657c29c9db71009fb08d2d2c2b6d32b227137136a.json": "95daa4da620bc2a6f02f837714e6480a0acbad26bf7c75cef0fb70b62ba66d31",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/ee4211bef6c49684ba684b6da95d79cf5cbff07fdb0cad3a22da353accf92b67.json": "3c4e8fd2946cd00c581d486dfb6f88b9b78323c07e732de0e24cf5cc2da85153",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/58e9f9c9dccb6cc7ba4d65201a41c24139e393ce5857dbb9ec9ddc87b93293cb.json": "53062155e36438ee8661085786a42d9c007155564e0a5d559e15159a0c6e5ef6",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/d92d5712a4ad41a400477f5c0bd52ee013003722f67c2116a5e6a5169ee835b8.json": "875df280dadc2a2d9e5e4342fcf587a07061a8442c9bcaaa57c94bbb170dd3ea",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/070e63794b1264a15a6f26bc73f6c24eab215d4c53ad9f8edcce74689f9df848.json": "7d7511a539dfd19fb58b9025847339b57662dbba7e600d66eb25ce5e9238a522",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/77de95d6bd79745a0b26aaa74b0c1165b84d1c8ff5970ff42d67da6521e4da69.json": "a2fa6d1d70376f6ac40aff657effba8dfb79a7b4e6d771f68755de5d5095f40b",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/48d24ec9396c9132819b59215d535c7b2bdc3fb8d1f4182dde2e7d706c4ac6e7.json": "d34adceea63acbc7b4fabefffaf8380d7f118ee80a590ae4484fad553d1ad335",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/3741561c939e43166ff964b0dc3efce4cf28ff657fa4f8ab0cc9b7b3b67e0e9f.json": "3dfa5715939de30d6e6bddef8007adaf57d3ee8384d1603a846d6f7100abdcab",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/95f5122b0cd29466bfa370f9787ea8a8c8e288d8644692b533a418dee6513e4a.json": "f072aebbf61e68a2a6d1f6b85f569053b8cb4e108626fc797509eb6a571e21c5",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/9b1673285f070dd57eec1ecdd3ea287216a9272979e5022a7361156a1fb780d2.json": "3cc21e23cf3b89867aeccd33d0e1f324d16792f603ad0636053e30343c01cf96",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/41cafd26b769203414865e70a42f4667018e74aba75467b348633f1422b5a91d.json": "750f4826818c8669b0b82a456c8c382072dcced8309f63315cb7718b783a5be4",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/77e7d39759ee456e3ed56cbf3ed88144fbe3125dd7aec6a291bdd757232d8099.json": "cb01bff08de7bfc72d03b9110b618e42b0a98d4d9d66b0a1bf69046acf739c03",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/0c33ed4437abab5fab9bc131d8e4525d6b22116e8f77bceb574dd7af0011df34.json": "c5d9f17bad81c5399f153881ce3319eb589694745bbc55607a429f929e7249d0",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/41cafd26b769203414865e70a42f4667018e74aba75467b348633f1422b5a91d.json": "750f4826818c8669b0b82a456c8c382072dcced8309f63315cb7718b783a5be4",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/6548234b205fe9f4b1411eb2da2693fbfb75b23c1b4084c4532e335dbb92c6ac.json": "3385721d50179c108b3f242fc3b050fce8a50be474fd1c11a3ac126440b4e0e6",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/98ca11043a3eaaa5dc054356e59785714c2b4a9d3108d703ce4966c4af246883.json": "2c9d0b694cf2b2f3bc6585455f204209cd323ebc09a22383308f4898c6692ce0",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/386989afab491596c3294916467a5a1776bac13b611784ae6a04103da19f5ded.json": "fda1a3b8359394f9bce3aebfd0b82322c28b813cdca57dc4dba8834af5a31da8",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/5897ab67675dbc99eb9d8867f82c07c1cffbac72ba02e9d901820cf366c8e696.json": "e5c9d94b5e266ea310b5848ff4038b4fbc045e460bde39d0f1bd99f50b0930d2",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/6f53167167bccc5c0436f740ca78de75a26d645205547de1d8276a428ae65805.json": "6a8b4fdea2f827624c6277bef17a07db10599d14d6b6bf2de7bbde02d6f66203",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/7982ca474d572a69a775d8e43152e1a221b3869ed655623f4f0923f173fd24b6.json": "bd3723318bffc0643bea57c96b1a3a04fb01e6bdef9fa06f5c48b3648b0e65c7",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/de1efa1f2991ca1d99a07ccdc4bf51ceda44b7dc4cb290628c529a12365ea5e4.json": "21766ab3cc1ed7f95185f54ba576aaf727598965133d736eeefa5c3a2ef8c819",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/ad4bc28fced3355c425eebfcac84d8ce0b2cf8f4128e07d4f961e5981dd7e2a6.json": "0b2c65b9ef0c61d706a734b36c723619458897fa93d78c5b86c0b40f45be84de",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/b5d9d299c580a149f9e53d2bc183ebdc4776924ec1c93b4682f80e4646f9b031.json": "e4dc64f326cd8e30a7ec4f018f41917d4bb9bbfd5bf55d1d51e2400ade8be7e3",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/48ce3ddb8ae2a6943549a6f210369b0f05bee3edf43f2f57665d759a99940653.json": "a28e3ee977510702351a0d8253afc5e34537cdc732dc4e9ce8ac14083e13bf99",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/9f1f5d76642662f7b5a4ff81e188fe620dbd77a8b4d5e0516dfb4a5a890f3307.json": "018758fe587b61982818260e7a50a19757104589c0c74c0eb713c43e3623d993",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/f4ec17a207cd05bf255b79a211a75c10db0d33ef79f0c74f60a302da1e176cba.json": "fb7a34c6b636d2c2d74961f77836b01a3c097b4997034952329af30c98b02c22",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/4cd67de8e94b6aefcd259fefe0e159edd18f1c824870f97523aa96662bbd569a.json": "7692eef8c7674508f36b60a2028546ea8f51958c18b84fb803b2cb326d560fa2",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/9f1f5d76642662f7b5a4ff81e188fe620dbd77a8b4d5e0516dfb4a5a890f3307.json": "018758fe587b61982818260e7a50a19757104589c0c74c0eb713c43e3623d993",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/130c98fb4cd027e498a31d52d02bdc32c8ac48ff01ad630f60c2d66b8040644f.json": "fc8d505d12398a26d91a9bf10147e7d728903581f44e815988600aa2ec46d625",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/460195378dbf324b2945708669adb6a1653958fdff7e2a2a672856fd7e9b3165.json": "2bdd13bf0e6dabf8a79cb4242312a03846c129eafebfc502bc45bfea9e277c29",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/b91395cc17ad48efb1b4cdf2db4d7fed6884f87c560f804e36af98282bac363f.json": "e10c80ff3375e0b432ef83b4dde29665d0e84b28f8c6d8c4ebcdf6d7d5386daf",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/17ddb5ecc2dd34193ab7d0d56350b2fd99830864c4b99e20e5a862280aea8cfe.json": "702076e854a73769c76c44ac41dc5c0dfca1a1c93dd5c9d64cdda3ed0ed00c09",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/015f1307d144b32cf3d3d85e0da0066365a791837824a512cb23c204b420304e.json": "f061a5df465e732f4dbd628f21b599a6a3a93d68d68af67a3ae5407ac962d37c",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/181212100131f481e0832802725e71c227c60c752f097cc4f69002d2294efe83.json": "a1a180ba19f7fd917af0a0a5babe89e1d0fc9c3adf0f430a7e565efd0f528a3e",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/f803c2b2e1d192502ee5bf4cb2b608412d0f2c1122e75d2b9a8a55d249678c48.json": "5ebb957f3ed1ab56fb3b5879d883984ce6c0eaa6c4ef2ee013cd5fda4cdeb549",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/e5005d7036186ce34c60fbeeaa5d1e93bc9df38bd4a4474cab1b2fa1ae121ad6.json": "80abfde8d1e739660b60d7eabed143244aea3fdb5b2c1d39f6ed658ca5b20e1c",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/b88cf4dfd8ed0c6ee0b93ef25c1ad099aae5ad4dae2a9884937ae75c416d9f50.json": "a08594f465dab5dc7a52a064a7ef165f305727dff095228bbf59ac5cd0cd86ef",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/9f24cb05983b33778decb03f266566fd48c77fe6a61f9ec1bb2d840604b91820.json": "ff7e13b15aac1f7b16f18a5bb88414294b32b54c284d41edc779f7c71bb3f3fa",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/2e2008e7d844c681aaef4bde3f32ffa22c6a82764dee2ec2b3720b7803765903.json": "528307a77da45d7157ac0f948d8424d4a6b06ccd3d3205c7780bc953b1c167c6",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/82838908b744d58d4702d59c067bc1e5438dca63e023df41f6781d11dd2789c9.json": "d535ce9b07db72fec69e5cb0c5f72ba15524ec4db24c538229a2a50e8f2006a4",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/0cf80fcbf2bebed1a4f4275397ad3a042e51c9b356cc4323ca9cfc5212b93a74.json": "cc52fccfc347df121acf2afcb94e8e5f284d1efe4c06c0b2b2aa973f094c50c5",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/e5005d7036186ce34c60fbeeaa5d1e93bc9df38bd4a4474cab1b2fa1ae121ad6.json": "80abfde8d1e739660b60d7eabed143244aea3fdb5b2c1d39f6ed658ca5b20e1c",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/c9eb9f4828c63b459702df55db4cdc5f59971f240f33402c16977b90c9200b03.json": "a2c4a47eb2bffb28cb1f2040c7eca25fd19db09dad63d614dfa7289bd7c50a22",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/3acc793280589d3c17d6b71b7fdd31cebb00a416bbebcf795d92017b619761a4.json": "a3027da5a00e517b3a85db91934c78b1f1db8da50fcc3d1bc6a38da6ff07564b",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/f876ed5b2e10cb03b4e12bd2095e231aabd8b624c3af3583a02dc0afa3e207b7.json": "1cdfdffc17ad8d5b6928b9ed448a764d5cad5e45f47e8a77002b03d91ccb0717",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/f86133ab01d17964e78103e126568fe39f946d4bc9e4da1127da617c0fddb17b.json": "f4a639e85777c501df4517176cabfd9aa5372d2bad0c177d7994abc8cca5c582",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/2e0c18f7aaaba68770972587e49128397e6cca844c0d89278d7edda5215efec6.json": "3966c5effa10f9ca6f929ad4eeeb8462f69ad118b49f33510c41da1d74a25e0a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/3659c816e04b4ca57e55c5548eb3bc28f9b2f93f6c2e32b1d52cf3367cf793b6.json": "b177695927ee058dfc9a529ad35dc4396c43b205a4c9300509884cdb0e5d19f5",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/8b5d9da273824888bd62731e4c22c4196e56060410fdfc10070b2d2cef9e70b7.json": "f4d9300a539fbce1e1b42542dbbe44d18bb7588bcc15cc504e7ba75bb03684b2",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/2c26714c552207709b7aeac2d8892a58a49995bf92adcf8d6a30cfcc340fd773.json": "b27f6dda316d203043c507a9bfb59a295781230a7d33ec6daa1c0326167e3474",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/f7394d49513de81bbbddf6bd5e17c63e8cea49e1ed144c2dfdc278e17808f6d4.json": "7dcf5f6f7a02bee6b7b217e255f915f9c498995860d4b8e4ce0cb30da2ebb399",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/fb926127922b6c465f8fb8aa0992891e9dd83dfe7d99ceca161d4ae713f35f98.json": "81160bce08837abe4dfd88c19da7e807ab607718fb31bbdef3115f5bc38776a0",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/1e02526284a6783468ce58f43c7c4e6c3379f5633ff7c5695a6169cefc92c768.json": "34cd46f4174bc1dd580067e2b20b39704af3c1e100a873c194dd30cf47a72363",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/357c0f02053e9ce919be79f836043b0c23c0e62a5c861d35bff54545ad64c6dc.json": "6e38adf12b72c562e00cd77a452269ce1cae0a7642359effd4a6ea424371b5f9",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_1/identical_official_scores/045f8fed42d8f538b60d078f537b374858a78f80e149c3ceffda0942a4f4e88a.json": "ee0a02524c725f01a18d42ba72d26b6413cdd153782f0ee3f8c3daf0c4447847",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/2e0c18f7aaaba68770972587e49128397e6cca844c0d89278d7edda5215efec6.json": "3966c5effa10f9ca6f929ad4eeeb8462f69ad118b49f33510c41da1d74a25e0a",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/92a4be92452d0c639e1f7543a7daa37dc367eab580b1ed412a221f8ed712c535.json": "8857920f4580ab207088e95016e8a60ed559e33dab6a4f25dae4c8b4356fd1aa",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/acbb02dbd3b2a5ef8135ca2a1842f95d8d5001e0d46bc1ab17993b16f46c8a78.json": "491ec8e50eb01457bea036ef62f16595f5bdb09ab1d05ce72cf4e2f0cf3ec2fb",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_3/identical_official_scores/ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3.json": "a2fda6ce727800e32cb04d8ee1c2f5898bf6e2ae3346763c030a025e673f0b41",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_2/identical_official_scores/ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3.json": "a2fda6ce727800e32cb04d8ee1c2f5898bf6e2ae3346763c030a025e673f0b41",
+    "analysis/optimization_20261003_r54/parallel_official_workers/worker_0/identical_official_scores/ae8f12873a8f0a8e21cdf8fc56f44e10aed189a054609a15711b1e5ad5fb7ac3.json": "a2fda6ce727800e32cb04d8ee1c2f5898bf6e2ae3346763c030a025e673f0b41"
+  }
+}

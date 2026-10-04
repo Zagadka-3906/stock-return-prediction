@@ -1,0 +1,109 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-03T14:28:29",
+  "winner": {
+    "wave": 61,
+    "arm": "limit_shift0.115",
+    "donor": "baseline",
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "ensemble_name": "four_no_pruning",
+    "fold_local_pruning_repaired": true,
+    "membership_w5a_weight": 0.0,
+    "membership_mode": "global",
+    "top_slow_weight": 0.24,
+    "slow16_weight": 0.2,
+    "retention": 0.9845,
+    "limit_up_delta": 0.115,
+    "connected_final_score": 0.4477441201313571,
+    "metrics": {
+      "ic_mean": 0.11909120977630876,
+      "ic_std": 0.11166119205057111,
+      "icir": 1.0665407344242985,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.36570200165782246,
+      "top1_annual_ret": 0.3911957557180799,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4477441201313571
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.9845,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 181,
+      "swaps": 95833,
+      "mean_retention_ratio": 0.9837144494647172
+    }
+  },
+  "scored_records": 35,
+  "baseline_score": 0.4467531766394507,
+  "score_gain": 0.0009909434919064264,
+  "historical_uncorrected_score": 0.44740649979403346,
+  "historical_score_is_not_a_compliant_baseline": true,
+  "fold_local_pruning_repaired": true,
+  "test_labels_read": false,
+  "selection_rule": "highest official connected score among repaired candidates",
+  "frozen_sha256": {
+    "analysis/finalize_training_round7.py": "068df3a414e4b1a2657a7faa5d3948eb37179c1772a78fef3cf623b211c9a75f",
+    "analysis/optimization_20261003_r7/protocol.json": "f7f40ef459b60e0546c2f678e9d306bc4c8dae4d237b98178883ea6b46e7054b",
+    "analysis/optimization_20261003_r7/component_audit.json": "b289347359d4b439b2471ed21dfc5d1a0d841a87361cf9c38f35f2f009da02ae",
+    "analysis/optimization_20261003_r7/fine_protocol.json": "7eadcd27e99c39aa51848df639ae5ce7a9c391889ad52ecde8e99800ba71380c",
+    "analysis/optimization_20261003_r7/role_protocol.json": "b03a736732382d21ed5bc6b89b25d6eb610615222d6b21ef881afe2a9f60c70b",
+    "analysis/optimization_20261003_r7/wave59_results.json": "f46bdd7dd5e7796940e5bc2284b9cd542a94dd44d615b58aa6c41dd9fa482a9a",
+    "analysis/optimization_20261003_r7/wave60_results.json": "1241f8e41ee313bea2b00412bf8a56020bb25be05a7d3864d07ea3ce362d09d9",
+    "analysis/optimization_20261003_r7/wave61_results.json": "2633a719f5273a7d8765f6ed5f69f4a70661cb9aad2b3874a63b2af569582f65",
+    "analysis/optimization_20261003_r7/selected_validation.npy": "6766b8e4ac5b2ffb66d30dbbf2e0ba0ca4b2979fa6820ee70e87997d60dbecbf",
+    "analysis/optimization_20261003_r7/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "analysis/optimization_20261003_r7/rankers/four_no_pruning.npy": "de0454c4a1232d340978609fea55597a33a601c86f2992cda56c62223375b0d5",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "analysis/optimization_20261003_r6/selection.json": "0710e28d2167a2276131d5d817322c916cd6d7661fa3c34a4e34d8fb61836b9d",
+    "candidates/optimization_20261003_r6/verification.json": "8652cd845d6e9c743e7422e3a3f11f56c42fbb345baa29008f97ff718fd28dd6"
+  }
+}

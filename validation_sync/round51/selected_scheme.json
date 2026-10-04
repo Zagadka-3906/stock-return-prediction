@@ -1,0 +1,2093 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-04T21:59:46",
+  "winner": {
+    "wave": 222,
+    "arm": "r0_d0",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.265,
+    "slow16_weight": 0.255,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "independent",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.075,
+    "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+    "membership_slow_weight": 0.24,
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "membership_power": 1.0,
+    "membership_memory": 0.025,
+    "diverse_augmentation": {
+      "membership": {
+        "model": "rank64_e32",
+        "weight": 0.005,
+        "blend": "score"
+      },
+      "top": {
+        "model": "pair_rank128_e32",
+        "weight": 0.35,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "rank512_e32",
+        "weight": 0.125,
+        "blend": "rank"
+      }
+    },
+    "secondary_augmentation": {
+      "membership": {
+        "model": "rank512_seed17_e32",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "top": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "csrank256_e32",
+        "weight": 0.175,
+        "blend": "score"
+      }
+    },
+    "standalone": null,
+    "final_augmentation": {
+      "membership": {
+        "model": "tail_bce128_e32",
+        "weight": 0.0125
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0,
+        "regime": "return_dispersion",
+        "low": 0.2,
+        "high": 0.0
+      },
+      "rest": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.15,
+        "regime": "return_dispersion",
+        "low": 0.0,
+        "high": 0.1
+      }
+    },
+    "final_limit_delta": 0.0,
+    "standalone_replacement": false,
+    "linear_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "return_ridge_l1",
+        "weight": 0.025
+      }
+    },
+    "linear_limit_delta": -0.02,
+    "regularization_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "rank512_drop000_e32",
+        "weight": 0.025
+      }
+    },
+    "regularization_limit_delta": 0.0,
+    "stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "stacking_limit_delta": 0.0,
+    "neural_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "rank512_o05_lr0005_e32",
+        "weight": 0.037500000000000006
+      }
+    },
+    "neural_tuning_limit_delta": 0.0,
+    "catboost_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "cat_rank10_e600",
+        "weight": 0.2
+      }
+    },
+    "catboost_tuning_limit_delta": -0.02,
+    "expanded_stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "expanded_stacking_limit_delta": 0.0,
+    "additive_ridge_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "additive_ridge_limit_delta": 0.0,
+    "fourier_ridge_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "fourier_ridge_limit_delta": 0.0,
+    "nonlinear_stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "nonlinear_stacking_limit_delta": 0.0,
+    "fourier_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "fourier_tuning_limit_delta": 0.0,
+    "temporal_postprocessing": {
+      "alpha": 0.97,
+      "mix": 0.0,
+      "power": 1.0
+    },
+    "whole_scheme_graph": {
+      "through_round": 49,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "basis_role_scheme_graph": {
+      "through_round": 51,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_basis",
+          "round": 51,
+          "group": "additive_basis_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.0,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "donor": "baseline",
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.4509128003914083,
+    "metrics": {
+      "ic_mean": 0.12175617651601263,
+      "ic_std": 0.10977786187388468,
+      "icir": 1.1091141186179132,
+      "ic_positive_ratio": 0.8927392739273927,
+      "annual_excess": 0.37300598389605344,
+      "top1_annual_ret": 0.3984997379563108,
+      "mean_turnover": 0.032304884612709174,
+      "final_score": 0.4509128003914083
+    },
+    "construction": {
+      "whole_selected_scheme_recomputed": true,
+      "root_round": 30,
+      "root": {
+        "foundation": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 192,
+          "swaps": 92920,
+          "mean_retention_ratio": 0.9836784444452706
+        },
+        "final_augmentation": {
+          "extra_role_augmentation": true,
+          "second_retention": 0.984,
+          "construction": {
+            "days": 1212,
+            "m_frac": 0.984,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 192,
+            "swaps": 3875,
+            "mean_retention_ratio": 0.9835610221189631
+          },
+          "additional_limit_shift": 0.0
+        },
+        "linear_augmentation": {
+          "extra_role_augmentation": true,
+          "second_retention": 0.0,
+          "construction": {
+            "days": 1212,
+            "m_frac": 0.0,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 0,
+            "swaps": 0,
+            "mean_retention_ratio": 0.9835610221189631
+          },
+          "additional_limit_shift": -0.02
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "configuration": {
+            "name": "regularization",
+            "round": 31,
+            "group": "regularization_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "rank512_drop000_e32",
+                "weight": 0.025
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "stacking",
+          "configuration": {
+            "name": "stacking",
+            "round": 33,
+            "group": "stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "neural_tuning",
+          "configuration": {
+            "name": "neural_tuning",
+            "round": 35,
+            "group": "neural_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "rank512_o05_lr0005_e32",
+                "weight": 0.037500000000000006
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "catboost_tuning",
+          "configuration": {
+            "name": "catboost_tuning",
+            "round": 37,
+            "group": "catboost_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "cat_rank10_e600",
+                "weight": 0.2
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": -0.02
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": -0.02
+          }
+        },
+        {
+          "name": "expanded_stacking",
+          "configuration": {
+            "name": "expanded_stacking",
+            "round": 39,
+            "group": "expanded_stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "additive_ridge",
+          "configuration": {
+            "name": "additive_ridge",
+            "round": 41,
+            "group": "additive_ridge_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "fourier_ridge",
+          "configuration": {
+            "name": "fourier_ridge",
+            "round": 43,
+            "group": "fourier_ridge_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "nonlinear_stacking",
+          "configuration": {
+            "name": "nonlinear_stacking",
+            "round": 45,
+            "group": "nonlinear_stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "fourier_tuning",
+          "configuration": {
+            "name": "fourier_tuning",
+            "round": 47,
+            "group": "fourier_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "additive_basis",
+          "configuration": {
+            "name": "additive_basis",
+            "round": 51,
+            "group": "additive_basis_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.0,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      }
+    },
+    "official_score_cache": {
+      "cache_hit": true,
+      "cache_key": "8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e",
+      "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r51\\parallel_official_workers\\worker_1\\identical_official_scores\\8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json"
+    },
+    "causal_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "parallel_execution": {
+      "worker_slot": 1,
+      "worker_pid": 5264,
+      "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r51\\parallel_official_workers\\worker_1\\scoring_validation_only",
+      "same_declared_configuration": true
+    }
+  },
+  "scored_records": 196,
+  "baseline_score": 0.4509128003914083,
+  "score_gain": 0.0,
+  "current_parameter_authority": "basis_role_scheme_graph",
+  "flat_predecessor_configurations_are_history_only": true,
+  "pruned_member_excluded": true,
+  "fold_local_pruning_repaired": true,
+  "test_labels_read": false,
+  "selection_rule": "Highest actual complete official connected score; exact ties prefer fewer active model branches",
+  "frozen_sha256": {
+    "analysis/additive_basis_release_engine_20261004.py": "c7e26f379d8ceb955d2ad1e29c31c747d6b6b7649cdbbbceb73b992cce0ed0ab",
+    "analysis/finalize_training_round51.py": "c30edaedc8464e0fb7d09fd62d2046ce8e02556b202294f76d15067f049ce216",
+    "analysis/optimization_20261003_r51/protocol.json": "97ce2d6f3540a8d955ce242be533e9ee81146b2d30a1998c334a202095e4c0fb",
+    "analysis/optimization_20261003_r51/component_audit.json": "22fa7d16001e3625d4d1bf6baadeaf6268d915b8cc03ed344e01432967362118",
+    "analysis/optimization_20261003_r51/wave219_results.json": "9218267054f8f5822de172425f8cad9ff61bdade66019947f06dcd52657675b5",
+    "analysis/optimization_20261003_r51/wave220_results.json": "08831b814d2e6a1d7b9cdbd8d245afa20bc082cc17de8da350c1b46a7ae011c9",
+    "analysis/optimization_20261003_r51/wave221_results.json": "18da59d3511904c265fa5268368278fd7e46008d9e8361afb98990269fd564e2",
+    "analysis/optimization_20261003_r51/wave222_results.json": "9877d512216aab94f8a10b7f8deb5d233bba2123817c4c2bb0368c762ce94095",
+    "analysis/optimization_20261003_r51/combination_protocol.json": "4a8f3256b71366663e33d026979c25bd7ee75f6415eb91db0ee14204ac1653da",
+    "analysis/optimization_20261003_r51/refinement_protocol.json": "11fc661bb7a06b8f1d0a756f723b273814ac620a5860f4228d54d9f274d62dd1",
+    "analysis/optimization_20261003_r51/weight_membership_protocol.json": "05103478f1b3a2105b39b9331fb95e6009fa60b6630ee77d3c28388b56e34a05",
+    "analysis/optimization_20261003_r51/weight_rest_protocol.json": "05103478f1b3a2105b39b9331fb95e6009fa60b6630ee77d3c28388b56e34a05",
+    "analysis/optimization_20261003_r51/weight_top_protocol.json": "05103478f1b3a2105b39b9331fb95e6009fa60b6630ee77d3c28388b56e34a05",
+    "analysis/optimization_20261003_r51/selected_validation.npy": "bd64e2a81406509aefe0b57bb5abd1461e2b81503fbfdd68bc988cf77832d4d9",
+    "analysis/optimization_20261003_r51/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "analysis/optimization_20261003_r50/selection.json": "6b004322e18aece4046746722c6b2a0706f67fb8f68d20a47b85d8f17763c17d",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "candidates/optimization_20261003_r50/verification.json": "65bd99725e3d9c2a6e572944ecc0690b83d4c4c5cfccbbe8edc81d210c1e9cb4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "2b4b1bce56d4d93a367552f0bc2f6c7745808ae1a30fa9047a4128595f1dd7de",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/4dbb4836521c482e7f87e755d276294e6aa71c8956f3c437a10f3f81e5befd65.json": "f8d901e1235be442df127a47b798d0a579589c25f1d1bce678f48698a4772112",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/f1dd0b79208de531f5addb590e2c8c6cc0c28940518e9ee65144ba0317f49326.json": "053409d967793b24cc2a1e53aaf3438a8d31c6bee39675073b30afc91c4e3fb4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/5229281566071a7601c6ed48a45a2f08b8340de1ad805d743b239d7d7cabb065.json": "2bbbd52707fae4039193abe162a6358a52d3c959ad6bdf5f21e961bbab5b9215",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/810c79e6e0bf76fc03d154a2a75e354e49d63025658517d3c3478641b8722d90.json": "23b1110e2041851e82e1bc838aeaeb206df247b55d56f74be38dac4e3743a6e0",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/836cfe6b4ffa0f4e3ccdb51729900afdaa3ab2c588decbb0ba4933b0fb86ff40.json": "c0f24a363bf18b1bffcb2e7e90e3993556f6e7d94d6dfdea4aefc27bff5e384b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/5d05fa4e41f41a0e561a9b265ac6624813e63ccc5fd2e2def50971c80538d2a3.json": "fdede2b79445881c92a92e8b1f58fbc1acb21f0ffaa7654456b56edcb516b95f",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/22ff751639c7f0242d34ad7f145d5dd64eda91f2458399acdb27a0c50d5705ff.json": "b23c545dea5b8b0994b9b3d77051e614d84ea2fcc19e42ab97340914029ea0a5",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/8d9371a6321b042259280645ccaacfd6de753e0ef330f9b4bf3f355ef859d286.json": "9243b3016de582a95aa09d4ffae40ee5d13e43936095ac2f4275898aff1f1cec",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/84c2a5ffe9ea3e4ffb2bcc9fc04ce006091d0e70f3bbed620e2263c47cc137e1.json": "56bfcc96aa889490c73c3c625663391d51c9a63deb3474ba6ab3e95ebbb758e9",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/1a3aabcbb4760c35435d0fc2e860d5b65e6ef47ed9a69217d73eee679fec0a1d.json": "2b0ec084e3877a90f22e2a51a0efe77035cae36dd74b20c76527002f6007eebc",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/cd88b7915a6f3178201e476e7cff9a5fa735b8a47f239895f0922f36075db011.json": "c12e28f4c1664e03908df953c34542ffdf35d992ba9318d952ef3cbdfd350fa5",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/d8845d609828222f0776ef3718932dbc575f5042a25a5ed8346e33b47083320c.json": "7748502b74a1749e5308b657626ce1ff9d6149bb0a0f06224a1cb83eb1976347",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/fcdeb1e58d5a3e7b120d2e446fae14baced024baa832878630bdad9b6a1f3a84.json": "1445a0cb976a2155f567a615c717724147c692e1c57f82d9d2260a6468bd2220",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/f8b37085a731df2eb62ae3b9cc0d640c533bd59d822c0500283320462c090a42.json": "87e7eaa8eb1f19415575da072d89f33a21944d523ff2f1f53f1e78b7aee6abf8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/82841bf68b6274c4f5cd2cd86956c2fb21bd574533aeddc0bec3aafc6cc1a18b.json": "608a0ce27b2623c4c57508bfcf3319060bcb7b18001acc99467904456acd699b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/89806278abd7ab80b7cdf047d8c8f4ac2f42818036e9a6e24bb27f10b80a082d.json": "4acb2c59516caab76ceb0735564266ec308eb1b75ed0567ccc4d58fb7d78554b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/88655714935950e47c6e60292dee09b75675ed4117b993fbfec39f321967836a.json": "fd6e05f09ce1c540c332ab9298dac44cea76c0e11e40598c427e549f9f52fae5",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/e0a927206324be6d07d24b14dc982a074fe97805878bfb934898243be24fe72c.json": "d5d35444f36e6db1c25bbac6bc6747806f08c33ca2dc43969c03a460b9857262",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/44563d23d6262118f4e7f06210c2246cde9c2fdea4fe05ce743f02eae1b8f8bc.json": "ff35250e574be3b8b3ac66e2b28a4f96bb13ffdc8ded953022695d771e7af204",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/1e9a6ffe5fff05fe53b0e0ca92203c76a2f4922f75aa4017964bbdb8763d3bf2.json": "b5a19620298f31effb2914af1c669ebb24611d998aa847de12c36f9587a04612",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/698e1dd026222e4b5f159947b651dafbed565aa826a7bc357cbedc3f5f10cbf8.json": "f5dc9d45dc7c35827a12ca1b1c718d9cadc1b76a9ca93ed621f599c8daa8b606",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/1ad021c2847e63b05e63d1ff469a7e6fdb4b2c7a91d43a3302e504fd47903e52.json": "09976e09b3bf3da671956a1c4d6781d263efd0b7faa4ff822ea079b7e7958cc4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/c3df50e4bd3f0da0544707fd7e19e220cf3698130a6a54845ff84899847827f6.json": "e66e2dfb8d148ca05128efa00998dbd0c657e419de821095a6859fe364532bd4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/d539bfd9b4b850216db03c899f349da487a331803a720d0ec9f27b159f0132fa.json": "131e5ee71c9d85a5bb48aa52e94da02c2cfc5ab6f96faa4788ef54c31d2ac1cc",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/32d5c70b3b8cca36b6073eb3d4420bda5262e0ae7f7c29d5d162ee81013c05dd.json": "abd1abaa4990e2ace3917f6a4b1472114efb01899d0abd8bb7f9411c2605d3b7",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/0496cd59c5cc8096a6f73db1ed88e705e44d9df86b2aa9413992d90866a108d2.json": "78b13f543dc58f19fef24f5bed977db09f09a6af22843008ee7b02389e2dc715",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/68f5147272469e656792d62cba523aac10d85ba500a92d5beac92ae2861b1f2b.json": "525ca6afaeab47aa3453ca9cad2f31aa46d7c91d934cdd8b5ad88b59190090ef",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/fdd6bb0cebfa70cd9103c4fac6d28bd06ecb35d8d3d7795d94168df2f5463bb8.json": "559d6929d2ace5f9c4fd69e6451f8fb329ea5935b1a29bbcac7d3465422223fa",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/f25618923f45c3111ee400564e309cb48eda437cffce24a7ac3c2c9fe789d1e1.json": "345fc1aa813795c2083a9bb56d9764ee0534a9c43baba3acc985a85c3cb598cd",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/2a7ae028e898c2f52777df5c22ff6314644a10d8fd8a1599b18402f63e3c82bc.json": "a1379297af0ac20f4a99e3db4d1f20b62b493a4013b9d371710be6a3dc7036a7",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/81d328f47edf2f42cc7f438b2d563841fada69a607524f4ddf8cf5a98a5a0236.json": "c5397e11f54511353f92b0370efcb49d7932284a9660c6cb56bb3830bb116c4c",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/11a0090064e072732bccaf2ed7fd951e2394604623f7f9fd03ac51446c43bb8a.json": "68e31a96ea0c0ea4718f23e7cb5521563c70cd1161d0874b100611f1c45a4910",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/9a528c96133883bb433dc3d6d84894c837d4723df1b5aef8a3457f416a52daaa.json": "1bf648a8218a043666eee275a78d8f4cd0cd81a6b940074d7f4e9e8c4ecdf9d3",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/2f4bab8d0b01e06db44b9f04b1989806e937b7a052126179bce9455b5d1fffa2.json": "267deaf444386bb551ef19858989b8fee643faabdf111c6d53fff1064c7008ea",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/f57c620bd7780a3ed71c722f87aabd53d989fa950c67b3a973208c6537e465da.json": "23cabd2c6426f14d0968626740621c87cc2b0751536cffed5578033a3ed2bc3b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/41139558ed588328537e148e20bc15a104f594d73eea061a728a70d6d328a260.json": "6d282a33910c1b34c044fd181f512eeedd29b2a9d4a78ef5916e54b50ccd50bd",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/5c60f71b446563c36ae4caaca30f90598cec5a894dbef67a29943483189cd9c9.json": "0d3080a6585af80cf22ec59e6e88aff1dad913330117608a3efbb3228689017b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/a9ff250ad75d6dac6ea4f4d924215de9c50721eca7ba06cc18df1d92ad85ad66.json": "25d698b7ded8266f8b1c12f6c82662376aaaf17241299e43178324f69ef59a08",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/079cae7916a2cdfdee367cac9c90d036769ec1d49b7167c5d76425ff3312b65a.json": "1b582b7498ff2ea4456b381fc1d7406120fa16dc395165fe2a16e1bdcec03390",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/7b94bbbff1d267543f1c2326fb28f357590b8732040046922e280aaf4d7b3b92.json": "7256b465db763e7d3daf41bbdc8254f434430162bcb917397106ad7cbf86e332",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/25f69098c9fe02aed2a472ff284352154158aea0ccf9aa9647b0da9b3dd86ec6.json": "38313f3423c212c7f434de23096838120edd6944377e12ee1f5337137715c487",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/bedcd276ffa4e595695d57b53543e22cfe9a8a38d9c349254e3de452f43e8e59.json": "ba678444c028ea38182874f345eab3435702befa200ebf4805701567b03533cc",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/c2837a86b3b2359fd7893c4a9b41bc74eddc0e151dc3d08b5cbfc78b3e15be24.json": "3d7f75caf3966cd3ecdd7ee05a7cdeb1d99a9c5f8d7e683d4b4001acae77980b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/4bc62058f665a50a01a3b5aeee24c8e6442e848c5950472be5eb55e186152c6e.json": "e2c70b748b2e4fe0c620846d16a04d7570db5ea426e6056ab6874aa99dacf1b7",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/015818333cd7af337bf3f66a26be01cdfa7e36841a12260f9dac898de15ea9c3.json": "ca3f83183ac92e6c0c7c8a725e15bc21e35420f679ea5956cb8f0a6166fa4a0a",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/5152990d73a16599827473f2ee9369cac096882506d1e1f448338fe50f9aed7c.json": "1658418281b318463e18f215c6bbce7a832742254615a601704f91ff856f3679",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/7c730f900a7931af6fb66da9afd05c48344f55270e1636f37232f8d619cd2db6.json": "bff36beb9fdd1d47d2213e90ee166fd2d265426a39172df6895ca36e5b44aefe",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/7ca58a6daccf7a2fc2e478ff891fcf058523f82201f905944f2cd0341bee2090.json": "4e787eb58c60efd9cfc978e35c9c9868b4ec64132fae42a252f2bfddbcd55582",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/56503e1f405ec805578390504bb18d6c85cffae6fdf123f5c88a0be5526d0bdd.json": "8b7b4b025e3b20b12ca03581e916eeb80fb04ede661b3119306eaf0c2b4bd986",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/cf36eed38b3d940ef638faafc6dc06e78ef5848c9c2b1f2a9478a8a45158aed3.json": "c4a229be9cf49d232c3ef238fda79ea774b95a0c013ebd3c0e7e1bbf28a2a244",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/39385f0a4c678edca142602c1cef13a4df532c10ca1cbb639d5d4d3c9bf7b2c1.json": "8c95130513a31e170405b2df0c70fdc1a2ac1a988ab35fddaf3b091f25ce7408",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/3a1c48464c7bf539959b7f482856cb0a986fb38701cc74f304a68b7ce7689f93.json": "9b962bf0648323088aedd026f03b422f0811e3ae9f2720435345955c1455ab43",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/8ded0a46d221eca0e8b771a3af2ba5a4549c0013ea6b5952e9ce135b910f0629.json": "3a73be31b868eec047c42fc12acf3de0fa9f648e0226131c9b50c497111ec755",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/5a39e1389dda5e009a255bed66c1f0009696963cf8cc78c5fb97a73be65be90b.json": "93a59918629a1878a342dff9d692fccd2d8a6ddd9949c946c64d21fbf241430a",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/59912a38d39e71f7c34c66fa08fb0a9e8fc011a78bcbcb7ea8221d4c39d7919b.json": "f28e9f0d0eb0530741f3c7b229f93c30b122609636f54ba27fc3434bc2bc4785",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/60d9d4a9cfcd9e73dcb115ed0511ad2700c7262646b6c4dca2dea3c03c44daa1.json": "a01921c6e64d9844c2e301bc124cb3d6de90a91e013c17bed9cfdb82e4ada040",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/45de1f34399ca135df8ea02e169a1759c7c250c76d8c47d6a4ae6ad413380bac.json": "10da576a19c57e1f3a08baafc7cf30cb675925b2c6a75de0dd133eb3fba3aece",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/79a41e73eec16329e922f17b7f703492489b0577ea46e753b89fab7c6b1a6aa6.json": "7fd815ab53532f9cc8a3c731637ddff783cecc883e1c57529b169a9303eb3638",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/df8818c5fffdc7cf7d5472d97a7d421c9b67d04c70cf5f345da6e05b1dc71ce6.json": "0aff5aa7a5f96ef4dac2cb17770ed5a885ca4cc51628e21326b40f2884733191",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/f8961574df92ebc639b3cdcc9c8f37383d5e86efcaa27c9d3e8d7c28e44cfcfe.json": "360119d9e2202f234a7de29068863bbc0c03d9701a9be2a9dbee16c6de5fa5ca",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/afba0b54579f1a66d9ff8c9b6ff0e6b19f7f2d50d7156951186cfca28fbb529d.json": "36dab0fded637fb168dc0f5d4a4b784b0f6f397d35a5083cf07463f87e0ce895",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/41908e11de76bd3ff39a65621a0f3e5d316d9d14d025d57a8a9bdcb4686b0279.json": "e1383bb4e5680d373280f33380652fbfe9fd1eedc4441169cb9da432bd1d23d9",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/97ca625bef0acf94199e1daf503a132c26207f030c4d76882200d19dd10207e5.json": "d5341a5e74862a9ddd0e38db50cc19fe7e85123c3b7af9e153bb287236a59915",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/67946febe3960f1ae0deb61e25ba68dadebf0a488bde785ce7e78845cfd29f2e.json": "26c4bb5e1f80814eb7809b52099d6e38f4049fe1478d9d14981d01f2ba3b2b2a",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/1660db33e993e2eaacabcf841ce730dc53379d5799ab56ad53be308d53d621dd.json": "25b311e532f8a62b859bc3c069faf90de64ba375984a9ef700f8a18a7cb58806",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/d630f149665e81c2a28ff5b59cee7028af604927a423d0259c7858909d3334c9.json": "c5711669a96d84c10cdb8478e1bcebc8e0a57c3c68178cd648e03fa2954aa33d",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/e1a406bdd403764b77725df781ac8280beb73ae71881e2adeb2bee82fc209a49.json": "ea8637581a8f8cbc3dd2c2593d5c80549eed93eb31b4bff1ce356d66b255e098",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/a8e39f15cf84fb3150bdacc7099ac6e2d4efc4721c05aed7cc5cfab2c8545103.json": "286ab53c60d74ab81d741636fbe283c11ba73d4ee41f8983d07d429812e7c113",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/e37a63823c18a9e008b263dd21f5270916ea728d006929727c617b95df544323.json": "c315758fdb357f6441ff65a30473dff6227dc698f6150870caa4806d59fbcbf8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/6cd0518014fca066705df082143ed301720839c7636da01a9c75ac365d7fe86d.json": "ffe7cad6543a347e9436696a45009e4edfc93bb70dc9f61308e2517b8a640d6c",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/8d77cd5ead4c6966d84c6b23a16a423a27e07ef1a121922390d4b05c9dee499b.json": "7c87bbb51d2d2ca2aafb6a49be9e7b8cccc9e6e5a4e640e49d9c6551939fb8b7",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/0df67dcdfb72dcc16551f7d2cbd82615e39a85a803704b70736ec5b2f595823e.json": "25b889e3518123c19b41dcb1f48db11a06b58499fd34b4260b0144b3cff6d1e8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/fca362090463b04c17578c11d1fa50b7bf5574022dbda2b49b410690ff9b5850.json": "e495dd96779bba5c23c50b27d9ce910f27d4d02edc2be581fe0f6bf2d761c596",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/908090357950fb6d6f25e0f37851ee54fdc996d7c1d5754244c4257c96749c8a.json": "4a0aa1323274c56ec2fa3198734ff94befec7284410f0f97dd07fae2d5c5e800",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/2aceac7992920d959f4c1742d3580a65bce2b13696dbcbb850fbd9223a695b01.json": "a0f32d80a8c387dc0dc14bcb0fba225e8c97474797f2f1507c235135d720c7db",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/1265dc9b524a98c542a9c7881a00212de9a7fc315fb59dbacc332d3601c90751.json": "9705e02b22400d72957df251b9d0f6956be451b3a058e1320d8ef23b8fd9064b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/2d44b2c557b8cd4aba7dcb8de89b1de7387f25918751d16619aed16564115177.json": "c6426ecad4c99f54d5e245255840b7be6f0f4998c21399c825b6db3898aed22e",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/1dbd7b6a9a5e836ccb0bafdaa53f28b9654ae48ab34e0bd5e957769bfa022b7a.json": "89f045d51f587b67b51652dcc7259cdb1ff416e9db441c71abd36f971df9cdcb",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/8a4bd35b90540b0f56c6f04d04f081f2b6563ad5b5b2a74e393f1730e73818df.json": "5fdd40d5275c457338d32b8ccb47ff9e194fae85bef02484e5a1e9d38186f251",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/36f0f8d71de4e4652a567582f1e2dc269d1864a0277354d9b615a24e13700b2d.json": "967c703fb3abc8b38f1404a63796cc345fec6509821d5db59412f650cbe1c509",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/666ed34299720193c59b0ebdb2b990ca5b9001620f277b911b317a5d91af4bbd.json": "fcf9bb8c02d0f9ac3a10c1d40cc760985c6e85f920ceb1806d6f43b206d3250c",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/075540f1b53cdb625a8699053929f2dcec8de8ed0aea93075791834a66d823eb.json": "9121e657c983318ceeee90828943cb96fbfadb9046ffedc5292f74ee07d9fe2c",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/bc927b24afee63c64e44c9db9410981cb74a1b59192623878eb533fb3299a49c.json": "8e283071390d0feeb9ff47b481ce1c2e86db1a0d55057e2d0b78862306cd62fe",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/872276d5ff55a0db299ad0324730a6863f2a51d426866f48680d1d1228053802.json": "e1f06d6283d634c3ad0b36e08bc9b2ddddc795101d438e94d959b3746d2576c8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/734d3041891d09dace269bfc75a6d2fa1988b3972a6aec2069d662e45c22e6b8.json": "118d7fbabadc11d141d2e2b441ea16013fc64de217066a1a5cf836d35416be90",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/a3b72b4d01d3305e4cabae2d1db18819cd3f4f7ad287b6c76d1f92d49165f829.json": "84285ca957e3fd664b8c61df12d3bf98ba198a0b139f86eea4fb3f4afc11f897",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/0202cb574e83057ae8a0398d8357da55b788b226703c0af689e0e94d0465b170.json": "1d977196007a819f42749e3d7151b7eafb09d17075c23429331c09890e4147de",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/90ac26cb96cfc827407936bfadf9061b9a3318c3143f9ff9759aaf8b23eff1f4.json": "30abc77aa10d5ac6cf18887feb97b850aa7aa9af4a95b87db065e4ef8fd50b22",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/6a77ccf79efc7441805364832b02d4f5763610d80823ab8b4b7cf1bed0162827.json": "9d820d4ba39ddac8f1ac5f091a2554b5c40f4c76243ae4f572b413d8c2c64e3f",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/be5795c52a1bb4813ed9c787df0bd0ee38e579003fd269c3bbbbebd80be34f42.json": "e4405fd298a6de737fd47d5e4b9785db4fdb209bb9f696bf1f1c15a9ca88523a",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/4b6ca5c35ec475f6a77130c57dbff71c12a221d70801dc69f25c005adeb05c9e.json": "3899fe4ee41e552281d9acc072980d488f34ded4bd0f2f2fccaa607efe4b3c96",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/beb30a5f4b93c9f53311b74e23e953ab10904efd2ce70a1d9e1466f559974148.json": "85dfc117821772b42a04fd30b2bb96080caf0f80f16819cb3da177289f4b84b2",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/a9305308c3bb2e42d6df412ff4e001af8cee91741b3f841e6fd0154970502096.json": "7e321ec380c647acca80042418a2364cf4e7e3b867075cd0e7bba81cd7f3f35f",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/dda4226cce72a4e1656fed937c7d697406f6930bb11c30dcfd8adb6fbb78de97.json": "21cea83cd215c531129a6c75388daad842e7acd8ab8a0b6996f8a5772d7679ee",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/5e52b5b6dbf3ab1af8a9506085a8dffdf4d66188cb057e2856fe7128be8346f3.json": "760e2d285423f24463d99b2946ff8af5482d79c9314f7fded9d907e73c355d20",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/ff89f1d926eefc116627cd56c50dd34ae689fe78470894a1274462e2c3957caf.json": "9529bd0470153b82bb5dfaf36d5788de450532ca7bf11e322c029aafab98e96f",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/11dde8e9399742883fbec91c51579763e562ef198110c3b6183141df91b04e68.json": "31b9eb016a6f6daea9a733ee34af4765adbf1d479fc1c7467bae862c12c99948",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/0541893415f9d5279dab3c2b67509f951e8202c31a752413ff3d6ce98b879ec1.json": "35bf7c5977d084188df39e726ddd45e225795f7fd8bdabe27d0b9316a7ad945d",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/f94d9b053ef396e6017cd34e56ce9ddf3b494168d44af5a1026f5202c7eeaff6.json": "8eebdfc5fea77bc2453f71ab42bdffb8ee9f123ab00808fe03ecd5e594df25ef",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/4351461c44b6ce82f1d5dc62a80cf0af5afd0b2e422356de635adff5720df8c9.json": "eb0d3801bfed0d25ad2fc7c0fdea5df925fceb2183b4c577db70e90bf9d17e5e",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/77043ef8a313aa33cafb6c757417593e64cbce7f4f0a53cf1ea61b014571b508.json": "fed38aa446dd80bfa9ab4fcd12452b32979911a2231583394ceb979366820dd1",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/95b86fffe069c572da40d5e29fefabd97e9e03a1ec1ffaf2d4b28cfc3f033684.json": "d0463942de66fd2470680702ed12c3cc0bab85c4d67107d21d183c54a7d43244",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/6e25fda08e455d0e50790f9095df70c79098b477cdb193bfd39b0baf517b7be0.json": "ff4ee550da8cb077d1499631f9b853c4d6c05ee1e4393200fb45ff9f2fceaf34",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/32ce4a96f3fa005d19e144f5ae172c8c9cfb25b56adffe1897fdec869cf8fea2.json": "dc7d9c59cb4f464e4db344c2654ab880af3f3ecd9e048f883e04f212dc9e8d6e",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/9e420e9cdaeb25cd04db7c7e15a8e0d28fdd903e8bef0f9270efa2b7a6d27828.json": "875ac44b50499e127ecf4dba8106179ff1aa71837dda119b6e81f37b47a33f4f",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/918a3d28e9bdf8d33c7cbd6b0ae42b42827634a92094d0b576754f08e1df7b2b.json": "299886d872d82311c36eeaf98efb17ee06ef289a1e55e0254091b3fe0ede17f4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/24e9762b45ed43fddbae265343c21ad09df63b7d62d60376a3a7779905f14638.json": "e43a9f38eace42c9f700141a03d3cf7564830652f934e6003daba2e56be650e2",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/c1a2f16b3b8d6e2eff7ef6d4b6cdcddefd88f4aad287b881b43388faba7403b9.json": "3cca567655c419cd4d26a04f3876b0cbb2dd19251a811a7d41f0acf658b5ba67",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/74deac9fc1ccace8aee29b70bdcce9fe123827a8587fac61641f7171c80bab9e.json": "492ebbf08de79f4b480b3e1037d1940189f930ed3ed6390533fdb291e51384e8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/072e93a39dbe9a8dca21b4a029a35c9a6ac1fafbf2684fa50b92150410820d2b.json": "21ee5fcfbf860aec27f5217c80d23b9184447c2cb46c90bea17fd56b051c8658",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/5bbd6246cb67809d7ec843bd088985ac8bd62e14f5a84217eba24320d383b84d.json": "e45ce42b9e0758e3b85b8b3a2f4921d8592f35659a6fac4b01175a10c35f4ff3",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/06930a7b13b741fb2ad9edd68007a1b70ecb35a1708e0030776f7d90a4266a26.json": "d7c28a0953a04d76359560ec57494442bd3cc612924872c695ca9dc2cad4a532",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/088e28b697d1973a56f642f24310fea4fe36f7d2a670d37dfe7641e6c8a17521.json": "1b7e44a96af86355fd10917fafac3722b4c1808460bb3875bb82b794b75da65a",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/9aa36de4f76822ad77f10ee4d3a6ea4e280fd7ebc2c19475f948eebd7356af42.json": "917307fcebb485ba62369822debc1eefbf68ed31c52ae9b15c0aede35e1feaa9",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/befb95f88c1472578ed90516565f6a8ddca5e0e2c7bfaeaa18fdd330dcfdacbe.json": "0da3c372060d07a9b905d86d5b6bea1f43a0cb6a701e033b779fa2e2455398fc",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/5da0fe79a41a8fbc48d86e2648e2095b9b2e047970ee4bf46285d794cbebec62.json": "3807cb3bcfcf96d5879bd87fe221f1745dbec5b8f19d9046d94577c5c29b542d",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/83f67d1b94cead9e83426a268cf6b07de2ffe28e72b2c2de812cebde8766cd70.json": "3a2956f1a5350be779da7b4174d8a6e8e5420c53a7893431001dd1337fe01780",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/c14a964254b68a7e561130c9eb2dbd4dc02ef4b7326613f946558bdbaccfdb3c.json": "93c369c1ce23f337001da2f2cd1ce8673435e58b0878685c695a0ec1e90e88e9",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/7d62249e8ea69cf96283df856c5bf3393c2ec0051cdce9a9bee27e57fae27461.json": "58a5ff9a38653f38a68917c4b0a8e8d15241f5d3cf96aa4f5bc207f802807cb5",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/02946e05a2ce48d70159251e68f0698fb5162b0ba2819cede58077e376f6382c.json": "26d730720a8d5883722307e453712490dc4acf589ddf0ee304bca0dc1b7cd7d5",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/7721d704112acdddb94c37e3dafdcc2150d03fcabb98c7d7443987ea71a3508c.json": "19f08ab61c2d41bca2a3a504e38bef7249eaf6fcc462ae32a664b49e7b914206",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/71d90e72cd46c5652e64b0e3ed6152bb8fe7ab125779334b50dacffbd6c6882a.json": "9a0da376e4a4869d42858165dc2be999ef08c40f55666172be53f01d371000a6",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/829ab84fb11cc4887bc528df6e193fd192d485eb6b337763050cd4955221cd87.json": "07bd6acd25d4d8899243386f4a2281cf79d31a03a01479685c06b766668951f3",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/e3a253bea7e8a5a2295d9fed10e7951a4c51dea8ceac2f22f6464856bf15237f.json": "97c8d09724810eb0da645399390beb1f73ebb21c8e7bfa2a27c5607f90a8dca2",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/d54de0d74622ac76ec7d164ba93b4f20c3ce6c882600e429ac7c96de0df9d2a3.json": "0fd5ad51e4e433be11c4647b1005873d761dd64e9f301d8b9e8ed4271e6ef85f",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/fc9153cf7ae5d45831208a9d1305d1c08a79913766766f14b0096946af25dfa7.json": "3bff5da22c4000570e2f7f25a70d149c951c2d63966ac4e9fa2b168ded81002f",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/f76d44c6a7c2a05fdd9f8c3b53300ec399686022a865750d19a0a11fcd8874c5.json": "23fddc8630c92ba4734264a5f0b69efb92abf9635c7ea79bb6250d0baec49798",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/1b608599308f6bf09329bcf221762c3bca92447a8e224d2fdc1e33c66119d3d9.json": "2bf49c37eb4133f8d8d2ab6ac6af044ab5c93f0599b9d1f8526979325ed64737",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/069b18df98139e7232b87a3c277e8fd83040f86392673b34cb25c8deb2aad268.json": "bc61a47f928a150da1644968ae9bdf1036d220869da755daee21b7f8ba87ca51",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/c7e989d8166d15b2d7cebdf7957103adfe3b0a069b57b3797a94b2a308f0b3b1.json": "c44ce007101e801099f61ef92c6989ca59ef50fc00cd04f652f77f09ea8cde1e",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/038a335692a1aa5bcfa7b9dcfb6b1ba84b6a44227a06a3c298b56ff4e1175165.json": "02adb99f25182a06ce2af9e79f916e8d76233ba5f5efcf8f9e7a18784a60384d",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/756fc8c5456287a7d962c02202c981503b5fc2d98da2205bfec8dcae1257c44e.json": "2ddc95b08d994275f8bdbd4d4a723eb4106c125027eefd2c2be808eb6849ea05",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/252efbd50cfbbad8b5fad57ba6882e49463fd50dcbf72f2e8c7650c8a007f6da.json": "769859916664f91fe30a4796adbf686a712f49ae18de928a926581d89068f677",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/a8d63ee9db0bdf78e32a1425126a54a3d57053985118997485050512d04892e4.json": "1fc1662bbb601e8d89f4743e3235b554b1630406e82cfc7b48df481c0fe66005",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/da4df92d71b20a650d0bde5c79fd137b3dacdaae5984e00d7548ec693f6a8d1b.json": "3f537bb57d525bd113f8cff3cdafde972915e5c2b2b34ce6831d54ffe57321ff",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/79e4f8dce29874a4fd674ef77df493a6e97c13a3246c4167dbf4ec9d0d8b444e.json": "a0ce5c3157664b38b14f822059fbcb2608064d4cb5d311f67dc84e4820e625e9",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/3a7a7f4ddb541b784f6ab1c2ffa3decfdd493c375baf37bc813b20db9a37a239.json": "e91bbbb9027dbe0787432696e401904d9dd8fd8956f852b56834de87464a676b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/c6d66717374744c6065432c66131ac10cba6f67155c10f29de43e9149c917b8d.json": "ef80f4452c193b485a95f1fa76ef5f48f5163d5827993f0330b77f7cfb087cb5",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/c84db9103c0ff88438b14b7fff9cffc15cfda09a88ce58fd6cc068149325ae93.json": "ce940dacdb385bff50151e18e4959b33c470c154a719c85eca0212fdf47647e9",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/719fa0901c8aef29f9f7dbfce1f4b3143d59e0392a889e7aaf2a9c365b3044df.json": "feba0d87f15d1ec1fb1e478cf727571559c14b7f9be467815388136769db19db",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/e4fbba3499d2c86ecb60d07c4cf430fc25289d5cd6bb0da6bd7a78a8d91b1832.json": "df1e118cdb2c3552d03b85c350c954f0a5c0c0d30d5ec1ed30df4a6176c78bd6",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/bd6a892de230f99237ccf72e1b1e6c1e2417399f4c4a295611d614f109670845.json": "57b9b58b30261dfbe4f5a6fa99a70b3e752ddf09131e28cb31163ad345d2656b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/8e88f6e3e89d811b18ffbfbf21ad11c6d12e1b801cdf549246081924fd96339f.json": "f53f9a54264014f95417d29f017d65ef88fc4b9c4fccbdef715b1be9f657e93b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/f2a485ff0ad9fe8d778b66d53b8a3861aff9cd53056d8e52949f9d8ffd375c49.json": "0bbcf1ba9713496082dab17ff6c7588b691333cdd51949348e3ec671ddfd18e0",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "2b4b1bce56d4d93a367552f0bc2f6c7745808ae1a30fa9047a4128595f1dd7de",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/e37a63823c18a9e008b263dd21f5270916ea728d006929727c617b95df544323.json": "c315758fdb357f6441ff65a30473dff6227dc698f6150870caa4806d59fbcbf8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/3a7a7f4ddb541b784f6ab1c2ffa3decfdd493c375baf37bc813b20db9a37a239.json": "e91bbbb9027dbe0787432696e401904d9dd8fd8956f852b56834de87464a676b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/f06270824c38a6fb914f40bad25bcc4cff97e8b577257d296a86ac5404166a78.json": "cd285297d76dbfebbe37e5a6c377980a29bd05f0b3f90abb9294d3f8c13abbd1",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/76cee5859f2430334e4bd67c9268efe738231f29518233851a68a2082d1b718a.json": "e52e5b4fe188e0d80e83c0de21bfd849e8b2a1ec901ebeaff729de17f5a69149",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/44ddf18318866595df5a11871019f44e2f1abe39bae80f4bc0ec875fbf7af6bc.json": "a74350cd55e5a9b74717860bf14bc949012774d36264a506678c1cff568680a9",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/af47734ab0afc1f44bfa13718b833474117dd29be62eaf15087405d458799cc0.json": "f8ea3a125e6f75c61d341397e914f6798d05d40ad16b3247e85887b103f4a33b",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/252c9ce1b98667bcac3cf39857a63d788943d620cd0c783e10d6218219c72979.json": "84e579d15863b032217dab60684d558de4dd09b5d97ba6018e89039e418c9c94",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/56503e1f405ec805578390504bb18d6c85cffae6fdf123f5c88a0be5526d0bdd.json": "8b7b4b025e3b20b12ca03581e916eeb80fb04ede661b3119306eaf0c2b4bd986",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/c77146d16b41efbabb495983a4ffbf6f51dc406ae7eadadada90d5332784a51e.json": "14ca3d8f3df26cabc75d9eb18cf6a174ec577121f7050a643e169896ea9f2972",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/7ed9e6316cd52d8c36ccaf736316069f3c8505b19daca67983c6f2de1a599547.json": "71bcd9bab6b481b105644a36b31e90995cf72ffba9375314506efe10fe2c5b6d",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/470b0a78f36bb7bbd10ff170e631329030e714e48dd11836dc7ee3db6f88b921.json": "234c5fbfae1e7f8089fb43e134b65c3abc3baab57ff79780bc9f94a8636470f1",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/a3ad522acadc9395400befeb1df9ecf43cf8e3b58a9c906b47c847c5f88d86a6.json": "f2666cf3a9e72f70f440a2e6cd566dabaf0c505f210a714f7bea629b27621433",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/60a3263e5307199867c1b2e0e66101f214da5a040be6f54e79e3036aef4285ed.json": "dbb0147bdf050e9e4a872ec19496c7d37cbd8df46d2774edadfc009ee037bfad",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/b00c45995e5888aef51bda7b916fe26e8a455d4cb3b6a9862e979d1d17596ec9.json": "b421085d180d0279600712c7ddd4ad9258626a744d5a172bb399aa94585ea60d",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/eee1ae6437d91a0e5b69127d568c5106d6b7ea04bfcb624d596b343370a68a99.json": "76233965ee9e40ae9a464020d3e897e961f9a339fa6018721c0f0b1b1c0196af",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "2b4b1bce56d4d93a367552f0bc2f6c7745808ae1a30fa9047a4128595f1dd7de",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/8f7d4dc473c698809f0ba3b04da8576203a2e6bc9d04def13d230fffe416071a.json": "e62f55a8640c892cc1c99c429b8984bacbcd33c87dc561f18a47a0082de6d3f4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/e37a63823c18a9e008b263dd21f5270916ea728d006929727c617b95df544323.json": "c315758fdb357f6441ff65a30473dff6227dc698f6150870caa4806d59fbcbf8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/b4a9a7b385ea317a0d5bf0c1653222e0887b0dc4b121bebdd60786c1dac515fe.json": "491a2db94ac8e0e3cbea1cfa0427944b618329320865acc54c085278c50f7e9e",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/a0fe0678973784a9cd7a06e0e8f5857be1475fbc082404df1de1b2717fe07dff.json": "1dcac7a056d45e7fcf10550098a886cf68f3b2bcf5c49c6e5fa1011e04400208",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/6780639544e33850a4bfdc062c436d87992cfee49771a3472838d87ed94e3b29.json": "09b7e48ce9d4c0fed7ae8d8740c7717ae39f196dfbbc369f36ab0e3ccd140418",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/4ebf3b286647823c20f3586acd63a9e3cd6314fb6ae7b61cf5401c46eb8763e3.json": "818c1d5671488c258a9eda0eb83a98ac72ec932d99d64df286b6a7c497b46df4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/4a23e642312a5daa921809f310afd2ded5fa785aa36751e6307b9c09cbbbb51b.json": "82aa603436361cb30b9190b7e4d91fe176df0f1b0a78b743b96ceac8f04f3032",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/6053e79f08b22e8587c2bee87f19512f2031412016830e8297bedc0cdfb8e02c.json": "b1c762142068359492c6a9e9486c6f96b063bca36c0e45960a5ce03f59a0d7d8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/d8ec40ab67e7588c8c0fa8ea735468e4d1221934257b9b5e7cc9907b7b69e799.json": "0f749043972cc79093fedfdb3aa34c5de6ac944ca349424d63a27e2cb25c06c0",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/4ebf3b286647823c20f3586acd63a9e3cd6314fb6ae7b61cf5401c46eb8763e3.json": "818c1d5671488c258a9eda0eb83a98ac72ec932d99d64df286b6a7c497b46df4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/4a23e642312a5daa921809f310afd2ded5fa785aa36751e6307b9c09cbbbb51b.json": "82aa603436361cb30b9190b7e4d91fe176df0f1b0a78b743b96ceac8f04f3032",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "2b4b1bce56d4d93a367552f0bc2f6c7745808ae1a30fa9047a4128595f1dd7de",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/d8ec40ab67e7588c8c0fa8ea735468e4d1221934257b9b5e7cc9907b7b69e799.json": "0f749043972cc79093fedfdb3aa34c5de6ac944ca349424d63a27e2cb25c06c0",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/4ebf3b286647823c20f3586acd63a9e3cd6314fb6ae7b61cf5401c46eb8763e3.json": "818c1d5671488c258a9eda0eb83a98ac72ec932d99d64df286b6a7c497b46df4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_3/identical_official_scores/6053e79f08b22e8587c2bee87f19512f2031412016830e8297bedc0cdfb8e02c.json": "b1c762142068359492c6a9e9486c6f96b063bca36c0e45960a5ce03f59a0d7d8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/4ebf3b286647823c20f3586acd63a9e3cd6314fb6ae7b61cf5401c46eb8763e3.json": "818c1d5671488c258a9eda0eb83a98ac72ec932d99d64df286b6a7c497b46df4",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/4a23e642312a5daa921809f310afd2ded5fa785aa36751e6307b9c09cbbbb51b.json": "82aa603436361cb30b9190b7e4d91fe176df0f1b0a78b743b96ceac8f04f3032",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_1/identical_official_scores/6053e79f08b22e8587c2bee87f19512f2031412016830e8297bedc0cdfb8e02c.json": "b1c762142068359492c6a9e9486c6f96b063bca36c0e45960a5ce03f59a0d7d8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/d8ec40ab67e7588c8c0fa8ea735468e4d1221934257b9b5e7cc9907b7b69e799.json": "0f749043972cc79093fedfdb3aa34c5de6ac944ca349424d63a27e2cb25c06c0",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_0/identical_official_scores/6053e79f08b22e8587c2bee87f19512f2031412016830e8297bedc0cdfb8e02c.json": "b1c762142068359492c6a9e9486c6f96b063bca36c0e45960a5ce03f59a0d7d8",
+    "analysis/optimization_20261003_r51/parallel_official_workers/worker_2/identical_official_scores/d8ec40ab67e7588c8c0fa8ea735468e4d1221934257b9b5e7cc9907b7b69e799.json": "0f749043972cc79093fedfdb3aa34c5de6ac944ca349424d63a27e2cb25c06c0"
+  }
+}

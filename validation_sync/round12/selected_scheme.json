@@ -1,0 +1,139 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-03T17:49:29",
+  "winner": {
+    "wave": 80,
+    "arm": "shift1_0.075",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.24,
+    "slow16_weight": 0.25,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "independent",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.075,
+    "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+    "membership_slow_weight": 0.24,
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "donor": "baseline",
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.44913731266032064,
+    "metrics": {
+      "ic_mean": 0.12012452154125026,
+      "ic_std": 0.1116441091352795,
+      "icir": 1.0759593360693578,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.3689979839093805,
+      "top1_annual_ret": 0.39449173796963793,
+      "mean_turnover": 0.03203963709664531,
+      "final_score": 0.44913731266032064
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.984,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 187,
+      "swaps": 94459,
+      "mean_retention_ratio": 0.9836976865181549
+    }
+  },
+  "scored_records": 70,
+  "baseline_score": 0.449041870533273,
+  "score_gain": 9.544212704765132e-05,
+  "pruned_member_excluded": true,
+  "fold_local_pruning_repaired": true,
+  "test_labels_read": false,
+  "selection_rule": "highest official connected composite; exact ties prefer fewer model families and role ensembles",
+  "frozen_sha256": {
+    "analysis/finalize_training_round12.py": "46732b5d2ea849ed6c9a8cb4613f4c66d9c43a9ac3acdbe631099ec948f85db9",
+    "analysis/optimization_20261003_r12/protocol.json": "640990893aa3c592eefa7d0924c8e6c4bf94fe3179e725087fbb9e061ea5ff94",
+    "analysis/optimization_20261003_r12/component_audit.json": "5b9aada5297fef7b2578a63a7ae76b421f7e0c8f9f081a2dd863bb984b06c64a",
+    "analysis/optimization_20261003_r12/fusion_fine_protocol.json": "8e391cf370492facd03e710eadd73708caf0aa69788c30c31e12de2c72d9ea3c",
+    "analysis/optimization_20261003_r12/membership_ranker_protocol.json": "64996ee2c13e62595b345f134692350bd518decc16748772504ed3034da9594d",
+    "analysis/optimization_20261003_r12/donor_recipe_protocol.json": "1392a035284c509484458308c5fc9ca8f29ca1bbdb35ef240f00a7788bdc48a4",
+    "analysis/optimization_20261003_r12/refinement_protocol.json": "4d0b087c3ec4f38f73b3ba91f84452fb21da618297c9ac62db814047f8ee0484",
+    "analysis/optimization_20261003_r12/wave77_results.json": "1a144e03c884753feb793622a2b31bb29db153a89a209a9243ab88707931a081",
+    "analysis/optimization_20261003_r12/wave78_results.json": "a9ebbbc8772ff47dd3c8f6cfa626652dbd83a1b8fe090bb0c318c0a2cb1b15f3",
+    "analysis/optimization_20261003_r12/wave79_results.json": "f2fac7e36e2a806ae8afb838b3042f94c9c1c008cb796cdf39073408cf59df00",
+    "analysis/optimization_20261003_r12/wave80_results.json": "3ea9503902ba9426bec2aa53924332ab406f7bc1de4d3accae28af6a05dd8509",
+    "analysis/optimization_20261003_r12/selected_validation.npy": "0cf2ea0d936608236c347062d36850c78f86319cc12fcf75928dc20d1e2572a2",
+    "analysis/optimization_20261003_r12/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "analysis/optimization_20261003_r11/rankers/lgb1_xgb1_two1_gru2.25.npy": "47255cfa28dd9771447c495abb4124a9127b7b73e0add4e37f2ee78da02b573e",
+    "analysis/optimization_20261003_r11/rankers/lgb1_xgb1_two0_gru1.npy": "f34d3ff5069934945d3afb6320af5ab5adfcdb3f6814a19990a9068c941587cf",
+    "analysis/optimization_20261003_r11/rankers/lgb0.75_xgb1_two1_gru2.25.npy": "c1e4e8224d4305df422f1b1bc4bb5409418e3b75f28f49d99af3c69ebed7f521",
+    "analysis/optimization_20261003_r11/selection.json": "43818d3cceae0e874342e44c831e3481e6c0f777d4c6e1b15c658acb8e1fd440",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "candidates/optimization_20261003_r11/verification.json": "28f18c7e4fd182d22378c43dc95db5f65820458c3960d52ff2661d74b8c0582e"
+  }
+}

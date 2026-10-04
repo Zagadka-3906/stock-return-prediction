@@ -1,0 +1,114 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-03T12:32:46",
+  "winner": {
+    "wave": 57,
+    "arm": "fine_delta+0.0125",
+    "donor": "baseline",
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "membership_w5a_weight": 0.0125,
+    "slow16_weight": 0.24,
+    "retention": 0.9845,
+    "limit_up_delta": 0.095,
+    "connected_final_score": 0.44740649979403346,
+    "metrics": {
+      "ic_mean": 0.11855575167080419,
+      "ic_std": 0.1114015478105933,
+      "icir": 1.0642199682213984,
+      "ic_positive_ratio": 0.8844884488448845,
+      "annual_excess": 0.36529713584073004,
+      "top1_annual_ret": 0.3907908899009874,
+      "mean_turnover": 0.03201647208835737,
+      "final_score": 0.44740649979403346
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.9845,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 181,
+      "swaps": 95550,
+      "mean_retention_ratio": 0.9837106757683327
+    }
+  },
+  "baseline_score": 0.4473425202487328,
+  "score_gain": 6.397954530068528e-05,
+  "scored_records": 26,
+  "selection_rule": "highest connected2020-2024 official composite; exact ties prefer fewer models and fewer trees",
+  "test_labels_read": false,
+  "frozen_sha256": {
+    "analysis/finalize_training_round6.py": "0c4f9d22e74801834d43217c258ca0125d9e077305063096bae9c8bb6395ca4e",
+    "analysis/finalize_optimization.py": "3565a2be5251c0a35ec4ad2b68dc7d1c6f73b01b71599e3b2a78553b8f4d6f80",
+    "analysis/optimization_20261003_r6/protocol.json": "e90ba508d2cd01e78f7d09c28187b4cfd40b6807f22db2a823a6a310d00ee624",
+    "analysis/optimization_20261003_r6/fine_rerank_protocol.json": "e5aedd3da0e44e08c2f137147262836579e49fe5532e684e0538600a3eecf36b",
+    "analysis/optimization_20261003_r6/refinement_protocol.json": "a5fb7807a091b51820a2eed1821af418b0370fced7d19b91b4a71bf5018907d2",
+    "analysis/optimization_20261003_r6/consensus_prefix_controls.json": "dd3eb864a4f87825401774222c9758ad3e4d96d2d251bc008abc624fd52412a6",
+    "analysis/optimization_20261003_r6/wave56_results.json": "e9ad0df2878eee30e3810af94928918acd9063b6e6f21be322391d34d2ff3c13",
+    "analysis/optimization_20261003_r6/wave57_results.json": "913bc0e8f196d330e8090f3564a01c980c3ab9ff9d93c96152fe132bc7dabb92",
+    "analysis/optimization_20261003_r6/wave58_results.json": "848f3311021b49bcfef05675091ca2d1e0a2eb3c7011a9dacefa6f08a8f082db",
+    "analysis/optimization_20261003_r6/selected_validation.npy": "8e2465db17a35a8f2d002a48274674dae88359a2d02420a6a11032a05f7c09da",
+    "analysis/optimization_20261003_r6/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "deliveries/connected_topk0175_20261003/train_test.json": "d7a3f891f2e7f99ca14cd8fc95fb3b54a2ad137ca1fa4c5ae7638a12a313f700",
+    "deliveries/connected_topk0175_20261003/topk0175_fulltrain.txt": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+    "candidates/optimization_20261003_r2/model_selected.txt": "0b43dc5d6091750f9e1c04b13f18d6d8f0f18e64b4f154d0d844f7d4c36e659e",
+    "candidates/optimization_20261003_r2/model_selected.json": "746e1376ad831e5c1e9b73e54c3a381fa8fbf2c7ebdb7feb18820e9d090879c0",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r180_2020.json": "02b79c42cbbe4a66865ac740e56e0434013a96403fd174f5c9a1e06c1aba3573",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r180_2021.json": "db5fcac5220da9fc849d35d94d1dd74a7ec4bed4978483e0a35ce88faa704065",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r180_2022.json": "251098ef61565a2f6c5e38a7bc757d8f08d0f00c1226851a2a43e71adaa0ce17",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r180_2023.json": "d07b784cfffe304ce1c6bf97e45c5e47c2c8df1e2f7c1b36a88e6877777496bc",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r180_2024.json": "44d85580a89ca6f81594cb82c6c6d68d29073fd22f86733002d03e64d64faa65",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r90_2020.json": "0ac4ccd669239b58efb358a98600f5d1c5d8f4e2f7d2dcf80c02c3f898492f00",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r90_2021.json": "601e158a279ccc354c90f324b5f15241f5c44a87a5c34d6d44b4f3aa23da0b43",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r90_2022.json": "29ed33118657035260651ceb874eaed30f22d14dea60a1896a7c3a9a12b5573b",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r90_2023.json": "1ccb0fc67e28e90e186acc8d2783dfef788f5098f44d7da910b57238eb5ffa00",
+    "analysis/optimization_20261003_r6/raw/source_seed2026_r90_2024.json": "c7e4f2ee5811dcf6226703186ef9f80e5c0c3851075e17752cf1b4f644463018"
+  }
+}

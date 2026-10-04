@@ -1,0 +1,769 @@
+{
+  "status": "complete",
+  "scope": "waves59–61",
+  "winner": {
+    "wave": 61,
+    "arm": "limit_shift0.115",
+    "donor": "baseline",
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "ensemble_name": "four_no_pruning",
+    "fold_local_pruning_repaired": true,
+    "membership_w5a_weight": 0.0,
+    "membership_mode": "global",
+    "top_slow_weight": 0.24,
+    "slow16_weight": 0.2,
+    "retention": 0.9845,
+    "limit_up_delta": 0.115,
+    "connected_final_score": 0.4477441201313571,
+    "metrics": {
+      "ic_mean": 0.11909120977630876,
+      "ic_std": 0.11166119205057111,
+      "icir": 1.0665407344242985,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.36570200165782246,
+      "top1_annual_ret": 0.3911957557180799,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4477441201313571
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.9845,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 181,
+      "swaps": 95833,
+      "mean_retention_ratio": 0.9837144494647172
+    }
+  },
+  "baseline_score": 0.4467531766394507,
+  "score_gain": 0.0009909434919064264,
+  "historical_uncorrected_validation_score": 0.44740649979403346,
+  "historical_score_is_not_a_compliant_baseline": true,
+  "scored_records": 35,
+  "records_per_wave": {
+    "59": 12,
+    "60": 8,
+    "61": 15
+  },
+  "total_scored_records_including_repeats": 1191,
+  "new_fold_models_trained": 0,
+  "ensemble_components": {
+    "lgb": 1.0,
+    "xgb": 1.0,
+    "two": 1.0,
+    "gru": 1.0
+  },
+  "feature_selection_dependency_repaired": true,
+  "component_audit": {
+    "status": "passed",
+    "old_finished_and_complete_output_bit_identical": true,
+    "fold_local_pruning_repair": [
+      {
+        "year": 2020,
+        "original_raw_bit_identical": true,
+        "fold_local_feature_selector": "experiments/extended_audit_eval/models/fold_2020.txt",
+        "selector_sha256": "b969e5fa2074bf5f934a10e882069235e8b12ab9f7ef9598cfc224cef24b0a56",
+        "pruned_model_sha256": "5162ad9243e44ea7ee9e2ec82e8136c3431e9e8746710ced3a61671146601e44",
+        "training_boundaries": {
+          "validation_first": 20200102,
+          "one_day_cutoff_exclusive": 20191231,
+          "one_day_last": 20191230,
+          "one_day_label_available": 20191231,
+          "two_day_cutoff_exclusive": 20191227,
+          "two_day_last": 20191226,
+          "two_day_label_available": 20191230,
+          "one_day_purged_dates": [
+            20191231
+          ],
+          "two_day_purged_dates": [
+            20191227,
+            20191230,
+            20191231
+          ]
+        },
+        "inherited_future_label_poisoning_checks": {
+          "all_training_rows": 1694259,
+          "full_training_keys_labels_sha256": "4766d267a90938e984cb8fd78983dcabf92dd01efc4bb3f1c44d9ae879a83cd8",
+          "future_label_poisoning_full_training_exact": true,
+          "real_fixture_gain_and_selected_features_exact_after_poisoning": true,
+          "fixture_rows": 36000,
+          "fixture_training_rounds": 12,
+          "label_availability_before_validation": true,
+          "rank_reload_4096_exact": true,
+          "all_prediction_label_and_50day_prefix_invariance": true
+        },
+        "kept_features": [
+          "KLEN",
+          "KMID2",
+          "KUP2",
+          "KLOW",
+          "KLOW2",
+          "KSFT",
+          "KSFT2",
+          "HIGH0",
+          "LOW0",
+          "ROC5",
+          "MA5",
+          "STD5",
+          "VSTD5",
+          "ROC10",
+          "MA10",
+          "STD10",
+          "VMA10",
+          "MA20",
+          "STD20",
+          "VMA20",
+          "MA60",
+          "STD60",
+          "VMA60",
+          "RET1",
+          "RET2",
+          "RET3",
+          "AMT_RATIO20",
+          "VOL_RATIO20",
+          "VOL_RATIO60",
+          "LOG_AMOUNT",
+          "PRICE_TO_20D_HIGH",
+          "PRICE_TO_60D_HIGH",
+          "ILLIQ",
+          "UP_COUNT20",
+          "RVOL5",
+          "flag_limit_up",
+          "flag_limit_down",
+          "CS_RET1",
+          "CS_RET5",
+          "CS_RET20",
+          "CS_KLEN",
+          "CS_LOG_AMOUNT",
+          "CS_RVOL20"
+        ]
+      },
+      {
+        "year": 2021,
+        "original_raw_bit_identical": true,
+        "fold_local_feature_selector": "experiments/extended_audit_eval/models/fold_2021.txt",
+        "selector_sha256": "c299e776c2979af302491095ca7977cf9db83cdd19e1a5df49efb79cdb184160",
+        "pruned_model_sha256": "a84e9090ae8a094f26dce283c47e9dae2a8d0771c439b1a20aa827ce4ab593ef",
+        "training_boundaries": {
+          "validation_first": 20210104,
+          "one_day_cutoff_exclusive": 20201231,
+          "one_day_last": 20201230,
+          "one_day_label_available": 20201231,
+          "two_day_cutoff_exclusive": 20201229,
+          "two_day_last": 20201228,
+          "two_day_label_available": 20201230,
+          "one_day_purged_dates": [
+            20201231
+          ],
+          "two_day_purged_dates": [
+            20201229,
+            20201230,
+            20201231
+          ]
+        },
+        "inherited_future_label_poisoning_checks": {
+          "all_training_rows": 2594048,
+          "full_training_keys_labels_sha256": "e8d15cfaaca0b53b4effedd9d38cbda14221363ad13a8d87c424716d44e85e9d",
+          "future_label_poisoning_full_training_exact": true,
+          "real_fixture_gain_and_selected_features_exact_after_poisoning": true,
+          "fixture_rows": 36000,
+          "fixture_training_rounds": 12,
+          "label_availability_before_validation": true,
+          "rank_reload_4096_exact": true,
+          "all_prediction_label_and_50day_prefix_invariance": true
+        },
+        "kept_features": [
+          "KLEN",
+          "KMID2",
+          "KUP2",
+          "KLOW",
+          "KLOW2",
+          "KSFT",
+          "KSFT2",
+          "HIGH0",
+          "LOW0",
+          "MA5",
+          "VSTD5",
+          "ROC10",
+          "MA10",
+          "STD10",
+          "VMA10",
+          "MA20",
+          "STD20",
+          "VMA20",
+          "MA60",
+          "STD60",
+          "VMA60",
+          "RET1",
+          "RET2",
+          "RET3",
+          "AMT_RATIO5",
+          "AMT_RATIO20",
+          "VOL_RATIO20",
+          "VOL_RATIO60",
+          "LOG_AMOUNT",
+          "LOG_VOL",
+          "PRICE_TO_20D_HIGH",
+          "PRICE_TO_60D_HIGH",
+          "ILLIQ",
+          "UP_COUNT20",
+          "RVOL5",
+          "flag_limit_up",
+          "flag_limit_down",
+          "CS_RET1",
+          "CS_RET5",
+          "CS_RET20",
+          "CS_KLEN",
+          "CS_LOG_AMOUNT",
+          "CS_RVOL20"
+        ]
+      },
+      {
+        "year": 2022,
+        "original_raw_bit_identical": true,
+        "fold_local_feature_selector": "models/fold_2022.txt",
+        "selector_sha256": "aa3f4da23f74b2387c4c2c975f166b69405ece7d89218446cf4d2d0bfc3f6449",
+        "pruned_model_sha256": "ed5c0c55d9c49c2c40b2affb7bc1d9e0674d02fc442567adfe992001766b7378",
+        "training_boundaries": {
+          "validation_first": 20220104,
+          "one_day_cutoff_exclusive": 20211231,
+          "one_day_last": 20211230,
+          "one_day_label_available": 20211231,
+          "two_day_cutoff_exclusive": 20211229,
+          "two_day_last": 20211228,
+          "two_day_label_available": 20211230,
+          "one_day_purged_dates": [
+            20211231
+          ],
+          "two_day_purged_dates": [
+            20211229,
+            20211230,
+            20211231
+          ]
+        },
+        "inherited_future_label_poisoning_checks": {
+          "all_training_rows": 3568878,
+          "full_training_keys_labels_sha256": "5f3c8d7e85e96032b00ff1e0bdeffcec1879eca0d59cee1527bcc6fc856b15d3",
+          "future_label_poisoning_full_training_exact": true,
+          "real_fixture_gain_and_selected_features_exact_after_poisoning": true,
+          "fixture_rows": 36000,
+          "fixture_training_rounds": 12,
+          "label_availability_before_validation": true,
+          "rank_reload_4096_exact": true,
+          "all_prediction_label_and_50day_prefix_invariance": true,
+          "baseline_frozen_score_exact": true,
+          "old_ensemble_frozen_score_exact": true
+        },
+        "kept_features": [
+          "KMID",
+          "KLEN",
+          "KMID2",
+          "KUP2",
+          "KLOW",
+          "KLOW2",
+          "KSFT",
+          "KSFT2",
+          "HIGH0",
+          "LOW0",
+          "ROC5",
+          "MA5",
+          "STD5",
+          "VSTD5",
+          "ROC10",
+          "MA10",
+          "STD10",
+          "VMA10",
+          "MA20",
+          "STD20",
+          "VMA20",
+          "MA60",
+          "STD60",
+          "VMA60",
+          "RET1",
+          "RET2",
+          "RET3",
+          "VOL_RATIO20",
+          "VOL_RATIO60",
+          "LOG_AMOUNT",
+          "LOG_VOL",
+          "PRICE_TO_20D_HIGH",
+          "PRICE_TO_60D_HIGH",
+          "ILLIQ",
+          "UP_COUNT20",
+          "flag_limit_up",
+          "flag_limit_down",
+          "CS_RET1",
+          "CS_RET5",
+          "CS_RET20",
+          "CS_KLEN",
+          "CS_LOG_AMOUNT",
+          "CS_RVOL20"
+        ]
+      },
+      {
+        "year": 2023,
+        "original_raw_bit_identical": true,
+        "fold_local_feature_selector": "models/fold_2023.txt",
+        "selector_sha256": "89048a7103cd61028ce30af88d2a72ad0ca345c51c612c3b16cb7d831ec4c15f",
+        "pruned_model_sha256": "ef032ef3205dbc47c7917e5085d765d709e6cef14dab779abed0b7db73531f01",
+        "training_boundaries": {
+          "validation_first": 20230103,
+          "one_day_cutoff_exclusive": 20221230,
+          "one_day_last": 20221229,
+          "one_day_label_available": 20221230,
+          "two_day_cutoff_exclusive": 20221228,
+          "two_day_last": 20221227,
+          "two_day_label_available": 20221229,
+          "one_day_purged_dates": [
+            20221230
+          ],
+          "two_day_purged_dates": [
+            20221228,
+            20221229,
+            20221230
+          ]
+        },
+        "inherited_future_label_poisoning_checks": {
+          "all_training_rows": 4597785,
+          "full_training_keys_labels_sha256": "7828899b51f37aec097ee8b9fc1f0cb4776d5a3989a8cae115590d03b8450876",
+          "future_label_poisoning_full_training_exact": true,
+          "real_fixture_gain_and_selected_features_exact_after_poisoning": true,
+          "fixture_rows": 36000,
+          "fixture_training_rounds": 12,
+          "label_availability_before_validation": true,
+          "rank_reload_4096_exact": true,
+          "all_prediction_label_and_50day_prefix_invariance": true,
+          "baseline_frozen_score_exact": true,
+          "old_ensemble_frozen_score_exact": true
+        },
+        "kept_features": [
+          "KLEN",
+          "KMID2",
+          "KUP2",
+          "KLOW",
+          "KLOW2",
+          "KSFT",
+          "KSFT2",
+          "HIGH0",
+          "LOW0",
+          "ROC5",
+          "MA5",
+          "STD5",
+          "VSTD5",
+          "MA10",
+          "STD10",
+          "VMA10",
+          "MA20",
+          "STD20",
+          "VMA20",
+          "MA60",
+          "STD60",
+          "VMA60",
+          "RET1",
+          "RET2",
+          "RET3",
+          "RET20",
+          "AMT_RATIO20",
+          "VOL_RATIO20",
+          "VOL_RATIO60",
+          "LOG_AMOUNT",
+          "LOG_VOL",
+          "PRICE_TO_20D_HIGH",
+          "PRICE_TO_60D_HIGH",
+          "ILLIQ",
+          "UP_COUNT20",
+          "flag_limit_up",
+          "flag_limit_down",
+          "CS_RET1",
+          "CS_RET5",
+          "CS_RET20",
+          "CS_KLEN",
+          "CS_LOG_AMOUNT",
+          "CS_RVOL20"
+        ]
+      },
+      {
+        "year": 2024,
+        "original_raw_bit_identical": true,
+        "fold_local_feature_selector": "models/fold_2024.txt",
+        "selector_sha256": "0a73a465c081d23e4d783eb50b7582e08069dfb9dc2de7798e31f28a6111ad93",
+        "pruned_model_sha256": "d59b0deeddfe24cb3490abe36c77247917fe9867d793acc5b9e301f804b38a5a",
+        "training_boundaries": {
+          "validation_first": 20240102,
+          "one_day_cutoff_exclusive": 20231229,
+          "one_day_last": 20231228,
+          "one_day_label_available": 20231229,
+          "two_day_cutoff_exclusive": 20231227,
+          "two_day_last": 20231226,
+          "two_day_label_available": 20231228,
+          "one_day_purged_dates": [
+            20231229
+          ],
+          "two_day_purged_dates": [
+            20231227,
+            20231228,
+            20231229
+          ]
+        },
+        "inherited_future_label_poisoning_checks": {
+          "all_training_rows": 5659954,
+          "full_training_keys_labels_sha256": "85fe26ec72f0f3f18addd4ee06332743e50c22614a6209a4b7c3f29875266e00",
+          "future_label_poisoning_full_training_exact": true,
+          "real_fixture_gain_and_selected_features_exact_after_poisoning": true,
+          "fixture_rows": 36000,
+          "fixture_training_rounds": 12,
+          "label_availability_before_validation": true,
+          "rank_reload_4096_exact": true,
+          "all_prediction_label_and_50day_prefix_invariance": true,
+          "baseline_frozen_score_exact": true,
+          "old_ensemble_frozen_score_exact": true
+        },
+        "kept_features": [
+          "KLEN",
+          "KMID2",
+          "KUP2",
+          "KLOW",
+          "KLOW2",
+          "KSFT",
+          "KSFT2",
+          "HIGH0",
+          "LOW0",
+          "ROC5",
+          "MA5",
+          "STD5",
+          "VSTD5",
+          "MA10",
+          "STD10",
+          "VMA10",
+          "MA20",
+          "STD20",
+          "VMA20",
+          "ROC60",
+          "MA60",
+          "VMA60",
+          "RET1",
+          "RET2",
+          "RET3",
+          "RET5",
+          "RET20",
+          "AMT_RATIO5",
+          "AMT_RATIO20",
+          "VOL_RATIO60",
+          "LOG_AMOUNT",
+          "PRICE_TO_20D_HIGH",
+          "PRICE_TO_60D_HIGH",
+          "ILLIQ",
+          "UP_COUNT20",
+          "flag_limit_up",
+          "flag_limit_down",
+          "CS_RET1",
+          "CS_RET5",
+          "CS_RET20",
+          "CS_KLEN",
+          "CS_LOG_AMOUNT",
+          "CS_RVOL20"
+        ]
+      }
+    ],
+    "test_data_read": false,
+    "new_model_training": false,
+    "output_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r7\\rankers\\five_fold_local.npy": "badc32318cc6062539dbc2c8b50fc073b59ed9c83cc79c2dd79881aa5c1ff979",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r7\\rankers\\four_fold_local.npy": "cdda02f59dded35471fb109a301f136a220acdc5ac70818046c59083c23d7634",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r7\\rankers\\five_half_gru.npy": "0c8681d92436bc1ffb0c986537b8be56307b54f586d2c20a24e9795e22004181",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r7\\rankers\\four_no_pruning.npy": "de0454c4a1232d340978609fea55597a33a601c86f2992cda56c62223375b0d5",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r7\\promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706"
+    }
+  },
+  "metric_change_vs_repaired_baseline": {
+    "ic_mean": 0.00070423186222561,
+    "annual_excess": 0.00235768054576857,
+    "mean_turnover": -6.488610952322393e-06
+  },
+  "score_contributions_vs_repaired_baseline": {
+    "RankIC": 0.000281692744890244,
+    "annual_excess": 0.0007073041637305711,
+    "turnover": 1.946583285696718e-06
+  },
+  "validation": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.11909120977630876,
+      "ic_std": 0.11166119205057111,
+      "icir": 1.0665407344242985,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.36570200165782246,
+      "top1_annual_ret": 0.3911957557180799,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4477441201313571
+    },
+    "rows": 5635800,
+    "days": 1212,
+    "fold_calibration_boundaries": {
+      "2020": {
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "validation_first_date": 20200102,
+        "method": "first-fold distribution-based affine fallback from pre2020 training labels; not fitted conditional mean",
+        "ranks_identical": true
+      },
+      "2021": {
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "validation_first_date": 20210104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2022": {
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "validation_first_date": 20220104,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2023": {
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "validation_first_date": 20230103,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      },
+      "2024": {
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "validation_first_date": 20240102,
+        "method": "isotonic trained only on earlier OOF folds and mature labels",
+        "ranks_identical": true
+      }
+    },
+    "year_boundary_turnover_included": true,
+    "test_labels_read": false,
+    "future_append_prefix_invariance": [
+      {
+        "through_date": 20200506,
+        "days": 80,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20210126,
+        "days": 260,
+        "bit_identical": true
+      },
+      {
+        "through_date": 20240108,
+        "days": 975,
+        "bit_identical": true
+      }
+    ],
+    "new_model_training_boundary_proofs": [
+      {
+        "year": 2020,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20191230,
+        "exclusive_cutoff": 20191231
+      },
+      {
+        "year": 2021,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20201230,
+        "exclusive_cutoff": 20201231
+      },
+      {
+        "year": 2022,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20211230,
+        "exclusive_cutoff": 20211231
+      },
+      {
+        "year": 2023,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20221229,
+        "exclusive_cutoff": 20221230
+      },
+      {
+        "year": 2024,
+        "seed": 2026,
+        "same_training_keys_and_labels": true,
+        "last_label_date": 20231228,
+        "exclusive_cutoff": 20231229
+      }
+    ],
+    "csv_sha256": "d03601f8b30601e0e2c3c04b67579a6aa6e4b6b696bf71dc0636ee9b794ceff1",
+    "final_map_sha256": "8219f2f10d41b6a92c2c481e27477fa1cd5d7223bbac03b36d83f432379cf908"
+  },
+  "calibrated_written_csv": {
+    "status": "passed",
+    "metrics": {
+      "ic_mean": 0.11909120977630876,
+      "ic_std": 0.11166119205057111,
+      "icir": 1.0665407344242985,
+      "ic_positive_ratio": 0.8853135313531353,
+      "annual_excess": 0.36570200165782246,
+      "top1_annual_ret": 0.3911957557180799,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4477441201313571
+    },
+    "csv_sha256": "d03601f8b30601e0e2c3c04b67579a6aa6e4b6b696bf71dc0636ee9b794ceff1",
+    "test_labels_read": false
+  },
+  "prediction": {
+    "status": "passed",
+    "csv_sha256": "c7c450a7919be5b5738b1a2336fb85d6c8e490f3a87d8c68ea70f470f482dfb1",
+    "rows": 1599600,
+    "days": 344,
+    "codes": 4650,
+    "models": {
+      "seed2026_f0.175_r90": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r7\\model_seed2026_f0.175_r90.txt",
+        "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r90.txt",
+          "sha256": "efc6dbb8440db66d369ba1a04d8d69a69e50cd411e45fc6a4f23ee96fba4ca2b",
+          "rounds": 90,
+          "provenance": {
+            "method": "reuse independently verified full-training tree prefix",
+            "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+            "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+            "prefix90_matches_separately_trained90_bit_identically": true
+          }
+        },
+        "weight": 0.25
+      },
+      "seed2026_f0.175_r180": {
+        "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r7\\model_seed2026_f0.175_r180.txt",
+        "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+        "original": {
+          "path": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r6\\model_seed2026_f0.175_r180.txt",
+          "sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+          "rounds": 180,
+          "provenance": {
+            "method": "reuse independently verified full-training tree prefix",
+            "source_model": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003\\topk0175_fulltrain.txt",
+            "source_sha256": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+            "prefix90_matches_separately_trained90_bit_identically": true
+          }
+        },
+        "weight": 0.75
+      }
+    },
+    "model_reload_bit_identical": true,
+    "pipeline_replay_bit_identical": true,
+    "csv_replay_byte_identical": true,
+    "csv_ranks_unchanged": true,
+    "validation_score": 0.4477441201313571,
+    "test_labels_read": false,
+    "fold_local_pruning_repaired": true,
+    "final_pruned_features_match_train_only_selector": true,
+    "source_predictions_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\pooled_rms25\\backbone_raw.parquet": "e7b47b9c5254527afff11ed2a0561b291ac05d283615c6a4a37bd6f17449cf45",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\T2f_xgboost_test_raw.parquet": "680b9f9c17a5e3d50fde8e8b6b74063c27db8b08d997834de1c7f75b9acd72e0",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2c_two_day_test_raw.parquet": "413bff6bbe8fd760190029271f929a20fb92e5762ae3d8ae083b3e3fa63c162e",
+      "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\ensemble4\\W2d_pruned_test_raw.parquet": "39cdc79a5fdac947f255da4075161e91c2fa9bee75092d2e821fe85ba058c3da",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\connected_validation_20261002\\w5a_test\\gru_raw_test.npy": "011b7f69f8d2a7d7784f82f8d40e276fc1d4668e398d14e19dbf0f5b2df88594"
+    },
+    "construction": {
+      "days": 344,
+      "m_frac": 0.9845,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 32,
+      "swaps": 6678,
+      "mean_retention_ratio": 0.9854738946820004
+    },
+    "old_delivery_pointer_unchanged": true
+  },
+  "candidate_submission": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r7\\submission.csv",
+  "test_labels_read_this_round": false,
+  "test_score_of_this_candidate": null,
+  "old_deliveries_preserved": true,
+  "all_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true,
+  "block_prefix_controls": {
+    "status": "passed",
+    "test_data_read": false,
+    "future_append_controls": [
+      {
+        "membership_mode": "block",
+        "membership_weight": 0.025,
+        "through_date": 20200506,
+        "days": 80,
+        "bit_identical": true
+      },
+      {
+        "membership_mode": "block",
+        "membership_weight": 0.025,
+        "through_date": 20210126,
+        "days": 260,
+        "bit_identical": true
+      }
+    ]
+  },
+  "repair_amendment": {
+    "recorded_at_local": "2026-10-03T14:13:40",
+    "reason": "Original-control dict pop appended old_pruned after GRU, changing floating reduction order by at most2.22e-16; the bit-identity assertion fired before any scoring.",
+    "correction": "Original-control order is lgb,xgb,two,old_pruned,gru, matching frozen W5a. Corrected candidate definitions and their reduction order are unchanged.",
+    "prior_scored_records": 0,
+    "prior_protocol_preserved": true,
+    "test_labels_read": false,
+    "source_sha256": {
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimize_training_round7_v2.py": "85fa8c8a1701a16c8231c1edd073ca71ca9c7d967ad89d8be2bfa43015da5439",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimize_training_round7.py": "aff2257caa9f64a0eaa5707d6cc7e836c3e030b5caabd0fd6819dd1159f3fde2",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\finalize_training_round7.py": "068df3a414e4b1a2657a7faa5d3948eb37179c1772a78fef3cf623b211c9a75f"
+    }
+  },
+  "followup_directions": [
+    "Re-optimize checkpoint mixture and TopK finishing on the pruning-free orderer.",
+    "Test member weights inside the pruning-free tree/GRU ensemble.",
+    "Re-evaluate drop/add retention scores against the repaired complete pipeline."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-03T17:16:48",
+  "winner": {
+    "wave": 76,
+    "arm": "limit_shift0.095",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.24,
+    "slow16_weight": 0.2,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "top",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.095,
+    "donor": "baseline",
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.449041870533273,
+    "metrics": {
+      "ic_mean": 0.12008015155444325,
+      "ic_std": 0.11160886273079383,
+      "icir": 1.0759015782114238,
+      "ic_positive_ratio": 0.8836633663366337,
+      "annual_excess": 0.3687461247943105,
+      "top1_annual_ret": 0.39423987885456796,
+      "mean_turnover": 0.03204675842265826,
+      "final_score": 0.449041870533273
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.984,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 188,
+      "swaps": 94648,
+      "mean_retention_ratio": 0.9836941781305582
+    }
+  },
+  "scored_records": 75,
+  "baseline_score": 0.44882887216021156,
+  "score_gain": 0.00021299837306143488,
+  "pruned_member_excluded": true,
+  "fold_local_pruning_repaired": true,
+  "test_labels_read": false,
+  "selection_rule": "highest official connected composite; exact ties prefer simpler priorities and membership fusion",
+  "frozen_sha256": {
+    "analysis/finalize_training_round11.py": "d7649beb52c96ba985bc50f5c8c0c2021ec8d10bda01fab3313fa7461b1de130",
+    "analysis/optimization_20261003_r11/protocol.json": "61d50be0d5a2d28befd14f35ee8da56d4f52749500fa5533df5262b7cc9ea6d4",
+    "analysis/optimization_20261003_r11/component_audit.json": "a2be69fa1fa9a1b054130e19ecc7de5deca2e5bf308f23623308efe1c9a177ce",
+    "analysis/optimization_20261003_r11/role_joint_protocol.json": "4fb0a0fcd729480379b688df50ddcb5ceede3d94995bb9f1d285fd717b68efbf",
+    "analysis/optimization_20261003_r11/combination_protocol.json": "9c3dc0cf6baac519944836c96380632294cab63ca341ce52126db4206fdd59be",
+    "analysis/optimization_20261003_r11/refinement_protocol.json": "edcd0f1ec0d6cda87b944d7d12c80e780e130a764353918cf0199074138573b1",
+    "analysis/optimization_20261003_r11/wave71_results.json": "8d8a10b7d3678409d95c0146d04e3799ae050e1002b377efd55ab89758675f74",
+    "analysis/optimization_20261003_r11/wave72_results.json": "f76ec66e2eed6bf2820d7bc4bbc6c598a56fe1562b1f18c3084ce656ead591c3",
+    "analysis/optimization_20261003_r11/wave73_results.json": "26361d3297c9faec79d6390257ee2d15a2b3dfead26890904cc9da78ff3b8dd3",
+    "analysis/optimization_20261003_r11/wave74_results.json": "e06e68ad15b21f3eddf9379db91f3b7b04052cde5fad7979990b4440ed5a040b",
+    "analysis/optimization_20261003_r11/wave75_results.json": "e782f8b07c2d1aa3cd4f8be9ab717d98df4e16f4f13ac034e4e7a0c5ac388279",
+    "analysis/optimization_20261003_r11/wave76_results.json": "171ac2a11f89e1d8f42266f02c12db3a50a02ac16e0ac7707e7d87ea686a0442",
+    "analysis/optimization_20261003_r11/selected_validation.npy": "dcac552fc7fa5fb652a558eef79d0d86976db113b1de922178e28b9efd7c97d2",
+    "analysis/optimization_20261003_r11/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "analysis/optimization_20261003_r11/rankers/lgb1_xgb1_two1_gru2.25.npy": "47255cfa28dd9771447c495abb4124a9127b7b73e0add4e37f2ee78da02b573e",
+    "analysis/optimization_20261003_r11/rankers/lgb1_xgb1_two0_gru1.npy": "f34d3ff5069934945d3afb6320af5ab5adfcdb3f6814a19990a9068c941587cf",
+    "analysis/optimization_20261003_r10/selection.json": "de65390cb74acc92036dec7e99cd25926d42c5643828e44b35a066271d474051",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "candidates/optimization_20261003_r10/verification.json": "8f965052a8e8129b225c31d2620137c164e0a1ffce945c9ccf52decb21825700"
+  }
+}

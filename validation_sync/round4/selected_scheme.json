@@ -1,0 +1,128 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-03T10:58:18",
+  "winner": {
+    "wave": 52,
+    "arm": "limit_shift0.1",
+    "donor": "baseline",
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "slow16_weight": 0.24,
+    "retention": 0.9845,
+    "limit_up_delta": 0.1,
+    "connected_final_score": 0.4473424071299967,
+    "metrics": {
+      "ic_mean": 0.11852732090572368,
+      "ic_std": 0.11132873951283559,
+      "icir": 1.0646605847186308,
+      "ic_positive_ratio": 0.8844884488448845,
+      "annual_excess": 0.365114810147401,
+      "top1_annual_ret": 0.3906085642076585,
+      "mean_turnover": 0.032009880921710185,
+      "final_score": 0.4473424071299967
+    },
+    "construction": {
+      "days": 1212,
+      "m_frac": 0.9845,
+      "retention": null,
+      "boundary_tie_days": 0,
+      "eligibility_limited_days": 181,
+      "swaps": 95833,
+      "mean_retention_ratio": 0.9837144494647172
+    }
+  },
+  "baseline_score": 0.4472529347775648,
+  "score_gain": 8.947235243189633e-05,
+  "scored_records": 45,
+  "selection_rule": "highest connected2020-2024 official composite; exact ties prefer fewer models and fewer trees",
+  "test_labels_read": false,
+  "frozen_sha256": {
+    "analysis/finalize_training_round4.py": "bbdb4d1216727772c81749b3ba51469a6eea2f46cc41c6a18c063d1c78ed2ca0",
+    "analysis/finalize_optimization.py": "3565a2be5251c0a35ec4ad2b68dc7d1c6f73b01b71599e3b2a78553b8f4d6f80",
+    "analysis/optimization_20261003_r4/protocol.json": "da796a21b4a6a33fc3bd6150730feedaa755c53465b651392617472caa93e1f3",
+    "analysis/optimization_20261003_r4/fine_mix_protocol.json": "749ab904969c0e9acb996d602977dbd0f23a8efb55a192be738384e463ec40f8",
+    "analysis/optimization_20261003_r4/smoothing_protocol.json": "fd4801187ae4d5d0b42af12d2ef1d1e6c18b244299cfc3ca9e52c34e0230c2fe",
+    "analysis/optimization_20261003_r4/refinement_protocol.json": "574fb3c76d4f322528f21d10526c11a5501740f5d64f65ee25bc8d7af1555d07",
+    "analysis/optimization_20261003_r4/wave50_results.json": "2d16ebd8e2926138af59c072c1ccf4158f96ebd4afcbe8a6f43fe5be59b8287d",
+    "analysis/optimization_20261003_r4/wave51_results.json": "d87cdca2273a43940b09cc370c07aa448bdf8630f5cbec381131c018919ea445",
+    "analysis/optimization_20261003_r4/wave52_results.json": "1c0c87322aada27704b5cb5cab04bd17f2ea5c7ee1cc641ed65374e017bcf22b",
+    "analysis/optimization_20261003_r4/selected_validation.npy": "a800d08b6afa7f2af4de890d59de4479f183b371cd279634866ab653122431ba",
+    "analysis/optimization_20261003_r4/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "deliveries/connected_topk0175_20261003/train_test.json": "d7a3f891f2e7f99ca14cd8fc95fb3b54a2ad137ca1fa4c5ae7638a12a313f700",
+    "deliveries/connected_topk0175_20261003/topk0175_fulltrain.txt": "1d31acc0dd6b422c3d0f1f346b1112757b6b0a6b67550f394f6f2f96ffa90f4b",
+    "candidates/optimization_20261003_r2/model_selected.txt": "0b43dc5d6091750f9e1c04b13f18d6d8f0f18e64b4f154d0d844f7d4c36e659e",
+    "candidates/optimization_20261003_r2/model_selected.json": "746e1376ad831e5c1e9b73e54c3a381fa8fbf2c7ebdb7feb18820e9d090879c0",
+    "analysis/optimization_20261003_r4/raw/source_r105_2020.json": "4bbe5506ab669a66506f4d4f1f00474cd72c8278a7187482103e82dbd529afce",
+    "analysis/optimization_20261003_r4/raw/source_r105_2021.json": "ce4d33b023be65bbe7bdfe342ee398568e9e3a0548a4a0d7a12522bb5a6cf06b",
+    "analysis/optimization_20261003_r4/raw/source_r105_2022.json": "03eecb60dfa03bfe5d73210165a25e438ae57e922f6ba3bcfdd38483303bbba3",
+    "analysis/optimization_20261003_r4/raw/source_r105_2023.json": "e147b5fa3e0de29328516b7bf3c14b966283df023b098761ee96274feae037e2",
+    "analysis/optimization_20261003_r4/raw/source_r105_2024.json": "dcc5bff60aa6db3fbe1e70ee8fe5911a5ccd8acb887cddbb954b1ad788da5481",
+    "analysis/optimization_20261003_r4/raw/source_r120_2020.json": "8cce4329fa33b5bb04f6dee309daf3c7de8b362fc6258efa6ac9ecb84849dbbb",
+    "analysis/optimization_20261003_r4/raw/source_r120_2021.json": "1888e36134da62900c49cd86c597f444914b16daf053fcd6420c2d5f3bd45c7b",
+    "analysis/optimization_20261003_r4/raw/source_r120_2022.json": "7244be97ad6afce248f74ce7d6258e4047bf5564c7308ab65c11eb00720c2d7c",
+    "analysis/optimization_20261003_r4/raw/source_r120_2023.json": "34ec661980ab1c3f96d3b77c3e57e45571ba4c7acc7a3a40696ffed664ba7731",
+    "analysis/optimization_20261003_r4/raw/source_r120_2024.json": "f5e8a63f589a0a7cc6b135bd0f6bf259d687785c7f7fd14ac5f22ba87d085db0",
+    "analysis/optimization_20261003_r4/raw/source_r180_2020.json": "ef5f178c22f5ac160ba21451c8029ef619623bc0e60b263d0450fe1e114c9ac4",
+    "analysis/optimization_20261003_r4/raw/source_r180_2021.json": "305eb7f0dcfaaf763180ca83b936529873b1a2ee89654404acdca84033b0a136",
+    "analysis/optimization_20261003_r4/raw/source_r180_2022.json": "d17d201812062f97c44a2d0bf9af74902df7e167a6c5294f7f2c939e6acf61e3",
+    "analysis/optimization_20261003_r4/raw/source_r180_2023.json": "9c8f336586b1f8dd37b381fb9bd3971950d4ca4d263a2f97dc61836914a04556",
+    "analysis/optimization_20261003_r4/raw/source_r180_2024.json": "aeb50402bbcabbf6115ea98f99dd30a38e3d8a52b16d7deb339d42a32be74204",
+    "analysis/optimization_20261003_r4/raw/source_r270_2020.json": "5e741ca16eb3ffe8af682ee1c43a6474be2155ecccfb8d6166f930e0071fc794",
+    "analysis/optimization_20261003_r4/raw/source_r270_2021.json": "311287dbf5c87ca5b7d85a0605b7284bae7f78f091ed6b0c3af0e866541aca6a",
+    "analysis/optimization_20261003_r4/raw/source_r270_2022.json": "9214a969237de55c8c837108e82bcf49c406c74b6dad97a332544fb6160f640b",
+    "analysis/optimization_20261003_r4/raw/source_r270_2023.json": "625a0acd2fb2e4302997bcfd6484a95bf2c7ee82c482f70bdaedd386b49af9c4",
+    "analysis/optimization_20261003_r4/raw/source_r270_2024.json": "c687c18023cf92b1f3f4354ed717b6e123bcc24644b4fcf9941833e222145498",
+    "analysis/optimization_20261003_r4/raw/source_r90_2020.json": "a39f9edccdb1ee6ac2095d77df09a3a23217b2bb46bba5ec0fc2cafcfdc3dc34",
+    "analysis/optimization_20261003_r4/raw/source_r90_2021.json": "cdc6cb9dd422fe5426d284d2c1eacf808d31cfc8418f81e3fe156f0078d14513",
+    "analysis/optimization_20261003_r4/raw/source_r90_2022.json": "1f6ddd26767087aa221fff2d30fcec3a72005a2baa07f0a14484941e1283d68e",
+    "analysis/optimization_20261003_r4/raw/source_r90_2023.json": "19a149019f535b35296a46b65e4605666021069578e2e1d953da1c9d71798a30",
+    "analysis/optimization_20261003_r4/raw/source_r90_2024.json": "1b29732bf8ccfe84d63be4c07322d72dd76a4f3e1e2acde4e8097a750b09b2cc"
+  }
+}

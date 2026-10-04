@@ -1,0 +1,979 @@
+{
+  "round": 58,
+  "recorded_status": "complete",
+  "archival_qualification": "complete_declared_round",
+  "metrics": {
+    "ic_mean": 0.12189689111564944,
+    "ic_std": 0.10933322634410834,
+    "icir": 1.1149116804803603,
+    "ic_positive_ratio": 0.8952145214521452,
+    "annual_excess": 0.37300598389605344,
+    "top1_annual_ret": 0.3984997379563108,
+    "mean_turnover": 0.032304884612709174,
+    "final_score": 0.450969086231263
+  },
+  "scored_configurations_in_selection": 98,
+  "score_gain": 0.0,
+  "scientific_complete_evidence": {
+    "round": 58,
+    "status": "complete_declared_round",
+    "score": 0.450969086231263,
+    "scored_records": 98,
+    "candidate_csv_sha256": "57f62e3fc63c3c8ed8c90d11ac7ecdf8b18b708ea3f7f3e13d338d2c519b3a14",
+    "source_sha256": {
+      "results\\optimization_20261003_r58.json": "a54465f8168f52f55c91b07fee65f375e6bf176dd7cda57f87f07bf124261088",
+      "candidates\\optimization_20261003_r58\\verification.json": "c05cec67c7bd2f1c5a2574d4ab3844f81072c7cfd6461563746236b0fb6d7983",
+      "analysis\\optimization_20261003_r58\\calibrated_csv_official.json": "fbbe4ac8f1c20523af534e285ca6dd3bc89dd0e7c510bdffe4691a38c062dae2",
+      "analysis\\optimization_20261003_r58\\provenance_scope_execution.json": "1c059684f8d98ea8c8862bf4f0c2775e9cee238888f9f6921fc969f0e89ce4e0"
+    }
+  },
+  "source_files": [
+    {
+      "source": "analysis/optimization_20261003_r58/baseline_future_control/frozen_before_model_inference.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\baseline_future_control\\frozen_before_model_inference.json",
+      "bytes": 20173,
+      "sha256": "c7848c3df36a82f3f6a0b36b24bdb0382aa6353dd3d0fa048620f4d18a5f8291",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/baseline_future_control/frozen_before_model_inference.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/baseline_future_control/market_regime_mapping.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\baseline_future_control\\market_regime_mapping.json",
+      "bytes": 905,
+      "sha256": "ab28b919332d1c019b99512fa2da7f8d79f644558d0ca2c1006482a1b3d372de",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/baseline_future_control/market_regime_mapping.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/baseline_future_control/return_mapping.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\baseline_future_control\\return_mapping.json",
+      "bytes": 116363,
+      "sha256": "7a70368908afc6fb0326d310222de73e733bc7badd08c0861f81acaf76d013aa",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/baseline_future_control/return_mapping.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/baseline_future_control/selection.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\baseline_future_control\\selection.json",
+      "bytes": 173403,
+      "sha256": "d375d7588c4d85950ec30e907d0e4a843c760ccc51fa2a919b55f7089a08efbf",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/baseline_future_control/selection.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/baseline_future_control/verification.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\baseline_future_control\\verification.json",
+      "bytes": 95147,
+      "sha256": "d3e484c69fc9573e8df4583de9bd559883bba14146cdce350099f2eeed70b890",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/baseline_future_control/verification.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/calibrated_csv_official.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\calibrated_csv_official.json",
+      "bytes": 486,
+      "sha256": "fbbe4ac8f1c20523af534e285ca6dd3bc89dd0e7c510bdffe4691a38c062dae2",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/calibrated_csv_official.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/causal_mapping_2020.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\causal_mapping_2020.json",
+      "bytes": 187,
+      "sha256": "737616d0d4b7ab024d3760ab23bea23dedb9a8f05fb358d75b4dabb72d4f8d74",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/causal_mapping_2020.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/causal_mapping_2021.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\causal_mapping_2021.json",
+      "bytes": 113856,
+      "sha256": "1d44adca9fd6d441bffaa2103885648a50943603423359c01d96dc5a1f7fb241",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/causal_mapping_2021.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/causal_mapping_2022.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\causal_mapping_2022.json",
+      "bytes": 114907,
+      "sha256": "ee51cacd483808685542efeea2087c133f9975a42c8a410cd8f08d919609dab3",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/causal_mapping_2022.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/causal_mapping_2023.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\causal_mapping_2023.json",
+      "bytes": 116092,
+      "sha256": "0909c0668e8654d8fdaf886dd1e7d457a75e7d214673ee75933a2c7fbe206649",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/causal_mapping_2023.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/causal_mapping_2024.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\causal_mapping_2024.json",
+      "bytes": 116696,
+      "sha256": "f38a84f3f03804932543cca5273c8d08477785b880174b07987a22b1d24eff7f",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/causal_mapping_2024.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/causal_validation.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\causal_validation.json",
+      "bytes": 2412,
+      "sha256": "8076ac87e7515cca01aa2d922fc89c805c1954c28fcd24057a040f4f3236212f",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/causal_validation.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/component_audit.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\component_audit.json",
+      "bytes": 3440,
+      "sha256": "af890163f3fe199861a237d8498527c136418c8af523e4314201a34bc6716c78",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/component_audit.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/future_return_mapping.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\future_return_mapping.json",
+      "bytes": 116363,
+      "sha256": "7a70368908afc6fb0326d310222de73e733bc7badd08c0861f81acaf76d013aa",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/future_return_mapping.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\identical_official_scores\\5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "bytes": 1261,
+      "sha256": "6884910e49efebbfb9ea93563618633efba10e9220a9e4d4a6aa0117490f6609",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/model_refinement_protocol.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\model_refinement_protocol.json",
+      "bytes": 696593,
+      "sha256": "cd83d4c8b62133fe200a8efdcd7d0d9331f35f1e047acc1d6ae9fd3028892205",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/model_refinement_protocol.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/model_retention_rank1024_drop000_seed07_e32_protocol.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\model_retention_rank1024_drop000_seed07_e32_protocol.json",
+      "bytes": 163357,
+      "sha256": "a1983870c3b600fe2486fdcd0bf2f97af5973826326975e54f32e928c2b94f29",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/model_retention_rank1024_drop000_seed07_e32_protocol.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/model_retention_rank2048_drop000_seed07_e32_protocol.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\model_retention_rank2048_drop000_seed07_e32_protocol.json",
+      "bytes": 163357,
+      "sha256": "d87919f774b7b4263a249bd2f67922f6189aca74d3a3295eb5407a08d33a2468",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/model_retention_rank2048_drop000_seed07_e32_protocol.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/model_retention_rank4096_drop000_seed07_e32_protocol.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\model_retention_rank4096_drop000_seed07_e32_protocol.json",
+      "bytes": 163357,
+      "sha256": "ead5ccb7a2e94c5abd067fdfd9c0ba5cf3843d3c277308538dd96a4290b394b1",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/model_retention_rank4096_drop000_seed07_e32_protocol.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/model_retention_rank8192_drop000_seed07_e32_protocol.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\model_retention_rank8192_drop000_seed07_e32_protocol.json",
+      "bytes": 163371,
+      "sha256": "71d384e9ec1008072398dd6e39463a60a8c19cfbfecc25305156d26266f05ccb",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/model_retention_rank8192_drop000_seed07_e32_protocol.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/neural_width_scheme_causal_checks.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\neural_width_scheme_causal_checks.json",
+      "bytes": 4010,
+      "sha256": "9dc08cbb300ff2f82554893ca170bcb32a6fe2ab7401a6fe0ded09d5f1e79de1",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/neural_width_scheme_causal_checks.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/05018b866cebe77b12b46238061ed03b0fd0d79aea1a9fe70bc3f4146f296625.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\05018b866cebe77b12b46238061ed03b0fd0d79aea1a9fe70bc3f4146f296625.json",
+      "bytes": 1261,
+      "sha256": "9cb967ac90a8a05a18323b78a61b5e93ea13a54ea6950f2840baa94293bc47a9",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/05018b866cebe77b12b46238061ed03b0fd0d79aea1a9fe70bc3f4146f296625.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/07091143be5fc8d9bc12e12712f58466a438890edc11ff3b66680e24f3ecd873.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\07091143be5fc8d9bc12e12712f58466a438890edc11ff3b66680e24f3ecd873.json",
+      "bytes": 1260,
+      "sha256": "d74607f8bfa9c80bb40b238fcf737a0e683b283fd6600604834f16d8ee1b8395",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/07091143be5fc8d9bc12e12712f58466a438890edc11ff3b66680e24f3ecd873.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/1a0158a7cddb137fb2c5721073e7f96eea52ab0e1f0cf58492ec177ced2fe6ae.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\1a0158a7cddb137fb2c5721073e7f96eea52ab0e1f0cf58492ec177ced2fe6ae.json",
+      "bytes": 1262,
+      "sha256": "edb58cd6eef8d48ec22678df715c1cd7d36da6d3a3ffe0a3d04a01edf4fb9156",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/1a0158a7cddb137fb2c5721073e7f96eea52ab0e1f0cf58492ec177ced2fe6ae.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/34390f9fab8c1f4fd22dbb053e796a602587af190658937d487ed5456ead38fb.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\34390f9fab8c1f4fd22dbb053e796a602587af190658937d487ed5456ead38fb.json",
+      "bytes": 1263,
+      "sha256": "7cf93c968b6348756d5b3f63489d3acf34b4f1c96343a23e6f61772500c9f5ab",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/34390f9fab8c1f4fd22dbb053e796a602587af190658937d487ed5456ead38fb.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/40be32f12ddc9f5c72c752433fd774d3115325f2478010a8b5be0b0f2b7bb55f.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\40be32f12ddc9f5c72c752433fd774d3115325f2478010a8b5be0b0f2b7bb55f.json",
+      "bytes": 1261,
+      "sha256": "9385d414e874a7e301b91a84f7dbafb8797ae35f27803d67cea6551ffe86f070",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/40be32f12ddc9f5c72c752433fd774d3115325f2478010a8b5be0b0f2b7bb55f.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/434495ff700de909b4cf4f62fef2e0f3f1dce3d2f2a8327946379a88673e577c.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\434495ff700de909b4cf4f62fef2e0f3f1dce3d2f2a8327946379a88673e577c.json",
+      "bytes": 1263,
+      "sha256": "ed6744a57c68b587270403ce5024edfd389daa61a1706dfb5075cf9b37809707",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/434495ff700de909b4cf4f62fef2e0f3f1dce3d2f2a8327946379a88673e577c.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/4e3b006c06b1c7644e7c83321a1722b816e8fe66a42479613ed05ce3cc640767.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\4e3b006c06b1c7644e7c83321a1722b816e8fe66a42479613ed05ce3cc640767.json",
+      "bytes": 1262,
+      "sha256": "22a868381257161b49fb194cb0793f66d11de792e688a599624d8d8748e3c8e6",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/4e3b006c06b1c7644e7c83321a1722b816e8fe66a42479613ed05ce3cc640767.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/5f3141f99959b2d312e3417acf8bdaf8aa930758eea283ed90b97824cc36226e.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\5f3141f99959b2d312e3417acf8bdaf8aa930758eea283ed90b97824cc36226e.json",
+      "bytes": 1262,
+      "sha256": "497a5723c38350918d8b0fa88b7c70543d81d889b124493f5216a11913f2ad60",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/5f3141f99959b2d312e3417acf8bdaf8aa930758eea283ed90b97824cc36226e.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "bytes": 1261,
+      "sha256": "6884910e49efebbfb9ea93563618633efba10e9220a9e4d4a6aa0117490f6609",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/63ce9eb80f282127a74a9128d05fb6e16bd47a9c8d972a06b325418164c4eba6.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\63ce9eb80f282127a74a9128d05fb6e16bd47a9c8d972a06b325418164c4eba6.json",
+      "bytes": 1263,
+      "sha256": "633f50e53d261be214c637705ee0c5d7d11aa6b4be459acf6becf4c135943c97",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/63ce9eb80f282127a74a9128d05fb6e16bd47a9c8d972a06b325418164c4eba6.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/77d99f83f0840633f4274aa715099cadaf1125a38d9f608fcf95e0331395197c.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\77d99f83f0840633f4274aa715099cadaf1125a38d9f608fcf95e0331395197c.json",
+      "bytes": 1261,
+      "sha256": "9fbae44a53fdb6758dc84bfd6d0c30823735f77755e906730ce0ecb8da235aa4",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/77d99f83f0840633f4274aa715099cadaf1125a38d9f608fcf95e0331395197c.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/7b34a48e3c49bcf3e2612e6dc6fe3a731de5b6c86f8f4407251a344f42038a6f.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\7b34a48e3c49bcf3e2612e6dc6fe3a731de5b6c86f8f4407251a344f42038a6f.json",
+      "bytes": 1258,
+      "sha256": "29d2c4915f517936f6a3e6c40cae7449a336284ed9c30c04262ef8f62ca87172",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/7b34a48e3c49bcf3e2612e6dc6fe3a731de5b6c86f8f4407251a344f42038a6f.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/851cac7cbb28a5418c2e75a17f9af25805cbf5a1d962192a9a1885a2586ecb2f.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\851cac7cbb28a5418c2e75a17f9af25805cbf5a1d962192a9a1885a2586ecb2f.json",
+      "bytes": 1262,
+      "sha256": "dfdfbb4d184c0e9a510a7e5011b03ae9f759fe3a07cb5eff8eecfeb3476adbee",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/851cac7cbb28a5418c2e75a17f9af25805cbf5a1d962192a9a1885a2586ecb2f.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/88fa0826120467be195b2455f04ebcf004a02daafa711169ffa710f0feee2de6.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\88fa0826120467be195b2455f04ebcf004a02daafa711169ffa710f0feee2de6.json",
+      "bytes": 1260,
+      "sha256": "ed9e9b11fe8e67bd2947cbd51efcecfa8ca445d95af6809f5602b15eb9221951",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/88fa0826120467be195b2455f04ebcf004a02daafa711169ffa710f0feee2de6.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/9cbe499d4d779fb90771e50901643c7e69a90dcade919c99ef0131687d407fcd.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\9cbe499d4d779fb90771e50901643c7e69a90dcade919c99ef0131687d407fcd.json",
+      "bytes": 1263,
+      "sha256": "6267c61f25e9c43b8ccf847660774c159776661c76ffc147309129faf116e231",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/9cbe499d4d779fb90771e50901643c7e69a90dcade919c99ef0131687d407fcd.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/a3961a8a4d0ce2d129ef7d700cfc0ff587350ac77969323fc00022413a3c6b66.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\a3961a8a4d0ce2d129ef7d700cfc0ff587350ac77969323fc00022413a3c6b66.json",
+      "bytes": 1262,
+      "sha256": "1fa89783fd8959734da3324ea82335dedd5fc6ce25481711dc2dc1d5b0c7441d",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/a3961a8a4d0ce2d129ef7d700cfc0ff587350ac77969323fc00022413a3c6b66.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/a73f152f02c624a713cebc1366da0936e6034ddff778fd14e46c6e5180b774fd.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\a73f152f02c624a713cebc1366da0936e6034ddff778fd14e46c6e5180b774fd.json",
+      "bytes": 1262,
+      "sha256": "eda41393ded9f9562734ec002a4d19c1ea6b6b5db5bf761140c56bf918f600de",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/a73f152f02c624a713cebc1366da0936e6034ddff778fd14e46c6e5180b774fd.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json",
+      "bytes": 1261,
+      "sha256": "139cbc8ed73d7eb8db02ddbeadf8d570433a034abcc4c531b1f9c1f497ad4ce0",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/b59d91f5cfbd13dd7d4d4c721f9724fd0dafb04cca68b13531d1e0c124206dc6.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\b59d91f5cfbd13dd7d4d4c721f9724fd0dafb04cca68b13531d1e0c124206dc6.json",
+      "bytes": 1259,
+      "sha256": "da56b5fbb6b20052e0202a324b5dd8f66a40b5aaec1cfabb6a82deacf61a1b0e",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/b59d91f5cfbd13dd7d4d4c721f9724fd0dafb04cca68b13531d1e0c124206dc6.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/bf23e8f4e849c8b83ceb5f7e1da73ac7c1fea9ba26752e0c31c8031785d1250c.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\bf23e8f4e849c8b83ceb5f7e1da73ac7c1fea9ba26752e0c31c8031785d1250c.json",
+      "bytes": 1262,
+      "sha256": "619c8c6b81963f4d53962fb32a4b9d9be7427680e5fd9a52d7267bb244958187",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/bf23e8f4e849c8b83ceb5f7e1da73ac7c1fea9ba26752e0c31c8031785d1250c.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/dbacbe09217d99f4c10dc691116830ada21b8b772a47d27980b2a11d6d5fb43e.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_0\\identical_official_scores\\dbacbe09217d99f4c10dc691116830ada21b8b772a47d27980b2a11d6d5fb43e.json",
+      "bytes": 1261,
+      "sha256": "2038c44456afb128771ffc22f2459c665314828c05d2fa7eabaf024a7315ec52",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_0/identical_official_scores/dbacbe09217d99f4c10dc691116830ada21b8b772a47d27980b2a11d6d5fb43e.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/02e4184b7f59fee096c51690dc15f83e6518a0dca2c168ef7a18be1cde5219f4.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\02e4184b7f59fee096c51690dc15f83e6518a0dca2c168ef7a18be1cde5219f4.json",
+      "bytes": 1260,
+      "sha256": "a460a6980f0379b920cfd7d0e8956367e8d862983afe29e7371f94fb92ed6750",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/02e4184b7f59fee096c51690dc15f83e6518a0dca2c168ef7a18be1cde5219f4.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/11689ce36f5a3bf8d88ad1c5b9f94285a75227391692bc0d9a0fe0c4c548fcb6.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\11689ce36f5a3bf8d88ad1c5b9f94285a75227391692bc0d9a0fe0c4c548fcb6.json",
+      "bytes": 1263,
+      "sha256": "dd0a358b4b0fce41c952c7cab19978c292cb2214ab4c2a7809ef5cd3b6a765ed",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/11689ce36f5a3bf8d88ad1c5b9f94285a75227391692bc0d9a0fe0c4c548fcb6.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/150e9ebedc5bdb3604031ab96669d31a8094f41f149114d068b889a31f7843ec.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\150e9ebedc5bdb3604031ab96669d31a8094f41f149114d068b889a31f7843ec.json",
+      "bytes": 1261,
+      "sha256": "dbbaa39ae9b4f5dff788811f8052118a3bba0fb4a4c5e1baec8f2557cde9a34a",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/150e9ebedc5bdb3604031ab96669d31a8094f41f149114d068b889a31f7843ec.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/1b8936586ac4b1a1b6970776b51fc0c74636187d05b8622e53b140dad42b8ab4.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\1b8936586ac4b1a1b6970776b51fc0c74636187d05b8622e53b140dad42b8ab4.json",
+      "bytes": 1263,
+      "sha256": "ce4a76ab5f268d8beb7e24c0357a2bea42da87fad4fe982515be66ed6d30b34f",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/1b8936586ac4b1a1b6970776b51fc0c74636187d05b8622e53b140dad42b8ab4.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/1c40ffdcf5864acbf566c2cf60fdeb9ac3829210b3f15936620c353dacc912c4.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\1c40ffdcf5864acbf566c2cf60fdeb9ac3829210b3f15936620c353dacc912c4.json",
+      "bytes": 1261,
+      "sha256": "ee6fb671fcf0630a4bc94ee8e01f3e05313db4faa91ae8da4a505692ac6d2d00",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/1c40ffdcf5864acbf566c2cf60fdeb9ac3829210b3f15936620c353dacc912c4.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/407efd2f77ebd66df1893f2f13b795a2cba183a7f798d85ad10225a1437a9661.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\407efd2f77ebd66df1893f2f13b795a2cba183a7f798d85ad10225a1437a9661.json",
+      "bytes": 1261,
+      "sha256": "498e1dab2c84b95380baaa136d35d25ac5ab020f3a403d4ccce360fb4836ad8b",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/407efd2f77ebd66df1893f2f13b795a2cba183a7f798d85ad10225a1437a9661.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/4babd652be001a75a5c4013e7987e66d32701c64dbddb6e3fb28f52d6d9b800c.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\4babd652be001a75a5c4013e7987e66d32701c64dbddb6e3fb28f52d6d9b800c.json",
+      "bytes": 1262,
+      "sha256": "4298388c909aacad5f6ad439a3ed9fc18e44cfd17ad3dc90032f6f3936f0c3a1",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/4babd652be001a75a5c4013e7987e66d32701c64dbddb6e3fb28f52d6d9b800c.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/55b12221603735733500f3605f899b36dc111f1db483c8323e1b3e07ba537bcd.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\55b12221603735733500f3605f899b36dc111f1db483c8323e1b3e07ba537bcd.json",
+      "bytes": 1260,
+      "sha256": "d58007a5ceb59fb036d384fb4c48a394b418abda38503db281e4d6a3262dae37",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/55b12221603735733500f3605f899b36dc111f1db483c8323e1b3e07ba537bcd.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "bytes": 1261,
+      "sha256": "6884910e49efebbfb9ea93563618633efba10e9220a9e4d4a6aa0117490f6609",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/643f9d7c7b829a556fe80c0f6c4b787e68e7d6e1d852e6e6d75216157b1df7bf.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\643f9d7c7b829a556fe80c0f6c4b787e68e7d6e1d852e6e6d75216157b1df7bf.json",
+      "bytes": 1259,
+      "sha256": "29a4c3755935ac44f8439bcd1b96c09cd0aec254a7eaa0fb03000d904ea5f58b",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/643f9d7c7b829a556fe80c0f6c4b787e68e7d6e1d852e6e6d75216157b1df7bf.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/7d394718f16d35b228773303355d66681147fea4047ae46f6997762602283dc0.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\7d394718f16d35b228773303355d66681147fea4047ae46f6997762602283dc0.json",
+      "bytes": 1263,
+      "sha256": "dccd06cdcd13734bdcc9a905b12aa860464127a5a48f578250a0c3f2e77eb956",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/7d394718f16d35b228773303355d66681147fea4047ae46f6997762602283dc0.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/8fda644c401363afe3b8b46fd4aa024014a34574fe8a6a54b8d893614ce4f886.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\8fda644c401363afe3b8b46fd4aa024014a34574fe8a6a54b8d893614ce4f886.json",
+      "bytes": 1264,
+      "sha256": "2a53397543a68ad6eaaa3475e0d11a3b9250af6737278156049e77fd929c725e",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/8fda644c401363afe3b8b46fd4aa024014a34574fe8a6a54b8d893614ce4f886.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/921943cd60e2804cbcd39074419cde29d57bda06737f93b0bb76c5e04a51bcc8.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\921943cd60e2804cbcd39074419cde29d57bda06737f93b0bb76c5e04a51bcc8.json",
+      "bytes": 1262,
+      "sha256": "9b7941ace2b1d170b4d22c98e003d95046b57b9cca3d6f27cd27eb5c2e5a71a6",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/921943cd60e2804cbcd39074419cde29d57bda06737f93b0bb76c5e04a51bcc8.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/93a97abdf916d8f6645520151bb0c3ec6b3f6c427f8fed00fbb791276f56f21c.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\93a97abdf916d8f6645520151bb0c3ec6b3f6c427f8fed00fbb791276f56f21c.json",
+      "bytes": 1257,
+      "sha256": "e6e77ba97b474899ce7486faffa9ab4fb799ddfbf87197dc789818d0b974abca",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/93a97abdf916d8f6645520151bb0c3ec6b3f6c427f8fed00fbb791276f56f21c.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/9682bd3f2b2b54c42e4ed51cc90933903cf72277c0dff3b1e0d890b04bbeeaa1.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\9682bd3f2b2b54c42e4ed51cc90933903cf72277c0dff3b1e0d890b04bbeeaa1.json",
+      "bytes": 1263,
+      "sha256": "b0b624784dd397d00b78428150cd1b0c92974bc45f82fef0e0529f074885b343",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/9682bd3f2b2b54c42e4ed51cc90933903cf72277c0dff3b1e0d890b04bbeeaa1.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/9abef95eda7fe7b0ef604b65b2007c1331d9dfeacd17c424ca27e1294711bce6.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\9abef95eda7fe7b0ef604b65b2007c1331d9dfeacd17c424ca27e1294711bce6.json",
+      "bytes": 1259,
+      "sha256": "235b130c6fbc5360ec9ccf7d0560152dd8cbaea8fad13a268e11e68d331ada06",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/9abef95eda7fe7b0ef604b65b2007c1331d9dfeacd17c424ca27e1294711bce6.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/a5d5b992243b6568bfc9fde9efd08601ad0ceb9ebba3eb7248a51881716fc2fb.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\a5d5b992243b6568bfc9fde9efd08601ad0ceb9ebba3eb7248a51881716fc2fb.json",
+      "bytes": 1261,
+      "sha256": "28ab1a4f6de0639e34cdb44eb0807069f06516afe11af922fad7490802a49418",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/a5d5b992243b6568bfc9fde9efd08601ad0ceb9ebba3eb7248a51881716fc2fb.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/b5c1c41a1bad1d2f2ad7b328d5ff89f658da3daf6318d8fb769c746937be80d9.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\b5c1c41a1bad1d2f2ad7b328d5ff89f658da3daf6318d8fb769c746937be80d9.json",
+      "bytes": 1260,
+      "sha256": "976f0be73c1d4f35d011c8e0b26231096d8d6be54da8dab254d7316f5dcada84",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/b5c1c41a1bad1d2f2ad7b328d5ff89f658da3daf6318d8fb769c746937be80d9.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/bdf48177accaa5521e68af53f8cfbbc67b381d95a95bcafc24638e13d91b9e14.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\bdf48177accaa5521e68af53f8cfbbc67b381d95a95bcafc24638e13d91b9e14.json",
+      "bytes": 1262,
+      "sha256": "70966967451df20538ef6ff0145de4c322c2a2385833e312af51ecd1abc94b25",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/bdf48177accaa5521e68af53f8cfbbc67b381d95a95bcafc24638e13d91b9e14.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/fe9b1deba0e9d24439b49e6e0b8110bac4ed7061f61baa3c4fa3880771567125.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_1\\identical_official_scores\\fe9b1deba0e9d24439b49e6e0b8110bac4ed7061f61baa3c4fa3880771567125.json",
+      "bytes": 1261,
+      "sha256": "b2ebe9550e38d8d0492eebbfe9e4d453fac2e3ade21a9cfe38f313a6eadfd1ee",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_1/identical_official_scores/fe9b1deba0e9d24439b49e6e0b8110bac4ed7061f61baa3c4fa3880771567125.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/05018b866cebe77b12b46238061ed03b0fd0d79aea1a9fe70bc3f4146f296625.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\05018b866cebe77b12b46238061ed03b0fd0d79aea1a9fe70bc3f4146f296625.json",
+      "bytes": 1261,
+      "sha256": "9cb967ac90a8a05a18323b78a61b5e93ea13a54ea6950f2840baa94293bc47a9",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/05018b866cebe77b12b46238061ed03b0fd0d79aea1a9fe70bc3f4146f296625.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/093a2fd926fdad77c7e6e91f7cd032b75c5738f83c8bce87de8752b76899d4d8.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\093a2fd926fdad77c7e6e91f7cd032b75c5738f83c8bce87de8752b76899d4d8.json",
+      "bytes": 1261,
+      "sha256": "d5b2d55efc30caa68b86bb5428834069af048105e0ce5e714195aee590528299",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/093a2fd926fdad77c7e6e91f7cd032b75c5738f83c8bce87de8752b76899d4d8.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/1cca0d3a090d70dd1168f3738fc932517319e71daf2a42c02f1fdadec09e0db8.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\1cca0d3a090d70dd1168f3738fc932517319e71daf2a42c02f1fdadec09e0db8.json",
+      "bytes": 1262,
+      "sha256": "ff29fa03873e3b9848d15097c7829308af57a26e8ddfb426daa94261a446ac16",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/1cca0d3a090d70dd1168f3738fc932517319e71daf2a42c02f1fdadec09e0db8.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/1fbf04dc6554b9a8e9c14ee9a3bc30b34a58bb5176f2544b4656837441d51569.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\1fbf04dc6554b9a8e9c14ee9a3bc30b34a58bb5176f2544b4656837441d51569.json",
+      "bytes": 1261,
+      "sha256": "498ea3344ed13820c27a23dacdfd899b658af6014465308e61fd802857d16d4d",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/1fbf04dc6554b9a8e9c14ee9a3bc30b34a58bb5176f2544b4656837441d51569.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/2eb75d386a4243a54c5d45309aa67734e2345370c1ace17dd5f3159eef1a5fa1.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\2eb75d386a4243a54c5d45309aa67734e2345370c1ace17dd5f3159eef1a5fa1.json",
+      "bytes": 1262,
+      "sha256": "2e5c657b8e03edfc94377e6bec53f3340a034322004602945d4b6ef38a2496a5",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/2eb75d386a4243a54c5d45309aa67734e2345370c1ace17dd5f3159eef1a5fa1.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/33e81b5e2bbfba3ba18225900224fc793a7d1cf634f7a30e0470eea644c5e5df.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\33e81b5e2bbfba3ba18225900224fc793a7d1cf634f7a30e0470eea644c5e5df.json",
+      "bytes": 1263,
+      "sha256": "24dadca1b90c450e15edbe6ec0f133763ba5bd36bb2a55bf1ceb7602c4d6a2cd",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/33e81b5e2bbfba3ba18225900224fc793a7d1cf634f7a30e0470eea644c5e5df.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/34c81e2559bec80e07cc2125317268cc5135e6e1af9afee7f4627862d8b739bc.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\34c81e2559bec80e07cc2125317268cc5135e6e1af9afee7f4627862d8b739bc.json",
+      "bytes": 1261,
+      "sha256": "3363fbe8e8fd6bec5a0bd160759f6f6fe3cb586942b036469782dffed586e54b",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/34c81e2559bec80e07cc2125317268cc5135e6e1af9afee7f4627862d8b739bc.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/3a6c17e98a139e40b492a8a43a8dc041d99c4ebc69d9f3c30829a06868f8084f.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\3a6c17e98a139e40b492a8a43a8dc041d99c4ebc69d9f3c30829a06868f8084f.json",
+      "bytes": 1262,
+      "sha256": "787924d01f4ba141793bd35e2869b63f9eec0d9418456094b15f5c83fca603fb",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/3a6c17e98a139e40b492a8a43a8dc041d99c4ebc69d9f3c30829a06868f8084f.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/55b12221603735733500f3605f899b36dc111f1db483c8323e1b3e07ba537bcd.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\55b12221603735733500f3605f899b36dc111f1db483c8323e1b3e07ba537bcd.json",
+      "bytes": 1260,
+      "sha256": "d58007a5ceb59fb036d384fb4c48a394b418abda38503db281e4d6a3262dae37",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/55b12221603735733500f3605f899b36dc111f1db483c8323e1b3e07ba537bcd.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/5fb9a6a20d3b93888353a2d175ed4868446c4c099d1ec16ed4d76f6ef3ab1506.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\5fb9a6a20d3b93888353a2d175ed4868446c4c099d1ec16ed4d76f6ef3ab1506.json",
+      "bytes": 1260,
+      "sha256": "f4ce04ca77759ad2e8651c014e1c3177f0582a63599f73d9d30c30af9d4f19d3",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/5fb9a6a20d3b93888353a2d175ed4868446c4c099d1ec16ed4d76f6ef3ab1506.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "bytes": 1261,
+      "sha256": "6884910e49efebbfb9ea93563618633efba10e9220a9e4d4a6aa0117490f6609",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/7427d0d3a87093e92127fca9af86100c3cabb4b30663765d956ebe19dee74758.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\7427d0d3a87093e92127fca9af86100c3cabb4b30663765d956ebe19dee74758.json",
+      "bytes": 1262,
+      "sha256": "459aa416851cff9527bf5d6b778eaf79a22256924b75f7522de9cc52288cd80c",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/7427d0d3a87093e92127fca9af86100c3cabb4b30663765d956ebe19dee74758.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/7aa3d4f8c184aa0bab1df210db6fbab029320d5edf4125bb1bd9d2d91b7b4cfa.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\7aa3d4f8c184aa0bab1df210db6fbab029320d5edf4125bb1bd9d2d91b7b4cfa.json",
+      "bytes": 1261,
+      "sha256": "ce770e1441eeea3c253c3488f1543bea6cb10d8706cce4e1a6c9e94cdd364cbe",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/7aa3d4f8c184aa0bab1df210db6fbab029320d5edf4125bb1bd9d2d91b7b4cfa.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/8dce9f5f2a44e92131b8225a6247c74f36ff63c628409d962dab61e435f005c7.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\8dce9f5f2a44e92131b8225a6247c74f36ff63c628409d962dab61e435f005c7.json",
+      "bytes": 1262,
+      "sha256": "916bcf3b0424ba00d6e3b16618c7699571aa46b17026965940ec6bb79c516834",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/8dce9f5f2a44e92131b8225a6247c74f36ff63c628409d962dab61e435f005c7.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/99c8a4fab2e36145b697bc03db887bbad53a9d56c57a02472b37045e56b5d6b1.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\99c8a4fab2e36145b697bc03db887bbad53a9d56c57a02472b37045e56b5d6b1.json",
+      "bytes": 1259,
+      "sha256": "c768b1a6057a04a30a983ad72583590a5da25b3cec2e1c7d0cb92b1708456935",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/99c8a4fab2e36145b697bc03db887bbad53a9d56c57a02472b37045e56b5d6b1.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/a4b8b7afd847f7f68c115f27c6a88e569216b2d23638b868a275ca414a1c00bd.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\a4b8b7afd847f7f68c115f27c6a88e569216b2d23638b868a275ca414a1c00bd.json",
+      "bytes": 1262,
+      "sha256": "b350de4749005a107092c00e9ef2e32daf3eafea8dec0b1892fc227d8ab040c0",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/a4b8b7afd847f7f68c115f27c6a88e569216b2d23638b868a275ca414a1c00bd.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/a85d4262921c9d2e0c4bf2031ce430141fe96a391b5f1427c4b6a3affe771801.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\a85d4262921c9d2e0c4bf2031ce430141fe96a391b5f1427c4b6a3affe771801.json",
+      "bytes": 1262,
+      "sha256": "23d5024cd5a20c4c5e1e36cbcc3e49c6f790c92837e41b4c39530594a85d9616",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/a85d4262921c9d2e0c4bf2031ce430141fe96a391b5f1427c4b6a3affe771801.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/b1f442f9c9c25f9cabd321534f3c521f2e365ec2a4578dff6337e4bde135403d.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\b1f442f9c9c25f9cabd321534f3c521f2e365ec2a4578dff6337e4bde135403d.json",
+      "bytes": 1263,
+      "sha256": "83e14aa58cdbece351ea9c265e505e88ecf7901b4f57b49e0367727db68659e4",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/b1f442f9c9c25f9cabd321534f3c521f2e365ec2a4578dff6337e4bde135403d.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json",
+      "bytes": 1261,
+      "sha256": "139cbc8ed73d7eb8db02ddbeadf8d570433a034abcc4c531b1f9c1f497ad4ce0",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/ed7c0415f4e581950de708e37b617ec706ab0f6c11b44f3940e87df0099c570e.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_2\\identical_official_scores\\ed7c0415f4e581950de708e37b617ec706ab0f6c11b44f3940e87df0099c570e.json",
+      "bytes": 1259,
+      "sha256": "f23fbd036127879fd0d06c06ecbc05c4b1bd7dcf1fc72c83da87b20e002dc1cf",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_2/identical_official_scores/ed7c0415f4e581950de708e37b617ec706ab0f6c11b44f3940e87df0099c570e.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/153ca084a9bca58deb97c1c61c696f28bcd46929bb73a38d368e93f1de187888.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\153ca084a9bca58deb97c1c61c696f28bcd46929bb73a38d368e93f1de187888.json",
+      "bytes": 1261,
+      "sha256": "15de04419b6227e5de1884e94e0e2bf5a8e5e7222503a753fceb6d145fe04221",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/153ca084a9bca58deb97c1c61c696f28bcd46929bb73a38d368e93f1de187888.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/1b8acd9aeaa50be4061e898f57348300b8dd36952eccfa5abdc1f8e95050b145.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\1b8acd9aeaa50be4061e898f57348300b8dd36952eccfa5abdc1f8e95050b145.json",
+      "bytes": 1261,
+      "sha256": "f626a1abfe41dd7a8de5b80897263dce4d51cd6a2e87a7d26a7c48ee43d4dd4f",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/1b8acd9aeaa50be4061e898f57348300b8dd36952eccfa5abdc1f8e95050b145.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/1fbf04dc6554b9a8e9c14ee9a3bc30b34a58bb5176f2544b4656837441d51569.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\1fbf04dc6554b9a8e9c14ee9a3bc30b34a58bb5176f2544b4656837441d51569.json",
+      "bytes": 1261,
+      "sha256": "498ea3344ed13820c27a23dacdfd899b658af6014465308e61fd802857d16d4d",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/1fbf04dc6554b9a8e9c14ee9a3bc30b34a58bb5176f2544b4656837441d51569.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/3665c1db842997b675672a03fb2814f8c5dbe83bb77e65fd93a23ecd992827ab.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\3665c1db842997b675672a03fb2814f8c5dbe83bb77e65fd93a23ecd992827ab.json",
+      "bytes": 1262,
+      "sha256": "8b561ebd3beaec72d62df2c17f2630e7ae47e18ade1442a235d1ed7c58b5f5cd",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/3665c1db842997b675672a03fb2814f8c5dbe83bb77e65fd93a23ecd992827ab.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/376dc91c47f6a1ffd2a921181045e7348ae47c8e80f928160a5768d910fe5690.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\376dc91c47f6a1ffd2a921181045e7348ae47c8e80f928160a5768d910fe5690.json",
+      "bytes": 1261,
+      "sha256": "d0fe8690e32df1b883fdece749c0b3c629ba69bb2c3943cfbbc0273c323e80cb",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/376dc91c47f6a1ffd2a921181045e7348ae47c8e80f928160a5768d910fe5690.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json",
+      "bytes": 1261,
+      "sha256": "6884910e49efebbfb9ea93563618633efba10e9220a9e4d4a6aa0117490f6609",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/5feaf1304525e12cef63c4cf49e38653a88749ce6c59c691af8e371ab2b6aa31.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/993386314c45f34392dc56305545903b2249243becb5cb6c8b6f27ea5af0877e.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\993386314c45f34392dc56305545903b2249243becb5cb6c8b6f27ea5af0877e.json",
+      "bytes": 1263,
+      "sha256": "f6197f8530261b953ea2737c7f5c0a9904a259f2d96ebbbfa8216bbbbce07d50",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/993386314c45f34392dc56305545903b2249243becb5cb6c8b6f27ea5af0877e.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/aaff57f649f60a1200881aa4bd2582d3264375686a03d96b2555845a1d6e6abf.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\aaff57f649f60a1200881aa4bd2582d3264375686a03d96b2555845a1d6e6abf.json",
+      "bytes": 1263,
+      "sha256": "eda2a49e6974cc9ab38d942ca20bc4322bed0a9919ecdd6a99c38470b70bfcf5",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/aaff57f649f60a1200881aa4bd2582d3264375686a03d96b2555845a1d6e6abf.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/afa17d6727620059c53e19dcd4273389eafdeb732e6a6aeda71e70bc0106020e.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\afa17d6727620059c53e19dcd4273389eafdeb732e6a6aeda71e70bc0106020e.json",
+      "bytes": 1260,
+      "sha256": "15c2491c68da507b726c2cd28ab06ef27ef018b617ed961f4ee8a399fcdd0380",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/afa17d6727620059c53e19dcd4273389eafdeb732e6a6aeda71e70bc0106020e.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json",
+      "bytes": 1261,
+      "sha256": "139cbc8ed73d7eb8db02ddbeadf8d570433a034abcc4c531b1f9c1f497ad4ce0",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/b29325ff724fb943bd0edb3315e6c622d0caf188c3dfb2307c3fb894706604e2.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/b9017ca0a3af72801a973cfa98c402feae846b6955b4f6d90b4488fd00f8661a.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\b9017ca0a3af72801a973cfa98c402feae846b6955b4f6d90b4488fd00f8661a.json",
+      "bytes": 1260,
+      "sha256": "ee655a92983c74eae6afc069eaeb517d84d13c54fb22b3e1eab5a26e515cc5de",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/b9017ca0a3af72801a973cfa98c402feae846b6955b4f6d90b4488fd00f8661a.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/baf5a7745bc8eca7fbd6ad8b1426aa46f7b7c8f3cc0ecaa397af843b757b5254.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\baf5a7745bc8eca7fbd6ad8b1426aa46f7b7c8f3cc0ecaa397af843b757b5254.json",
+      "bytes": 1260,
+      "sha256": "d2ebacd8bea9deb744f6159e988379f9f3e0add5f6ac416b3e14dd3a0227d685",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/baf5a7745bc8eca7fbd6ad8b1426aa46f7b7c8f3cc0ecaa397af843b757b5254.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/bba9d7b74dee449ba6eb77dad8836ab32ab536806b4eab391dfd812324473de6.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\bba9d7b74dee449ba6eb77dad8836ab32ab536806b4eab391dfd812324473de6.json",
+      "bytes": 1264,
+      "sha256": "97e614c837005d9b502fc3e6e73221fbf586b6b6cb14c33e376d7d334cf42952",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/bba9d7b74dee449ba6eb77dad8836ab32ab536806b4eab391dfd812324473de6.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/ccec81239be47581bfdb3b752af2e62d8d0894e18d9240707d09b7c2aac13240.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\ccec81239be47581bfdb3b752af2e62d8d0894e18d9240707d09b7c2aac13240.json",
+      "bytes": 1262,
+      "sha256": "4367034bff0be705be3b7e0f4e1ee74cee0c068e3537137ff7075456d949eaf3",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/ccec81239be47581bfdb3b752af2e62d8d0894e18d9240707d09b7c2aac13240.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/d6743420670b98f144f1a73b71f7bfccb2b762dda1db0e47964800d62457aacc.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\d6743420670b98f144f1a73b71f7bfccb2b762dda1db0e47964800d62457aacc.json",
+      "bytes": 1261,
+      "sha256": "93c04fbb0a465db0dc2a3431f36393917a5b4fbf2aad6f7074e0a94ec6ea63e3",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/d6743420670b98f144f1a73b71f7bfccb2b762dda1db0e47964800d62457aacc.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/e36b9d46bf4e5f9dd582ce8df04345f77a76f53b07ef1bea4777f38338acd923.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\e36b9d46bf4e5f9dd582ce8df04345f77a76f53b07ef1bea4777f38338acd923.json",
+      "bytes": 1262,
+      "sha256": "49a1055317948e9d244305f351e3cde8d90685ac86ade00e74403f228d8329df",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/e36b9d46bf4e5f9dd582ce8df04345f77a76f53b07ef1bea4777f38338acd923.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/f12280ec8124376ff7b07483fcc58bccb2e0524cc79bc02cba560832a7800ac0.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\f12280ec8124376ff7b07483fcc58bccb2e0524cc79bc02cba560832a7800ac0.json",
+      "bytes": 1260,
+      "sha256": "ee694f3f3b30aa76e32a0917bfc92291157052a130ec52d934749fb309936c40",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/f12280ec8124376ff7b07483fcc58bccb2e0524cc79bc02cba560832a7800ac0.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/f68ded8b3d372c521c68965b392b1dd0530aa00e6b85abf4f22807cb446cde2a.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\f68ded8b3d372c521c68965b392b1dd0530aa00e6b85abf4f22807cb446cde2a.json",
+      "bytes": 1262,
+      "sha256": "06f5003c2d12f142fe128e4bfe5bacdd1e44760cf16669866451a801cda8c3de",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/f68ded8b3d372c521c68965b392b1dd0530aa00e6b85abf4f22807cb446cde2a.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/f91fbca7bb3bf9d6795ea1ad25575cdd9e0f7a8435a9108f05ad8a9f2dd4c007.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\f91fbca7bb3bf9d6795ea1ad25575cdd9e0f7a8435a9108f05ad8a9f2dd4c007.json",
+      "bytes": 1262,
+      "sha256": "ead33a47f966fea0c5340d534d66028cd5d0e005fd0a7fbfb641afd9ffd956b7",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/f91fbca7bb3bf9d6795ea1ad25575cdd9e0f7a8435a9108f05ad8a9f2dd4c007.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/ffb6b8c24faebf1d2d479d5e19155a2d7a5ac3442968ce565d2c688636fa8fb1.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\parallel_official_workers\\worker_3\\identical_official_scores\\ffb6b8c24faebf1d2d479d5e19155a2d7a5ac3442968ce565d2c688636fa8fb1.json",
+      "bytes": 1260,
+      "sha256": "a9d56fce2d3bb0bf2031102c4fb2b833bc4567b8d1464482446b3770db06640a",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/parallel_official_workers/worker_3/identical_official_scores/ffb6b8c24faebf1d2d479d5e19155a2d7a5ac3442968ce565d2c688636fa8fb1.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/protocol.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\protocol.json",
+      "bytes": 818240,
+      "sha256": "2084a6a1a100e5830d4e79b01329d3af1d945e29da7adb003da1b42bd9fa1d42",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/protocol.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/provenance_scope_execution.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\provenance_scope_execution.json",
+      "bytes": 314,
+      "sha256": "1c059684f8d98ea8c8862bf4f0c2775e9cee238888f9f6921fc969f0e89ce4e0",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/provenance_scope_execution.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/refinement_protocol.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\refinement_protocol.json",
+      "bytes": 191151,
+      "sha256": "c6fbef0964e25fa9453bf3586d52da5ccce1c1eaec478124b312330d82e4664d",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/refinement_protocol.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/selected_validation_daily.csv",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\selected_validation_daily.csv",
+      "bytes": 112342,
+      "sha256": "db2330e39abf251b9ebb36ed13a347197866c74dae31f1bcbd2ea3088c6b22e6",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/selected_validation_daily.csv"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/selection.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\selection.json",
+      "bytes": 18084904,
+      "sha256": "c3e17cd3576ddad147011dec57675ca115a2efcba663b0298a27d9ce069cbbd4",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/selection.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/wave244_results.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\wave244_results.json",
+      "bytes": 4465410,
+      "sha256": "3dc2a60ab0dfa493fa1af61c6b92f170931ab83824f8d12ff0787e9e8b5d8d69",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/wave244_results.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/wave245_results.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\wave245_results.json",
+      "bytes": 9947893,
+      "sha256": "8d275fe8893eebb92452df5a5a834eea90f600388c3c1a3ff1cdab5ff1e6aa0c",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/wave245_results.json"
+    },
+    {
+      "source": "analysis/optimization_20261003_r58/wave246_results.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r58\\wave246_results.json",
+      "bytes": 3454452,
+      "sha256": "7ae67dacdc4095cb594285bd61751e3f2f16e8aaa4f93b9f08e90c69c0d24bcd",
+      "archive": "validation_sync/history/evidence_part006.tar.gz",
+      "member": "analysis/optimization_20261003_r58/wave246_results.json"
+    },
+    {
+      "source": "candidates/optimization_20261003_r58/frozen_before_model_inference.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r58\\frozen_before_model_inference.json",
+      "bytes": 20174,
+      "sha256": "bd48787b2a0b9df4f024c4377b7d4cb3498530f80a8ff69eedd1f138c2c296af",
+      "archive": "validation_sync/history/evidence_part008.tar.gz",
+      "member": "candidates/optimization_20261003_r58/frozen_before_model_inference.json"
+    },
+    {
+      "source": "candidates/optimization_20261003_r58/manifest.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r58\\manifest.json",
+      "bytes": 4470,
+      "sha256": "79c87625e32a4cbb1be71dd1a923a6b47efc0abfccedcdecf6da6d0da32705c0",
+      "archive": "validation_sync/history/evidence_part008.tar.gz",
+      "member": "candidates/optimization_20261003_r58/manifest.json"
+    },
+    {
+      "source": "candidates/optimization_20261003_r58/market_regime_mapping.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r58\\market_regime_mapping.json",
+      "bytes": 905,
+      "sha256": "ab28b919332d1c019b99512fa2da7f8d79f644558d0ca2c1006482a1b3d372de",
+      "archive": "validation_sync/history/evidence_part008.tar.gz",
+      "member": "candidates/optimization_20261003_r58/market_regime_mapping.json"
+    },
+    {
+      "source": "candidates/optimization_20261003_r58/return_mapping.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r58\\return_mapping.json",
+      "bytes": 116363,
+      "sha256": "7a70368908afc6fb0326d310222de73e733bc7badd08c0861f81acaf76d013aa",
+      "archive": "validation_sync/history/evidence_part008.tar.gz",
+      "member": "candidates/optimization_20261003_r58/return_mapping.json"
+    },
+    {
+      "source": "candidates/optimization_20261003_r58/selection.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r58\\selection.json",
+      "bytes": 18084904,
+      "sha256": "c3e17cd3576ddad147011dec57675ca115a2efcba663b0298a27d9ce069cbbd4",
+      "archive": "validation_sync/history/evidence_part008.tar.gz",
+      "member": "candidates/optimization_20261003_r58/selection.json"
+    },
+    {
+      "source": "candidates/optimization_20261003_r58/verification.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r58\\verification.json",
+      "bytes": 94838,
+      "sha256": "c05cec67c7bd2f1c5a2574d4ab3844f81072c7cfd6461563746236b0fb6d7983",
+      "archive": "validation_sync/history/evidence_part008.tar.gz",
+      "member": "candidates/optimization_20261003_r58/verification.json"
+    },
+    {
+      "source": "results/optimization_20261003_r58.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_20261003_r58.json",
+      "bytes": 926460,
+      "sha256": "a54465f8168f52f55c91b07fee65f375e6bf176dd7cda57f87f07bf124261088",
+      "archive": "validation_sync/history/evidence_part012.tar.gz",
+      "member": "results/optimization_20261003_r58.json"
+    },
+    {
+      "source": "results/optimization_ranking_20261003_r58.json",
+      "original_absolute_source": "D:\\3.Study\\数据分析\\赛题五\\results\\optimization_ranking_20261003_r58.json",
+      "bytes": 17870985,
+      "sha256": "7d979b7e6112bb6ed682ab13101f96a56f7ef82ec03f90ab1b5b75f82195efaf",
+      "archive": "validation_sync/history/evidence_part013.tar.gz",
+      "member": "results/optimization_ranking_20261003_r58.json"
+    }
+  ],
+  "new_model_fits_this_upload": 0,
+  "new_quality_scores_this_upload": 0,
+  "new_test_label_reads_this_upload": 0
+}

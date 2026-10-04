@@ -1,0 +1,1513 @@
+{
+  "status": "frozen_before_test_prediction",
+  "frozen_at_local": "2026-10-04T20:33:12",
+  "winner": {
+    "wave": 215,
+    "arm": "r30_linear_augmentation_rest_4_w0.0375",
+    "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+    "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+    "top_slow_weight": 0.265,
+    "slow16_weight": 0.255,
+    "priority_signal": "top",
+    "add_priority_weight": 0.0,
+    "drop_priority_weight": 0.0,
+    "membership_signal": "independent",
+    "membership_mode": "global",
+    "membership_w5a_weight": 0.75,
+    "retention": 0.984,
+    "limit_up_delta": 0.075,
+    "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+    "membership_slow_weight": 0.24,
+    "recipe": {
+      "type": "raw_rank_mix",
+      "components": [
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 90,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.25
+        },
+        {
+          "type": "model",
+          "seed": 2026,
+          "fraction": 0.175,
+          "rounds": 180,
+          "params": {},
+          "samples": 8,
+          "postprocessing": {
+            "alpha": 0.9,
+            "bonus": 0.3,
+            "mode": "top_only",
+            "weight": 0.25,
+            "restore_lower": true,
+            "top_current_weight": 1.0
+          },
+          "weight": 0.75
+        }
+      ],
+      "postprocessing": {
+        "alpha": 0.9,
+        "bonus": 0.3,
+        "mode": "top_only",
+        "weight": 0.25,
+        "restore_lower": true,
+        "top_current_weight": 1.0
+      }
+    },
+    "membership_power": 1.0,
+    "membership_memory": 0.025,
+    "diverse_augmentation": {
+      "membership": {
+        "model": "rank64_e32",
+        "weight": 0.005,
+        "blend": "score"
+      },
+      "top": {
+        "model": "pair_rank128_e32",
+        "weight": 0.35,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "rank512_e32",
+        "weight": 0.125,
+        "blend": "rank"
+      }
+    },
+    "secondary_augmentation": {
+      "membership": {
+        "model": "rank512_seed17_e32",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "top": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.025,
+        "blend": "rank"
+      },
+      "rest": {
+        "model": "csrank256_e32",
+        "weight": 0.175,
+        "blend": "score"
+      }
+    },
+    "standalone": null,
+    "final_augmentation": {
+      "membership": {
+        "model": "tail_bce128_e32",
+        "weight": 0.0125
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0,
+        "regime": "return_dispersion",
+        "low": 0.2,
+        "high": 0.0
+      },
+      "rest": {
+        "model": "rank512_seed18_e64",
+        "weight": 0.15,
+        "regime": "return_dispersion",
+        "low": 0.0,
+        "high": 0.1
+      }
+    },
+    "final_limit_delta": 0.0,
+    "standalone_replacement": false,
+    "linear_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "return_ridge_l1",
+        "weight": 0.025
+      }
+    },
+    "linear_limit_delta": -0.02,
+    "regularization_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "rank512_drop000_e32",
+        "weight": 0.025
+      }
+    },
+    "regularization_limit_delta": 0.0,
+    "stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "stacking_limit_delta": 0.0,
+    "neural_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "rank512_o05_lr0005_e32",
+        "weight": 0.037500000000000006
+      }
+    },
+    "neural_tuning_limit_delta": 0.0,
+    "catboost_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "cat_rank10_e600",
+        "weight": 0.2
+      }
+    },
+    "catboost_tuning_limit_delta": -0.02,
+    "expanded_stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "expanded_stacking_limit_delta": 0.0,
+    "additive_ridge_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "additive_ridge_limit_delta": 0.0,
+    "fourier_ridge_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "fourier_ridge_limit_delta": 0.0,
+    "nonlinear_stacking_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "nonlinear_stacking_limit_delta": 0.0,
+    "fourier_tuning_augmentation": {
+      "membership": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "top": {
+        "model": "none",
+        "weight": 0.0
+      },
+      "rest": {
+        "model": "none",
+        "weight": 0.0
+      }
+    },
+    "fourier_tuning_limit_delta": 0.0,
+    "temporal_postprocessing": {
+      "alpha": 0.97,
+      "mix": 0.0,
+      "power": 1.0
+    },
+    "whole_scheme_graph": {
+      "through_round": 49,
+      "root": {
+        "kind": "complete_r30",
+        "round": 30,
+        "configuration": {
+          "wave": 147,
+          "arm": "slow16_weight_2_0.025",
+          "top_ensemble_name": "lgb1_xgb1_two0_gru1",
+          "ensemble_name": "lgb1_xgb1_two1_gru2.25",
+          "top_slow_weight": 0.265,
+          "slow16_weight": 0.255,
+          "priority_signal": "top",
+          "add_priority_weight": 0.0,
+          "drop_priority_weight": 0.0,
+          "membership_signal": "independent",
+          "membership_mode": "global",
+          "membership_w5a_weight": 0.75,
+          "retention": 0.984,
+          "limit_up_delta": 0.075,
+          "membership_ensemble_name": "lgb0.75_xgb1_two1_gru2.25",
+          "membership_slow_weight": 0.24,
+          "recipe": {
+            "type": "raw_rank_mix",
+            "components": [
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 90,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.25
+              },
+              {
+                "type": "model",
+                "seed": 2026,
+                "fraction": 0.175,
+                "rounds": 180,
+                "params": {},
+                "samples": 8,
+                "postprocessing": {
+                  "alpha": 0.9,
+                  "bonus": 0.3,
+                  "mode": "top_only",
+                  "weight": 0.25,
+                  "restore_lower": true,
+                  "top_current_weight": 1.0
+                },
+                "weight": 0.75
+              }
+            ],
+            "postprocessing": {
+              "alpha": 0.9,
+              "bonus": 0.3,
+              "mode": "top_only",
+              "weight": 0.25,
+              "restore_lower": true,
+              "top_current_weight": 1.0
+            }
+          },
+          "membership_power": 1.0,
+          "membership_memory": 0.025,
+          "diverse_augmentation": {
+            "membership": {
+              "model": "rank64_e32",
+              "weight": 0.005,
+              "blend": "score"
+            },
+            "top": {
+              "model": "pair_rank128_e32",
+              "weight": 0.35,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "rank512_e32",
+              "weight": 0.1375,
+              "blend": "rank"
+            }
+          },
+          "secondary_augmentation": {
+            "membership": {
+              "model": "rank512_seed17_e32",
+              "weight": 0.0,
+              "blend": "rank"
+            },
+            "top": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.025,
+              "blend": "rank"
+            },
+            "rest": {
+              "model": "csrank256_e32",
+              "weight": 0.19999999999999998,
+              "blend": "score"
+            }
+          },
+          "standalone": null,
+          "final_augmentation": {
+            "membership": {
+              "model": "tail_bce128_e32",
+              "weight": 0.0125
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0,
+              "regime": "return_dispersion",
+              "low": 0.2,
+              "high": 0.0
+            },
+            "rest": {
+              "model": "rank512_seed18_e64",
+              "weight": 0.1625,
+              "regime": "return_dispersion",
+              "low": 0.0,
+              "high": 0.1
+            }
+          },
+          "final_limit_delta": 0.0,
+          "standalone_replacement": false,
+          "linear_augmentation": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "return_ridge_l1",
+              "weight": 0.037500000000000006
+            }
+          },
+          "linear_limit_delta": -0.02,
+          "donor": "baseline",
+          "ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "top_ensemble_weights": {
+            "lgb": 1.0,
+            "xgb": 1.0,
+            "gru": 1.0
+          },
+          "membership_ensemble_weights": {
+            "lgb": 0.75,
+            "xgb": 1.0,
+            "two": 1.0,
+            "gru": 2.25
+          },
+          "role_ensembles_split": true,
+          "fold_local_pruning_repaired": true,
+          "pruned_member_excluded": true,
+          "connected_final_score": 0.4508028811246302,
+          "metrics": {
+            "ic_mean": 0.12158028352662809,
+            "ic_std": 0.11064034616811237,
+            "icir": 1.0988783724690543,
+            "ic_positive_ratio": 0.8910891089108911,
+            "annual_excess": 0.37285731556999197,
+            "top1_annual_ret": 0.39835106963024947,
+            "mean_turnover": 0.032288089856728916,
+            "final_score": 0.4508028811246302
+          },
+          "construction": {
+            "foundation": {
+              "days": 1212,
+              "m_frac": 0.984,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 187,
+              "swaps": 93109,
+              "mean_retention_ratio": 0.9836875764424351
+            },
+            "final_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.984,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.984,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 187,
+                "swaps": 3842,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": 0.0
+            },
+            "linear_augmentation": {
+              "extra_role_augmentation": true,
+              "second_retention": 0.0,
+              "construction": {
+                "days": 1212,
+                "m_frac": 0.0,
+                "retention": null,
+                "boundary_tie_days": 0,
+                "eligibility_limited_days": 0,
+                "swaps": 0,
+                "mean_retention_ratio": 0.9835701857477712
+              },
+              "additional_limit_shift": -0.02
+            }
+          },
+          "official_score_cache": {
+            "cache_hit": false,
+            "cache_key": "f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab",
+            "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\identical_official_scores\\f9cce5ec64b7be3cf6fc0459fafe146c08a2853749ba561dbbbd74438f99c0ab.json"
+          },
+          "causal_return_mapping": {
+            "actual_return_mapped_csv_scored": true,
+            "within_day_ranks_bit_identical": true,
+            "boundaries": [
+              {
+                "year": 2020,
+                "mapping_last_label_date": 20191230,
+                "exclusive_cutoff": 20191231,
+                "method": "prevalidation training moments affine fallback"
+              },
+              {
+                "year": 2021,
+                "mapping_last_label_date": 20201230,
+                "exclusive_cutoff": 20201231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2022,
+                "mapping_last_label_date": 20211230,
+                "exclusive_cutoff": 20211231,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2023,
+                "mapping_last_label_date": 20221229,
+                "exclusive_cutoff": 20221230,
+                "method": "past mature OOF isotonic"
+              },
+              {
+                "year": 2024,
+                "mapping_last_label_date": 20231228,
+                "exclusive_cutoff": 20231229,
+                "method": "past mature OOF isotonic"
+              }
+            ],
+            "test_labels_read": false,
+            "cross_round_identical_official_reuse": {
+              "cross_round_cache_hit": false
+            }
+          },
+          "parallel_execution": {
+            "worker_slot": 1,
+            "worker_pid": 43496,
+            "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r30\\parallel_official_workers\\worker_1\\scoring_validation_only",
+            "same_declared_configuration": true
+          }
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "round": 31,
+          "group": "regularization_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_drop000_e32",
+              "weight": 0.025
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "stacking",
+          "round": 33,
+          "group": "stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "neural_tuning",
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "rank512_o05_lr0005_e32",
+              "weight": 0.037500000000000006
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "catboost_tuning",
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "cat_rank10_e600",
+              "weight": 0.2
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.05499999999999999,
+          "additional_delta": -0.02
+        },
+        {
+          "name": "expanded_stacking",
+          "round": 39,
+          "group": "expanded_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "additive_ridge",
+          "round": 41,
+          "group": "additive_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_ridge",
+          "round": 43,
+          "group": "fourier_ridge_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "nonlinear_stacking",
+          "round": 45,
+          "group": "nonlinear_stacking_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        },
+        {
+          "name": "fourier_tuning",
+          "round": 47,
+          "group": "fourier_tuning_augmentation",
+          "specs": {
+            "membership": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "top": {
+              "model": "none",
+              "weight": 0.0
+            },
+            "rest": {
+              "model": "none",
+              "weight": 0.0
+            }
+          },
+          "retention": 0.984,
+          "original_delta": 0.03499999999999999,
+          "additional_delta": 0.0
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      },
+      "discarded_branches": [],
+      "active_weight_axes": [
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "membership",
+          "model": "rank64_e32",
+          "anchor": 0.005
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "top",
+          "model": "pair_rank128_e32",
+          "anchor": 0.35
+        },
+        {
+          "round": 30,
+          "group": "diverse_augmentation",
+          "role": "rest",
+          "model": "rank512_e32",
+          "anchor": 0.125
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "membership",
+          "model": "rank512_seed17_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "top",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.025
+        },
+        {
+          "round": 30,
+          "group": "secondary_augmentation",
+          "role": "rest",
+          "model": "csrank256_e32",
+          "anchor": 0.175
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "membership",
+          "model": "tail_bce128_e32",
+          "anchor": 0.0125
+        },
+        {
+          "round": 30,
+          "group": "final_augmentation",
+          "role": "rest",
+          "model": "rank512_seed18_e64",
+          "anchor": 0.15
+        },
+        {
+          "round": 30,
+          "group": "linear_augmentation",
+          "role": "rest",
+          "model": "return_ridge_l1",
+          "anchor": 0.025
+        },
+        {
+          "round": 31,
+          "group": "regularization_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_e32",
+          "anchor": 0.025
+        },
+        {
+          "round": 35,
+          "group": "neural_tuning_augmentation",
+          "role": "rest",
+          "model": "rank512_o05_lr0005_e32",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 37,
+          "group": "catboost_tuning_augmentation",
+          "role": "rest",
+          "model": "cat_rank10_e600",
+          "anchor": 0.2
+        }
+      ],
+      "each_layer_uses_its_own_historical_retention": true
+    },
+    "donor": "baseline",
+    "ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "top_ensemble_weights": {
+      "lgb": 1.0,
+      "xgb": 1.0,
+      "gru": 1.0
+    },
+    "membership_ensemble_weights": {
+      "lgb": 0.75,
+      "xgb": 1.0,
+      "two": 1.0,
+      "gru": 2.25
+    },
+    "role_ensembles_split": true,
+    "fold_local_pruning_repaired": true,
+    "pruned_member_excluded": true,
+    "connected_final_score": 0.4509128003914083,
+    "metrics": {
+      "ic_mean": 0.12175617651601263,
+      "ic_std": 0.10977786187388468,
+      "icir": 1.1091141186179132,
+      "ic_positive_ratio": 0.8927392739273927,
+      "annual_excess": 0.37300598389605344,
+      "top1_annual_ret": 0.3984997379563108,
+      "mean_turnover": 0.032304884612709174,
+      "final_score": 0.4509128003914083
+    },
+    "construction": {
+      "whole_selected_scheme_recomputed": true,
+      "root_round": 30,
+      "root": {
+        "foundation": {
+          "days": 1212,
+          "m_frac": 0.984,
+          "retention": null,
+          "boundary_tie_days": 0,
+          "eligibility_limited_days": 192,
+          "swaps": 92920,
+          "mean_retention_ratio": 0.9836784444452706
+        },
+        "final_augmentation": {
+          "extra_role_augmentation": true,
+          "second_retention": 0.984,
+          "construction": {
+            "days": 1212,
+            "m_frac": 0.984,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 192,
+            "swaps": 3875,
+            "mean_retention_ratio": 0.9835610221189631
+          },
+          "additional_limit_shift": 0.0
+        },
+        "linear_augmentation": {
+          "extra_role_augmentation": true,
+          "second_retention": 0.0,
+          "construction": {
+            "days": 1212,
+            "m_frac": 0.0,
+            "retention": null,
+            "boundary_tie_days": 0,
+            "eligibility_limited_days": 0,
+            "swaps": 0,
+            "mean_retention_ratio": 0.9835610221189631
+          },
+          "additional_limit_shift": -0.02
+        }
+      },
+      "layers": [
+        {
+          "name": "regularization",
+          "configuration": {
+            "name": "regularization",
+            "round": 31,
+            "group": "regularization_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "rank512_drop000_e32",
+                "weight": 0.025
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "stacking",
+          "configuration": {
+            "name": "stacking",
+            "round": 33,
+            "group": "stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "neural_tuning",
+          "configuration": {
+            "name": "neural_tuning",
+            "round": 35,
+            "group": "neural_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "rank512_o05_lr0005_e32",
+                "weight": 0.037500000000000006
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "catboost_tuning",
+          "configuration": {
+            "name": "catboost_tuning",
+            "round": 37,
+            "group": "catboost_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "cat_rank10_e600",
+                "weight": 0.2
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.05499999999999999,
+            "additional_delta": -0.02
+          },
+          "construction": {
+            "extra_role_augmentation": true,
+            "second_retention": 0.0,
+            "construction": {
+              "days": 1212,
+              "m_frac": 0.0,
+              "retention": null,
+              "boundary_tie_days": 0,
+              "eligibility_limited_days": 0,
+              "swaps": 0,
+              "mean_retention_ratio": 0.9835610221189631
+            },
+            "additional_limit_shift": -0.02
+          }
+        },
+        {
+          "name": "expanded_stacking",
+          "configuration": {
+            "name": "expanded_stacking",
+            "round": 39,
+            "group": "expanded_stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "additive_ridge",
+          "configuration": {
+            "name": "additive_ridge",
+            "round": 41,
+            "group": "additive_ridge_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "fourier_ridge",
+          "configuration": {
+            "name": "fourier_ridge",
+            "round": 43,
+            "group": "fourier_ridge_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "nonlinear_stacking",
+          "configuration": {
+            "name": "nonlinear_stacking",
+            "round": 45,
+            "group": "nonlinear_stacking_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        },
+        {
+          "name": "fourier_tuning",
+          "configuration": {
+            "name": "fourier_tuning",
+            "round": 47,
+            "group": "fourier_tuning_augmentation",
+            "specs": {
+              "membership": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "top": {
+                "model": "none",
+                "weight": 0.0
+              },
+              "rest": {
+                "model": "none",
+                "weight": 0.0
+              }
+            },
+            "retention": 0.984,
+            "original_delta": 0.03499999999999999,
+            "additional_delta": 0.0
+          },
+          "construction": {
+            "extra_role_augmentation": false,
+            "additional_limit_shift": 0.0
+          }
+        }
+      ],
+      "temporal_postprocessing": {
+        "alpha": 0.97,
+        "mix": 0.0,
+        "power": 1.0
+      }
+    },
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e",
+      "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r50\\parallel_official_workers\\worker_3\\identical_official_scores\\8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json"
+    },
+    "causal_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "parallel_execution": {
+      "worker_slot": 3,
+      "worker_pid": 42868,
+      "private_scoring_directory": "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r50\\parallel_official_workers\\worker_3\\scoring_validation_only",
+      "same_declared_configuration": true
+    }
+  },
+  "scored_records": 242,
+  "baseline_score": 0.450883137498749,
+  "score_gain": 2.9662892659321205e-05,
+  "pruned_member_excluded": true,
+  "fold_local_pruning_repaired": true,
+  "test_labels_read": false,
+  "selection_rule": "highest official connected composite; exact ties prefer fewer active model additions",
+  "current_parameter_authority": "whole_scheme_graph; flat predecessor fields retain historical provenance only",
+  "frozen_sha256": {
+    "analysis/finalize_training_round50.py": "334bee62e02578789e12da597059241e0ba25e71fc6718b85081c53e6c26b233",
+    "analysis/optimization_20261003_r50/protocol.json": "653b04641336b25538f05e3d3cc49310dac1b7a9a052b7a42459312bb605141d",
+    "analysis/optimization_20261003_r50/component_audit.json": "6680822e1428e28c2c34ab1d2a21fcdef70b585ad4e7e9cb4e5745939fccb4bc",
+    "analysis/optimization_20261003_r50/temporal_refinement_protocol.json": "b93bcb09c4ec5889678fffaf2c8db8552982fa59df49851d0e981689933dab7c",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_diverse_augmentation_membership.json": "3b8b3b02ff30eeac7f2ff3f4c992283d9ba14e486ec4473d68b3311ea994a350",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_diverse_augmentation_rest.json": "aaea66944fc5b84780dfecc27f524fa9f34b637b162dd44aa47e00c2718606fd",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_diverse_augmentation_top.json": "2f88c0ed7d34289de55d8b7934596361df549405afb395120e1e8f7f8cedcef0",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_final_augmentation_membership.json": "2bb3fb7d414bd8a0a0fb71efab33d59a8bbe3e31e6ff1782c14faa6486c6dc7a",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_final_augmentation_rest.json": "e71214668e8c176e6c87d2969c50fe8e6dfea6532131fb3a2d4e9565b5a79e34",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_linear_augmentation_rest.json": "3df3fc9b46fa49d6147d5ed0363d9220f546444239cf7017d1494ac506141f5f",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_secondary_augmentation_membership.json": "6f94ab2ad7b5bcbd8341968918efa238ceb71693d8118272ace8dfabb5ad786c",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_secondary_augmentation_rest.json": "ca8cc757cfeb4f5b387a449cf7b789538dc6a7fc3976828553704174beb44ae1",
+    "analysis/optimization_20261003_r50/coordinate_215_r30_secondary_augmentation_top.json": "42e9d8517fbdf247e8ff8d04d336c332e4c0ae75cd53c90d82833e8de1079726",
+    "analysis/optimization_20261003_r50/coordinate_215_r31_regularization_augmentation_rest.json": "9cab636e2e22f59d270926e65ca8f867cb7d2770e1f01c2745c9983052a22275",
+    "analysis/optimization_20261003_r50/coordinate_215_r35_neural_tuning_augmentation_rest.json": "419a678b03e02aaf97271af95f3647eba540f6db3851e6b6744faff907b7b3b4",
+    "analysis/optimization_20261003_r50/coordinate_215_r37_catboost_tuning_augmentation_rest.json": "9115f7a906ace674021a0db1cc3842aa2d111ed2b23a53f68fafa23d3c96cb70",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_diverse_augmentation_membership.json": "9852cbb187ac7cfca118f0170de531eb56177a982858b827b18718bb11a556e0",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_diverse_augmentation_rest.json": "2a4edafdc29de208caa8cf03d4b9a4f5d2dfaa30c1d7eb04c5886a252feb50b3",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_diverse_augmentation_top.json": "cde93c5e93246ef888b4cd862d8fc2db1d2f7c4318d99f8cae6866ec4b006b6a",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_final_augmentation_membership.json": "5d5aad99e4c512ceafcab39734a44c6e1f94d1429b91db42dd0bfdd13d811e67",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_final_augmentation_rest.json": "1920a367680485cf598a45002d9d32dc3c1a2ba24e4728b160a5e0a611164375",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_linear_augmentation_rest.json": "66a7eb9793a4af723848a2dc19c8cb13974668e415b96c4833d3f9e99af229b6",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_secondary_augmentation_membership.json": "12a33c74817bf1d84bddbabc92c78df165528e52576b2952ab02506fdf44eb01",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_secondary_augmentation_rest.json": "2ed5d918635a361c833c4cb01771133f2925c8084bb88db97fdc0805a99b056a",
+    "analysis/optimization_20261003_r50/coordinate_216_r30_secondary_augmentation_top.json": "c11b746ed3316c5ef3496ec92df3a73582ad0f4d10c830e8ca87901d5179e26b",
+    "analysis/optimization_20261003_r50/coordinate_216_r31_regularization_augmentation_rest.json": "9cab636e2e22f59d270926e65ca8f867cb7d2770e1f01c2745c9983052a22275",
+    "analysis/optimization_20261003_r50/coordinate_216_r35_neural_tuning_augmentation_rest.json": "419a678b03e02aaf97271af95f3647eba540f6db3851e6b6744faff907b7b3b4",
+    "analysis/optimization_20261003_r50/coordinate_216_r37_catboost_tuning_augmentation_rest.json": "9115f7a906ace674021a0db1cc3842aa2d111ed2b23a53f68fafa23d3c96cb70",
+    "analysis/optimization_20261003_r50/retention_r30_protocol.json": "9964d066367d7688eb5a3113d193144e4f9dc11d7ba72323f2ba1318cb881c94",
+    "analysis/optimization_20261003_r50/wave214_results.json": "6f07f373179e25591017becfd4b52c26fc289e8bbeffee5991301def0a59f4c1",
+    "analysis/optimization_20261003_r50/wave215_results.json": "5326c55e15a228844ebc7c65efc4698e9d90da1b4c00568a24cfe4529b844a4f",
+    "analysis/optimization_20261003_r50/wave216_results.json": "7ae247ee6deca4ca47141d471df427ca77708fb164350bfebbea638685fb3f52",
+    "analysis/optimization_20261003_r50/wave217_results.json": "0ef114001b57c0adfde7ac5f3187eae44770e0672ca0eaf3b83e76b9b06f1c6d",
+    "analysis/optimization_20261003_r50/wave218_results.json": "3dc0a55998a96963bf1094c40642cc5f63177c4faab2c2f73688b7b8d64d2b02",
+    "analysis/optimization_20261003_r50/selected_validation.npy": "bd64e2a81406509aefe0b57bb5abd1461e2b81503fbfdd68bc988cf77832d4d9",
+    "analysis/optimization_20261003_r50/promote_baseline.npy": "7cbcc862a57324331364e952e9e8778fc7501ffc5b8cef8022be97c1a3ded706",
+    "analysis/optimization_20261003_r49/selection.json": "ca171f7ba00406a59d7669c0a7385c5a64d533d9c811fc10e8b73d91a39ccc34",
+    "active_release.json": "c1283b5847892202c68afd86674b4ea2e74df3ed18437da0792761e7cdd9ef98",
+    "deliveries/connected_topk0175_20261003/generation_inputs.parquet": "c9e925223a4c45f83aaf2f6695eb71657c0cc069589fcc7de3fd080f372fd0cd",
+    "candidates/optimization_20261003_r49/verification.json": "1f85e37e3a86b35a78daa020802dd6d068b912cc02d4c22068857b8c3fef3179",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/1bb0d9e81417d5e1e3f5cb17e578a55286c03a66420054027f4877db3162ef90.json": "996f2c6c5b032a6fcef6d02d0cc971d534f4b2deac5d9e089a36b0de9274c28b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/81265dae6afb4175423259eb474229718e09c4c9714c966e7ea8da60a28a86db.json": "dd9f046b83e58632c1d0ca439d7fdb24be25b3f817a7cfd317ab74879adbead4",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/85b4d70b8ac1ed617f6988b66cb319f40f32d80c6e357ddc4b55acc4ae18ad1a.json": "1d59f8fa9c70de6cd70aa52abc1c293c2703a10b37dcd4d9b90abb8af7f07220",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/1bb0d9e81417d5e1e3f5cb17e578a55286c03a66420054027f4877db3162ef90.json": "996f2c6c5b032a6fcef6d02d0cc971d534f4b2deac5d9e089a36b0de9274c28b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/8c2d353850887910246db5737787ef9f716140ccd8b04a316d39963281502117.json": "57eeef79780cfca02a78f93da837f5a8a982287e871d8b084ca3d586b8b7503e",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/ca9477a8e18125de8fd9620c50b1427176e8f16b699b4fa4511ebf18bf7a5be9.json": "2d525e3ec40eb38b0c821bc626e0eeedeef3aa399f896876495c3af2110a2b01",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/8a108c8d5a7d619d51eec678338a8e7dff7279a6bac1c3ba6caa8dbcb52fa9d7.json": "ecf3e127b3bb2736c885d8d04592c68fb41f3abab07cc6e01ed4bbdc09a23dcd",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/54c9552928fcad210f6d5716bb8ea771cbf143c5665a24bccdd717c241baaafa.json": "807a14b878ee370d0a260f0c583ac73fb6c1d969f7cd6f22148826bb2b2d6ceb",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/539511c49874992c9c623908a0d566afce14b2d77b1a5bc0bc5917b93e35c773.json": "a6e556015acb36a4d332b08930958775685b5136d10fae297b0608351781694b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/58d1e52243949bea1901d77056c55680e1518623847df50f4f234a86a3ab3988.json": "75d96147028df6fffeb1689576df82d490adda34ad1e3a9f666713bf96ef1fe0",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/9abda0b71b82d7c1796f3b3ba26b3515f35c15ed79e5b89b9146f77cc9604bd3.json": "ad3eebc45ff56f5a8d572ef598b2c25073467829062de04c05b3c1d10c40ea2c",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/00f87e458bc024a322dba5f5a52441af7b93242c274bd909bb489ac17db83c6c.json": "d83eea98ba09afc757e736b70ffaa4875ff3e2fb344e573f4de335af10b7809a",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/c6b70568beddd047b17d18de7efb89af26d3023e39b78ea2b34def45c6adab0d.json": "2be3164467053499b5b652c76e18c33c15e7aedfbe01b262156a4d945ed7f69e",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/1d0f134e591111c385844d02dacf23c30e90a4b10376ef463ecbb18311021d8a.json": "a7301e26a6c529a9baa706538947990a238b1124ba2b63dbb71239fc48c45cd7",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/1bb0d9e81417d5e1e3f5cb17e578a55286c03a66420054027f4877db3162ef90.json": "996f2c6c5b032a6fcef6d02d0cc971d534f4b2deac5d9e089a36b0de9274c28b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/29dd6c36819062b6a480356fcff53b510ead816926a8ebfcf29678218a262a80.json": "9ecec31f08b300c67a6f915a511b4de6af6c796cf4a4fd24a2f906161f5ccfa5",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/719fc3773db00b69c06d85b1997e7d7fa5fdfb9395bf204da455660c6700f3e4.json": "1dba2376c2ab573f1f47a18492e342cd7e440f8192647ab78aca42e1f9722024",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/22aa50cc7e1adc627de4ee4de2447bcbcd3ad0f1f79863808b44e52940645225.json": "fdc9f2350dd449015d62e1174f1e87947da52f80c24f8ce01a3691dfdb0db514",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/afbc16c4c580b25135b10b3aaa0409ad9a88694241d080e32d0b39711cc0428a.json": "7f28fb128fde6f8086662c7ceeef8b1098a94447158f0fe88a6db483cd1640f2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/620d4807ae5101f7dc116819cd97ff4309994908619c71fc4406c960d5f53843.json": "07cd4eb177b98ac12ad7c0684e20db5fe85e2c3ede9a250fa6b00041ca26a26a",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/f3f11db12150e50ccf46cae4a0c31a11dfe6e3d5e619022372d0c2e1b64e881f.json": "0d539cd4d63f63773f5cb932e2b3bb2dc002a7ee6ebab13fcd27e277e8dcd1f5",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/8e30d0d72bce8da2991f11dffbb392301cd4d96aebfe3d5e972ecb1f7fb18fe7.json": "6b91d44ea40892927114b64db450c5eb05bcec89fd3555118e6de30e7b051fcf",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/f3f11db12150e50ccf46cae4a0c31a11dfe6e3d5e619022372d0c2e1b64e881f.json": "0d539cd4d63f63773f5cb932e2b3bb2dc002a7ee6ebab13fcd27e277e8dcd1f5",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/5e70ac9de6d723fb5cb02380f53779f5e4808441cda429d9284e24ba1f1394a2.json": "8981daf67f02bd0d476a019fd9e68ef67daa3b02e5721b31c22e0da8665481f5",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/0f01637cf71811709bcba3dada7ff0b7db7ee2945c467a1f3d1d61ce59901e7e.json": "2fa53965b80f970e9346ba0524daa4f21b46bc3e51037c89a741175d352ce3af",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/1bb0d9e81417d5e1e3f5cb17e578a55286c03a66420054027f4877db3162ef90.json": "996f2c6c5b032a6fcef6d02d0cc971d534f4b2deac5d9e089a36b0de9274c28b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/fa4d48e678a3fce32876cf52001f2cd1a280cbe2d8ae93ff58a5a82dfe269389.json": "bcc08f276454ef7fb8b9a450558ff1074168e8f5747c23d72095cc5414ed2bef",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/1a75cb316e7a603ceeed1d05e7d3a6181ae0cdc9dffb6d9f1f85a07079723512.json": "5095c1d0f0dd32a259088c9bcbccf63fc48515f17b5ddb133fb6e849b0090572",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/fa4d48e678a3fce32876cf52001f2cd1a280cbe2d8ae93ff58a5a82dfe269389.json": "bcc08f276454ef7fb8b9a450558ff1074168e8f5747c23d72095cc5414ed2bef",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/a1327333697d1d51255a9c3c754c1289d51860f23a6bcf07cb7476cbb11c159c.json": "24119dd6f581bc65cf572911db1ee00cf4f2633722618e435ff8b4c9634a778b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/dba284650ad8c7ef8c6f49759f0c48ac251e17675ab47049ca842da8e17c8af8.json": "178000fe910506f8a6b8c5edac86a73de1ad8aa1d42de4f70ea91b7f9419669e",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/def3e1bbef784ed752e8b06006496cca12024fcbe2659fc1d3c730923c6926af.json": "35bc59648f168944e9ce957e0b9ede4e949d16ace769e02f18dfb58cf9e505af",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/ae4e7209a332b961785a46acb9af059c9070d5d31c7ee53811bfbfe80a0cda88.json": "80c0ea5d226bbe569944a5f30fa2812cd83ccbe0772698c17ac8160641596610",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/3b41418e73f35ea3a45bc13887821bb1c0e53b48a62c7f00e306096c1178a390.json": "a6a8ee8eed20ebd4c68a1d772da243b71c7fb9ccaf44e522900a6d65f53514bd",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/80ea6b0c253dcb42b38682349d8bf94143c2646fff00d3f85523c01ea2cce254.json": "088fb3deb826518659398deb65df895c12487b390ab4b7702a896cabb1885216",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/ade25af988a4684e08dfc20ced73bd542d565a6bb19dbb40b0828becff511875.json": "13cdc77a7d811342c14c232711ce17b3758e4b94ba145e70560e99a6306cbaf3",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/7688a6f0f752e321c772416699ea3c6ebfb0ecd6c7eb1c11be839ed41f707347.json": "30cd860efc6b6915678c26329045f07225e6d072e4355e5971bafca90a444191",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/7688a6f0f752e321c772416699ea3c6ebfb0ecd6c7eb1c11be839ed41f707347.json": "73288e69944fecfa1bc71f3d8b0e2f19b28b428be438303181b4efee2d9bfac2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/bf43fb942170229b3881eafa43a4af9a8ebb58ea0a77a60f0228ee950d043462.json": "a3cc8a2b14c6132302575d1be2fa82d892034a46dfb21acf92ed7fcea7ef55ae",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/b864920338213f688c5353a1bc3cee1c4fda9b708f892d62e69baea9fdb9c344.json": "b66292b4fc2c920a1c87582580c211b324c8571dc4f1e7ec560c92d97a2670ae",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/463d667f1df7be8b2d6cf301b77bc5e83c102732c1974f038a21a2d4952c599e.json": "45496d00494ac33b7f6c08b6bc7c2472debf290a99feaaa2bd80b3195a37ff94",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/ee490507917adad3d0cd6d57019da19169ce7a64886324a9abfc31a6ce6aaff9.json": "c3e3064f420395236d422fda93b3bef171e2d91a8d610aa7664936269a69a6e6",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/9d054875d6064a6317244597d9e71676dcbbacef7b229207b80a3db875bfc4a8.json": "b71e2ca60e624e7b7556a0e7c603d814f8bced4f4b770817167cfef1656cbb5d",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/8147025651611661703e6cb8ece069d46b667209f4c2917d6d606d80193826e1.json": "da90ee12e50395f016e6cc3e2eebd8ae760e25475f573204959b18c3c5ed94ea",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/167d8035e84d67f8a82e7fedf1fa866613417651fd2f32dc23f002588ea66196.json": "efd7081e805e63215c725d4a4744837b10a9f3d44a732a2020a2fb559685444c",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/7d45f1d0749d85278a19d1f136e8cbfa48170a402c430044a1d4a22e21ac2599.json": "91f35158602238fd54aaab9a9da76af38fe5ec07ec2361039b272b68af113039",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/100c9cc4b5612f4b0b8526c7a07c64388dab9b4285bf052e9ac96fa1e2af05ef.json": "7ac86bb144c3928807c3fb546be197fa88dae2c786ca7a51acb16a48866b1c5b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/8086d53cbd17e7a9965d3c03782bf0d111978ad03bfb4bf65e1e0f17736a0c6f.json": "72210ff49f2f99c5918a2f6aa893998f889506632ca888fb8f08f58f0193eeca",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/100c9cc4b5612f4b0b8526c7a07c64388dab9b4285bf052e9ac96fa1e2af05ef.json": "7ac86bb144c3928807c3fb546be197fa88dae2c786ca7a51acb16a48866b1c5b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/36a091f1e56d9c9d00ecd68187769e9c46eba0f005cac62c604863b7853d8bb3.json": "044b1471437cd87595d554b1f43139c4fd2781f6d244e14fd06807bc6e461ff6",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/35587c6adcecb57712891d5eed2ac8cec586469c8ee02c9f96e7aaf1e0886004.json": "126511f4e82add8b48ad06278d4ba98229751de1f39fd681a6752476b1f4ca6a",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/e14045923aba5d486063d253a2679b5b88bc702f79f80be6175bedfd5c534e3c.json": "15b675fdb5f173546470c56bffcee0c1802e7866678315f029b7d877e85c1140",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/a57e586d98e3e6a0fe131b08d9abc2a998d8e34534ffab37a93b191c03f0be5b.json": "bec536e3df29d9438e22432e20cb8a8bcab77ed53f3270a1edd629510221eb85",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/e14045923aba5d486063d253a2679b5b88bc702f79f80be6175bedfd5c534e3c.json": "15b675fdb5f173546470c56bffcee0c1802e7866678315f029b7d877e85c1140",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/8472aa2bf6e23453c13118b04d9609f63462317aa2422a245d0b5454cd23b48a.json": "a688e4ccc507f5e089aae9eba9b3fc75aa10a45d9421160bcd660b2cb6d70ca8",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/a446901a48bdeac8fc620245c4d2e078fc89ba7ce984000bbe04a92093c62669.json": "fc5759541ac5229c21639be967d0bb7cb68d0b37ad6831e358e59442e18966f2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/f7d544fc6803cb0ad7108cd9d6fe896db40330d93e5f3b224a4a1a93c88ef046.json": "81ae7ef2e76dac11eae22b19b7455c797f198ed69723b75522894fbd50aaa08d",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/e1fdf887f3051f9a174b64363153105c844c27ad2e965efb039cb95274f440ac.json": "deb1140ed63a1a734a835bd86d7d0cf266a4be6f162ea5f2f6aa298c6fdf0ff8",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/8ef2d13e3849d749165c2b432172f2dcd587d7e1674d28cbc712e3cb25248818.json": "94bb7d3248e632da45bc098e54983e6cbc12191ad4583f5c2b3f54f9d01f2cb7",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/d82c4b3c21dae13fea87572ab78e99deee8994c7c84a88fe071ab2d65b6b16a9.json": "4de945048efbfa6d7c40a874a2cdc427339b3f9e756c27cdda335145970f148c",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/316a9430bc4ebe486652644c71cf6e0e816737b84caf30277dc6f94db10f6303.json": "173df32811570575a09fe43972bc1075aec85b431aad7b4406cff35ce1f2c290",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/6ad1ddf409cc96bae681f0111db22f37d4fa1b08fa618b2d776038422c99b341.json": "84cf0966dd0613ccc85f5d0092c83f208293174e88e7cceca393cbd5e1bcb194",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/1b1b954c8d431cc3570cc5672a4370d962f1676a3151d528da358ed6e0507edf.json": "4db91bf19a59269dc8518f6cad2e28353faa249139c1858ec20f6a082c153a9f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/3f56070a96ef583e3fbd107d3bf61eafebf43407446e2f4a30124d9dfceebe84.json": "01bfa05ec6dcc5dfc53e48bb629fcf81f5eb83743733c18d5f161bfbbc808b10",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/11334a0b087919bd11e1e886c361d64410210eda9c0949206f9fa09539bf9c84.json": "2d87d877ec250b0aa00bf7a7876b214594d4c859505e9c7d1ae4057a6afdf4b3",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/d410d963470df11c7e68ec87bca45904d60dbc08445d491a2a05eadb8186f60a.json": "5a93c5958989255182ee8094f36f3a3a6584236c4667dc7d66072922e616de2d",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/afbc16c4c580b25135b10b3aaa0409ad9a88694241d080e32d0b39711cc0428a.json": "7f28fb128fde6f8086662c7ceeef8b1098a94447158f0fe88a6db483cd1640f2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/5e491d91680853d95eece6bda928c2f5aa9ceb759a85ad6d72b74a1dd8a42531.json": "ae42f2fb3f507f61104d7c1bd5f9d8d499cf9f267c3a07e7b4790cf538a9038e",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/2e168e14e127f38f766e91d77b3ed5d9c6990f26584206f031449a0bdeecd98a.json": "7c2bdb803cbee820c3dd8d553575bf47bf61ab1637874860261cf115185120d2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/8e2e9c502e7ec5d4170e24f1f64545eacd8558cbfc40d5eb408f679b049bf8bb.json": "5a3b693ca57c0dde49eb0a8ebd1d10a37bfe20fee1843bf9840b9831eb1bf27f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/c5f1450c3db359f6283196858e55a3473860586de21ed0bd735a9d044d7da2e2.json": "980911d2ca5d9efe2b452c6b82b1b5d8f4d0b9b7478a11aa57fedec6351e1610",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/eabfa037674ba72a69ec74b88f603e6104f7b0d47d2d7a903af90edc80b047ae.json": "436922d85ce532132ace871f9434393670f4b26307e69e664975d20bdf38cf4a",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/5978b08ffab59080a41d768180937b26098c394a8238a7c511bba60e3ad9b0c9.json": "fff061e9620b71b55907a8db1a3ab8c633ceb58a7f956029a806b7d537b81898",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/a5f93d392df6762baf56efaa29a0d967a5beb260a98b84ae42e9e20080b6c587.json": "9099f1b87e80210c1fefb5666e2dcc7317cc3e98d736a1125675b91c2136d671",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/70a00adac1db03d5f98b3299feec707f84656933652a08ce8fe1fa8a2e811fc3.json": "fa155c68f0f7c41eb77f8125452a846ce117400f9b5fffd9ff0d0cbb0e4aaf68",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/e54ab9bbd0380f1456cf970017564f8cce893a91951818ec6eddff14ebc70c5a.json": "7944e9045948a487bc7102e81a79ced4f3fbfe4cea0fa1c343d9f87f878e9f02",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/07d4d194a976378a6c738556886568d11189f2d4421b7b2de91c3c2d213df565.json": "ce73ec606827c551c8814814b2c267256c0542f77741eaa386ead63a6d457ae0",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/9164dbb061ca4c7d74c8b83b586b934630081c6e1b675ceab117643146ab689a.json": "5054321c76468b96b29d3849cde7b3227942cf16d70c25b7e41683fc9d6bb693",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/37275229786cd61fdcedd7e5e18db723ec68407d3cc0a3ddea11bdf8a5f9df92.json": "737d6a8c433a2b9341d963efb8da2c4b36ee5d832b2e0ccb830c234e65a68634",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/f57f92840ecfe842db43bcab0369a2bd6da6f051b130162969b3a34e1ebf6082.json": "360d30f176e69cc297327a83e0fef1af73655abe5b103717721ddd16430eaa6d",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/37275229786cd61fdcedd7e5e18db723ec68407d3cc0a3ddea11bdf8a5f9df92.json": "737d6a8c433a2b9341d963efb8da2c4b36ee5d832b2e0ccb830c234e65a68634",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/37275229786cd61fdcedd7e5e18db723ec68407d3cc0a3ddea11bdf8a5f9df92.json": "737d6a8c433a2b9341d963efb8da2c4b36ee5d832b2e0ccb830c234e65a68634",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/37275229786cd61fdcedd7e5e18db723ec68407d3cc0a3ddea11bdf8a5f9df92.json": "737d6a8c433a2b9341d963efb8da2c4b36ee5d832b2e0ccb830c234e65a68634",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/d065621b8368b165d79b219a3556fa7bbd1523a6b33ed3b7ad906a18d8028dfa.json": "c5feee10052939c407d6a1ac05b10b40d8964be02496a8fcde249750accc6f60",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/719fc3773db00b69c06d85b1997e7d7fa5fdfb9395bf204da455660c6700f3e4.json": "1dba2376c2ab573f1f47a18492e342cd7e440f8192647ab78aca42e1f9722024",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/cc51706435433e04b574846802645efbd54ee5650c46ee67c22bdba1352a5d45.json": "e52c352b17d98a398043bc8087927f9c3d1ea21274811ed5dfa4099970b8edbb",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/16feac67db0df0bed3e7b3f0521a42d694f9197e657ae46094815107e613b01a.json": "ff8696b70579c5794a83e05c97f890176b053cf8749e8841b7b1ea6b94d1d968",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/2e86d313c285aefadbdaf87f3d8e3bd1d3fda6125cd340c300b33dbb696cc459.json": "a4d3e92e35c17bef6669214d212e88a5c358bac64c6523d4c86dbcf83143f9cd",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/c9fea82912759fcef71be1bb5594b60254a83ee24b705d5c26d1a1eb4dfc741e.json": "8b3eeceaed40b2861c13b7ac1046fe5bf21fbd4f45e76dc7f142e1be0aefb674",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/2e86d313c285aefadbdaf87f3d8e3bd1d3fda6125cd340c300b33dbb696cc459.json": "a4d3e92e35c17bef6669214d212e88a5c358bac64c6523d4c86dbcf83143f9cd",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/131a4d81cf122cef9afef54d92c13e20b62942d76a4ecb3d9b1939e636307c0e.json": "98029f0ec79e029e80f6b35bbbded8c8f752d3a67f297b4bd6d02794483845f9",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/38d9eb5ea491810487fc046df64517d06494f89e3f08421eabda346506dfbe3d.json": "483c6995aac51a4680e33481c79c9fc9a9a6435629000368bfd52b489d6116fe",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/4624e25a7773c3fe8cec58c4cc90643ff369705f866cc030a91458590eb6723a.json": "70fceb350e5b7d7ed02dee7379918a94be8d3fa5f37b166a5dd007bf5851990e",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/840330cd2482f69c7114659716625a0179acc9976bcaa55820144d81292380ba.json": "fe9a447d45e3f4c06582e5a7f60e0a7683bb42643d4d9e29d9cdc2d2f6ae069e",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/9d93f8c3269a6821d987dfbfae2223507a9f3816d9efb2491a0527331529181c.json": "734bfb13a88e90a488d2fab52c0abe5698a5dd92abd03df9856f9577449848f2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/1aa41c1c252be0a8fdf2ece79cf6ff241d8fa84d1d9f2b078981afec93b45ab9.json": "d3074c80136e9f4f7f9524114a6cc37b4ca281a96671c673b54c5f81838f7863",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/628c4328a254188a3ec47dca21a8a90a20c0841923886dd9e29b1586ce1d4bc0.json": "3c1c285f4a72f879903c54b3ca028ea85112aaf8a59e4e694ea6f537d220c862",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/9d93f8c3269a6821d987dfbfae2223507a9f3816d9efb2491a0527331529181c.json": "734bfb13a88e90a488d2fab52c0abe5698a5dd92abd03df9856f9577449848f2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/b2250252b0d196413e65b6d3abfe98076a7d2b8a1ef5f8e19559eec59ed46c14.json": "1006ca36f4f5126e7c267c6186fac9ec4163e97a1c76887d9150f78b3b16a73f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/b2250252b0d196413e65b6d3abfe98076a7d2b8a1ef5f8e19559eec59ed46c14.json": "1006ca36f4f5126e7c267c6186fac9ec4163e97a1c76887d9150f78b3b16a73f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/cf0d0a7ad770dcbca68458d55e9f2f97e557121d5757f557e352b6285e8241cc.json": "acdb6a676bf64f72ef3b97f8c2baa4f681b08c819db0d2272c83f80eb758f31f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/dd7b7f01c1ae2d961dab96f493204dcd96494bd1f25adb7bc3ad6125722b4228.json": "e5cdb897065153569c37d80261d589eff8544eb746a1d9d69ea8a832dfeff2c7",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/91b4271fcced4045d8c4cc993b84e156e988de38f8004d42679cfa948c4f2f41.json": "2fb4282180c01f4a9aa37dc3e38a7d79cc67506d653fe9c161f50e44d9a5b140",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/56b2e426e37de9c240e40b8fbe6bb9e547067d81211269609608805a83239b15.json": "aa83b028c5accc81eeafe7a74b8bd75d1d0c2f2f3783b8906914133630ee8f64",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/66c0ad65748a9e8f1697dbc690431150ddff5ca2e8a56f98b38ef1932ed567fb.json": "e7c4aec93dd8defc6a1c5db06cf8ce5a51d3d9e9e79178c6974ca4c93bb846a2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/21911c17fe59e17fa3cb715b07d9562c53532347c302ef8ad27c0fd32a8bb2c2.json": "aa05ef7b573626df39de77d0e0247067b828188736b67ac152740029cbd34d62",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/905d0703b2b97c2aa77a87637e8fb8127685d26dec48182a1079508a51386c98.json": "8e883f10d30b204aa5e76d6c884a86aa9c40a40fa38b1d8851b0c4bd96c72015",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/9867b56c736a76a50d61e9cc2ae5589fdd824a084f4a301fc976c8938b5945aa.json": "9b7d26f1c8990481365e93096360cef1cf0532bde5b163034c1e8f79018f3331",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/9f37146b289e38fa90123b74c673cf239be3235426f0814d32706d70c1212540.json": "93dd3cb53eef1e6a58e7a1888c6addb6713219612af53fa97bb07b406789da86",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "19e58d9b3f01a5a4adfece0c6e5d3e98e6244959586f37ac49d003b2aa11dcbc",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/9f37146b289e38fa90123b74c673cf239be3235426f0814d32706d70c1212540.json": "93dd3cb53eef1e6a58e7a1888c6addb6713219612af53fa97bb07b406789da86",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/f498719d10c05b4d61696921098dc0a75a4bf60b6b68d451510bb100ae78a21a.json": "06a0626870067425c6db17979eb3e956155ecad471bba11ec51b2169492d2a8f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/4f55507367121bae3392a3138a2d1c6421dec6a0ad89216ba61193f30b61c2bd.json": "3c6e7f34d534bcb76804e231bb31a4975b392a8d6af75714e6f7e034fdcf56f5",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "19e58d9b3f01a5a4adfece0c6e5d3e98e6244959586f37ac49d003b2aa11dcbc",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/2b064eccd4ccaf73fab7587abe08392eab6a16d25e3b9f3b2d6a296cc4bf7bff.json": "3d6b355b0e476bd601df4b01eb2deca16cb1faa4bdfd67ae8cd3a3e73a41e946",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/3fe68b84094951f872b11320bbd4e7f59c7300f9f56028054bfc18546c1561d4.json": "4c507b5376c848705ade9686919a6818abb473d6b0c1ebe86e56460d56346954",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/2b064eccd4ccaf73fab7587abe08392eab6a16d25e3b9f3b2d6a296cc4bf7bff.json": "3d6b355b0e476bd601df4b01eb2deca16cb1faa4bdfd67ae8cd3a3e73a41e946",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/8822cdb3d2d244f95ab2c93a0e4c4ba83b0738a10af7363f1abfe50398f45562.json": "e7a359ed0ee8c5f6d701323cf30711be224492b30d723a431220228e036bd598",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/910c04141906a687933287ad5544b527eed5cfe4fb2475f7b823c956c267e165.json": "d61be04960ab713a92d57f6d036b3f42bfaabc51e3e45c1bdbfa00f4793d0ce0",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "19e58d9b3f01a5a4adfece0c6e5d3e98e6244959586f37ac49d003b2aa11dcbc",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/54957af0e2f48b2c6221d6def6331b1498d16539381de5cd048a955605deef62.json": "3a4c7af2548b410207c1c0cdbdff2222fa68bbf75b151f5b3601a8cf0b916d54",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/4b745f417c93122bb74d6fe88fccc82d24c41b08acdeb5510881a889214515a3.json": "0a0fabc991b017e7531f1b238f01ff5c94448375ccfd6844312f080a6f9aec58",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/6f01414ab214248ab10e5e12b757961ec5ebd327fb63b499b192f5eaf6d27874.json": "66ab09b8a470c7bfa900c21947d795e4ec86662c089844ac1b688b4a42067056",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/05c6b9ea247bf43c27c3e5c32572d3b40b2e942a3ce55e547fd1f04cc3718340.json": "420df26ea0123cd7f0fe7760e26c9ec1d37c7c4c0a824c72dd3a060193593df9",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/7f626164db76341cca6ce123bf65ec646be1d1f4d59dc0a893d8a6cda78a4dab.json": "61a2ae9a7095f38a352399685f1c61af4beea7a4ce88f85fe0e6abbd45e60abf",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/5de5077659390f98d7d62fa3ce030bef34759bc1714c8b1995fca58f9a483dd5.json": "d2d352152bb62f744564ec36387e24f9b29fef5bbe9bf89bd19961597d025f5a",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/3c1e3b8535b509ed5120571acb459ee6fa3bb381bd810ade7f863814f91ed66a.json": "b9f1420c0d4c597f6647360bfae9e6c3dabdc26faeba5cdeaa314381fe325d72",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/ff54bd30ff63072234fc6197bd6c0ae512db8a33ead9e61f807c5599bf104aca.json": "528e388669fe1b4b289661a18f466e65d8aefce50f3762d6464650c23a2444ff",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/05c6b9ea247bf43c27c3e5c32572d3b40b2e942a3ce55e547fd1f04cc3718340.json": "420df26ea0123cd7f0fe7760e26c9ec1d37c7c4c0a824c72dd3a060193593df9",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/5de5077659390f98d7d62fa3ce030bef34759bc1714c8b1995fca58f9a483dd5.json": "d2d352152bb62f744564ec36387e24f9b29fef5bbe9bf89bd19961597d025f5a",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/3c1e3b8535b509ed5120571acb459ee6fa3bb381bd810ade7f863814f91ed66a.json": "b9f1420c0d4c597f6647360bfae9e6c3dabdc26faeba5cdeaa314381fe325d72",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/ff54bd30ff63072234fc6197bd6c0ae512db8a33ead9e61f807c5599bf104aca.json": "528e388669fe1b4b289661a18f466e65d8aefce50f3762d6464650c23a2444ff",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/8822cdb3d2d244f95ab2c93a0e4c4ba83b0738a10af7363f1abfe50398f45562.json": "e7a359ed0ee8c5f6d701323cf30711be224492b30d723a431220228e036bd598",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/54957af0e2f48b2c6221d6def6331b1498d16539381de5cd048a955605deef62.json": "3a4c7af2548b410207c1c0cdbdff2222fa68bbf75b151f5b3601a8cf0b916d54",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/4b745f417c93122bb74d6fe88fccc82d24c41b08acdeb5510881a889214515a3.json": "0a0fabc991b017e7531f1b238f01ff5c94448375ccfd6844312f080a6f9aec58",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/f498719d10c05b4d61696921098dc0a75a4bf60b6b68d451510bb100ae78a21a.json": "06a0626870067425c6db17979eb3e956155ecad471bba11ec51b2169492d2a8f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/4f55507367121bae3392a3138a2d1c6421dec6a0ad89216ba61193f30b61c2bd.json": "3c6e7f34d534bcb76804e231bb31a4975b392a8d6af75714e6f7e034fdcf56f5",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/3fe68b84094951f872b11320bbd4e7f59c7300f9f56028054bfc18546c1561d4.json": "4c507b5376c848705ade9686919a6818abb473d6b0c1ebe86e56460d56346954",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/2b064eccd4ccaf73fab7587abe08392eab6a16d25e3b9f3b2d6a296cc4bf7bff.json": "3d6b355b0e476bd601df4b01eb2deca16cb1faa4bdfd67ae8cd3a3e73a41e946",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/905d0703b2b97c2aa77a87637e8fb8127685d26dec48182a1079508a51386c98.json": "8e883f10d30b204aa5e76d6c884a86aa9c40a40fa38b1d8851b0c4bd96c72015",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/690aa0aa534f54e0992fba810d11550be1c1f0f2c025b07043b1a19f5aecfc28.json": "ba346b4f45d5ad498f0d36f4173bbf47bbebc8adb73626d14c87a8e0477cd0e9",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/8d586885402a3548bd15833381f511a8f95300e6afcbcf208aff8ccab2dc349e.json": "19e58d9b3f01a5a4adfece0c6e5d3e98e6244959586f37ac49d003b2aa11dcbc",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/a4e86740d85b9c71cb0a3316bb7556e914a452f32569f29a3e3e6cd3083d17d0.json": "f8c03a8103cc5cb53b95b24685c4b1ec938f659b14d40707b93a2877f9465bbf",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/9f37146b289e38fa90123b74c673cf239be3235426f0814d32706d70c1212540.json": "93dd3cb53eef1e6a58e7a1888c6addb6713219612af53fa97bb07b406789da86",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/285d6a8655c32e9112fd522f0d680904d9574211c599ad5fa7a700b55a02dd58.json": "8e01687e85fa6fcd4c4c938fd6fba853681e7ff44485bd356362aa0e16db2485",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/e42e6209a74854884e65db2a7162fd1426854692b5431d34195f2aae60d961ac.json": "f3b027deddcc1ae55edc2d35441afceb26cabb4a6ec2d670be1d6fc4d5992240",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/1094aee8f4079128ac40c200321f913428f47919b8a7a36bb7b27facfd8d7887.json": "a04f6d04b8bb1776a6c8b38abd521be9676c369ac69a92bc12435482958fd996",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/6705a2d6acc849a470430904abe9c148ee2a00d6e75ea45c491808d6f3b57700.json": "f65c49c4681009fc9250bc4b028df48b4ff0c1b1a0f524d9be4a8dfa5a15de5f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/eed84f3cd590a1b5ae85ebd98baa056b7edc5c07b556dd729fbcdd98c6c6982c.json": "1d9c3072243da307c961e0b42a0f174a3ad112468c3a67c7bcb70ad60fcaadbd",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/83e1baa7d2bb29c2af100822f415aec79a07d5118da412e817dfa5b17a2f3c69.json": "42760c4a342962478e72d554548a5fa8c044faab00176b254eca928d3ea4dfae",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/e1ebfb375d9c8eb6bc645c93438dd875e0d38de5b687efebd932d29d1ea0a3eb.json": "1e17eed1d45d725ac95ef25737bc4ad3b2849bf8a5bf66d4179e112ad1c40072",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/0073ff4db2d03935453c5ed941a5bfda119d8943b03812bf284a86f7d3ff3e04.json": "353f3e026e6332069ef1df035cb3f3898027b178b3056aad185870af8e3fa475",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/df1f27e115295316ed78615ae8ad85d18f77a912a083b215b40d1a625724f873.json": "63cd403ba2336bc22e50c7cc18846f114fe695f9bcff01184a608793c0858408",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/df1f27e115295316ed78615ae8ad85d18f77a912a083b215b40d1a625724f873.json": "63cd403ba2336bc22e50c7cc18846f114fe695f9bcff01184a608793c0858408",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/9a83b586b9b7cbc64bce1729ec5fbf53e1bd9db40113548299738bb046316c0f.json": "80c1470e38b7af2b702b24ce2f7331aaf3eaed46263e14d43da5a70b7cecc461",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/2fd96400afe7d72b236a8711c097fa5579b8d616388c0d38bc87b390f5597beb.json": "74887e3211aa017a12ea1f469720152dc72127a695e64ce6ede0a4cf954f6b07",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/0009f79c2eadbf99b94479225b88b2f2691569169df22ba746e085f9c1d9ede7.json": "1a35d076b37f480d58579e31ae0851dc9d4dcae6ca96532edd91cc6768fe1230",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/2fbee15013e5c691c936e0e64600ee67eac713416f448c43b2eeaf9496338a77.json": "2f0f95cec014fe0ef89bfc6d875f9731a369c7c01d392fbcce5d2f8448d05703",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/3b293217c4d6b6d2a5d5de82993a2ee2a8df5c7488f350947b97e956a7c38498.json": "c51ef78ca1d960d128e452158d68f3b418b00c2b7b898dfd5dcc3cc548c51bca",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/89a205ec44a01c088d27ae64260bde22f79e4c7903d9d82ad81aa269f4547ba9.json": "3801ee1e5067ee76b16e8fedfb9c2450ecbff9e68d5b9e986d3fa9fa732548a2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/9cc6a1fabbda521a6e994bd52323b19e7f892eed23ee426600e4bc02020aa50e.json": "0686aae59f84fa028c94c32e17509fa511bf793f8630ebf003452e715bd740a0",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/2c745394b659e33dc1fc0f912ccd12a5ea2de86e202719164dec9cc0d6484f42.json": "22053def77fd928a1affc87d0336fbfb85821a3d7dd59699068680323e798721",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/e403a9f8f9ad6a64033d8ac857372d21426f12d1621f004040606c952ea33e4b.json": "fb68bc7f4027a670558214ee6926bd3db8ed3cd0cd5a6ae95b5c43d4f6a9b506",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/f2204553e08b79c5e24752044d6cc79334d6047e9ade5da38540e6b3d6fac6aa.json": "ec612da82756f74a4eb59a5d4233bac0221c23346f61ff87fe21feb3bc7c0117",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/e403a9f8f9ad6a64033d8ac857372d21426f12d1621f004040606c952ea33e4b.json": "fb68bc7f4027a670558214ee6926bd3db8ed3cd0cd5a6ae95b5c43d4f6a9b506",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/50f97ab86fcf6d467075e4a416b4ab6cf1976bf9aea31644831f8155ed806a98.json": "2cb7eff177dafb95d0811417450495f6b5ec0ef95e999b32a5b31a0eb78bfc58",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/c03bb46d905a3c44e53bdfc994c25f26c093e8aa856823ec7c28bef5050a5378.json": "51e9a97e8abebea629a484f7dc665079037ff2c4f0f439090be988ffdc04ae19",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/843f81c6eddfc2372a1c11238124ba10d84cbf5211959d89fed9433d80af3b6d.json": "9d43cde13ae32d2d968c6d7b3965ea3d62b0b9af8211da74f00ee0078a65c0aa",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/7eb97867f1cc6a076b5e0d939449315704d93c1f26f6d85970c3cf69f3a3506f.json": "4b889947136a6ef94a031be96017553491ea12a5309235a9770419d88b287b64",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/31b88f8193b3cdc1f8f284d89ec57d78b24d584a5a96318da6145390b5a9f308.json": "793509d65bf7018543179ffb0632c3d0984f5f0ba8405d6bdda822407ccac720",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/6591f4e6cdb325a632d9da5bbfab435980cba8e0a978acfd96af94df97ff5fe4.json": "8ce98e73dfc49abaf247fb93a09d004e9b76bcba30b0d42b2ed069a4b8a079ed",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/74021813469346c27171d6a72e07775b415445e9fa13abcaf89770e2d5fc14b1.json": "1480e3c81de2b905930b454a5f951d20fa999ab5bf984ad075cf46bd0fc4d6ec",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/0cf315c5b1087cda7a96fb0ef40108906318b9055a9ee752bf1b664cf6d5d925.json": "023dea03b199304a0bc86545e6b06947d0ed736d8ee1adf820dcafad7ad30365",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/859ee05ba5eb423a4b9faa4ff8206897ebba8678432bcd4534be905684089d9d.json": "98d51898c678e09958a737fb97fd6e83093f4c2662ea0b96cf75ebdd8c67c251",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/31ef718a427bd644bc2726b61e40796869f6d536340a03ffcc8fdf0be827620e.json": "dc44b04a0a9a1e0708f9e0111cdcde054384df3fd5f89cc845e511dead400d8c",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/2317e4b8fb184f6136cf620535179ab1efc4272ce4c587dca8326aae2623d61e.json": "34e9008a9651f44a28515e43607fc0154a7b805276f826f5050cbba597d84984",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/7d9b02fbd744e7977beab67033fbbcc4d0207fcc5aca3eb72846e9b4a96345ce.json": "e66b932b68b011590d3b1fefea4a04e7362e5ba9b9126bec97737111cb42a900",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/8db02279241e838c59a9af773e1beda17e3d0f8e037f017ec9610c7ad1a1c238.json": "befa1049381f510406ee781969bf51660f3f2e3657c1ad433e3f24ba3c2517a2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/2bc5993f48e1fd69dd2c8ebb58b12d85f542d9dbd198b1158e31db48645d76d8.json": "13862ce5d630fe68db0fb5948a1ce901896a2242deeaf8d391db9d2cc2565f25",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/084e53e93dde14983e2ce495689c4354bdc040e4064e2328911d93419c646294.json": "59a3fafe0e11706954f98b56966164003e043aab117789619114db82fd220864",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/aa39b119b4528aeca54d8a1131fc4274a435b63a34ca8cbbfe1d49a54664e58f.json": "4bfbd6314b5adf4e9d7a745eabf6e96e66296c7020c890cce36c79729feaa421",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/e46fb931db73efa2685833da5823a39e964df5283516c1dc986790d26d50c6a5.json": "98775c490c55d0901e1bcbc741ba7570e04f3e6381b5cb0c317a27023ae50be4",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/9fb391b71173b6b06dc1cea146b4e06d1ab42790f304b37eb31d70733e46f6e1.json": "87f300bd6be9a82c313c0c6c5cefbf8d9a3a5dc37c5610adbb6a5066b2acc790",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/01842f1dae1389e93350bbaef717c8db877403ee8af955ed6be38d4b0423fc84.json": "b9c6845b4d0c6e4b5739f431d5ad0409089b4b16d23b77ff4bae033a4a5cdba2",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/a13fd8bbf634511d570d50fda44a6de121bea013a9b3a5a5b7b9a6ccbbe4adc6.json": "11ee6d9ad0a0f35d46524a883ac6165e4205ad29b38da051c0ddaf55f70f362d",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/55cbc18e8c75668b7623b14cebea3c40e469e0ac2a7dfa9b2b99769a54398f23.json": "6b42a391e987b405bd0c0d0a2ffd9144683b840065ee8785cb0a879f2b2c9a21",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/2b3c44ed745fc0177f0cd2ddf9dce18fad48d66fdcdf784a018d8e3b8401aff0.json": "09698caf3dd7c65351114789ccde1c8a98701af3dced07f05da6630afb6a2355",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/7ca84777c0f78c4328ed88112bd7be71800dbd281df26e20f6eb65e40fc042a9.json": "30afc6cec2ce67bb9bf8865a2fda7a7c4a340d0c3b1701a213fe95a635837fb4",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/126c9902271fc44e2c1ad9a54dfb121fc1ebbfc9ebfa8fbe0f3cebcc62c071c8.json": "d26adc70da25cb4b10489a44e894a95fcb5408705b1136cf363d31d0023715c6",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/82184b2d740a3dec5a371988134663ff2eb788719929f188a61912d1c5bee747.json": "333d8d3bf08b151eb2c35826dfa1410e10089409bf41642587463118ba338c45",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/227e5ae1b9887702764f0316d99dd3f04f0628c4c2c13a032c2112dadb4dc585.json": "968ff24d3d127c769491b8cbc669a3c0c4e92b192cc1af5cc3735765e675cb7b",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_3/identical_official_scores/3c85a9771b48e3e57ac97cfe3d1054572d3015407c340af54526b4cf41e8a50b.json": "3f6476bd9b6f8009ae0291de87fc5b86644beff4544ab2543e11e66cc61b1e7f",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_2/identical_official_scores/d3fef4211b85469b783d4dddffd3863351ae98dbd2607b5dbc9e8a685fb07643.json": "112e50e3e173bd28501a5f8429e25f234e2c6413c53b863b33af9a0d006cac22",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_0/identical_official_scores/d53cd89007c67fbc88f5f25fb76950bcaa6bcef183c65fb3103eeb18e0197a90.json": "9e967b53d17fcf6d2ae115f92a5c9e23bd03204fbd5a904db9618528e1a440c9",
+    "analysis/optimization_20261003_r50/parallel_official_workers/worker_1/identical_official_scores/c133bffee2c7ac918a14804276f4e9fa7a01be6eb9b13dda55d6282c665e01af.json": "35333e1bb15e9bc9e09d7f871382f1f7dbec891ee6721d55faaff8b54996aafd"
+  }
+}
