@@ -1,0 +1,80 @@
+[32m2026-10-05 04:46:32.198[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 5635800, 交易日数: 1212[0m
+[32m2026-10-05 04:46:33.655[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.121510, std=0.110245, ICIR=1.1022, IC>0占比=89.19%[0m
+[32m2026-10-05 04:46:35.399[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.3728, Top1年化绝对收益=0.3983[0m
+[32m2026-10-05 04:46:39.506[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0323, (1-turnover)=0.9677[0m
+[32m2026-10-05 04:46:39.514[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.121510×0.4 + 0.3728×0.3 + 0.9677×0.3 = 0.450757[0m
+[32m2026-10-05 04:47:05.026[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 5635800, 交易日数: 1212[0m
+[32m2026-10-05 04:47:06.489[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.121510, std=0.110245, ICIR=1.1022, IC>0占比=89.19%[0m
+[32m2026-10-05 04:47:08.237[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.3728, Top1年化绝对收益=0.3983[0m
+[32m2026-10-05 04:47:12.180[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0323, (1-turnover)=0.9677[0m
+[32m2026-10-05 04:47:12.180[0m | [1mINFO    [0m | [36mevaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.121510×0.4 + 0.3728×0.3 + 0.9677×0.3 = 0.450757[0m
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_nystrom_ridge_complete_scheme_20261004.py", line 173, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_nystrom_ridge_complete_scheme_20261004.py", line 155, in main
+    predict(module,record,candidate_path=destination/'candidate',mapping_path=SOURCE/'future_return_mapping.json')
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_nystrom_ridge_scheme_20261004.py", line 46, in predict
+    ctx,model_checks=build_context(graph,inputs,test,copied_native,copied_root,mappings)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\whole_scheme_future_runtime_20261004.py", line 106, in build_context
+    raw=trainer.predict_arrays(trainer.load_bundle(source),vx,dates=dates,valid=valid)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\fourier_tuning_model_sources_20261004.py", line 20, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\nonlinear_stacking_model_sources_20261004.py", line 21, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\fourier_ridge_model_sources_20261004.py", line 20, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\additive_ridge_model_sources_20261004.py", line 20, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\expanded_stacking_model_sources_20261004.py", line 21, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\catboost_tuning_model_sources_20261004.py", line 19, in predict_arrays
+    def predict_arrays(bundle,x,dates=None,valid=None):return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\neural_tuning_model_sources_20261004.py", line 19, in predict_arrays
+    def predict_arrays(bundle,x,dates=None,valid=None):return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\stacking_model_sources_20261004.py", line 23, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\regularization_model_sources_20261003.py", line 19, in predict_arrays
+    def predict_arrays(bundle,x,dates=None,valid=None):return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\linear_model_sources_20261003.py", line 23, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\pairwise_model_sources_20261003.py", line 20, in predict_arrays
+    def predict_arrays(bundle,x,dates=None,valid=None):return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\neural_window_model_sources_20261003.py", line 20, in predict_arrays
+    def predict_arrays(bundle,x,dates=None,valid=None):return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\neural_ensemble_model_sources_20261003.py", line 29, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\neural_seed_model_sources_20261003.py", line 27, in predict_arrays
+    def predict_arrays(bundle,x,dates=None,valid=None):return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\catboost_model_sources_20261003.py", line 29, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\objective_model_sources_20261003.py", line 28, in predict_arrays
+    return previous.predict_arrays(bundle,x,dates=dates,valid=valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\cross_section_model_sources_20261003.py", line 33, in predict_arrays
+    return previous.predict_arrays(bundle,x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\train_diverse_backbones_20261003.py", line 80, in predict_arrays
+    model=network(x.shape[1],bundle['config']).to(device);model.load_state_dict(bundle['state']);model.eval()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\train_diverse_backbones_20261003.py", line 29, in network
+    for hidden in cfg['hidden']:
+                  ~~~^^^^^^^^^^
+KeyError: 'hidden'

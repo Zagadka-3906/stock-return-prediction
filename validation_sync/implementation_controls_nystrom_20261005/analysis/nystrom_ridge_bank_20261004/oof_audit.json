@@ -1,0 +1,465 @@
+{
+  "status": "passed",
+  "configurations": {
+    "rank_nystrom64_s1_l01": {
+      "kind": "ridge_nystrom",
+      "target": "y_rank",
+      "ridge_lambda": 0.1,
+      "chunk_rows": 32768,
+      "clip_z": 8.0,
+      "lengthscale": 1.0,
+      "landmark_components": 64,
+      "seed": 20261004,
+      "kernel_mass": 128.0,
+      "singular_value_floor": 1e-12,
+      "reserve_available_ram_GiB": 14.0,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ]
+    },
+    "rank_nystrom128_s1_l01": {
+      "kind": "ridge_nystrom",
+      "target": "y_rank",
+      "ridge_lambda": 0.1,
+      "chunk_rows": 32768,
+      "clip_z": 8.0,
+      "lengthscale": 1.0,
+      "landmark_components": 128,
+      "seed": 20261004,
+      "kernel_mass": 128.0,
+      "singular_value_floor": 1e-12,
+      "reserve_available_ram_GiB": 14.0,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ]
+    },
+    "return_nystrom64_s1_l01": {
+      "kind": "ridge_nystrom",
+      "target": "y_ret_1d",
+      "ridge_lambda": 0.1,
+      "chunk_rows": 32768,
+      "clip_z": 8.0,
+      "lengthscale": 1.0,
+      "landmark_components": 64,
+      "seed": 20261004,
+      "kernel_mass": 128.0,
+      "singular_value_floor": 1e-12,
+      "reserve_available_ram_GiB": 14.0,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ]
+    },
+    "return_nystrom128_s1_l01": {
+      "kind": "ridge_nystrom",
+      "target": "y_ret_1d",
+      "ridge_lambda": 0.1,
+      "chunk_rows": 32768,
+      "clip_z": 8.0,
+      "lengthscale": 1.0,
+      "landmark_components": 128,
+      "seed": 20261004,
+      "kernel_mass": 128.0,
+      "singular_value_floor": 1e-12,
+      "reserve_available_ram_GiB": 14.0,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ]
+    }
+  },
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "boundary_controls": {
+    "rank_nystrom64_s1_l01_2020": {
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "4044a47533f6f8de3765f18fa8c940f043f6211d96e5cb57d7a60c6d05ab7959",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom64_s1_l01_2021": {
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "b19a99d13feae101be5bab38304f24e36c831af369cecc307ee7ce0668e9bbe3",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom64_s1_l01_2022": {
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "85614f67ab97829cb2ff61e5dace27fb1fed4f32971c594b77ad18bd729d11d2",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom64_s1_l01_2023": {
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "663eef6ea6b9cbdbc9d2754ab3ab4787c84a4c57b3d372962e2ed030ecfd054f",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom64_s1_l01_2024": {
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "bda0c98bd63b40d3818ef4b2697ed3b9fb0cb0a555f64c70381d351394a99eed",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom128_s1_l01_2020": {
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "4044a47533f6f8de3765f18fa8c940f043f6211d96e5cb57d7a60c6d05ab7959",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom128_s1_l01_2021": {
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "b19a99d13feae101be5bab38304f24e36c831af369cecc307ee7ce0668e9bbe3",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom128_s1_l01_2022": {
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "85614f67ab97829cb2ff61e5dace27fb1fed4f32971c594b77ad18bd729d11d2",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom128_s1_l01_2023": {
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "663eef6ea6b9cbdbc9d2754ab3ab4787c84a4c57b3d372962e2ed030ecfd054f",
+        "test_data_read": false
+      }
+    },
+    "rank_nystrom128_s1_l01_2024": {
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "bda0c98bd63b40d3818ef4b2697ed3b9fb0cb0a555f64c70381d351394a99eed",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom64_s1_l01_2020": {
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "c98cbc42f56ca41486ed24fa98a6b4d6d76dcf6831f31553c6fa95702695a919",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom64_s1_l01_2021": {
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "4efef935eebbda80ecb893abc17895e45f610d2db99315c7304534f69956324a",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom64_s1_l01_2022": {
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "e5ad393cc2d5a143219d1a1b3c5d6e9ee0c13ad2cf10b9761684a91edb111e34",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom64_s1_l01_2023": {
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "aea3551c0ae37014f507af16318600a8816c6b477b16d43d2cdd41c9dd8e51e7",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom64_s1_l01_2024": {
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "0cfffa9ba00dcff5974e49cfdb83723006968b555c0facc2b50802e3152e0252",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom128_s1_l01_2020": {
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "c98cbc42f56ca41486ed24fa98a6b4d6d76dcf6831f31553c6fa95702695a919",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom128_s1_l01_2021": {
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "4efef935eebbda80ecb893abc17895e45f610d2db99315c7304534f69956324a",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom128_s1_l01_2022": {
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "e5ad393cc2d5a143219d1a1b3c5d6e9ee0c13ad2cf10b9761684a91edb111e34",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom128_s1_l01_2023": {
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "aea3551c0ae37014f507af16318600a8816c6b477b16d43d2cdd41c9dd8e51e7",
+        "test_data_read": false
+      }
+    },
+    "return_nystrom128_s1_l01_2024": {
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "learned_preprocessing_bit_identical": true,
+        "small_model_retraining_bit_identical": true,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096
+      },
+      "actual_prefix": {
+        "status": "passed",
+        "actual_saved_model80_day_prefix_bit_identical": true,
+        "rows": 372000,
+        "raw63_training_features_targets_andkeys_bit_identical": true,
+        "reference_info_sha256": "0cfffa9ba00dcff5974e49cfdb83723006968b555c0facc2b50802e3152e0252",
+        "test_data_read": false
+      }
+    }
+  },
+  "actual_annual_fits": 20,
+  "new_quality_scores": 0,
+  "test_data_read": false
+}
