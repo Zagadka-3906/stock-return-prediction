@@ -26,22 +26,36 @@ def main():
     from frozen_provenance_execution_scope_20261004 import FrozenProvenanceExecutionScope
     scope = FrozenProvenanceExecutionScope(bank, [Path(__file__),
         ROOT / 'analysis/neural16384_full_run_20261005.json',
+        ROOT / 'analysis/neural16384_actual_resource_recorder_20261005.py',
         ROOT / 'analysis/frozen_provenance_execution_scope_20261004.py',
         ROOT / 'analysis/locked_read_hash_cache_20261004.py'], {
         'script': str(Path(__file__)), 'driver_source_sha256': fresh_sha(Path(__file__)),
         'actual_full16384_training_no_one_step_substitution': True,
         'all_qualified_round66_scientific_scope_complete_before_start': True}, ROOT / 'analysis').install()
     failure = None
+    from neural16384_actual_resource_recorder_20261005 import ActualResourceRecorder
+    recorder = ActualResourceRecorder(bank.OUT)
+    original_fit = bank.engine.fit_arrays
+    resources = None
     try:
+        recorder.start()
+        bank.engine.fit_arrays = recorder.measured_fit(original_fit)
+        bank.engine.resource_recorder = recorder
         bank.all_oof()
     except BaseException as error:
         failure = f'{type(error).__name__}: {error}'
         raise
     finally:
-        report = scope.close(failed=failure is not None)
+        bank.engine.fit_arrays = original_fit
+        try:
+            if recorder.thread is not None:
+                resources = recorder.finish()
+        finally:
+            report = scope.close(failed=failure is not None)
         bank.OUT.mkdir(parents=True, exist_ok=True)
         with (bank.OUT / 'training_execution_scope.json').open('x', encoding='utf-8') as stream:
             json.dump({'status': 'passed' if failure is None else 'failed', 'failure': failure, **report,
+                'actual_resources': resources,
                 'new_quality_scores': 0, 'test_labels_read': False}, stream, ensure_ascii=False, indent=2)
 
 

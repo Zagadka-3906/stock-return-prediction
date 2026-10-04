@@ -40,6 +40,7 @@ def freeze():
     assert control['status'] == 'completed' and control['child_result']['status'] == 'one_step_completed'
     sources = [Path(__file__), SOURCE, STORAGE, frontier,
         ROOT / 'analysis/run_neural16384_full_bank_20261005.py',
+        ROOT / 'analysis/neural16384_actual_resource_recorder_20261005.py',
         ROOT / 'analysis/neural16384_full_run_20261005.json',
         engine.FEATURE_FILE, engine.MANIFEST, ROOT / 'data/raw/训练集.csv',
         ROOT / 'run.py', ROOT / 'src/features.py', ROOT / '后续选模标准.md',
@@ -74,8 +75,12 @@ def all_oof():
             while not (OUT / name / f'info_{year}.json').exists() and psutil.virtual_memory().available < 14 * 2**30:
                 time.sleep(10)
             boundary = OUT / f'boundary_control_{name}_{year}.json'
+            if hasattr(engine, 'resource_recorder'):
+                engine.resource_recorder.context = {'stage': 'actual4096_row_future_label_poison_control', 'model': name, 'year': year}
             if not boundary.exists():
                 dump(boundary, engine.boundary_control(year, cfg, features), immutable=True)
+            if hasattr(engine, 'resource_recorder'):
+                engine.resource_recorder.context = {'stage': 'actual_complete_annual_fit_and_reload', 'model': name, 'year': year}
             info = engine.train_one(name, year)
             baseline = read(BASELINE / f'info_{year}.json')
             for key in ('rows', 'days', 'first', 'last', 'cutoff_exclusive', 'last_label_end',
