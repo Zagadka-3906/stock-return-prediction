@@ -1,0 +1,137 @@
+{
+  "status": "frozen_complete32pass_model_and_prospective_complete_output_search_design",
+  "at_local": "2026-10-05T20:46:51.615630",
+  "model_configurations": {
+    "rank_top10_sgd_l2e4_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "top10",
+      "alpha": 0.0001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    },
+    "rank_top10_sgd_l2e3_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "top10",
+      "alpha": 0.001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    },
+    "rank_decile_sgd_l2e4_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "decile",
+      "alpha": 0.0001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    },
+    "rank_decile_sgd_l2e3_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "decile",
+      "alpha": 0.001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    }
+  },
+  "native_annual_fits_required": 20,
+  "native_final_fits_required": 4,
+  "validation_rows": 5635800,
+  "validation_days": 1212,
+  "validation_codes": 4650,
+  "provided_centered_rank_labels_used_only_inside_mature_past_training": "Learn exact pooled past rank.9 or .1-.9 class quantiles; final classification probabilities/expected percentile must be mapped to one-day returns using mature past data.",
+  "training_row_order": "Frozen Parquet physical order, full eligibility key multiset independently matches original mature filter; training can iterate past rows without randomizing CV dates.",
+  "quality_rounds": [
+    79,
+    80
+  ],
+  "complete_previous_rounds": [
+    78,
+    79
+  ],
+  "expected_total_records": {
+    "79": 100,
+    "80": 98
+  },
+  "expected_wave_records": {
+    "318": 49,
+    "319": 8,
+    "320": 18,
+    "321": 25,
+    "322": 25,
+    "323": 56,
+    "324": 17
+  },
+  "membership_top_rest_weights": [
+    0.005,
+    0.025,
+    0.075,
+    0.2
+  ],
+  "layer_floor_alpha": 0.98,
+  "retentions": [
+    0.0,
+    0.97,
+    0.98,
+    0.984,
+    0.99
+  ],
+  "UP_deltas": [
+    -0.04,
+    -0.02,
+    0.0,
+    0.02,
+    0.04
+  ],
+  "standalone_alphas": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "standalone_auxiliary_weights": [
+    0.0,
+    0.25
+  ],
+  "adaptive_rules": "Preserve matching current three-role/standalone engine coarse andfine search, full prior graph and agreement gates, pure-S selection; actual generator count controls required before scoring.",
+  "native_final_sources_prepared": true,
+  "official_scheme_code_and_generator_controls_still_pending": true,
+  "complete_official_quality_causal_candidate_freezing_fullfuture_and_full_board_updates_required": true,
+  "test_labels_read": false,
+  "actual_completed_annual_fits": 0,
+  "actual_completed_final_fits": 0,
+  "new_quality_scores": 0,
+  "global_resource_exhaustion_established": false
+}
