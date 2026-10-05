@@ -1,0 +1,1335 @@
+{
+  "status": "research_directions_resumed",
+  "continuous_goal_active": true,
+  "last_completed_round": 64,
+  "validation_best_completed": 0.45100769827200593,
+  "new_backbone_configurations_trained": 127,
+  "new_annual_oof_fits_completed": 667,
+  "test_labels_read": false,
+  "directions": [
+    {
+      "priority": 1,
+      "method": "Neural seed ensembles",
+      "reason": "R15 improved through the 512-dimensional MLP; R21 compares four additional individual configurations. The new same-capacity seed predictions have not yet been evaluated as a consensus.",
+      "candidate_constructions": [
+        "equal daily-rank average of original512 plus new32-epoch seeds",
+        "equal average of all512 variants",
+        "capacity-diverse512+1024 ensemble"
+      ],
+      "required_controls": [
+        "freeze members and weights before scoring",
+        "same 2020-2024 continuous official CSV score",
+        "full-training fit before test-X inference",
+        "date-aligned rank fusion and complete-day replay"
+      ],
+      "status": "R22 complete:174 official continuous-OOF records, full candidate andcausal/ranking QA passed; no gain over R21",
+      "execution_status": "completed",
+      "completed_round": 22,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 2,
+      "method": "Standalone complete new-model backbones",
+      "reason": "R14-R21 primarily augment a retained tree/TopK foundation. That search does not establish whether the newly trained models win as their own complete output pipelines.",
+      "candidate_constructions": [
+        "all21 new raw backbones under a common causal smoothing and retention pipeline",
+        "auxiliary-head weights0 and0.25",
+        "preset alpha0.8,0.9,0.95; then adaptively refine only within declared axes"
+      ],
+      "required_controls": [
+        "new models compete without giving the retained scheme priority",
+        "standalone membership must derive from the new model rather than retained TopK predictions",
+        "same validation dates and official objective",
+        "actual calibrated future-one-day-return CSV score",
+        "no test score used for selection"
+      ],
+      "status": "R23 andR24 complete:558 and98 scored full schemes; both candidates andcausal/ranking checks passed; no gain overR21. Further standalone comparisons queued.",
+      "standalone_models": 27,
+      "execution_status": "completed_with_later_variants_queued",
+      "completed_round": 24,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 3,
+      "method": "Causal regime-conditioned fusion",
+      "reason": "Fixed weights need not be equally useful in every volatility state; regime inputs can be defined using current known features and trailing observations.",
+      "required_controls": [
+        "thresholds and learned preprocessing fit only past training windows",
+        "no centered rolling windows or full-period percentile thresholds",
+        "same-day and future-append invariance",
+        "official composite as sole final criterion"
+      ],
+      "status": "R26 completed:267 official continuous-OOF records; selected candidate and causal/ranking checks passed",
+      "execution_status": "completed",
+      "completed_round": 26,
+      "validation_gain": 4.8283156938833116e-05
+    },
+    {
+      "priority": 4,
+      "method": "Neural rolling training windows",
+      "reason": "All new banks currently expand their history. Prespecified shorter past windows may complement the selected wider network.",
+      "required_controls": [
+        "preserve original mature-label cutoff",
+        "choose window length before scoring",
+        "no validation-driven epoch stopping",
+        "full five-fold OOF and same connected scoring"
+      ],
+      "status": "R23 andR24 complete:558 and98 scored full schemes; both candidates andcausal/ranking checks passed; no gain overR21. Further standalone comparisons queued.",
+      "execution_status": "completed_with_later_variants_queued",
+      "completed_round": 24,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 5,
+      "method": "Matched RankNet width/temperature and universal complete-output role augmentation",
+      "status": "R25 completed:452 official continuous-OOF records; selected candidate and causal/ranking checks passed",
+      "new_configs": 4,
+      "all_role_signals": 35,
+      "execution_status": "completed",
+      "completed_round": 25,
+      "validation_gain": 9.745595067756074e-05
+    },
+    {
+      "priority": 6,
+      "method": "One-day raw-feature linear ridge models",
+      "reason": "Archived Ridge runs targeted five-day calibration; no complete one-day raw-feature ridge backbone is in the current catalogue.",
+      "configurations": 6,
+      "expected_annual_fits": 30,
+      "status": "Rounds[28, 29] completed:242 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "queued_rounds": [
+        28,
+        29
+      ],
+      "execution_status": "completed",
+      "completed_official_rounds": [
+        28,
+        29
+      ],
+      "pending_official_rounds": [],
+      "completed_round": 29,
+      "completed_official_records": 242,
+      "validation_gain": 1.1044559900974527e-05
+    },
+    {
+      "priority": 7,
+      "method": "Complete-layer joint coordinate refinement",
+      "reason": "Later full-output augmentation rounds fix their earlier foundation. Those rounds cannot establish whether earlier weights should change after all newly added signals.",
+      "status": "Rounds[30] completed:146 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "new_annual_fits": 0,
+      "expected_records_rule": "1+12 times number of active augmentation axes, plus fixed scalar and output grids",
+      "execution_status": "completed",
+      "queued_rounds": [
+        30
+      ],
+      "completed_official_rounds": [
+        30
+      ],
+      "pending_official_rounds": [],
+      "completed_round": 30,
+      "completed_official_records": 146,
+      "validation_gain": 4.565705498194017e-05
+    },
+    {
+      "priority": 8,
+      "method": "Matched neural dropout andweight-decay controls",
+      "configs": 4,
+      "expected_annual_fits": 20,
+      "reason": "Original512-wide MLP improved the complete validation scheme; previous capacity/seed/window banks all retained dropout0.05 andweight decay0.0001. Compare each independently while keeping structure, original seed,32 epochs andpast training rows fixed.",
+      "status": "Rounds[31, 32] completed:178 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "test_labels_read": false,
+      "execution_status": "completed",
+      "queued_rounds": [
+        31,
+        32
+      ],
+      "completed_official_rounds": [
+        31,
+        32
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 178,
+      "completed_round": 32,
+      "validation_gain": 1.0897208085780541e-05
+    },
+    {
+      "priority": 9,
+      "method": "Mature past-OOF learned ridge stacking of all45 current backbone signals",
+      "reason": "Existing fusion searches prescribe weights. No current experiment learns weights from past annual OOF forecasts across all45 frozen new individual and virtual configurations.",
+      "configs": 6,
+      "targets": [
+        "supplied centered one-day rank",
+        "one-day return"
+      ],
+      "ridge_lambdas": [
+        0.001,
+        0.1,
+        1.0
+      ],
+      "first2020_fold": "fixed matching raw-feature ridge model already fitted on mature2018-2019 training data; no earlier OOF forecast history is invented",
+      "subsequent_training": "Only mature earlier annual OOF forecasts and labels; normalize the45 current-day member ranks using past fitting rows",
+      "expected_new_learned_oof_fits": 24,
+      "expected_annual_artifacts": 30,
+      "required_controls": [
+        "same five annual forward validation intervals",
+        "every child model and meta fit has a mature past-label cutoff",
+        "model input pool uses current price-valid rows, independent of target availability",
+        "no validation-year label enters its meta model",
+        "actual mapped official CSV and complete scheme comparison",
+        "frozen full-training parameters before future inference"
+      ],
+      "status": "Rounds[33, 34] completed:242 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "execution_status": "completed",
+      "queued_rounds": [
+        33,
+        34
+      ],
+      "input_routing_recovery": "analysis/oof_stacking_bank_20261004/input_routing_recovery_protocol.json",
+      "completed_official_rounds": [
+        33,
+        34
+      ],
+      "pending_official_rounds": [],
+      "completed_round": 34,
+      "completed_official_records": 242,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 10,
+      "method": "Matched neural rank-target offsets and learning rates",
+      "reason": "All ordinary512-wide rank-MSE banks retained learning rate0.001 and historical float32 target shift-0.5; direct centered provided rank targets and lower/higher rates have not received matched complete-output comparisons.",
+      "prespecified_grid": {
+        "rank_training_offsets": [
+          -0.5,
+          0.0
+        ],
+        "learning_rates": [
+          0.0005,
+          0.001,
+          0.002
+        ]
+      },
+      "reused_control": "rank512_e32; offset-0.5/lr0.001",
+      "new_configurations": 5,
+      "expected_annual_fits": 25,
+      "completed_annual_fits": 25,
+      "status": "Rounds[35, 36] completed:210 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "execution_status": "completed",
+      "queued_rounds": [
+        35,
+        36
+      ],
+      "expected_official_records": {
+        "35": 92,
+        "36": 118
+      },
+      "required_controls": [
+        "historical fitter matched control state and predictions exact",
+        "actual float32 fit-target SHA records",
+        "same raw training matrices, keys and provided targets",
+        "five mature-label folds and poisoned-future refits",
+        "fixed padded inference and complete-output cold-prefix checks",
+        "full mapped official CSV scoring, frozen scheme, then candidate inference"
+      ],
+      "target_interpretation": "Both affine targets are valid; original shift is not classified as leakage or an invalid model.",
+      "preflight": "analysis/neural_tuning_preflight_20261004/verification.json",
+      "full_baseline_and_shift_controls": "analysis/neural_tuning_round_baselines_qa_20261004/verification.json",
+      "resource_observations": "analysis/neural_tuning_resource_observations_20261004",
+      "test_labels_read": false,
+      "completed_official_rounds": [
+        35,
+        36
+      ],
+      "pending_official_rounds": [],
+      "completed_round": 36,
+      "completed_official_records": 210,
+      "validation_gain": 4.84547585083428e-06
+    },
+    {
+      "priority": 11,
+      "method": "Matched CatBoost learning rate, iteration budget, leaf regularization and depth",
+      "reason": "Earlier CatBoost only compared three target/depth configurations. Its15 actual annual fits cost232 seconds, leaving justified capacity to test matched optimization axes.",
+      "new_configurations": 5,
+      "expected_annual_fits": 25,
+      "completed_annual_fits": 25,
+      "prespecified_controls": {
+        "learning_rate_iterations": [
+          [
+            0.025,
+            600
+          ],
+          [
+            0.025,
+            1200
+          ]
+        ],
+        "l2_leaf_reg": [
+          1.0,
+          100.0
+        ],
+        "depth": [
+          10
+        ]
+      },
+      "reused_control": "cat_rank6_e600; seed20261013, depth6,lr0.05,600 iterations,l2_leaf_reg10",
+      "status": "Rounds[37, 38] completed:210 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "execution_status": "completed",
+      "queued_rounds": [
+        37,
+        38
+      ],
+      "expected_official_records": {
+        "37": 92,
+        "38": 118
+      },
+      "preflight": "analysis/catboost_tuning_preflight_20261004/verification.json",
+      "full_baseline_and_shift_controls": "analysis/catboost_tuning_round_baselines_qa_20261004/verification.json",
+      "resource_observations": "analysis/catboost_tuning_resource_observations_20261004",
+      "gpu_refit_bit_deterministic": false,
+      "test_labels_read": false,
+      "completed_official_rounds": [
+        37,
+        38
+      ],
+      "pending_official_rounds": [],
+      "completed_round": 38,
+      "completed_official_records": 210,
+      "validation_gain": 6.451369018217745e-05
+    },
+    {
+      "priority": 13,
+      "method": "One-day fixed hinge-basis additive ridge",
+      "reason": "The current one-day ridge bank is linear in63 supplied features. Fixed per-feature hinges test an uncovered additive nonlinear family without learned validation-year knots.",
+      "configurations": 6,
+      "expected_actual_annual_fits": 30,
+      "targets": [
+        "y_rank",
+        "y_ret_1d"
+      ],
+      "ridge_lambdas": [
+        0.001,
+        0.1,
+        1.0
+      ],
+      "basis": "Past-normalized clipped z followed by max(z-k,0), fixed k=-1,0,1;252 columns, no interactions.",
+      "preflight_status": "passed_independent_basis_sklearn_reload_and_batch_prefix",
+      "annual_training_status": "passed",
+      "queued_rounds": [
+        41,
+        42
+      ],
+      "expected_official_records": {
+        "41": 104,
+        "42": 138
+      },
+      "preflight": "analysis/additive_ridge_preflight_20261004/verification.json",
+      "training_registry": "analysis/additive_ridge_training_run_20261004.json",
+      "test_labels_read": false,
+      "future_qa_registry": "analysis/additive_ridge_future_qa_run_20261004.json",
+      "completed_actual_annual_fits": 30,
+      "future_qa_status": "passed",
+      "execution_status": "completed",
+      "future_qa": "analysis\\additive_ridge_future_pipelines_qa_20261004\\verification.json",
+      "resource_scope_audit": "analysis\\nonlinear_ridge_resource_scope_audit_20261004.json",
+      "completed_official_rounds": [
+        41,
+        42
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 242,
+      "completed_round": 42,
+      "validation_gain": 0.0,
+      "status": "Rounds[41, 42] completed:242 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 14,
+      "method": "Raw-plus-random-Fourier one-day ridge",
+      "reason": "Raw-feature linear andhinge-additive ridge do not supply joint nonlinear kernel features. Test a fixed seeded128-column Fourier map appended to63 raw normalized features.",
+      "configurations": 6,
+      "expected_actual_annual_fits": 30,
+      "lengthscales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "random_components": 128,
+      "basis_columns": 191,
+      "ridge_lambda": 0.1,
+      "seed": 20261004,
+      "targets": [
+        "y_rank",
+        "y_ret_1d"
+      ],
+      "projection_data_and_target_independent": true,
+      "independent_preflight": "analysis/fourier_ridge_preflight_20261004/verification.json",
+      "required_controls": [
+        "same raw training keys/matrices/targets as raw ridge_l01",
+        "mature boundary future-label poisoning",
+        "actual80-day model replay",
+        "same continuous mapped official CSV scoring",
+        "full fit frozen before future inference"
+      ],
+      "queued_rounds": [
+        43,
+        44
+      ],
+      "expected_official_records": {
+        "43": 104,
+        "44": 138
+      },
+      "training_registry": "analysis/fourier_ridge_auxiliary_runs_20261004.json",
+      "annual_training_status": "passed",
+      "test_labels_read": false,
+      "method_reference": "https://scikit-learn.org/stable/modules/kernel_approximation.html",
+      "completed_actual_annual_fits": 30,
+      "future_qa_status": "passed",
+      "execution_status": "completed",
+      "future_qa": "analysis\\fourier_ridge_future_pipelines_qa_20261004\\verification.json",
+      "resource_scope_audit": "analysis\\nonlinear_ridge_resource_scope_audit_20261004.json",
+      "completed_official_rounds": [
+        43,
+        44
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 242,
+      "completed_round": 44,
+      "validation_gain": 0.0,
+      "status": "Rounds[43, 44] completed:242 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 15,
+      "method": "67-parent mature past-OOF ridge including additive and Fourier models",
+      "reason": "The55-parent bank excludes12 newly trained additive/Fourier backbones; evaluate their joint past-OOF weights under the same official objective.",
+      "parents": 67,
+      "scheme_configurations": 12,
+      "expected_distinct_annual_fits": 24,
+      "expected_annual_forecast_artifacts": 60,
+      "new_child_annual_fits": 0,
+      "first_year_policies": [
+        "matching mature2018–2019 raw ridge",
+        "fixed equal-weight67-child daily ranks"
+      ],
+      "status": "Rounds[45, 46] completed:434 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "execution_status": "completed",
+      "queued_rounds": [
+        45,
+        46
+      ],
+      "expected_official_records": {
+        "45": 176,
+        "46": 258
+      },
+      "preflight": "analysis/nonlinear_stacking_preflight_20261004/verification.json",
+      "training_registry": "analysis/nonlinear_stacking_training_run_20261004.json",
+      "resource_scope": "analysis/nonlinear_stacking_resource_observations_20261004/protocol.json",
+      "global_resource_exhaustion_established": false,
+      "test_labels_read": false,
+      "completed_annual_forecast_artifacts": 60,
+      "completed_actual_annual_fits": 24,
+      "annual_training_status": "passed",
+      "resource_sampler_interruption_evidence": "analysis/nonlinear_stacking_resource_observations_20261004/summary.json",
+      "resource_sampler_recovery": "analysis/nonlinear_stacking_resource_observations_recovery_20261004/protocol.json",
+      "role_preflight_status": "passed",
+      "standalone_preflight_status": "passed",
+      "baseline_preflight_status": "passed",
+      "future_qa_status": "passed",
+      "completed_official_rounds": [
+        45,
+        46
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 434,
+      "completed_round": 46,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 16,
+      "method": "Matched Fourier capacity, penalty andseed controls",
+      "reason": "Current128-component family covers one seed andlambda0.1; test capacity while preserving total Fourier feature mass, and independently change penalty orseed.",
+      "new_configs": 10,
+      "expected_annual_fits": 50,
+      "capacity_components": [
+        256,
+        512
+      ],
+      "fixed_fourier_mass": 128.0,
+      "capacity_draws_not_nested_across_dimensions": true,
+      "penalty_controls": [
+        0.001,
+        1.0
+      ],
+      "seed_control": 20261005,
+      "targets": [
+        "provided one-day rank",
+        "one-day return"
+      ],
+      "status": "Rounds[47, 48] completed:370 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "execution_status": "completed",
+      "queued_rounds": [
+        47,
+        48
+      ],
+      "expected_official_records": {
+        "47": 152,
+        "48": 218
+      },
+      "preflight": "analysis/fourier_tuning_preflight_20261004/verification.json",
+      "future_implementation_control": "preset512-component model; no official test score",
+      "training_registry": "analysis/fourier_tuning_training_run_20261004.json",
+      "test_labels_read": false,
+      "completed_actual_annual_fits": 50,
+      "annual_training_status": "passed",
+      "future_qa_status": "passed",
+      "resource_scope_audit": "analysis/fourier_tuning_resource_scope_audit_20261004.json",
+      "completed_official_rounds": [
+        47,
+        48
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 370,
+      "completed_round": 48,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 17,
+      "method": "Causal temporal smoothing andcurvature after the complete selected output",
+      "reason": "Earlier smoothing operates on upstream signals; test a downstream per-symbol rankEMA after all model andmembership layers.",
+      "new_annual_fits": 0,
+      "queued_rounds": [
+        49
+      ],
+      "expected_official_records": {
+        "49": 96
+      },
+      "initial_grid": {
+        "alphas": [
+          0.5,
+          0.75,
+          0.9,
+          0.95,
+          0.98,
+          0.995
+        ],
+        "powers": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "mixes": [
+          0.025,
+          0.1,
+          0.25,
+          1.0
+        ]
+      },
+      "status": "Rounds[49] completed:96 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "execution_status": "completed",
+      "preflight": "analysis/final_output_temporal_preflight_20261004/verification.json",
+      "context_preflight": "analysis/final_temporal_context_preflight_20261004/verification.json",
+      "future_qa": "analysis/final_output_temporal_future_qa_20261004/verification.json",
+      "test_labels_read": false,
+      "completed_official_rounds": [
+        49
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 96,
+      "completed_round": 49,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 18,
+      "method": "Whole selected-scheme joint refinement including all late model additions",
+      "reason": "R30 exposes only4 older augmentation groups; later frozen-output rounds cannot adjust weights inside their foundations.",
+      "new_annual_fits": 0,
+      "kernel": "analysis/role_layer_replay_20261004.py",
+      "preflight": "analysis/role_layer_replay_preflight_20261004/verification.json",
+      "status": "Rounds[50] completed:242 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "execution_status": "completed",
+      "required_controls": [
+        "Each historical layer retains its own original retention andaccumulated shifts",
+        "A standalone replacement discards predecessor branches explicitly",
+        "Changing an earlier layer forces downstream recomputation",
+        "Known complete validation output andactual future CSV replay",
+        "Mature train-only calibration andofficial final-output scoring"
+      ],
+      "test_labels_read": false,
+      "implementation_control_statuses": {
+        "kernel": "passed",
+        "future": "passed",
+        "graph_compiler": "passed",
+        "validation_runtime": "passed",
+        "future_runtime": "passed",
+        "official_scoring": "passed",
+        "parameter_arms": "passed",
+        "complete_release": "passed"
+      },
+      "graph_compiler": "analysis/selected_scheme_graph_20261004.py",
+      "graph_preflight": "analysis/selected_scheme_graph_preflight_v2_20261004/verification.json",
+      "future_preflight": "analysis/role_layer_future_replay_qa_20261004/verification.json",
+      "checker_correction_evidence": "analysis/selected_scheme_graph_preflight_recovery_20261004.json",
+      "actual_selected_graph_assembler": "analysis/assemble_selected_scheme_graph_20261004.py",
+      "queued_rounds": [
+        50
+      ],
+      "joint_optimizer": "analysis/optimize_training_round50.py",
+      "complete_validation_runtime": "analysis/whole_scheme_replay_runtime_20261004.py",
+      "complete_future_runtime": "analysis/whole_scheme_future_runtime_20261004.py",
+      "completed_official_rounds": [
+        50
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 242,
+      "completed_round": 50,
+      "validation_gain": 2.9662892659321205e-05
+    },
+    {
+      "priority": 19,
+      "method": "Matched fixed additive hinge-layout sensitivity",
+      "reason": "Original252-column family uses only knots[-1,0,1]. Compare fixed narrow[-.5,0,.5] andwide5[-2,-1,0,1,2] using the same two one-day targets, three penalties, mature samples andfull continuous output score.",
+      "configurations": 12,
+      "expected_annual_fits": 60,
+      "expanded_columns": {
+        "narrow": 252,
+        "wide5": 378
+      },
+      "preflight": "analysis/additive_basis_preflight_20261004/verification.json",
+      "bank_protocol": "analysis/additive_basis_bank_20261004/protocol.json",
+      "resource_observations": "analysis/additive_basis_resource_observations_20261004/protocol.json",
+      "quality_status": "pending_actual_complete_output_comparison",
+      "test_labels_read": false,
+      "completed_actual_annual_fits": 60,
+      "annual_training_status": "passed",
+      "numerical_preflight_status": "passed",
+      "execution_status": "completed",
+      "native_future_model_qa_status": "passed",
+      "complete_scheme_preflight_status": "passed",
+      "actual_generator_preflight_status": "passed",
+      "queued_rounds": [
+        51,
+        52
+      ],
+      "expected_official_records": {
+        "51": 196,
+        "52": 258
+      },
+      "execution_evidence": "analysis/additive_basis_search_execution_20261004.json",
+      "resource_scope_audit": "analysis/additive_basis_resource_scope_audit_20261004.json",
+      "fulltraining_future_resource_scope_audit": "analysis/additive_basis_future_resource_scope_audit_20261004.json",
+      "completed_official_rounds": [
+        51,
+        52
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 454,
+      "completed_round": 52,
+      "validation_gain": 0.0,
+      "status": "Rounds[51, 52] completed:454 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 20,
+      "method": "Matched no-dropout seed/epoch models andequal-weight ensembles",
+      "reason": "Actual selectedR31 uses2.5% rank512_drop000_e32. Earlier neural seed ensembles retain dropout0.05; compare three new no-dropout seeds, matched seed18 epoch32/64 andfour fixed raw/rank equal-weight ensembles.",
+      "new_native_configs": 4,
+      "new_virtual_configs": 4,
+      "expected_new_annual_fits": 20,
+      "expected_annual_forecast_artifacts": 40,
+      "proposed_official_rounds": [
+        53,
+        54
+      ],
+      "expected_official_records": {
+        "53": 148,
+        "54": 178
+      },
+      "native_protocol": "analysis\\no_dropout_seed_bank_20261004\\protocol.json",
+      "ensemble_protocol": "analysis\\no_dropout_ensemble_bank_20261004\\protocol.json",
+      "quality_status": "pending_actual_complete_output_comparison",
+      "test_labels_read": false,
+      "completed_actual_annual_fits": 20,
+      "completed_virtual_annual_artifacts": 20,
+      "annual_training_status": "passed",
+      "virtual_assembly_status": "passed",
+      "execution_status": "completed",
+      "resource_sampler": "analysis/no_dropout_seed_resource_observations_20261004/protocol.json",
+      "official_rounds_not_yet_queued": false,
+      "resource_scope_audit": "analysis/no_dropout_seed_resource_scope_audit_20261004.json",
+      "future_model_qa_status": "passed",
+      "complete_scheme_qa_status": "passed",
+      "actual_generator_preflight_status": "passed",
+      "queued_rounds": [
+        53,
+        54
+      ],
+      "execution_evidence": "analysis/no_dropout_seed_search_execution_20261004.json",
+      "completed_official_rounds": [
+        53,
+        54
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 326,
+      "completed_round": 54,
+      "validation_gain": 3.0335526057578832e-05,
+      "status": "Rounds[53, 54] completed:326 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 21,
+      "method": "Scoped immutable-input read locks andSHA reuse",
+      "reason": "Actual recursive ensemble assembly repeats hashes of identical frozen inputs; reduce provenance overhead while preserving full hash checks anddenying writes for the cache lifetime.",
+      "preflight": "analysis/locked_read_hash_cache_preflight_20261004/verification.json",
+      "actual_recursive_control": "analysis/locked_ensemble_provenance_preflight_20261004/verification.json",
+      "actual_model_reuse_control": "analysis/locked_no_dropout_model_reuse_preflight_20261004/verification.json",
+      "new_quality_scores": 0,
+      "adopted_in_live_queued_rounds": true,
+      "recursive_control_status": "passed",
+      "actual_model_reuse_status": "passed",
+      "execution_status": "frozen_wrappers_queued_for_actual_rounds50_60",
+      "official_quality_comparison_not_claimed": true,
+      "actual_baseline_three_checks_seconds": 84.72179139999207,
+      "actual_cached_three_checks_seconds_including_setup_andexit": 11.219388400000753,
+      "actual_unique_immutable_inputs": 201,
+      "actual_hash_calls_per_arm": 897,
+      "background_andfilesystem_cache_not_matched": true,
+      "actual_complete_scheme_reuse_status": "passed",
+      "actual_complete_scheme_reuse_evidence": "analysis\\locked_no_dropout_complete_scheme_preflight_20261004\\verification.json",
+      "effective_execution_wrapper_status": "passed",
+      "effective_execution_wrapper_evidence": "analysis\\frozen_provenance_execution_preflight_20261004\\verification.json",
+      "adoption_evidence": "analysis\\neural_interaction_locked_waiter_replacement_20261004.json",
+      "queued_effective_driver": "analysis/run_neural_interaction_locked_pipeline_20261004.py",
+      "production_execution_completed_rounds": [
+        53,
+        55,
+        56
+      ],
+      "complete_scheme_timing_is_not_matched_speedup_evidence": true,
+      "seed_ensemble_adoption_evidence": "analysis\\no_dropout_locked_waiter_replacement_20261004.json",
+      "seed_ensemble_wrapper_status": "passed",
+      "queued_effective_rounds": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "additional_neural_family_wrapper_evidence": "analysis\\new_neural_families_locked_waiter_replacement_20261004.json",
+      "additional_neural_family_wrapper_rounds": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "additional_production_execution_completed_rounds": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "joint_and_basis_wrapper_evidence": "analysis\\joint_and_basis_locked_waiter_replacement_20261004.json",
+      "joint_and_basis_wrapper_rounds": [
+        50,
+        51,
+        52
+      ],
+      "joint_and_basis_production_execution_completed_rounds": [
+        50,
+        51,
+        52
+      ]
+    },
+    {
+      "priority": 22,
+      "method": "Matched no-dropout learning-rate, epoch andweight-decay interactions",
+      "reason": "R31 selected a no-dropout signal andR35 a lower-learning-rate signal. Four original-seed combinations are absent from all existing configurations after target-offset normalization.",
+      "configurations": 4,
+      "expected_annual_fits": 20,
+      "bank_protocol": "analysis/neural_interaction_bank_20261004/protocol.json",
+      "preflight": "analysis/neural_interaction_preflight_20261004/verification.json",
+      "execution_evidence": "analysis/neural_interaction_search_execution_20261004.json",
+      "completed_actual_annual_fits": 20,
+      "annual_training_status": "passed",
+      "future_model_qa_status": "passed",
+      "complete_scheme_qa_status": "passed",
+      "queued_rounds": [
+        55,
+        56
+      ],
+      "expected_official_records": {
+        "55": 100,
+        "56": 98
+      },
+      "actual_generator_preflight_status": "passed",
+      "execution_status": "completed",
+      "resource_sampler": "analysis/neural_interaction_resource_observations_20261004/protocol.json",
+      "completed_official_rounds": [
+        55,
+        56
+      ],
+      "pending_official_rounds": [],
+      "resource_scope_audit": "analysis/neural_interaction_resource_scope_audit_20261004.json",
+      "fulltraining_future_resource_scope_audit": "analysis/neural_interaction_future_resource_scope_audit_20261004.json",
+      "completed_official_records": 198,
+      "completed_round": 56,
+      "validation_gain": 2.5950313797151736e-05,
+      "status": "Rounds[55, 56] completed:198 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 23,
+      "method": "Matched wider no-dropout neural models",
+      "reason": "Actual fixed-batch width controls through16384 completed; full-fold feasibility andquality remain unmeasured. Compare1024/2048/4096/8192 against the reused512-width selected control with all optimizer settings fixed.",
+      "configurations": 4,
+      "expected_annual_fits": 20,
+      "proposed_official_rounds": [
+        57,
+        58
+      ],
+      "bank_protocol": "analysis/neural_width_bank_20261004/protocol.json",
+      "preflight": "analysis/neural_width_preflight_20261004/verification.json",
+      "resource_control_evidence": "analysis/neural_width_capacity_20261004/verification.json",
+      "training_execution_evidence": "analysis/neural_width_training_run_20261004.json",
+      "new_quality_scores": 0,
+      "test_labels_read": false,
+      "completed_actual_annual_fits": 20,
+      "annual_training_status": "passed",
+      "execution_status": "completed",
+      "official_rounds_not_yet_queued": false,
+      "resource_sampler": "analysis/neural_width_resource_observations_20261004/protocol.json",
+      "complete_scheme_qa_status": "passed",
+      "future_model_qa_status": "passed",
+      "queued_rounds": [
+        57,
+        58
+      ],
+      "expected_official_records": {
+        "57": 100,
+        "58": 98
+      },
+      "resource_control_scope_audit": "analysis/neural_width_capacity_scope_audit_20261004.json",
+      "actual_generator_preflight_status": "passed",
+      "completed_official_rounds": [
+        57,
+        58
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 198,
+      "completed_round": 58,
+      "validation_gain": 0.0,
+      "status": "Rounds[57, 58] completed:198 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 24,
+      "method": "Mature checkpoint fine tuning onrank, soft top-group return andholdings overlap losses",
+      "reason": "Existing neural banks optimize supervised pointwise targets. Compare rank/return loss against rank/return/overlap loss, two fixed smoothing temperatures and4/8 epochs using corresponding frozen past512-width checkpoints.",
+      "configurations": 4,
+      "expected_new_annual_fits": 20,
+      "warm_pretraining_reused_not_counted_as_new": true,
+      "implementation_preflight": "analysis/portfolio_bank_implementation_preflight_20261004/verification.json",
+      "training_loss_preflight": "analysis/portfolio_surrogate_preflight_v2_20261004/verification.json",
+      "frozen_search_plan": "analysis/portfolio_surrogate_complete_output_search_plan_20261004.json",
+      "execution_evidence": "analysis/portfolio_surrogate_search_execution_20261004.json",
+      "queued_rounds": [
+        59,
+        60
+      ],
+      "expected_official_records": {
+        "59": 100,
+        "60": 98
+      },
+      "surrogate_losses_not_official_quality_scores": true,
+      "test_labels_read": false,
+      "completed_actual_annual_fits": 20,
+      "annual_training_status": "passed",
+      "execution_status": "completed",
+      "minimum_available_host_GiB_before_fit_policy": 14.0,
+      "resource_sampler": "analysis/portfolio_surrogate_resource_observations_20261004/protocol.json",
+      "resource_scope_audit": "analysis/portfolio_surrogate_resource_scope_audit_20261004.json",
+      "future_resource_scope_audit": "analysis/portfolio_surrogate_future_resource_scope_audit_20261004.json",
+      "implementation_preflight_status": "passed",
+      "actual_generator_preflight_status": "passed",
+      "complete_scheme_qa_status": "passed",
+      "future_model_qa_status": "passed",
+      "completed_official_rounds": [
+        59,
+        60
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 198,
+      "completed_round": 60,
+      "validation_gain": 0.0,
+      "status": "Rounds[59, 60] completed:198 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 25,
+      "method": "Serialized bounded neural fixed-batch allocation frontier",
+      "reason": "All earlier512–16384 single-step controls succeeded. Repeat16384 andtest32768/65536 only after all actualR60 scientific work andscoped execution finish, using protected host reserve andowned child controls.",
+      "frozen_plan": "analysis\\neural_width_frontier_prepared_plan_20261004.json",
+      "execution_record": "analysis/neural_width_frontier_run_20261004.json",
+      "actual_quality_model_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false,
+      "does_not_claim_global_model_space_exhaustion": true,
+      "execution_status": "passed",
+      "actual_step_results_completed": 3,
+      "evidence": "analysis\\neural_width_frontier_20261004\\verification.json",
+      "physical_maximum_not_inferred_from_guard_ortimeout": true,
+      "scope_audit_status": "passed",
+      "scope_audit": "analysis\\neural_width_frontier_scope_audit_20261004.json",
+      "scope_audit_execution_record": "analysis/neural_width_frontier_audit_run_20261004.json"
+    },
+    {
+      "priority": 26,
+      "method": "Serialized unchanged official scorer at8/10/12/16 workers inforward andreverse order",
+      "reason": "Existing actual capacity controls cover atmost8 workers. Run identical frozen training CSV scoring jobs after all scientific work andGPU diagnostics; distinguish completed, guarded andunattempted counts.",
+      "frozen_plan": "analysis\\official_worker_frontier_prepared_plan_20261004.json",
+      "execution_record": "analysis/official_worker_frontier_run_20261004.json",
+      "scope_audit": "analysis/official_worker_frontier_scope_audit_20261004.json",
+      "actual_quality_model_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false,
+      "not_a_randomized_isolated_throughput_benchmark": true,
+      "execution_status": "passed",
+      "actual_completed_control_jobs": 64,
+      "scope_audit_status": "passed",
+      "evidence": "analysis\\official_worker_frontier_execution_20261004\\verification.json",
+      "physical_maximum_not_inferred_from_guard_ortimeout": true
+    },
+    {
+      "priority": 27,
+      "method": "Past-fold sampled Nyström RBF landmarks plus raw63 ridge",
+      "reason": "Existing kernel models use fixed data-independent Fourier features. Test64/128 landmarks sampled only from each mature past training fold, with the same one-day rank/return targets, fixed kernel mass128 andlambda.1.",
+      "frozen_plan": "analysis\\nystrom_ridge_complete_output_search_plan_20261004.json",
+      "numerical_preflight": "analysis/nystrom_ridge_preflight_20261004/verification.json",
+      "generator_preflight": "analysis/nystrom_ridge_search_generator_preflight_20261004/verification.json",
+      "dispatch_preflight": "analysis/nystrom_ridge_frozen_provenance_preflight_20261004/verification.json",
+      "queue_adoption": "analysis/nystrom_ridge_queue_adoption_20261004.json",
+      "complete_scheme_source_correction": "analysis/nystrom_ridge_complete_scheme_source_correction_audit_20261004.json",
+      "queued_rounds": [
+        61,
+        62
+      ],
+      "expected_official_records": {
+        "61": 100,
+        "62": 98
+      },
+      "new_quality_scores": 0,
+      "test_labels_read": false,
+      "completed_actual_annual_fits": 20,
+      "annual_training_status": "passed",
+      "actual_fulltraining_artifacts": 4,
+      "future_model_preflight_status": "passed",
+      "complete_scheme_preflight_status": "passed",
+      "minimum_available_host_GiB_before_fit_policy": 14.0,
+      "actual_generator_preflight_status": "passed",
+      "resource_sampler": "analysis/nystrom_ridge_resource_observations_20261004/protocol.json",
+      "original_registry_preserved": true,
+      "production_completed_rounds": [
+        61,
+        62
+      ],
+      "completed_official_rounds": [
+        61,
+        62
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 198,
+      "execution_status": "completed",
+      "completed_round": 62,
+      "validation_gain": 0.0,
+      "status": "Rounds[61, 62] completed:198 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
+    },
+    {
+      "priority": 12,
+      "method": "55-parent mature past-OOF ridge with paired first-year cold-start policies",
+      "reason": "The original45-parent learned bank excludes the newly trained neural/CatBoost variants and fixes2020 to a raw-feature ridge. Test expanded55-member inputs and a prespecified equal-weight first-year rank ensemble under the same complete five-year score.",
+      "scheme_configurations": 12,
+      "distinct_target_penalty_fits_per_later_year": 6,
+      "parents": 55,
+      "annual_forecast_artifacts": 60,
+      "distinct_new_annual_fits": 24,
+      "paired_later_fold_reuses": 24,
+      "first_year_policies": [
+        "frozen matching raw63 one-day ridge",
+        "fixed equal-weight55-child daily-rank mean"
+      ],
+      "first_year_uniform_meta_weights_not_fitted": true,
+      "later_raw_predictions_identical_within_each_policy_pair": true,
+      "full_postprocessing_may_propagate_different_first_year_states_across_year_boundaries": true,
+      "status": "Rounds[39, 40] completed:434 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed.",
+      "queued_rounds": [
+        39,
+        40
+      ],
+      "expected_official_records": {
+        "39": 176,
+        "40": 258
+      },
+      "preflight": "analysis/expanded_stacking_preflight_20261004/verification.json",
+      "oof_audit": "analysis/expanded_stacking_bank_20261004/oof_audit.json",
+      "resource_scope": "analysis/expanded_future_resource_observations_20261004/protocol.json",
+      "future_qa_status": "passed",
+      "test_labels_read": false,
+      "completed_official_rounds": [
+        39,
+        40
+      ],
+      "pending_official_rounds": [],
+      "completed_official_records": 434,
+      "execution_status": "completed",
+      "completed_round": 40,
+      "validation_gain": 0.0
+    },
+    {
+      "priority": 28,
+      "method": "Joint reoptimization of the latest complete graph after later accepted model additions",
+      "required_official_rounds": [
+        63
+      ],
+      "actual_completed_official_rounds": [
+        63
+      ],
+      "remaining_required_official_rounds": [],
+      "plan": "analysis\\latest_graph_joint_search_plan_20261005.json",
+      "plan_sha256": "454e1b6f1a00d7ef24576a31e226b4b347c8ed9a8fed75e07e91c459efeb45b5",
+      "coverage_audit": "analysis\\latest_graph_joint_axes_scope_audit_20261005\\verification.json",
+      "coverage_audit_sha256": "677f234149e4985f5acf67d5e8e4b1368592974cef828f1d7f163d79a0fc13ef",
+      "current_reference_active_axes": 13,
+      "later_axes_missing_from_original_r50_joint_search": [
+        {
+          "round": 53,
+          "group": "no_dropout_seed_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_seed18_e64",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 55,
+          "group": "neural_interaction_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_lr0005_e64",
+          "anchor": 0.037500000000000006
+        }
+      ],
+      "conditional_reference_scored_records": 260,
+      "actual_axes_and_arm_count_must_be_refrozen_after_r62": true,
+      "reason": "The original joint grid predates two accepted later branches; its cached axes also retain an inactive old branch. Actual current effective parameters must be jointly reevaluated.",
+      "quality_and_fullfuture_evidence_pending": false,
+      "prepared_plan_is_not_actual_quality_or_candidate_evidence": true,
+      "status": "completed_declared_joint_search",
+      "new_model_fits": 0,
+      "new_quality_scores": 260,
+      "test_labels_read": false
+    },
+    {
+      "priority": 29,
+      "method": "Same-day model agreement and diversity gated effective layer weights",
+      "required_official_rounds": [
+        64
+      ],
+      "actual_completed_official_rounds": [
+        64
+      ],
+      "remaining_required_official_rounds": [],
+      "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
+      "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
+      "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
+      "source_preflight_sha256": "bfd9ca15a9a704841032a9e9fd6a4129074320f64fde09acd87e14593b40107f",
+      "actual_nonzero_mature_oof_primitive_cases": 180,
+      "actual_zero_strength_weight_cases": 20,
+      "conditional_reference_gate_axes": 5,
+      "conditional_reference_scored_records": 129,
+      "actual_r63_axes_and_count_refreeze_required": true,
+      "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
+      "quality_and_fullfuture_evidence_pending": false,
+      "new_model_fits": 0,
+      "test_labels_read": false,
+      "status": "completed_declared_gate_search",
+      "new_quality_scores": 104
+    },
+    {
+      "priority": 30,
+      "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
+      "required_official_rounds": [
+        65,
+        66
+      ],
+      "actual_completed_official_rounds": [],
+      "remaining_required_official_rounds": [
+        65,
+        66
+      ],
+      "declared_configurations": 10,
+      "expected_annual_fits": 50,
+      "expected_fulltraining_artifacts": 10,
+      "actual_annual_fits": 50,
+      "actual_fulltraining_artifacts": 10,
+      "bank_protocol": "D:\\3.Study\\数据分析\\赛题五\\analysis\\nystrom_tuning_bank_20261005\\protocol.json",
+      "generator_proof": "analysis\\nystrom_tuning_search_generator_preflight_v2_20261005\\verification.json",
+      "generator_proof_sha256": "03c5019fa73dcbac3c9cdb6a80b288e19bd7caab86919ff082c631e9ad0d1cc0",
+      "native_future_status": "passed",
+      "scored_records_prespecified": {
+        "65": 172,
+        "66": 218
+      },
+      "broader_kernel_seeds_capacities_and_full16384_neural_fits_remain_uncovered": true,
+      "finite_grid_only_not_global_method_exhaustion": true,
+      "test_labels_read": false,
+      "status": "native_training_and_complete_output_quality_pending"
+    },
+    {
+      "priority": 31,
+      "method": "Matched16384 width actual complete32epoch training and final-output evaluation",
+      "required_official_rounds": [
+        67,
+        68
+      ],
+      "remaining_required_official_rounds": [
+        67,
+        68
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "67": 64,
+        "68": 38
+      },
+      "expected_annual_fits": 5,
+      "expected_final_fits": 1,
+      "actual_annual_fits": 0,
+      "actual_fulltraining_artifacts": 0,
+      "actual_annual_execution_status": "pending",
+      "actual_native_future_status": "pending",
+      "matched_instrumentation_preflight": "analysis\\neural16384_full_preflight_20261005\\verification.json",
+      "preflight_sha256": "5f6f3b2c25db39285e9e4415d740aa0d7e165f7c486a73133d30037e72a831fe",
+      "generator_proof_sha256": "64dded62ed87709ecb71498ffe51a58c36c1ddbcd77be7c5a657afcf7371acbc",
+      "no_one_step_substitution_for_complete_fits": true,
+      "physical_gpu_total_bytes": 12792037376,
+      "allocator_reserved_is_not_resident_physical_VRAM": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\training_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_width_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_full_fits_native_future_and_quality_pending"
+    },
+    {
+      "priority": 32,
+      "method": "Matched constant andregularized linear LightGBM leaves;30 annual300round fits andcomplete output evaluation",
+      "required_official_rounds": [
+        69,
+        70
+      ],
+      "remaining_required_official_rounds": [
+        69,
+        70
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "69": 124,
+        "70": 138
+      },
+      "expected_annual_fits": 30,
+      "expected_final_fits": 6,
+      "actual_annual_fits": 30,
+      "actual_fulltraining_artifacts": 6,
+      "actual_annual_execution_status": "passed",
+      "actual_native_future_status": "passed",
+      "matched_instrumentation_preflight": "analysis\\linear_leaf_preflight_20261005\\verification.json",
+      "preflight_sha256": "1fb9e33af8c956348ee5f80ec21e093f474877a63af4ac7a8e8f6ee98d29ea47",
+      "generator_proof_sha256": "673c5e21d8c4b2232a553144a83f72b06f2ee7ec82b3a5f8df7352d0366f2e83",
+      "no48_round_pilot_substitution_for_complete300round_fits": true,
+      "native_training_device": "cpu",
+      "GPU_capacity_not_relevant_to_this_native_family": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\training_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_full_fits_native_future_and_quality_pending"
+    },
+    {
+      "priority": 33,
+      "method": "Fixed raw-score averages of mature same-target trees;40 virtual annual artifacts andcomplete official outputs",
+      "required_official_rounds": [
+        71,
+        72
+      ],
+      "remaining_required_official_rounds": [
+        71,
+        72
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "71": 148,
+        "72": 178
+      },
+      "expected_virtual_annual_outputs": 40,
+      "expected_new_annual_fits": 0,
+      "expected_virtual_final_bundles": 8,
+      "expected_new_final_fits": 0,
+      "actual_new_annual_fits": 0,
+      "actual_virtual_annual_outputs": 40,
+      "actual_virtual_final_bundles": 8,
+      "actual_new_final_fits": 0,
+      "actual_annual_execution_status": "passed",
+      "actual_native_future_status": "passed",
+      "matched_instrumentation_preflight": "analysis\\linear_leaf_ensemble_future_codec_preflight_20261005\\verification.json",
+      "preflight_sha256": "f45ad2eba4ad250823bec47690aaab6042abc43bb5b454e3289272ff376f9013",
+      "generator_proof_sha256": "6adf1f5dfe34893c8020bc3f4fbda99773fbd038d57ee54febb214098601f83a",
+      "virtual_artifacts_do_not_double_count_real_parent_fits": true,
+      "native_training_device": "cpu",
+      "GPU_capacity_not_relevant_to_this_native_family": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\construction_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_virtual_outputs_native_fullfuture_and_quality_pending"
+    },
+    {
+      "priority": 34,
+      "method": "First order andlow rank raw63 FM interactions;30 annual32epoch CPU fits andcomplete output evaluation",
+      "required_official_rounds": [
+        73,
+        74
+      ],
+      "remaining_required_official_rounds": [
+        73,
+        74
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "73": 124,
+        "74": 138
+      },
+      "expected_annual_fits": 30,
+      "expected_final_fits": 6,
+      "actual_annual_fits": 0,
+      "actual_fulltraining_artifacts": 0,
+      "actual_annual_execution_status": "pending",
+      "actual_native_future_status": "pending",
+      "matched_instrumentation_preflight": "analysis\\factorization_machine_preflight_20261005\\verification.json",
+      "preflight_sha256": "83e9b31a9b08478b549422750cd69999b53d881d03b36ac25a2afe7535b08be0",
+      "generator_proof_sha256": "dfe98ddbc476431ca29e7eccac7820fae3f597627a2154d9a26dbf4ace354be3",
+      "no4_epoch_pilot_substitution_for_complete32epoch_fits": true,
+      "native_training_device": "cpu",
+      "GPU_capacity_not_relevant_to_this_native_family": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\training_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_full_fits_native_future_and_quality_pending"
+    }
+  ],
+  "new_virtual_ensemble_configurations": 6,
+  "new_virtual_ensemble_artifacts": 30,
+  "total_new_individual_and_virtual_configurations": 174,
+  "prospective_official_input_parse_cache": {
+    "status": "passed on full5635800-row actual calibrated CSV and both future scoring entry points",
+    "all_eight_metrics_bit_identical": true,
+    "original_seconds": 16.5650108,
+    "warm_seconds": 15.2793899,
+    "first_used_round": 20
+  },
+  "cross_round_identical_official_reuse": {
+    "status": "toy and full5635800-row original/mapped scorer integration passed",
+    "first_used_round": 23,
+    "actual_csv_and_all_data_code_environment_hashes_required": true,
+    "original_metrics_capsule_bytes_and_evaluation_timestamp_preserved": true,
+    "test_labels_read": false
+  },
+  "resumed_at_local": "2026-10-04T02:20:21",
+  "resume_instruction": "继续完成未完成的目标",
+  "prospective_parallel_official_scoring": {
+    "first_round": 23,
+    "workers": 2,
+    "status": "full5635800-row CSV and all eight metrics exactly verified",
+    "serial_seconds": 131.50931000000128,
+    "parallel_seconds": 87.22404180000012,
+    "declared_order_and_adaptive_barriers_preserved": true
+  },
+  "native_child_annual_oof_fits_completed": 595,
+  "new_meta_annual_oof_fits_completed": 72,
+  "new_learned_stacking_configurations": 6,
+  "prospective_parallel_official_scoring_four": {
+    "status": "passed andapplied onlyto unfrozenR24–34",
+    "workers": 4,
+    "actual_full5635800_row_prediction_construction_csv_and_all_eight_metrics_exact": true,
+    "four_full_prediction_control_seconds_under_concurrent_R23": 75.96694550000393,
+    "original_official_only_capacity_records_per_minute": {
+      "2": 6.614353852288136,
+      "3": 8.027869766758746,
+      "4": 8.945028433981156
+    },
+    "official_only_minimum_available_GiB_at_four": 6.000728607177734,
+    "active_frozen_R23_workers": 2,
+    "source_bridge": "analysis/prospective_parallel_four_adoption_20261004/verification.json",
+    "additional_prospective_rounds": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74
+    ]
+  },
+  "updated_at_local": "2026-10-05T10:12:10",
+  "fully_completed_five_year_configurations": 167,
+  "planned_neural_tuning_configurations": 5,
+  "global_resource_exhaustion_established": false,
+  "planned_catboost_tuning_configurations": 5,
+  "new_backbone_configurations_fully_trained": 127,
+  "active_run_registry": "analysis/resumed_rounds_nystrom_locked_20261004.json",
+  "future_inference_execution_recovery": "analysis/future_inference_recovery_sources_20261004.json",
+  "active_validation_round": 65,
+  "nonlinear_ridge_resource_scope_audit": "analysis\\nonlinear_ridge_resource_scope_audit_20261004.json",
+  "boundary_evidence": "analysis/optimization_boundary_evidence_20261004.json",
+  "context_initialization_execution_recovery": "analysis/late_context_initialization_recovery_v2_20261004/verification.json",
+  "lightweight_queue_resource_evidence": "analysis/late_context_lazy_queue_replacement_20261004.json",
+  "whole_scheme_joint_preflight": "analysis/whole_scheme_round50_preflight_adoption_20261004.json",
+  "lightweight_queue_handoff_preflight": "analysis/late_context_lazy_queue_v2_preflight_20261004/verification.json",
+  "additive_basis_execution_evidence": "analysis/additive_basis_search_execution_20261004.json",
+  "registry_updated_at_local": "2026-10-04T16:58:45",
+  "actual_neural_width_internal_andmeasured_cost_prefix_evidence": "analysis\\neural_width_measured_prefix20_20261004\\verification.json",
+  "actual_neural_width_completed_models_inspected": 20,
+  "nystrom_tuning_actual_annual_fits": 50,
+  "nystrom_tuning_actual_fulltraining_artifacts": 10,
+  "full16384_declared_configurations": 1,
+  "full16384_actual_annual_fits": 0,
+  "full16384_actual_fulltraining_artifacts": 0,
+  "linear_leaf_declared_configurations": 6,
+  "linear_leaf_actual_annual_fits": 30,
+  "linear_leaf_actual_fulltraining_artifacts": 6,
+  "linear_leaf_ensemble_declared_configurations": 8,
+  "linear_leaf_ensemble_actual_virtual_annual_outputs": 40,
+  "linear_leaf_ensemble_actual_new_annual_fits": 0,
+  "linear_leaf_ensemble_actual_virtual_final_bundles": 8,
+  "factorization_machine_declared_configurations": 6,
+  "factorization_machine_actual_annual_fits": 0,
+  "factorization_machine_actual_fulltraining_artifacts": 0
+}

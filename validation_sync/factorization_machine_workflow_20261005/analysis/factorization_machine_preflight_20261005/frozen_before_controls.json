@@ -1,0 +1,145 @@
+{
+  "status": "frozen_before_actual_formula_gradient_and_past_model_controls",
+  "configurations": {
+    "rank_fm_k0_e32": {
+      "kind": "factorization_machine",
+      "target": "y_rank",
+      "latent_factors": 0,
+      "epochs": 32,
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 20261005,
+      "initial_factor_std": 0.01,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "return_target_scale": 20.0,
+      "gradient_norm_max": 10.0,
+      "reserve_available_ram_GiB": 14.0,
+      "training_device": "cpu"
+    },
+    "rank_fm_k8_e32": {
+      "kind": "factorization_machine",
+      "target": "y_rank",
+      "latent_factors": 8,
+      "epochs": 32,
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 20261005,
+      "initial_factor_std": 0.01,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "return_target_scale": 20.0,
+      "gradient_norm_max": 10.0,
+      "reserve_available_ram_GiB": 14.0,
+      "training_device": "cpu"
+    },
+    "rank_fm_k32_e32": {
+      "kind": "factorization_machine",
+      "target": "y_rank",
+      "latent_factors": 32,
+      "epochs": 32,
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 20261005,
+      "initial_factor_std": 0.01,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "return_target_scale": 20.0,
+      "gradient_norm_max": 10.0,
+      "reserve_available_ram_GiB": 14.0,
+      "training_device": "cpu"
+    },
+    "return_fm_k0_e32": {
+      "kind": "factorization_machine",
+      "target": "y_ret_1d",
+      "latent_factors": 0,
+      "epochs": 32,
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 20261005,
+      "initial_factor_std": 0.01,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "return_target_scale": 20.0,
+      "gradient_norm_max": 10.0,
+      "reserve_available_ram_GiB": 14.0,
+      "training_device": "cpu"
+    },
+    "return_fm_k8_e32": {
+      "kind": "factorization_machine",
+      "target": "y_ret_1d",
+      "latent_factors": 8,
+      "epochs": 32,
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 20261005,
+      "initial_factor_std": 0.01,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "return_target_scale": 20.0,
+      "gradient_norm_max": 10.0,
+      "reserve_available_ram_GiB": 14.0,
+      "training_device": "cpu"
+    },
+    "return_fm_k32_e32": {
+      "kind": "factorization_machine",
+      "target": "y_ret_1d",
+      "latent_factors": 32,
+      "epochs": 32,
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "seed": 20261005,
+      "initial_factor_std": 0.01,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "return_target_scale": 20.0,
+      "gradient_norm_max": 10.0,
+      "reserve_available_ram_GiB": 14.0,
+      "training_device": "cpu"
+    }
+  },
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_factorization_machine_bank_20261005.py": "36631c98009678b09d3a1a450a037a08acf335ed060cb6b9c11b7f0d4c20ed5a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_factorization_machine_bank_20261005.py": "4758b0aa288090376dc55aae5151b5d15d5dee854472dcd4bc8f2e5432703c98",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_diverse_backbones_20261003.py": "6524e642f540bc0c79e6296d3c67959330d4126cb248b26f535110c8f05daa4e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_storage_20261005.json": "c703980d24ec62ca2fee989dcae2ed06aa6a7bf4adf9edbbf16ce55ce424d95e",
+    "D:\\3.Study\\数据分析\\赛题五\\data\\features.parquet": "80923e8bf14efe2d1b788f78028121868c6690ec26781a124e5fff2ffea1df54",
+    "D:\\3.Study\\数据分析\\赛题五\\data\\feature_manifest.json": "151751a6387385b6d44b05051b82c9b66a12d83ad4062d89fae298580124e3b5",
+    "D:\\3.Study\\数据分析\\赛题五\\data\\raw\\训练集.csv": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+    "D:\\3.Study\\数据分析\\赛题五\\run.py": "17da300abe4dd264984ac71262581210c27951912a8187330fc0cff0b8c2bcbb",
+    "D:\\3.Study\\数据分析\\赛题五\\src\\features.py": "2b436b681eadaf59dc8aaf441c74f05ac3829b8321d7839a123f1b1a7b6ea139",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37"
+  },
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
