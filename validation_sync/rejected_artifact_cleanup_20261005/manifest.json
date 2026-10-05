@@ -1,0 +1,395 @@
+{
+  "status": "completed_user_authorized_artifact_deletion_audit",
+  "at_local": "2026-10-05T22:40:12",
+  "previous_main": "31a662422c62deaf7d7d282c19532d5eb566c171",
+  "files": {
+    "analysis/cleanup_rejected_artifacts_20261005.py": {
+      "published_path": "analysis/cleanup_rejected_artifacts_20261005.py",
+      "raw_sha256": "e16381c17f4308ee499f583e1ee6c469f32601c538ed3a3e37130ee0b72f6d0c",
+      "published_sha256": "e16381c17f4308ee499f583e1ee6c469f32601c538ed3a3e37130ee0b72f6d0c",
+      "published_bytes": 15987
+    },
+    "analysis/publish_rejected_artifact_cleanup_20261005.py": {
+      "published_path": "analysis/publish_rejected_artifact_cleanup_20261005.py",
+      "raw_sha256": "8845bc6651c75408a98658ca14928e48e22ba583b59bcd2e0eac0d9a376b9007",
+      "published_sha256": "8845bc6651c75408a98658ca14928e48e22ba583b59bcd2e0eac0d9a376b9007",
+      "published_bytes": 7218
+    },
+    "analysis/verify_selected_artifacts_after_cleanup_20261005.py": {
+      "published_path": "analysis/verify_selected_artifacts_after_cleanup_20261005.py",
+      "raw_sha256": "b7557ee04baa7420bd7ab347daeb33dfd716887bced4d70a14d6705305dfa808",
+      "published_sha256": "b7557ee04baa7420bd7ab347daeb33dfd716887bced4d70a14d6705305dfa808",
+      "published_bytes": 3343
+    },
+    "analysis/artifact_cleanup_selected_roots_retention_plan_20261005.json": {
+      "published_path": "analysis/artifact_cleanup_selected_roots_retention_plan_20261005.json",
+      "raw_sha256": "8acdee6d2f2bcd007797c54ad4381cb7a37d5d5dc77f1ffa322fe2f89309b8ce",
+      "published_sha256": "8acdee6d2f2bcd007797c54ad4381cb7a37d5d5dc77f1ffa322fe2f89309b8ce",
+      "published_bytes": 1391
+    },
+    "analysis/rejected_artifact_cleanup_20261005/plan.json": {
+      "published_path": "validation_sync/rejected_artifact_cleanup_20261005/plan.json.gz",
+      "raw_sha256": "80a34a6490c38eb19d064fbdce91762c41649fce56e5d7fe379f4b0432c36716",
+      "published_sha256": "e2537a5c4fe7fd62be4504b9f166bc4b8136cde988ae621484a79fae11ff2292",
+      "published_bytes": 1582857
+    },
+    "analysis/rejected_artifact_cleanup_20261005/deletions.jsonl": {
+      "published_path": "validation_sync/rejected_artifact_cleanup_20261005/deletions.jsonl",
+      "raw_sha256": "26d1f6a45b63ff0c3098083c0793fa6552cf4f11b07237a3cdb91fe01bbe3cad",
+      "published_sha256": "26d1f6a45b63ff0c3098083c0793fa6552cf4f11b07237a3cdb91fe01bbe3cad",
+      "published_bytes": 3011951
+    },
+    "analysis/rejected_artifact_cleanup_20261005/verification.json": {
+      "published_path": "validation_sync/rejected_artifact_cleanup_20261005/verification.json",
+      "raw_sha256": "871c271fdf539df6a1333778968f326850985d05c1c8ea98e8d563306f8be110",
+      "published_sha256": "871c271fdf539df6a1333778968f326850985d05c1c8ea98e8d563306f8be110",
+      "published_bytes": 7147
+    },
+    "analysis/rejected_artifact_cleanup_20261005/selected_artifact_integrity.json": {
+      "published_path": "validation_sync/rejected_artifact_cleanup_20261005/selected_artifact_integrity.json",
+      "raw_sha256": "002372de9a6accab6fdfc96be400bf840961f800952bbaee5dc0893bdc09a9b0",
+      "published_sha256": "002372de9a6accab6fdfc96be400bf840961f800952bbaee5dc0893bdc09a9b0",
+      "published_bytes": 1439
+    }
+  },
+  "verification": {
+    "status": "passed_user_authorized_rejected_artifact_cleanup",
+    "at_local": "2026-10-05T22:39:29",
+    "deleted_files": 4674,
+    "deleted_logical_bytes": 41614866693,
+    "deleted_by_kind": {
+      "prediction_or_derived_cache": 3771,
+      "model_weight": 903
+    },
+    "deleted_by_category": {
+      "completed_unselected_scheme_artifact": 664,
+      "previously_retired_historical_backup_artifact": 2473,
+      "retired_historical_experiment_artifact": 1517,
+      "unused_historical_connected_prediction_cache": 20
+    },
+    "skipped": [
+      {
+        "path": "D:\\3.Study\\数据分析\\赛题五_清理备份_20261001\\analysis\\all_models_test_20260929\\early\\raw\\gru.npy",
+        "reason": "new_live_dependency_since_plan"
+      },
+      {
+        "path": "D:\\3.Study\\数据分析\\赛题五_清理备份_20261001\\analysis\\all_models_test_20260929\\early\\raw\\nn_gru_cat_h64_w20.npy",
+        "reason": "new_live_dependency_since_plan"
+      },
+      {
+        "path": "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\analysis\\all_models_test_20260929\\early\\models\\nn_gru_cat_h64_w20.pt",
+        "reason": "new_live_dependency_since_plan"
+      },
+      {
+        "path": "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\analysis\\all_models_test_20260929\\early\\predictions\\early_9ec487b9f99e6f94.npy",
+        "reason": "new_live_dependency_since_plan"
+      },
+      {
+        "path": "D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\analysis\\all_models_test_20260929\\middle\\predictions\\supplemental_topk_fulltrain2024.parquet",
+        "reason": "new_live_dependency_since_plan"
+      }
+    ],
+    "D_free_bytes_after": 84354928640,
+    "D_free_bytes_change": 41600356352,
+    "disk_change_includes_concurrent_training_writes_and_hardlinks": true,
+    "record_files_verified_unchanged": 12217,
+    "new_missing_protected_dependencies": 0,
+    "jobs_after": [
+      {
+        "pid": 3620,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 3912,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 5228,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 5572,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 6324,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 8864,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 13332,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 14760,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 16644,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 17784,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 18296,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 18588,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 19028,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 19272,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 20608,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 27716,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 30764,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 30772,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 31036,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 31228,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 31308,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 31336,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 31708,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 31760,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 32144,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 32148,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 32184,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 32204,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 32488,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 32852,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 32924,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 33180,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 33432,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 33908,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 33976,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 34272,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 34364,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 34636,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 34712,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 34956,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 35124,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 35444,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 35560,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 35648,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 36176,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 36528,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 36668,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 37504,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 37840,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 38156,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 38320,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 38888,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 39404,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 39616,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 40520,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 41080,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 41380,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 41412,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 41444,
+        "same_owned_process_live_after": true
+      },
+      {
+        "pid": 41780,
+        "same_owned_process_live_after": true
+      }
+    ],
+    "processes_stopped_or_restarted_by_cleanup": 0,
+    "raw_data_preserved": true,
+    "C_project_data_written": false,
+    "E_project_data_written": false,
+    "test_labels_read": false,
+    "new_model_fits": 0,
+    "new_quality_scores": 0,
+    "historical_metadata_describes_deleted_weights_not_present_weights": true,
+    "live_frozen_bank_dependencies_retained_until_workflows_finish": true
+  },
+  "selected_artifact_integrity": {
+    "status": "passed_selected_artifact_integrity_after_cleanup",
+    "at_local": "2026-10-05T22:40:02",
+    "checks": [
+      {
+        "kind": "active_delivery_pointer",
+        "manifest_and_submission_sha256": "passed"
+      },
+      {
+        "kind": "retained_selected_package",
+        "folder": "D:\\3.Study\\数据分析\\赛题五\\deliveries\\connected_topk0175_20261003",
+        "verified_file_count": 25,
+        "all_files_match_frozen_manifest": true
+      },
+      {
+        "kind": "retained_selected_package",
+        "folder": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r65",
+        "verified_file_count": 39,
+        "all_files_match_frozen_manifest": true
+      },
+      {
+        "kind": "retained_selected_package",
+        "folder": "D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r66",
+        "verified_file_count": 39,
+        "all_files_match_frozen_manifest": true
+      },
+      {
+        "kind": "adopted_GRU_and_root_reconstruction_sources",
+        "verified_file_count": 5,
+        "all_sha256_match": true
+      }
+    ],
+    "deleted_artifacts_absent": 4674,
+    "historical_record_files_verified_by_cleanup": 12217,
+    "ranking_rows_before_cleanup": 9822,
+    "official_score_unchanged_by_cleanup": true,
+    "test_labels_read": false,
+    "new_model_fits": 0,
+    "new_quality_scores": 0,
+    "source_sha256": "b7557ee04baa7420bd7ab347daeb33dfd716887bced4d70a14d6705305dfa808"
+  },
+  "raw_data_weights_and_prediction_files_not_uploaded": true,
+  "historical_scores_and_configurations_preserved": true,
+  "current_selected_and_live_frozen_dependencies_preserved": true,
+  "only_publication_branch": "main",
+  "test_labels_read": false
+}
