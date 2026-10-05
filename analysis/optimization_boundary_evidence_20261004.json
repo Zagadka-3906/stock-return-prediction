@@ -1,9 +1,9 @@
 {
   "status": "search_and_resource_boundaries_not_yet_established",
-  "updated_at_local": "2026-10-05T10:21:49",
+  "updated_at_local": "2026-10-05T11:00:08",
   "selection_standard": "后续选模标准.md",
-  "completed_best": 0.45100769827200593,
-  "latest_completed_round": 64,
+  "completed_best": 0.4510081068915626,
+  "latest_completed_round": 65,
   "completed_declared_searches": [
     {
       "round": 22,
@@ -348,21 +348,28 @@
       "evidence": "results\\optimization_20261003_r64.json",
       "sha256": "74d23763d20a3282e4dfb8a6f660c03535d440696639cf5e702327f017a7cc35",
       "scope": "Completed declared grid only; no claim about all variants of this method."
+    },
+    {
+      "round": 65,
+      "score": 0.4510081068915626,
+      "gain": 4.0861955669102556e-07,
+      "evidence": "results\\optimization_20261003_r65.json",
+      "sha256": "fbd1c63b167db0ae046f8e0997850f7ad81f9980cbf9532408a2e73304af5fa1",
+      "scope": "Completed declared grid only; no claim about all variants of this method."
     }
   ],
   "current_machine_snapshot": {
     "total_ram_GiB": 31.183837890625,
-    "available_ram_GiB": 12.22745132446289,
+    "available_ram_GiB": 15.54996109008789,
     "cpu_physical_cores": 16,
     "cpu_logical_cores": 32,
     "workspace_volume_total_GiB": 451.99999618530273,
-    "workspace_volume_free_GiB": 44.82655334472656,
+    "workspace_volume_free_GiB": 43.53970718383789,
     "snapshot_is_observation_not_a_limit_or_completed_capacity_test": true
   },
-  "active_round": 65,
-  "active_stage": "release.infer_selected",
+  "active_round": 66,
+  "active_stage": "build",
   "pending_rounds": [
-    66,
     67,
     68,
     69,
@@ -1771,10 +1778,10 @@
         61,
         62,
         63,
-        64
+        64,
+        65
       ],
       "remaining_required_official_rounds": [
-        65,
         66,
         67,
         68,
@@ -2006,9 +2013,22 @@
             "analysis\\optimization_20261003_r64\\calibrated_csv_official.json": "e3b62b0324f0ce3fba5e50db0eb4b1818a385baee72c851c37a0505fc5ef9cf7",
             "analysis\\optimization_20261003_r64\\provenance_scope_execution.json": "11274506dd3a218fc973cf4c84e989a4a2b6fe58a8f48fc02a3dc04a9843b269"
           }
+        },
+        {
+          "round": 65,
+          "status": "complete_declared_round",
+          "score": 0.4510081068915626,
+          "scored_records": 172,
+          "candidate_csv_sha256": "4b4ae4ad2e44db5a467e07ad8414477b828e5192939c6fc7e36de3fc88101fa9",
+          "source_sha256": {
+            "results\\optimization_20261003_r65.json": "fbd1c63b167db0ae046f8e0997850f7ad81f9980cbf9532408a2e73304af5fa1",
+            "candidates\\optimization_20261003_r65\\verification.json": "4314c0a78f711f50ef5b61675e1ec3ac020fe8ed31539045e3113d6e71c9bd0f",
+            "analysis\\optimization_20261003_r65\\calibrated_csv_official.json": "64169b0f7671719d8ea47ddf8ba522458ad992db9746fd1aa0962a5cb04b587a",
+            "analysis\\optimization_20261003_r65\\provenance_scope_execution.json": "c706bb85e20ebcf31b845195472dd00998828faf4badf54093497dd3b82c6381"
+          }
         }
       ],
-      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]."
+      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[66, 67, 68, 69, 70, 71, 72, 73, 74]."
     },
     {
       "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
@@ -2016,9 +2036,10 @@
         65,
         66
       ],
-      "actual_completed_official_rounds": [],
+      "actual_completed_official_rounds": [
+        65
+      ],
       "remaining_required_official_rounds": [
-        65,
         66
       ],
       "declared_configurations": 10,
@@ -2155,13 +2176,13 @@
       },
       "expected_annual_fits": 30,
       "expected_final_fits": 6,
-      "actual_annual_fits": 9,
-      "actual_fulltraining_artifacts": 0,
-      "actual_annual_execution_status": "pending",
-      "actual_native_future_status": "pending",
+      "actual_annual_fits": 30,
+      "actual_fulltraining_artifacts": 6,
+      "actual_annual_execution_status": "passed",
+      "actual_native_future_status": "passed",
       "matched_instrumentation_preflight": "analysis\\factorization_machine_preflight_20261005\\verification.json",
       "preflight_sha256": "83e9b31a9b08478b549422750cd69999b53d881d03b36ac25a2afe7535b08be0",
-      "generator_proof_sha256": "dfe98ddbc476431ca29e7eccac7820fae3f597627a2154d9a26dbf4ace354be3",
+      "generator_proof_sha256": "156d31e78617bc846cba04cb295457db0ef3c9d586178d0144fa991fa6921169",
       "no4_epoch_pilot_substitution_for_complete32epoch_fits": true,
       "native_training_device": "cpu",
       "GPU_capacity_not_relevant_to_this_native_family": true,
@@ -2742,8 +2763,8 @@
     "quality_and_fullfuture_evidence_pending": false,
     "prepared_plan_is_not_actual_quality_or_candidate_evidence": true
   },
-  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v7_20261005.py",
-  "additional_boundary_refresh_source_sha256": "454b4b270ca17cfe1d606bd86020573e99cd96c6e5452a5d7a8bae431c6b01d4",
+  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v8_20261005.py",
+  "additional_boundary_refresh_source_sha256": "23032ea6407e79cd2ed674546ded33934780604622431718d309336e74e01ec6",
   "agreement_gate_coverage_evidence": {
     "method": "Same-day model agreement and diversity gated effective layer weights",
     "required_official_rounds": [
@@ -2773,9 +2794,10 @@
       65,
       66
     ],
-    "actual_completed_official_rounds": [],
+    "actual_completed_official_rounds": [
+      65
+    ],
     "remaining_required_official_rounds": [
-      65,
       66
     ],
     "declared_configurations": 10,
@@ -2912,13 +2934,13 @@
     },
     "expected_annual_fits": 30,
     "expected_final_fits": 6,
-    "actual_annual_fits": 9,
-    "actual_fulltraining_artifacts": 0,
-    "actual_annual_execution_status": "pending",
-    "actual_native_future_status": "pending",
+    "actual_annual_fits": 30,
+    "actual_fulltraining_artifacts": 6,
+    "actual_annual_execution_status": "passed",
+    "actual_native_future_status": "passed",
     "matched_instrumentation_preflight": "analysis\\factorization_machine_preflight_20261005\\verification.json",
     "preflight_sha256": "83e9b31a9b08478b549422750cd69999b53d881d03b36ac25a2afe7535b08be0",
-    "generator_proof_sha256": "dfe98ddbc476431ca29e7eccac7820fae3f597627a2154d9a26dbf4ace354be3",
+    "generator_proof_sha256": "156d31e78617bc846cba04cb295457db0ef3c9d586178d0144fa991fa6921169",
     "no4_epoch_pilot_substitution_for_complete32epoch_fits": true,
     "native_training_device": "cpu",
     "GPU_capacity_not_relevant_to_this_native_family": true,
