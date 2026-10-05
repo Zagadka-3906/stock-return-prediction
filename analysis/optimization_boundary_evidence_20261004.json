@@ -1,6 +1,6 @@
 {
   "status": "search_and_resource_boundaries_not_yet_established",
-  "updated_at_local": "2026-10-05T21:57:30",
+  "updated_at_local": "2026-10-05T22:18:02",
   "selection_standard": "后续选模标准.md",
   "completed_best": 0.4510081068915626,
   "latest_completed_round": 66,
@@ -368,11 +368,11 @@
   ],
   "current_machine_snapshot": {
     "total_ram_GiB": 31.183837890625,
-    "available_ram_GiB": 4.684192657470703,
+    "available_ram_GiB": 6.222576141357422,
     "cpu_physical_cores": 16,
     "cpu_logical_cores": 32,
     "workspace_volume_total_GiB": 451.99999618530273,
-    "workspace_volume_free_GiB": 40.250328063964844,
+    "workspace_volume_free_GiB": 40.18537521362305,
     "snapshot_is_observation_not_a_limit_or_completed_capacity_test": true
   },
   "active_round": 67,
@@ -392,7 +392,9 @@
     79,
     80,
     81,
-    82
+    82,
+    83,
+    84
   ],
   "measured_official_scoring_capacity": [
     {
@@ -1782,7 +1784,9 @@
         79,
         80,
         81,
-        82
+        82,
+        83,
+        84
       ],
       "actual_completed_official_rounds": [
         48,
@@ -1821,7 +1825,9 @@
         79,
         80,
         81,
-        82
+        82,
+        83,
+        84
       ],
       "actual_complete_round_evidence": [
         {
@@ -2076,7 +2082,7 @@
           }
         }
       ],
-      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82]."
+      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84]."
     },
     {
       "method": "Matched16384 width actual complete32epoch training and final-output evaluation",
@@ -2292,7 +2298,7 @@
       },
       "expected_annual_fits": 20,
       "expected_final_fits": 4,
-      "actual_annual_fits": 13,
+      "actual_annual_fits": 16,
       "actual_fulltraining_artifacts": 0,
       "actual_native_execution_status": "pending",
       "actual_future_status": "pending",
@@ -2335,6 +2341,38 @@
       "all264_generator_arms_counted_including_adaptive_refinements": false,
       "actual_generator_proof": "analysis/reference66_linear_leaf_generator_preflight_v2_20261005/verification.json",
       "actual_execution_source_controls": "analysis/reference66_linear_leaf_execution_preflight_20261005/verification.json",
+      "finite_grid_not_global_method_or_resource_exhaustion": true,
+      "test_labels_read": false
+    },
+    {
+      "method": "Complete existing mature63-feature FM schemes after qualified lightweight reference chain",
+      "required_official_rounds": [
+        83,
+        84
+      ],
+      "explicit_parent_rounds": {
+        "83": 82,
+        "84": 83
+      },
+      "actual_completed_official_rounds": [],
+      "remaining_required_official_rounds": [
+        83,
+        84
+      ],
+      "scored_records_prespecified": {
+        "83": 124,
+        "84": 138
+      },
+      "new_native_configurations": 0,
+      "new_native_fits": 0,
+      "all_prior_rounds67_through82_retained_and_required": true,
+      "existing_actual_annual_fits_required": 30,
+      "existing_actual_final_fits_required": 6,
+      "same5635800_validation_rows_1212_continuous_days_and_original_official_scorer": true,
+      "actual_generator_proof": "analysis/ready_fm_reference_generator_preflight_20261005/verification.json",
+      "actual_execution_source_controls": "analysis/ready_fm_reference_execution_preflight_20261005/verification.json",
+      "one_worker_layout_only_all_original_arms_and_forecast_math_preserved": true,
+      "actual_new_quality_and_complete_candidate_evidence_still_required": true,
       "finite_grid_not_global_method_or_resource_exhaustion": true,
       "test_labels_read": false
     }
@@ -2950,7 +2988,7 @@
     "quality_and_fullfuture_evidence_pending": false,
     "prepared_plan_is_not_actual_quality_or_candidate_evidence": true
   },
-  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v14_20261005.py",
+  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v15_20261005.py",
   "additional_boundary_refresh_source_sha256": "23032ea6407e79cd2ed674546ded33934780604622431718d309336e74e01ec6",
   "agreement_gate_coverage_evidence": {
     "method": "Same-day model agreement and diversity gated effective layer weights",
@@ -3217,7 +3255,7 @@
     },
     "expected_annual_fits": 20,
     "expected_final_fits": 4,
-    "actual_annual_fits": 13,
+    "actual_annual_fits": 16,
     "actual_fulltraining_artifacts": 0,
     "actual_native_execution_status": "pending",
     "actual_future_status": "pending",
@@ -3257,11 +3295,42 @@
     "all_original_rounds67_through80_retained_and_required": true,
     "same_5635800_rows_1212_continuous_days_and_original_official_scorer": true,
     "one_isolated_official_worker_changes_layout_only": true,
-    "all264_generator_arms_counted_including_adaptive_refinements": false,
     "actual_generator_proof": "analysis/reference66_linear_leaf_generator_preflight_v2_20261005/verification.json",
     "actual_execution_source_controls": "analysis/reference66_linear_leaf_execution_preflight_20261005/verification.json",
     "finite_grid_not_global_method_or_resource_exhaustion": true,
     "test_labels_read": false
   },
-  "best_completed_round": 65
+  "best_completed_round": 65,
+  "ready_fm_reference_coverage_evidence": {
+    "method": "Complete existing mature63-feature FM schemes after qualified lightweight reference chain",
+    "required_official_rounds": [
+      83,
+      84
+    ],
+    "explicit_parent_rounds": {
+      "83": 82,
+      "84": 83
+    },
+    "actual_completed_official_rounds": [],
+    "remaining_required_official_rounds": [
+      83,
+      84
+    ],
+    "scored_records_prespecified": {
+      "83": 124,
+      "84": 138
+    },
+    "new_native_configurations": 0,
+    "new_native_fits": 0,
+    "all_prior_rounds67_through82_retained_and_required": true,
+    "existing_actual_annual_fits_required": 30,
+    "existing_actual_final_fits_required": 6,
+    "same5635800_validation_rows_1212_continuous_days_and_original_official_scorer": true,
+    "actual_generator_proof": "analysis/ready_fm_reference_generator_preflight_20261005/verification.json",
+    "actual_execution_source_controls": "analysis/ready_fm_reference_execution_preflight_20261005/verification.json",
+    "one_worker_layout_only_all_original_arms_and_forecast_math_preserved": true,
+    "actual_new_quality_and_complete_candidate_evidence_still_required": true,
+    "finite_grid_not_global_method_or_resource_exhaustion": true,
+    "test_labels_read": false
+  }
 }
