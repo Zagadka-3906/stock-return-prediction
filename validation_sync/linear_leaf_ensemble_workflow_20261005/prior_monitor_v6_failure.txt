@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v6_20261005.py", line 136, in <module>
+    main(parser.parse_args().once)
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v6_20261005.py", line 121, in main
+    state = update()
+            ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v6_20261005.py", line 52, in update
+    cost.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_linear_leaf_cost_evidence_20261005.py", line 21, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_neural16384_cost_evidence_20261005.py", line 21, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_nystrom_tuning_cost_evidence_20261005.py", line 81, in main
+    write(cost_path, cost)
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_nystrom_tuning_cost_evidence_20261005.py", line 14, in write
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_fit_cost_evidence_20261004.json'

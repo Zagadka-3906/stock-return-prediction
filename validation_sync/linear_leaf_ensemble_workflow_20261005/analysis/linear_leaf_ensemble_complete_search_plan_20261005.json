@@ -1,0 +1,193 @@
+{
+  "status": "prespecified_actual_component_ensemble_grid_before_official_quality",
+  "at_local": "2026-10-05T09:11:54",
+  "model_configurations": {
+    "rank_leaf_ensemble_all_three_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "members": [
+        {
+          "model": "rank_lgb_constant_r300",
+          "weight": 0.3333333333333333
+        },
+        {
+          "model": "rank_lgb_linear_l1_r300",
+          "weight": 0.3333333333333333
+        },
+        {
+          "model": "rank_lgb_linear_l10_r300",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    },
+    "rank_leaf_ensemble_linear_pair_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "members": [
+        {
+          "model": "rank_lgb_linear_l1_r300",
+          "weight": 0.5
+        },
+        {
+          "model": "rank_lgb_linear_l10_r300",
+          "weight": 0.5
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    },
+    "rank_leaf_ensemble_constant_linear1_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "members": [
+        {
+          "model": "rank_lgb_constant_r300",
+          "weight": 0.5
+        },
+        {
+          "model": "rank_lgb_linear_l1_r300",
+          "weight": 0.5
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    },
+    "rank_leaf_ensemble_constant_linear10_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "members": [
+        {
+          "model": "rank_lgb_constant_r300",
+          "weight": 0.5
+        },
+        {
+          "model": "rank_lgb_linear_l10_r300",
+          "weight": 0.5
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    },
+    "return_leaf_ensemble_all_three_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "members": [
+        {
+          "model": "return_lgb_constant_r300",
+          "weight": 0.3333333333333333
+        },
+        {
+          "model": "return_lgb_linear_l1_r300",
+          "weight": 0.3333333333333333
+        },
+        {
+          "model": "return_lgb_linear_l10_r300",
+          "weight": 0.3333333333333333
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    },
+    "return_leaf_ensemble_linear_pair_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "members": [
+        {
+          "model": "return_lgb_linear_l1_r300",
+          "weight": 0.5
+        },
+        {
+          "model": "return_lgb_linear_l10_r300",
+          "weight": 0.5
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    },
+    "return_leaf_ensemble_constant_linear1_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "members": [
+        {
+          "model": "return_lgb_constant_r300",
+          "weight": 0.5
+        },
+        {
+          "model": "return_lgb_linear_l1_r300",
+          "weight": 0.5
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    },
+    "return_leaf_ensemble_constant_linear10_equal": {
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "members": [
+        {
+          "model": "return_lgb_constant_r300",
+          "weight": 0.5
+        },
+        {
+          "model": "return_lgb_linear_l10_r300",
+          "weight": 0.5
+        }
+      ],
+      "learned_ensemble_weights": false,
+      "independent_new_model_fits": 0
+    }
+  },
+  "actual_previous_selection_required": {
+    "71": 70,
+    "72": 71
+  },
+  "expected_virtual_annual_outputs": 40,
+  "expected_new_annual_fits": 0,
+  "expected_virtual_final_model_bundles": 8,
+  "expected_new_final_fits": 0,
+  "required_actual_parent_annual_fits": 30,
+  "required_actual_parent_mature_final_fits": 6,
+  "expected_total_records": {
+    "71": 148,
+    "72": 178
+  },
+  "wave_arm_counts": {
+    "71": [
+      97,
+      8,
+      18,
+      25
+    ],
+    "72": [
+      49,
+      112,
+      17
+    ]
+  },
+  "waves": {
+    "71": [
+      290,
+      291,
+      292,
+      293
+    ],
+    "72": [
+      294,
+      295,
+      296
+    ]
+  },
+  "same_parent_mature_training_matrices_targets_and_dates_required": true,
+  "raw_score_mixtures_in_same_target_units_no_test_labels": true,
+  "all8_composites_must_pass_native_saved_model_prefix_and_fullfuture_controls": true,
+  "single_parent_or_raw_diagnostic_scores_not_substituted_for_complete_scheme_official_scores": true,
+  "correlation_is_diagnostic_not_an_adoption_gate": true,
+  "all_validation_years_reused_selection_bias_uncorrected": true,
+  "code_and_execution_for_new_composite_bank_pending": true,
+  "no_claim_all8_configurations_verified_by_rank_only_controls": true,
+  "new_quality_scores": 0,
+  "global_resource_exhaustion_established": false,
+  "test_labels_read": false
+}
