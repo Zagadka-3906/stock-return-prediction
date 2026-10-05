@@ -1,0 +1,31 @@
+{
+  "model_sha256": "a58ec09bc562cc6bda22b37c7c6d3655c5788b2e4317064f1e101959171a961a",
+  "configuration": {
+    "kind": "lightgbm_quantile_tree",
+    "target": "y_rank",
+    "linear_tree": false,
+    "linear_lambda": 0.0,
+    "num_boost_round": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": 8,
+    "min_data_in_leaf": 128,
+    "max_bin": 127,
+    "lambda_l2": 1.0,
+    "seed": 20261005,
+    "num_threads": 8,
+    "clip_z": 8.0,
+    "chunk_rows": 32768,
+    "return_quantiles": [
+      0.005,
+      0.995
+    ],
+    "reserve_available_ram_GiB": 14.0,
+    "objective": "quantile",
+    "alpha": 0.5
+  },
+  "training_info_sha256": "8647e9a0ed6bac91899318c6f3b855206c504f01b611d640fe007499e103068f",
+  "first_actual_future_date": 20250102,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}

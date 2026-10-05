@@ -1,0 +1,363 @@
+{
+  "status": "passed",
+  "configurations": {
+    "rank_lgb_quantile_a050_r300": {
+      "kind": "lightgbm_quantile_tree",
+      "target": "y_rank",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0,
+      "objective": "quantile",
+      "alpha": 0.5
+    },
+    "return_lgb_quantile_a010_r300": {
+      "kind": "lightgbm_quantile_tree",
+      "target": "y_ret_1d",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0,
+      "objective": "quantile",
+      "alpha": 0.1
+    },
+    "return_lgb_quantile_a050_r300": {
+      "kind": "lightgbm_quantile_tree",
+      "target": "y_ret_1d",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0,
+      "objective": "quantile",
+      "alpha": 0.5
+    },
+    "return_lgb_quantile_a090_r300": {
+      "kind": "lightgbm_quantile_tree",
+      "target": "y_ret_1d",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0,
+      "objective": "quantile",
+      "alpha": 0.9
+    }
+  },
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "actual_annual_fits": 20,
+  "actual300_round_complete_models": 20,
+  "actual_final_native_fits_reused_with_full_provenance": 4,
+  "entire_original_five_year_prediction_coverage": {
+    "rank_lgb_quantile_a050_r300": {
+      "rows": 5635800,
+      "days": 1212,
+      "codes": 4650,
+      "continuous_sorted_five_year_keys_sha256": "7dd68d1a5bd512410e83226682b6c0fe0c5ab6547d6b32ee325ae404f3c88269"
+    },
+    "return_lgb_quantile_a010_r300": {
+      "rows": 5635800,
+      "days": 1212,
+      "codes": 4650,
+      "continuous_sorted_five_year_keys_sha256": "7dd68d1a5bd512410e83226682b6c0fe0c5ab6547d6b32ee325ae404f3c88269"
+    },
+    "return_lgb_quantile_a050_r300": {
+      "rows": 5635800,
+      "days": 1212,
+      "codes": 4650,
+      "continuous_sorted_five_year_keys_sha256": "7dd68d1a5bd512410e83226682b6c0fe0c5ab6547d6b32ee325ae404f3c88269"
+    },
+    "return_lgb_quantile_a090_r300": {
+      "rows": 5635800,
+      "days": 1212,
+      "codes": 4650,
+      "continuous_sorted_five_year_keys_sha256": "7dd68d1a5bd512410e83226682b6c0fe0c5ab6547d6b32ee325ae404f3c88269"
+    }
+  },
+  "all_original_full_matrix_target_keys_and_maturity_metadata_matched": true,
+  "boundary_controls": {
+    "rank_lgb_quantile_a050_r300_2020": {
+      "status": "passed",
+      "year": 2020,
+      "cutoff_exclusive": 20191231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a010_r300_2020": {
+      "status": "passed",
+      "year": 2020,
+      "cutoff_exclusive": 20191231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a050_r300_2020": {
+      "status": "passed",
+      "year": 2020,
+      "cutoff_exclusive": 20191231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a090_r300_2020": {
+      "status": "passed",
+      "year": 2020,
+      "cutoff_exclusive": 20191231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "rank_lgb_quantile_a050_r300_2021": {
+      "status": "passed",
+      "year": 2021,
+      "cutoff_exclusive": 20201231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a010_r300_2021": {
+      "status": "passed",
+      "year": 2021,
+      "cutoff_exclusive": 20201231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a050_r300_2021": {
+      "status": "passed",
+      "year": 2021,
+      "cutoff_exclusive": 20201231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a090_r300_2021": {
+      "status": "passed",
+      "year": 2021,
+      "cutoff_exclusive": 20201231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "rank_lgb_quantile_a050_r300_2022": {
+      "status": "passed",
+      "year": 2022,
+      "cutoff_exclusive": 20211231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a010_r300_2022": {
+      "status": "passed",
+      "year": 2022,
+      "cutoff_exclusive": 20211231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a050_r300_2022": {
+      "status": "passed",
+      "year": 2022,
+      "cutoff_exclusive": 20211231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a090_r300_2022": {
+      "status": "passed",
+      "year": 2022,
+      "cutoff_exclusive": 20211231,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "rank_lgb_quantile_a050_r300_2023": {
+      "status": "passed",
+      "year": 2023,
+      "cutoff_exclusive": 20221230,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a010_r300_2023": {
+      "status": "passed",
+      "year": 2023,
+      "cutoff_exclusive": 20221230,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a050_r300_2023": {
+      "status": "passed",
+      "year": 2023,
+      "cutoff_exclusive": 20221230,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a090_r300_2023": {
+      "status": "passed",
+      "year": 2023,
+      "cutoff_exclusive": 20221230,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "rank_lgb_quantile_a050_r300_2024": {
+      "status": "passed",
+      "year": 2024,
+      "cutoff_exclusive": 20231229,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a010_r300_2024": {
+      "status": "passed",
+      "year": 2024,
+      "cutoff_exclusive": 20231229,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a050_r300_2024": {
+      "status": "passed",
+      "year": 2024,
+      "cutoff_exclusive": 20231229,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    },
+    "return_lgb_quantile_a090_r300_2024": {
+      "status": "passed",
+      "year": 2024,
+      "cutoff_exclusive": 20231229,
+      "control_training_rows": 4096,
+      "actual_two48_round_controls_bit_identical": true,
+      "future_label_poison_mature_filter_and_preprocessing_bit_identical": true,
+      "actual_annual_fits": 0,
+      "new_quality_scores": 0,
+      "test_labels_read": false
+    }
+  },
+  "complete198_official_scores_and_adoption_still_pending": true,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
