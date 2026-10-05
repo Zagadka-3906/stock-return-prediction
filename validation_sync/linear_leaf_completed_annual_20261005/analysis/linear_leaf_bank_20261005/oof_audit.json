@@ -1,0 +1,803 @@
+{
+  "status": "passed",
+  "actual_annual_fits": 30,
+  "configurations": {
+    "rank_lgb_constant_r300": {
+      "kind": "lightgbm_linear_leaf",
+      "target": "y_rank",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "rank_lgb_linear_l1_r300": {
+      "kind": "lightgbm_linear_leaf",
+      "target": "y_rank",
+      "linear_tree": true,
+      "linear_lambda": 1.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "rank_lgb_linear_l10_r300": {
+      "kind": "lightgbm_linear_leaf",
+      "target": "y_rank",
+      "linear_tree": true,
+      "linear_lambda": 10.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "return_lgb_constant_r300": {
+      "kind": "lightgbm_linear_leaf",
+      "target": "y_ret_1d",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "return_lgb_linear_l1_r300": {
+      "kind": "lightgbm_linear_leaf",
+      "target": "y_ret_1d",
+      "linear_tree": true,
+      "linear_lambda": 1.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "return_lgb_linear_l10_r300": {
+      "kind": "lightgbm_linear_leaf",
+      "target": "y_ret_1d",
+      "linear_tree": true,
+      "linear_lambda": 10.0,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    }
+  },
+  "checks": [
+    {
+      "model": "rank_lgb_constant_r300",
+      "year": 2020,
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "4044a47533f6f8de3765f18fa8c940f043f6211d96e5cb57d7a60c6d05ab7959",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_constant_r300",
+      "year": 2021,
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "b19a99d13feae101be5bab38304f24e36c831af369cecc307ee7ce0668e9bbe3",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_constant_r300",
+      "year": 2022,
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "85614f67ab97829cb2ff61e5dace27fb1fed4f32971c594b77ad18bd729d11d2",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_constant_r300",
+      "year": 2023,
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "663eef6ea6b9cbdbc9d2754ab3ab4787c84a4c57b3d372962e2ed030ecfd054f",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_constant_r300",
+      "year": 2024,
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "bda0c98bd63b40d3818ef4b2697ed3b9fb0cb0a555f64c70381d351394a99eed",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l1_r300",
+      "year": 2020,
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "4044a47533f6f8de3765f18fa8c940f043f6211d96e5cb57d7a60c6d05ab7959",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l1_r300",
+      "year": 2021,
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "b19a99d13feae101be5bab38304f24e36c831af369cecc307ee7ce0668e9bbe3",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l1_r300",
+      "year": 2022,
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "85614f67ab97829cb2ff61e5dace27fb1fed4f32971c594b77ad18bd729d11d2",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l1_r300",
+      "year": 2023,
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "663eef6ea6b9cbdbc9d2754ab3ab4787c84a4c57b3d372962e2ed030ecfd054f",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l1_r300",
+      "year": 2024,
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "bda0c98bd63b40d3818ef4b2697ed3b9fb0cb0a555f64c70381d351394a99eed",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l10_r300",
+      "year": 2020,
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "4044a47533f6f8de3765f18fa8c940f043f6211d96e5cb57d7a60c6d05ab7959",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l10_r300",
+      "year": 2021,
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "b19a99d13feae101be5bab38304f24e36c831af369cecc307ee7ce0668e9bbe3",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l10_r300",
+      "year": 2022,
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "85614f67ab97829cb2ff61e5dace27fb1fed4f32971c594b77ad18bd729d11d2",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l10_r300",
+      "year": 2023,
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "663eef6ea6b9cbdbc9d2754ab3ab4787c84a4c57b3d372962e2ed030ecfd054f",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "rank_lgb_linear_l10_r300",
+      "year": 2024,
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "bda0c98bd63b40d3818ef4b2697ed3b9fb0cb0a555f64c70381d351394a99eed",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_constant_r300",
+      "year": 2020,
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "c98cbc42f56ca41486ed24fa98a6b4d6d76dcf6831f31553c6fa95702695a919",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_constant_r300",
+      "year": 2021,
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "4efef935eebbda80ecb893abc17895e45f610d2db99315c7304534f69956324a",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_constant_r300",
+      "year": 2022,
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "e5ad393cc2d5a143219d1a1b3c5d6e9ee0c13ad2cf10b9761684a91edb111e34",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_constant_r300",
+      "year": 2023,
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "aea3551c0ae37014f507af16318600a8816c6b477b16d43d2cdd41c9dd8e51e7",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_constant_r300",
+      "year": 2024,
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "0cfffa9ba00dcff5974e49cfdb83723006968b555c0facc2b50802e3152e0252",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l1_r300",
+      "year": 2020,
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "c98cbc42f56ca41486ed24fa98a6b4d6d76dcf6831f31553c6fa95702695a919",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l1_r300",
+      "year": 2021,
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "4efef935eebbda80ecb893abc17895e45f610d2db99315c7304534f69956324a",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l1_r300",
+      "year": 2022,
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "e5ad393cc2d5a143219d1a1b3c5d6e9ee0c13ad2cf10b9761684a91edb111e34",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l1_r300",
+      "year": 2023,
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "aea3551c0ae37014f507af16318600a8816c6b477b16d43d2cdd41c9dd8e51e7",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l1_r300",
+      "year": 2024,
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "0cfffa9ba00dcff5974e49cfdb83723006968b555c0facc2b50802e3152e0252",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l10_r300",
+      "year": 2020,
+      "boundary": {
+        "status": "passed",
+        "year": 2020,
+        "cutoff_exclusive": 20191231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "c98cbc42f56ca41486ed24fa98a6b4d6d76dcf6831f31553c6fa95702695a919",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l10_r300",
+      "year": 2021,
+      "boundary": {
+        "status": "passed",
+        "year": 2021,
+        "cutoff_exclusive": 20201231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "4efef935eebbda80ecb893abc17895e45f610d2db99315c7304534f69956324a",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l10_r300",
+      "year": 2022,
+      "boundary": {
+        "status": "passed",
+        "year": 2022,
+        "cutoff_exclusive": 20211231,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "e5ad393cc2d5a143219d1a1b3c5d6e9ee0c13ad2cf10b9761684a91edb111e34",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l10_r300",
+      "year": 2023,
+      "boundary": {
+        "status": "passed",
+        "year": 2023,
+        "cutoff_exclusive": 20221230,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "aea3551c0ae37014f507af16318600a8816c6b477b16d43d2cdd41c9dd8e51e7",
+        "test_data_read": false
+      }
+    },
+    {
+      "model": "return_lgb_linear_l10_r300",
+      "year": 2024,
+      "boundary": {
+        "status": "passed",
+        "year": 2024,
+        "cutoff_exclusive": 20231229,
+        "control_training_rows": 4096,
+        "boundary_future_label_poisoning_bit_identical": true,
+        "actual48_round_control_models_and_past_preprocessing_bit_identical": true,
+        "small_control_fits_excluded_from_actual_annual_counts": true,
+        "test_data_read": false
+      },
+      "prefix": {
+        "status": "passed",
+        "rows": 372000,
+        "actual_saved_model_cold80_day_prefix_bit_identical": true,
+        "original_mature_training_matrices_targets_andkeys_match": true,
+        "reference_info_sha256": "0cfffa9ba00dcff5974e49cfdb83723006968b555c0facc2b50802e3152e0252",
+        "test_data_read": false
+      }
+    }
+  ],
+  "new_quality_scores": 0,
+  "complete_output_quality_and_final_future_controls_pending": true,
+  "test_data_read": false
+}
