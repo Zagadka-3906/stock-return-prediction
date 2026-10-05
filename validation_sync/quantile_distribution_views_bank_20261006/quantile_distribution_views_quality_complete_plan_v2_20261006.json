@@ -1,0 +1,185 @@
+{
+  "status": "prespecified_full262_record_distribution_quality_grid_before_generator_controls",
+  "at_local": "2026-10-06T04:36:55.533485",
+  "configurations": {
+    "quantile_ordered_tail_midpoint": {
+      "kind": "quantile_distribution_view",
+      "target": "y_ret_1d",
+      "members": [
+        "return_lgb_quantile_a010_r300",
+        "return_lgb_quantile_a050_r300",
+        "return_lgb_quantile_a090_r300"
+      ],
+      "operation": "midpoint",
+      "width_penalty": 0.0,
+      "ordered_heads": "Pointwise sort of raw10/50/90percent native predictions.",
+      "fixed_before_any_new_full_quality_scores": true,
+      "score_requires_past_only_return_mapping": true
+    },
+    "quantile_ordered_negative_width": {
+      "kind": "quantile_distribution_view",
+      "target": "y_ret_1d",
+      "members": [
+        "return_lgb_quantile_a010_r300",
+        "return_lgb_quantile_a050_r300",
+        "return_lgb_quantile_a090_r300"
+      ],
+      "operation": "negative_width",
+      "width_penalty": 0.0,
+      "ordered_heads": "Pointwise sort of raw10/50/90percent native predictions.",
+      "fixed_before_any_new_full_quality_scores": true,
+      "score_requires_past_only_return_mapping": true
+    },
+    "quantile_ordered_reflected_upper": {
+      "kind": "quantile_distribution_view",
+      "target": "y_ret_1d",
+      "members": [
+        "return_lgb_quantile_a010_r300",
+        "return_lgb_quantile_a050_r300",
+        "return_lgb_quantile_a090_r300"
+      ],
+      "operation": "reflected_upper",
+      "width_penalty": 0.0,
+      "ordered_heads": "Pointwise sort of raw10/50/90percent native predictions.",
+      "fixed_before_any_new_full_quality_scores": true,
+      "score_requires_past_only_return_mapping": true
+    },
+    "quantile_ordered_median_width_p025": {
+      "kind": "quantile_distribution_view",
+      "target": "y_ret_1d",
+      "members": [
+        "return_lgb_quantile_a010_r300",
+        "return_lgb_quantile_a050_r300",
+        "return_lgb_quantile_a090_r300"
+      ],
+      "operation": "median_minus_width",
+      "width_penalty": 0.25,
+      "ordered_heads": "Pointwise sort of raw10/50/90percent native predictions.",
+      "fixed_before_any_new_full_quality_scores": true,
+      "score_requires_past_only_return_mapping": true
+    },
+    "quantile_ordered_median_width_p050": {
+      "kind": "quantile_distribution_view",
+      "target": "y_ret_1d",
+      "members": [
+        "return_lgb_quantile_a010_r300",
+        "return_lgb_quantile_a050_r300",
+        "return_lgb_quantile_a090_r300"
+      ],
+      "operation": "median_minus_width",
+      "width_penalty": 0.5,
+      "ordered_heads": "Pointwise sort of raw10/50/90percent native predictions.",
+      "fixed_before_any_new_full_quality_scores": true,
+      "score_requires_past_only_return_mapping": true
+    },
+    "quantile_ordered_median_width_p100": {
+      "kind": "quantile_distribution_view",
+      "target": "y_ret_1d",
+      "members": [
+        "return_lgb_quantile_a010_r300",
+        "return_lgb_quantile_a050_r300",
+        "return_lgb_quantile_a090_r300"
+      ],
+      "operation": "median_minus_width",
+      "width_penalty": 1.0,
+      "ordered_heads": "Pointwise sort of raw10/50/90percent native predictions.",
+      "fixed_before_any_new_full_quality_scores": true,
+      "score_requires_past_only_return_mapping": true
+    }
+  },
+  "pointwise_projection": "Sort raw .1/.5/.9 estimates within the same row, then use lower/middle/upper; no fitting or cross-date statistics.",
+  "native_parents": [
+    "return_lgb_quantile_a010_r300",
+    "return_lgb_quantile_a050_r300",
+    "return_lgb_quantile_a090_r300"
+  ],
+  "expected_virtual_annual_outputs": 30,
+  "expected_virtual_final_outputs": 6,
+  "native_annual_parents_reused": 15,
+  "native_final_parents_reused": 3,
+  "new_native_fits": 0,
+  "original_full198_quality_grid_preserved": true,
+  "additional_required_quality_rounds": [
+    93,
+    94
+  ],
+  "explicit_parent_rounds": {
+    "93": 92,
+    "94": 93
+  },
+  "quality_records": {
+    "93": 124,
+    "94": 138
+  },
+  "wave_arm_counts": {
+    "93": [
+      73,
+      8,
+      18,
+      25
+    ],
+    "94": [
+      37,
+      84,
+      17
+    ]
+  },
+  "role_weights": [
+    0.005,
+    0.025,
+    0.075,
+    0.2
+  ],
+  "retentions": [
+    0.0,
+    0.97,
+    0.98,
+    0.984,
+    0.99
+  ],
+  "standalone_alphas": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "auxiliary": [
+    0.0,
+    0.25
+  ],
+  "extra_model_or_risk_gates": false,
+  "sole_selection_criterion": "Highest actual official5635800row1212day continuous2020–2024 past-return-mapped savedCSV S; exact ties use active native branch count.",
+  "all_full_model_replay_csv_calibration_scheme_freeze_causality_future_candidate_ranking_and_main_publication_required": true,
+  "pointwise_view_prefix_and_independent_selfcontained_native_codec_controls_required": true,
+  "future_X_not_used_to_choose_operations_or_penalties": true,
+  "selection_bias_uncorrected": true,
+  "test_labels_read": false,
+  "new_quality_scores": 0,
+  "physical_resource_boundary_established": false,
+  "rounds": [
+    93,
+    94
+  ],
+  "model_count": 6,
+  "template_sha256": {
+    "quantile_tree_scheme_runtime_20261006.py": "3f333d84b1bed9cf7a12e675eccfb47db1e692dc1471574bf3002b6f28cc51fc",
+    "quantile_tree_quality_search_engine_v2_20261006.py": "06cc2c8433195e1876fa38fb4bdd672cc64e21b7c6b6493ae55ef29e7129c24a",
+    "run_quantile_tree_quality_round_v2_20261006.py": "73f7683d8a66f80917608355ec374a6faf920c98d486daaec7905c35c1f95672",
+    "predict_quantile_tree_quality_scheme_v2_20261006.py": "44cc8481eaf7042635699344d27008d3f31b11340bd7af721bda63485f0b6061",
+    "check_quantile_tree_quality_scheme_v2_20261006.py": "a9bdd1866366c8e11cfa5d4a777ec706c3225040bdc9a2e5755699682bdb6019",
+    "verify_quantile_tree_quality_generators_v2_20261006.py": "67fd6b7b94a68be0fd56565a7d7744aba8689e4f78769cbe723115dcc196b404"
+  },
+  "generated_source_sha256": {
+    "quantile_distribution_views_scheme_runtime_20261006.py": "fa6f2c465908c7d4fe1366c4ee8f5b050e93d33e5e9c301a63ecdb51b4fe971a",
+    "quantile_distribution_views_quality_search_engine_v2_20261006.py": "a380c0d85c8d396e25f66359b6a9329737f711e5e84313fab379e1dcfa52ca31",
+    "run_quantile_distribution_views_quality_round_v2_20261006.py": "0fad4d669efa5934837169d936da68c4e0c39ee9076007a7f4b323130b8fad9f",
+    "predict_quantile_distribution_views_quality_scheme_v2_20261006.py": "53ff36feb027c44efd2679f42f81fa68d7e1cf8c0a10ab2907bd8b96d6bacd6d",
+    "check_quantile_distribution_views_quality_scheme_v2_20261006.py": "e7486a3c78070c341a7ea2f0b3b3f0a812d228812872080c796235e48405e9e0",
+    "verify_quantile_distribution_views_quality_generators_v2_20261006.py": "3a0a2a357b50d9386b64c033e1eda4754de1b3420909094ee034c002d3d214e5",
+    "optimize_training_round93_v3.py": "d3b646e1568187fe4b32c9ca31bc4fbab4eea8b68ba1abb165f1ed4ba868644d",
+    "finalize_training_round93_v3.py": "3d450053c8a9efb3d397826421bb4ac11375d95ab1bcc7e8ff0384d64e31349f",
+    "run_training_round93_v3_pipeline.py": "14accfca7d85aab763074c266996859c6db1850ad4251b50d86c7fbbe44d704b",
+    "optimize_training_round94_v3.py": "54536352041649b04de8bbbf6c24053b751d9e2bff31ebffa5fbfe48a960f7c5",
+    "finalize_training_round94_v3.py": "39864582261f4d90aeafb2eecb04464f9e9798bb6524e8936c72f6e50b3cc3d0",
+    "run_training_round94_v3_pipeline.py": "4f591d055fd6b0d36e8930c8e77fd93aab34be82a22435eb3d8d437aec8cd347"
+  }
+}

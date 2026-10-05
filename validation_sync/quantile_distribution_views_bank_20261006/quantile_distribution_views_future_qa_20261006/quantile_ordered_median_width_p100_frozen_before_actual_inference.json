@@ -1,0 +1,21 @@
+{
+  "model_sha256": "1a408b04651ca763c1f903277de14a9f51ee54353d8ce1b0d8117c0ed3e8a2c3",
+  "configuration": {
+    "kind": "quantile_distribution_view",
+    "target": "y_ret_1d",
+    "members": [
+      "return_lgb_quantile_a010_r300",
+      "return_lgb_quantile_a050_r300",
+      "return_lgb_quantile_a090_r300"
+    ],
+    "operation": "median_minus_width",
+    "width_penalty": 1.0,
+    "ordered_heads": "Pointwise sort of raw10/50/90percent native predictions.",
+    "fixed_before_any_new_full_quality_scores": true,
+    "score_requires_past_only_return_mapping": true
+  },
+  "rows": 1599600,
+  "new_model_fits": 0,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
