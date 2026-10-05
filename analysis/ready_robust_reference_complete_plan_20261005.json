@@ -1,0 +1,123 @@
+{
+  "status": "prospectively_declared_before_any_new_official_scoring",
+  "explicit_parent_rounds": {
+    "87": 86,
+    "88": 87
+  },
+  "required_rounds": [
+    87,
+    88
+  ],
+  "all_original_rounds67_through86_retained_and_required": true,
+  "native_configurations": {
+    "rank_sgd_squared_error_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_rank",
+      "loss": "squared_error",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    },
+    "rank_sgd_huber_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_rank",
+      "loss": "huber",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    },
+    "return_sgd_squared_error_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_ret_1d",
+      "loss": "squared_error",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    },
+    "return_sgd_huber_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_ret_1d",
+      "loss": "huber",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    }
+  },
+  "expected_full_annual_fits": 20,
+  "expected_final_fits": 4,
+  "scored_records_prespecified": {
+    "87": 100,
+    "88": 98
+  },
+  "wave_arm_counts": {
+    "87": [
+      49,
+      8,
+      18,
+      25
+    ],
+    "88": [
+      25,
+      56,
+      17
+    ]
+  },
+  "waves": {
+    "87": [
+      346,
+      347,
+      348,
+      349
+    ],
+    "88": [
+      350,
+      351,
+      352
+    ]
+  },
+  "same_validation_rows": 5635800,
+  "continuous_days": 1212,
+  "all_labels_mature_original_one_day_purge": true,
+  "actual_fullnative_fits_and_future_QA_required_before_quality": true,
+  "full_return_mapping_csv_official_score_selection_causality_candidates_and_ranking_required": true,
+  "test_labels_read": false,
+  "source_documentation": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html",
+  "selection_bias_uncorrected": true,
+  "not_global_resource_exhaustion": true
+}

@@ -1,0 +1,24 @@
+{
+  "model_sha256": "bdb8387b30efb59a473c569bf910054dc2d24cca18725ba677f0815a8d9bf342",
+  "training_info_sha256": "476ae89440a8e453a81e1ba8f2f35d8d45493ff28c6dfb75aaf6f907ecd070d3",
+  "class_thresholds_learned_from_mature_past": [
+    0.4001048803329468
+  ],
+  "configuration": {
+    "kind": "streaming_rank_classifier",
+    "target": "y_rank",
+    "rank_objective": "top10",
+    "alpha": 0.001,
+    "epochs": 32,
+    "chunk_rows": 65536,
+    "clip_z": 8.0,
+    "learning_rate": "invscaling",
+    "eta0": 0.01,
+    "power_t": 0.25,
+    "average": true,
+    "shuffle": false,
+    "seed": 20261005,
+    "n_jobs": 1
+  },
+  "test_labels_read": false
+}

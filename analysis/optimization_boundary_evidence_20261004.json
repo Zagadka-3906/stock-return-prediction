@@ -1,6 +1,6 @@
 {
   "status": "search_and_resource_boundaries_not_yet_established",
-  "updated_at_local": "2026-10-05T23:14:02",
+  "updated_at_local": "2026-10-05T23:38:46",
   "selection_standard": "后续选模标准.md",
   "completed_best": 0.4510081068915626,
   "latest_completed_round": 66,
@@ -368,11 +368,11 @@
   ],
   "current_machine_snapshot": {
     "total_ram_GiB": 31.183837890625,
-    "available_ram_GiB": 7.145580291748047,
+    "available_ram_GiB": 6.938426971435547,
     "cpu_physical_cores": 16,
     "cpu_logical_cores": 32,
     "workspace_volume_total_GiB": 451.99999618530273,
-    "workspace_volume_free_GiB": 78.5113410949707,
+    "workspace_volume_free_GiB": 78.43551635742188,
     "snapshot_is_observation_not_a_limit_or_completed_capacity_test": true
   },
   "active_round": 67,
@@ -396,7 +396,9 @@
     83,
     84,
     85,
-    86
+    86,
+    87,
+    88
   ],
   "measured_official_scoring_capacity": [
     {
@@ -1790,7 +1792,9 @@
         83,
         84,
         85,
-        86
+        86,
+        87,
+        88
       ],
       "actual_completed_official_rounds": [
         48,
@@ -1833,7 +1837,9 @@
         83,
         84,
         85,
-        86
+        86,
+        87,
+        88
       ],
       "actual_complete_round_evidence": [
         {
@@ -2088,7 +2094,7 @@
           }
         }
       ],
-      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86]."
+      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88]."
     },
     {
       "method": "Matched16384 width actual complete32epoch training and final-output evaluation",
@@ -2305,9 +2311,9 @@
       "expected_annual_fits": 20,
       "expected_final_fits": 4,
       "actual_annual_fits": 20,
-      "actual_fulltraining_artifacts": 2,
+      "actual_fulltraining_artifacts": 4,
       "actual_native_execution_status": "passed",
-      "actual_future_status": "pending",
+      "actual_future_status": "passed",
       "actual_full1694259_readonly_key_regression_and16_small32pass_controls": "analysis/streaming_rank_classification_preflight_v3_20261005/verification.json",
       "actual44_native_and_inherited_routes": "analysis/streaming_rank_classifier_direct_router_preflight_20261005/verification.json",
       "actual_generator_controls": "analysis/streaming_rank_classifier_search_generator_preflight_v4_20261005/verification.json",
@@ -2406,13 +2412,58 @@
       "all_prior_rounds67_through84_retained_and_required": true,
       "existing_actual_annual_fits_required": 20,
       "existing_actual_final_fits_required": 4,
-      "actual_final_artifacts_present": 2,
+      "actual_final_artifacts_present": 4,
       "same5635800_validation_rows_1212_continuous_days_and_original_official_scorer": true,
       "actual_generator_proof": "analysis/ready_classifier_reference_generator_preflight_20261005/verification.json",
       "actual_execution_source_controls": "analysis/ready_classifier_reference_execution_preflight_20261005/verification.json",
       "actual20_full_annual_model_audit": "analysis/streaming_classifier_actual_annual_completion_audit_20261005/verification.json",
       "one_worker_layout_only_all_original_arms_and_forecast_math_preserved": true,
       "actual4_final_fullfuture_QA_and_complete_official_candidates_still_required": true,
+      "finite_grid_not_global_method_or_resource_exhaustion": true,
+      "test_labels_read": false
+    },
+    {
+      "method": "Paired full raw63 streamed squared and Huber rank/return regressions",
+      "required_official_rounds": [
+        87,
+        88
+      ],
+      "explicit_parent_rounds": {
+        "87": 86,
+        "88": 87
+      },
+      "actual_completed_official_rounds": [],
+      "remaining_required_official_rounds": [
+        87,
+        88
+      ],
+      "scored_records_prespecified": {
+        "87": 100,
+        "88": 98
+      },
+      "new_native_configurations": 4,
+      "expected_actual_full_annual_fits": 20,
+      "expected_actual_full_final_fits": 4,
+      "actual_full_annual_infos_present": 2,
+      "actual_full_final_infos_present": 0,
+      "actual_native_worker_ownership": [
+        {
+          "kind": "annual",
+          "pid": 38476,
+          "owned_live_now": true
+        },
+        {
+          "kind": "future",
+          "pid": 42232,
+          "owned_live_now": true
+        }
+      ],
+      "all_original67_through86_rounds_retained_and_required": true,
+      "feature_and_target_scaling_only_mature_past_no_label_clipping": true,
+      "actual16_small_controls_not_replacing_full20_annual4_final_or_quality": true,
+      "same5635800_validation_rows_1212_continuous_days_original_official_scorer": true,
+      "actual_fullfuture_reload_cold80_return_mapping_freeze_causality_candidates_ranking_required": true,
+      "only_main_and_D_or_E_project_data": true,
       "finite_grid_not_global_method_or_resource_exhaustion": true,
       "test_labels_read": false
     }
@@ -3028,7 +3079,7 @@
     "quality_and_fullfuture_evidence_pending": false,
     "prepared_plan_is_not_actual_quality_or_candidate_evidence": true
   },
-  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v16_20261005.py",
+  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v17_20261005.py",
   "additional_boundary_refresh_source_sha256": "23032ea6407e79cd2ed674546ded33934780604622431718d309336e74e01ec6",
   "agreement_gate_coverage_evidence": {
     "method": "Same-day model agreement and diversity gated effective layer weights",
@@ -3296,9 +3347,9 @@
     "expected_annual_fits": 20,
     "expected_final_fits": 4,
     "actual_annual_fits": 20,
-    "actual_fulltraining_artifacts": 2,
+    "actual_fulltraining_artifacts": 4,
     "actual_native_execution_status": "passed",
-    "actual_future_status": "pending",
+    "actual_future_status": "passed",
     "actual_full1694259_readonly_key_regression_and16_small32pass_controls": "analysis/streaming_rank_classification_preflight_v3_20261005/verification.json",
     "actual44_native_and_inherited_routes": "analysis/streaming_rank_classifier_direct_router_preflight_20261005/verification.json",
     "actual_generator_controls": "analysis/streaming_rank_classifier_search_generator_preflight_v4_20261005/verification.json",
@@ -3397,13 +3448,58 @@
     "all_prior_rounds67_through84_retained_and_required": true,
     "existing_actual_annual_fits_required": 20,
     "existing_actual_final_fits_required": 4,
-    "actual_final_artifacts_present": 2,
+    "actual_final_artifacts_present": 4,
     "same5635800_validation_rows_1212_continuous_days_and_original_official_scorer": true,
     "actual_generator_proof": "analysis/ready_classifier_reference_generator_preflight_20261005/verification.json",
     "actual_execution_source_controls": "analysis/ready_classifier_reference_execution_preflight_20261005/verification.json",
     "actual20_full_annual_model_audit": "analysis/streaming_classifier_actual_annual_completion_audit_20261005/verification.json",
     "one_worker_layout_only_all_original_arms_and_forecast_math_preserved": true,
     "actual4_final_fullfuture_QA_and_complete_official_candidates_still_required": true,
+    "finite_grid_not_global_method_or_resource_exhaustion": true,
+    "test_labels_read": false
+  },
+  "robust_regression_coverage_evidence": {
+    "method": "Paired full raw63 streamed squared and Huber rank/return regressions",
+    "required_official_rounds": [
+      87,
+      88
+    ],
+    "explicit_parent_rounds": {
+      "87": 86,
+      "88": 87
+    },
+    "actual_completed_official_rounds": [],
+    "remaining_required_official_rounds": [
+      87,
+      88
+    ],
+    "scored_records_prespecified": {
+      "87": 100,
+      "88": 98
+    },
+    "new_native_configurations": 4,
+    "expected_actual_full_annual_fits": 20,
+    "expected_actual_full_final_fits": 4,
+    "actual_full_annual_infos_present": 2,
+    "actual_full_final_infos_present": 0,
+    "actual_native_worker_ownership": [
+      {
+        "kind": "annual",
+        "pid": 38476,
+        "owned_live_now": true
+      },
+      {
+        "kind": "future",
+        "pid": 42232,
+        "owned_live_now": true
+      }
+    ],
+    "all_original67_through86_rounds_retained_and_required": true,
+    "feature_and_target_scaling_only_mature_past_no_label_clipping": true,
+    "actual16_small_controls_not_replacing_full20_annual4_final_or_quality": true,
+    "same5635800_validation_rows_1212_continuous_days_original_official_scorer": true,
+    "actual_fullfuture_reload_cold80_return_mapping_freeze_causality_candidates_ranking_required": true,
+    "only_main_and_D_or_E_project_data": true,
     "finite_grid_not_global_method_or_resource_exhaustion": true,
     "test_labels_read": false
   }

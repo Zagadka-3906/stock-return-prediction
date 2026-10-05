@@ -1,0 +1,85 @@
+{
+  "status": "declared_before20_fullannual4_final_nativefits",
+  "configurations": {
+    "rank_sgd_squared_error_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_rank",
+      "loss": "squared_error",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    },
+    "rank_sgd_huber_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_rank",
+      "loss": "huber",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    },
+    "return_sgd_squared_error_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_ret_1d",
+      "loss": "squared_error",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    },
+    "return_sgd_huber_e32": {
+      "kind": "streaming_robust_regression",
+      "target": "y_ret_1d",
+      "loss": "huber",
+      "alpha": 0.0001,
+      "epsilon": 0.1,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+    }
+  },
+  "required_full_official_rounds": [
+    87,
+    88
+  ],
+  "explicit_parent_rounds": {
+    "87": 86,
+    "88": 87
+  },
+  "required_records": 198,
+  "same5635800_rows1212_days": true,
+  "smallcontrols_do_not_replace_actualnative_fits_or_fullquality": true,
+  "test_labels_read": false
+}

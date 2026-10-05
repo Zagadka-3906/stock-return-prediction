@@ -1,0 +1,32 @@
+{
+  "model_sha256": "fcfa3d110fa6c1ab0c047d92bb94bae987e6015c23d30a83263a9dfab2af29e4",
+  "training_info_sha256": "7b3d8395948dd3bc7fc3f9d2d8400a2c8ad4d35dab4efba5b127afa76bfb7ef2",
+  "class_thresholds_learned_from_mature_past": [
+    -0.3999556303024292,
+    -0.29989439249038696,
+    -0.19991189986467361,
+    -0.09988334774971008,
+    0.00012189182598376647,
+    0.10000000149011612,
+    0.2000885307788849,
+    0.30013296008110046,
+    0.4001048803329468
+  ],
+  "configuration": {
+    "kind": "streaming_rank_classifier",
+    "target": "y_rank",
+    "rank_objective": "decile",
+    "alpha": 0.001,
+    "epochs": 32,
+    "chunk_rows": 65536,
+    "clip_z": 8.0,
+    "learning_rate": "invscaling",
+    "eta0": 0.01,
+    "power_t": 0.25,
+    "average": true,
+    "shuffle": false,
+    "seed": 20261005,
+    "n_jobs": 1
+  },
+  "test_labels_read": false
+}
