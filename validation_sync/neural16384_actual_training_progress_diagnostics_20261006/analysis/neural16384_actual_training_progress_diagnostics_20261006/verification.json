@@ -1,0 +1,246 @@
+{
+  "status": "passed_actual_nonblocking_owned_training_loop_observations",
+  "at_local": "2026-10-06T06:00:40",
+  "actual_owned_trainer": {
+    "name": "neural16384_annual",
+    "pid": 23136,
+    "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+    "script_args": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\job_definition.json"
+    ],
+    "owned_worker_pid": 36032,
+    "owned_worker_creation_time": 1791224358.312683,
+    "owned_parent_creation_time": 1791224358.299454,
+    "service_provider_pid": 7432,
+    "service_provider_creation_time": 1791215814.6878464,
+    "service_provider_name": "WmiPrvSE.exe",
+    "independent_launch_root_in_any_job": false,
+    "actual_native_console_handle": 0,
+    "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_reboot_recovery_attempt_20261006.py",
+    "original_arguments": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\run.json"
+    ],
+    "at_local": "2026-10-06T02:19:18",
+    "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\stdout.log",
+    "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\stderr.log"
+  },
+  "actual_samples": [
+    {
+      "at_local": "2026-10-06T05:57:11",
+      "epoch_zero_based": 3,
+      "actual_current_epoch_one_based": 4,
+      "actual_completed_epochs": 3,
+      "actual_batch_offset": 1703936,
+      "actual_current_batch_one_based": 53,
+      "observed_completed_epoch_training_losses": [
+        4.084308639576819,
+        0.08297970355421726,
+        0.08278837347388279
+      ],
+      "actual_phase_top_frames": [
+        {
+          "name": "layer_norm",
+          "short_filename": "torch\\nn\\functional.py",
+          "line": 2936
+        },
+        {
+          "name": "forward",
+          "short_filename": "torch\\nn\\modules\\normalization.py",
+          "line": 229
+        },
+        {
+          "name": "_call_impl",
+          "short_filename": "torch\\nn\\modules\\module.py",
+          "line": 1790
+        },
+        {
+          "name": "_wrapped_call_impl",
+          "short_filename": "torch\\nn\\modules\\module.py",
+          "line": 1779
+        },
+        {
+          "name": "forward",
+          "short_filename": "torch\\nn\\modules\\container.py",
+          "line": 253
+        },
+        {
+          "name": "_call_impl",
+          "short_filename": "torch\\nn\\modules\\module.py",
+          "line": 1790
+        },
+        {
+          "name": "_wrapped_call_impl",
+          "short_filename": "torch\\nn\\modules\\module.py",
+          "line": 1779
+        }
+      ],
+      "fit_arrays_source_line": 64
+    },
+    {
+      "at_local": "2026-10-06T06:00:20",
+      "epoch_zero_based": 3,
+      "actual_current_epoch_one_based": 4,
+      "actual_completed_epochs": 3,
+      "actual_batch_offset": 1769472,
+      "actual_current_batch_one_based": 55,
+      "observed_completed_epoch_training_losses": [
+        4.084308639576819,
+        0.08297970355421726,
+        0.08278837347388279
+      ],
+      "actual_phase_top_frames": [
+        {
+          "name": "_engine_run_backward",
+          "short_filename": "torch\\autograd\\graph.py",
+          "line": 869
+        },
+        {
+          "name": "backward",
+          "short_filename": "torch\\autograd\\__init__.py",
+          "line": 381
+        },
+        {
+          "name": "backward",
+          "short_filename": "torch\\_tensor.py",
+          "line": 631
+        },
+        {
+          "name": "fit_arrays",
+          "short_filename": "train_diverse_backbones_20261003.py",
+          "line": 64
+        },
+        {
+          "name": "fit",
+          "short_filename": "neural16384_actual_resource_recorder_20261005.py",
+          "line": 89
+        },
+        {
+          "name": "train_one",
+          "short_filename": "train_diverse_backbones_20261003.py",
+          "line": 184
+        },
+        {
+          "name": "all_oof",
+          "short_filename": "train_neural16384_full_bank_20261005.py",
+          "line": 84
+        }
+      ],
+      "fit_arrays_source_line": 64
+    },
+    {
+      "at_local": "2026-10-06T06:00:30",
+      "epoch_zero_based": 3,
+      "actual_current_epoch_one_based": 4,
+      "actual_completed_epochs": 3,
+      "actual_batch_offset": 1769472,
+      "actual_current_batch_one_based": 55,
+      "observed_completed_epoch_training_losses": [
+        4.084308639576819,
+        0.08297970355421726,
+        0.08278837347388279
+      ],
+      "actual_phase_top_frames": [
+        {
+          "name": "_engine_run_backward",
+          "short_filename": "torch\\autograd\\graph.py",
+          "line": 869
+        },
+        {
+          "name": "backward",
+          "short_filename": "torch\\autograd\\__init__.py",
+          "line": 381
+        },
+        {
+          "name": "backward",
+          "short_filename": "torch\\_tensor.py",
+          "line": 631
+        },
+        {
+          "name": "fit_arrays",
+          "short_filename": "train_diverse_backbones_20261003.py",
+          "line": 64
+        },
+        {
+          "name": "fit",
+          "short_filename": "neural16384_actual_resource_recorder_20261005.py",
+          "line": 89
+        },
+        {
+          "name": "train_one",
+          "short_filename": "train_diverse_backbones_20261003.py",
+          "line": 184
+        },
+        {
+          "name": "all_oof",
+          "short_filename": "train_neural16384_full_bank_20261005.py",
+          "line": 84
+        }
+      ],
+      "fit_arrays_source_line": 64
+    },
+    {
+      "at_local": "2026-10-06T06:00:40",
+      "epoch_zero_based": 3,
+      "actual_current_epoch_one_based": 4,
+      "actual_completed_epochs": 3,
+      "actual_batch_offset": 1769472,
+      "actual_current_batch_one_based": 55,
+      "observed_completed_epoch_training_losses": [
+        4.084308639576819,
+        0.08297970355421726,
+        0.08278837347388279
+      ],
+      "actual_phase_top_frames": [
+        {
+          "name": "_engine_run_backward",
+          "short_filename": "torch\\autograd\\graph.py",
+          "line": 869
+        },
+        {
+          "name": "backward",
+          "short_filename": "torch\\autograd\\__init__.py",
+          "line": 381
+        },
+        {
+          "name": "backward",
+          "short_filename": "torch\\_tensor.py",
+          "line": 631
+        },
+        {
+          "name": "fit_arrays",
+          "short_filename": "train_diverse_backbones_20261003.py",
+          "line": 64
+        },
+        {
+          "name": "fit",
+          "short_filename": "neural16384_actual_resource_recorder_20261005.py",
+          "line": 89
+        },
+        {
+          "name": "train_one",
+          "short_filename": "train_diverse_backbones_20261003.py",
+          "line": 184
+        },
+        {
+          "name": "all_oof",
+          "short_filename": "train_neural16384_full_bank_20261005.py",
+          "line": 84
+        }
+      ],
+      "fit_arrays_source_line": 64
+    }
+  ],
+  "actual_training_loop_position_advanced": true,
+  "maximum_observed_current_epoch": 4,
+  "maximum_observed_completed_epochs": 3,
+  "actual_training_process_CPU_seconds_advanced": 20.375,
+  "training_source_and_binary_hashes_unchanged": true,
+  "training_not_paused_restarted_or_modified": true,
+  "new_model_fits_by_diagnostics": 0,
+  "new_quality_scores": 0,
+  "full32_epoch2021_model_still_incomplete": true,
+  "global_resource_boundary_established": false,
+  "same_position_in_short_interval_would_not_prove_stall": true,
+  "sampling_is_non_atomic_and_observations_are_consistency_checked": true,
+  "test_labels_read": false
+}

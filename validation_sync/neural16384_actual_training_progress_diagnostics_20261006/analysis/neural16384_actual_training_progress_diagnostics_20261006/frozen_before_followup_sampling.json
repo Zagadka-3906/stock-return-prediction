@@ -1,0 +1,87 @@
+{
+  "at_local": "2026-10-06T06:00:20",
+  "actual_owned_trainer": {
+    "name": "neural16384_annual",
+    "pid": 23136,
+    "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+    "script_args": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\job_definition.json"
+    ],
+    "owned_worker_pid": 36032,
+    "owned_worker_creation_time": 1791224358.312683,
+    "owned_parent_creation_time": 1791224358.299454,
+    "service_provider_pid": 7432,
+    "service_provider_creation_time": 1791215814.6878464,
+    "service_provider_name": "WmiPrvSE.exe",
+    "independent_launch_root_in_any_job": false,
+    "actual_native_console_handle": 0,
+    "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_reboot_recovery_attempt_20261006.py",
+    "original_arguments": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\run.json"
+    ],
+    "at_local": "2026-10-06T02:19:18",
+    "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\stdout.log",
+    "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\stderr.log"
+  },
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\sample_readonly_neural16384_stack_20261006.py": "b26424de8b35f51476200f45a87fa346a46cf04d877ef699ea048157f311eb9b",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_diverse_backbones_20261003.py": "6524e642f540bc0c79e6296d3c67959330d4126cb248b26f535110c8f05daa4e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_neural16384_full_bank_20261005.py": "0a3f213b7398effcd001a3867a0216cd9ed5b07f277b5885bb97d4c009875958",
+    "D:\\3.Study\\数据分析\\赛题五\\tools\\readonly_pyspy_diagnostics_20261006\\py-spy.exe": "6e83ab095f40453742d01a2719a178f308534015da519ec0659d2584139dc995",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_readonly_neural16384_training_progress_20261006.py": "079e2ec150083d3ef099d4d896ca78ced85f8304d2f69c542e99b19672337f77"
+  },
+  "first_actual_observation": {
+    "epoch_zero_based": 3,
+    "actual_current_epoch_one_based": 4,
+    "actual_completed_epochs": 3,
+    "actual_batch_offset": 1703936,
+    "actual_current_batch_one_based": 53,
+    "observed_completed_epoch_training_losses": [
+      4.084308639576819,
+      0.08297970355421726,
+      0.08278837347388279
+    ],
+    "actual_phase_top_frames": [
+      {
+        "name": "layer_norm",
+        "short_filename": "torch\\nn\\functional.py",
+        "line": 2936
+      },
+      {
+        "name": "forward",
+        "short_filename": "torch\\nn\\modules\\normalization.py",
+        "line": 229
+      },
+      {
+        "name": "_call_impl",
+        "short_filename": "torch\\nn\\modules\\module.py",
+        "line": 1790
+      },
+      {
+        "name": "_wrapped_call_impl",
+        "short_filename": "torch\\nn\\modules\\module.py",
+        "line": 1779
+      },
+      {
+        "name": "forward",
+        "short_filename": "torch\\nn\\modules\\container.py",
+        "line": 253
+      },
+      {
+        "name": "_call_impl",
+        "short_filename": "torch\\nn\\modules\\module.py",
+        "line": 1790
+      },
+      {
+        "name": "_wrapped_call_impl",
+        "short_filename": "torch\\nn\\modules\\module.py",
+        "line": 1779
+      }
+    ],
+    "fit_arrays_source_line": 64
+  },
+  "expected_followup_reads": 3,
+  "nonblocking_readonly_sampling_only": true,
+  "new_model_fits": 0,
+  "new_quality_scores": 0
+}
