@@ -1,0 +1,29 @@
+{
+  "model_sha256": "d34491433a62881b0a435e9321f20a978c9e32b9168a385f086ed70b762f6972",
+  "configuration": {
+    "kind": "lightgbm_linear_leaf",
+    "target": "y_rank",
+    "linear_tree": true,
+    "linear_lambda": 10.0,
+    "num_boost_round": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": 8,
+    "min_data_in_leaf": 128,
+    "max_bin": 127,
+    "lambda_l2": 1.0,
+    "seed": 20261005,
+    "num_threads": 8,
+    "clip_z": 8.0,
+    "chunk_rows": 32768,
+    "return_quantiles": [
+      0.005,
+      0.995
+    ],
+    "reserve_available_ram_GiB": 14.0
+  },
+  "training_info_sha256": "a25c6630c082cf34015a8fa1771f61445a19ef979e7f9f2a6c197de395f558c8",
+  "first_actual_future_date": 20250102,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
