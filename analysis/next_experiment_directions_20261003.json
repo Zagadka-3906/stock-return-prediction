@@ -1171,6 +1171,39 @@
       "status": "actual_full_fits_native_future_and_quality_pending"
     },
     {
+      "priority": 35,
+      "method": "Matched GOSS gradient sampling rates on original63 features",
+      "required_official_rounds": [
+        75,
+        76
+      ],
+      "actual_completed_official_rounds": [],
+      "remaining_required_official_rounds": [
+        75,
+        76
+      ],
+      "scored_records_prespecified": {
+        "75": 124,
+        "76": 138
+      },
+      "expected_annual_fits": 30,
+      "expected_final_fits": 6,
+      "actual_annual_fits": 0,
+      "actual_fulltraining_artifacts": 0,
+      "actual_annual_execution_status": "pending",
+      "actual_native_future_status": "pending",
+      "actual_pilot_controls": "analysis/gradient_sampling_preflight_20261005/verification.json",
+      "actual_direct6_pilot_and30_inherited_codec_controls": "analysis/gradient_sampling_direct_router_preflight_20261005/verification.json",
+      "actual_generator_controls": "analysis/gradient_sampling_search_generator_preflight_20261005/verification.json",
+      "48round_pilots_not_substituted_for300round_full_fits": true,
+      "same_training_matrices_targets_keys_and_parameters_except_sampling_required": true,
+      "native_training_device": "cpu",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_grid_not_global_method_or_resource_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_native_fits_and_complete_quality_pending"
+    },
+    {
       "priority": 12,
       "method": "55-parent mature past-OOF ridge with paired first-year cold-start policies",
       "reason": "The original45-parent learned bank excludes the newly trained neural/CatBoost variants and fixes2020 to a raw-feature ridge. Test expanded55-member inputs and a prespecified equal-weight first-year rank ensemble under the same complete five-year score.",
@@ -1212,69 +1245,45 @@
       "validation_gain": 0.0
     },
     {
-      "priority": 35,
-      "method": "Matched GOSS gradient sampling rates on original63 features",
+      "priority": 36,
+      "method": "Matched16384 memory-efficient MLP execution",
       "required_official_rounds": [
-        75,
-        76
+        77,
+        78
       ],
       "actual_completed_official_rounds": [],
       "remaining_required_official_rounds": [
-        75,
-        76
+        77,
+        78
       ],
       "scored_records_prespecified": {
-        "75": 124,
-        "76": 138
+        "77": 88,
+        "78": 78
       },
-      "expected_annual_fits": 30,
-      "expected_final_fits": 6,
+      "expected_annual_fits": 15,
+      "expected_final_fits": 3,
       "actual_annual_fits": 0,
       "actual_fulltraining_artifacts": 0,
       "actual_annual_execution_status": "pending",
       "actual_native_future_status": "pending",
-      "actual_pilot_controls": "analysis/gradient_sampling_preflight_20261005/verification.json",
-      "actual_direct6_pilot_and30_inherited_codec_controls": "analysis/gradient_sampling_direct_router_preflight_20261005/verification.json",
-      "actual_generator_controls": "analysis/gradient_sampling_search_generator_preflight_20261005/verification.json",
-      "48round_pilots_not_substituted_for300round_full_fits": true,
-      "same_training_matrices_targets_keys_and_parameters_except_sampling_required": true,
-      "native_training_device": "cpu",
-      "RAM_reserve_is_scheduling_policy": true,
-      "finite_grid_not_global_method_or_resource_exhaustion": true,
+      "actual_GPU_control_status": "waiting_for_original_GPU_attempt_closure",
+      "actual_CPU_control_proof": "analysis/memory_efficient_mlp_preflight_20261005/verification.json",
+      "actual40_direct_and_inherited_codec_proof": "analysis/memory_efficient_neural_direct_router_preflight_20261005/verification.json",
+      "actual_generator_controls": "analysis/memory_efficient_neural_search_generator_preflight_20261005/verification.json",
+      "actual_pipeline_and_native_waiters": "analysis/memory_efficient_neural_followups_20261005/verification.json",
+      "original_width32epochs_effective32768batch_and_AdamW_step_count_retained": true,
+      "prototype_and_single_step_fits_not_counted_as_complete_annual_fits": true,
+      "microbatch_roundoff_requires_actual_independent_official_quality": true,
+      "native_bank_and_scratch_drive": "E:",
+      "RAM_disk_reserves_are_scheduling_policy": true,
+      "finite_grid_not_global_method_or_physical_resource_exhaustion": true,
       "test_labels_read": false,
-      "status": "actual_native_fits_and_complete_quality_pending"
-    },
-    {
-      "priority": 36,
-      "method": "Matched16384 memory-efficient MLP execution",
-      "reason": "Actual owned full16384 fit reports4,848,615,424bytes of Windows shared GPU memory. Test microbatch accumulation, activation recomputation andtheir combination without changing width,32epochs,effective32768 batch,AdamW step count orpast preprocessing.",
-      "configurations": 3,
-      "expected_annual_fits": 15,
-      "expected_final_fits": 3,
-      "actual_small_CPU_control_fits": 11,
-      "actual_full_annual_fits": 0,
-      "actual_GPU_control_fits": 0,
-      "execution_status": "CPU_controls_passed_GPU_controls_waiting_full_native_andquality_sources_pending",
-      "required_controls": [
-        "actual GPU allocation andtiming measurement after original annual andfinal processes close",
-        "original mature one-day purge andsame original63features",
-        "actual complete15 annual and3final32epoch fits; single-step controls never counted asannual fits",
-        "all future-X native reload andcold80-day prefix controls",
-        "complete role andstandalone graphs withofficial connected scoring,mature return calibration,causal checks,candidate andranking QA",
-        "floating-point differences compared byofficial score; no assumption of score equality"
-      ],
-      "actual_GPU_control_run": "analysis/memory_efficient_mlp_gpu_control_run_v2_20261005.json",
-      "CPU_control_proof": "analysis/memory_efficient_mlp_preflight_20261005/verification.json",
-      "actual_shared_memory_proof": "analysis/neural16384_actual_shared_memory_observation_20261005/verification.json",
-      "source_plan": "analysis/memory_efficient_mlp_complete_search_plan_20261005.json",
-      "official_quality_not_performed": true,
-      "test_labels_read": false,
-      "physical_resource_exhaustion_established": false
+      "status": "actual_full_native_fits_and_complete_official_quality_pending"
     }
   ],
   "new_virtual_ensemble_configurations": 6,
   "new_virtual_ensemble_artifacts": 30,
-  "total_new_individual_and_virtual_configurations": 180,
+  "total_new_individual_and_virtual_configurations": 183,
   "prospective_official_input_parse_cache": {
     "status": "passed on full5635800-row actual calibrated CSV and both future scoring entry points",
     "all_eight_metrics_bit_identical": true,
@@ -1357,10 +1366,12 @@
       73,
       74,
       75,
-      76
+      76,
+      77,
+      78
     ]
   },
-  "updated_at_local": "2026-10-05T12:46:40",
+  "updated_at_local": "2026-10-05T13:19:21",
   "fully_completed_five_year_configurations": 173,
   "planned_neural_tuning_configurations": 5,
   "global_resource_exhaustion_established": false,
@@ -1397,5 +1408,8 @@
   "gradient_sampling_declared_configurations": 6,
   "gradient_sampling_actual_annual_fits": 0,
   "gradient_sampling_actual_fulltraining_artifacts": 0,
-  "memory_efficient_direction_updated_at_local": "2026-10-05T12:47:01.897967"
+  "memory_efficient_direction_updated_at_local": "2026-10-05T12:47:01.897967",
+  "memory_efficient_neural_declared_configurations": 3,
+  "memory_efficient_neural_actual_annual_fits": 0,
+  "memory_efficient_neural_actual_fulltraining_artifacts": 0
 }

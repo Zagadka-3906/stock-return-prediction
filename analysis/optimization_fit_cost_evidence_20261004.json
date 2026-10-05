@@ -1,7 +1,7 @@
 {
   "status": "observed_costs_with_validation_work_pending",
-  "generated_at_local": "2026-10-05T12:46:41",
-  "configurations": 180,
+  "generated_at_local": "2026-10-05T13:19:43",
+  "configurations": 183,
   "native_child_annual_fits": 625,
   "learned_meta_annual_fits": 72,
   "total_actual_new_annual_fits": 697,
@@ -9,7 +9,7 @@
   "virtual_ensemble_annual_artifacts": 30,
   "families": {
     "mlp": {
-      "configurations": 51,
+      "configurations": 54,
       "new_annual_fits": 250,
       "fit_seconds_total": 23042.7750000001
     },
@@ -11564,6 +11564,96 @@
       "fit_seconds_total": 0,
       "all_five_annual_outputs_complete": false,
       "actual48_round_controls_not_counted_as_complete300_round_annual_fits": true
+    },
+    {
+      "model": "rank16384_accumulate_seed07_e32",
+      "kind": "mlp",
+      "method_family": "memory_efficient_neural",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "mlp",
+        "target": "y_rank",
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "dropout": 0.0,
+        "hidden": [
+          16384,
+          8192,
+          4096
+        ],
+        "epochs": 32,
+        "seed": 20261007,
+        "memory_mode": "accumulate",
+        "micro_batch_size": 4096
+      },
+      "source_bank": "E:\\赛题五计算存储\\memory_efficient_neural_bank_20261005",
+      "pilot_fits_excluded_from_full_fit_count": true,
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false
+    },
+    {
+      "model": "rank16384_checkpoint_seed07_e32",
+      "kind": "mlp",
+      "method_family": "memory_efficient_neural",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "mlp",
+        "target": "y_rank",
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "dropout": 0.0,
+        "hidden": [
+          16384,
+          8192,
+          4096
+        ],
+        "epochs": 32,
+        "seed": 20261007,
+        "memory_mode": "checkpoint",
+        "micro_batch_size": 4096
+      },
+      "source_bank": "E:\\赛题五计算存储\\memory_efficient_neural_bank_20261005",
+      "pilot_fits_excluded_from_full_fit_count": true,
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false
+    },
+    {
+      "model": "rank16384_combined_seed07_e32",
+      "kind": "mlp",
+      "method_family": "memory_efficient_neural",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "mlp",
+        "target": "y_rank",
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "dropout": 0.0,
+        "hidden": [
+          16384,
+          8192,
+          4096
+        ],
+        "epochs": 32,
+        "seed": 20261007,
+        "memory_mode": "combined",
+        "micro_batch_size": 4096
+      },
+      "source_bank": "E:\\赛题五计算存储\\memory_efficient_neural_bank_20261005",
+      "pilot_fits_excluded_from_full_fit_count": true,
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false
     }
   ],
   "resource_snapshots": [
@@ -11646,7 +11736,9 @@
     73,
     74,
     75,
-    76
+    76,
+    77,
+    78
   ],
   "official_parallel_capacity_controls": [
     {
@@ -12210,5 +12302,10 @@
   "gradient_sampling_declared_configurations": 6,
   "gradient_sampling_actual_annual_fits": 0,
   "gradient_sampling_actual_fulltraining_artifacts": 0,
-  "gradient_sampling_info_source_sha256": {}
+  "gradient_sampling_info_source_sha256": {},
+  "memory_efficient_neural_declared_configurations": 3,
+  "memory_efficient_neural_actual_annual_fits": 0,
+  "memory_efficient_neural_actual_fulltraining_artifacts": 0,
+  "memory_efficient_neural_info_source_sha256": {},
+  "supplementary_memory_layout_cost_source": "analysis\\refresh_memory_efficient_neural_cost_evidence_20261005.py"
 }

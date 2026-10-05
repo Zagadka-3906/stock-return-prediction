@@ -1,0 +1,100 @@
+{
+  "status": "full_native_final_and_complete_official_workflows_prepared_before_controls",
+  "model_configurations": {
+    "rank16384_accumulate_seed07_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        16384,
+        8192,
+        4096
+      ],
+      "epochs": 32,
+      "seed": 20261007,
+      "memory_mode": "accumulate",
+      "micro_batch_size": 4096
+    },
+    "rank16384_checkpoint_seed07_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        16384,
+        8192,
+        4096
+      ],
+      "epochs": 32,
+      "seed": 20261007,
+      "memory_mode": "checkpoint",
+      "micro_batch_size": 4096
+    },
+    "rank16384_combined_seed07_e32": {
+      "kind": "mlp",
+      "target": "y_rank",
+      "batch_size": 32768,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "hidden": [
+        16384,
+        8192,
+        4096
+      ],
+      "epochs": 32,
+      "seed": 20261007,
+      "memory_mode": "combined",
+      "micro_batch_size": 4096
+    }
+  },
+  "expected_annual_fits": 15,
+  "expected_final_mature_fits": 3,
+  "actual_previous_selection_required": {
+    "77": 76,
+    "78": 77
+  },
+  "expected_total_records": {
+    "77": 88,
+    "78": 78
+  },
+  "wave_arm_counts": {
+    "77": [
+      37,
+      8,
+      18,
+      25
+    ],
+    "78": [
+      19,
+      42,
+      17
+    ]
+  },
+  "waves": {
+    "77": [
+      311,
+      312,
+      313,
+      314
+    ],
+    "78": [
+      315,
+      316,
+      317
+    ]
+  },
+  "same_original63features_mature_windows_target_seed_and32epochs": true,
+  "effective_batch32768_and_original_AdamW_update_count_retained": true,
+  "full_training_not_replaced_by_GPU_or_CPU_pilots": true,
+  "microbatch_roundoff_compared_by_official_complete_scheme_score": true,
+  "same1212_days5635800_rows_continuous_official_validation": true,
+  "all_validation_years_viewed_selection_bias_uncorrected": true,
+  "test_labels_read": false,
+  "global_resource_exhaustion_established": false
+}
