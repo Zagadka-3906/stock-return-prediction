@@ -1,0 +1,321 @@
+{
+  "status": "passed_actual_gradients_saved_tensors_and_mature_CPU_pilots",
+  "gradient_controls": [
+    {
+      "target": "y_rank",
+      "mode": "accumulate",
+      "dtype": "float64",
+      "actual_optimizer_steps": 12,
+      "effective_batch_sizes_including_tail": [
+        67,
+        67,
+        3
+      ],
+      "accumulation_micro_batch_size": 17,
+      "max_gradient_abs_difference": 4.440892098500626e-16,
+      "max_updated_state_abs_difference": 2.220446049250313e-16,
+      "gradient_and_update_tolerance": {
+        "atol": 1e-11,
+        "rtol": 1e-09
+      },
+      "passed": true
+    },
+    {
+      "target": "y_rank",
+      "mode": "checkpoint",
+      "dtype": "float64",
+      "actual_optimizer_steps": 12,
+      "effective_batch_sizes_including_tail": [
+        67,
+        67,
+        3
+      ],
+      "accumulation_micro_batch_size": 17,
+      "max_gradient_abs_difference": 0.0,
+      "max_updated_state_abs_difference": 0.0,
+      "gradient_and_update_tolerance": {
+        "atol": 1e-11,
+        "rtol": 1e-09
+      },
+      "passed": true
+    },
+    {
+      "target": "y_rank",
+      "mode": "combined",
+      "dtype": "float64",
+      "actual_optimizer_steps": 12,
+      "effective_batch_sizes_including_tail": [
+        67,
+        67,
+        3
+      ],
+      "accumulation_micro_batch_size": 17,
+      "max_gradient_abs_difference": 4.440892098500626e-16,
+      "max_updated_state_abs_difference": 2.220446049250313e-16,
+      "gradient_and_update_tolerance": {
+        "atol": 1e-11,
+        "rtol": 1e-09
+      },
+      "passed": true
+    },
+    {
+      "target": "y_ret_1d",
+      "mode": "accumulate",
+      "dtype": "float64",
+      "actual_optimizer_steps": 12,
+      "effective_batch_sizes_including_tail": [
+        67,
+        67,
+        3
+      ],
+      "accumulation_micro_batch_size": 17,
+      "max_gradient_abs_difference": 3.885780586188048e-16,
+      "max_updated_state_abs_difference": 1.1102230246251565e-16,
+      "gradient_and_update_tolerance": {
+        "atol": 1e-11,
+        "rtol": 1e-09
+      },
+      "passed": true
+    },
+    {
+      "target": "y_ret_1d",
+      "mode": "checkpoint",
+      "dtype": "float64",
+      "actual_optimizer_steps": 12,
+      "effective_batch_sizes_including_tail": [
+        67,
+        67,
+        3
+      ],
+      "accumulation_micro_batch_size": 17,
+      "max_gradient_abs_difference": 0.0,
+      "max_updated_state_abs_difference": 0.0,
+      "gradient_and_update_tolerance": {
+        "atol": 1e-11,
+        "rtol": 1e-09
+      },
+      "passed": true
+    },
+    {
+      "target": "y_ret_1d",
+      "mode": "combined",
+      "dtype": "float64",
+      "actual_optimizer_steps": 12,
+      "effective_batch_sizes_including_tail": [
+        67,
+        67,
+        3
+      ],
+      "accumulation_micro_batch_size": 17,
+      "max_gradient_abs_difference": 3.885780586188048e-16,
+      "max_updated_state_abs_difference": 1.1102230246251565e-16,
+      "gradient_and_update_tolerance": {
+        "atol": 1e-11,
+        "rtol": 1e-09
+      },
+      "passed": true
+    }
+  ],
+  "saved_tensor_controls": [
+    {
+      "mode": "baseline",
+      "CPU_actual_peak_unique_autograd_saved_nonparameter_bytes": 45203456,
+      "all_saved_control_tensors_released": true,
+      "not_total_runtime_memory_or_GPU_peak": true
+    },
+    {
+      "mode": "accumulate",
+      "CPU_actual_peak_unique_autograd_saved_nonparameter_bytes": 11300864,
+      "all_saved_control_tensors_released": true,
+      "not_total_runtime_memory_or_GPU_peak": true
+    },
+    {
+      "mode": "checkpoint",
+      "CPU_actual_peak_unique_autograd_saved_nonparameter_bytes": 1064960,
+      "all_saved_control_tensors_released": true,
+      "not_total_runtime_memory_or_GPU_peak": true
+    },
+    {
+      "mode": "combined",
+      "CPU_actual_peak_unique_autograd_saved_nonparameter_bytes": 266240,
+      "all_saved_control_tensors_released": true,
+      "not_total_runtime_memory_or_GPU_peak": true
+    }
+  ],
+  "mature_pilots": [
+    {
+      "mode": "baseline",
+      "device": "cpu",
+      "actual_rows": 4096,
+      "actual_hidden": [
+        512,
+        256,
+        128
+      ],
+      "actual_epochs": 32,
+      "effective_batch_size": 32768,
+      "actual_optimizer_steps": 32,
+      "last_batch_loss_weighting_gradient_control_separately_passed": true,
+      "model_sha256": "a2f6202af7e5681e5b86441e48580d3c04358179e9fb4e4f162681f28c372deb",
+      "actual_CPU_fit_seconds": 0.6870000000053551,
+      "max_32epoch_state_abs_difference_from_original": 0.0,
+      "bit_identical_to_original_fitter": true,
+      "actual_reload_and80_record_prefix_bit_identical": true,
+      "actual_future_label_poisoned_past_refit_bit_identical": false,
+      "annual_complete_fit_not_performed": true,
+      "16384_width_or_GPU_benchmark_not_performed": true
+    },
+    {
+      "mode": "accumulate",
+      "device": "cpu",
+      "actual_rows": 4096,
+      "actual_hidden": [
+        512,
+        256,
+        128
+      ],
+      "actual_epochs": 32,
+      "effective_batch_size": 32768,
+      "actual_optimizer_steps": 32,
+      "last_batch_loss_weighting_gradient_control_separately_passed": true,
+      "model_sha256": "5de920cde0e145f442ef7868d77016ea9a16dfb7dcc25d199bc26845c29068a9",
+      "actual_CPU_fit_seconds": 0.5469999999986612,
+      "max_32epoch_state_abs_difference_from_original": 1.1920928955078125e-07,
+      "bit_identical_to_original_fitter": false,
+      "actual_reload_and80_record_prefix_bit_identical": true,
+      "actual_future_label_poisoned_past_refit_bit_identical": true,
+      "annual_complete_fit_not_performed": true,
+      "16384_width_or_GPU_benchmark_not_performed": true
+    },
+    {
+      "mode": "checkpoint",
+      "device": "cpu",
+      "actual_rows": 4096,
+      "actual_hidden": [
+        512,
+        256,
+        128
+      ],
+      "actual_epochs": 32,
+      "effective_batch_size": 32768,
+      "actual_optimizer_steps": 32,
+      "last_batch_loss_weighting_gradient_control_separately_passed": true,
+      "model_sha256": "ba616cd61d3e5c30aa4befdc14c1fdd310d661a52465723b923564b59ff3a03a",
+      "actual_CPU_fit_seconds": 0.75,
+      "max_32epoch_state_abs_difference_from_original": 0.0,
+      "bit_identical_to_original_fitter": true,
+      "actual_reload_and80_record_prefix_bit_identical": true,
+      "actual_future_label_poisoned_past_refit_bit_identical": true,
+      "annual_complete_fit_not_performed": true,
+      "16384_width_or_GPU_benchmark_not_performed": true
+    },
+    {
+      "mode": "combined",
+      "device": "cpu",
+      "actual_rows": 4096,
+      "actual_hidden": [
+        512,
+        256,
+        128
+      ],
+      "actual_epochs": 32,
+      "effective_batch_size": 32768,
+      "actual_optimizer_steps": 32,
+      "last_batch_loss_weighting_gradient_control_separately_passed": true,
+      "model_sha256": "618b395fd6cf49b7b429a875df429ee96b41c3768d760e52bd389134fc9b286e",
+      "actual_CPU_fit_seconds": 0.8129999999946449,
+      "max_32epoch_state_abs_difference_from_original": 1.1920928955078125e-07,
+      "bit_identical_to_original_fitter": false,
+      "actual_reload_and80_record_prefix_bit_identical": true,
+      "actual_future_label_poisoned_past_refit_bit_identical": true,
+      "annual_complete_fit_not_performed": true,
+      "16384_width_or_GPU_benchmark_not_performed": true
+    }
+  ],
+  "mature_training": {
+    "year": 2020,
+    "mature_cutoff_exclusive": 20191231,
+    "past_input_matrix_sha256": "c4974e938e9785138619178d0970e83b30c6f0e793e317a37877e6e509553347",
+    "past_target_sha256": "6639ddf5e3073ac7661593eeb44e186687b29b0aac3cf08aee3ae8d3c1bb5485",
+    "all4_exact_training_permutations_matched": true,
+    "original63_features": [
+      "KMID",
+      "KLEN",
+      "KMID2",
+      "KUP",
+      "KUP2",
+      "KLOW",
+      "KLOW2",
+      "KSFT",
+      "KSFT2",
+      "OPEN0",
+      "HIGH0",
+      "LOW0",
+      "ROC5",
+      "MA5",
+      "STD5",
+      "VMA5",
+      "VSTD5",
+      "ROC10",
+      "MA10",
+      "STD10",
+      "VMA10",
+      "VSTD10",
+      "ROC20",
+      "MA20",
+      "STD20",
+      "VMA20",
+      "VSTD20",
+      "ROC60",
+      "MA60",
+      "STD60",
+      "VMA60",
+      "VSTD60",
+      "RET1",
+      "RET2",
+      "RET3",
+      "RET5",
+      "RET10",
+      "RET20",
+      "RET60",
+      "AMT_RATIO5",
+      "VOL_RATIO5",
+      "AMT_RATIO20",
+      "VOL_RATIO20",
+      "AMT_RATIO60",
+      "VOL_RATIO60",
+      "LOG_AMOUNT",
+      "LOG_VOL",
+      "PRICE_TO_20D_HIGH",
+      "PRICE_TO_60D_HIGH",
+      "ILLIQ",
+      "UP_COUNT5",
+      "UP_COUNT10",
+      "UP_COUNT20",
+      "RVOL5",
+      "RVOL20",
+      "flag_limit_up",
+      "flag_limit_down",
+      "CS_RET1",
+      "CS_RET5",
+      "CS_RET20",
+      "CS_KLEN",
+      "CS_LOG_AMOUNT",
+      "CS_RVOL20"
+    ]
+  },
+  "actual_small_control_fits": 11,
+  "source_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_memory_efficient_mlp_20261005.py": "e6868b2023008a55af2e117f3d1ceafe994be08df9b8aac875fabbf9846ac662",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\memory_efficient_mlp_20261005.py": "706e089e3a1627e143dbe5bda40b529e6d75b6e68043b4652306bb8eb7b20831",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_diverse_backbones_20261003.py": "6524e642f540bc0c79e6296d3c67959330d4126cb248b26f535110c8f05daa4e",
+    "D:\\3.Study\\数据分析\\赛题五\\run.py": "17da300abe4dd264984ac71262581210c27951912a8187330fc0cff0b8c2bcbb",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37"
+  },
+  "actual_full_annual_fits": 0,
+  "actual_16384_GPU_fits": 0,
+  "native_models_live_fit_and_all_frozen_sources_preserved": true,
+  "microbatch_numerical_roundoff_requires_independent_full_official_quality_validation": true,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}

@@ -1243,6 +1243,33 @@
       "finite_grid_not_global_method_or_resource_exhaustion": true,
       "test_labels_read": false,
       "status": "actual_native_fits_and_complete_quality_pending"
+    },
+    {
+      "priority": 36,
+      "method": "Matched16384 memory-efficient MLP execution",
+      "reason": "Actual owned full16384 fit reports4,848,615,424bytes of Windows shared GPU memory. Test microbatch accumulation, activation recomputation andtheir combination without changing width,32epochs,effective32768 batch,AdamW step count orpast preprocessing.",
+      "configurations": 3,
+      "expected_annual_fits": 15,
+      "expected_final_fits": 3,
+      "actual_small_CPU_control_fits": 11,
+      "actual_full_annual_fits": 0,
+      "actual_GPU_control_fits": 0,
+      "execution_status": "CPU_controls_passed_GPU_controls_waiting_full_native_andquality_sources_pending",
+      "required_controls": [
+        "actual GPU allocation andtiming measurement after original annual andfinal processes close",
+        "original mature one-day purge andsame original63features",
+        "actual complete15 annual and3final32epoch fits; single-step controls never counted asannual fits",
+        "all future-X native reload andcold80-day prefix controls",
+        "complete role andstandalone graphs withofficial connected scoring,mature return calibration,causal checks,candidate andranking QA",
+        "floating-point differences compared byofficial score; no assumption of score equality"
+      ],
+      "actual_GPU_control_run": "analysis/memory_efficient_mlp_gpu_control_run_v2_20261005.json",
+      "CPU_control_proof": "analysis/memory_efficient_mlp_preflight_20261005/verification.json",
+      "actual_shared_memory_proof": "analysis/neural16384_actual_shared_memory_observation_20261005/verification.json",
+      "source_plan": "analysis/memory_efficient_mlp_complete_search_plan_20261005.json",
+      "official_quality_not_performed": true,
+      "test_labels_read": false,
+      "physical_resource_exhaustion_established": false
     }
   ],
   "new_virtual_ensemble_configurations": 6,
@@ -1333,7 +1360,7 @@
       76
     ]
   },
-  "updated_at_local": "2026-10-05T12:26:35",
+  "updated_at_local": "2026-10-05T12:46:40",
   "fully_completed_five_year_configurations": 173,
   "planned_neural_tuning_configurations": 5,
   "global_resource_exhaustion_established": false,
@@ -1369,5 +1396,6 @@
   "factorization_machine_actual_fulltraining_artifacts": 6,
   "gradient_sampling_declared_configurations": 6,
   "gradient_sampling_actual_annual_fits": 0,
-  "gradient_sampling_actual_fulltraining_artifacts": 0
+  "gradient_sampling_actual_fulltraining_artifacts": 0,
+  "memory_efficient_direction_updated_at_local": "2026-10-05T12:47:01.897967"
 }

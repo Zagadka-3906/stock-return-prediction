@@ -1,0 +1,18 @@
+{
+  "status": "verified_terminal_before_any_GPU_fit",
+  "old_job": {
+    "pid": 3212,
+    "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_memory_efficient_mlp_gpu_controls_20261005.py",
+    "script_args": [],
+    "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\memory_efficient_mlp_gpu_controls_20261005.stdout.log",
+    "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_logs\\memory_efficient_mlp_gpu_controls_20261005.stderr.log",
+    "at_local": "2026-10-05T12:41:36.396770",
+    "run": "D:\\3.Study\\数据分析\\赛题五\\analysis\\memory_efficient_mlp_gpu_control_run_20261005.json"
+  },
+  "error": "Traceback (most recent call last):\n  File \"D:\\3.Study\\数据分析\\赛题五\\analysis\\run_memory_efficient_mlp_gpu_controls_20261005.py\", line 171, in <module>\n    main()\n  File \"D:\\3.Study\\数据分析\\赛题五\\analysis\\run_memory_efficient_mlp_gpu_controls_20261005.py\", line 87, in main\n    while not original_gpu_work_closed():\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\3.Study\\数据分析\\赛题五\\analysis\\run_memory_efficient_mlp_gpu_controls_20261005.py\", line 48, in original_gpu_work_closed\n    final_job = read(A / 'neural16384_full_followup_launch_receipt_20261005.json')['native_future']\n                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\nKeyError: 'native_future'\n",
+  "original_error_sha256": "e3954a27fe8437250637d925fb5302b9053d62fbc0fec301162e3a5d45add9b8",
+  "old_run_sha256": "24042f302dbda316d00bd993459af3ba7c70c7cbdb9b89b8611b4a36d68b56c2",
+  "original_sources_preserved": true,
+  "actual_GPU_fits": 0,
+  "new_quality_scores": 0
+}

@@ -1,0 +1,41 @@
+{
+  "status": "passed_live_owned_training_cpu_and_resource_progress_observed",
+  "at_local": "2026-10-05T12:38:48.210046",
+  "actual_identity": {
+    "root_pid": 31336,
+    "root_create_time": 1791170629.7242732,
+    "worker_pid": 32148,
+    "worker_create_time": 1791170629.7512777,
+    "cmdline": [
+      "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_recovery_qualified_workflow_20261005.py",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_neural16384_full_bank_20261005.py",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\recovery_qualified_workflow_handoff_20261005\\neural16384_annual_run.json"
+    ]
+  },
+  "source_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\observe_neural16384_shared_memory_20261005.py": "0e214ee14d2c8c23b1975192799084d3f9a43adc5abbd5738969f6c3d6b758dd",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\recovery_qualified_workflow_handoff_20261005\\verification.json": "7f4787103b95ab8c755aea45ebd21fc6a31676bbb167126ae323332380f9555c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_neural16384_full_bank_20261005.py": "292b98b10b719a7fe3f2760e377b77dcd68a275f8a67fb5d3acdf0daf1934ffb",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_neural16384_full_bank_20261005.py": "0a3f213b7398effcd001a3867a0216cd9ed5b07f277b5885bb97d4c009875958",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\protocol.json": "c395035d457933b46828e5fd7e914f8926c4040ea0af2ba63530c666a0c872c7"
+  },
+  "observation_seconds": 30.281999999999243,
+  "actual_process_CPU_seconds_increase": 30.25,
+  "Windows_reported_shared_usage_bytes": [
+    4848615424,
+    4848615424
+  ],
+  "shared_GPU_memory_report_does_not_prove_OOM_or_full_training_feasibility": true,
+  "native_training_logger_prints_only_epoch1_and_multiples_of4": true,
+  "interpretation": "The owned fit remains live and computing; Windows reports shared GPU memory. Resource-aware training layouts merit direct GPU measurement after this fit closes.",
+  "no_native_training_or_RNG_or_source_or_epoch_budget_modified": true,
+  "new_model_fits": 0,
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "physical_resource_exhaustion_established": false,
+  "counter_semantics_reference": "https://devblogs.microsoft.com/directx/gpus-in-the-task-manager/"
+}
