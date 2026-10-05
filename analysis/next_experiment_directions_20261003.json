@@ -3,8 +3,8 @@
   "continuous_goal_active": true,
   "last_completed_round": 66,
   "validation_best_completed": 0.4510081068915626,
-  "new_backbone_configurations_trained": 134,
-  "new_annual_oof_fits_completed": 705,
+  "new_backbone_configurations_trained": 135,
+  "new_annual_oof_fits_completed": 710,
   "test_labels_read": false,
   "directions": [
     {
@@ -934,6 +934,73 @@
       "status": "Rounds[61, 62] completed:198 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
     },
     {
+      "priority": 28,
+      "method": "Joint reoptimization of the latest complete graph after later accepted model additions",
+      "required_official_rounds": [
+        63
+      ],
+      "actual_completed_official_rounds": [
+        63
+      ],
+      "remaining_required_official_rounds": [],
+      "plan": "analysis\\latest_graph_joint_search_plan_20261005.json",
+      "plan_sha256": "454e1b6f1a00d7ef24576a31e226b4b347c8ed9a8fed75e07e91c459efeb45b5",
+      "coverage_audit": "analysis\\latest_graph_joint_axes_scope_audit_20261005\\verification.json",
+      "coverage_audit_sha256": "677f234149e4985f5acf67d5e8e4b1368592974cef828f1d7f163d79a0fc13ef",
+      "current_reference_active_axes": 13,
+      "later_axes_missing_from_original_r50_joint_search": [
+        {
+          "round": 53,
+          "group": "no_dropout_seed_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_seed18_e64",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 55,
+          "group": "neural_interaction_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_lr0005_e64",
+          "anchor": 0.037500000000000006
+        }
+      ],
+      "conditional_reference_scored_records": 260,
+      "actual_axes_and_arm_count_must_be_refrozen_after_r62": true,
+      "reason": "The original joint grid predates two accepted later branches; its cached axes also retain an inactive old branch. Actual current effective parameters must be jointly reevaluated.",
+      "quality_and_fullfuture_evidence_pending": false,
+      "prepared_plan_is_not_actual_quality_or_candidate_evidence": true,
+      "status": "completed_declared_joint_search",
+      "new_model_fits": 0,
+      "new_quality_scores": 260,
+      "test_labels_read": false
+    },
+    {
+      "priority": 29,
+      "method": "Same-day model agreement and diversity gated effective layer weights",
+      "required_official_rounds": [
+        64
+      ],
+      "actual_completed_official_rounds": [
+        64
+      ],
+      "remaining_required_official_rounds": [],
+      "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
+      "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
+      "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
+      "source_preflight_sha256": "bfd9ca15a9a704841032a9e9fd6a4129074320f64fde09acd87e14593b40107f",
+      "actual_nonzero_mature_oof_primitive_cases": 180,
+      "actual_zero_strength_weight_cases": 20,
+      "conditional_reference_gate_axes": 5,
+      "conditional_reference_scored_records": 129,
+      "actual_r63_axes_and_count_refreeze_required": true,
+      "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
+      "quality_and_fullfuture_evidence_pending": false,
+      "new_model_fits": 0,
+      "test_labels_read": false,
+      "status": "completed_declared_gate_search",
+      "new_quality_scores": 104
+    },
+    {
       "priority": 30,
       "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
       "required_official_rounds": [
@@ -1231,7 +1298,7 @@
       },
       "expected_annual_fits": 20,
       "expected_final_fits": 4,
-      "actual_annual_fits": 7,
+      "actual_annual_fits": 12,
       "actual_fulltraining_artifacts": 0,
       "actual_native_execution_status": "pending",
       "actual_future_status": "pending",
@@ -1249,71 +1316,36 @@
       "status": "actual_full_native_fits_and_complete_official_quality_pending"
     },
     {
-      "priority": 28,
-      "method": "Joint reoptimization of the latest complete graph after later accepted model additions",
+      "priority": 38,
+      "method": "Complete fixed linear-leaf role and standalone grids against explicit qualified R66",
       "required_official_rounds": [
-        63
+        81,
+        82
       ],
-      "actual_completed_official_rounds": [
-        63
+      "explicit_parent_rounds": {
+        "81": 66,
+        "82": 81
+      },
+      "actual_completed_official_rounds": [],
+      "remaining_required_official_rounds": [
+        81,
+        82
       ],
-      "remaining_required_official_rounds": [],
-      "plan": "analysis\\latest_graph_joint_search_plan_20261005.json",
-      "plan_sha256": "454e1b6f1a00d7ef24576a31e226b4b347c8ed9a8fed75e07e91c459efeb45b5",
-      "coverage_audit": "analysis\\latest_graph_joint_axes_scope_audit_20261005\\verification.json",
-      "coverage_audit_sha256": "677f234149e4985f5acf67d5e8e4b1368592974cef828f1d7f163d79a0fc13ef",
-      "current_reference_active_axes": 13,
-      "later_axes_missing_from_original_r50_joint_search": [
-        {
-          "round": 53,
-          "group": "no_dropout_seed_augmentation",
-          "role": "rest",
-          "model": "rank512_drop000_seed18_e64",
-          "anchor": 0.037500000000000006
-        },
-        {
-          "round": 55,
-          "group": "neural_interaction_augmentation",
-          "role": "rest",
-          "model": "rank512_drop000_lr0005_e64",
-          "anchor": 0.037500000000000006
-        }
-      ],
-      "conditional_reference_scored_records": 260,
-      "actual_axes_and_arm_count_must_be_refrozen_after_r62": true,
-      "reason": "The original joint grid predates two accepted later branches; its cached axes also retain an inactive old branch. Actual current effective parameters must be jointly reevaluated.",
-      "quality_and_fullfuture_evidence_pending": false,
-      "prepared_plan_is_not_actual_quality_or_candidate_evidence": true,
-      "status": "completed_declared_joint_search",
-      "new_model_fits": 0,
-      "new_quality_scores": 260,
-      "test_labels_read": false
-    },
-    {
-      "priority": 29,
-      "method": "Same-day model agreement and diversity gated effective layer weights",
-      "required_official_rounds": [
-        64
-      ],
-      "actual_completed_official_rounds": [
-        64
-      ],
-      "remaining_required_official_rounds": [],
-      "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
-      "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
-      "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
-      "source_preflight_sha256": "bfd9ca15a9a704841032a9e9fd6a4129074320f64fde09acd87e14593b40107f",
-      "actual_nonzero_mature_oof_primitive_cases": 180,
-      "actual_zero_strength_weight_cases": 20,
-      "conditional_reference_gate_axes": 5,
-      "conditional_reference_scored_records": 129,
-      "actual_r63_axes_and_count_refreeze_required": true,
-      "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
-      "quality_and_fullfuture_evidence_pending": false,
-      "new_model_fits": 0,
+      "scored_records_prespecified": {
+        "81": 124,
+        "82": 138
+      },
+      "new_native_configurations": 0,
+      "new_native_fits": 0,
+      "all_original_rounds67_through80_retained_and_required": true,
+      "same_5635800_rows_1212_continuous_days_and_original_official_scorer": true,
+      "one_isolated_official_worker_changes_layout_only": true,
+      "all264_generator_arms_counted_including_adaptive_refinements": false,
+      "actual_generator_proof": "analysis/reference66_linear_leaf_generator_preflight_v2_20261005/verification.json",
+      "actual_execution_source_controls": "analysis/reference66_linear_leaf_execution_preflight_20261005/verification.json",
+      "finite_grid_not_global_method_or_resource_exhaustion": true,
       "test_labels_read": false,
-      "status": "completed_declared_gate_search",
-      "new_quality_scores": 104
+      "status": "additional_complete_official_comparison_pending"
     }
   ],
   "new_virtual_ensemble_configurations": 6,
@@ -1343,7 +1375,7 @@
     "parallel_seconds": 87.22404180000012,
     "declared_order_and_adaptive_barriers_preserved": true
   },
-  "native_child_annual_oof_fits_completed": 633,
+  "native_child_annual_oof_fits_completed": 638,
   "new_meta_annual_oof_fits_completed": 72,
   "new_learned_stacking_configurations": 6,
   "prospective_parallel_official_scoring_four": {
@@ -1405,15 +1437,17 @@
       77,
       78,
       79,
-      80
+      80,
+      81,
+      82
     ]
   },
-  "updated_at_local": "2026-10-05T21:27:21",
-  "fully_completed_five_year_configurations": 174,
+  "updated_at_local": "2026-10-05T21:50:21",
+  "fully_completed_five_year_configurations": 175,
   "planned_neural_tuning_configurations": 5,
   "global_resource_exhaustion_established": false,
   "planned_catboost_tuning_configurations": 5,
-  "new_backbone_configurations_fully_trained": 134,
+  "new_backbone_configurations_fully_trained": 135,
   "active_run_registry": "analysis/resumed_rounds_nystrom_locked_20261004.json",
   "future_inference_execution_recovery": "analysis/future_inference_recovery_sources_20261004.json",
   "active_validation_round": 67,
@@ -1450,6 +1484,8 @@
   "memory_efficient_neural_actual_annual_fits": 0,
   "memory_efficient_neural_actual_fulltraining_artifacts": 0,
   "streaming_rank_classifier_declared_configurations": 4,
-  "streaming_rank_classifier_actual_annual_fits": 7,
-  "streaming_rank_classifier_actual_fulltraining_artifacts": 0
+  "streaming_rank_classifier_actual_annual_fits": 12,
+  "streaming_rank_classifier_actual_fulltraining_artifacts": 0,
+  "completed_best": 0.4510081068915626,
+  "best_completed_round": 65
 }
