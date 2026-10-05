@@ -3,8 +3,8 @@
   "continuous_goal_active": true,
   "last_completed_round": 62,
   "validation_best_completed": 0.450969086231263,
-  "new_backbone_configurations_trained": 109,
-  "new_annual_oof_fits_completed": 617,
+  "new_backbone_configurations_trained": 113,
+  "new_annual_oof_fits_completed": 637,
   "test_labels_read": false,
   "directions": [
     {
@@ -980,10 +980,10 @@
       "required_official_rounds": [
         63
       ],
-      "actual_completed_official_rounds": [],
-      "remaining_required_official_rounds": [
+      "actual_completed_official_rounds": [
         63
       ],
+      "remaining_required_official_rounds": [],
       "plan": "analysis\\latest_graph_joint_search_plan_20261005.json",
       "plan_sha256": "454e1b6f1a00d7ef24576a31e226b4b347c8ed9a8fed75e07e91c459efeb45b5",
       "coverage_audit": "analysis\\latest_graph_joint_axes_scope_audit_20261005\\verification.json",
@@ -1008,11 +1008,11 @@
       "conditional_reference_scored_records": 260,
       "actual_axes_and_arm_count_must_be_refrozen_after_r62": true,
       "reason": "The original joint grid predates two accepted later branches; its cached axes also retain an inactive old branch. Actual current effective parameters must be jointly reevaluated.",
-      "quality_and_fullfuture_evidence_pending": true,
+      "quality_and_fullfuture_evidence_pending": false,
       "prepared_plan_is_not_actual_quality_or_candidate_evidence": true,
-      "status": "prepared_coverage_verified_full_execution_and_quality_pending",
+      "status": "completed_declared_joint_search",
       "new_model_fits": 0,
-      "new_quality_scores": 0,
+      "new_quality_scores": 260,
       "test_labels_read": false
     },
     {
@@ -1056,12 +1056,12 @@
       "declared_configurations": 10,
       "expected_annual_fits": 50,
       "expected_fulltraining_artifacts": 10,
-      "actual_annual_fits": 30,
-      "actual_fulltraining_artifacts": 0,
+      "actual_annual_fits": 50,
+      "actual_fulltraining_artifacts": 10,
       "bank_protocol": "D:\\3.Study\\数据分析\\赛题五\\analysis\\nystrom_tuning_bank_20261005\\protocol.json",
       "generator_proof": "analysis\\nystrom_tuning_search_generator_preflight_v2_20261005\\verification.json",
       "generator_proof_sha256": "03c5019fa73dcbac3c9cdb6a80b288e19bd7caab86919ff082c631e9ad0d1cc0",
-      "native_future_status": "pending",
+      "native_future_status": "passed",
       "scored_records_prespecified": {
         "65": 172,
         "66": 218
@@ -1070,11 +1070,45 @@
       "finite_grid_only_not_global_method_exhaustion": true,
       "test_labels_read": false,
       "status": "native_training_and_complete_output_quality_pending"
+    },
+    {
+      "priority": 31,
+      "method": "Matched16384 width actual complete32epoch training and final-output evaluation",
+      "required_official_rounds": [
+        67,
+        68
+      ],
+      "remaining_required_official_rounds": [
+        67,
+        68
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "67": 64,
+        "68": 38
+      },
+      "expected_annual_fits": 5,
+      "expected_final_fits": 1,
+      "actual_annual_fits": 0,
+      "actual_fulltraining_artifacts": 0,
+      "actual_annual_execution_status": "pending",
+      "actual_native_future_status": "pending",
+      "matched_instrumentation_preflight": "analysis\\neural16384_full_preflight_20261005\\verification.json",
+      "preflight_sha256": "5f6f3b2c25db39285e9e4415d740aa0d7e165f7c486a73133d30037e72a831fe",
+      "generator_proof_sha256": "64dded62ed87709ecb71498ffe51a58c36c1ddbcd77be7c5a657afcf7371acbc",
+      "no_one_step_substitution_for_complete_fits": true,
+      "physical_gpu_total_bytes": 12792037376,
+      "allocator_reserved_is_not_resident_physical_VRAM": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\training_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_width_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_full_fits_native_future_and_quality_pending"
     }
   ],
   "new_virtual_ensemble_configurations": 6,
   "new_virtual_ensemble_artifacts": 30,
-  "total_new_individual_and_virtual_configurations": 153,
+  "total_new_individual_and_virtual_configurations": 154,
   "prospective_official_input_parse_cache": {
     "status": "passed on full5635800-row actual calibrated CSV and both future scoring entry points",
     "all_eight_metrics_bit_identical": true,
@@ -1099,7 +1133,7 @@
     "parallel_seconds": 87.22404180000012,
     "declared_order_and_adaptive_barriers_preserved": true
   },
-  "native_child_annual_oof_fits_completed": 545,
+  "native_child_annual_oof_fits_completed": 565,
   "new_meta_annual_oof_fits_completed": 72,
   "new_learned_stacking_configurations": 6,
   "prospective_parallel_official_scoring_four": {
@@ -1147,15 +1181,17 @@
       63,
       64,
       65,
-      66
+      66,
+      67,
+      68
     ]
   },
-  "updated_at_local": "2026-10-05T07:10:09",
-  "fully_completed_five_year_configurations": 149,
+  "updated_at_local": "2026-10-05T08:01:21",
+  "fully_completed_five_year_configurations": 153,
   "planned_neural_tuning_configurations": 5,
   "global_resource_exhaustion_established": false,
   "planned_catboost_tuning_configurations": 5,
-  "new_backbone_configurations_fully_trained": 109,
+  "new_backbone_configurations_fully_trained": 113,
   "active_run_registry": "analysis/resumed_rounds_nystrom_locked_20261004.json",
   "future_inference_execution_recovery": "analysis/future_inference_recovery_sources_20261004.json",
   "active_validation_round": 63,
@@ -1169,6 +1205,9 @@
   "registry_updated_at_local": "2026-10-04T16:58:45",
   "actual_neural_width_internal_andmeasured_cost_prefix_evidence": "analysis\\neural_width_measured_prefix20_20261004\\verification.json",
   "actual_neural_width_completed_models_inspected": 20,
-  "nystrom_tuning_actual_annual_fits": 30,
-  "nystrom_tuning_actual_fulltraining_artifacts": 0
+  "nystrom_tuning_actual_annual_fits": 50,
+  "nystrom_tuning_actual_fulltraining_artifacts": 10,
+  "full16384_declared_configurations": 1,
+  "full16384_actual_annual_fits": 0,
+  "full16384_actual_fulltraining_artifacts": 0
 }
