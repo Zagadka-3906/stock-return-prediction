@@ -1,10 +1,10 @@
 {
   "status": "observed_costs_with_validation_work_pending",
-  "generated_at_local": "2026-10-05T09:43:56",
-  "configurations": 168,
-  "native_child_annual_fits": 595,
+  "generated_at_local": "2026-10-05T10:21:46",
+  "configurations": 174,
+  "native_child_annual_fits": 604,
   "learned_meta_annual_fits": 72,
-  "total_actual_new_annual_fits": 667,
+  "total_actual_new_annual_fits": 676,
   "fixed_first_fold_meta_fallbacks": 30,
   "virtual_ensemble_annual_artifacts": 30,
   "families": {
@@ -62,6 +62,11 @@
       "configurations": 8,
       "new_annual_fits": 0,
       "fit_seconds_total": 0.0
+    },
+    "factorization_machine": {
+      "configurations": 6,
+      "new_annual_fits": 9,
+      "fit_seconds_total": 183.95400000000154
     }
   },
   "models": [
@@ -10774,6 +10779,296 @@
         "test_prediction_not_generated_during_fit": true,
         "virtual_bundle_not_new_fit": true
       }
+    },
+    {
+      "model": "rank_fm_k0_e32",
+      "kind": "factorization_machine",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "factorization_machine",
+        "target": "y_rank",
+        "latent_factors": 0,
+        "epochs": 32,
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "seed": 20261005,
+        "initial_factor_std": 0.01,
+        "clip_z": 8.0,
+        "chunk_rows": 32768,
+        "return_quantiles": [
+          0.005,
+          0.995
+        ],
+        "return_target_scale": 20.0,
+        "gradient_norm_max": 10.0,
+        "reserve_available_ram_GiB": 14.0,
+        "training_device": "cpu"
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 5,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 1,
+          "fit_seconds": 5.640999999999622,
+          "artifact_elapsed_seconds": 9.437999999998283,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2020.json",
+          "model_sha256": "2ef0526d87b6358724ec65e30804b38767179d33d505ce639efa82f3293e24ad",
+          "prediction_sha256": "b141bd1acb137c1d5bde87b2d3e7733805ab6a2bf077c9d9dd0cfe64777341d9"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 1,
+          "fit_seconds": 9.203000000001339,
+          "artifact_elapsed_seconds": 13.453000000001339,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2021.json",
+          "model_sha256": "5b3a431b28236117cbb0152d048ea07028ac444111720a9a355c85117abde793",
+          "prediction_sha256": "c6d1e9f1980edab35e9f561460865c1a60fe7f9986f24591e13b7f8337954f01"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 1,
+          "fit_seconds": 12.34400000000096,
+          "artifact_elapsed_seconds": 16.95300000000134,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2022.json",
+          "model_sha256": "d88ff59215b169d8ba8e796976b92d34d05af66e44185e842dfdf463e29711aa",
+          "prediction_sha256": "84c9288de54436768843a1afe592b8764e5630310685defe4e6947a296bd5387"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 1,
+          "fit_seconds": 20.21900000000096,
+          "artifact_elapsed_seconds": 25.593000000000757,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2023.json",
+          "model_sha256": "3a38c5c8e835d1a3f81e31ce67b57eadf16d4d09cc3cd1182d40640d9ab17c3a",
+          "prediction_sha256": "06639cf103335f22f040f19b87b4569278f7d32da63ff333258ac608b23bb6e7"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 1,
+          "fit_seconds": 23.875,
+          "artifact_elapsed_seconds": 29.39099999999962,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2024.json",
+          "model_sha256": "5fccc8fa39165069f55189f148a4ccf5cc69f969f20b46888a6df77eae57432a",
+          "prediction_sha256": "b6731d0256199d168d045093e20bb741161a50faa0604d675d102695c19ffcec"
+        }
+      ],
+      "fit_seconds_total": 71.28200000000288,
+      "all_five_annual_outputs_complete": true,
+      "actual4_epoch_controls_not_counted_as_complete32_epoch_annual_fits": true
+    },
+    {
+      "model": "rank_fm_k8_e32",
+      "kind": "factorization_machine",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "factorization_machine",
+        "target": "y_rank",
+        "latent_factors": 8,
+        "epochs": 32,
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "seed": 20261005,
+        "initial_factor_std": 0.01,
+        "clip_z": 8.0,
+        "chunk_rows": 32768,
+        "return_quantiles": [
+          0.005,
+          0.995
+        ],
+        "return_target_scale": 20.0,
+        "gradient_norm_max": 10.0,
+        "reserve_available_ram_GiB": 14.0,
+        "training_device": "cpu"
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005",
+      "annual_artifacts": 4,
+      "new_annual_fits": 4,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 1,
+          "fit_seconds": 13.437999999998283,
+          "artifact_elapsed_seconds": 18.0779999999977,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2020.json",
+          "model_sha256": "46e911c7a0e59f15025db819e054f2e143ecd1cb6bea9465ecd732c779e08786",
+          "prediction_sha256": "689fa92da9cf3f34052fdb782b2a58d133552ff80e3ff13fcb277b7701a705e0"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 1,
+          "fit_seconds": 21.5470000000023,
+          "artifact_elapsed_seconds": 26.2970000000023,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2021.json",
+          "model_sha256": "f55a2716392db86bda069e67566ffea5c3bbb5d6a593b4db050e64393c5d883c",
+          "prediction_sha256": "e926e8dceac9696ee6b6205e3884d53ce38521425faf625a3dbda96d342dc267"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 1,
+          "fit_seconds": 31.60899999999674,
+          "artifact_elapsed_seconds": 38.31199999999808,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2022.json",
+          "model_sha256": "598abb9f4061ecbae6bbb133f318981700d3b2a9217d3a8c82ce8f4740b42c69",
+          "prediction_sha256": "437d62bcc5943e15d245dc72767017cb45b8ebd5b386b7eebe8b9101e509a05c"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 1,
+          "fit_seconds": 46.07800000000134,
+          "artifact_elapsed_seconds": 51.88999999999942,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2023.json",
+          "model_sha256": "ffa1efed09b5a19cfc01f1a820c96ea9422f9b350f3248bc4d0c48cb1c3cfc8c",
+          "prediction_sha256": "b1e639637f41aa8607e3af7962cbe5d6c589d80a660040cb65d63fbcdc5f8d62"
+        }
+      ],
+      "fit_seconds_total": 112.67199999999866,
+      "all_five_annual_outputs_complete": false,
+      "actual4_epoch_controls_not_counted_as_complete32_epoch_annual_fits": true
+    },
+    {
+      "model": "rank_fm_k32_e32",
+      "kind": "factorization_machine",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "factorization_machine",
+        "target": "y_rank",
+        "latent_factors": 32,
+        "epochs": 32,
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "seed": 20261005,
+        "initial_factor_std": 0.01,
+        "clip_z": 8.0,
+        "chunk_rows": 32768,
+        "return_quantiles": [
+          0.005,
+          0.995
+        ],
+        "return_target_scale": 20.0,
+        "gradient_norm_max": 10.0,
+        "reserve_available_ram_GiB": 14.0,
+        "training_device": "cpu"
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005",
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false,
+      "actual4_epoch_controls_not_counted_as_complete32_epoch_annual_fits": true
+    },
+    {
+      "model": "return_fm_k0_e32",
+      "kind": "factorization_machine",
+      "target": "y_ret_1d",
+      "configuration": {
+        "kind": "factorization_machine",
+        "target": "y_ret_1d",
+        "latent_factors": 0,
+        "epochs": 32,
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "seed": 20261005,
+        "initial_factor_std": 0.01,
+        "clip_z": 8.0,
+        "chunk_rows": 32768,
+        "return_quantiles": [
+          0.005,
+          0.995
+        ],
+        "return_target_scale": 20.0,
+        "gradient_norm_max": 10.0,
+        "reserve_available_ram_GiB": 14.0,
+        "training_device": "cpu"
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005",
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false,
+      "actual4_epoch_controls_not_counted_as_complete32_epoch_annual_fits": true
+    },
+    {
+      "model": "return_fm_k8_e32",
+      "kind": "factorization_machine",
+      "target": "y_ret_1d",
+      "configuration": {
+        "kind": "factorization_machine",
+        "target": "y_ret_1d",
+        "latent_factors": 8,
+        "epochs": 32,
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "seed": 20261005,
+        "initial_factor_std": 0.01,
+        "clip_z": 8.0,
+        "chunk_rows": 32768,
+        "return_quantiles": [
+          0.005,
+          0.995
+        ],
+        "return_target_scale": 20.0,
+        "gradient_norm_max": 10.0,
+        "reserve_available_ram_GiB": 14.0,
+        "training_device": "cpu"
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005",
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false,
+      "actual4_epoch_controls_not_counted_as_complete32_epoch_annual_fits": true
+    },
+    {
+      "model": "return_fm_k32_e32",
+      "kind": "factorization_machine",
+      "target": "y_ret_1d",
+      "configuration": {
+        "kind": "factorization_machine",
+        "target": "y_ret_1d",
+        "latent_factors": 32,
+        "epochs": 32,
+        "batch_size": 32768,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "seed": 20261005,
+        "initial_factor_std": 0.01,
+        "clip_z": 8.0,
+        "chunk_rows": 32768,
+        "return_quantiles": [
+          0.005,
+          0.995
+        ],
+        "return_target_scale": 20.0,
+        "gradient_norm_max": 10.0,
+        "reserve_available_ram_GiB": 14.0,
+        "training_device": "cpu"
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005",
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false,
+      "actual4_epoch_controls_not_counted_as_complete32_epoch_annual_fits": true
     }
   ],
   "resource_snapshots": [
@@ -10854,7 +11149,9 @@
     69,
     70,
     71,
-    72
+    72,
+    73,
+    74
   ],
   "official_parallel_capacity_controls": [
     {
@@ -11174,7 +11471,7 @@
   "neural_tuning_completed_annual_fits": 25,
   "neural_tuning_expected_annual_fits": 25,
   "neural_tuning_all_annual_controls_complete": true,
-  "fully_completed_five_year_configurations": 167,
+  "fully_completed_five_year_configurations": 168,
   "neural_tuning_resource_samples": "analysis/neural_tuning_resource_observations_20261004/samples.jsonl",
   "global_resource_exhaustion_established": false,
   "neural_tuning_resource_summary": "analysis/neural_tuning_resource_observations_20261004/summary.json",
@@ -11199,7 +11496,7 @@
   "expanded_future_resource_original_stage_status": "incomplete_due_to_future_path_assertion_error_no_OOM_recorded",
   "expanded_future_resource_recovery_scope": "analysis/expanded_future_resource_observations_recovery_20261004/protocol.json",
   "additive_ridge_annual_fits_completed": 30,
-  "native_backbone_configurations_fully_trained": 119,
+  "native_backbone_configurations_fully_trained": 120,
   "fourier_ridge_annual_fits_completed": 30,
   "nonlinear_ridge_resource_scope_audit": "analysis\\nonlinear_ridge_resource_scope_audit_20261004.json",
   "fourier_sampling_does_not_establish_four_worker_training_capacity": true,
@@ -11276,7 +11573,7 @@
   "full16384_actual_annual_fits": 0,
   "full16384_actual_fulltraining_artifacts": 0,
   "full16384_info_source_sha256": {},
-  "supplementary_full_width_cost_source": "analysis\\refresh_linear_leaf_cost_evidence_20261005.py",
+  "supplementary_full_width_cost_source": "analysis\\refresh_factorization_machine_cost_evidence_20261005.py",
   "linear_leaf_declared_configurations": 6,
   "linear_leaf_actual_annual_fits": 30,
   "linear_leaf_actual_fulltraining_artifacts": 6,
@@ -11373,5 +11670,19 @@
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2024.json": "3109d84d3535cac7612e24897c78d9b8814ecefecab6f3d390f0e0dd147961f8",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2025.json": "c024df3b3a91021820d083a9690f53f892eb2da76622479c9d7609e8e228a256"
   },
-  "supplementary_composite_cost_source": "analysis\\refresh_linear_leaf_ensemble_cost_evidence_20261005.py"
+  "supplementary_composite_cost_source": "analysis\\refresh_linear_leaf_ensemble_cost_evidence_20261005.py",
+  "factorization_machine_declared_configurations": 6,
+  "factorization_machine_actual_annual_fits": 9,
+  "factorization_machine_actual_fulltraining_artifacts": 0,
+  "factorization_machine_info_source_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2020.json": "e750fdbb05b0affc1b85573e9a0279755cdfe84ab07a43e82cdeb9b88d73907a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2021.json": "e92a6a7494c4cf9c3b1e5241a8e23320a0f5114076b76c0af723d3a1993fcb41",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2022.json": "1982b8ca6e051e91a7eadd26121f539c6557c55462fc35a62a95fb320db3d715",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2023.json": "f71b9f24df3eb9a85df8f4952fe34a51aa2fd2990fc2cb16003b1d77c93c643b",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k0_e32\\info_2024.json": "6c541b544c838132f4defd8f42166dcebdb80bd275de51675cf6535ba49f1f19",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2020.json": "1b5ee7baf80391e0e7fee92bff5027f9ef5fa88159ac03e6b171b184e2f5b4db",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2021.json": "bf0b3a1a0b6edf795718f1c396605dd1f3bbb1f13e5fd9a91eb1faf062aa5b77",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2022.json": "94852d51b5f9d6b9eb0ae1470a719b59fc9485ea8d650fb26de1169885567264",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\rank_fm_k8_e32\\info_2023.json": "8b3881f335c07a8c25d7776897ca3c9aca2d1fde0f782781b47c7307a6bee830"
+  }
 }

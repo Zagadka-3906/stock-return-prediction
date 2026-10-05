@@ -1,6 +1,6 @@
 {
   "status": "search_and_resource_boundaries_not_yet_established",
-  "updated_at_local": "2026-10-05T09:49:21",
+  "updated_at_local": "2026-10-05T10:21:49",
   "selection_standard": "后续选模标准.md",
   "completed_best": 0.45100769827200593,
   "latest_completed_round": 64,
@@ -352,15 +352,15 @@
   ],
   "current_machine_snapshot": {
     "total_ram_GiB": 31.183837890625,
-    "available_ram_GiB": 6.35369873046875,
+    "available_ram_GiB": 12.22745132446289,
     "cpu_physical_cores": 16,
     "cpu_logical_cores": 32,
     "workspace_volume_total_GiB": 451.99999618530273,
-    "workspace_volume_free_GiB": 45.36952590942383,
+    "workspace_volume_free_GiB": 44.82655334472656,
     "snapshot_is_observation_not_a_limit_or_completed_capacity_test": true
   },
   "active_round": 65,
-  "active_stage": "independent",
+  "active_stage": "release.infer_selected",
   "pending_rounds": [
     66,
     67,
@@ -368,7 +368,9 @@
     69,
     70,
     71,
-    72
+    72,
+    73,
+    74
   ],
   "measured_official_scoring_capacity": [
     {
@@ -1748,7 +1750,9 @@
         69,
         70,
         71,
-        72
+        72,
+        73,
+        74
       ],
       "actual_completed_official_rounds": [
         48,
@@ -1777,7 +1781,9 @@
         69,
         70,
         71,
-        72
+        72,
+        73,
+        74
       ],
       "actual_complete_round_evidence": [
         {
@@ -2002,7 +2008,7 @@
           }
         }
       ],
-      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[65, 66, 67, 68, 69, 70, 71, 72]."
+      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]."
     },
     {
       "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
@@ -2128,6 +2134,38 @@
       "native_training_device": "cpu",
       "GPU_capacity_not_relevant_to_this_native_family": true,
       "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\construction_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false
+    },
+    {
+      "method": "First order andlow rank raw63 FM interactions;30 annual32epoch CPU fits andcomplete output evaluation",
+      "required_official_rounds": [
+        73,
+        74
+      ],
+      "remaining_required_official_rounds": [
+        73,
+        74
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "73": 124,
+        "74": 138
+      },
+      "expected_annual_fits": 30,
+      "expected_final_fits": 6,
+      "actual_annual_fits": 9,
+      "actual_fulltraining_artifacts": 0,
+      "actual_annual_execution_status": "pending",
+      "actual_native_future_status": "pending",
+      "matched_instrumentation_preflight": "analysis\\factorization_machine_preflight_20261005\\verification.json",
+      "preflight_sha256": "83e9b31a9b08478b549422750cd69999b53d881d03b36ac25a2afe7535b08be0",
+      "generator_proof_sha256": "dfe98ddbc476431ca29e7eccac7820fae3f597627a2154d9a26dbf4ace354be3",
+      "no4_epoch_pilot_substitution_for_complete32epoch_fits": true,
+      "native_training_device": "cpu",
+      "GPU_capacity_not_relevant_to_this_native_family": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\training_execution_scope.json",
       "RAM_reserve_is_scheduling_policy": true,
       "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
       "test_labels_read": false
@@ -2704,8 +2742,8 @@
     "quality_and_fullfuture_evidence_pending": false,
     "prepared_plan_is_not_actual_quality_or_candidate_evidence": true
   },
-  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v6_20261005.py",
-  "additional_boundary_refresh_source_sha256": "8cc1dd8468f58b9a90112d5f47c4a4ff481d30ff1d5525c9a3ef4391e30aa3b8",
+  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v7_20261005.py",
+  "additional_boundary_refresh_source_sha256": "454b4b270ca17cfe1d606bd86020573e99cd96c6e5452a5d7a8bae431c6b01d4",
   "agreement_gate_coverage_evidence": {
     "method": "Same-day model agreement and diversity gated effective layer weights",
     "required_official_rounds": [
@@ -2853,6 +2891,38 @@
     "native_training_device": "cpu",
     "GPU_capacity_not_relevant_to_this_native_family": true,
     "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\construction_execution_scope.json",
+    "RAM_reserve_is_scheduling_policy": true,
+    "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
+    "test_labels_read": false
+  },
+  "factorization_machine_coverage_evidence": {
+    "method": "First order andlow rank raw63 FM interactions;30 annual32epoch CPU fits andcomplete output evaluation",
+    "required_official_rounds": [
+      73,
+      74
+    ],
+    "remaining_required_official_rounds": [
+      73,
+      74
+    ],
+    "actual_completed_official_rounds": [],
+    "scored_records_prespecified": {
+      "73": 124,
+      "74": 138
+    },
+    "expected_annual_fits": 30,
+    "expected_final_fits": 6,
+    "actual_annual_fits": 9,
+    "actual_fulltraining_artifacts": 0,
+    "actual_annual_execution_status": "pending",
+    "actual_native_future_status": "pending",
+    "matched_instrumentation_preflight": "analysis\\factorization_machine_preflight_20261005\\verification.json",
+    "preflight_sha256": "83e9b31a9b08478b549422750cd69999b53d881d03b36ac25a2afe7535b08be0",
+    "generator_proof_sha256": "dfe98ddbc476431ca29e7eccac7820fae3f597627a2154d9a26dbf4ace354be3",
+    "no4_epoch_pilot_substitution_for_complete32epoch_fits": true,
+    "native_training_device": "cpu",
+    "GPU_capacity_not_relevant_to_this_native_family": true,
+    "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\training_execution_scope.json",
     "RAM_reserve_is_scheduling_policy": true,
     "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
     "test_labels_read": false
