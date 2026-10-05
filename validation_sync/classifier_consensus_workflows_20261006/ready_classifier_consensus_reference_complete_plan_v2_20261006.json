@@ -1,0 +1,236 @@
+{
+  "status": "fixed_before_consensus_construction_and_official_quality",
+  "configurations": {
+    "classifier_binary_mean": {
+      "kind": "classifier_consensus",
+      "target": "y_rank",
+      "chunk_rows": 65536,
+      "members": [
+        {
+          "model": "rank_top10_sgd_l2e4_e32",
+          "weight": 0.5
+        },
+        {
+          "model": "rank_top10_sgd_l2e3_e32",
+          "weight": 0.5
+        }
+      ],
+      "output_sign": 1.0,
+      "output_offset": 0.0,
+      "fixed_before_complete_quality": true,
+      "score_requires_mature_past_return_mapping": true
+    },
+    "classifier_decile_mean": {
+      "kind": "classifier_consensus",
+      "target": "y_rank",
+      "chunk_rows": 65536,
+      "members": [
+        {
+          "model": "rank_decile_sgd_l2e4_e32",
+          "weight": 0.5
+        },
+        {
+          "model": "rank_decile_sgd_l2e3_e32",
+          "weight": 0.5
+        }
+      ],
+      "output_sign": 1.0,
+      "output_offset": 0.0,
+      "fixed_before_complete_quality": true,
+      "score_requires_mature_past_return_mapping": true
+    },
+    "classifier_head_mix_b025": {
+      "kind": "classifier_consensus",
+      "target": "y_rank",
+      "chunk_rows": 65536,
+      "members": [
+        {
+          "model": "rank_top10_sgd_l2e4_e32",
+          "weight": 0.125
+        },
+        {
+          "model": "rank_top10_sgd_l2e3_e32",
+          "weight": 0.125
+        },
+        {
+          "model": "rank_decile_sgd_l2e4_e32",
+          "weight": 0.375
+        },
+        {
+          "model": "rank_decile_sgd_l2e3_e32",
+          "weight": 0.375
+        }
+      ],
+      "output_sign": 1.0,
+      "output_offset": 0.0,
+      "fixed_before_complete_quality": true,
+      "score_requires_mature_past_return_mapping": true
+    },
+    "classifier_head_mix_b050": {
+      "kind": "classifier_consensus",
+      "target": "y_rank",
+      "chunk_rows": 65536,
+      "members": [
+        {
+          "model": "rank_top10_sgd_l2e4_e32",
+          "weight": 0.25
+        },
+        {
+          "model": "rank_top10_sgd_l2e3_e32",
+          "weight": 0.25
+        },
+        {
+          "model": "rank_decile_sgd_l2e4_e32",
+          "weight": 0.25
+        },
+        {
+          "model": "rank_decile_sgd_l2e3_e32",
+          "weight": 0.25
+        }
+      ],
+      "output_sign": 1.0,
+      "output_offset": 0.0,
+      "fixed_before_complete_quality": true,
+      "score_requires_mature_past_return_mapping": true
+    },
+    "classifier_head_mix_b075": {
+      "kind": "classifier_consensus",
+      "target": "y_rank",
+      "chunk_rows": 65536,
+      "members": [
+        {
+          "model": "rank_top10_sgd_l2e4_e32",
+          "weight": 0.375
+        },
+        {
+          "model": "rank_top10_sgd_l2e3_e32",
+          "weight": 0.375
+        },
+        {
+          "model": "rank_decile_sgd_l2e4_e32",
+          "weight": 0.125
+        },
+        {
+          "model": "rank_decile_sgd_l2e3_e32",
+          "weight": 0.125
+        }
+      ],
+      "output_sign": 1.0,
+      "output_offset": 0.0,
+      "fixed_before_complete_quality": true,
+      "score_requires_mature_past_return_mapping": true
+    },
+    "classifier_decile_reflected_mean": {
+      "kind": "classifier_consensus",
+      "target": "y_rank",
+      "chunk_rows": 65536,
+      "members": [
+        {
+          "model": "rank_decile_sgd_l2e4_e32",
+          "weight": 0.5
+        },
+        {
+          "model": "rank_decile_sgd_l2e3_e32",
+          "weight": 0.5
+        }
+      ],
+      "output_sign": -1.0,
+      "output_offset": 1.0,
+      "fixed_before_complete_quality": true,
+      "score_requires_mature_past_return_mapping": true
+    }
+  },
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "expected_virtual_annual_outputs": 30,
+  "expected_virtual_final_artifacts": 6,
+  "new_native_fits": 0,
+  "reused_unique_native_annual_fits": 20,
+  "reused_unique_native_final_fits": 4,
+  "prospective_rounds": [
+    89,
+    90
+  ],
+  "explicit_parent_rounds": {
+    "89": 88,
+    "90": 89
+  },
+  "quality_sources_implementation_and_preflight_still_pending": true,
+  "scored_records_prespecified": {
+    "89": 124,
+    "90": 138
+  },
+  "wave_arm_counts": {
+    "89": [
+      73,
+      8,
+      18,
+      25
+    ],
+    "90": [
+      37,
+      84,
+      17
+    ]
+  },
+  "waves": {
+    "89": [
+      353,
+      354,
+      355,
+      356
+    ],
+    "90": [
+      357,
+      358,
+      359
+    ]
+  },
+  "all_original_required_rounds67_to88_retained": true,
+  "validation_rows": 5635800,
+  "validation_days": 1212,
+  "validation_codes": 4650,
+  "mature_original_one_day_purge_and_continuous_turnover": true,
+  "all6_actual_full1599600_row_future_reload_and_cold80_required": true,
+  "fixed_composites_not_learned_from_validation_or_test": true,
+  "correlation_diagnostic_not_selection_gate": true,
+  "past_only_return_mapping_and17_digit_written_CSV_official_scoring_required": true,
+  "whole_scheme_causal_checks_candidates_and_complete_ranking_required": true,
+  "sole_selection_objective": ".4 ICmean + .3 annual_excess + .3 (1 - turnover)",
+  "selection_bias_uncorrected": true,
+  "physical_resource_boundary_established": false,
+  "test_labels_read": false,
+  "new_quality_scores": 0,
+  "quality_source_files_generated": [
+    "ready_classifier_consensus_reference_search_engine_v2_20261006.py",
+    "run_ready_classifier_consensus_reference_round_v2_20261006.py",
+    "check_ready_classifier_consensus_reference_scheme_v2_20261006.py",
+    "predict_ready_classifier_consensus_reference_scheme_v2_20261006.py",
+    "explicit_parent_release_engine_v3_20261006.py",
+    "verify_ready_classifier_consensus_reference_generators_v2_20261006.py",
+    "verify_ready_classifier_consensus_reference_execution_v2_20261006.py",
+    "optimize_training_round89_v3.py",
+    "finalize_training_round89_v3.py",
+    "run_training_round89_v3_pipeline.py",
+    "optimize_training_round90_v3.py",
+    "finalize_training_round90_v3.py",
+    "run_training_round90_v3_pipeline.py"
+  ],
+  "generator_controls_still_required": true,
+  "native_plan_sha256": "037df80b7d8c466cf1f8fb44c8da682e87b405867d8325ac029d0ee23181f318",
+  "original_template_source_sha256": {
+    "streaming_robust_regression_scheme_runtime_20261005.py": "8b6c565172fde94f3d49750cd2574a521eda913f19fe0ae2784d825e799a4e04",
+    "ready_robust_reference_search_engine_20261005.py": "5cc67c7923bd9357128cc6256314d55cc7ba2829fe6d3b3ee1cb9209438764fd",
+    "run_ready_robust_reference_round_20261005.py": "a744121ed17888b62f679797b3e21f6b2a75a7954bf652f26acaf02ce8eff056",
+    "check_ready_robust_reference_scheme_20261005.py": "2a5c4ffba5d60f35a126a84530ea163913909c0e4478819a2746a6b29c7b47a8"
+  },
+  "previous_failed_generator_inputs_preserved": true,
+  "same_fixed6_composites_and262_record_grid": true,
+  "old_generator_freeze_sha256": "21e20703221ef50f99a5780d2a618d7a8c63b456ed8856776949e0f2aae7a8ab",
+  "corrected_wave_result_file_references": true
+}
