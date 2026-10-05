@@ -1,9 +1,9 @@
 {
   "status": "search_and_resource_boundaries_not_yet_established",
-  "updated_at_local": "2026-10-05T08:22:31",
+  "updated_at_local": "2026-10-05T09:23:45",
   "selection_standard": "后续选模标准.md",
-  "completed_best": 0.4510019122566784,
-  "latest_completed_round": 63,
+  "completed_best": 0.45100769827200593,
+  "latest_completed_round": 64,
   "completed_declared_searches": [
     {
       "round": 22,
@@ -340,24 +340,33 @@
       "evidence": "results\\optimization_20261003_r63.json",
       "sha256": "9a9f4ccb61405bbd9723fecec12301d0cb733e3d5e201beea0d1daf1d6499df7",
       "scope": "Completed declared grid only; no claim about all variants of this method."
+    },
+    {
+      "round": 64,
+      "score": 0.45100769827200593,
+      "gain": 5.786015327524652e-06,
+      "evidence": "results\\optimization_20261003_r64.json",
+      "sha256": "74d23763d20a3282e4dfb8a6f660c03535d440696639cf5e702327f017a7cc35",
+      "scope": "Completed declared grid only; no claim about all variants of this method."
     }
   ],
   "current_machine_snapshot": {
     "total_ram_GiB": 31.183837890625,
-    "available_ram_GiB": 7.682647705078125,
+    "available_ram_GiB": 11.634410858154297,
     "cpu_physical_cores": 16,
     "cpu_logical_cores": 32,
     "workspace_volume_total_GiB": 451.99999618530273,
-    "workspace_volume_free_GiB": 48.848445892333984,
+    "workspace_volume_free_GiB": 46.80121994018555,
     "snapshot_is_observation_not_a_limit_or_completed_capacity_test": true
   },
-  "active_round": 64,
-  "active_stage": "independent",
+  "active_round": 65,
+  "active_stage": "build",
   "pending_rounds": [
-    65,
     66,
     67,
-    68
+    68,
+    69,
+    70
   ],
   "measured_official_scoring_capacity": [
     {
@@ -1733,7 +1742,9 @@
         65,
         66,
         67,
-        68
+        68,
+        69,
+        70
       ],
       "actual_completed_official_rounds": [
         48,
@@ -1751,14 +1762,16 @@
         60,
         61,
         62,
-        63
+        63,
+        64
       ],
       "remaining_required_official_rounds": [
-        64,
         65,
         66,
         67,
-        68
+        68,
+        69,
+        70
       ],
       "actual_complete_round_evidence": [
         {
@@ -1968,32 +1981,22 @@
             "analysis\\optimization_20261003_r63\\calibrated_csv_official.json": "52fbddefc58247f810dd07f8d977003a0094f6a4e4e1dd1d9f6eba8af9f1560d",
             "analysis\\optimization_20261003_r63\\provenance_scope_execution.json": "0fe9cd8b6497b980c6c5f311178afd5dc216c4fef3be3ee87d951e892afadea8"
           }
+        },
+        {
+          "round": 64,
+          "status": "complete_declared_round",
+          "score": 0.45100769827200593,
+          "scored_records": 104,
+          "candidate_csv_sha256": "eb49e563eb214259b9eab7d49766403ba84b8ab68589a9538f146cac7afd65ad",
+          "source_sha256": {
+            "results\\optimization_20261003_r64.json": "74d23763d20a3282e4dfb8a6f660c03535d440696639cf5e702327f017a7cc35",
+            "candidates\\optimization_20261003_r64\\verification.json": "2b1afbde90e838652823c4c594bb7cfdeca36c12475fab4bf67421505e28d94d",
+            "analysis\\optimization_20261003_r64\\calibrated_csv_official.json": "e3b62b0324f0ce3fba5e50db0eb4b1818a385baee72c851c37a0505fc5ef9cf7",
+            "analysis\\optimization_20261003_r64\\provenance_scope_execution.json": "11274506dd3a218fc973cf4c84e989a4a2b6fe58a8f48fc02a3dc04a9843b269"
+          }
         }
       ],
-      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[64, 65, 66, 67, 68]."
-    },
-    {
-      "method": "Same-day model agreement and diversity gated effective layer weights",
-      "required_official_rounds": [
-        64
-      ],
-      "actual_completed_official_rounds": [],
-      "remaining_required_official_rounds": [
-        64
-      ],
-      "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
-      "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
-      "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
-      "source_preflight_sha256": "bfd9ca15a9a704841032a9e9fd6a4129074320f64fde09acd87e14593b40107f",
-      "actual_nonzero_mature_oof_primitive_cases": 180,
-      "actual_zero_strength_weight_cases": 20,
-      "conditional_reference_gate_axes": 5,
-      "conditional_reference_scored_records": 129,
-      "actual_r63_axes_and_count_refreeze_required": true,
-      "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
-      "quality_and_fullfuture_evidence_pending": true,
-      "new_model_fits": 0,
-      "test_labels_read": false
+      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[65, 66, 67, 68, 69, 70]."
     },
     {
       "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
@@ -2053,6 +2056,38 @@
       "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\training_execution_scope.json",
       "RAM_reserve_is_scheduling_policy": true,
       "finite_matched_width_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false
+    },
+    {
+      "method": "Matched constant andregularized linear LightGBM leaves;30 annual300round fits andcomplete output evaluation",
+      "required_official_rounds": [
+        69,
+        70
+      ],
+      "remaining_required_official_rounds": [
+        69,
+        70
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "69": 124,
+        "70": 138
+      },
+      "expected_annual_fits": 30,
+      "expected_final_fits": 6,
+      "actual_annual_fits": 30,
+      "actual_fulltraining_artifacts": 3,
+      "actual_annual_execution_status": "passed",
+      "actual_native_future_status": "pending",
+      "matched_instrumentation_preflight": "analysis\\linear_leaf_preflight_20261005\\verification.json",
+      "preflight_sha256": "1fb9e33af8c956348ee5f80ec21e093f474877a63af4ac7a8e8f6ee98d29ea47",
+      "generator_proof_sha256": "673c5e21d8c4b2232a553144a83f72b06f2ee7ec82b3a5f8df7352d0366f2e83",
+      "no48_round_pilot_substitution_for_complete300round_fits": true,
+      "native_training_device": "cpu",
+      "GPU_capacity_not_relevant_to_this_native_family": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\training_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
       "test_labels_read": false
     }
   ],
@@ -2550,6 +2585,26 @@
         }
       },
       "finite_scope_only": true
+    },
+    {
+      "method": "Same-day model agreement and diversity gated effective layer weights",
+      "rounds": [
+        64
+      ],
+      "evidence": {
+        "round": 64,
+        "status": "complete_declared_round",
+        "score": 0.45100769827200593,
+        "scored_records": 104,
+        "candidate_csv_sha256": "eb49e563eb214259b9eab7d49766403ba84b8ab68589a9538f146cac7afd65ad",
+        "source_sha256": {
+          "results\\optimization_20261003_r64.json": "74d23763d20a3282e4dfb8a6f660c03535d440696639cf5e702327f017a7cc35",
+          "candidates\\optimization_20261003_r64\\verification.json": "2b1afbde90e838652823c4c594bb7cfdeca36c12475fab4bf67421505e28d94d",
+          "analysis\\optimization_20261003_r64\\calibrated_csv_official.json": "e3b62b0324f0ce3fba5e50db0eb4b1818a385baee72c851c37a0505fc5ef9cf7",
+          "analysis\\optimization_20261003_r64\\provenance_scope_execution.json": "11274506dd3a218fc973cf4c84e989a4a2b6fe58a8f48fc02a3dc04a9843b269"
+        }
+      },
+      "finite_scope_only": true
     }
   ],
   "actual_scientific_scope_completion_excludes_published_before_scoped_execution_closes": true,
@@ -2607,17 +2662,17 @@
     "quality_and_fullfuture_evidence_pending": false,
     "prepared_plan_is_not_actual_quality_or_candidate_evidence": true
   },
-  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v4_20261005.py",
-  "additional_boundary_refresh_source_sha256": "7b986f1380829ce43c0449efbf2ebe8c2c9f12816e9935de5bb49a56402c591f",
+  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v5_20261005.py",
+  "additional_boundary_refresh_source_sha256": "a50e0c51776b306c5ae82bacee89633c9b9c3564796f782d3f10370db52e0098",
   "agreement_gate_coverage_evidence": {
     "method": "Same-day model agreement and diversity gated effective layer weights",
     "required_official_rounds": [
       64
     ],
-    "actual_completed_official_rounds": [],
-    "remaining_required_official_rounds": [
+    "actual_completed_official_rounds": [
       64
     ],
+    "remaining_required_official_rounds": [],
     "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
     "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
     "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
@@ -2628,7 +2683,7 @@
     "conditional_reference_scored_records": 129,
     "actual_r63_axes_and_count_refreeze_required": true,
     "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
-    "quality_and_fullfuture_evidence_pending": true,
+    "quality_and_fullfuture_evidence_pending": false,
     "new_model_fits": 0,
     "test_labels_read": false
   },
@@ -2690,6 +2745,38 @@
     "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\training_execution_scope.json",
     "RAM_reserve_is_scheduling_policy": true,
     "finite_matched_width_scope_not_global_resource_or_method_exhaustion": true,
+    "test_labels_read": false
+  },
+  "linear_leaf_coverage_evidence": {
+    "method": "Matched constant andregularized linear LightGBM leaves;30 annual300round fits andcomplete output evaluation",
+    "required_official_rounds": [
+      69,
+      70
+    ],
+    "remaining_required_official_rounds": [
+      69,
+      70
+    ],
+    "actual_completed_official_rounds": [],
+    "scored_records_prespecified": {
+      "69": 124,
+      "70": 138
+    },
+    "expected_annual_fits": 30,
+    "expected_final_fits": 6,
+    "actual_annual_fits": 30,
+    "actual_fulltraining_artifacts": 3,
+    "actual_annual_execution_status": "passed",
+    "actual_native_future_status": "pending",
+    "matched_instrumentation_preflight": "analysis\\linear_leaf_preflight_20261005\\verification.json",
+    "preflight_sha256": "1fb9e33af8c956348ee5f80ec21e093f474877a63af4ac7a8e8f6ee98d29ea47",
+    "generator_proof_sha256": "673c5e21d8c4b2232a553144a83f72b06f2ee7ec82b3a5f8df7352d0366f2e83",
+    "no48_round_pilot_substitution_for_complete300round_fits": true,
+    "native_training_device": "cpu",
+    "GPU_capacity_not_relevant_to_this_native_family": true,
+    "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\training_execution_scope.json",
+    "RAM_reserve_is_scheduling_policy": true,
+    "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
     "test_labels_read": false
   }
 }

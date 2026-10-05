@@ -1,10 +1,10 @@
 {
   "status": "research_directions_resumed",
   "continuous_goal_active": true,
-  "last_completed_round": 62,
-  "validation_best_completed": 0.450969086231263,
-  "new_backbone_configurations_trained": 113,
-  "new_annual_oof_fits_completed": 637,
+  "last_completed_round": 64,
+  "validation_best_completed": 0.45100769827200593,
+  "new_backbone_configurations_trained": 119,
+  "new_annual_oof_fits_completed": 667,
   "test_labels_read": false,
   "directions": [
     {
@@ -1021,10 +1021,10 @@
       "required_official_rounds": [
         64
       ],
-      "actual_completed_official_rounds": [],
-      "remaining_required_official_rounds": [
+      "actual_completed_official_rounds": [
         64
       ],
+      "remaining_required_official_rounds": [],
       "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
       "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
       "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
@@ -1035,11 +1035,11 @@
       "conditional_reference_scored_records": 129,
       "actual_r63_axes_and_count_refreeze_required": true,
       "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
-      "quality_and_fullfuture_evidence_pending": true,
+      "quality_and_fullfuture_evidence_pending": false,
       "new_model_fits": 0,
       "test_labels_read": false,
-      "status": "primitive_and_source_controls_passed_complete_output_quality_pending",
-      "new_quality_scores": 0
+      "status": "completed_declared_gate_search",
+      "new_quality_scores": 104
     },
     {
       "priority": 30,
@@ -1104,11 +1104,45 @@
       "finite_matched_width_scope_not_global_resource_or_method_exhaustion": true,
       "test_labels_read": false,
       "status": "actual_full_fits_native_future_and_quality_pending"
+    },
+    {
+      "priority": 32,
+      "method": "Matched constant andregularized linear LightGBM leaves;30 annual300round fits andcomplete output evaluation",
+      "required_official_rounds": [
+        69,
+        70
+      ],
+      "remaining_required_official_rounds": [
+        69,
+        70
+      ],
+      "actual_completed_official_rounds": [],
+      "scored_records_prespecified": {
+        "69": 124,
+        "70": 138
+      },
+      "expected_annual_fits": 30,
+      "expected_final_fits": 6,
+      "actual_annual_fits": 30,
+      "actual_fulltraining_artifacts": 3,
+      "actual_annual_execution_status": "passed",
+      "actual_native_future_status": "pending",
+      "matched_instrumentation_preflight": "analysis\\linear_leaf_preflight_20261005\\verification.json",
+      "preflight_sha256": "1fb9e33af8c956348ee5f80ec21e093f474877a63af4ac7a8e8f6ee98d29ea47",
+      "generator_proof_sha256": "673c5e21d8c4b2232a553144a83f72b06f2ee7ec82b3a5f8df7352d0366f2e83",
+      "no48_round_pilot_substitution_for_complete300round_fits": true,
+      "native_training_device": "cpu",
+      "GPU_capacity_not_relevant_to_this_native_family": true,
+      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\training_execution_scope.json",
+      "RAM_reserve_is_scheduling_policy": true,
+      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_full_fits_native_future_and_quality_pending"
     }
   ],
   "new_virtual_ensemble_configurations": 6,
   "new_virtual_ensemble_artifacts": 30,
-  "total_new_individual_and_virtual_configurations": 154,
+  "total_new_individual_and_virtual_configurations": 160,
   "prospective_official_input_parse_cache": {
     "status": "passed on full5635800-row actual calibrated CSV and both future scoring entry points",
     "all_eight_metrics_bit_identical": true,
@@ -1133,7 +1167,7 @@
     "parallel_seconds": 87.22404180000012,
     "declared_order_and_adaptive_barriers_preserved": true
   },
-  "native_child_annual_oof_fits_completed": 565,
+  "native_child_annual_oof_fits_completed": 595,
   "new_meta_annual_oof_fits_completed": 72,
   "new_learned_stacking_configurations": 6,
   "prospective_parallel_official_scoring_four": {
@@ -1183,18 +1217,20 @@
       65,
       66,
       67,
-      68
+      68,
+      69,
+      70
     ]
   },
-  "updated_at_local": "2026-10-05T08:01:21",
-  "fully_completed_five_year_configurations": 153,
+  "updated_at_local": "2026-10-05T09:23:41",
+  "fully_completed_five_year_configurations": 159,
   "planned_neural_tuning_configurations": 5,
   "global_resource_exhaustion_established": false,
   "planned_catboost_tuning_configurations": 5,
-  "new_backbone_configurations_fully_trained": 113,
+  "new_backbone_configurations_fully_trained": 119,
   "active_run_registry": "analysis/resumed_rounds_nystrom_locked_20261004.json",
   "future_inference_execution_recovery": "analysis/future_inference_recovery_sources_20261004.json",
-  "active_validation_round": 63,
+  "active_validation_round": 65,
   "nonlinear_ridge_resource_scope_audit": "analysis\\nonlinear_ridge_resource_scope_audit_20261004.json",
   "boundary_evidence": "analysis/optimization_boundary_evidence_20261004.json",
   "context_initialization_execution_recovery": "analysis/late_context_initialization_recovery_v2_20261004/verification.json",
@@ -1209,5 +1245,8 @@
   "nystrom_tuning_actual_fulltraining_artifacts": 10,
   "full16384_declared_configurations": 1,
   "full16384_actual_annual_fits": 0,
-  "full16384_actual_fulltraining_artifacts": 0
+  "full16384_actual_fulltraining_artifacts": 0,
+  "linear_leaf_declared_configurations": 6,
+  "linear_leaf_actual_annual_fits": 30,
+  "linear_leaf_actual_fulltraining_artifacts": 3
 }
