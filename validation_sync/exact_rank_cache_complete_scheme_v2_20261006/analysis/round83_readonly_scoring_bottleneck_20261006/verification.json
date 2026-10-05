@@ -1,0 +1,679 @@
+{
+  "status": "passed_actual_owned_readonly_scoring_stack_observations",
+  "at_local": "2026-10-06T06:14:28",
+  "actual_owned_round83": {
+    "name": "round83",
+    "pid": 32540,
+    "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_reboot_recovery_attempt_20261006.py",
+    "script_args": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\run.json"
+    ],
+    "owned_parent_creation_time": 1791231814.3604648,
+    "owned_worker_pid": 13960,
+    "owned_worker_creation_time": 1791231814.3802545,
+    "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\stdout.log",
+    "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\stderr.log",
+    "original_script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_recovery_qualified_workflow_20261005.py",
+    "original_arguments": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_training_round83_v2_pipeline.py",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\ready_fm_reference_quality_followups_20261005\\round83_recovery_run.json"
+    ],
+    "at_local": "2026-10-06T04:23:34",
+    "parent_controller_is_service_owned_and_outside_command_session": true,
+    "round": 83,
+    "explicit_parent_round": 82,
+    "prospective_official_workers": 1
+  },
+  "actual_process_identities": [
+    {
+      "pid": 13960,
+      "birth": 1791231814.3802545,
+      "command": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_reboot_recovery_attempt_20261006.py",
+        "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\run.json"
+      ]
+    },
+    {
+      "pid": 32040,
+      "birth": 1791233962.5891063,
+      "command": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=13960, pipe_handle=34140)",
+        "--multiprocessing-fork"
+      ]
+    }
+  ],
+  "actual_observations": [
+    {
+      "at_local": "2026-10-06T06:14:08",
+      "pid": 13960,
+      "CPU_seconds": 2434.25,
+      "RSS_bytes": 1606053888,
+      "stacks": [
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "_feed",
+            "short_filename": "multiprocessing\\queues.py",
+            "line": 251
+          },
+          {
+            "name": "run",
+            "short_filename": "threading.py",
+            "line": 1012
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "_exhaustive_wait",
+            "short_filename": "multiprocessing\\connection.py",
+            "line": 1016
+          },
+          {
+            "name": "wait",
+            "short_filename": "multiprocessing\\connection.py",
+            "line": 1084
+          },
+          {
+            "name": "wait_result_broken_or_wakeup",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 425
+          },
+          {
+            "name": "run",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 352
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "_feed",
+            "short_filename": "multiprocessing\\queues.py",
+            "line": 251
+          },
+          {
+            "name": "run",
+            "short_filename": "threading.py",
+            "line": 1012
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "result",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 451
+          },
+          {
+            "name": "_result_or_cancel",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 317
+          },
+          {
+            "name": "result_iterator",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 619
+          },
+          {
+            "name": "_chain_from_iterable_of_lists",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 636
+          },
+          {
+            "name": "evaluate_many",
+            "short_filename": "parallel_candidate_scoring_one_20261005.py",
+            "line": 63
+          },
+          {
+            "name": "execute",
+            "short_filename": "ready_fm_reference_search_engine_20261005.py",
+            "line": 197
+          },
+          {
+            "name": "independent",
+            "short_filename": "ready_fm_reference_search_engine_20261005.py",
+            "line": 207
+          },
+          {
+            "name": "main",
+            "short_filename": "run_ready_fm_reference_round_20261005.py",
+            "line": 69
+          },
+          {
+            "name": "<module>",
+            "short_filename": "run_training_round83_v2_pipeline.py",
+            "line": 2
+          }
+        ]
+      ]
+    },
+    {
+      "at_local": "2026-10-06T06:14:08",
+      "pid": 32040,
+      "CPU_seconds": 4550.53125,
+      "RSS_bytes": 2513735680,
+      "stacks": [
+        [
+          {
+            "name": "_call_cython_op",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 484
+          },
+          {
+            "name": "_cython_op_ndim_compat",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 331
+          },
+          {
+            "name": "cython_operation",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 562
+          },
+          {
+            "name": "_cython_operation",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 963
+          },
+          {
+            "name": "_cython_transform",
+            "short_filename": "pandas\\core\\groupby\\generic.py",
+            "line": 794
+          },
+          {
+            "name": "rank",
+            "short_filename": "pandas\\core\\groupby\\groupby.py",
+            "line": 5219
+          },
+          {
+            "name": "daily_ranks",
+            "short_filename": "optimize_wave15.py",
+            "line": 122
+          },
+          {
+            "name": "donor",
+            "short_filename": "optimize_training_round13.py",
+            "line": 89
+          },
+          {
+            "name": "donor",
+            "short_filename": "replay_complete_scheme_20261003.py",
+            "line": 74
+          },
+          {
+            "name": "donor",
+            "short_filename": "whole_scheme_replay_runtime_20261004.py",
+            "line": 115
+          }
+        ]
+      ]
+    },
+    {
+      "at_local": "2026-10-06T06:14:18",
+      "pid": 13960,
+      "CPU_seconds": 2434.296875,
+      "RSS_bytes": 1606053888,
+      "stacks": [
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "_feed",
+            "short_filename": "multiprocessing\\queues.py",
+            "line": 251
+          },
+          {
+            "name": "run",
+            "short_filename": "threading.py",
+            "line": 1012
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "_exhaustive_wait",
+            "short_filename": "multiprocessing\\connection.py",
+            "line": 1016
+          },
+          {
+            "name": "wait",
+            "short_filename": "multiprocessing\\connection.py",
+            "line": 1084
+          },
+          {
+            "name": "wait_result_broken_or_wakeup",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 425
+          },
+          {
+            "name": "run",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 352
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "_feed",
+            "short_filename": "multiprocessing\\queues.py",
+            "line": 251
+          },
+          {
+            "name": "run",
+            "short_filename": "threading.py",
+            "line": 1012
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "result",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 451
+          },
+          {
+            "name": "_result_or_cancel",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 317
+          },
+          {
+            "name": "result_iterator",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 619
+          },
+          {
+            "name": "_chain_from_iterable_of_lists",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 636
+          },
+          {
+            "name": "evaluate_many",
+            "short_filename": "parallel_candidate_scoring_one_20261005.py",
+            "line": 63
+          },
+          {
+            "name": "execute",
+            "short_filename": "ready_fm_reference_search_engine_20261005.py",
+            "line": 197
+          },
+          {
+            "name": "independent",
+            "short_filename": "ready_fm_reference_search_engine_20261005.py",
+            "line": 207
+          },
+          {
+            "name": "main",
+            "short_filename": "run_ready_fm_reference_round_20261005.py",
+            "line": 69
+          },
+          {
+            "name": "<module>",
+            "short_filename": "run_training_round83_v2_pipeline.py",
+            "line": 2
+          }
+        ]
+      ]
+    },
+    {
+      "at_local": "2026-10-06T06:14:18",
+      "pid": 32040,
+      "CPU_seconds": 4560.640625,
+      "RSS_bytes": 2556551168,
+      "stacks": [
+        [
+          {
+            "name": "_take_nd_ndarray",
+            "short_filename": "pandas\\core\\array_algos\\take.py",
+            "line": 160
+          },
+          {
+            "name": "take_nd",
+            "short_filename": "pandas\\core\\array_algos\\take.py",
+            "line": 115
+          },
+          {
+            "name": "_wrap_transform_fast_result",
+            "short_filename": "pandas\\core\\groupby\\groupby.py",
+            "line": 1885
+          },
+          {
+            "name": "_reduction_kernel_transform",
+            "short_filename": "pandas\\core\\groupby\\groupby.py",
+            "line": 1870
+          },
+          {
+            "name": "_transform",
+            "short_filename": "pandas\\core\\groupby\\groupby.py",
+            "line": 1838
+          },
+          {
+            "name": "transform",
+            "short_filename": "pandas\\core\\groupby\\generic.py",
+            "line": 786
+          },
+          {
+            "name": "daily_ranks",
+            "short_filename": "optimize_wave15.py",
+            "line": 123
+          },
+          {
+            "name": "augment",
+            "short_filename": "replay_complete_scheme_20261003.py",
+            "line": 64
+          },
+          {
+            "name": "orderers",
+            "short_filename": "optimize_training_round14.py",
+            "line": 76
+          },
+          {
+            "name": "predict",
+            "short_filename": "optimize_training_round11.py",
+            "line": 180
+          }
+        ]
+      ]
+    },
+    {
+      "at_local": "2026-10-06T06:14:28",
+      "pid": 13960,
+      "CPU_seconds": 2434.296875,
+      "RSS_bytes": 935890944,
+      "stacks": [
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "_feed",
+            "short_filename": "multiprocessing\\queues.py",
+            "line": 251
+          },
+          {
+            "name": "run",
+            "short_filename": "threading.py",
+            "line": 1012
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "_exhaustive_wait",
+            "short_filename": "multiprocessing\\connection.py",
+            "line": 1016
+          },
+          {
+            "name": "wait",
+            "short_filename": "multiprocessing\\connection.py",
+            "line": 1084
+          },
+          {
+            "name": "wait_result_broken_or_wakeup",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 425
+          },
+          {
+            "name": "run",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 352
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "_feed",
+            "short_filename": "multiprocessing\\queues.py",
+            "line": 251
+          },
+          {
+            "name": "run",
+            "short_filename": "threading.py",
+            "line": 1012
+          },
+          {
+            "name": "_bootstrap_inner",
+            "short_filename": "threading.py",
+            "line": 1075
+          },
+          {
+            "name": "_bootstrap",
+            "short_filename": "threading.py",
+            "line": 1032
+          }
+        ],
+        [
+          {
+            "name": "wait",
+            "short_filename": "threading.py",
+            "line": 355
+          },
+          {
+            "name": "result",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 451
+          },
+          {
+            "name": "_result_or_cancel",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 317
+          },
+          {
+            "name": "result_iterator",
+            "short_filename": "concurrent\\futures\\_base.py",
+            "line": 619
+          },
+          {
+            "name": "_chain_from_iterable_of_lists",
+            "short_filename": "concurrent\\futures\\process.py",
+            "line": 636
+          },
+          {
+            "name": "evaluate_many",
+            "short_filename": "parallel_candidate_scoring_one_20261005.py",
+            "line": 63
+          },
+          {
+            "name": "execute",
+            "short_filename": "ready_fm_reference_search_engine_20261005.py",
+            "line": 197
+          },
+          {
+            "name": "independent",
+            "short_filename": "ready_fm_reference_search_engine_20261005.py",
+            "line": 207
+          },
+          {
+            "name": "main",
+            "short_filename": "run_ready_fm_reference_round_20261005.py",
+            "line": 69
+          },
+          {
+            "name": "<module>",
+            "short_filename": "run_training_round83_v2_pipeline.py",
+            "line": 2
+          }
+        ]
+      ]
+    },
+    {
+      "at_local": "2026-10-06T06:14:28",
+      "pid": 32040,
+      "CPU_seconds": 4570.75,
+      "RSS_bytes": 2748329984,
+      "stacks": [
+        [
+          {
+            "name": "_call_cython_op",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 484
+          },
+          {
+            "name": "_cython_op_ndim_compat",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 331
+          },
+          {
+            "name": "cython_operation",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 562
+          },
+          {
+            "name": "_cython_operation",
+            "short_filename": "pandas\\core\\groupby\\ops.py",
+            "line": 963
+          },
+          {
+            "name": "_cython_transform",
+            "short_filename": "pandas\\core\\groupby\\generic.py",
+            "line": 794
+          },
+          {
+            "name": "rank",
+            "short_filename": "pandas\\core\\groupby\\groupby.py",
+            "line": 5219
+          },
+          {
+            "name": "daily_ranks",
+            "short_filename": "optimize_wave15.py",
+            "line": 122
+          },
+          {
+            "name": "signal",
+            "short_filename": "whole_scheme_replay_runtime_20261004.py",
+            "line": 123
+          },
+          {
+            "name": "blend",
+            "short_filename": "role_layer_replay_20261004.py",
+            "line": 32
+          },
+          {
+            "name": "<genexpr>",
+            "short_filename": "role_layer_replay_20261004.py",
+            "line": 41
+          }
+        ]
+      ]
+    }
+  ],
+  "nonblocking_readonly_sampling": true,
+  "scoring_not_paused_restarted_or_modified": true,
+  "performance_causation_and_acceleration_not_yet_proven": true,
+  "new_quality_scores_by_diagnostics": 0,
+  "test_labels_read": false
+}

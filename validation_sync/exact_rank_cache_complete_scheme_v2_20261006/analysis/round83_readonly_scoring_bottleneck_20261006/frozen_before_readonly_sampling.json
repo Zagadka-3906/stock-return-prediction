@@ -1,0 +1,72 @@
+{
+  "at_local": "2026-10-06T06:14:08",
+  "actual_owned_round83": {
+    "name": "round83",
+    "pid": 32540,
+    "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_reboot_recovery_attempt_20261006.py",
+    "script_args": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\run.json"
+    ],
+    "owned_parent_creation_time": 1791231814.3604648,
+    "owned_worker_pid": 13960,
+    "owned_worker_creation_time": 1791231814.3802545,
+    "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\stdout.log",
+    "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\stderr.log",
+    "original_script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_recovery_qualified_workflow_20261005.py",
+    "original_arguments": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_training_round83_v2_pipeline.py",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\ready_fm_reference_quality_followups_20261005\\round83_recovery_run.json"
+    ],
+    "at_local": "2026-10-06T04:23:34",
+    "parent_controller_is_service_owned_and_outside_command_session": true,
+    "round": 83,
+    "explicit_parent_round": 82,
+    "prospective_official_workers": 1
+  },
+  "actual_owned_process_tree_members": [
+    {
+      "pid": 13960,
+      "birth": 1791231814.3802545,
+      "command": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_reboot_recovery_attempt_20261006.py",
+        "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_dependency_queue_v4_20261006\\activated_jobs\\round83\\run.json"
+      ]
+    },
+    {
+      "pid": 32040,
+      "birth": 1791233962.5891063,
+      "command": [
+        "C:\\Users\\esesl\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=13960, pipe_handle=34140)",
+        "--multiprocessing-fork"
+      ]
+    }
+  ],
+  "source_sha256": "eb8045a27ec16ee99ab82e0243fd7d0fdfa2fc3836e2285446aa1d6f1b2e33ae",
+  "diagnostic_binary": {
+    "status": "downloaded_checksum_verified_portable_binary_under_D",
+    "at_local": "2026-10-06T05:56:05",
+    "metadata_url": "https://pypi.org/pypi/py-spy/json",
+    "version": "0.4.2",
+    "wheel_filename": "py_spy-0.4.2-py2.py3-none-win_amd64.whl",
+    "wheel_url": "https://files.pythonhosted.org/packages/6f/ed/1409cdb557e558a6c98003ab12fdd4284699e158c167c187cb0f124eea4c/py_spy-0.4.2-py2.py3-none-win_amd64.whl",
+    "wheel_sha256": "8b06a353c177677e4e1701b288d8c58e2f8d4208ee81a8048d9f72ba800918f8",
+    "binary": "D:\\3.Study\\数据分析\\赛题五\\tools\\readonly_pyspy_diagnostics_20261006\\py-spy.exe",
+    "binary_sha256": "6e83ab095f40453742d01a2719a178f308534015da519ec0659d2584139dc995",
+    "binary_bytes": 4815360,
+    "Python_environment_changed": false,
+    "project_files_or_caches_created_on_C": false,
+    "training_process_not_modified": true
+  },
+  "target_processes_not_paused_or_modified": true,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
