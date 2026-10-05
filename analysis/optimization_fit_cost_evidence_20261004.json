@@ -1,7 +1,7 @@
 {
   "status": "observed_costs_with_validation_work_pending",
-  "generated_at_local": "2026-10-05T09:23:43",
-  "configurations": 160,
+  "generated_at_local": "2026-10-05T09:43:56",
+  "configurations": 168,
   "native_child_annual_fits": 595,
   "learned_meta_annual_fits": 72,
   "total_actual_new_annual_fits": 667,
@@ -57,6 +57,11 @@
       "configurations": 6,
       "new_annual_fits": 30,
       "fit_seconds_total": 1370.3769999999859
+    },
+    "linear_leaf_ensemble": {
+      "configurations": 8,
+      "new_annual_fits": 0,
+      "fit_seconds_total": 0.0
     }
   },
   "models": [
@@ -9843,7 +9848,16 @@
       ],
       "fit_seconds_total": 187.6099999999933,
       "all_five_annual_outputs_complete": true,
-      "actual48_round_controls_not_counted_as_complete_annual_fits": true
+      "actual48_round_controls_not_counted_as_complete_annual_fits": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 1,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 68.31200000000172,
+        "elapsed_seconds": 72.46900000000096,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_constant_r300\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true
+      }
     },
     {
       "model": "return_lgb_linear_l1_r300",
@@ -9928,7 +9942,16 @@
       ],
       "fit_seconds_total": 212.50200000000405,
       "all_five_annual_outputs_complete": true,
-      "actual48_round_controls_not_counted_as_complete_annual_fits": true
+      "actual48_round_controls_not_counted_as_complete_annual_fits": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 1,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 76.25,
+        "elapsed_seconds": 80.71900000000096,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l1_r300\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true
+      }
     },
     {
       "model": "return_lgb_linear_l10_r300",
@@ -10013,7 +10036,744 @@
       ],
       "fit_seconds_total": 208.79699999999866,
       "all_five_annual_outputs_complete": true,
-      "actual48_round_controls_not_counted_as_complete_annual_fits": true
+      "actual48_round_controls_not_counted_as_complete_annual_fits": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 1,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 70.98399999999674,
+        "elapsed_seconds": 75.18799999999828,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true
+      }
+    },
+    {
+      "model": "rank_leaf_ensemble_all_three_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_rank",
+        "members": [
+          {
+            "model": "rank_lgb_constant_r300",
+            "weight": 0.3333333333333333
+          },
+          {
+            "model": "rank_lgb_linear_l1_r300",
+            "weight": 0.3333333333333333
+          },
+          {
+            "model": "rank_lgb_linear_l10_r300",
+            "weight": 0.3333333333333333
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 26.625,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2020.json",
+          "model_sha256": "30dcc43e7cb525f9634c57d7c681ec62c632f0f94cfc72a0eae3b4632691a8de",
+          "prediction_sha256": "1bf803b83948b1c1dcef2ec798835c516a74c55a5dc564c04b5cdfc1c3d0e716"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 28.920999999998457,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2021.json",
+          "model_sha256": "b4f50d04ab3fc2f89eb7928fcda11798d0428a25b7b8936d00e2763537382e1a",
+          "prediction_sha256": "e63a27da27b898d528398f477fb951ec0ad3e99ed29ff308d8e72056cfa7c421"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 34.17199999999866,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2022.json",
+          "model_sha256": "54f6ae104e625e5a9fc99b9bd9752362a227774e03276951c60eac84d3cae5a2",
+          "prediction_sha256": "45a3cc54798579a941dc080611d562a16d149918dbffb8aafa98540f3f06a68a"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 34.20300000000134,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2023.json",
+          "model_sha256": "70b95d4310540c56d9059b3f4d7490e560e9e7931ba3a72fd412c1946c8ed7cd",
+          "prediction_sha256": "365ee8cafa536c08103b914406c3d57ea41241db7a452115f972531215afdd4e"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 33.125,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2024.json",
+          "model_sha256": "bdfa3885d8ff9bf1b380455e10fd348e25726d86923127eb76b8ca6414dd00f6",
+          "prediction_sha256": "aa19c9be1de29fd56073aff1f100b3f0dfbcb0f1189082719af2f32d382e9a0f"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.125,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
+    },
+    {
+      "model": "rank_leaf_ensemble_linear_pair_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_rank",
+        "members": [
+          {
+            "model": "rank_lgb_linear_l1_r300",
+            "weight": 0.5
+          },
+          {
+            "model": "rank_lgb_linear_l10_r300",
+            "weight": 0.5
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 18.04699999999866,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2020.json",
+          "model_sha256": "6817fa068bb5f6dcf4ea04af0fd4ff1b5e1699bac048ceb961ed5e4de57c9316",
+          "prediction_sha256": "bbed28e28a54ee8a3dabb9d9dbf1af443b02f3bab7c7cf11426b425bcf10ea9d"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 20.01599999999962,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2021.json",
+          "model_sha256": "1f07af98b17b58e70160b37ef3d3466363186fdee8d7203926ddd537ce726bf6",
+          "prediction_sha256": "679b8b7456475e46772c1a5c2cafa2bccd80c3be8b5519c1db976efb6f675bd2"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 22.48400000000038,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2022.json",
+          "model_sha256": "ddbbf95e5f714adfafc9003e17ecdded003681774fc84904f9ef92b602c874ea",
+          "prediction_sha256": "fca1e32271f51381d059235a04a74fe4a2daebd54ff75127dde8ab5440185a16"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 24.187000000001717,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2023.json",
+          "model_sha256": "83dd9dc90ca3d8ac261d9142fba8b98021f652f2f05099f77f88c0ec8f1604fd",
+          "prediction_sha256": "a1bf8e62639599f0fe57ea9351798bbca40d4f5a86c97b7574bde59844bcf02f"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 26.329000000001543,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2024.json",
+          "model_sha256": "bcfdb171fb33fc5155e54f596074707d8fbb4a66e412654c3f5baa694170485c",
+          "prediction_sha256": "c2ec60898ae27fe6656286a503b0f9eb93e2470691fd79c8c4bc152b0b0a0891"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.125,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
+    },
+    {
+      "model": "rank_leaf_ensemble_constant_linear1_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_rank",
+        "members": [
+          {
+            "model": "rank_lgb_constant_r300",
+            "weight": 0.5
+          },
+          {
+            "model": "rank_lgb_linear_l1_r300",
+            "weight": 0.5
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 20.8279999999977,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2020.json",
+          "model_sha256": "7065f7a729fea691a4ccf710919d3418e5f8a5c59d1ffe23d52ce9c3cda704f9",
+          "prediction_sha256": "ed41b5a2d7691aa82a959b31a83b45d11a4005b0b49da53024b116d63d7790d6"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 20.34400000000096,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2021.json",
+          "model_sha256": "ec301466563dd6b2cde38aacbdb87437438722fd0822aaac4fc6c80be336d1ea",
+          "prediction_sha256": "7056c9ef849e3633b2f06b324c77ff12e4a5e8f86131ebe93c887a8f7bdb5c7d"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 19.25,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2022.json",
+          "model_sha256": "c98af355c222c3326081194319bd29e2a4189e7602623f48d67633e0ceb464ad",
+          "prediction_sha256": "9a2058766897eb59521c6c0d324fd27a08ce383bdf558f9d4fbf68a4d1c03e66"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 18.281000000002678,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2023.json",
+          "model_sha256": "c714bfe0f836be2e49e673ce791c3fdee80ded6817c030d60a00dc592dccee4b",
+          "prediction_sha256": "7de0156034559e8a1b3cd68bd0f8dadba60ee45642279058ae081537dba86f9b"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 21.343999999997322,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2024.json",
+          "model_sha256": "f7f3389cd26bcc0c85f92112dc9f97f6a572a96200557c343403e413a4acda24",
+          "prediction_sha256": "ac5926532b44bfdff4b9d9ef8fb9f9fb0908afe2b72efdc8a567e34c74415c59"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.09299999999711872,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
+    },
+    {
+      "model": "rank_leaf_ensemble_constant_linear10_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_rank",
+        "members": [
+          {
+            "model": "rank_lgb_constant_r300",
+            "weight": 0.5
+          },
+          {
+            "model": "rank_lgb_linear_l10_r300",
+            "weight": 0.5
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 21.07800000000134,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2020.json",
+          "model_sha256": "d0f49d17096b56716cc01decaa02c0b6ea8c74c3d79c956cda99a92ec0fc684b",
+          "prediction_sha256": "afbe8e0a0e4b97d0fe1b03cf2152a1eae961d18bff021e9a567ce8f909ca2294"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 23.48400000000038,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2021.json",
+          "model_sha256": "50d166667524c55908c603dd415930450335646e8221c33d8cb6d26b49d47013",
+          "prediction_sha256": "03931bbf9d6291d8b9ecd5ef5149ecbe65ff83e17c254ba4c512e352c9367465"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 20.75,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2022.json",
+          "model_sha256": "d1c400a01b8f97dc899332218cf1508b049a4e1714c8e8c1d23c4fb2f7d3c90e",
+          "prediction_sha256": "eccf95bebb0709d48ed5b79bba8f69b96a7341354f0328cc0dadb411c72f7cda"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 18.562999999998283,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2023.json",
+          "model_sha256": "54c3541665ad7a3b7a04eef661d897082fa4dacbcedc729468070e91c4664656",
+          "prediction_sha256": "c60afa0226b8b3f14ae55808bdc14daa5fa94b583bf70c16fe0d52dbb4c18992"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 21.81199999999808,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2024.json",
+          "model_sha256": "a0855e800ab9cd33b9607ed4aa6026383e96bf9a8e2f21f76f6355d846a48608",
+          "prediction_sha256": "8d017e6c0c3e6a8814b4e154cbcd4bec8e486bcfa13ad8fb9701022aee94b3b5"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.09400000000096043,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
+    },
+    {
+      "model": "return_leaf_ensemble_all_three_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_ret_1d",
+        "members": [
+          {
+            "model": "return_lgb_constant_r300",
+            "weight": 0.3333333333333333
+          },
+          {
+            "model": "return_lgb_linear_l1_r300",
+            "weight": 0.3333333333333333
+          },
+          {
+            "model": "return_lgb_linear_l10_r300",
+            "weight": 0.3333333333333333
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 29.81199999999808,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2020.json",
+          "model_sha256": "fe7ab570e2f83e4be2d833a5bde2ac958a5c0231a6a030c6479a5bec1b182a9a",
+          "prediction_sha256": "8d302998699529f8f574b0481d23b2a5265c585e508df9681cf260e362fef89f"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 29.889999999999418,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2021.json",
+          "model_sha256": "0e298acf4258b30101192681ef24228e079d59e7fe95b736ce81b91acdff4a4e",
+          "prediction_sha256": "e80c04d187720f1612fc02821dc7ee462212484b9862f8c6f52e163130a63e90"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 24.18699999999808,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2022.json",
+          "model_sha256": "1f11ea9539f9e4e29ec72e4e98152b8c9391c454ed5fc8b5436896c8012537c8",
+          "prediction_sha256": "131967fc04173bcc27c5bd3dad58fe14fc85a61c1fee81e9239aa25ff97d35b6"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 24.545999999998457,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2023.json",
+          "model_sha256": "3b3887b20513e7cef57ac9ca53c58e2b6567eb90dc58072a71dad190e84cd852",
+          "prediction_sha256": "a5ded802acc9015db950788e74a58cc529f83864c86875b122a23874753ee9dd"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 30.0,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2024.json",
+          "model_sha256": "21889a68659c0d6c2cc55c7637b3633acbdd46efd8daa5449335e6a9d2284d4a",
+          "prediction_sha256": "9cd05ad43239ac4f9bafb20f3eb2b48316337dc8d9da231175b74088ba8c1d77"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.1720000000022992,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
+    },
+    {
+      "model": "return_leaf_ensemble_linear_pair_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_ret_1d",
+        "members": [
+          {
+            "model": "return_lgb_linear_l1_r300",
+            "weight": 0.5
+          },
+          {
+            "model": "return_lgb_linear_l10_r300",
+            "weight": 0.5
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 21.31300000000192,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2020.json",
+          "model_sha256": "99c125aec8c5c51ea1f7c1c80e685c1eb3384a7c855dd2ec6b32a682ece15b49",
+          "prediction_sha256": "3b93213a9298b2188fe81d4555ade67f9458d1a1bcc6a518e28b321c0e512b07"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 19.78099999999904,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2021.json",
+          "model_sha256": "e041e3b96085c3d151d95ed30dbeb0dd1f4cfd49bbaab30956daeedc74dbb16c",
+          "prediction_sha256": "1955a328ca195739e6335c4a770869fa6033dc910b592c163722501a112eedf5"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 17.0,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2022.json",
+          "model_sha256": "4af8e8ccaa619ff82fe72d59e077aa4bd1812733e47d0b95859d930bf4764415",
+          "prediction_sha256": "fdbfafe3c86b9216bc328c8f1dd9f707158605da9751fa3934290256358f8136"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 17.264999999999418,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2023.json",
+          "model_sha256": "6169717a1a72b865d2b8f15bbfa8f16aecf2cea44da76f24a0dcb6e614f16d70",
+          "prediction_sha256": "e871efc93af955f21c7231ab9f850cb4eda9b4f45c4876cc9d5fc6050d153f44"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 16.889999999999418,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2024.json",
+          "model_sha256": "2152fbdd427dc02e99d5b903bf8359cccdb362c61c17cb03c4121ae221b395b5",
+          "prediction_sha256": "4610c57c9702d09237b1869806114fe871ee1c1339c6e5f0edd8993a0dd63e3e"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.11000000000058208,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
+    },
+    {
+      "model": "return_leaf_ensemble_constant_linear1_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_ret_1d",
+        "members": [
+          {
+            "model": "return_lgb_constant_r300",
+            "weight": 0.5
+          },
+          {
+            "model": "return_lgb_linear_l1_r300",
+            "weight": 0.5
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 15.343999999997322,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2020.json",
+          "model_sha256": "8a663ac83037e2042a326185d6c4ec110e56e9011b963abf1a9b5eee5640b54a",
+          "prediction_sha256": "1de5ec985c05deb6ff6e0aae294bd226db46a4018a3827392e8cf39cfaca87f0"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 15.53099999999904,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2021.json",
+          "model_sha256": "2781f7acd495fc7069598ed08f1ee0ba3cc3f34f996730c44d5a52d7ba3dbd23",
+          "prediction_sha256": "3f9c0bc60d62c87585d0b0e94e559b98452be637fa388e4a1cb03de2c2832966"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 15.265999999999622,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2022.json",
+          "model_sha256": "af56950b0f7a53e03d2e70cac10b26340d7fdf9f2eda152d284c808ca952cb82",
+          "prediction_sha256": "6034e857fd059ecb98ae7598c9bb2ae70a5498abe18cde5d9cf84e6953a48d52"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 15.15599999999904,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2023.json",
+          "model_sha256": "66d72c0259f346a19088544c184a80ba45875a516f221f55626430a99f547767",
+          "prediction_sha256": "9805013bda195b2d400e6f699acb3c104a91f6c4a810f85a32a6f8329fe545db"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 16.420999999998457,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2024.json",
+          "model_sha256": "e93d984162646564c566e91f430ab18c1cbf55b6dab42761da06b08907b8a4ea",
+          "prediction_sha256": "02a49e1e28d60ffdfb97bc0018b9c14c6f8da4fa88b90b8be9f10d17fe466fa1"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.09400000000096043,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
+    },
+    {
+      "model": "return_leaf_ensemble_constant_linear10_equal",
+      "kind": "linear_leaf_ensemble",
+      "target": "y_ret_1d",
+      "configuration": {
+        "kind": "linear_leaf_ensemble",
+        "target": "y_ret_1d",
+        "members": [
+          {
+            "model": "return_lgb_constant_r300",
+            "weight": 0.5
+          },
+          {
+            "model": "return_lgb_linear_l10_r300",
+            "weight": 0.5
+          }
+        ],
+        "learned_ensemble_weights": false,
+        "independent_new_model_fits": 0
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005",
+      "annual_artifacts": 5,
+      "new_annual_fits": 0,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 16.0779999999977,
+          "mature_training_rows": 1694259,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2020.json",
+          "model_sha256": "95f91f92214e44a0532c12ab323a8ad63891826a42667ec0c85e17e66f003f88",
+          "prediction_sha256": "492317ae0c0384d0db3619435de9fc1bf625960b8b1eec3b1e28cef13447a3d5"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 16.03099999999904,
+          "mature_training_rows": 2594048,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2021.json",
+          "model_sha256": "362bb3f7af520c7897bf228456fcb871811878c0fc7dc234fd6efbf45a48eb52",
+          "prediction_sha256": "cda8674a565b364b19b3b744c0a2cd9d700d968291a9f0e9d4e80ced892ead84"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 15.234000000000378,
+          "mature_training_rows": 3568878,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2022.json",
+          "model_sha256": "d79f5332edbc2901c36c05a4ec133cb4765d78ec7de89f8966f115e0ada40018",
+          "prediction_sha256": "4ce85f6959bc7e8f3420d910f923cd15e1fd33de540353e41e9bc692c4eab686"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 15.81199999999808,
+          "mature_training_rows": 4597785,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2023.json",
+          "model_sha256": "7e49ed54b2490da10b0f477bc4e346ee14c5ba96dd078af8404717218c338240",
+          "prediction_sha256": "1af20d93d7f004557da61e925742d6aed443d453e132853c7544583ef7df90cb"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 0,
+          "fit_seconds": 0.0,
+          "artifact_elapsed_seconds": 15.906000000002678,
+          "mature_training_rows": 5659954,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2024.json",
+          "model_sha256": "86b111cd9767b6e70f9d3e7fcedb7dfea197fd4f68b1c364e490f0016951d48a",
+          "prediction_sha256": "87d99208d45ca72f97b590de4edd257786bd9a597d713628bc33f67030a55522"
+        }
+      ],
+      "fit_seconds_total": 0.0,
+      "all_five_annual_outputs_complete": true,
+      "native_parent_fits_counted_once_in_parent_rows": true,
+      "actual_virtual_artifact_construction_not_training": true,
+      "fulltraining": {
+        "status": "passed",
+        "actual_new_fits": 0,
+        "mature_training_rows": 6754006,
+        "fit_seconds": 0.0,
+        "elapsed_seconds": 0.0779999999977008,
+        "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2025.json",
+        "test_prediction_not_generated_during_fit": true,
+        "virtual_bundle_not_new_fit": true
+      }
     }
   ],
   "resource_snapshots": [
@@ -10092,7 +10852,9 @@
     67,
     68,
     69,
-    70
+    70,
+    71,
+    72
   ],
   "official_parallel_capacity_controls": [
     {
@@ -10405,14 +11167,14 @@
       "sampling_interval_seconds": 0.25
     }
   ],
-  "fulltraining_artifacts_ready": 122,
+  "fulltraining_artifacts_ready": 133,
   "future_full_pipeline_implementation_control": "analysis/stacking_future_pipelines_qa_20261004/verification.json",
   "four_worker_full_prediction_control": "analysis/parallel_candidate_scoring_four_qa_20261004/verification.json",
   "prospective_official_workers": 4,
   "neural_tuning_completed_annual_fits": 25,
   "neural_tuning_expected_annual_fits": 25,
   "neural_tuning_all_annual_controls_complete": true,
-  "fully_completed_five_year_configurations": 159,
+  "fully_completed_five_year_configurations": 167,
   "neural_tuning_resource_samples": "analysis/neural_tuning_resource_observations_20261004/samples.jsonl",
   "global_resource_exhaustion_established": false,
   "neural_tuning_resource_summary": "analysis/neural_tuning_resource_observations_20261004/summary.json",
@@ -10517,7 +11279,7 @@
   "supplementary_full_width_cost_source": "analysis\\refresh_linear_leaf_cost_evidence_20261005.py",
   "linear_leaf_declared_configurations": 6,
   "linear_leaf_actual_annual_fits": 30,
-  "linear_leaf_actual_fulltraining_artifacts": 3,
+  "linear_leaf_actual_fulltraining_artifacts": 6,
   "linear_leaf_info_source_sha256": {
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\rank_lgb_constant_r300\\info_2020.json": "9a802ce22aeda8b934067db1f6deda0aa4c63409d6f77cb6fd9374eb4fed122c",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\rank_lgb_constant_r300\\info_2021.json": "02f779cadf36c69f56575d7bf238cee73027e0f2c54bb17fd8cec564ded5b5c1",
@@ -10542,15 +11304,74 @@
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_constant_r300\\info_2022.json": "8a8cccbda9374c715ddff3a8d9613bdac046b89f5bd4accee344eed9c6fe4d73",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_constant_r300\\info_2023.json": "baf1a104dcfd9bcce993df5ff1010107c8516ee0612661a96e5699d1a92ec5f9",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_constant_r300\\info_2024.json": "985993708dc51ef1573ae88a6f4bf08fe0b01d9a9068dc56a4f733314fe411b1",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_constant_r300\\info_2025.json": "780cd7970bfb86022681a8e15d297d46c74221692828a9929cccb14f388d0bfe",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l1_r300\\info_2020.json": "61a0b3684f0a6cc6d29f28fe67f29d223b019ba90724d9e6977b79419ad7748c",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l1_r300\\info_2021.json": "64af4fb9e04250025c8e1dcc582874cbdd23b8186266172601e5f05af841df31",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l1_r300\\info_2022.json": "15150761efc60e969bd907a3456cc755d9ecdefab79ec5de2e6ef17b31ee40a4",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l1_r300\\info_2023.json": "7d9e29f2c18158fff96e7ae52af658f2d255a79297ee1239f7a61456880ea594",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l1_r300\\info_2024.json": "a5ee81ae398dd164289ced822146578c22dd7fc8505e3fc59373557903a88927",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l1_r300\\info_2025.json": "8223de598bb4c41f0efa4d73d4ca6bbec2ab075c21a1fce8b9926ff3aa34dee7",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2020.json": "0155f4d14fd40e3938311da58d36384fd209ee81198c4f7942abb46b229d4c8e",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2021.json": "ffc58bc25ba71c9f902098ab46dbb93f83c2c7a492c436b5afe94a8ac5665e44",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2022.json": "e75411a3d32e85874cc06ace77630f640350c6e4ca6f1722c3c7372d9bdc74f9",
     "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2023.json": "974ca24d569aacc9460c372620f6bc78535841718b1650634def2476cd5246f5",
-    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2024.json": "ba09c7b472198465b1e45e819fe0ea6a52ac10aafe7df2987684a523d385cf0c"
-  }
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2024.json": "ba09c7b472198465b1e45e819fe0ea6a52ac10aafe7df2987684a523d385cf0c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\return_lgb_linear_l10_r300\\info_2025.json": "5781e79b4b2498c176ba53ac8a9cf8c3bf569292f25c5ca91bf73ad4d9506dc6"
+  },
+  "linear_leaf_ensemble_declared_configurations": 8,
+  "linear_leaf_ensemble_actual_virtual_annual_outputs": 40,
+  "linear_leaf_ensemble_actual_new_annual_fits": 0,
+  "linear_leaf_ensemble_actual_virtual_final_bundles": 8,
+  "linear_leaf_ensemble_actual_new_final_fits": 0,
+  "linear_leaf_ensemble_info_source_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2020.json": "d0ef09c489ecb920ebc10cbaf83e66be4a0ffcae70b91c7b0126494b7d99656b",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2021.json": "f5de7d5c6c27f82509eb55bb7f7012378cb8f29e8a66fc034340d8a1c62fb45e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2022.json": "40454f13d7f18ff8caecf7e97226b863b3a88ddb1f98c6cf5948ea9b72d80d1f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2023.json": "1a999c777ff5a640c0561339d59e87e5eec1556a4acb1eb23372036aa37f2636",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2024.json": "5235efa7494ca9b550aada5693d3bf14a8234ec610bf4772e2185206bb635f50",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_all_three_equal\\info_2025.json": "6a54ae21e9c403b9dea615c76e28c71c6e8fd2a2c3d23c2600c951072fcb4c47",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2020.json": "2c362b7276c57304f164f29737101e745d5fefbf790928c8edc6c6a72bcf7868",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2021.json": "5e96a752d028ff79f903e32873de29120e6c6c6a218d637c8a74dab6bb0a5863",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2022.json": "92aae0af766aa0773688800ec3cc1bcd73242daf5aaa6f251f80230c94a9493c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2023.json": "8f667e414a6389b89bca2158131ed719ee3cc8df9353bf033298cc3f76b219d2",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2024.json": "6957f476c854ce062eae05ce6a702aa4c40b4ea5f568f86d1ffa0bd86c5ef9c7",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_linear_pair_equal\\info_2025.json": "12c12290cb908cd30d1be6dd2c3832b5f3638224c399db98667ed0b31550480e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2020.json": "a3003298497be962c6fc0a475489b4360ca21a83a789007cf9d54482dcb68a60",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2021.json": "041bd0285589ecd747c53aa64d835ae41f6b22a5a38d9179fe74f21ae3bd1b5c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2022.json": "49c06895c48c33dabf4b9e2b958d82a9d17cfb7f540d4df164bcf4f50542ebaf",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2023.json": "d67ae8b22c423bfefb28709dd29639fb023aefc852ef8f5fa29021b845dcdb61",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2024.json": "5a075d9339f3f8bd6d45d5236f6eb60377557057e43c985cae2cafd95802295d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear1_equal\\info_2025.json": "13286931df958779967608547fdcdf954a38abb2f84b2001a7030e6e47f956ad",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2020.json": "25572a94b141b7f4ecdc98f7d2127d4c17254f46c13a2d49d33d5960219bbbed",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2021.json": "bdb95ab2cd8ea33b46996005fa5dcf6b2952fa6c5b5676c46ac87067ace826a5",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2022.json": "8194599ada6d89fc9d34f26041f066e51ab3bbe482554ccd8d77dec9091656c3",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2023.json": "72efab939ae3c6ee7718dd7ae25b579600ad7f608a36ba6d95ed1b9c4cd1ebc9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2024.json": "419927f8f5f385db46c4b19ddbad572c2a74115858fce18b33e4e6014c57d6c3",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\rank_leaf_ensemble_constant_linear10_equal\\info_2025.json": "845abd347b4c71bea363b84107f76a5c7c040239dd0f90d5a2cde22d2395cd58",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2020.json": "b2bcacd0c6754623db50f217f09b898f1bbcb82ceea89db9a9b5a77c57896ad5",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2021.json": "57e74dd790ccf021101504c8044e8ca2b5f48fc96c95811af25e37699738344d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2022.json": "ac3300e6a035e2cd5fb45e3b557668e708f8048b24706c4296a8ec4610220b09",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2023.json": "dc5e08f41d5c5004427c8e3e0c0d8055ee28c229d8f4b9852b00d5ebf9bae49d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2024.json": "7f54a2fc2503f1028d08887d3c50b6a793afe2834f0eeaf43e3fb8b69b77852c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_all_three_equal\\info_2025.json": "e81414ba9e5cd16c16e0eac2c5b50aea9e97f502f753a58acb108fc8e55c8a5c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2020.json": "9188e824c9dfee45e47106e88a9434e2cf15c945d6822615c25c429613c8ceb3",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2021.json": "7839718e1ada31640607248b7c0315a7bd5cc2a13424328f95c9182da70b51e0",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2022.json": "46628760fb35c5c2378d1b640cafe79f659201fe1db14852e259f726721403a3",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2023.json": "b7ba3dce9d1513a0f423cca9d67e8fec3a0aed6f81b951b77dae0c3c15da7185",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2024.json": "9f628c3e312bc83691093093b4a099d437afc265189dde2fdb8ee0485530c212",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_linear_pair_equal\\info_2025.json": "1b9c386e4aeeab703165a7b018ae4f95d30d502e6fb30e5bd4b15b6c9c3a53b9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2020.json": "63fa1723429d3bd406a981e9a07bcab83b29247a39e9ebd9985f19580774271f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2021.json": "61f95f8f665b6a23fe96c457bd3fece482f559731f3453177bdd0c04a94d0a18",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2022.json": "d24734ff0cb9aee64a49a248db020f5b2330da35ca00112c218856af657e509c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2023.json": "cecd3685e98d7f16ddc399bc43009d5551138a5b328211f574083dfc6767a311",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2024.json": "ee22630fdba49c8dd6f91870f18ceb97664fbcc57f086944b63983726bd6628d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear1_equal\\info_2025.json": "545ca0d86c021edd67436d0dd50cafe194651d977166c344ef0b0dc3b450e448",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2020.json": "748a70c869f73c9ae278e604b3c69dad5835be98e82c0698e3ff2cbf59cc8424",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2021.json": "260c8a7b13a5df8d1ad153cdba532c4d5ebe749a7813951f13d184149242b214",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2022.json": "cba14a51b9868c046764d43e1e7ee7d24df4d0ae0f5cd93f1c504c38e1ec4951",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2023.json": "32e82d2a3181101ad37dba38bc6abc29eaecdf3af6b784375c9e6164b3e086a7",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2024.json": "3109d84d3535cac7612e24897c78d9b8814ecefecab6f3d390f0e0dd147961f8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\return_leaf_ensemble_constant_linear10_equal\\info_2025.json": "c024df3b3a91021820d083a9690f53f892eb2da76622479c9d7609e8e228a256"
+  },
+  "supplementary_composite_cost_source": "analysis\\refresh_linear_leaf_ensemble_cost_evidence_20261005.py"
 }
