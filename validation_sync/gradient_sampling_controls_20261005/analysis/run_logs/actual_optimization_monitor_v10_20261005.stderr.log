@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_recovery_qualified_workflow_20261005.py", line 59, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\run_recovery_qualified_workflow_20261005.py", line 51, in main
+    runpy.run_path(str(driver), run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v10_20261005.py", line 146, in <module>
+    main(parser.parse_args().once)
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v10_20261005.py", line 125, in main
+    state = update()
+            ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v10_20261005.py", line 42, in update
+    completed = [n for n in published if n < 50 or boundary.complete_round_evidence(n) is not None]
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'refresh_optimization_boundary_evidence_v9_20261005' has no attribute 'complete_round_evidence'

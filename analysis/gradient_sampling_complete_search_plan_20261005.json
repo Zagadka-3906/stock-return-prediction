@@ -1,0 +1,210 @@
+{
+  "status": "prespecified_GOSS_native_and_complete_output_comparisons",
+  "model_configurations": {
+    "rank_goss_low_r300": {
+      "kind": "lightgbm_gradient_sampling",
+      "target": "y_rank",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "data_sample_strategy": "goss",
+      "top_rate": 0.1,
+      "other_rate": 0.1,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "rank_goss_medium_r300": {
+      "kind": "lightgbm_gradient_sampling",
+      "target": "y_rank",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "data_sample_strategy": "goss",
+      "top_rate": 0.2,
+      "other_rate": 0.1,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "rank_goss_high_r300": {
+      "kind": "lightgbm_gradient_sampling",
+      "target": "y_rank",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "data_sample_strategy": "goss",
+      "top_rate": 0.4,
+      "other_rate": 0.2,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "return_goss_low_r300": {
+      "kind": "lightgbm_gradient_sampling",
+      "target": "y_ret_1d",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "data_sample_strategy": "goss",
+      "top_rate": 0.1,
+      "other_rate": 0.1,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "return_goss_medium_r300": {
+      "kind": "lightgbm_gradient_sampling",
+      "target": "y_ret_1d",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "data_sample_strategy": "goss",
+      "top_rate": 0.2,
+      "other_rate": 0.1,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    },
+    "return_goss_high_r300": {
+      "kind": "lightgbm_gradient_sampling",
+      "target": "y_ret_1d",
+      "linear_tree": false,
+      "linear_lambda": 0.0,
+      "data_sample_strategy": "goss",
+      "top_rate": 0.4,
+      "other_rate": 0.2,
+      "num_boost_round": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 8,
+      "min_data_in_leaf": 128,
+      "max_bin": 127,
+      "lambda_l2": 1.0,
+      "seed": 20261005,
+      "num_threads": 8,
+      "clip_z": 8.0,
+      "chunk_rows": 32768,
+      "return_quantiles": [
+        0.005,
+        0.995
+      ],
+      "reserve_available_ram_GiB": 14.0
+    }
+  },
+  "expected_annual_fits": 30,
+  "expected_complete_final_fits": 6,
+  "planned_quality_rounds": [
+    75,
+    76
+  ],
+  "actual_previous_selection_required": {
+    "75": 74,
+    "76": 75
+  },
+  "planned_records": {
+    "75": 124,
+    "76": 138
+  },
+  "planned_waves": {
+    "75": [
+      304,
+      305,
+      306,
+      307
+    ],
+    "76": [
+      308,
+      309,
+      310
+    ]
+  },
+  "roles": [
+    "membership",
+    "top",
+    "rest"
+  ],
+  "role_weights": [
+    0.005,
+    0.025,
+    0.075,
+    0.2
+  ],
+  "standalone_replaces_existing_root_and_layers": true,
+  "same_continuous_official_validation_required": "2020–2024;5635800rows;1212days;annual turnover continuous",
+  "candidate_fullcoverage_and_causal_controls_required": true,
+  "no_validation_early_stopping": true,
+  "matched_existing_constant_leaf_controls": [
+    "rank_lgb_constant_r300",
+    "return_lgb_constant_r300"
+  ],
+  "GOSS_rates_are_only_deliberate_training_parameter_contrast": true,
+  "historical_DART_attempts_already_covered": true,
+  "native_method_reference": "https://lightgbm.readthedocs.io/en/stable/Parameters.html#data_sample_strategy",
+  "full16384_annual_attempt_closed_before_GOSS_full_fits": true,
+  "14GiB_fit_reserve_is_scheduling_policy_not_hardware_boundary": true,
+  "quality_generator_preflight_and_full_fits_not_yet_completed": true,
+  "new_quality_scores": 0,
+  "test_labels_read": false,
+  "global_resource_exhaustion_established": false
+}
