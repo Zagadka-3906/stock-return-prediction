@@ -1,0 +1,23 @@
+{
+  "model_sha256": "d5f7b8020f7c4fa90cf8adda1d45bd238fdcca12645a0b6f8758745c8f0961fd",
+  "configuration": {
+    "kind": "linear_leaf_ensemble",
+    "target": "y_ret_1d",
+    "members": [
+      {
+        "model": "return_lgb_constant_r300",
+        "weight": 0.5
+      },
+      {
+        "model": "return_lgb_linear_l1_r300",
+        "weight": 0.5
+      }
+    ],
+    "learned_ensemble_weights": false,
+    "independent_new_model_fits": 0
+  },
+  "training_info_sha256": "545ca0d86c021edd67436d0dd50cafe194651d977166c344ef0b0dc3b450e448",
+  "first_actual_future_date": 20250102,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}

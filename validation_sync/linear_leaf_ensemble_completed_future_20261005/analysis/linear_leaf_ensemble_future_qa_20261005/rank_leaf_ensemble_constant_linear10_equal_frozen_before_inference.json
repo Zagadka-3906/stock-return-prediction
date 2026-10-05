@@ -1,0 +1,23 @@
+{
+  "model_sha256": "eed5d3d74bba9ed996e1989d7edb24e0ea3eabd327740162c411c3f0ab2514e7",
+  "configuration": {
+    "kind": "linear_leaf_ensemble",
+    "target": "y_rank",
+    "members": [
+      {
+        "model": "rank_lgb_constant_r300",
+        "weight": 0.5
+      },
+      {
+        "model": "rank_lgb_linear_l10_r300",
+        "weight": 0.5
+      }
+    ],
+    "learned_ensemble_weights": false,
+    "independent_new_model_fits": 0
+  },
+  "training_info_sha256": "845abd347b4c71bea363b84107f76a5c7c040239dd0f90d5a2cde22d2395cd58",
+  "first_actual_future_date": 20250102,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
