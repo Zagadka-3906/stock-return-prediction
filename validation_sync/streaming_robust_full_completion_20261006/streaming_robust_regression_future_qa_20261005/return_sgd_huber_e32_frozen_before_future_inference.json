@@ -1,0 +1,26 @@
+{
+  "model_sha256": "70c654f8934700415eaadd27845a3469d4314b991a34d7b2dd74e62b62ace863",
+  "training_info_sha256": "dc2d06207a978832a2029ef14054f28c2cb64f6eef383ce87cc829b8df83d985",
+  "target_scaling_learned_from_mature_past": {
+    "center": 0.0003365232115292659,
+    "scale": 0.02986729210592201
+  },
+  "configuration": {
+    "kind": "streaming_robust_regression",
+    "target": "y_ret_1d",
+    "loss": "huber",
+    "alpha": 0.0001,
+    "epsilon": 0.1,
+    "epochs": 32,
+    "chunk_rows": 65536,
+    "clip_z": 8.0,
+    "learning_rate": "invscaling",
+    "eta0": 0.01,
+    "power_t": 0.25,
+    "average": true,
+    "shuffle": false,
+    "seed": 20261005,
+    "target_scaling": "mature_past_mean_std_inverse_output_no_target_clipping"
+  },
+  "test_labels_read": false
+}
