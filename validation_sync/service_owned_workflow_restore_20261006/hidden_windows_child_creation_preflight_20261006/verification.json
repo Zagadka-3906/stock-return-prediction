@@ -1,0 +1,41 @@
+{
+  "status": "passed_actual_subprocess_and_multiprocessing_consoleless_children",
+  "at_local": "2026-10-06T02:42:24",
+  "failure": null,
+  "checks": [
+    {
+      "kind": "actual_stdlib_subprocess_default_flags",
+      "pid": 39312,
+      "console_handle": 0
+    },
+    {
+      "kind": "actual_multiprocessing_spawn_default_flags",
+      "pid": 33392,
+      "console_handle": 0
+    }
+  ],
+  "actual_CreateProcess_calls": [
+    {
+      "pid": 12052,
+      "original_creationflags": 0,
+      "effective_creationflags": 134217728,
+      "CREATE_NO_WINDOW": true,
+      "SW_HIDE": true
+    },
+    {
+      "pid": 33392,
+      "original_creationflags": 0,
+      "effective_creationflags": 134217728,
+      "CREATE_NO_WINDOW": true,
+      "SW_HIDE": true
+    }
+  ],
+  "original_CreateProcess_restored": true,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\probe_hidden_windows_child_creation_20261006.py": "569dca221538bc9915368c43a666072db8bab19fcac4397ddffd0dd2e400204d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\hidden_windows_child_creation_20261006.py": "d1759714a3486fc93c2a727a0b78c12ed27e16409d6badbd5246ab31244eb0af"
+  },
+  "new_model_fits": 0,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
