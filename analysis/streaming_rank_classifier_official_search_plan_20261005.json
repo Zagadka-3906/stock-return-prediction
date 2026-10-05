@@ -1,0 +1,112 @@
+{
+  "status": "complete_official_sources_prepared_before_generator_and_route_controls",
+  "original_prospective_plan_sha256": "0e62c0907ba33967d625632ce5f4c932e89a55a83ecbc87805bffad983ec5f9a",
+  "model_configurations": {
+    "rank_top10_sgd_l2e4_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "top10",
+      "alpha": 0.0001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    },
+    "rank_top10_sgd_l2e3_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "top10",
+      "alpha": 0.001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    },
+    "rank_decile_sgd_l2e4_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "decile",
+      "alpha": 0.0001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    },
+    "rank_decile_sgd_l2e3_e32": {
+      "kind": "streaming_rank_classifier",
+      "target": "y_rank",
+      "rank_objective": "decile",
+      "alpha": 0.001,
+      "epochs": 32,
+      "chunk_rows": 65536,
+      "clip_z": 8.0,
+      "learning_rate": "invscaling",
+      "eta0": 0.01,
+      "power_t": 0.25,
+      "average": true,
+      "shuffle": false,
+      "seed": 20261005,
+      "n_jobs": 1
+    }
+  },
+  "actual_complete_previous_round_required": {
+    "79": 78,
+    "80": 79
+  },
+  "expected_annual_fits": 20,
+  "expected_final_mature_fits": 4,
+  "expected_total_records": {
+    "79": 100,
+    "80": 98
+  },
+  "wave_arm_counts": {
+    "79": [
+      49,
+      8,
+      18,
+      25
+    ],
+    "80": [
+      25,
+      56,
+      17
+    ]
+  },
+  "waves": {
+    "79": [
+      318,
+      319,
+      320,
+      321
+    ],
+    "80": [
+      322,
+      323,
+      324
+    ]
+  },
+  "classification_scores_mapped_to_one_day_returns_using_mature_past_only": true,
+  "same5635800_rows1212_continuous_days_and_official_S_only": true,
+  "reused_validation_years_selection_bias_uncorrected": true,
+  "test_labels_read": false,
+  "new_quality_scores": 0,
+  "global_resource_exhaustion_established": false
+}

@@ -1,6 +1,6 @@
 {
   "status": "search_and_resource_boundaries_not_yet_established",
-  "updated_at_local": "2026-10-05T20:57:21",
+  "updated_at_local": "2026-10-05T21:28:02",
   "selection_standard": "后续选模标准.md",
   "completed_best": 0.4510081068915626,
   "latest_completed_round": 66,
@@ -368,11 +368,11 @@
   ],
   "current_machine_snapshot": {
     "total_ram_GiB": 31.183837890625,
-    "available_ram_GiB": 9.787940979003906,
+    "available_ram_GiB": 7.861797332763672,
     "cpu_physical_cores": 16,
     "cpu_logical_cores": 32,
     "workspace_volume_total_GiB": 451.99999618530273,
-    "workspace_volume_free_GiB": 40.8333625793457,
+    "workspace_volume_free_GiB": 40.759159088134766,
     "snapshot_is_observation_not_a_limit_or_completed_capacity_test": true
   },
   "active_round": 67,
@@ -388,7 +388,9 @@
     73,
     74,
     77,
-    78
+    78,
+    79,
+    80
   ],
   "measured_official_scoring_capacity": [
     {
@@ -1774,7 +1776,9 @@
         75,
         76,
         77,
-        78
+        78,
+        79,
+        80
       ],
       "actual_completed_official_rounds": [
         48,
@@ -1809,7 +1813,9 @@
         75,
         76,
         77,
-        78
+        78,
+        79,
+        80
       ],
       "actual_complete_round_evidence": [
         {
@@ -2064,204 +2070,7 @@
           }
         }
       ],
-      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]."
-    },
-    {
-      "method": "Matched16384 width actual complete32epoch training and final-output evaluation",
-      "required_official_rounds": [
-        67,
-        68
-      ],
-      "remaining_required_official_rounds": [
-        67,
-        68
-      ],
-      "actual_completed_official_rounds": [],
-      "scored_records_prespecified": {
-        "67": 64,
-        "68": 38
-      },
-      "expected_annual_fits": 5,
-      "expected_final_fits": 1,
-      "actual_annual_fits": 1,
-      "actual_fulltraining_artifacts": 0,
-      "actual_annual_execution_status": "pending",
-      "actual_native_future_status": "pending",
-      "matched_instrumentation_preflight": "analysis\\neural16384_full_preflight_20261005\\verification.json",
-      "preflight_sha256": "5f6f3b2c25db39285e9e4415d740aa0d7e165f7c486a73133d30037e72a831fe",
-      "generator_proof_sha256": "64dded62ed87709ecb71498ffe51a58c36c1ddbcd77be7c5a657afcf7371acbc",
-      "no_one_step_substitution_for_complete_fits": true,
-      "physical_gpu_total_bytes": 12792037376,
-      "allocator_reserved_is_not_resident_physical_VRAM": true,
-      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\training_execution_scope.json",
-      "RAM_reserve_is_scheduling_policy": true,
-      "finite_matched_width_scope_not_global_resource_or_method_exhaustion": true,
-      "test_labels_read": false
-    },
-    {
-      "method": "Matched constant andregularized linear LightGBM leaves;30 annual300round fits andcomplete output evaluation",
-      "required_official_rounds": [
-        69,
-        70
-      ],
-      "remaining_required_official_rounds": [
-        69,
-        70
-      ],
-      "actual_completed_official_rounds": [],
-      "scored_records_prespecified": {
-        "69": 124,
-        "70": 138
-      },
-      "expected_annual_fits": 30,
-      "expected_final_fits": 6,
-      "actual_annual_fits": 30,
-      "actual_fulltraining_artifacts": 6,
-      "actual_annual_execution_status": "passed",
-      "actual_native_future_status": "passed",
-      "matched_instrumentation_preflight": "analysis\\linear_leaf_preflight_20261005\\verification.json",
-      "preflight_sha256": "1fb9e33af8c956348ee5f80ec21e093f474877a63af4ac7a8e8f6ee98d29ea47",
-      "generator_proof_sha256": "673c5e21d8c4b2232a553144a83f72b06f2ee7ec82b3a5f8df7352d0366f2e83",
-      "no48_round_pilot_substitution_for_complete300round_fits": true,
-      "native_training_device": "cpu",
-      "GPU_capacity_not_relevant_to_this_native_family": true,
-      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\training_execution_scope.json",
-      "RAM_reserve_is_scheduling_policy": true,
-      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
-      "test_labels_read": false
-    },
-    {
-      "method": "Fixed raw-score averages of mature same-target trees;40 virtual annual artifacts andcomplete official outputs",
-      "required_official_rounds": [
-        71,
-        72
-      ],
-      "remaining_required_official_rounds": [
-        71,
-        72
-      ],
-      "actual_completed_official_rounds": [],
-      "scored_records_prespecified": {
-        "71": 148,
-        "72": 178
-      },
-      "expected_virtual_annual_outputs": 40,
-      "expected_new_annual_fits": 0,
-      "expected_virtual_final_bundles": 8,
-      "expected_new_final_fits": 0,
-      "actual_new_annual_fits": 0,
-      "actual_virtual_annual_outputs": 40,
-      "actual_virtual_final_bundles": 8,
-      "actual_new_final_fits": 0,
-      "actual_annual_execution_status": "passed",
-      "actual_native_future_status": "passed",
-      "matched_instrumentation_preflight": "analysis\\linear_leaf_ensemble_future_codec_preflight_20261005\\verification.json",
-      "preflight_sha256": "f45ad2eba4ad250823bec47690aaab6042abc43bb5b454e3289272ff376f9013",
-      "generator_proof_sha256": "6adf1f5dfe34893c8020bc3f4fbda99773fbd038d57ee54febb214098601f83a",
-      "virtual_artifacts_do_not_double_count_real_parent_fits": true,
-      "native_training_device": "cpu",
-      "GPU_capacity_not_relevant_to_this_native_family": true,
-      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\construction_execution_scope.json",
-      "RAM_reserve_is_scheduling_policy": true,
-      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
-      "test_labels_read": false
-    },
-    {
-      "method": "First order andlow rank raw63 FM interactions;30 annual32epoch CPU fits andcomplete output evaluation",
-      "required_official_rounds": [
-        73,
-        74
-      ],
-      "remaining_required_official_rounds": [
-        73,
-        74
-      ],
-      "actual_completed_official_rounds": [],
-      "scored_records_prespecified": {
-        "73": 124,
-        "74": 138
-      },
-      "expected_annual_fits": 30,
-      "expected_final_fits": 6,
-      "actual_annual_fits": 30,
-      "actual_fulltraining_artifacts": 6,
-      "actual_annual_execution_status": "passed",
-      "actual_native_future_status": "passed",
-      "matched_instrumentation_preflight": "analysis\\factorization_machine_preflight_20261005\\verification.json",
-      "preflight_sha256": "83e9b31a9b08478b549422750cd69999b53d881d03b36ac25a2afe7535b08be0",
-      "generator_proof_sha256": "156d31e78617bc846cba04cb295457db0ef3c9d586178d0144fa991fa6921169",
-      "no4_epoch_pilot_substitution_for_complete32epoch_fits": true,
-      "native_training_device": "cpu",
-      "GPU_capacity_not_relevant_to_this_native_family": true,
-      "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\training_execution_scope.json",
-      "RAM_reserve_is_scheduling_policy": true,
-      "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
-      "test_labels_read": false
-    },
-    {
-      "method": "Matched GOSS gradient sampling rates on original63 features",
-      "required_official_rounds": [
-        75,
-        76
-      ],
-      "actual_completed_official_rounds": [],
-      "remaining_required_official_rounds": [
-        75,
-        76
-      ],
-      "scored_records_prespecified": {
-        "75": 124,
-        "76": 138
-      },
-      "expected_annual_fits": 30,
-      "expected_final_fits": 6,
-      "actual_annual_fits": 0,
-      "actual_fulltraining_artifacts": 0,
-      "actual_annual_execution_status": "pending",
-      "actual_native_future_status": "pending",
-      "actual_pilot_controls": "analysis/gradient_sampling_preflight_20261005/verification.json",
-      "actual_direct6_pilot_and30_inherited_codec_controls": "analysis/gradient_sampling_direct_router_preflight_20261005/verification.json",
-      "actual_generator_controls": "analysis/gradient_sampling_search_generator_preflight_20261005/verification.json",
-      "48round_pilots_not_substituted_for300round_full_fits": true,
-      "same_training_matrices_targets_keys_and_parameters_except_sampling_required": true,
-      "native_training_device": "cpu",
-      "RAM_reserve_is_scheduling_policy": true,
-      "finite_grid_not_global_method_or_resource_exhaustion": true,
-      "test_labels_read": false
-    },
-    {
-      "method": "Matched16384 memory-efficient MLP execution",
-      "required_official_rounds": [
-        77,
-        78
-      ],
-      "actual_completed_official_rounds": [],
-      "remaining_required_official_rounds": [
-        77,
-        78
-      ],
-      "scored_records_prespecified": {
-        "77": 88,
-        "78": 78
-      },
-      "expected_annual_fits": 15,
-      "expected_final_fits": 3,
-      "actual_annual_fits": 0,
-      "actual_fulltraining_artifacts": 0,
-      "actual_annual_execution_status": "pending",
-      "actual_native_future_status": "pending",
-      "actual_GPU_control_status": "waiting_for_original_GPU_attempt_closure",
-      "actual_CPU_control_proof": "analysis/memory_efficient_mlp_preflight_20261005/verification.json",
-      "actual40_direct_and_inherited_codec_proof": "analysis/memory_efficient_neural_direct_router_preflight_20261005/verification.json",
-      "actual_generator_controls": "analysis/memory_efficient_neural_search_generator_preflight_20261005/verification.json",
-      "actual_pipeline_and_native_waiters": "analysis/memory_efficient_neural_followups_20261005/verification.json",
-      "original_width32epochs_effective32768batch_and_AdamW_step_count_retained": true,
-      "prototype_and_single_step_fits_not_counted_as_complete_annual_fits": true,
-      "microbatch_roundoff_requires_actual_independent_official_quality": true,
-      "native_bank_and_scratch_drive": "E:",
-      "RAM_disk_reserves_are_scheduling_policy": true,
-      "finite_grid_not_global_method_or_physical_resource_exhaustion": true,
-      "test_labels_read": false
+      "current_required_work": "Actual complete official output, candidate andexecution evidence remains required for rounds[67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80]."
     }
   ],
   "wider_neural_complete_training_pending_evidence": "analysis/neural_width_training_run_20261004.json",
@@ -2778,46 +2587,6 @@
         }
       },
       "finite_scope_only": true
-    },
-    {
-      "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
-      "rounds": [
-        65,
-        66
-      ],
-      "evidence": {
-        "65": {
-          "round": 65,
-          "status": "complete_declared_round",
-          "score": 0.4510081068915626,
-          "scored_records": 172,
-          "candidate_csv_sha256": "4b4ae4ad2e44db5a467e07ad8414477b828e5192939c6fc7e36de3fc88101fa9",
-          "source_sha256": {
-            "results\\optimization_20261003_r65.json": "fbd1c63b167db0ae046f8e0997850f7ad81f9980cbf9532408a2e73304af5fa1",
-            "candidates\\optimization_20261003_r65\\verification.json": "4314c0a78f711f50ef5b61675e1ec3ac020fe8ed31539045e3113d6e71c9bd0f",
-            "analysis\\optimization_20261003_r65\\calibrated_csv_official.json": "64169b0f7671719d8ea47ddf8ba522458ad992db9746fd1aa0962a5cb04b587a",
-            "analysis\\optimization_20261003_r65\\provenance_scope_execution.json": "c706bb85e20ebcf31b845195472dd00998828faf4badf54093497dd3b82c6381"
-          }
-        },
-        "66": {
-          "round": 66,
-          "status": "complete_declared_round",
-          "score": 0.4510081068915626,
-          "scored_records": 218,
-          "candidate_csv_sha256": "4b4ae4ad2e44db5a467e07ad8414477b828e5192939c6fc7e36de3fc88101fa9",
-          "actual_recovery_scope_required": true,
-          "source_sha256": {
-            "results\\optimization_20261003_r66.json": "668a765673f280321d21b241dc4d65d3c9eb97d411d214e6caa47a5d4a722a94",
-            "analysis\\optimization_20261003_r66\\provenance_scope_execution_recovery_v3_20261005.json": "c630bf797830a823e1420ab3f60300af97381fcf861a624bbd8079e501b19f60",
-            "analysis\\optimization_20261003_r66\\recovery_frozen_execution_v3_20261005.json": "c8cd2852147382bc9ed2d555d3a0ea4f6102224aa710b9667c651e7eefd3a5e5",
-            "analysis\\optimization_20261003_r66\\provenance_scope_execution.json": "ae35166bf4c7ebf8ecf4a2ca297d43aed94ad7e5d41429e4907acafa8cfdacaf",
-            "analysis\\optimization_20261003_r66\\protocol.json": "7fe7f15669dbba85f851b2c303192a1dd8a33a822833db40d0be7a9514d36c05",
-            "candidates\\optimization_20261003_r66\\verification.json": "06e3293fefe0451a7063eb3bd2982175a17b432b940f39be749288520541beb8",
-            "analysis\\optimization_20261003_r66\\calibrated_csv_official.json": "64169b0f7671719d8ea47ddf8ba522458ad992db9746fd1aa0962a5cb04b587a"
-          }
-        }
-      },
-      "finite_scope_only": true
     }
   ],
   "actual_scientific_scope_completion_excludes_published_before_scoped_execution_closes": true,
@@ -2875,8 +2644,8 @@
     "quality_and_fullfuture_evidence_pending": false,
     "prepared_plan_is_not_actual_quality_or_candidate_evidence": true
   },
-  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v12_20261005.py",
-  "additional_boundary_refresh_source_sha256": "23032ea6407e79cd2ed674546ded33934780604622431718d309336e74e01ec6",
+  "additional_boundary_refresh_source": "analysis\\refresh_optimization_boundary_evidence_v2_20261005.py",
+  "additional_boundary_refresh_source_sha256": "d5cb59428cf3fa730b2015dab44a1ca8b666b893b11f6ba7fadbbd6ddc918d03",
   "agreement_gate_coverage_evidence": {
     "method": "Same-day model agreement and diversity gated effective layer weights",
     "required_official_rounds": [
@@ -2898,231 +2667,6 @@
     "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
     "quality_and_fullfuture_evidence_pending": false,
     "new_model_fits": 0,
-    "test_labels_read": false
-  },
-  "nystrom_tuning_coverage_evidence": {
-    "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
-    "required_official_rounds": [
-      65,
-      66
-    ],
-    "actual_completed_official_rounds": [
-      65,
-      66
-    ],
-    "remaining_required_official_rounds": [],
-    "declared_configurations": 10,
-    "expected_annual_fits": 50,
-    "expected_fulltraining_artifacts": 10,
-    "actual_annual_fits": 50,
-    "actual_fulltraining_artifacts": 10,
-    "bank_protocol": "D:\\3.Study\\数据分析\\赛题五\\analysis\\nystrom_tuning_bank_20261005\\protocol.json",
-    "generator_proof": "analysis\\nystrom_tuning_search_generator_preflight_v2_20261005\\verification.json",
-    "generator_proof_sha256": "03c5019fa73dcbac3c9cdb6a80b288e19bd7caab86919ff082c631e9ad0d1cc0",
-    "native_future_status": "passed",
-    "scored_records_prespecified": {
-      "65": 172,
-      "66": 218
-    },
-    "broader_kernel_seeds_capacities_and_full16384_neural_fits_remain_uncovered": true,
-    "finite_grid_only_not_global_method_exhaustion": true,
-    "test_labels_read": false
-  },
-  "full16384_coverage_evidence": {
-    "method": "Matched16384 width actual complete32epoch training and final-output evaluation",
-    "required_official_rounds": [
-      67,
-      68
-    ],
-    "remaining_required_official_rounds": [
-      67,
-      68
-    ],
-    "actual_completed_official_rounds": [],
-    "scored_records_prespecified": {
-      "67": 64,
-      "68": 38
-    },
-    "expected_annual_fits": 5,
-    "expected_final_fits": 1,
-    "actual_annual_fits": 1,
-    "actual_fulltraining_artifacts": 0,
-    "actual_annual_execution_status": "pending",
-    "actual_native_future_status": "pending",
-    "matched_instrumentation_preflight": "analysis\\neural16384_full_preflight_20261005\\verification.json",
-    "preflight_sha256": "5f6f3b2c25db39285e9e4415d740aa0d7e165f7c486a73133d30037e72a831fe",
-    "generator_proof_sha256": "64dded62ed87709ecb71498ffe51a58c36c1ddbcd77be7c5a657afcf7371acbc",
-    "no_one_step_substitution_for_complete_fits": true,
-    "physical_gpu_total_bytes": 12792037376,
-    "allocator_reserved_is_not_resident_physical_VRAM": true,
-    "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\training_execution_scope.json",
-    "RAM_reserve_is_scheduling_policy": true,
-    "finite_matched_width_scope_not_global_resource_or_method_exhaustion": true,
-    "test_labels_read": false
-  },
-  "linear_leaf_coverage_evidence": {
-    "method": "Matched constant andregularized linear LightGBM leaves;30 annual300round fits andcomplete output evaluation",
-    "required_official_rounds": [
-      69,
-      70
-    ],
-    "remaining_required_official_rounds": [
-      69,
-      70
-    ],
-    "actual_completed_official_rounds": [],
-    "scored_records_prespecified": {
-      "69": 124,
-      "70": 138
-    },
-    "expected_annual_fits": 30,
-    "expected_final_fits": 6,
-    "actual_annual_fits": 30,
-    "actual_fulltraining_artifacts": 6,
-    "actual_annual_execution_status": "passed",
-    "actual_native_future_status": "passed",
-    "matched_instrumentation_preflight": "analysis\\linear_leaf_preflight_20261005\\verification.json",
-    "preflight_sha256": "1fb9e33af8c956348ee5f80ec21e093f474877a63af4ac7a8e8f6ee98d29ea47",
-    "generator_proof_sha256": "673c5e21d8c4b2232a553144a83f72b06f2ee7ec82b3a5f8df7352d0366f2e83",
-    "no48_round_pilot_substitution_for_complete300round_fits": true,
-    "native_training_device": "cpu",
-    "GPU_capacity_not_relevant_to_this_native_family": true,
-    "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_bank_20261005\\training_execution_scope.json",
-    "RAM_reserve_is_scheduling_policy": true,
-    "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
-    "test_labels_read": false
-  },
-  "linear_leaf_ensemble_coverage_evidence": {
-    "method": "Fixed raw-score averages of mature same-target trees;40 virtual annual artifacts andcomplete official outputs",
-    "required_official_rounds": [
-      71,
-      72
-    ],
-    "remaining_required_official_rounds": [
-      71,
-      72
-    ],
-    "actual_completed_official_rounds": [],
-    "scored_records_prespecified": {
-      "71": 148,
-      "72": 178
-    },
-    "expected_virtual_annual_outputs": 40,
-    "expected_new_annual_fits": 0,
-    "expected_virtual_final_bundles": 8,
-    "expected_new_final_fits": 0,
-    "actual_new_annual_fits": 0,
-    "actual_virtual_annual_outputs": 40,
-    "actual_virtual_final_bundles": 8,
-    "actual_new_final_fits": 0,
-    "actual_annual_execution_status": "passed",
-    "actual_native_future_status": "passed",
-    "matched_instrumentation_preflight": "analysis\\linear_leaf_ensemble_future_codec_preflight_20261005\\verification.json",
-    "preflight_sha256": "f45ad2eba4ad250823bec47690aaab6042abc43bb5b454e3289272ff376f9013",
-    "generator_proof_sha256": "6adf1f5dfe34893c8020bc3f4fbda99773fbd038d57ee54febb214098601f83a",
-    "virtual_artifacts_do_not_double_count_real_parent_fits": true,
-    "native_training_device": "cpu",
-    "GPU_capacity_not_relevant_to_this_native_family": true,
-    "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\linear_leaf_ensemble_bank_20261005\\construction_execution_scope.json",
-    "RAM_reserve_is_scheduling_policy": true,
-    "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
-    "test_labels_read": false
-  },
-  "factorization_machine_coverage_evidence": {
-    "method": "First order andlow rank raw63 FM interactions;30 annual32epoch CPU fits andcomplete output evaluation",
-    "required_official_rounds": [
-      73,
-      74
-    ],
-    "remaining_required_official_rounds": [
-      73,
-      74
-    ],
-    "actual_completed_official_rounds": [],
-    "scored_records_prespecified": {
-      "73": 124,
-      "74": 138
-    },
-    "expected_annual_fits": 30,
-    "expected_final_fits": 6,
-    "actual_annual_fits": 30,
-    "actual_fulltraining_artifacts": 6,
-    "actual_annual_execution_status": "passed",
-    "actual_native_future_status": "passed",
-    "matched_instrumentation_preflight": "analysis\\factorization_machine_preflight_20261005\\verification.json",
-    "preflight_sha256": "83e9b31a9b08478b549422750cd69999b53d881d03b36ac25a2afe7535b08be0",
-    "generator_proof_sha256": "156d31e78617bc846cba04cb295457db0ef3c9d586178d0144fa991fa6921169",
-    "no4_epoch_pilot_substitution_for_complete32epoch_fits": true,
-    "native_training_device": "cpu",
-    "GPU_capacity_not_relevant_to_this_native_family": true,
-    "training_resource_summary": "D:\\3.Study\\数据分析\\赛题五\\analysis\\factorization_machine_bank_20261005\\training_execution_scope.json",
-    "RAM_reserve_is_scheduling_policy": true,
-    "finite_matched_leaf_scope_not_global_resource_or_method_exhaustion": true,
-    "test_labels_read": false
-  },
-  "gradient_sampling_coverage_evidence": {
-    "method": "Matched GOSS gradient sampling rates on original63 features",
-    "required_official_rounds": [
-      75,
-      76
-    ],
-    "actual_completed_official_rounds": [],
-    "remaining_required_official_rounds": [
-      75,
-      76
-    ],
-    "scored_records_prespecified": {
-      "75": 124,
-      "76": 138
-    },
-    "expected_annual_fits": 30,
-    "expected_final_fits": 6,
-    "actual_annual_fits": 0,
-    "actual_fulltraining_artifacts": 0,
-    "actual_annual_execution_status": "pending",
-    "actual_native_future_status": "pending",
-    "actual_pilot_controls": "analysis/gradient_sampling_preflight_20261005/verification.json",
-    "actual_direct6_pilot_and30_inherited_codec_controls": "analysis/gradient_sampling_direct_router_preflight_20261005/verification.json",
-    "actual_generator_controls": "analysis/gradient_sampling_search_generator_preflight_20261005/verification.json",
-    "48round_pilots_not_substituted_for300round_full_fits": true,
-    "same_training_matrices_targets_keys_and_parameters_except_sampling_required": true,
-    "native_training_device": "cpu",
-    "RAM_reserve_is_scheduling_policy": true,
-    "finite_grid_not_global_method_or_resource_exhaustion": true,
-    "test_labels_read": false
-  },
-  "memory_efficient_neural_coverage_evidence": {
-    "method": "Matched16384 memory-efficient MLP execution",
-    "required_official_rounds": [
-      77,
-      78
-    ],
-    "actual_completed_official_rounds": [],
-    "remaining_required_official_rounds": [
-      77,
-      78
-    ],
-    "scored_records_prespecified": {
-      "77": 88,
-      "78": 78
-    },
-    "expected_annual_fits": 15,
-    "expected_final_fits": 3,
-    "actual_annual_fits": 0,
-    "actual_fulltraining_artifacts": 0,
-    "actual_annual_execution_status": "pending",
-    "actual_native_future_status": "pending",
-    "actual_GPU_control_status": "waiting_for_original_GPU_attempt_closure",
-    "actual_CPU_control_proof": "analysis/memory_efficient_mlp_preflight_20261005/verification.json",
-    "actual40_direct_and_inherited_codec_proof": "analysis/memory_efficient_neural_direct_router_preflight_20261005/verification.json",
-    "actual_generator_controls": "analysis/memory_efficient_neural_search_generator_preflight_20261005/verification.json",
-    "actual_pipeline_and_native_waiters": "analysis/memory_efficient_neural_followups_20261005/verification.json",
-    "original_width32epochs_effective32768batch_and_AdamW_step_count_retained": true,
-    "prototype_and_single_step_fits_not_counted_as_complete_annual_fits": true,
-    "microbatch_roundoff_requires_actual_independent_official_quality": true,
-    "native_bank_and_scratch_drive": "E:",
-    "RAM_disk_reserves_are_scheduling_policy": true,
-    "finite_grid_not_global_method_or_physical_resource_exhaustion": true,
     "test_labels_read": false
   }
 }

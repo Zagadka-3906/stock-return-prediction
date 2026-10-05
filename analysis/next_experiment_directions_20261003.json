@@ -3,8 +3,8 @@
   "continuous_goal_active": true,
   "last_completed_round": 66,
   "validation_best_completed": 0.4510081068915626,
-  "new_backbone_configurations_trained": 133,
-  "new_annual_oof_fits_completed": 698,
+  "new_backbone_configurations_trained": 134,
+  "new_annual_oof_fits_completed": 705,
   "test_labels_read": false,
   "directions": [
     {
@@ -934,73 +934,6 @@
       "status": "Rounds[61, 62] completed:198 continuous official records; selected complete candidates andcausal/ranking QA passed. Only the declared search scopes are closed."
     },
     {
-      "priority": 28,
-      "method": "Joint reoptimization of the latest complete graph after later accepted model additions",
-      "required_official_rounds": [
-        63
-      ],
-      "actual_completed_official_rounds": [
-        63
-      ],
-      "remaining_required_official_rounds": [],
-      "plan": "analysis\\latest_graph_joint_search_plan_20261005.json",
-      "plan_sha256": "454e1b6f1a00d7ef24576a31e226b4b347c8ed9a8fed75e07e91c459efeb45b5",
-      "coverage_audit": "analysis\\latest_graph_joint_axes_scope_audit_20261005\\verification.json",
-      "coverage_audit_sha256": "677f234149e4985f5acf67d5e8e4b1368592974cef828f1d7f163d79a0fc13ef",
-      "current_reference_active_axes": 13,
-      "later_axes_missing_from_original_r50_joint_search": [
-        {
-          "round": 53,
-          "group": "no_dropout_seed_augmentation",
-          "role": "rest",
-          "model": "rank512_drop000_seed18_e64",
-          "anchor": 0.037500000000000006
-        },
-        {
-          "round": 55,
-          "group": "neural_interaction_augmentation",
-          "role": "rest",
-          "model": "rank512_drop000_lr0005_e64",
-          "anchor": 0.037500000000000006
-        }
-      ],
-      "conditional_reference_scored_records": 260,
-      "actual_axes_and_arm_count_must_be_refrozen_after_r62": true,
-      "reason": "The original joint grid predates two accepted later branches; its cached axes also retain an inactive old branch. Actual current effective parameters must be jointly reevaluated.",
-      "quality_and_fullfuture_evidence_pending": false,
-      "prepared_plan_is_not_actual_quality_or_candidate_evidence": true,
-      "status": "completed_declared_joint_search",
-      "new_model_fits": 0,
-      "new_quality_scores": 260,
-      "test_labels_read": false
-    },
-    {
-      "priority": 29,
-      "method": "Same-day model agreement and diversity gated effective layer weights",
-      "required_official_rounds": [
-        64
-      ],
-      "actual_completed_official_rounds": [
-        64
-      ],
-      "remaining_required_official_rounds": [],
-      "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
-      "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
-      "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
-      "source_preflight_sha256": "bfd9ca15a9a704841032a9e9fd6a4129074320f64fde09acd87e14593b40107f",
-      "actual_nonzero_mature_oof_primitive_cases": 180,
-      "actual_zero_strength_weight_cases": 20,
-      "conditional_reference_gate_axes": 5,
-      "conditional_reference_scored_records": 129,
-      "actual_r63_axes_and_count_refreeze_required": true,
-      "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
-      "quality_and_fullfuture_evidence_pending": false,
-      "new_model_fits": 0,
-      "test_labels_read": false,
-      "status": "completed_declared_gate_search",
-      "new_quality_scores": 104
-    },
-    {
       "priority": 30,
       "method": "Matched Nyström capacity, lengthscale and ridge penalty contrasts",
       "required_official_rounds": [
@@ -1204,6 +1137,42 @@
       "status": "actual_native_fits_and_complete_quality_pending"
     },
     {
+      "priority": 36,
+      "method": "Matched16384 memory-efficient MLP execution",
+      "required_official_rounds": [
+        77,
+        78
+      ],
+      "actual_completed_official_rounds": [],
+      "remaining_required_official_rounds": [
+        77,
+        78
+      ],
+      "scored_records_prespecified": {
+        "77": 88,
+        "78": 78
+      },
+      "expected_annual_fits": 15,
+      "expected_final_fits": 3,
+      "actual_annual_fits": 0,
+      "actual_fulltraining_artifacts": 0,
+      "actual_annual_execution_status": "pending",
+      "actual_native_future_status": "pending",
+      "actual_GPU_control_status": "waiting_for_original_GPU_attempt_closure",
+      "actual_CPU_control_proof": "analysis/memory_efficient_mlp_preflight_20261005/verification.json",
+      "actual40_direct_and_inherited_codec_proof": "analysis/memory_efficient_neural_direct_router_preflight_20261005/verification.json",
+      "actual_generator_controls": "analysis/memory_efficient_neural_search_generator_preflight_20261005/verification.json",
+      "actual_pipeline_and_native_waiters": "analysis/memory_efficient_neural_followups_20261005/verification.json",
+      "original_width32epochs_effective32768batch_and_AdamW_step_count_retained": true,
+      "prototype_and_single_step_fits_not_counted_as_complete_annual_fits": true,
+      "microbatch_roundoff_requires_actual_independent_official_quality": true,
+      "native_bank_and_scratch_drive": "E:",
+      "RAM_disk_reserves_are_scheduling_policy": true,
+      "finite_grid_not_global_method_or_physical_resource_exhaustion": true,
+      "test_labels_read": false,
+      "status": "actual_full_native_fits_and_complete_official_quality_pending"
+    },
+    {
       "priority": 12,
       "method": "55-parent mature past-OOF ridge with paired first-year cold-start policies",
       "reason": "The original45-parent learned bank excludes the newly trained neural/CatBoost variants and fixes2020 to a raw-feature ridge. Test expanded55-member inputs and a prespecified equal-weight first-year rank ensemble under the same complete five-year score.",
@@ -1245,45 +1214,111 @@
       "validation_gain": 0.0
     },
     {
-      "priority": 36,
-      "method": "Matched16384 memory-efficient MLP execution",
+      "priority": 37,
+      "method": "Mature supplied-rank binary/decile streamed native classification",
       "required_official_rounds": [
-        77,
-        78
+        79,
+        80
       ],
       "actual_completed_official_rounds": [],
       "remaining_required_official_rounds": [
-        77,
-        78
+        79,
+        80
       ],
       "scored_records_prespecified": {
-        "77": 88,
-        "78": 78
+        "79": 100,
+        "80": 98
       },
-      "expected_annual_fits": 15,
-      "expected_final_fits": 3,
-      "actual_annual_fits": 0,
+      "expected_annual_fits": 20,
+      "expected_final_fits": 4,
+      "actual_annual_fits": 7,
       "actual_fulltraining_artifacts": 0,
-      "actual_annual_execution_status": "pending",
-      "actual_native_future_status": "pending",
-      "actual_GPU_control_status": "waiting_for_original_GPU_attempt_closure",
-      "actual_CPU_control_proof": "analysis/memory_efficient_mlp_preflight_20261005/verification.json",
-      "actual40_direct_and_inherited_codec_proof": "analysis/memory_efficient_neural_direct_router_preflight_20261005/verification.json",
-      "actual_generator_controls": "analysis/memory_efficient_neural_search_generator_preflight_20261005/verification.json",
-      "actual_pipeline_and_native_waiters": "analysis/memory_efficient_neural_followups_20261005/verification.json",
-      "original_width32epochs_effective32768batch_and_AdamW_step_count_retained": true,
-      "prototype_and_single_step_fits_not_counted_as_complete_annual_fits": true,
-      "microbatch_roundoff_requires_actual_independent_official_quality": true,
-      "native_bank_and_scratch_drive": "E:",
-      "RAM_disk_reserves_are_scheduling_policy": true,
-      "finite_grid_not_global_method_or_physical_resource_exhaustion": true,
+      "actual_native_execution_status": "pending",
+      "actual_future_status": "pending",
+      "actual_full1694259_readonly_key_regression_and16_small32pass_controls": "analysis/streaming_rank_classification_preflight_v3_20261005/verification.json",
+      "actual44_native_and_inherited_routes": "analysis/streaming_rank_classifier_direct_router_preflight_20261005/verification.json",
+      "actual_generator_controls": "analysis/streaming_rank_classifier_search_generator_preflight_v4_20261005/verification.json",
+      "actual_driver_canonical_and_candidate_source_controls": "analysis/streaming_rank_classifier_execution_source_preflight_v4_20261005/verification.json",
+      "actual_quality_waiters": "analysis/streaming_rank_classifier_quality_followups_v4_20261005/verification.json",
+      "provided_rank_quantiles_fit_only_from_mature_past": true,
+      "all_eligible_rows_exactly32_native_passes": true,
+      "complete_output_official_score_mature_return_mapping_and_previous_qualification_required": true,
+      "failed_full32pass_attempt_and_pilot_fits_excluded": true,
+      "finite_grid_not_global_resource_exhaustion": true,
       "test_labels_read": false,
       "status": "actual_full_native_fits_and_complete_official_quality_pending"
+    },
+    {
+      "priority": 28,
+      "method": "Joint reoptimization of the latest complete graph after later accepted model additions",
+      "required_official_rounds": [
+        63
+      ],
+      "actual_completed_official_rounds": [
+        63
+      ],
+      "remaining_required_official_rounds": [],
+      "plan": "analysis\\latest_graph_joint_search_plan_20261005.json",
+      "plan_sha256": "454e1b6f1a00d7ef24576a31e226b4b347c8ed9a8fed75e07e91c459efeb45b5",
+      "coverage_audit": "analysis\\latest_graph_joint_axes_scope_audit_20261005\\verification.json",
+      "coverage_audit_sha256": "677f234149e4985f5acf67d5e8e4b1368592974cef828f1d7f163d79a0fc13ef",
+      "current_reference_active_axes": 13,
+      "later_axes_missing_from_original_r50_joint_search": [
+        {
+          "round": 53,
+          "group": "no_dropout_seed_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_seed18_e64",
+          "anchor": 0.037500000000000006
+        },
+        {
+          "round": 55,
+          "group": "neural_interaction_augmentation",
+          "role": "rest",
+          "model": "rank512_drop000_lr0005_e64",
+          "anchor": 0.037500000000000006
+        }
+      ],
+      "conditional_reference_scored_records": 260,
+      "actual_axes_and_arm_count_must_be_refrozen_after_r62": true,
+      "reason": "The original joint grid predates two accepted later branches; its cached axes also retain an inactive old branch. Actual current effective parameters must be jointly reevaluated.",
+      "quality_and_fullfuture_evidence_pending": false,
+      "prepared_plan_is_not_actual_quality_or_candidate_evidence": true,
+      "status": "completed_declared_joint_search",
+      "new_model_fits": 0,
+      "new_quality_scores": 260,
+      "test_labels_read": false
+    },
+    {
+      "priority": 29,
+      "method": "Same-day model agreement and diversity gated effective layer weights",
+      "required_official_rounds": [
+        64
+      ],
+      "actual_completed_official_rounds": [
+        64
+      ],
+      "remaining_required_official_rounds": [],
+      "preflight": "analysis\\agreement_gate_preflight_v2_20261005\\verification.json",
+      "preflight_sha256": "fb41c12b5503a2ef3c057b145be2e537cda9a56b8c9a7f210fedacc4459bba23",
+      "source_preflight": "analysis\\agreement_gate_round64_source_preflight_20261005\\verification.json",
+      "source_preflight_sha256": "bfd9ca15a9a704841032a9e9fd6a4129074320f64fde09acd87e14593b40107f",
+      "actual_nonzero_mature_oof_primitive_cases": 180,
+      "actual_zero_strength_weight_cases": 20,
+      "conditional_reference_gate_axes": 5,
+      "conditional_reference_scored_records": 129,
+      "actual_r63_axes_and_count_refreeze_required": true,
+      "reason": "Constant and market-regime weights were compared; stock-specific same-day model disagreement gates remain a distinct unscored complete-output direction.",
+      "quality_and_fullfuture_evidence_pending": false,
+      "new_model_fits": 0,
+      "test_labels_read": false,
+      "status": "completed_declared_gate_search",
+      "new_quality_scores": 104
     }
   ],
   "new_virtual_ensemble_configurations": 6,
   "new_virtual_ensemble_artifacts": 30,
-  "total_new_individual_and_virtual_configurations": 183,
+  "total_new_individual_and_virtual_configurations": 187,
   "prospective_official_input_parse_cache": {
     "status": "passed on full5635800-row actual calibrated CSV and both future scoring entry points",
     "all_eight_metrics_bit_identical": true,
@@ -1308,7 +1343,7 @@
     "parallel_seconds": 87.22404180000012,
     "declared_order_and_adaptive_barriers_preserved": true
   },
-  "native_child_annual_oof_fits_completed": 626,
+  "native_child_annual_oof_fits_completed": 633,
   "new_meta_annual_oof_fits_completed": 72,
   "new_learned_stacking_configurations": 6,
   "prospective_parallel_official_scoring_four": {
@@ -1368,15 +1403,17 @@
       75,
       76,
       77,
-      78
+      78,
+      79,
+      80
     ]
   },
-  "updated_at_local": "2026-10-05T20:57:20",
-  "fully_completed_five_year_configurations": 173,
+  "updated_at_local": "2026-10-05T21:27:21",
+  "fully_completed_five_year_configurations": 174,
   "planned_neural_tuning_configurations": 5,
   "global_resource_exhaustion_established": false,
   "planned_catboost_tuning_configurations": 5,
-  "new_backbone_configurations_fully_trained": 133,
+  "new_backbone_configurations_fully_trained": 134,
   "active_run_registry": "analysis/resumed_rounds_nystrom_locked_20261004.json",
   "future_inference_execution_recovery": "analysis/future_inference_recovery_sources_20261004.json",
   "active_validation_round": 67,
@@ -1411,5 +1448,8 @@
   "memory_efficient_direction_updated_at_local": "2026-10-05T12:47:01.897967",
   "memory_efficient_neural_declared_configurations": 3,
   "memory_efficient_neural_actual_annual_fits": 0,
-  "memory_efficient_neural_actual_fulltraining_artifacts": 0
+  "memory_efficient_neural_actual_fulltraining_artifacts": 0,
+  "streaming_rank_classifier_declared_configurations": 4,
+  "streaming_rank_classifier_actual_annual_fits": 7,
+  "streaming_rank_classifier_actual_fulltraining_artifacts": 0
 }

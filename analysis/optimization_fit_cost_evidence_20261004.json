@@ -1,10 +1,10 @@
 {
   "status": "observed_costs_with_validation_work_pending",
-  "generated_at_local": "2026-10-05T20:57:21",
-  "configurations": 183,
-  "native_child_annual_fits": 626,
+  "generated_at_local": "2026-10-05T21:27:23",
+  "configurations": 187,
+  "native_child_annual_fits": 633,
   "learned_meta_annual_fits": 72,
-  "total_actual_new_annual_fits": 698,
+  "total_actual_new_annual_fits": 705,
   "fixed_first_fold_meta_fallbacks": 30,
   "virtual_ensemble_annual_artifacts": 30,
   "families": {
@@ -72,6 +72,11 @@
       "configurations": 6,
       "new_annual_fits": 0,
       "fit_seconds_total": 0.0
+    },
+    "streaming_rank_classifier": {
+      "configurations": 4,
+      "new_annual_fits": 7,
+      "fit_seconds_total": 1299.3129999999946
     }
   },
   "models": [
@@ -11665,6 +11670,215 @@
       "annual_details": [],
       "fit_seconds_total": 0,
       "all_five_annual_outputs_complete": false
+    },
+    {
+      "model": "rank_top10_sgd_l2e4_e32",
+      "kind": "streaming_rank_classifier",
+      "method_family": "mature_rank_classification",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "streaming_rank_classifier",
+        "target": "y_rank",
+        "rank_objective": "top10",
+        "alpha": 0.0001,
+        "epochs": 32,
+        "chunk_rows": 65536,
+        "clip_z": 8.0,
+        "learning_rate": "invscaling",
+        "eta0": 0.01,
+        "power_t": 0.25,
+        "average": true,
+        "shuffle": false,
+        "seed": 20261005,
+        "n_jobs": 1
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005",
+      "pilot_fits_excluded_from_full_fit_count": true,
+      "annual_artifacts": 5,
+      "new_annual_fits": 5,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 1,
+          "actual_completed_epochs": 32,
+          "actual_native_sample_counter": 54216289.0,
+          "actual_parameter_count": 64,
+          "mature_training_rows": 1694259,
+          "fit_seconds": 121.96899999999732,
+          "artifact_elapsed_seconds": 132.36000000000058,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2020.json",
+          "model_sha256": "549f7ae295a6ea3213e8e0f0d5f0c634a4fc47a727dde2a24962f25394acdb1a",
+          "prediction_sha256": "e2b305dcf37b4a67dee86014f5cf219ffc2a1b8ef7d03d544902b1f229d791bc"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 1,
+          "actual_completed_epochs": 32,
+          "actual_native_sample_counter": 83009537.0,
+          "actual_parameter_count": 64,
+          "mature_training_rows": 2594048,
+          "fit_seconds": 155.90600000000268,
+          "artifact_elapsed_seconds": 166.32800000000134,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2021.json",
+          "model_sha256": "0d12e52ca5befd72fdd80f5573cc0ecf6154d61739ff5ae035aadd156a438714",
+          "prediction_sha256": "e6855e45fe11b10ce87d8ae4c796ed40032fb8ab3a579ceb98f52a3951f121ab"
+        },
+        {
+          "year": 2022,
+          "actual_new_fits": 1,
+          "actual_completed_epochs": 32,
+          "actual_native_sample_counter": 114204097.0,
+          "actual_parameter_count": 64,
+          "mature_training_rows": 3568878,
+          "fit_seconds": 196.82799999999406,
+          "artifact_elapsed_seconds": 207.81199999999808,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2022.json",
+          "model_sha256": "dae01f3eacc7de7abb07d820465e69ac03430dcb22f91911b89bc2eb9cacec72",
+          "prediction_sha256": "b558f933708fee678a3feee7a869093bcb5736d4bdccdfd15533d376cb053d2e"
+        },
+        {
+          "year": 2023,
+          "actual_new_fits": 1,
+          "actual_completed_epochs": 32,
+          "actual_native_sample_counter": 147129121.0,
+          "actual_parameter_count": 64,
+          "mature_training_rows": 4597785,
+          "fit_seconds": 242.92199999999866,
+          "artifact_elapsed_seconds": 256.81299999999464,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2023.json",
+          "model_sha256": "74edef947adb269683a1150d438754831e6443d92c156a47d125da1316cc66a6",
+          "prediction_sha256": "b1d2a5b486f436e0af101c775fdafeed6d2306fc02660ed847f0d357dbbf6eb9"
+        },
+        {
+          "year": 2024,
+          "actual_new_fits": 1,
+          "actual_completed_epochs": 32,
+          "actual_native_sample_counter": 181118529.0,
+          "actual_parameter_count": 64,
+          "mature_training_rows": 5659954,
+          "fit_seconds": 292.9380000000019,
+          "artifact_elapsed_seconds": 304.2190000000046,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2024.json",
+          "model_sha256": "8bd689fb939ad20b9d151a33d514265e1a485e3eb35867d2fe7819ef0436d441",
+          "prediction_sha256": "9c505ff780cba19beca041b1040dc99c81f8dd70b50480d8608f47a5f46c59ab"
+        }
+      ],
+      "fit_seconds_total": 1010.5629999999946,
+      "all_five_annual_outputs_complete": true
+    },
+    {
+      "model": "rank_top10_sgd_l2e3_e32",
+      "kind": "streaming_rank_classifier",
+      "method_family": "mature_rank_classification",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "streaming_rank_classifier",
+        "target": "y_rank",
+        "rank_objective": "top10",
+        "alpha": 0.001,
+        "epochs": 32,
+        "chunk_rows": 65536,
+        "clip_z": 8.0,
+        "learning_rate": "invscaling",
+        "eta0": 0.01,
+        "power_t": 0.25,
+        "average": true,
+        "shuffle": false,
+        "seed": 20261005,
+        "n_jobs": 1
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005",
+      "pilot_fits_excluded_from_full_fit_count": true,
+      "annual_artifacts": 2,
+      "new_annual_fits": 2,
+      "annual_details": [
+        {
+          "year": 2020,
+          "actual_new_fits": 1,
+          "actual_completed_epochs": 32,
+          "actual_native_sample_counter": 54216289.0,
+          "actual_parameter_count": 64,
+          "mature_training_rows": 1694259,
+          "fit_seconds": 119.14100000000326,
+          "artifact_elapsed_seconds": 130.31200000000536,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e3_e32\\info_2020.json",
+          "model_sha256": "3e7feeb1226c22da372dff079fecc0def199f98ef5fb65fbaf974e52d24be4d8",
+          "prediction_sha256": "d4b3588dddd44bebd22cdfb8a4b017f55eb3be90c25e2a4b1162570206e46e2f"
+        },
+        {
+          "year": 2021,
+          "actual_new_fits": 1,
+          "actual_completed_epochs": 32,
+          "actual_native_sample_counter": 83009537.0,
+          "actual_parameter_count": 64,
+          "mature_training_rows": 2594048,
+          "fit_seconds": 169.60899999999674,
+          "artifact_elapsed_seconds": 180.26499999999942,
+          "source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e3_e32\\info_2021.json",
+          "model_sha256": "229b97774c191bfe0339eb491fc2c1789a1d4c8a7d43676dbccadd646465af81",
+          "prediction_sha256": "68ce34b9464e20c88f17415a2a223afc751879adae7c0e3d855bad7c9d4d865f"
+        }
+      ],
+      "fit_seconds_total": 288.75,
+      "all_five_annual_outputs_complete": false
+    },
+    {
+      "model": "rank_decile_sgd_l2e4_e32",
+      "kind": "streaming_rank_classifier",
+      "method_family": "mature_rank_classification",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "streaming_rank_classifier",
+        "target": "y_rank",
+        "rank_objective": "decile",
+        "alpha": 0.0001,
+        "epochs": 32,
+        "chunk_rows": 65536,
+        "clip_z": 8.0,
+        "learning_rate": "invscaling",
+        "eta0": 0.01,
+        "power_t": 0.25,
+        "average": true,
+        "shuffle": false,
+        "seed": 20261005,
+        "n_jobs": 1
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005",
+      "pilot_fits_excluded_from_full_fit_count": true,
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false
+    },
+    {
+      "model": "rank_decile_sgd_l2e3_e32",
+      "kind": "streaming_rank_classifier",
+      "method_family": "mature_rank_classification",
+      "target": "y_rank",
+      "configuration": {
+        "kind": "streaming_rank_classifier",
+        "target": "y_rank",
+        "rank_objective": "decile",
+        "alpha": 0.001,
+        "epochs": 32,
+        "chunk_rows": 65536,
+        "clip_z": 8.0,
+        "learning_rate": "invscaling",
+        "eta0": 0.01,
+        "power_t": 0.25,
+        "average": true,
+        "shuffle": false,
+        "seed": 20261005,
+        "n_jobs": 1
+      },
+      "source_bank": "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005",
+      "pilot_fits_excluded_from_full_fit_count": true,
+      "annual_artifacts": 0,
+      "new_annual_fits": 0,
+      "annual_details": [],
+      "fit_seconds_total": 0,
+      "all_five_annual_outputs_complete": false
     }
   ],
   "resource_snapshots": [
@@ -11749,7 +11963,9 @@
     75,
     76,
     77,
-    78
+    78,
+    79,
+    80
   ],
   "official_parallel_capacity_controls": [
     {
@@ -12069,7 +12285,7 @@
   "neural_tuning_completed_annual_fits": 25,
   "neural_tuning_expected_annual_fits": 25,
   "neural_tuning_all_annual_controls_complete": true,
-  "fully_completed_five_year_configurations": 173,
+  "fully_completed_five_year_configurations": 174,
   "neural_tuning_resource_samples": "analysis/neural_tuning_resource_observations_20261004/samples.jsonl",
   "global_resource_exhaustion_established": false,
   "neural_tuning_resource_summary": "analysis/neural_tuning_resource_observations_20261004/summary.json",
@@ -12094,7 +12310,7 @@
   "expanded_future_resource_original_stage_status": "incomplete_due_to_future_path_assertion_error_no_OOM_recorded",
   "expanded_future_resource_recovery_scope": "analysis/expanded_future_resource_observations_recovery_20261004/protocol.json",
   "additive_ridge_annual_fits_completed": 30,
-  "native_backbone_configurations_fully_trained": 125,
+  "native_backbone_configurations_fully_trained": 126,
   "fourier_ridge_annual_fits_completed": 30,
   "nonlinear_ridge_resource_scope_audit": "analysis\\nonlinear_ridge_resource_scope_audit_20261004.json",
   "fourier_sampling_does_not_establish_four_worker_training_capacity": true,
@@ -12320,5 +12536,26 @@
   "memory_efficient_neural_actual_annual_fits": 0,
   "memory_efficient_neural_actual_fulltraining_artifacts": 0,
   "memory_efficient_neural_info_source_sha256": {},
-  "supplementary_memory_layout_cost_source": "analysis\\refresh_memory_efficient_neural_cost_evidence_20261005.py"
+  "supplementary_memory_layout_cost_source": "analysis\\refresh_memory_efficient_neural_cost_evidence_20261005.py",
+  "streaming_rank_classifier_declared_configurations": 4,
+  "streaming_rank_classifier_actual_annual_fits": 7,
+  "streaming_rank_classifier_actual_fulltraining_artifacts": 0,
+  "streaming_rank_classifier_info_source_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2020.json": "9bc6c0bdd4e895ea0d89b42e82fe194abf3753b40b0b380058ed2364e26a2cc9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\prefix_control_rank_top10_sgd_l2e4_e32_2020.json": "3a4763424a564fc77863727e4f8ada4c2ccb847c0a4d8f12c83555e538595b38",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2021.json": "da39f10a86bd5251dfb346241113d7f328c47acc6fbe3ef5190db2f7e741d6c8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\prefix_control_rank_top10_sgd_l2e4_e32_2021.json": "3a4763424a564fc77863727e4f8ada4c2ccb847c0a4d8f12c83555e538595b38",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2022.json": "7efed27ea124e2faa768793d380cadc88e7c240d66701ec00ea16247d09aa378",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\prefix_control_rank_top10_sgd_l2e4_e32_2022.json": "3a4763424a564fc77863727e4f8ada4c2ccb847c0a4d8f12c83555e538595b38",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2023.json": "8cbd62346098843ba281f659043fecdf0e54a5a4ea9f37f0f5648b177ec1c755",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\prefix_control_rank_top10_sgd_l2e4_e32_2023.json": "3a4763424a564fc77863727e4f8ada4c2ccb847c0a4d8f12c83555e538595b38",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e4_e32\\info_2024.json": "dee268bec41dd1251e92d4b353d82926bffed570419e6289ed9ed53f8472c44c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\prefix_control_rank_top10_sgd_l2e4_e32_2024.json": "3a4763424a564fc77863727e4f8ada4c2ccb847c0a4d8f12c83555e538595b38",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e3_e32\\info_2020.json": "57b1a13eabb5e1d3c7f8f8f8b40cf3e86fe0e1b4104823664d461616b04b87f7",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\prefix_control_rank_top10_sgd_l2e3_e32_2020.json": "3a4763424a564fc77863727e4f8ada4c2ccb847c0a4d8f12c83555e538595b38",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\rank_top10_sgd_l2e3_e32\\info_2021.json": "a6d43515a79b78e006fbcce47cea21823ad007b1be4654f4f9569a7245cc6432",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\streaming_rank_classification_bank_v3_20261005\\prefix_control_rank_top10_sgd_l2e3_e32_2021.json": "3a4763424a564fc77863727e4f8ada4c2ccb847c0a4d8f12c83555e538595b38"
+  },
+  "failed_V2_and16_small32pass_controls_not_counted_as_full_fits": true,
+  "supplementary_classifier_cost_source": "analysis\\refresh_streaming_rank_classifier_cost_evidence_20261005.py"
 }
