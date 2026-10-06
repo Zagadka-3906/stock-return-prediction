@@ -1,0 +1,33 @@
+{
+  "model_sha256": "ecdf7ed2d279e37dd8f0cb9f3ef3e78e8ec04eb5153a6d6c0bb7a4738d4dd17d",
+  "configuration": {
+    "kind": "lightgbm_gradient_sampling",
+    "target": "y_rank",
+    "linear_tree": false,
+    "linear_lambda": 0.0,
+    "data_sample_strategy": "goss",
+    "top_rate": 0.2,
+    "other_rate": 0.1,
+    "num_boost_round": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": 8,
+    "min_data_in_leaf": 128,
+    "max_bin": 127,
+    "lambda_l2": 1.0,
+    "seed": 20261005,
+    "num_threads": 8,
+    "clip_z": 8.0,
+    "chunk_rows": 32768,
+    "return_quantiles": [
+      0.005,
+      0.995
+    ],
+    "reserve_available_ram_GiB": 14.0
+  },
+  "training_info_sha256": "14681343b993a48ed267a415ab1dbe1f7d11b886b78e643d0643069746151ae3",
+  "actual_complete_native_fit_origin_info_sha256": "223500e3646ec7d03fb56722db404b9d65a232c125c21bf91b8b1bca913c5838",
+  "first_actual_future_date": 20250102,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
