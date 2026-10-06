@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v34_20261006.py", line 298, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v34_20261006.py", line 294, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v23_20261006.py", line 136, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v22_20261006.py", line 196, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v20_20261006.py", line 104, in main
+    previous.main(once)
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v18_20261005.py", line 131, in main
+    state = update()
+            ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v34_20261006.py", line 284, in call
+    return function()
+           ^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v34_20261006.py", line 257, in update
+    augment_ready_goss_ownership(value, state, queue)
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v34_20261006.py", line 191, in augment_ready_goss_ownership
+    for p in psutil.Process(row['owned_worker_pid']).children(recursive=True):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\.venv\Lib\site-packages\psutil\__init__.py", line 314, in __init__
+    self._init(pid)
+  File "D:\3.Study\数据分析\赛题五\.venv\Lib\site-packages\psutil\__init__.py", line 360, in _init
+    raise NoSuchProcess(pid, msg=msg) from None
+psutil.NoSuchProcess: process PID not found (pid=39272)
