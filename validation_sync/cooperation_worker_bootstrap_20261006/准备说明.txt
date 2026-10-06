@@ -1,0 +1,16 @@
+两台Windows电脑的准备包；不包含训练数据、测试标签或模型。
+
+1. 接电源，接入同一局域网，插电时关闭睡眠和休眠；屏幕可以关闭。保持散热。
+2. 在D或E盘解压本包。建议至少留50GB空余空间；实际任务将按空余空间分批分配。
+3. 如无Python3.12，安装64位版本。主机为3.12.9；可从https://www.python.org/downloads/release/python-3129/下载Windows installer(64-bit)。安装目录可选D:\Python312。
+4. 在解压文件夹中打开PowerShell。电脑1运行：
+   powershell -NoProfile -ExecutionPolicy Bypass -File .\prepare_worker_environment.ps1 -WorkerId worker1 -WorkRoot "D:\赛题五协作"
+   电脑2改为-WorkerId worker2。如安装器未提供py命令，追加-PythonExe "D:\Python312\python.exe"。
+5. 本脚本会在工作目录建立.venv、数据/结果/日志目录和安装缓存，安装与主机匹配的依赖及CUDA12.8版PyTorch，执行一个小型GPU前向/反向检查。不执行项目训练，不开启共享、不改防火墙或电源设置，不上传GitHub。
+6. 完成后把reports目录最新的hardware和environment两个JSON报告复制回主机。若失败，把报告或PowerShell报错原文发来。
+7. 运行ipconfig，告知连接同一路由器的IPv4地址和D/E盘可用空间。数据可通过局域网共享或移动硬盘复制；先确认环境再分发数据。
+8. 电脑1(32GB内存)优先独立GPU模型或较大CPU任务；电脑2(16GB内存)先一次运行一个任务。两台8GB显存均需先测量实际任务显存与耗时。
+9. 任务使用独立目录、固定编号和参数；训练数据仅复制所需部分。评分、完整榜和GitHub main提交统一由当前主机完成。
+
+命令只为本次PowerShell进程设置ExecutionPolicy；不要求修改全局策略。系统由组织策略管理时保留报错再处理。
+整个项目的.venv不可直接复制到另一台电脑使用，本包会新建各自的环境。
