@@ -47,9 +47,11 @@ def main():
     while psutil.virtual_memory().available < 9 * 2**30:
         time.sleep(15)
     plan = read(PLAN)
+    codec_proof = A / 'cpu_conditional_residual_mlp_codec_preflight_20261007/verification.json'
+    assert read(codec_proof)['status'] == 'passed_actual_four_historical_CPU_MLP_codec_controls'
     features = read(ROOT / 'data/feature_manifest.json')['features']
     assert len(features) == 63
-    sources = [Path(__file__), PLAN, A / 'cpu_conditional_residual_mlp_codec_20261007.py',
+    sources = [Path(__file__), PLAN, codec_proof, A / 'verify_cpu_conditional_residual_mlp_codec_preflight_20261007.py', A / 'cpu_conditional_residual_mlp_codec_20261007.py',
         A / 'direct_flag_centered_rank_CDF_transform_20261007.py', ROOT / 'run.py', ROOT / 'src/features.py',
         ROOT / '后续选模标准.md', ROOT / 'data/features.parquet', ROOT / 'data/feature_manifest.json',
         A / 'connected_validation_20261002/combined_fold_frame.parquet',
@@ -173,7 +175,7 @@ def main():
         create(OUT / 'verification.json', {'status': 'passed_actual20_CPU_conditional_MLP_native_independent_numpy_and_prefix_controls',
             'input_sha256': pins, 'configurations': plan['configurations'], 'actual_models': records,
             'actual_native_fits': 20, 'elapsed_seconds': time.perf_counter()-started,
-            'actual_peak_current_process_RSS_GiB_at_completion': psutil.Process().memory_info().rss / 2**30,
+            'actual_current_process_RSS_GiB_at_completion': psutil.Process().memory_info().rss / 2**30,
             'all_four_annual_mature_windows_and_one_final_window': True,
             'all20_native_reload_independent_numpy_codec_bit_controls': True,
             'new_official_quality_scores': 0, 'CPU_only_no_CUDA_or_torch_used': True,
