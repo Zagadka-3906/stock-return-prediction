@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\train_conditional_flag_rank_bank_20261006.py", line 185, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\train_conditional_flag_rank_bank_20261006.py", line 138, in main
+    reload = lgb.Booster(model_file=str(native_path)).predict(test, num_threads=2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\.venv\Lib\site-packages\lightgbm\basic.py", line 3799, in __init__
+    _safe_call(
+  File "D:\3.Study\数据分析\赛题五\.venv\Lib\site-packages\lightgbm\basic.py", line 297, in _safe_call
+    raise LightGBMError(_LIB.LGBM_GetLastError().decode("utf-8"))
+lightgbm.basic.LightGBMError: Could not open D:\3.Study\数据分析\赛题五\analysis\conditional_flag_rank_bank_20261006\flag_rank_leaf7_e64\model_2020.txt

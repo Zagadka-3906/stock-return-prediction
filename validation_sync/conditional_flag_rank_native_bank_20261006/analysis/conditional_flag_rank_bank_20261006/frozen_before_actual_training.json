@@ -1,0 +1,51 @@
+{
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\data\\raw\\训练集.csv": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+    "D:\\3.Study\\数据分析\\赛题五\\data\\features.parquet": "80923e8bf14efe2d1b788f78028121868c6690ec26781a124e5fff2ffea1df54",
+    "D:\\3.Study\\数据分析\\赛题五\\data\\feature_manifest.json": "151751a6387385b6d44b05051b82c9b66a12d83ad4062d89fae298580124e3b5",
+    "D:\\3.Study\\数据分析\\赛题五\\src\\features.py": "2b436b681eadaf59dc8aaf441c74f05ac3829b8321d7839a123f1b1a7b6ea139",
+    "D:\\3.Study\\数据分析\\赛题五\\run.py": "17da300abe4dd264984ac71262581210c27951912a8187330fc0cff0b8c2bcbb",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\connected_validation_20261002\\combined_fold_frame.parquet": "20417ef5294010fdd18970450a75665f1faf2b7bc136c8a68cafffafede88789",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\cohort_rank_calibration_full_controls_20261006\\historical_label_percentile.npy": "c30f6eab43522c135f177fadacbb3b594e4095af280ea2cc76f7692cf1266d01",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\cohort_rank_calibration_full_controls_20261006\\verification.json": "e85d331a624da688602f1d4ee761e522a8a6077031f914be85e4160cd9e357b8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\conditional_flag_rank_codec_20261006.py": "865ba8df672830c2de790ea7e03c050ca7ef31503f7d414d71a15a8cd553bd5a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_conditional_flag_rank_bank_20261006.py": "92ac57ba86e650be6f8ded57e1969beaa19a858238ffe49a95c41d9b7e8d6134"
+  },
+  "configurations": {
+    "flag_rank_leaf7_e64": {
+      "num_leaves": 7,
+      "max_depth": 3,
+      "min_data_in_leaf": 128,
+      "lambda_l2": 10.0
+    },
+    "flag_rank_leaf15_e64": {
+      "num_leaves": 15,
+      "max_depth": 4,
+      "min_data_in_leaf": 128,
+      "lambda_l2": 10.0
+    },
+    "flag_rank_leaf31_e64": {
+      "num_leaves": 31,
+      "max_depth": 5,
+      "min_data_in_leaf": 256,
+      "lambda_l2": 25.0
+    }
+  },
+  "annual_years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "prospective_final_training_year": 2025,
+  "expected_actual_native_fits": 18,
+  "target": "Official float64 historical daily finite-pool return rank divided by finite count plus one",
+  "cohort": "Training rows with supplied flag_limit_up == 1",
+  "first2020_fit_includes_only_mature_pre2020_training_labels": true,
+  "maximum_boosting_rounds": 64,
+  "no_validation_early_stopping_or_hyperparameter_selection": true,
+  "selection_and_complete_official_scoring_still_required": true,
+  "future_test_features_or_labels_not_used_by_this_bank": true,
+  "test_labels_read": false
+}
