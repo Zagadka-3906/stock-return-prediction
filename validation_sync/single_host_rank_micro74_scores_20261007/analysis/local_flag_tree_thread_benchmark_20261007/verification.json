@@ -1,0 +1,60 @@
+{
+  "status": "passed_actual_local_thread_throughput_and_exact_native_controls",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\benchmark_local_flag_tree_threads_20261007.py": "357648f0311028c1009785253f73bf3cc0df54f31db31bce632dcc77aca90749",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\conditional_flag_rank_bank_v2_20261006\\flagged_training_targets_and_features.parquet": "1a3f57c5158e05aba242755c059f7ad6f2410f2802bf9cbb130fab12e7b62b63",
+    "D:\\3.Study\\数据分析\\赛题五\\data\\feature_manifest.json": "151751a6387385b6d44b05051b82c9b66a12d83ad4062d89fae298580124e3b5",
+    "D:\\3.Study\\数据分析\\赛题五\\run.py": "17da300abe4dd264984ac71262581210c27951912a8187330fc0cff0b8c2bcbb",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\conditional_flag_rank_codec_20261006.py": "865ba8df672830c2de790ea7e03c050ca7ef31503f7d414d71a15a8cd553bd5a"
+  },
+  "training_rows": 93330,
+  "records": [
+    {
+      "repeat": 0,
+      "threads": 2,
+      "elapsed_seconds_including_matrix_binning": 1.006447699997807,
+      "native_trees_and_prediction_bits_equal_2thread_reference": true
+    },
+    {
+      "repeat": 0,
+      "threads": 4,
+      "elapsed_seconds_including_matrix_binning": 0.5958654999994906,
+      "native_trees_and_prediction_bits_equal_2thread_reference": true
+    },
+    {
+      "repeat": 0,
+      "threads": 8,
+      "elapsed_seconds_including_matrix_binning": 0.4146230999904219,
+      "native_trees_and_prediction_bits_equal_2thread_reference": true
+    },
+    {
+      "repeat": 1,
+      "threads": 2,
+      "elapsed_seconds_including_matrix_binning": 0.9915379000012763,
+      "native_trees_and_prediction_bits_equal_2thread_reference": true
+    },
+    {
+      "repeat": 1,
+      "threads": 4,
+      "elapsed_seconds_including_matrix_binning": 0.5828062999935355,
+      "native_trees_and_prediction_bits_equal_2thread_reference": true
+    },
+    {
+      "repeat": 1,
+      "threads": 8,
+      "elapsed_seconds_including_matrix_binning": 0.41408489999594167,
+      "native_trees_and_prediction_bits_equal_2thread_reference": true
+    }
+  ],
+  "median_seconds": {
+    "2": 0.9989927999995416,
+    "4": 0.589335899996513,
+    "8": 0.4143539999931818
+  },
+  "selected_threads": 8,
+  "measured_speedup_over_2_threads": 2.410964537607891,
+  "diagnostic_native_fits": 6,
+  "new_quality_score_records": 0,
+  "benchmark_is_not_official_model_selection": true,
+  "test_labels_read": false
+}
