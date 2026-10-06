@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v28_20261006.py", line 213, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v28_20261006.py", line 209, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v23_20261006.py", line 136, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v22_20261006.py", line 196, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v20_20261006.py", line 104, in main
+    previous.main(once)
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v18_20261005.py", line 131, in main
+    state = update()
+            ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v28_20261006.py", line 170, in update
+    state = original_update()
+            ^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v23_20261006.py", line 30, in update
+    state = original_update()
+            ^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v22_20261006.py", line 25, in update
+    base_state = original_update()
+                 ^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v20_20261006.py", line 27, in update
+    state = original_update()
+            ^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\monitor_actual_optimization_progress_v18_20261005.py", line 95, in update
+    boundary.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_optimization_boundary_evidence_v17_20261005.py", line 20, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_optimization_boundary_evidence_v16_20261005.py", line 19, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_optimization_boundary_evidence_v15_20261005.py", line 17, in main
+    with operational_writes('refresh_optimization_boundary_evidence_v14_20261005'):previous.main()
+                                                                                   ^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_optimization_boundary_evidence_v14_20261005.py", line 17, in main
+    with operational_writes('refresh_optimization_boundary_evidence_v13_20261005'):previous.main()
+                                                                                   ^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_optimization_boundary_evidence_v13_20261005.py", line 16, in main
+    with operational_writes('refresh_optimization_boundary_evidence_v12_20261005'):previous.main()
+                                                                                   ^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_optimization_boundary_evidence_v12_20261005.py", line 19, in main
+    previous.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_optimization_boundary_evidence_v11_20261005.py", line 23, in main
+    costs.main()
+  File "D:\3.Study\数据分析\赛题五\analysis\refresh_gradient_sampling_cost_evidence_20261005.py", line 45, in main
+    'artifact_elapsed_seconds': info['elapsed_seconds'], 'mature_training_rows': meta['rows'],
+                                ~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'elapsed_seconds'
