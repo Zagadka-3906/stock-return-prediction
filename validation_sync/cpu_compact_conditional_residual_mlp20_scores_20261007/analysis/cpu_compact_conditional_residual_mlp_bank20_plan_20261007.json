@@ -1,0 +1,92 @@
+{
+  "status": "predeclared_CPU_only20_conditional_residual_native_fits_and44_official_comparisons",
+  "explicit_parent_qualified_round": 106,
+  "configurations": {
+    "flagged_residual_compact_mlp16_relu": {
+      "hidden_layer_sizes": [
+        16
+      ],
+      "activation": "relu"
+    },
+    "flagged_residual_compact_mlp32_relu": {
+      "hidden_layer_sizes": [
+        32
+      ],
+      "activation": "relu"
+    },
+    "flagged_residual_compact_mlp16_tanh": {
+      "hidden_layer_sizes": [
+        16
+      ],
+      "activation": "tanh"
+    },
+    "flagged_residual_compact_mlp32_tanh": {
+      "hidden_layer_sizes": [
+        32
+      ],
+      "activation": "tanh"
+    }
+  },
+  "fixed_parameters": {
+    "loss": "squared_error",
+    "solver": "adam",
+    "alpha": 0.01,
+    "batch_size": 2048,
+    "learning_rate": "constant",
+    "learning_rate_init": 0.001,
+    "max_iter": 24,
+    "shuffle": true,
+    "random_state": 20261007,
+    "tol": 0.0,
+    "n_iter_no_change": 100,
+    "early_stopping": false
+  },
+  "CPU_threads": 4,
+  "first_2020_identity": true,
+  "annual_native_fit_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "final_native_fit_year": 2025,
+  "prospective_native_model_fits": 20,
+  "features": "63 supplied-field-derived features plus qualified106 same-day forecast percentile",
+  "target": "mature historical supplied-return-derived cached y_rank+0.5 minus qualified106 same-day forecast percentile",
+  "preprocessing": "finite median fill, mean/std, clip10 fitted only to each mature past annual training window",
+  "ensembles": [
+    "equal_mean_relu",
+    "equal_mean_tanh",
+    "equal_mean_all_four"
+  ],
+  "fixed_amplitudes": [
+    0.01,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "current_day_CDF_universes": [
+    "all_current_raw_forecasts"
+  ],
+  "prospective_official_comparisons": 44,
+  "anchor_rounds": [
+    100,
+    106
+  ],
+  "transformation": "flagged-only q=clip(parent_percentile + amplitude*predicted_residual,1/N,1), original same-day inverse CDF; identity for2020 and all nonflag rows",
+  "required_controls": "actual saved-native reload, independent NumPy weight decoder, fixed256-row padded inference blocks, mature dates, full/prefix raw bits and final official mapped CSV",
+  "selection": "highest original evaluate.py connected score only",
+  "training_validation_multiple_selection_bias_uncorrected": true,
+  "future_test_labels_read": false,
+  "GPU_used": false,
+  "global_feasible_direction_or_resource_exhaustion_claimed": false,
+  "distinction_from_previous_bank": "Same mature flagged residual target and Adam24 protocol; expands four not-yet-tested single hidden-layer16/32 ReLU/tanh architectures, previous64/128_64 families not claimed new.",
+  "serialization_prerequisites": [
+    "actual full R90 qualification/main",
+    "actual full R110 qualification/main",
+    "naturally closed alternating parent rank-cache benchmark before native fits",
+    "at least9GiB available RAM"
+  ]
+}
