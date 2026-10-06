@@ -1,0 +1,104 @@
+{
+  "status": "frozen_local_only36_native92_official_cases_before_execution",
+  "at_local": "2026-10-07T00:12:29",
+  "reason": "Extend earlier actual64-round direct specialists with256 rounds, centered original baseline rank target, Huber alpha0.1, fixed min_leaf128/lambda10 for all leaves and two current-day CDFuniverses; residual families keep2020 identity, but earlier direct64family already covers2020.",
+  "explicit_base_qualified_round": 106,
+  "selected_complete_candidate": "candidates/simplex_residual47_20261006",
+  "anchor_receipt_sha256": "393d82ee968922987ea7ddfd4a6f256a964acba1f553d52e1baaf149c401c5b1",
+  "configurations": {
+    "direct_flag_centered_rank_l2_leaf7_e256": {
+      "objective": "regression_l2",
+      "num_leaves": 7
+    },
+    "direct_flag_centered_rank_l2_leaf15_e256": {
+      "objective": "regression_l2",
+      "num_leaves": 15
+    },
+    "direct_flag_centered_rank_l2_leaf31_e256": {
+      "objective": "regression_l2",
+      "num_leaves": 31
+    },
+    "direct_flag_centered_rank_huber_a010_leaf7_e256": {
+      "objective": "huber",
+      "num_leaves": 7,
+      "alpha": 0.1
+    },
+    "direct_flag_centered_rank_huber_a010_leaf15_e256": {
+      "objective": "huber",
+      "num_leaves": 15,
+      "alpha": 0.1
+    },
+    "direct_flag_centered_rank_huber_a010_leaf31_e256": {
+      "objective": "huber",
+      "num_leaves": 31,
+      "alpha": 0.1
+    }
+  },
+  "target": "Existing src/features.py y_rank: historical daily rank/count minus0.5, float32 training cache",
+  "annual_OOF_years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "final_training_year": 2025,
+  "prospective_native_fits": 36,
+  "requires_each_native_reload_independent_identity_tree_codec_and_prefix_controls": true,
+  "ensembles": [
+    "equal_mean_three_l2_leaves",
+    "equal_mean_three_huber_leaves",
+    "equal_mean_all_six"
+  ],
+  "fixed_amplitudes": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "current_day_CDF_universes": [
+    "all_current_raw_forecasts",
+    "current_price_valid_forecasts_only"
+  ],
+  "transformation": "For flagged records only, convex-mix the current parent forecast percentile with the direct predicted target rank, then use the same-day parent forecast empirical inverse CDF; keep nonflag raw bits unchanged.",
+  "anchor_comparisons": [
+    "qualified_parent100",
+    "qualified_best106"
+  ],
+  "prospective_official_cases": 92,
+  "first2020_identity_not_required_for_this_new_direction": true,
+  "all_original_one_day_label_maturity_and_forecast_time_availability_required": true,
+  "all5635800_rows1212_days_same_original_evaluate_py_final_return_mapped_CSV_required": true,
+  "no_extra_single_metric_or_worst_year_elimination_rule": true,
+  "winning_complete_candidate_and_full_ranking_qualification_required_after_actual_comparison": true,
+  "execution_or_score_not_yet_performed": true,
+  "test_labels_read": false,
+  "not_a_global_boundary_claim": true,
+  "compute_mode": "single_host_CPU_existing_GPU_worker_preserved",
+  "external_workers_dispatched": false,
+  "cooperation_cancelled_by_user": true,
+  "CDF_rank_prediction_conversion": "Add0.5 to centered direct model output before convex mixing and clip ranks to available inverseCDF knots",
+  "prior_plan_metadata_corrections": [
+    "y_rank is derived from supplied training y_ret_1d by original features.py; it is not a separate supplied raw CSV field",
+    "Prior direct64models already cover2020; this is an extension, not a claim that all prior families missed2020",
+    "All three fixed Huber alphas explicitly0.1 rather than null"
+  ],
+  "fixed_training_parameters": {
+    "learning_rate": 0.05,
+    "max_depth": 5,
+    "min_data_in_leaf": 128,
+    "lambda_l2": 10.0,
+    "max_bin": 127,
+    "num_boost_round": 256,
+    "feature_pre_filter": false,
+    "force_col_wise": true,
+    "deterministic": true
+  },
+  "local_speed_changes": [
+    "Select2/4/8 CPUthreads solely by measured throughput after exact native tree and bit prediction controls",
+    "Construct one Dataset per own mature annual window and reuse acrosssix models; never reuse another years histogram"
+  ],
+  "prior_plan_path": "D:\\3.Study\\数据分析\\赛题五\\analysis\\direct_conditional_rank_cold_start_search_plan_20261006.json",
+  "prior_plan_sha256": "eef0345865b13e02180d1200cbdceb8ee85c760e252dedeab5d07829a3735ed8"
+}
