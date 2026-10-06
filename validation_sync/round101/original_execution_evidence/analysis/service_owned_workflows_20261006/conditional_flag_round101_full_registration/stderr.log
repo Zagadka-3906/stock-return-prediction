@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\admit_conditional_flag_round101_registration_20261006.py", line 63, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\admit_conditional_flag_round101_registration_20261006.py", line 59, in main
+    runpy.run_path(str(driver), run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_conditional_flag_round101_full_registration_20261006.py", line 99, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\run_conditional_flag_round101_full_registration_20261006.py", line 25, in main
+    protocol = prepare()
+               ^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\register_conditional_flag_round101_artifacts_20261006.py", line 102, in main
+    selection['frozen_sha256'].update({Path(p).relative_to(ROOT).as_posix(): digest for p, digest in pins.items()})
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'D:\\3.Study\\数据分析\\赛题五_历史归档_20261001\\releases\\pooled_rms25\\backbone_raw.parquet' is not in the subpath of 'D:\\3.Study\\数据分析\\赛题五'
