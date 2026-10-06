@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_parent_graph_rank_cache_v2_20261007.py", line 94, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_parent_graph_rank_cache_v2_20261007.py", line 34, in main
+    pins = {**protocol['input_sha256'], **{str(p): sha(p) for p in paths}}
+                                                   ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_dependency_queue_v3_20261006.py", line 23, in sha
+    with Path(path).open('rb') as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\optimize_wave15.py'
