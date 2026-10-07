@@ -20,7 +20,7 @@ def closed(name):
 def main(phase):
     assert phase in ('controls','scores')
     closed('nonflag_RFF12876_round125_full_registration_v1')
-    closed('RFF128Low_actual_history_main_after125')
+    closed('RFF128Low_history_batched_main_recovery')
     if phase=='scores':closed('nonflag_RFF128Low76_full37_controls_main_publication_v1')
     science=closed('nonflag_RFF128Low_actual_hook6_and_full73_controls_v2' if phase=='controls' else 'nonflag_RFF128Low76_official_comparison_v1')
     folder=A/('nonflag_residual_RFF128Low73_transform_preflight_20261007' if phase=='controls' else 'nonflag_RFF128Low76_official_comparison_v1_20261007')
