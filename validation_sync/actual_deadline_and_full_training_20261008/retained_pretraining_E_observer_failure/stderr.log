@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\train_neural_BF16_micro8192_bank6_v1_20261008.py", line 146, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\train_neural_BF16_micro8192_bank6_v1_20261008.py", line 99, in main
+    write(OUT / 'actual_stage.json', {'status': 'actual_mature_annual_BF16_fit', 'year': year,
+  File "D:\3.Study\数据分析\赛题五\analysis\atomic_optimization_observer_writes_20261005.py", line 7, in write
+    path=Path(path).resolve();assert path.is_relative_to(ROOT/'analysis') and path.suffix=='.json'
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
