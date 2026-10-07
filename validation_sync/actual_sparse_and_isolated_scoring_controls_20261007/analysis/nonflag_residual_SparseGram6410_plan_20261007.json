@@ -1,0 +1,38 @@
+{
+  "status": "frozen_new_sparse_residual_Gram64_L1_and_Elastic_before_actual_fits",
+  "at_local": "2026-10-07T22:45:39",
+  "configurations": {
+    "nonflag_residual_sparseGram64_L1": {
+      "l1_ratio": 1.0,
+      "alpha_max_fraction": 0.02,
+      "max_iter": 10000,
+      "tol": 1e-10,
+      "kkt_tol": 1e-08
+    },
+    "nonflag_residual_sparseGram64_Elastic": {
+      "l1_ratio": 0.5,
+      "alpha_max_fraction": 0.02,
+      "max_iter": 10000,
+      "tol": 1e-10,
+      "kkt_tol": 1e-08
+    }
+  },
+  "native_fit_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "actual_declared_native_fits": 10,
+  "target": "provided y_rank+.5-qualified106 same-day all-forecast averageRank/N",
+  "features": "63 provided-derived plus teacher106 same-day averageRank/N",
+  "training_population": "nonflag!=1, price_valid, finite target, own exclusive mature annual cutoff",
+  "penalty_scaling": "alpha_max from own training covariance times .02; L1 ratio1 or.5",
+  "preprocessing": "unchanged verified own-window medians/means/scales/clip10",
+  "inference_recipe": "fixed8192 padded rows and independent64 coefficients",
+  "new_large_feature_caches": 0,
+  "test_labels_read": false,
+  "actual_official_scores": 0,
+  "new_floating_point_solver_recipe_not_claimed_bit_equal_to_sklearn": true
+}
