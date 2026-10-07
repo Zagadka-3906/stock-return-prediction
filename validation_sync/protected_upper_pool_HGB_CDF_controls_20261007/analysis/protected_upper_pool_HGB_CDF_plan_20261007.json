@@ -1,0 +1,64 @@
+{
+  "status": "predeclared_not_yet_scored_protected_upper_current_pool_HGB_reordering",
+  "at_local": "2026-10-07T08:02:00",
+  "planned_round": 115,
+  "planned_wave": 398,
+  "preceding_round": 114,
+  "training_source": "cpu_full_universe_HGB_bank24_recovery_v2_20261007",
+  "qualified_comparison_parent_candidates": [
+    112,
+    113,
+    114
+  ],
+  "actual_parent_choice": "highest complete qualified official score among112_113_114 after114 QA25 and main closure; exact ties prefer earliest",
+  "baseline_records": 3,
+  "lower_fractions": [
+    0.5,
+    0.7,
+    0.8
+  ],
+  "weights": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "single_native_heads": [
+    "full_rank_HGB7",
+    "full_rank_HGB31",
+    "full_return_HGB15_squared",
+    "full_return_HGB15_absolute"
+  ],
+  "ensembles": {
+    "equal_mean_rank": [
+      "full_rank_HGB7",
+      "full_rank_HGB31"
+    ],
+    "equal_mean_return": [
+      "full_return_HGB15_squared",
+      "full_return_HGB15_absolute"
+    ],
+    "equal_mean_all_four": [
+      "full_rank_HGB7",
+      "full_rank_HGB31",
+      "full_return_HGB15_squared",
+      "full_return_HGB15_absolute"
+    ]
+  },
+  "scheme_records": 63,
+  "expected_scored_records": 66,
+  "selection_objective": "unmodified official connected2020_2024 score on5635800 rows1212 days4650 stocks",
+  "new_native_fits": 0,
+  "transformation": "eligible current nonflag price-valid finite parent values>-9; strict lower-than-current-order-statistic boundary; per-head average percentile within selected subset, ordered mean; convex blend with subset parent percentile; selected parent inverseCDF; all other parent float64 values unchanged",
+  "boundary_tie_group_not_split": true,
+  "weight0_identity_bits_required": true,
+  "validation_controls": "whole5635800 outputs independent oracle and cold80_260_975 day prefixes; upper/flag/invalid forecasts unchanged; changed values stay inside selected parent range",
+  "official_Top_sets_with_missing_labels_not_assumed_guaranteed_or_used_as_hard_selection_gate": true,
+  "labels_not_used_to_define_output_or_selected_pool": true,
+  "training_preprocessing_models_and_return_mapping_own_past_only": true,
+  "new_candidate_requires_pre_inference_full_source_and_parameter_freeze_native_reload_independent_two_full1599600_cold80_and_CSV_then_full_QA_and_main": true,
+  "existing_candidate_reuse_requires_all_output_bits8_metrics_graph_params_all_sealed_source_bytes_original_freeze_and0new_inference": true,
+  "transform_source_sha256": "3570d14386f6b208ebf2ac97cbcf9750e00ec264e253c560e707fe09b26618fd",
+  "selection_bias_uncorrected": true,
+  "test_labels_read": false,
+  "no_official_quality_scores_or_scientific_qualification_claimed_by_plan": true
+}
