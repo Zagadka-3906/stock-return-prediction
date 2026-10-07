@@ -1,0 +1,84 @@
+{
+  "status": "predeclared_unfitted10_nonflag_teacher_residual_HGB_models",
+  "at_local": "2026-10-07T11:40:19",
+  "configurations": {
+    "nonflag_residual_hgb7_squared": {
+      "loss": "squared_error",
+      "max_leaf_nodes": 7
+    },
+    "nonflag_residual_hgb15_absolute": {
+      "loss": "absolute_error",
+      "max_leaf_nodes": 15
+    }
+  },
+  "fixed_parameters": {
+    "learning_rate": 0.05,
+    "max_iter": 96,
+    "min_samples_leaf": 256,
+    "l2_regularization": 1.0,
+    "max_bins": 63,
+    "max_features": 1.0,
+    "categorical_features": null,
+    "early_stopping": false,
+    "random_state": 20261007
+  },
+  "CPU_threads": 4,
+  "native_fit_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "prospective_native_fits": 10,
+  "training_population": "only existing 2020-2024 expanding OOF keys with flag_limit_up!=1, price_valid and finite original rank label",
+  "teacher_round": 106,
+  "teacher": "same-day qualified106 expanding OOF forecast average_rank/N over all rows including sentinels",
+  "features": "63 supplied-field-derived features plus teacher current forecast percentile,64 total",
+  "target": "past mature original y_rank+0.5 minus same-row teacher percentile",
+  "first2020": "zero residual because no earlier OOF teacher training keys available",
+  "preprocessing": "each feature finite median then mean/std calculated columnwise on corresponding mature train rows;clip10; no full-validation fit",
+  "feature_cache": "E:/赛题五_本机临时/nonflag_residual_HGB10_20261007, bounded eight-feature joins and8192-row mature window extraction",
+  "new_family_difference": "prior full63-feature HGB used direct y_rank or return labels over original pre-2020 history; prior64-feature teacher-residual HGB restricted to flagged rows. This family fits nonflag residuals on past expanding OOF rows.",
+  "later_planned_round": 120,
+  "later_anchor_rounds": [
+    112,
+    118,
+    119
+  ],
+  "later_heads": [
+    "nonflag_residual_hgb7_squared",
+    "nonflag_residual_hgb15_absolute",
+    "equal_mean_two"
+  ],
+  "later_weights": [
+    0.0003125,
+    0.000625,
+    0.00125,
+    0.0025,
+    0.005,
+    0.0075,
+    0.01,
+    0.015,
+    0.02,
+    0.03,
+    0.04,
+    0.05
+  ],
+  "later_expected_official_records": 40,
+  "later_requirement": "full37 independent current-day CDF transforms and111 cold controls;40 full official scores;freeze;complete selected native and independent future1599600/two replays/cold80/CSV;fullQA31/all-source parameters/main",
+  "later_transform": "replace nonflag outputs with106 current percentile plus weighted predicted residual through106 current empirical inverseCDF; retain complete selected-parent flag raw bits; first2020 identity",
+  "official_scoring_not_authorized_by_plan_without_complete_round120_source_admission": true,
+  "early_stopping": false,
+  "test_labels_read": false,
+  "new_quality_scores": 0,
+  "all_training_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true,
+  "global_direction_or_resource_exhaustion_not_established": true,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_nonflag_residual_HGB10_plan_20261007.py": "b02897ffb04c00d3a59a03ea7f3814e6f7e5c8802691d368372820013b29f525",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\cpu_full_universe_HGB_bank24_plan_20261007.json": "f9eb9ca4a2d74a0a9573ba7947b3928cc9f042593bfe7fcc6cc2f13c96bcc363",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\cpu_conditional_residual_hgb_bank20_plan_20261007.json": "aa29904ec6324c7a191eeced8a246cb1ed77a543376c6ff72308e67f18356502",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37"
+  }
+}
