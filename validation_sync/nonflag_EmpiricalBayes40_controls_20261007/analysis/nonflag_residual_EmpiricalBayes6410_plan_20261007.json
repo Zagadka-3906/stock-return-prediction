@@ -1,0 +1,52 @@
+{
+  "status": "frozen_new_empirical_Bayes64_scalar_and_diagonal_priors_before_actual_fits",
+  "at_local": "2026-10-07T21:07:00",
+  "training_population": "nonflag!=1, price_valid, finite own past OOF y_rank; exclusive mature annual cutoff",
+  "target": "provided y_rank + .5 - qualified106 current-day all-forecast averageRank/N",
+  "features": "63 provided-derived features + qualified106 current-day all-forecast averageRank/N",
+  "preprocessing": "reuse identical own-window column finite median/mean/std and clip10 from verified HGB cache",
+  "fixed_parameters": {
+    "ridge_solver": "cholesky",
+    "fit_intercept": true,
+    "copy_X": false
+  },
+  "configurations": {
+    "nonflag_residual_empirical_bayes64_scalar": {
+      "mode": "scalar",
+      "max_iter": 128,
+      "tol": 1e-08,
+      "alpha_per_training_row": 0.01,
+      "solver": "empirical_bayes_centered_Gram64"
+    },
+    "nonflag_residual_empirical_bayes64_diagonal": {
+      "mode": "diagonal",
+      "max_iter": 128,
+      "tol": 1e-08,
+      "alpha_per_training_row": 0.01,
+      "solver": "empirical_bayes_centered_Gram64"
+    }
+  },
+  "native_fit_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "actual_declared_native_fits": 10,
+  "cpu_threads": 2,
+  "inference_recipe": "fixed8192 padded rows; native saved custom linear model and independent64 coefficient JSON",
+  "resource_gate_available_RAM_GiB": 8.5,
+  "cache_location": "E:/赛题五_本机临时/nonflag_residual_HGB10_20261007",
+  "new_large_feature_caches": 0,
+  "random_feature_mapping_fit_uses_training_feature_count_and_fixed_seed_no_validation_rows_or_labels": true,
+  "official_scoring_requires_later_complete_future_source_admission": true,
+  "test_labels_read": false,
+  "random_feature_array_owned_by_RBF_transform_no_training_feature_matrix_mutation": true,
+  "larger_basis_is_new_scientific_recipe_requires_actual_native_controls_and_official_comparison": true,
+  "comparison_hypothesis": "uncovered_scalar_and_feature_specific_empirical_Bayes_shrinkage_learned_only_on_past_rows",
+  "unused_raw_and_training_window_mappings_closed_only_after_own_preprocessing_and_numeric_hash_verification": true,
+  "training_solver_recipe": "fixed8192_centered_Gram64_empirical_Bayes_scalar_or_diagonal_v1",
+  "no_full_training_random_feature_matrix_allocated": true,
+  "new_floating_point_accumulation_recipe_not_claimed_identical_to_dense_fit": true
+}
