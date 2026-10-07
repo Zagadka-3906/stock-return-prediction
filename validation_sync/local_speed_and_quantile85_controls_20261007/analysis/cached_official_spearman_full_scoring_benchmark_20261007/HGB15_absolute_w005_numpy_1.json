@@ -1,0 +1,79 @@
+{
+  "case": "HGB15_absolute_w005",
+  "mode": "numpy",
+  "repetition": 1,
+  "elapsed_seconds": 14.784215099993162,
+  "metrics": {
+    "ic_mean": 0.12225855886115002,
+    "ic_std": 0.10983081745847721,
+    "icir": 1.1131534999944006,
+    "ic_positive_ratio": 0.8960396039603961,
+    "annual_excess": 0.37297643624327814,
+    "top1_annual_ret": 0.3984701903035356,
+    "mean_turnover": 0.03231545461960293,
+    "final_score": 0.45110171803156257
+  },
+  "mapped_numeric_sha256": "b6a8d38b655825ebdf9270854cab3f94cd29c732b9bdb5bb1ea2cc4a0b45feaf",
+  "csv_sha256": "510bb0c1f18dabcf424b6b1b13112f19778c3d2419ffd9ceb84b3c7ed8c0ad27",
+  "official_evaluate_called_without_score_capsule_cache": true,
+  "actual_return_mapping": {
+    "actual_return_mapped_csv_scored": true,
+    "within_day_ranks_bit_identical": true,
+    "boundaries": [
+      {
+        "year": 2020,
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "method": "prevalidation training moments affine fallback"
+      },
+      {
+        "year": 2021,
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2022,
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2023,
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2024,
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "method": "past mature OOF isotonic"
+      }
+    ],
+    "test_labels_read": false,
+    "cross_round_identical_official_reuse": {
+      "cross_round_cache_hit": false,
+      "benchmark_forced_uncached_official": true
+    }
+  },
+  "percentile_operator_statistics": {
+    "fast_calls": 2,
+    "fallback_calls": 0,
+    "all_current_rows_including_invalid_forecast_sentinels": true,
+    "no_price_valid_or_minus9_subset_filter": true,
+    "average_ties_divided_by_all_day_rows": true,
+    "retained_full_prediction_arrays": 0
+  },
+  "actual_scoped_spearman_statistics": {
+    "fast_calls": 1212,
+    "target_rank_cache_hits": 1212,
+    "target_rank_cache_misses": 0,
+    "fallback_calls": 0,
+    "scoring_labels_never_used_as_features_or_training_inputs": true,
+    "cached_target_vectors": 1212,
+    "original_official_spearman_identity_restored": true
+  },
+  "all8_original_case_metrics_exact": true,
+  "all1212_dates_actual_fresh_official_evaluation": true
+}
