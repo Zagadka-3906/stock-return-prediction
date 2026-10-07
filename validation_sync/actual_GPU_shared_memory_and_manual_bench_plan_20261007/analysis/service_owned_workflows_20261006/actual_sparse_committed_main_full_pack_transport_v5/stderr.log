@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\close_actual_sparse_committed_main_full_pack_HTTP11_v5_20261007.py", line 59, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\close_actual_sparse_committed_main_full_pack_HTTP11_v5_20261007.py", line 45, in main
+    sync.git('-c','http.version=HTTP/1.1','push','--no-thin','origin','HEAD:refs/heads/main',timeout=90)
+  File "D:\3.Study\数据分析\赛题五\analysis\close_actual_sparse_committed_main_full_pack_HTTP11_v5_20261007.py", line 19, in retry
+    try:return original_git(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\sync_validated_rounds_main_20261005.py", line 56, in git
+    raise RuntimeError(f'git {args[0]} failed: {result.stderr.strip()[:1500]}')
+RuntimeError: git -c failed: remote: Internal Server Error        
+remote: Request ID 0D5A:1C1284:14765C:1C5399:6AC661B0        
+remote: Time 2026-10-07T15:13:53Z
+To https://github.com/Zagadka-3906/stock-return-prediction.git
+ ! [remote rejected] HEAD -> main (Internal Server Error)
+error: failed to push some refs to 'https://github.com/Zagadka-3906/stock-return-prediction.git'

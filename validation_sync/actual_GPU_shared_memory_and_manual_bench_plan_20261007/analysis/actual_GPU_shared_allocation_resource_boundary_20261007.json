@@ -1,0 +1,43 @@
+{
+  "status": "measured_original16384_recipe_uses_Windows_shared_GPU_allocation_on_this_host",
+  "at_local": "2026-10-07T22:59:20",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\record_actual_GPU_memory_boundary_and_manual_bench_plan_20261007.py": "26d59b7ace7b69e44ae8caf41186ddda3bfb8ef8e50dbf98d9b5bc4dfa1c1cfb",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_neural_GPU_shared_memory_snapshot_20261007.json": "3a769047ed9929c4cfd3cfd0e41b7c8d667e6c00e00fb9e99cb45da12fd5301c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\native_launch.json": "a1e786675f09648d8b4d4478127581fea41f50a2f87bd5a90cb4677ced01a092",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\rank16384_drop000_seed07_e32\\info_2021.json": "b7e9ab034d3c5ab6872362e490874ee0259c8c9866225038c4f0cfd473cf1ef8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_diverse_backbones_20261003.py": "6524e642f540bc0c79e6296d3c67959330d4126cb248b26f535110c8f05daa4e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\epoch_durable_neural_checkpoint_adapter_v2_20261007.py": "d7ae73e5f78bdc9506a95d75601ade4f0bc9bfce982c606dfec6f7878957588f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\epoch_durable_neural_checkpoint_CPU32_preflight_v2_20261007\\verification.json": "1b7a863327a6dc44d3b2c52c4179b2be523ee7c653ace32c1c96020681c0bb34"
+  },
+  "GPU_process_dedicated_usage_GiB": 10.525909423828125,
+  "GPU_process_shared_usage_GiB": 5.517578125,
+  "GPU_process_TotalCommitted_GiB": 16.043487548828125,
+  "provider_semantics": "Windows WDDM per-process memory allocation; not CUDA allocator peak, measured PCIe traffic or eviction count",
+  "inference": "dedicated-plus-shared usage supports allocation beyond dedicated capacity; this can contribute to slow training but the causal time penalty was not benchmarked",
+  "original_configuration": {
+    "kind": "mlp",
+    "target": "y_rank",
+    "batch_size": 32768,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.0,
+    "hidden": [
+      16384,
+      8192,
+      4096
+    ],
+    "epochs": 32,
+    "seed": 20261007
+  },
+  "actual_parameter_count_from_frozen_architecture": 168894465,
+  "analytic_FP32_parameter_storage_GiB": 0.6291809119284153,
+  "analytic_FP32_parameter_plus_gradient_plus_two_Adam_state_storage_GiB": 2.516723647713661,
+  "analytic_one_copy_hidden_activation_storage_GiB": 3.5,
+  "analytic_numbers_are_not_measured_total_allocator_peak": true,
+  "completed2021_actual_fit_seconds": 144044.813,
+  "original_current_training_and_frozen_weights_not_modified": true,
+  "global_feasible_direction_or_resource_exhaustion_not_established": true,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}

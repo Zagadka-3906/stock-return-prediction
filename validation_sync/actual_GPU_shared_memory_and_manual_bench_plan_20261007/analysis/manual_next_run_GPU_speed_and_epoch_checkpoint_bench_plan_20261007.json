@@ -1,0 +1,64 @@
+{
+  "status": "predeclared_manual_next_run_benchmarks_not_GPU_qualified_or_automatically_dispatched",
+  "at_local": "2026-10-07T22:59:20",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\record_actual_GPU_memory_boundary_and_manual_bench_plan_20261007.py": "26d59b7ace7b69e44ae8caf41186ddda3bfb8ef8e50dbf98d9b5bc4dfa1c1cfb",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_neural_GPU_shared_memory_snapshot_20261007.json": "3a769047ed9929c4cfd3cfd0e41b7c8d667e6c00e00fb9e99cb45da12fd5301c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\neural16384_annual\\native_launch.json": "a1e786675f09648d8b4d4478127581fea41f50a2f87bd5a90cb4677ced01a092",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\rank16384_drop000_seed07_e32\\info_2021.json": "b7e9ab034d3c5ab6872362e490874ee0259c8c9866225038c4f0cfd473cf1ef8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_diverse_backbones_20261003.py": "6524e642f540bc0c79e6296d3c67959330d4126cb248b26f535110c8f05daa4e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\epoch_durable_neural_checkpoint_adapter_v2_20261007.py": "d7ae73e5f78bdc9506a95d75601ade4f0bc9bfce982c606dfec6f7878957588f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\epoch_durable_neural_checkpoint_CPU32_preflight_v2_20261007\\verification.json": "1b7a863327a6dc44d3b2c52c4179b2be523ee7c653ace32c1c96020681c0bb34"
+  },
+  "actual_user_continue_required": true,
+  "automatic_morning_restart_enabled": false,
+  "timing_and_memory_benchmark_population": "bounded subset of verified own past mature 2021 training window; training only, no real future labels",
+  "same_frozen_architecture": [
+    16384,
+    8192,
+    4096
+  ],
+  "optimizer": "original AdamW parameters and fixed seed",
+  "proposed_benchmark_recipes": [
+    {
+      "id": "FP32_micro8192_accum4",
+      "effective_batch_size": 32768,
+      "microbatch_size": 8192,
+      "optimizer_updates": "one per original outer batch, row-count-weighted loss accumulation",
+      "precision": "FP32, original TF32 disabled",
+      "new_scientific_floating_point_recipe": true
+    },
+    {
+      "id": "BF16_micro8192_accum4",
+      "effective_batch_size": 32768,
+      "microbatch_size": 8192,
+      "precision": "GPU autocast BF16 if actually supported; FP32 parameters/optimizer",
+      "new_scientific_floating_point_recipe": true
+    },
+    {
+      "id": "FP32_TF32_micro8192_accum4",
+      "effective_batch_size": 32768,
+      "microbatch_size": 8192,
+      "precision": "FP32 tensors with TF32 matmul explicitly enabled",
+      "new_scientific_floating_point_recipe": true
+    }
+  ],
+  "required_actual_controls": [
+    "record own input arrays, maturity and source hashes before each run",
+    "sample dedicated/shared WDDM memory and CUDA allocator peaks plus batch timing",
+    "reject nonfinite losses/weights",
+    "verify original-vs-epoch-durable GPU continuation across fresh processes",
+    "retain model, optimizer and CUDA RNG after every completed epoch on D or E",
+    "native reload and independent fixed-batch inference prefix controls before official candidate admission"
+  ],
+  "FP32_32768_original_reference_may_exceed_free_dedicated_capacity_and_needs_admission_before_rebenchmark": true,
+  "microbatch_accumulation_not_claimed_bit_identical_to_original_large_batch": true,
+  "BF16_or_TF32_not_claimed_to_preserve_previous_FP32_model_weights": true,
+  "CPU_checkpoint_equivalence_already_passed": true,
+  "GPU_checkpoint_equivalence_not_yet_tested": true,
+  "speedup_factor_not_measured_or_promised": true,
+  "no_relabeling_or_partial_annual_weights_reuse_as_original_recipe": true,
+  "new_native_fits": 0,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}
