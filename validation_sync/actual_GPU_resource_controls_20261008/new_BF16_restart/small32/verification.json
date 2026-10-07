@@ -1,0 +1,46 @@
+{
+  "case": "small32",
+  "status": "passed_actual_fresh_process_BF16_micro_restart",
+  "configuration": {
+    "kind": "mlp",
+    "target": "y_rank",
+    "hidden": [
+      128,
+      64
+    ],
+    "epochs": 32,
+    "batch_size": 257,
+    "microbatch_size": 67,
+    "predict_batch_size": 8192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.05,
+    "seed": 20261007,
+    "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+    "recipe": "own_mature_BF16_micro8192_weighted_accum_v1_20261008"
+  },
+  "training_rows": 1024,
+  "phases": [
+    {
+      "phase": "original",
+      "elapsed_seconds": 22.593000000000075,
+      "actual_child_exit": 0
+    },
+    {
+      "phase": "first",
+      "elapsed_seconds": 21.84400000000005,
+      "actual_child_exit": 0
+    },
+    {
+      "phase": "resumed",
+      "elapsed_seconds": 26.968999999999824,
+      "actual_child_exit": 0
+    }
+  ],
+  "all_training_losses_and_all_weight_bits_exact": true,
+  "preprocessing_and_native_prediction_bits_exact": true,
+  "actual_fixed8192_cold_prefix_bits_exact": true,
+  "changed_training_input_checkpoint_rejected": true,
+  "parameter_count": 16897,
+  "actual_checkpoint_sha256": "67220d5a3f59322a0f70ff021cef1991591362f6d70e3d25e2d49b11e46e212e"
+}

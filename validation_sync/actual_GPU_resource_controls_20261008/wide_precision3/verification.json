@@ -1,0 +1,256 @@
+{
+  "status": "passed_actual_own_mature_subset_wide_GPU_precision3_resource_benchmark",
+  "at_local": "2026-10-08T06:38:58",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\benchmark_actual_wide_GPU_precision3_v3_20261008.py": "583536a2a23c26f993ba4400e9a3a3311755fd942b00166b0ab32c9d786fd5b7",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_diverse_backbones_20261003.py": "6524e642f540bc0c79e6296d3c67959330d4126cb248b26f535110c8f05daa4e",
+    "D:\\3.Study\\数据分析\\赛题五\\data\\feature_manifest.json": "151751a6387385b6d44b05051b82c9b66a12d83ad4062d89fae298580124e3b5",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\rank16384_drop000_seed07_e32\\info_2021.json": "b7e9ab034d3c5ab6872362e490874ee0259c8c9866225038c4f0cfd473cf1ef8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural16384_full_bank_20261005\\rank16384_drop000_seed07_e32\\model_2021.joblib": "59c9b73241ad2a28f6876ff724c1fed7a99d4af860f8879aaeee8088704096cc",
+    "E:\\赛题五_本机临时\\GPU实测_20261008\\wide16384_micro8192_precision3_v3\\past_only_features.npy": "8b15c75254ac08ae05575220959897b0b4ad005ed54191b009766a3c88c252cb",
+    "E:\\赛题五_本机临时\\GPU实测_20261008\\wide16384_micro8192_precision3_v3\\past_only_rank_targets.npy": "b41ea50e8be64bd9246f0bc3d1db026954ae3cc0c4749ab5d8d34a596422bad4"
+  },
+  "records": [
+    {
+      "recipe": "FP32_micro8192_accum4",
+      "status": "passed_actual_wide3_updates_finite",
+      "effective_batch_size": 32768,
+      "microbatch_size": 8192,
+      "actual_allow_tf32": false,
+      "actual_autocast_dtype": "float32",
+      "timed_update_seconds": [
+        2.4008673000000726,
+        2.389662299999827,
+        2.5442234999998163
+      ],
+      "median_timed_update_seconds": 2.4008673000000726,
+      "training_losses": [
+        255.0949821472168,
+        6.836431264877319,
+        5.564133644104004
+      ],
+      "CUDA_peak_allocated_bytes": 5780819456,
+      "CUDA_peak_reserved_bytes": 6689914880,
+      "observed_WDDM_dedicated_max_bytes": 6939029504,
+      "observed_WDDM_shared_max_bytes": 85983232,
+      "WDDM_observations_not_continuous_peak": [
+        {
+          "dedicated_bytes": 5865279488,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 5865279488,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 5951262720
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6939029504,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6939029504,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 7025012736
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6939029504,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6939029504,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 7025012736
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6939029504,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6939029504,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 7025012736
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "recipe": "BF16_micro8192_accum4",
+      "status": "passed_actual_wide3_updates_finite",
+      "effective_batch_size": 32768,
+      "microbatch_size": 8192,
+      "actual_allow_tf32": false,
+      "actual_autocast_dtype": "bfloat16",
+      "timed_update_seconds": [
+        1.078176699999858,
+        1.0137558000001263,
+        0.963881899999933
+      ],
+      "median_timed_update_seconds": 1.0137558000001263,
+      "training_losses": [
+        255.24010848999023,
+        6.827671408653259,
+        5.606537222862244
+      ],
+      "CUDA_peak_allocated_bytes": 5675289600,
+      "CUDA_peak_reserved_bytes": 6555697152,
+      "observed_WDDM_dedicated_max_bytes": 6806908928,
+      "observed_WDDM_shared_max_bytes": 85983232,
+      "WDDM_observations_not_continuous_peak": [
+        {
+          "dedicated_bytes": 5733163008,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 5733163008,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 5819146240
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6806908928,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6806908928,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 6892892160
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6806908928,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6806908928,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 6892892160
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6806908928,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6806908928,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 6892892160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "recipe": "FP32_TF32_micro8192_accum4",
+      "status": "passed_actual_wide3_updates_finite",
+      "effective_batch_size": 32768,
+      "microbatch_size": 8192,
+      "actual_allow_tf32": true,
+      "actual_autocast_dtype": "float32",
+      "timed_update_seconds": [
+        1.483120000000099,
+        1.4949827999998888,
+        1.474617900000112
+      ],
+      "median_timed_update_seconds": 1.483120000000099,
+      "training_losses": [
+        255.10057067871094,
+        6.837486267089844,
+        5.563234090805054
+      ],
+      "CUDA_peak_allocated_bytes": 5781147136,
+      "CUDA_peak_reserved_bytes": 6555697152,
+      "observed_WDDM_dedicated_max_bytes": 6806908928,
+      "observed_WDDM_shared_max_bytes": 85983232,
+      "WDDM_observations_not_continuous_peak": [
+        {
+          "dedicated_bytes": 5733163008,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 5733163008,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 5819146240
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6806908928,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6806908928,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 6892892160
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6806908928,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6806908928,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 6892892160
+            }
+          ]
+        },
+        {
+          "dedicated_bytes": 6806908928,
+          "shared_bytes": 85983232,
+          "rows": [
+            {
+              "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+              "DedicatedUsage": 6806908928,
+              "SharedUsage": 85983232,
+              "TotalCommitted": 6892892160
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "GPU_device_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "original_configuration": {
+    "kind": "mlp",
+    "target": "y_rank",
+    "batch_size": 32768,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.0,
+    "hidden": [
+      16384,
+      8192,
+      4096
+    ],
+    "epochs": 32,
+    "seed": 20261007
+  },
+  "original_batch32768_recipe_not_rebenchmarked": true,
+  "subset_feature_tensor_smaller_than_full_annual_tensor": true,
+  "wall_clock_or_memory_differences_do_not_prove_full_annual_speedup": true,
+  "new_complete_annual_models": 0,
+  "new_quality_scores": 0,
+  "test_labels_read": false
+}

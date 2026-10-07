@@ -1,0 +1,73 @@
+{
+  "recipe": "FP32_TF32_micro8192_accum4",
+  "status": "passed_actual_wide3_updates_finite",
+  "effective_batch_size": 32768,
+  "microbatch_size": 8192,
+  "actual_allow_tf32": true,
+  "actual_autocast_dtype": "float32",
+  "timed_update_seconds": [
+    1.483120000000099,
+    1.4949827999998888,
+    1.474617900000112
+  ],
+  "median_timed_update_seconds": 1.483120000000099,
+  "training_losses": [
+    255.10057067871094,
+    6.837486267089844,
+    5.563234090805054
+  ],
+  "CUDA_peak_allocated_bytes": 5781147136,
+  "CUDA_peak_reserved_bytes": 6555697152,
+  "observed_WDDM_dedicated_max_bytes": 6806908928,
+  "observed_WDDM_shared_max_bytes": 85983232,
+  "WDDM_observations_not_continuous_peak": [
+    {
+      "dedicated_bytes": 5733163008,
+      "shared_bytes": 85983232,
+      "rows": [
+        {
+          "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+          "DedicatedUsage": 5733163008,
+          "SharedUsage": 85983232,
+          "TotalCommitted": 5819146240
+        }
+      ]
+    },
+    {
+      "dedicated_bytes": 6806908928,
+      "shared_bytes": 85983232,
+      "rows": [
+        {
+          "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+          "DedicatedUsage": 6806908928,
+          "SharedUsage": 85983232,
+          "TotalCommitted": 6892892160
+        }
+      ]
+    },
+    {
+      "dedicated_bytes": 6806908928,
+      "shared_bytes": 85983232,
+      "rows": [
+        {
+          "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+          "DedicatedUsage": 6806908928,
+          "SharedUsage": 85983232,
+          "TotalCommitted": 6892892160
+        }
+      ]
+    },
+    {
+      "dedicated_bytes": 6806908928,
+      "shared_bytes": 85983232,
+      "rows": [
+        {
+          "Name": "pid_17328_luid_0x00000000_0x000119FD_phys_0",
+          "DedicatedUsage": 6806908928,
+          "SharedUsage": 85983232,
+          "TotalCommitted": 6892892160
+        }
+      ]
+    }
+  ]
+}
