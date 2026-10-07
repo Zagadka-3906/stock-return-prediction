@@ -1,0 +1,94 @@
+{
+  "status": "predeclared_full_universe_CPU_HGB24_native_training_and44_connected_official_scheme_extension",
+  "created_at_local": "2026-10-07T04:32:11",
+  "configurations": {
+    "full_rank_HGB7": {
+      "target": "y_rank",
+      "max_leaf_nodes": 7,
+      "loss": "squared_error"
+    },
+    "full_rank_HGB31": {
+      "target": "y_rank",
+      "max_leaf_nodes": 31,
+      "loss": "squared_error"
+    },
+    "full_return_HGB15_squared": {
+      "target": "y_ret_1d",
+      "max_leaf_nodes": 15,
+      "loss": "squared_error"
+    },
+    "full_return_HGB15_absolute": {
+      "target": "y_ret_1d",
+      "max_leaf_nodes": 15,
+      "loss": "absolute_error"
+    }
+  },
+  "fixed_parameters": {
+    "learning_rate": 0.05,
+    "max_iter": 96,
+    "min_samples_leaf": 256,
+    "l2_regularization": 1.0,
+    "max_bins": 63,
+    "max_features": 1.0,
+    "categorical_features": null,
+    "early_stopping": false,
+    "random_state": 20261007
+  },
+  "features": "the_same63_provided_data_derived_features_without_parent_forecasts",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "actual_declared_future_native_fits": 24,
+  "training": "is_train and trade_date<fold_cutoff(year) and price_valid and target finite; labels mature with one-day boundary removed",
+  "preprocessing": "median imputation, mean/std,clip10 fit only own mature fold rows; return targets winsorized at own past0.005/0.995 quantiles; rank targets unchanged",
+  "final2025": "final mature training only, no test labels",
+  "inference_runtime": "new8192-row numeric-tree batching subject to each actual63-feature model full original256/native reload/independent NumPy/prefix checks",
+  "prerequisites": [
+    "actual CPU_HGB44_round112_full_registration naturally passed and main QA23 receipt",
+    "actual own four63-feature diagnostic controls passed",
+    "at least12GiB available RAM and no old queue live round writer before next native fit"
+  ],
+  "threads": 4,
+  "planned_official_comparison": {
+    "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "rows": 5635800,
+    "days": 1212,
+    "heads": 4,
+    "ordered_means": [
+      "rank_pair",
+      "return_pair",
+      "all_four"
+    ],
+    "weights": [
+      0.01,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "anchors": [
+      100,
+      106
+    ],
+    "planned_records": 44,
+    "transform": "same-day forecast percentile fusion, original past-only return calibration, original official evaluation.py and continuous turnover",
+    "only_complete_S_selection": true
+  },
+  "every_actual_validation_to_GitHub_main": true,
+  "all_original_uncompleted_jobs_retained": true,
+  "no_test_labels_read": true,
+  "selection_bias_uncorrected": true,
+  "prepared_plan_does_not_prove_new_fits_scores_inference_or_exhaustion": true
+}
