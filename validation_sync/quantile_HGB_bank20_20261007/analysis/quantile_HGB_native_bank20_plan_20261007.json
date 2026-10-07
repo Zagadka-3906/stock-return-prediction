@@ -1,0 +1,89 @@
+{
+  "status": "predeclared_unfitted20_CPU_quantile_HGB_native_models",
+  "at_local": "2026-10-07T10:57:41",
+  "teacher_qualified_round": 106,
+  "configurations": {
+    "flagged_quantile_hgb7_q25": {
+      "loss": "quantile",
+      "quantile": 0.25,
+      "max_leaf_nodes": 7
+    },
+    "flagged_quantile_hgb15_q25": {
+      "loss": "quantile",
+      "quantile": 0.25,
+      "max_leaf_nodes": 15
+    },
+    "flagged_quantile_hgb7_q75": {
+      "loss": "quantile",
+      "quantile": 0.75,
+      "max_leaf_nodes": 7
+    },
+    "flagged_quantile_hgb15_q75": {
+      "loss": "quantile",
+      "quantile": 0.75,
+      "max_leaf_nodes": 15
+    }
+  },
+  "fixed_parameters": {
+    "learning_rate": 0.05,
+    "max_iter": 128,
+    "min_samples_leaf": 64,
+    "l2_regularization": 1.0,
+    "max_bins": 63,
+    "max_features": 1.0,
+    "categorical_features": null,
+    "early_stopping": false,
+    "random_state": 20261007
+  },
+  "CPU_threads": 4,
+  "annual_native_fit_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "final_native_fit_year": 2025,
+  "prospective_native_model_fits": 20,
+  "first2020_identity": true,
+  "feature_count": 64,
+  "features": "63 supplied-field-derived features plus qualified106 current forecast average_rank/N",
+  "target": "mature past flagged y_rank+0.5 minus qualified106 current forecast percentile",
+  "preprocessing": "finite median fill mean/std clip10 on corresponding mature past training window only",
+  "early_stopping": false,
+  "test_labels_read": false,
+  "new_quality_scores": 0,
+  "difference_from_prior_squared_absolute_bank": "quantile loss .25 and .75,128 iterations,min leaf64; prior64 iterations,min leaf256",
+  "later_comparison_parent_candidates": [
+    112,
+    117,
+    118
+  ],
+  "later_planned_round": 119,
+  "later_weights": [
+    0.0003125,
+    0.000625,
+    0.00125,
+    0.0025,
+    0.005,
+    0.0075,
+    0.01,
+    0.015,
+    0.02,
+    0.03,
+    0.04,
+    0.05
+  ],
+  "later_single_heads_plus_equal_q25_equal_q75_all4_mean": 7,
+  "later_expected_official_records": 88,
+  "later_official_scoring_requires_complete119_source_pipeline_and85_full_controls": true,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_quantile_HGB_native_bank20_20261007.py": "a7102efa61241e0f4dc8522849a0cf44723fab5c1b1fe2cfe4ba6f5b4694be76",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\cpu_conditional_residual_hgb_bank20_plan_20261007.json": "aa29904ec6324c7a191eeced8a246cb1ed77a543376c6ff72308e67f18356502",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_cpu_conditional_residual_hgb_bank20_20261007.py": "02b70cdf27f37cb0a22ef0e6f1e917f8f6942859630956f3fe4854a2101c352d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\cpu_conditional_residual_hgb_codec_20261007.py": "56d8a2d1b93827b8dc2d0675b766330a02a8efb1b264018cad82ea307bf880b6",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_cpu_conditional_residual_hgb_codec_preflight_20261007.py": "2a23e755c903f0f931164d23ef5854226d8b38bf3bc29a14c680541160daa20b"
+  },
+  "all_training_validation_years_previously_viewed": true,
+  "selection_bias_uncorrected": true,
+  "global_direction_or_resource_exhaustion_not_established": true
+}
