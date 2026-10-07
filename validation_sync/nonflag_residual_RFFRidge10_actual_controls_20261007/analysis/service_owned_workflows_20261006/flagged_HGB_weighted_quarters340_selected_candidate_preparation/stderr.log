@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\prepare_flagged_HGB_weighted_quarters340_selected_candidate_v3_20261007.py", line 207, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\prepare_flagged_HGB_weighted_quarters340_selected_candidate_v3_20261007.py", line 194, in main
+    prediction,storage=predict(ns,selection,CANDIDATE,parent_candidate/'cohort_curve.json',OUT/'future_return_mapping.json');output_scope.reverify()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_refined_weighted_flagged_CPU_HGB_scheme_v2_20261007.py", line 14, in predict
+    result,storage=importlib.import_module(module).predict(ns,record,candidate,parent_curve_source,mapping_path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_flagged_CPU_HGB_weighted_quarters_scheme_v2_20261007.py", line 136, in predict
+    result, storage = namespace['predict'](proxy, record, candidate, parent_curve_source, mapping_path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_simplex_residual47_native_scheme_20261006.py", line 130, in predict
+    finally:
+             
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_cohort_calibrated_scheme_20261006.py", line 83, in predict
+    assert result['status'] == 'passed'
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_ready_goss_reference_scheme_v2_20261006.py", line 39, in predict
+    original(ns,record,candidate_path=candidate,mapping_path=mapping_path)
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_gradient_sampling_scheme_codec_20261005.py", line 27, in predict
+    original(ns, record, candidate_path=candidate, mapping_path=mapping_path)
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_nystrom_ridge_scheme_20261004.py", line 26, in predict
+    assert info['sha256']==protocol['future_native_model_sources'][name]['sha256'],name
+                           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'future_native_model_sources'

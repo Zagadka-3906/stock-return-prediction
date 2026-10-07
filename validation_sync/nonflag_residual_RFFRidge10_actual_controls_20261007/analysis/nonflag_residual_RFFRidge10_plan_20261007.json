@@ -1,0 +1,43 @@
+{
+  "status": "frozen_before_actual_diagnostics_and10_mature_fits",
+  "at_local": "2026-10-07T13:58:08",
+  "training_population": "nonflag!=1, price_valid, finite own past OOF y_rank; exclusive mature annual cutoff",
+  "target": "provided y_rank + .5 - qualified106 current-day all-forecast averageRank/N",
+  "features": "63 provided-derived features + qualified106 current-day all-forecast averageRank/N",
+  "preprocessing": "reuse identical own-window column finite median/mean/std and clip10 from verified HGB cache",
+  "fixed_parameters": {
+    "ridge_solver": "cholesky",
+    "fit_intercept": true,
+    "copy_X": true
+  },
+  "configurations": {
+    "nonflag_residual_rffridge_g003125": {
+      "gamma": 0.03125,
+      "n_components": 32,
+      "random_state": 20261007,
+      "alpha_per_training_row": 0.01
+    },
+    "nonflag_residual_rffridge_g025": {
+      "gamma": 0.25,
+      "n_components": 32,
+      "random_state": 20261007,
+      "alpha_per_training_row": 0.01
+    }
+  },
+  "native_fit_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "actual_declared_native_fits": 10,
+  "cpu_threads": 2,
+  "inference_recipe": "fixed8192 padded rows; native sklearn RBF sampler and Ridge, independent JSON Fourier frequencies offsets and coefficients",
+  "resource_gate_available_RAM_GiB": 12,
+  "cache_location": "E:/赛题五_本机临时/nonflag_residual_HGB10_20261007",
+  "new_large_feature_caches": 0,
+  "random_feature_mapping_fit_uses_training_feature_count_and_fixed_seed_no_validation_rows_or_labels": true,
+  "official_scoring_requires_later_complete_future_source_admission": true,
+  "test_labels_read": false
+}
