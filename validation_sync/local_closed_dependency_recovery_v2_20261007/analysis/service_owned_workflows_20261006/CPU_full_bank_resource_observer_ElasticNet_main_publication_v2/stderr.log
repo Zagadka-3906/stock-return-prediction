@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_CPU_full_bank_resource_observers_v2_20261007.py", line 166, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_CPU_full_bank_resource_observers_v2_20261007.py", line 147, in main
+    sync.git('push', 'origin', 'HEAD:refs/heads/main', timeout=180)
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_CPU_full_bank_resource_observers_v2_20261007.py", line 86, in retry_git
+    return old_git(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\sync_validated_rounds_main_20261005.py", line 56, in git
+    raise RuntimeError(f'git {args[0]} failed: {result.stderr.strip()[:1500]}')
+RuntimeError: git push failed: To https://github.com/Zagadka-3906/stock-return-prediction.git
+ ! [remote rejected] HEAD -> main (cannot lock ref 'refs/heads/main': is at eff5400b6e7ef8f4f4612496847fdf147b94fc42 but expected 76a7c79e778286b74a3c142bc761f4c766512087)
+error: failed to push some refs to 'https://github.com/Zagadka-3906/stock-return-prediction.git'
