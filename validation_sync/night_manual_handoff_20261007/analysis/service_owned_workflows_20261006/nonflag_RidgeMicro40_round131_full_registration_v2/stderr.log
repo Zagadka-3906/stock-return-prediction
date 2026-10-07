@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_nonflag_RidgeMicro40_round131_full_registration_v2_20261007.py", line 113, in <module>
+    with installed(A/'RidgeMicro131_full42_file_IO_git_v2_20261007'):main()
+                                                                     ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_nonflag_RidgeMicro40_round131_full_registration_v2_20261007.py", line 91, in main
+    helpers.sync.git=retry_git;github()
+                               ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_nonflag_RidgeMicro40_round131_full_validation_20261007.py", line 107, in main
+    helpers.verify_main(previous)
+  File "D:\3.Study\数据分析\赛题五\analysis\finalize_main_branch_consolidation_20261005.py", line 35, in verify_main
+    assert sync.git('ls-remote', '--heads', 'origin').splitlines() == [f'{commit}\trefs/heads/main']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_nonflag_RidgeMicro40_round131_full_registration_v2_20261007.py", line 60, in retry_git
+    try:return old_git(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\file_backed_hidden_git_runtime_20261007.py", line 21, in git
+    raise RuntimeError('git '+args[0]+' failed: '+message[:1500])
+RuntimeError: git ls-remote failed: fatal: unable to access 'https://github.com/Zagadka-3906/stock-return-prediction.git/': TLS connect error: error:0A000126:SSL routines::unexpected eof while reading
+
