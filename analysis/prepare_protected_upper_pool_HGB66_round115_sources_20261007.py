@@ -55,6 +55,8 @@ def generate(parent):
         "'existing_actual_official_records': 44":"'existing_actual_official_records': 66", "'scored_records': 44":"'scored_records': 66",
         "'original_official_pilot_records_registered': 44":"'original_official_pilot_records_registered': 66",
         'all44':'all66','actual44':'actual66','the44':'the66','official44':'official66','第113轮':'第115轮',
+        'Register44':'Register66','Registry for the44':'Registry for the66',
+        '44项全股票池CPU直方图梯度回归与同日CDF融合':'66项低分区CPU HGB排序与CDF融合',
     }
     generated={}
     for old,new in NAMES.items():
@@ -105,7 +107,7 @@ def generate(parent):
         elif old.startswith('publish_'):
             needle="        A / 'predict_protected_upper_pool_CPU_HGB_scheme_20261007.py',"
             assert text.count(needle)==1
-            text=text.replace(needle,needle+"\n        A / 'protected_upper_pool_HGB_CDF_transform_20261007.py',\n        A / 'protected_upper_pool_HGB66_candidate_actual_launch_20261007.json',")
+            text=text.replace(needle,needle+"\n        A / 'protected_upper_pool_HGB_CDF_transform_20261007.py',\n        A / 'protected_upper_pool_HGB_CDF_plan_20261007.json',\n        A / 'protected_upper_pool_HGB_CDF_preflight_20261007/verification.json',\n        A / 'protected_upper_pool_HGB66_scoring_admission_20261007.json',\n        A / 'protected_upper_pool_HGB66_candidate_actual_launch_20261007.json',")
             start=text.index("    payload[(prefix / 'README.md').as_posix()] += (")
             end=text.index('    previous = sync.git',start)
             text=text[:start]+"""    payload[(prefix / 'README.md').as_posix()] += (
