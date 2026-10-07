@@ -1,0 +1,67 @@
+{
+  "status": "compiled_seven_sources_before_full_prospective_admission",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_flagged_HGB88_pipeline_complete_v4_20261007.py": "f902ae94a83b6439918a44c85afbd7f2a69bf6c98953b7ca579a6b9610d3debc",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_flagged_HGB_small_amplitude88_official_comparison_v2_20261007.py": "ed9c6c470ed0cc839e88ac2ce692f41ef46ca1ece4863e86b2b35711e6acb9f9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_flagged_HGB_small_amplitude88_official_comparison_v4_20261007.py": "921d13c26e520f7b553f7fdf88cd3b45380ce2d899708d72c737539aa7b1701e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_flagged_HGB_small_amplitude88_evidence_v2_20261007.py": "423bf51e68bfbd72738b15fbe55293b30f1880189e739375a03d0306a12140c2",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_flagged_HGB_small_amplitude88_evidence_v4_20261007.py": "1cfe0d50129fe682d0490850dc7e9fb88ba70ef49c905893b1f719d713174d5c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_flagged_HGB_small_amplitude88_selected_candidate_v3_20261007.py": "6e29b2c44937d3d8c8d633cab1f4378ae1c34b4aa483aac436503de00d12dc6d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_flagged_HGB_small_amplitude88_selected_candidate_v5_20261007.py": "7259e9c149592ead7d3ae6b949e71d2cb8f9de80eb1407b21ae2b72903575643",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\seal_flagged_HGB_small_amplitude88_selected_candidate_v3_20261007.py": "f05dbbce8ea0fdb6e70eeb20c609b8ceded7a945081221aec31f8827322c0ba9",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\seal_flagged_HGB_small_amplitude88_selected_candidate_v5_20261007.py": "34301deac27d12fd3e26aae312c5e77bb660c0e0a6d00f78ef7c07855b040185",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_flagged_HGB88_round116_sources_v3_20261007.py": "5dace28256e0beb905062fb3ae43b412a87b0882c65cdbc1b4b9348e343355e0",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_flagged_HGB88_round116_full_registration_v3_20261007.py": "7a8ac9e0eb9084ff334da8a6b4214c26b21b7504d8aeba4e4e92de534d36215f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_flagged_HGB88_round116_sources_v4_20261007.py": "bfa7a8ad65dea50b3e3c7691cf249f0aa6ccb222b5eea9aa94b3f3745247ed9d"
+  },
+  "jobs": [
+    {
+      "name": "flagged_HGB_small_amplitude88_official_comparison_v4",
+      "driver": "run_flagged_HGB_small_amplitude88_official_comparison_v4_20261007.py",
+      "arguments": []
+    },
+    {
+      "name": "flagged_HGB_small_amplitude88_scores_main_publication_v4",
+      "driver": "publish_flagged_HGB_small_amplitude88_evidence_v4_20261007.py",
+      "arguments": [
+        "scores"
+      ]
+    },
+    {
+      "name": "flagged_HGB_small_amplitude88_selected_candidate_preparation_v4",
+      "driver": "prepare_flagged_HGB_small_amplitude88_selected_candidate_v5_20261007.py",
+      "arguments": []
+    },
+    {
+      "name": "flagged_HGB_small_amplitude88_selected_candidate_sealing_v4",
+      "driver": "seal_flagged_HGB_small_amplitude88_selected_candidate_v5_20261007.py",
+      "arguments": []
+    },
+    {
+      "name": "flagged_HGB88_round116_full_registration",
+      "driver": "run_flagged_HGB88_round116_full_registration_v3_20261007.py",
+      "arguments": []
+    }
+  ],
+  "routes": {
+    "protected_upper_pool_HGB66_round115_full_registration_v2": "protected_upper_pool_HGB66_round115_full_registration_v5",
+    "flagged_HGB_small_amplitude88_official_comparison_v2_20261007": "flagged_HGB_small_amplitude88_official_comparison_v4_20261007",
+    "flagged_HGB_small_amplitude88_official_comparison_v2": "flagged_HGB_small_amplitude88_official_comparison_v4",
+    "flagged_HGB_small_amplitude88_scores_main_publication_v2": "flagged_HGB_small_amplitude88_scores_main_publication_v4",
+    "flagged_HGB_small_amplitude88_selected_candidate_preparation_v2": "flagged_HGB_small_amplitude88_selected_candidate_preparation_v4",
+    "flagged_HGB_small_amplitude88_selected_candidate_sealing_v2": "flagged_HGB_small_amplitude88_selected_candidate_sealing_v4",
+    "flagged_HGB_small_amplitude88_scores_v2_github_20261007": "flagged_HGB_small_amplitude88_scores_v4_github_20261007",
+    "flagged_HGB_small_amplitude88_selected_release_v2_20261007": "flagged_HGB_small_amplitude88_selected_release_v4_20261007",
+    "flagged_HGB_small_amplitude88_pre_inference_source_freeze_v2_20261007": "flagged_HGB_small_amplitude88_pre_inference_source_freeze_v4_20261007",
+    "run_flagged_HGB_small_amplitude88_official_comparison_v2_20261007": "run_flagged_HGB_small_amplitude88_official_comparison_v4_20261007",
+    "prepare_flagged_HGB_small_amplitude88_selected_candidate_v3_20261007": "prepare_flagged_HGB_small_amplitude88_selected_candidate_v5_20261007",
+    "seal_flagged_HGB_small_amplitude88_selected_candidate_v3_20261007": "seal_flagged_HGB_small_amplitude88_selected_candidate_v5_20261007",
+    "prepare_flagged_HGB88_round116_sources_v2_20261007": "prepare_flagged_HGB88_round116_sources_v3_20261007",
+    "run_flagged_HGB88_round116_full_registration_v2_20261007": "run_flagged_HGB88_round116_full_registration_v3_20261007",
+    "flagged_HGB88_round116_actual_registration_v2_20261007": "flagged_HGB88_round116_actual_registration_v3_20261007",
+    "flagged_HGB88_round116_source_preparation_v2_20261007": "flagged_HGB88_round116_source_preparation_v3_20261007"
+  },
+  "canonical116_sources_written": 0,
+  "new_native_fits": 0,
+  "new_quality_scores": 0
+}

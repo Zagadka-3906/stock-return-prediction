@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_protected_upper_pool_HGB66_round115_full_registration_20261007.py", line 96, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_protected_upper_pool_HGB66_round115_full_registration_20261007.py", line 31, in main
+    protocol=register();folder=A/'optimization_20261003_r115';pins=protocol['input_sha256']
+             ^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\register_protected_upper_pool_HGB66_round115_artifacts_20261007.py", line 115, in main
+    os.link(SOURCE_CANDIDATE / relative, target)
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: 'D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r112\\selection.json' -> 'D:\\3.Study\\数据分析\\赛题五\\candidates\\optimization_20261003_r115\\original_inference_selection.json'
