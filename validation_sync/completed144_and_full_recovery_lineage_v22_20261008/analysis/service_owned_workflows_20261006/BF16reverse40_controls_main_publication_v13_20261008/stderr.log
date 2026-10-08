@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_BF16reverse40_evidence_v13_20261008.py", line 92, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('phase',choices=('controls','scores'));main(parser.parse_args().phase)
+                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_BF16reverse40_evidence_v13_20261008.py", line 20, in main
+    closed('BF16reverse40_round138_source_admission_v13_20261008')
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_BF16reverse40_evidence_v13_20261008.py", line 14, in closed
+    assert read(folder/'service_execution.json')['status']=='passed',name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BF16reverse40_round138_source_admission_v13_20261008
