@@ -1,0 +1,121 @@
+{
+  "status": "actual_connected_API_recovery_and_candidate_QA_in_progress",
+  "at_local": "2026-10-08T18:27:21",
+  "deadline_local": "2026-10-10T23:59:00+08:00",
+  "official_scores": {
+    "135": {
+      "records": 40,
+      "case": 2,
+      "score": 0.45114695864085175,
+      "configuration": {
+        "anchor_round": 134,
+        "model": null,
+        "role": null,
+        "weight": 0.0,
+        "universe": null
+      }
+    },
+    "144": {
+      "records": 100,
+      "case": 92,
+      "score": 0.4511512965609873,
+      "configuration": {
+        "anchor_round": 143,
+        "model": "ConeRidge_group14_share0.5",
+        "group": 14,
+        "share": 0.5,
+        "role": "nonflag_valid_2021_onward",
+        "weight": 0.0025,
+        "universe": "all_current_raw_forecasts"
+      }
+    }
+  },
+  "best_fully_qualified_round": 144,
+  "best_fully_qualified_score": 0.4511512965609873,
+  "stages": {
+    "exact135_144_connected_API_publication_reconciliation_v3_20261008": {
+      "status": "passed",
+      "failure": null,
+      "at_local": "2026-10-08T15:00:02",
+      "definition_sha256": "49ef596a6ca817496993725689174171072b37a1de356a07952aba7705f49d92",
+      "sources_and_native_mathematics_unchanged": true
+    },
+    "BF16wide40_selected_candidate_preparation_v6_20261008": {
+      "status": "passed",
+      "failure": null,
+      "at_local": "2026-10-08T15:00:50",
+      "definition_sha256": "4d16dc4a433490106440fd2e558777365d20b4be25aef8242506b3c26b0f8b47",
+      "sources_and_native_mathematics_unchanged": true
+    },
+    "BF16wide40_selected_candidate_sealing_v6_20261008": {
+      "status": "passed",
+      "failure": null,
+      "at_local": "2026-10-08T15:01:02",
+      "definition_sha256": "6f31433aec43afa2591274e73ad1a72927b05703d4c63c6197b87d98bf1d0069",
+      "sources_and_native_mathematics_unchanged": true
+    },
+    "BF16wide40_round135_full_registration_v7_20261008": {
+      "status": "passed",
+      "failure": null,
+      "at_local": "2026-10-08T15:27:04",
+      "definition_sha256": "03b2429668f4bc5ea59793ea7e9477d1d37d8158aa1d6129ce845ab337904a41",
+      "sources_and_native_mathematics_unchanged": true
+    },
+    "ConeRidgeAlpha100_selected_candidate_preparation_v9_20261008": {
+      "status": "passed",
+      "failure": null,
+      "at_local": "2026-10-08T15:14:30",
+      "definition_sha256": "6170e75578d4b78d7d8d8b2017a346f01c9d89c42b6623e14add962128d2d7b8",
+      "sources_and_native_mathematics_unchanged": true
+    },
+    "ConeRidgeAlpha100_selected_candidate_sealing_v9_20261008": {
+      "status": "failed",
+      "failure": "AssertionError: ",
+      "at_local": "2026-10-08T15:14:37",
+      "definition_sha256": "fc21aeb4bff1f24967c6c29ba357be1d220c5bd26f05240bef50322fca55c30d",
+      "sources_and_native_mathematics_unchanged": true
+    },
+    "ConeRidgeAlpha100_round144_full_registration_v11_20261008": {
+      "status": "failed",
+      "failure": "AssertionError: ConeRidgeAlpha100_selected_candidate_sealing_v9_20261008",
+      "at_local": "2026-10-08T15:14:44",
+      "definition_sha256": "9013fc9ffb7584b05801a30df5ac94bb3180210a4e31e33ada9fc99e01527853",
+      "sources_and_native_mathematics_unchanged": true
+    }
+  },
+  "publication_requests": {
+    "135": {
+      "status": "awaiting_actual_connected_API_main_publication_after_full_candidate_and_original_QA",
+      "bundle": "E:\\赛题五_本机临时\\round135_connected_API_main_v1_20261008\\bundle.json",
+      "bundle_sha256": "b46e709836e5c900cac1e51ade55b6bcaccfc121c213cb555b1dcd25b7c23fc8",
+      "parent": "a746ade2c26042f98d4747bc22a0908ee52f0f46",
+      "expected_tree": "e2fe873b3568294f9032ac4a9dd2249966002a2e",
+      "exported_files": 4488,
+      "binary_new_blobs": 8,
+      "scored_records": 40,
+      "new_quality_scores": 0
+    },
+    "144": {
+      "status": "awaiting_actual_connected_API_main_publication_after_full_candidate_and_original_QA",
+      "bundle": "E:\\赛题五_本机临时\\round144_connected_API_main_v1_20261008\\bundle.json",
+      "bundle_sha256": "c058090aa2916a4c29b8a24578176e61c470b8840ec44f1226d14673d5925b00",
+      "parent": "ea33c9c6dbe0886e679f519ecc149da176a5e22d",
+      "expected_tree": "7c5a42342321b6d6d7a55e48edc7f11ee849a750",
+      "exported_files": 4914,
+      "binary_new_blobs": 10,
+      "scored_records": 100,
+      "new_quality_scores": 0
+    }
+  },
+  "available_memory_GiB": 17.067386627197266,
+  "free_storage_GiB": {
+    "D": 3.332347869873047,
+    "E": 132.82086181640625
+  },
+  "score_publication_actual_main_commit": "a746ade2c26042f98d4747bc22a0908ee52f0f46",
+  "new_quality_scores_by_recovery": 0,
+  "pilot144_not_promoted_until_full_native_sealing_QA_and_main_receipt": true,
+  "pending136_to141_need_fresh135_gate_repair": true,
+  "optimization_exhaustion_proven": false,
+  "test_labels_read": false
+}
