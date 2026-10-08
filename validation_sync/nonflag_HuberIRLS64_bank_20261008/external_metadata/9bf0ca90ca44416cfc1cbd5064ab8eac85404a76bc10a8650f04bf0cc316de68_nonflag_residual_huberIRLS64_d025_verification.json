@@ -1,0 +1,84 @@
+{
+  "name": "nonflag_residual_huberIRLS64_d025",
+  "configuration": {
+    "delta": 0.25,
+    "alpha_per_training_row": 0.01,
+    "max_iter": 8,
+    "tol": 1e-06,
+    "batch_rows": 8192,
+    "target_not_clipped": true,
+    "intercept_penalized": false,
+    "initialization": "own_mature_L2_normal_equations"
+  },
+  "training_rows": 200003,
+  "fit_seconds": 2.3769505999989633,
+  "metadata": {
+    "training_solver_recipe": "fixed8192_Huber_IRLS65_v1",
+    "actual_rows": 200003,
+    "initial_blocks": 25,
+    "actual_iterations": 8,
+    "history": [
+      {
+        "iteration": 1,
+        "training_objective": 6906.723378485036,
+        "coefficient_delta": 0.01251162110525808,
+        "blocks": 25
+      },
+      {
+        "iteration": 2,
+        "training_objective": 6899.084186258224,
+        "coefficient_delta": 0.004815779057808917,
+        "blocks": 25
+      },
+      {
+        "iteration": 3,
+        "training_objective": 6897.352386825047,
+        "coefficient_delta": 0.0018832895326587051,
+        "blocks": 25
+      },
+      {
+        "iteration": 4,
+        "training_objective": 6896.930526574433,
+        "coefficient_delta": 0.0009069374805659586,
+        "blocks": 25
+      },
+      {
+        "iteration": 5,
+        "training_objective": 6896.819508137114,
+        "coefficient_delta": 0.00048825610581579304,
+        "blocks": 25
+      },
+      {
+        "iteration": 6,
+        "training_objective": 6896.788531376238,
+        "coefficient_delta": 0.00026553404611386056,
+        "blocks": 25
+      },
+      {
+        "iteration": 7,
+        "training_objective": 6896.779569983337,
+        "coefficient_delta": 0.00014475866187703412,
+        "blocks": 25
+      },
+      {
+        "iteration": 8,
+        "training_objective": 6896.776923493776,
+        "coefficient_delta": 7.89195910178564e-05,
+        "blocks": 25
+      }
+    ],
+    "converged_by_own_training_coefficient_tolerance": false,
+    "fixed_maximum_iterations_recipe_not_global_optimum_claim": true,
+    "validation_early_stopping_or_target_clipping": false,
+    "maximum_block_rows": 8192,
+    "no_full_prepared_training_matrix_allocated": true
+  },
+  "actual_dense_oracle_coefficients_and_all_objectives_close": true,
+  "native_reload_decoder_and6_prefixes_bits_exact": true,
+  "actual_training_inference_rows": 10017,
+  "native_model_sha256": "d1c04a8bc49a3715c9eb1269cadcb898f3575966dc37edf13fb03a53d66a1eef",
+  "state_sha256": "30b743bd29fde7db14da1f67a177d3545bf7e7d93cb674bdf01a6d3f7c570429",
+  "process_RSS_GiB": 5.698482513427734,
+  "actual_official_scores": 0,
+  "full_annual_model_not_claimed": true
+}

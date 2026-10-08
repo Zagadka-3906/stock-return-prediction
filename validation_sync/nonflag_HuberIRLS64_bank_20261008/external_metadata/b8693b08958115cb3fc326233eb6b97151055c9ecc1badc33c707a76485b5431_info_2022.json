@@ -1,0 +1,178 @@
+{
+  "name": "nonflag_residual_huberIRLS64_d025",
+  "year": 2022,
+  "parameters": {
+    "delta": 0.25,
+    "alpha_per_training_row": 0.01,
+    "max_iter": 8,
+    "tol": 1e-06,
+    "batch_rows": 8192,
+    "target_not_clipped": true,
+    "intercept_penalized": false,
+    "initialization": "own_mature_L2_normal_equations",
+    "solver": "fixed8192_Huber_IRLS65_normal_equations",
+    "alpha": 18325.93
+  },
+  "features": [
+    "KMID",
+    "KLEN",
+    "KMID2",
+    "KUP",
+    "KUP2",
+    "KLOW",
+    "KLOW2",
+    "KSFT",
+    "KSFT2",
+    "OPEN0",
+    "HIGH0",
+    "LOW0",
+    "ROC5",
+    "MA5",
+    "STD5",
+    "VMA5",
+    "VSTD5",
+    "ROC10",
+    "MA10",
+    "STD10",
+    "VMA10",
+    "VSTD10",
+    "ROC20",
+    "MA20",
+    "STD20",
+    "VMA20",
+    "VSTD20",
+    "ROC60",
+    "MA60",
+    "STD60",
+    "VMA60",
+    "VSTD60",
+    "RET1",
+    "RET2",
+    "RET3",
+    "RET5",
+    "RET10",
+    "RET20",
+    "RET60",
+    "AMT_RATIO5",
+    "VOL_RATIO5",
+    "AMT_RATIO20",
+    "VOL_RATIO20",
+    "AMT_RATIO60",
+    "VOL_RATIO60",
+    "LOG_AMOUNT",
+    "LOG_VOL",
+    "PRICE_TO_20D_HIGH",
+    "PRICE_TO_60D_HIGH",
+    "ILLIQ",
+    "UP_COUNT5",
+    "UP_COUNT10",
+    "UP_COUNT20",
+    "RVOL5",
+    "RVOL20",
+    "flag_limit_up",
+    "flag_limit_down",
+    "CS_RET1",
+    "CS_RET5",
+    "CS_RET20",
+    "CS_KLEN",
+    "CS_LOG_AMOUNT",
+    "CS_RVOL20",
+    "qualified106_current_forecast_average_rank_over_N"
+  ],
+  "training_rows": 1832593,
+  "last_training_label_date": 20211230,
+  "last_training_label_end": 20211231,
+  "exclusive_cutoff": 20211231,
+  "training_matrix_numeric_sha256": "c0c978b78c499c2c2ec86c29ef2f22c9fecbb73d382ab45ea3241cd27fcd71dc",
+  "training_target_numeric_sha256": "76048245448fed753fb19b9f851424fb216eae7469091be9992fb92b72f15e4a",
+  "native_model_path": "E:\\赛题五_本机临时\\nonflag_HuberIRLS64_bank10_v1_20261008\\nonflag_residual_huberIRLS64_d025\\model_2022.joblib",
+  "native_model_sha256": "b1877e7ab22b8653c696bb2343a422a7fb69b1a2cba67ede82ed70d641cab9e3",
+  "independent_linear_state_path": "E:\\赛题五_本机临时\\nonflag_HuberIRLS64_bank10_v1_20261008\\nonflag_residual_huberIRLS64_d025\\independent_linear_state_2022.json",
+  "independent_linear_state_sha256": "0b204d3c2fe8fb1acbe10f3d45f22c1ad6dd4470f53c231f36693ccbb7e11d64",
+  "preprocessing_reused_from_identical_own_mature_window": true,
+  "every_cached_training_row_rechecked": true,
+  "fit_seconds": 23.512550499999634,
+  "prediction_control_rows": 1107519,
+  "native_reload_independent_all_prediction_bits_exact": true,
+  "actual_cold_prefix_controls": [
+    {
+      "combined_days_or_training_sample_rows": 80,
+      "actual_rows": 0,
+      "native_reload_decoder_bits_exact": true
+    },
+    {
+      "combined_days_or_training_sample_rows": 260,
+      "actual_rows": 0,
+      "native_reload_decoder_bits_exact": true
+    },
+    {
+      "combined_days_or_training_sample_rows": 975,
+      "actual_rows": 1107519,
+      "native_reload_decoder_bits_exact": true
+    }
+  ],
+  "training_solver_metadata": {
+    "training_solver_recipe": "fixed8192_Huber_IRLS65_v1",
+    "actual_rows": 1832593,
+    "initial_blocks": 224,
+    "actual_iterations": 8,
+    "history": [
+      {
+        "iteration": 1,
+        "training_objective": 64621.28505641918,
+        "coefficient_delta": 0.00925267870868332,
+        "blocks": 224
+      },
+      {
+        "iteration": 2,
+        "training_objective": 64562.18766644981,
+        "coefficient_delta": 0.003859590512268807,
+        "blocks": 224
+      },
+      {
+        "iteration": 3,
+        "training_objective": 64546.67385143595,
+        "coefficient_delta": 0.001753316931642157,
+        "blocks": 224
+      },
+      {
+        "iteration": 4,
+        "training_objective": 64542.50990284232,
+        "coefficient_delta": 0.0009520867025111096,
+        "blocks": 224
+      },
+      {
+        "iteration": 5,
+        "training_objective": 64541.335447581536,
+        "coefficient_delta": 0.0005197360878842205,
+        "blocks": 224
+      },
+      {
+        "iteration": 6,
+        "training_objective": 64540.98820265819,
+        "coefficient_delta": 0.000285922957956819,
+        "blocks": 224
+      },
+      {
+        "iteration": 7,
+        "training_objective": 64540.88133062193,
+        "coefficient_delta": 0.00015845792383226143,
+        "blocks": 224
+      },
+      {
+        "iteration": 8,
+        "training_objective": 64540.84742446864,
+        "coefficient_delta": 8.83886900577141e-05,
+        "blocks": 224
+      }
+    ],
+    "converged_by_own_training_coefficient_tolerance": false,
+    "fixed_maximum_iterations_recipe_not_global_optimum_claim": true,
+    "validation_early_stopping_or_target_clipping": false,
+    "maximum_block_rows": 8192,
+    "no_full_prepared_training_matrix_allocated": true
+  },
+  "new_native_fits": 1,
+  "actual2025_controls_use_only1000_training_rows": false,
+  "test_labels_read": false
+}
