@@ -1,0 +1,61 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\prepare_HuberCrossFamilyFine125_selected_candidate_v2_20261008.py", line 188, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\prepare_HuberCrossFamilyFine125_selected_candidate_v2_20261008.py", line 173, in main
+    prediction,storage=predict(ns,selection,CANDIDATE,parent_candidate/'cohort_curve.json',OUT/'future_return_mapping.json')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_HuberCrossFamilyFine_complete_parent_scheme_v1_20261008.py", line 88, in predict
+    try:result,storage=namespace['predict'](proxy,record,candidate,parent_curve_source,mapping_path)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_CrossFamily_complete_parent_scheme_v2_20261008.py", line 60, in predict
+    assert all(row['native_reload_independent_arithmetic_and_Pandas_complete_parent_CDF_bits_exact'] for row in calls)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_nonflag_residual_ReverseBayes_complete_scheme_20261007.py", line 56, in predict
+    full=[r for r in calls if r['rows']==1599600];cold=[r for r in calls if r['rows']==80*4650]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_quantile_HGB_residual_CDF_scheme_v2_20261007.py", line 136, in predict
+    runtime.build_context = original_build
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_simplex_residual47_native_scheme_20261006.py", line 132, in predict
+    assert len(calls) >= 3 and sum(c['rows'] == 1599600 for c in calls) >= 2
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_cohort_calibrated_scheme_20261006.py", line 83, in predict
+    assert result['status'] == 'passed'
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_ready_goss_reference_scheme_v2_20261006.py", line 39, in predict
+    original(ns,record,candidate_path=candidate,mapping_path=mapping_path)
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_gradient_sampling_scheme_codec_20261005.py", line 27, in predict
+    original(ns, record, candidate_path=candidate, mapping_path=mapping_path)
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_nystrom_ridge_scheme_20261004.py", line 47, in predict
+    rank,stats=ctx.predict(ctx.donor(ctx.finished('baseline')),0.,0.)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_cohort_calibrated_scheme_20261006.py", line 47, in with_cohort
+    calls.append({'rows': len(raw), 'curve_actual_reload_sha256': ns.sha(curve_path),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_simplex_residual47_native_scheme_20261006.py", line 117, in residual_after_parent
+    source = ns.ROOT / 'analysis/predict_cohort_calibrated_scheme_20261006.py'
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_nonflag_residual_ReverseBayes_complete_scheme_20261007.py", line 32, in stage
+    flag=graph['conditional_flag_CPU_HGB_residual_CDF']
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_CrossFamily_complete_parent_scheme_v2_20261008.py", line 39, in cross_stage
+    text=source.read_text(encoding='utf8')
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_CrossFamily_complete_parent_scheme_v2_20261008.py", line 19, in after_parent
+    assert 'nonflag_CPU_ReverseBayes64_residual_CDF' in graph
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_HuberCrossFamilyFine_complete_parent_scheme_v1_20261008.py", line 74, in cross_stage
+    value,report=after_parent(ns,context,teacher,parent,spec,components);calls.append(report);return value
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\HuberCrossFamilyFine_complete_parent_native_stage_v1_20261008.py", line 69, in after_parent
+    value=native(bundle,x);exact(value,native(reloaded,x));other=decoded(state,oracle_x);exact(value,other)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\nonflag_residual_Ridge_codec_20261007.py", line 24, in predict_decoded
+    assert state['kind'] == 'nonflag_residual_Ridge' and state['batch_rows'] == BATCH_ROWS
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
