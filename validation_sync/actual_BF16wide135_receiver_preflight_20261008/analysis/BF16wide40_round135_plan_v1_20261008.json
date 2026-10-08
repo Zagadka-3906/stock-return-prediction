@@ -1,0 +1,46 @@
+{
+  "status": "frozen_future40_complete_parent_BF16_rank_CDF_comparisons_before_any_new_quality_score",
+  "round": 135,
+  "model_name": "rank_MLP16384_BF16_micro8192_32epochs",
+  "native_recipe": "own_mature_BF16_micro8192_weighted_accum_v1_20261008",
+  "actual_annual_bank": "E:/赛题五_本机临时/neural_BF16_micro8192_bank6_v2_20261008",
+  "qualified_anchor_rounds": [
+    112,
+    133,
+    134
+  ],
+  "roles": [
+    "all_valid",
+    "nonflag_valid",
+    "flag_valid"
+  ],
+  "weights": [
+    0.0025,
+    0.005,
+    0.01,
+    0.025,
+    0.05,
+    0.075,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "expected_scored_records": 40,
+  "expected_transform_controls": 37,
+  "expected_cold_controls": 111,
+  "rank_universe": "all_current_raw_forecasts",
+  "first2020_active": true,
+  "new_stage_position": "after_complete_qualified_parent_all_flag_nonflag_and_historical_branches",
+  "transform": "inverseCDF_parent((1-weight)*parent_day_average_rank_over_N+weight*neural_day_average_rank_over_N)",
+  "invalid_and_declared_unselected_parent_raw_values_preserved": true,
+  "zero_weight_is_exact_whole_parent_identity": true,
+  "additional_model_fits_by_this_comparison": 0,
+  "whole_native_independent_replay_and_candidate_sources_required_before_scoring": true,
+  "select_by_actual_official_continuous_S_all8_metrics_no_extra_quality_gates": true,
+  "selection_bias_uncorrected": true,
+  "test_labels_read": false,
+  "global_exhaustion_claimed": false
+}
