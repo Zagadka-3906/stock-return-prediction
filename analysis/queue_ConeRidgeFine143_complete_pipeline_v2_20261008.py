@@ -1,0 +1,37 @@
+"""Dispatch eight exact141 receivers after the complete prospective source/graph admission."""
+from pathlib import Path
+import sys
+ROOT=Path(__file__).resolve().parents[1];A=ROOT/'analysis';sys.path[:0]=[str(ROOT),str(A)]
+from run_dependency_queue_v3_20261006 import read,sha,create
+from start_nonflag_RFF128Low76_actual_admission_v4_20261007 import start
+
+def main():
+    prospective=A/'ConeRidgeFine68_prospective_routes_v1_20261008.json';proof=read(prospective)
+    assert proof['status']=='passed_actual24_prospective143_sources_schema_graphs_baselines_status_paths_model_counts_and_cross_volume_bytes'
+    assert proof['actual_prospective_sources']==24 and proof['actual_graph_controls']==1560
+    for path,digest in proof['input_sha256'].items():assert sha(path)==digest,path
+    jobs=[('ConeRidgeFine65_current_parent_controls_v1_20261008','verify_ConeRidgeFine65_current_parent_v1_20261008.py',[]),
+        ('ConeRidgeFine68_round143_source_admission_v1_20261008','verify_ConeRidgeFine68_round143_sources_v1_20261008.py',[]),
+        ('ConeRidgeFine68_controls_main_publication_v1_20261008','publish_ConeRidgeFine68_evidence_v1_20261008.py',['controls']),
+        ('ConeRidgeFine68_official_comparison_v1_20261008','run_ConeRidgeFine68_official_comparison_v1_20261008.py',[]),
+        ('ConeRidgeFine68_scores_main_publication_v1_20261008','publish_ConeRidgeFine68_evidence_v1_20261008.py',['scores']),
+        ('ConeRidgeFine68_selected_candidate_preparation_v1_20261008','prepare_ConeRidgeFine68_selected_candidate_v1_20261008.py',[]),
+        ('ConeRidgeFine68_selected_candidate_sealing_v1_20261008','seal_ConeRidgeFine68_selected_candidate_v1_20261008.py',[]),
+        ('ConeRidgeFine68_round143_full_registration_v1_20261008','run_ConeRidgeFine68_round143_full_registration_v1_20261008.py',[])]
+    files=[Path(__file__),prospective,A/'prepare_ConeRidgeFine68_round143_sources_v1_20261008.py',
+        A/'ConeRidgeFine143_receiver_preparation_v1_20261008.json',*[A/driver for _,driver,_ in jobs]]
+    pins={**proof['input_sha256'],**{str(p):sha(p) for p in files}}
+    create(A/'ConeRidgeFine143_complete_dependency_plan_v1_20261008.json',{
+        'status':'frozen_independent_complete142_CPU_pipeline_before_quality','input_sha256':pins,'jobs':jobs,'expected_official_cases':68,'QA_version':54,
+        'already_qualified132133134_and_exact_current_parent_required_before142_score':True,'unfinished135141_prerequisite':False,
+        'new_fits_by_dispatch':0,'new_quality_scores_by_dispatch':0,'test_labels_read':False})
+    launches={}
+    for name,driver,args in jobs:
+        assert not (A/'service_owned_workflows_20261006'/name).exists();launches[name]=start(name,driver,args,pins)
+    create(A/'ConeRidgeFine143_complete_hidden_launches_v1_20261008.json',{
+        'status':'started_eight_independent142_CPU_services_for_controls_main52_scores_frozen_candidate_QA54_main',
+        'launches':launches,'input_sha256':pins,'expected_official_cases':68,'QA_version':54,'new_fits_by_dispatch':0,
+        'new_quality_scores_by_dispatch':0,'actual_future_X_not_read_by_dispatch':True,'test_labels_read':False})
+    print('Eight consoleless independent142 CPU receivers started after24 sources and1176 full graph controls.',flush=True)
+
+if __name__=='__main__':main()
