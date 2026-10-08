@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\relocate_idle_verified_Git_publisher_to_E_v2_20261008.py", line 119, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\relocate_idle_verified_Git_publisher_to_E_v2_20261008.py", line 56, in main
+    powershell("""$ErrorActionPreference='Stop'
+  File "D:\3.Study\数据分析\赛题五\analysis\relocate_idle_verified_Git_publisher_to_E_v2_20261008.py", line 29, in powershell
+    assert result.returncode==0,(name,result.stderr[:2000])
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('native_copy_exact_named_repository_to_E', '\x1b[31;1mGet-Item: \x1b[0mE:\\������_������ʱ\\Git_publisher_E_relocation_v2_20261008\\native_copy_exact_named_repository_to_E.ps1:4\x1b[0m\n\x1b[31;1m\x1b[0m\x1b[36;1mLine |\x1b[0m\n\x1b[31;1m\x1b[0m\x1b[36;1m\x1b[36;1m   4 | \x1b[0m if ((\x1b[36;1mGet-Item -LiteralPath $taskSource\x1b[0m).FullName -ne $taskSource) { t ��\x1b[0m\n\x1b[31;1m\x1b[0m\x1b[36;1m\x1b[36;1m\x1b[0m\x1b[36;1m\x1b[0m\x1b[36;1m     | \x1b[31;1m      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[0m\n\x1b[31;1m\x1b[0m\x1b[36;1m\x1b[36;1m\x1b[0m\x1b[36;1m\x1b[0m\x1b[36;1m\x1b[31;1m\x1b[31;1m\x1b[36;1m     | \x1b[31;1m�Ҳ���·����D:\x03.Study\\���ݷ���\\������_GitHub��֤ͬ��_20261005������Ϊ��·�������ڡ�\x1b[0m\n')
