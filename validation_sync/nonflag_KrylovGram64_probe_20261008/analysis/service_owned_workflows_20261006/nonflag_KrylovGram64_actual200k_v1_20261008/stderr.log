@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_nonflag_KrylovGram64_actual200k_v1_20261008.py", line 56, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_nonflag_KrylovGram64_actual200k_v1_20261008.py", line 32, in main
+    assert np.allclose(model.coef_,coef,rtol=2e-8,atol=2e-10) and np.isclose(model.intercept_,intercept,rtol=2e-8,atol=2e-10),(name,np.max(np.abs(model.coef_-coef)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('nonflag_residual_krylovGram64_s16', np.float64(0.003970882189460134))

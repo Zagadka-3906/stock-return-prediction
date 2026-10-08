@@ -1,0 +1,41 @@
+{
+  "name": "nonflag_residual_krylovGram64r2_s16",
+  "configuration": {
+    "maximum_iterations": 16,
+    "alpha_per_training_row": 0.01,
+    "batch_rows": 8192,
+    "relative_residual_tolerance": 1e-12,
+    "target_not_clipped": true,
+    "intercept_penalized": false,
+    "initial_coefficient": "zero",
+    "centered_covariance_symmetrized": true,
+    "direction_reorthogonalization_passes": 2,
+    "residual_recomputed_each_iteration": true
+  },
+  "training_rows": 200003,
+  "shared_statistics_seconds": 0.1303662999998778,
+  "head_fit_seconds_after_shared_statistics": 0.0010322000016458333,
+  "independent_dense_projected_seconds": 0.14535710000200197,
+  "metadata": {
+    "training_solver_recipe": "fixed8192_centered_reorthogonalized_CG64_v2_v1",
+    "actual_rows": 200003,
+    "actual_blocks": 25,
+    "maximum_block_rows": 8192,
+    "maximum_iterations": 16,
+    "actual_iterations": 16,
+    "alpha": 2000.03,
+    "relative_normal_equation_residual": 0.00304477274186759,
+    "all_statistics_and_stopping_from_own_training_window_only": true,
+    "validation_early_stopping_or_target_clipping": false,
+    "no_full_prepared_training_matrix_allocated": true,
+    "new_truncated_solver_recipe_not_full_ridge_identity_claim": true
+  },
+  "actual_dense_projected_coefficients_and_intercept_close": true,
+  "native_reload_decoder_six_prefixes_bits_exact": true,
+  "prediction_training_rows": 10017,
+  "native_model_sha256": "5f30358b0781e55ee7e99090f97eedac70bbed0c8587756547c2edcce099b71b",
+  "state_sha256": "b4b03d9e35418ab1ee3dc2332cac667391af7178582edd31de1b04b2e9e04b56",
+  "process_RSS_GiB": 5.7097930908203125,
+  "actual_official_scores": 0,
+  "full_annual_model_not_claimed": true
+}
