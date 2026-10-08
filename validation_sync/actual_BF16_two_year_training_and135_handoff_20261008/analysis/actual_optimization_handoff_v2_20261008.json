@@ -1,0 +1,604 @@
+{
+  "status": "active_optimization_actual135_entire_pipeline_dispatched_after24_prospective_checks",
+  "at_local": "2026-10-08T08:10:04",
+  "deadline_local": "2026-10-10T23:59:00+08:00",
+  "actual_live_progress_snapshot": {
+    "status": "active_actual_owned_training_and_complete135_ordered_workflows",
+    "at_local": "2026-10-08T08:10:04",
+    "deadline_local": "2026-10-10T23:59:00+08:00",
+    "best_fully_qualified": {
+      "round": 134,
+      "official_score": 0.45114695864085175,
+      "connected_records": 13618,
+      "main_commit": "767112dbf6c327268b2c3a948b478fc1356c3eb9"
+    },
+    "latest_fully_qualified": {
+      "round": 134,
+      "official_score": 0.45114695864085175,
+      "connected_records": 13618,
+      "main_commit": "767112dbf6c327268b2c3a948b478fc1356c3eb9"
+    },
+    "annual_models_complete": [
+      {
+        "year": 2020,
+        "status": "passed_actual_complete_mature_BF16_micro_annual_model",
+        "model_sha256": "fb412580ec1b7d3439ae694fef124e47bc0797ab94b1213a41f617b8de6c5d23",
+        "training_rows": 1694259,
+        "full_annual_reload_bits_exact": true,
+        "cold80_bits_exact": true
+      },
+      {
+        "year": 2021,
+        "status": "passed_actual_complete_mature_BF16_micro_annual_model",
+        "model_sha256": "aac2b1b5c77b114b0b2ffe4fa8c8ed0ae0034e61d0606abba786cf8e17461615",
+        "training_rows": 2594048,
+        "full_annual_reload_bits_exact": true,
+        "cold80_bits_exact": true
+      }
+    ],
+    "expected_annual_models": 6,
+    "actual_training_stage": {
+      "status": "actual_mature_annual_BF16_fit",
+      "year": 2022,
+      "at_local": "2026-10-08T08:06:22",
+      "completed_annual_models": 2,
+      "training_rows": 3568878,
+      "checkpoint_path": "E:\\赛题五_本机临时\\neural_BF16_micro8192_bank6_v2_20261008\\2022\\checkpoint.joblib"
+    },
+    "latest_actual_epoch": {
+      "year": 2022,
+      "completed_epoch": 1,
+      "total_epochs": 32,
+      "saved_epoch": 1,
+      "fit_seconds": 108.125,
+      "training_loss": 2.99179367414,
+      "training_loss_is_not_validation_score": true
+    },
+    "actual135_quality": {
+      "completed_records": 0,
+      "expected_records": 40
+    },
+    "actual_services": {
+      "actual_neural_BF16_micro8192_bank6_v2_20261008": {
+        "live": true,
+        "owned_worker_pid": 13560,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_neural_BF16_micro8192_bank6_v2_20261008.py",
+        "RSS_GiB": 3.82
+      },
+      "BF16_independent_full5_GPU_controls_v2_20261008": {
+        "live": true,
+        "owned_worker_pid": 21072,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_BF16_full5_independent_GPU_v2_20261008.py",
+        "RSS_GiB": 0.003
+      },
+      "BF16_rank_CDF_actual_full37_controls_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 5460,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_BF16_rank_CDF_full37_v1_20261008.py",
+        "RSS_GiB": 0.004
+      },
+      "BF16_complete_parent_actual_historical_native_hook3_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 16684,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_BF16_complete_parent_native_hook3_v1_20261008.py",
+        "RSS_GiB": 0.005
+      },
+      "actual_BF16wide135_receiver_preflight_main_publication_v1_20261008": {
+        "live": false,
+        "owned_worker_pid": 14616,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_actual_BF16wide135_receiver_preflight_v1_20261008.py",
+        "terminal": {
+          "status": "passed",
+          "failure": null,
+          "at_local": "2026-10-08T08:06:34",
+          "definition_sha256": "62390925e778c4bdb0a08b9ba81ab1a685ebc48c87f554609c2e600807a8f5fb",
+          "sources_and_native_mathematics_unchanged": true
+        }
+      },
+      "BF16wide40_round135_source_admission_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 19860,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_BF16wide40_round135_sources_v1_20261008.py",
+        "RSS_GiB": 0.026
+      },
+      "BF16wide40_controls_main_publication_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 24968,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_BF16wide40_evidence_v1_20261008.py",
+        "RSS_GiB": 0.027
+      },
+      "BF16wide40_official_comparison_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 11092,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_BF16wide40_official_comparison_v1_20261008.py",
+        "RSS_GiB": 0.026
+      },
+      "BF16wide40_scores_main_publication_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 7376,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_BF16wide40_evidence_v1_20261008.py",
+        "RSS_GiB": 0.027
+      },
+      "BF16wide40_selected_candidate_preparation_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 7016,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_BF16wide40_selected_candidate_v1_20261008.py",
+        "RSS_GiB": 0.026
+      },
+      "BF16wide40_selected_candidate_sealing_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 3624,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\seal_BF16wide40_selected_candidate_v1_20261008.py",
+        "RSS_GiB": 0.026
+      },
+      "BF16wide40_round135_full_registration_v1_20261008": {
+        "live": true,
+        "owned_worker_pid": 9240,
+        "actual_native_console_handle": 0,
+        "driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_BF16wide40_round135_full_registration_v1_20261008.py",
+        "RSS_GiB": 0.027
+      }
+    },
+    "available_RAM_GiB": 20.643,
+    "D_free_GiB": 2.008,
+    "E_free_GiB": 159.623,
+    "selected_new_scheme_future_inference_required_if_it_wins": true,
+    "global_boundary_or_goal_completion_not_claimed": true,
+    "test_labels_read": false
+  },
+  "owned_training_identity": {
+    "name": "actual_neural_BF16_micro8192_bank6_v2_20261008",
+    "pid": 26040,
+    "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+    "script_args": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_neural_BF16_micro8192_bank6_v2_20261008\\job_definition.json"
+    ],
+    "owned_worker_pid": 13560,
+    "owned_worker_creation_time": 1791413384.035772,
+    "owned_parent_creation_time": 1791413384.02355,
+    "service_provider_pid": 6668,
+    "service_provider_creation_time": 1791411257.8115077,
+    "service_provider_name": "WmiPrvSE.exe",
+    "independent_launch_root_in_any_job": false,
+    "actual_native_console_handle": 0,
+    "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_neural_BF16_micro8192_bank6_v2_20261008.py",
+    "original_arguments": [],
+    "at_local": "2026-10-08T06:49:44",
+    "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_neural_BF16_micro8192_bank6_v2_20261008\\stdout.log",
+    "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_neural_BF16_micro8192_bank6_v2_20261008\\stderr.log"
+  },
+  "actual135_ordered_services": {
+    "BF16wide40_round135_source_admission_v1_20261008": {
+      "identity": {
+        "name": "BF16wide40_round135_source_admission_v1_20261008",
+        "pid": 25436,
+        "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+        "script_args": [
+          "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_round135_source_admission_v1_20261008\\job_definition.json"
+        ],
+        "owned_worker_pid": 19860,
+        "owned_worker_creation_time": 1791417930.7356513,
+        "owned_parent_creation_time": 1791417930.7234805,
+        "service_provider_pid": 6668,
+        "service_provider_creation_time": 1791411257.8115077,
+        "service_provider_name": "WmiPrvSE.exe",
+        "independent_launch_root_in_any_job": false,
+        "actual_native_console_handle": 0,
+        "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_BF16wide40_round135_sources_v1_20261008.py",
+        "original_arguments": [],
+        "at_local": "2026-10-08T08:05:30",
+        "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_round135_source_admission_v1_20261008\\stdout.log",
+        "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_round135_source_admission_v1_20261008\\stderr.log"
+      },
+      "actually_owned_live": true
+    },
+    "BF16wide40_controls_main_publication_v1_20261008": {
+      "identity": {
+        "name": "BF16wide40_controls_main_publication_v1_20261008",
+        "pid": 14568,
+        "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+        "script_args": [
+          "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_controls_main_publication_v1_20261008\\job_definition.json"
+        ],
+        "owned_worker_pid": 24968,
+        "owned_worker_creation_time": 1791417931.7098768,
+        "owned_parent_creation_time": 1791417931.6968768,
+        "service_provider_pid": 6668,
+        "service_provider_creation_time": 1791411257.8115077,
+        "service_provider_name": "WmiPrvSE.exe",
+        "independent_launch_root_in_any_job": false,
+        "actual_native_console_handle": 0,
+        "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_BF16wide40_evidence_v1_20261008.py",
+        "original_arguments": [
+          "controls"
+        ],
+        "at_local": "2026-10-08T08:05:31",
+        "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_controls_main_publication_v1_20261008\\stdout.log",
+        "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_controls_main_publication_v1_20261008\\stderr.log"
+      },
+      "actually_owned_live": true
+    },
+    "BF16wide40_official_comparison_v1_20261008": {
+      "identity": {
+        "name": "BF16wide40_official_comparison_v1_20261008",
+        "pid": 21140,
+        "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+        "script_args": [
+          "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_official_comparison_v1_20261008\\job_definition.json"
+        ],
+        "owned_worker_pid": 11092,
+        "owned_worker_creation_time": 1791417932.6762073,
+        "owned_parent_creation_time": 1791417932.6630895,
+        "service_provider_pid": 6668,
+        "service_provider_creation_time": 1791411257.8115077,
+        "service_provider_name": "WmiPrvSE.exe",
+        "independent_launch_root_in_any_job": false,
+        "actual_native_console_handle": 0,
+        "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_BF16wide40_official_comparison_v1_20261008.py",
+        "original_arguments": [],
+        "at_local": "2026-10-08T08:05:32",
+        "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_official_comparison_v1_20261008\\stdout.log",
+        "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_official_comparison_v1_20261008\\stderr.log"
+      },
+      "actually_owned_live": true
+    },
+    "BF16wide40_scores_main_publication_v1_20261008": {
+      "identity": {
+        "name": "BF16wide40_scores_main_publication_v1_20261008",
+        "pid": 17428,
+        "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+        "script_args": [
+          "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_scores_main_publication_v1_20261008\\job_definition.json"
+        ],
+        "owned_worker_pid": 7376,
+        "owned_worker_creation_time": 1791417933.666135,
+        "owned_parent_creation_time": 1791417933.6533446,
+        "service_provider_pid": 6668,
+        "service_provider_creation_time": 1791411257.8115077,
+        "service_provider_name": "WmiPrvSE.exe",
+        "independent_launch_root_in_any_job": false,
+        "actual_native_console_handle": 0,
+        "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_BF16wide40_evidence_v1_20261008.py",
+        "original_arguments": [
+          "scores"
+        ],
+        "at_local": "2026-10-08T08:05:33",
+        "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_scores_main_publication_v1_20261008\\stdout.log",
+        "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_scores_main_publication_v1_20261008\\stderr.log"
+      },
+      "actually_owned_live": true
+    },
+    "BF16wide40_selected_candidate_preparation_v1_20261008": {
+      "identity": {
+        "name": "BF16wide40_selected_candidate_preparation_v1_20261008",
+        "pid": 17784,
+        "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+        "script_args": [
+          "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_selected_candidate_preparation_v1_20261008\\job_definition.json"
+        ],
+        "owned_worker_pid": 7016,
+        "owned_worker_creation_time": 1791417934.668995,
+        "owned_parent_creation_time": 1791417934.656649,
+        "service_provider_pid": 6668,
+        "service_provider_creation_time": 1791411257.8115077,
+        "service_provider_name": "WmiPrvSE.exe",
+        "independent_launch_root_in_any_job": false,
+        "actual_native_console_handle": 0,
+        "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_BF16wide40_selected_candidate_v1_20261008.py",
+        "original_arguments": [],
+        "at_local": "2026-10-08T08:05:34",
+        "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_selected_candidate_preparation_v1_20261008\\stdout.log",
+        "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_selected_candidate_preparation_v1_20261008\\stderr.log"
+      },
+      "actually_owned_live": true
+    },
+    "BF16wide40_selected_candidate_sealing_v1_20261008": {
+      "identity": {
+        "name": "BF16wide40_selected_candidate_sealing_v1_20261008",
+        "pid": 10868,
+        "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+        "script_args": [
+          "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_selected_candidate_sealing_v1_20261008\\job_definition.json"
+        ],
+        "owned_worker_pid": 3624,
+        "owned_worker_creation_time": 1791417935.6322086,
+        "owned_parent_creation_time": 1791417935.6205552,
+        "service_provider_pid": 6668,
+        "service_provider_creation_time": 1791411257.8115077,
+        "service_provider_name": "WmiPrvSE.exe",
+        "independent_launch_root_in_any_job": false,
+        "actual_native_console_handle": 0,
+        "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\seal_BF16wide40_selected_candidate_v1_20261008.py",
+        "original_arguments": [],
+        "at_local": "2026-10-08T08:05:35",
+        "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_selected_candidate_sealing_v1_20261008\\stdout.log",
+        "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_selected_candidate_sealing_v1_20261008\\stderr.log"
+      },
+      "actually_owned_live": true
+    },
+    "BF16wide40_round135_full_registration_v1_20261008": {
+      "identity": {
+        "name": "BF16wide40_round135_full_registration_v1_20261008",
+        "pid": 4312,
+        "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+        "script_args": [
+          "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_round135_full_registration_v1_20261008\\job_definition.json"
+        ],
+        "owned_worker_pid": 9240,
+        "owned_worker_creation_time": 1791417936.585363,
+        "owned_parent_creation_time": 1791417936.572566,
+        "service_provider_pid": 6668,
+        "service_provider_creation_time": 1791411257.8115077,
+        "service_provider_name": "WmiPrvSE.exe",
+        "independent_launch_root_in_any_job": false,
+        "actual_native_console_handle": 0,
+        "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_BF16wide40_round135_full_registration_v1_20261008.py",
+        "original_arguments": [],
+        "at_local": "2026-10-08T08:05:36",
+        "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_round135_full_registration_v1_20261008\\stdout.log",
+        "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16wide40_round135_full_registration_v1_20261008\\stderr.log"
+      },
+      "actually_owned_live": true
+    }
+  },
+  "completed_annual_training_evidence": {
+    "2020": {
+      "status": "passed_actual_complete_mature_BF16_micro_annual_model",
+      "year": 2020,
+      "configuration": {
+        "kind": "mlp",
+        "target": "y_rank",
+        "hidden": [
+          16384,
+          8192,
+          4096
+        ],
+        "epochs": 32,
+        "batch_size": 32768,
+        "microbatch_size": 8192,
+        "predict_batch_size": 8192,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "dropout": 0.0,
+        "seed": 20261007,
+        "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+        "recipe": "own_mature_BF16_micro8192_weighted_accum_v1_20261008"
+      },
+      "training_meta": {
+        "rows": 1694259,
+        "first": 20180102,
+        "last": 20191230,
+        "days": 486,
+        "cutoff_exclusive": 20191231,
+        "last_label_end": 20191231,
+        "features": [
+          "KMID",
+          "KLEN",
+          "KMID2",
+          "KUP",
+          "KUP2",
+          "KLOW",
+          "KLOW2",
+          "KSFT",
+          "KSFT2",
+          "OPEN0",
+          "HIGH0",
+          "LOW0",
+          "ROC5",
+          "MA5",
+          "STD5",
+          "VMA5",
+          "VSTD5",
+          "ROC10",
+          "MA10",
+          "STD10",
+          "VMA10",
+          "VSTD10",
+          "ROC20",
+          "MA20",
+          "STD20",
+          "VMA20",
+          "VSTD20",
+          "ROC60",
+          "MA60",
+          "STD60",
+          "VMA60",
+          "VSTD60",
+          "RET1",
+          "RET2",
+          "RET3",
+          "RET5",
+          "RET10",
+          "RET20",
+          "RET60",
+          "AMT_RATIO5",
+          "VOL_RATIO5",
+          "AMT_RATIO20",
+          "VOL_RATIO20",
+          "AMT_RATIO60",
+          "VOL_RATIO60",
+          "LOG_AMOUNT",
+          "LOG_VOL",
+          "PRICE_TO_20D_HIGH",
+          "PRICE_TO_60D_HIGH",
+          "ILLIQ",
+          "UP_COUNT5",
+          "UP_COUNT10",
+          "UP_COUNT20",
+          "RVOL5",
+          "RVOL20",
+          "flag_limit_up",
+          "flag_limit_down",
+          "CS_RET1",
+          "CS_RET5",
+          "CS_RET20",
+          "CS_KLEN",
+          "CS_LOG_AMOUNT",
+          "CS_RVOL20"
+        ],
+        "training_matrix_sha256": "fda71dd8e557e742cb68693b1631b67f383978047733c18bfbcd181242506910",
+        "training_target_sha256": "ff48ecc23b08f27c4c8391e27ea4669d1f349b57d3d2748d39824931e10233ca",
+        "training_keys_sha256": "e9c3a2bd107933e7f6feeb3057c11e7096729ad0e43884d1bd20d4b82671321a",
+        "actual_future_training_label_poisoning_population_exact": true
+      },
+      "fit_seconds_including_checkpoints_this_process": 1756.2820000000002,
+      "model_sha256": "fb412580ec1b7d3439ae694fef124e47bc0797ab94b1213a41f617b8de6c5d23",
+      "test_labels_read": false,
+      "prediction_sha256": "3b69fc0ba8602867df1b4cd3d0146c572550589b114d52c50fce00a56e55bce8",
+      "rows": 1129950,
+      "actual_full_annual_reload_prediction_bits_exact": true,
+      "actual_cold80_prefix_bits_exact": true
+    },
+    "2021": {
+      "status": "passed_actual_complete_mature_BF16_micro_annual_model",
+      "year": 2021,
+      "configuration": {
+        "kind": "mlp",
+        "target": "y_rank",
+        "hidden": [
+          16384,
+          8192,
+          4096
+        ],
+        "epochs": 32,
+        "batch_size": 32768,
+        "microbatch_size": 8192,
+        "predict_batch_size": 8192,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "dropout": 0.0,
+        "seed": 20261007,
+        "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+        "recipe": "own_mature_BF16_micro8192_weighted_accum_v1_20261008"
+      },
+      "training_meta": {
+        "rows": 2594048,
+        "first": 20180102,
+        "last": 20201230,
+        "days": 729,
+        "cutoff_exclusive": 20201231,
+        "last_label_end": 20201231,
+        "features": [
+          "KMID",
+          "KLEN",
+          "KMID2",
+          "KUP",
+          "KUP2",
+          "KLOW",
+          "KLOW2",
+          "KSFT",
+          "KSFT2",
+          "OPEN0",
+          "HIGH0",
+          "LOW0",
+          "ROC5",
+          "MA5",
+          "STD5",
+          "VMA5",
+          "VSTD5",
+          "ROC10",
+          "MA10",
+          "STD10",
+          "VMA10",
+          "VSTD10",
+          "ROC20",
+          "MA20",
+          "STD20",
+          "VMA20",
+          "VSTD20",
+          "ROC60",
+          "MA60",
+          "STD60",
+          "VMA60",
+          "VSTD60",
+          "RET1",
+          "RET2",
+          "RET3",
+          "RET5",
+          "RET10",
+          "RET20",
+          "RET60",
+          "AMT_RATIO5",
+          "VOL_RATIO5",
+          "AMT_RATIO20",
+          "VOL_RATIO20",
+          "AMT_RATIO60",
+          "VOL_RATIO60",
+          "LOG_AMOUNT",
+          "LOG_VOL",
+          "PRICE_TO_20D_HIGH",
+          "PRICE_TO_60D_HIGH",
+          "ILLIQ",
+          "UP_COUNT5",
+          "UP_COUNT10",
+          "UP_COUNT20",
+          "RVOL5",
+          "RVOL20",
+          "flag_limit_up",
+          "flag_limit_down",
+          "CS_RET1",
+          "CS_RET5",
+          "CS_RET20",
+          "CS_KLEN",
+          "CS_LOG_AMOUNT",
+          "CS_RVOL20"
+        ],
+        "training_matrix_sha256": "5da209d4691628046b6cb3fbbca65b4dc270f17403e1beda5f6e18a10ef3c0fc",
+        "training_target_sha256": "504973958cffcee3232bc6787ca0994ebc5233729d186d9dd52577796408c6a4",
+        "training_keys_sha256": "2eb2c5b683fe37faadc5ad617572186b00e607bd678dca80d2d96671d4ec80e3",
+        "actual_future_training_label_poisoning_population_exact": true
+      },
+      "fit_seconds_including_checkpoints_this_process": 2672.1720000000005,
+      "model_sha256": "aac2b1b5c77b114b0b2ffe4fa8c8ed0ae0034e61d0606abba786cf8e17461615",
+      "test_labels_read": false,
+      "prediction_sha256": "0e94fc0c2cb41401b9e5b5e84600ac50cf2432f99cb1f2608ba25a652c77b19f",
+      "rows": 1129950,
+      "actual_full_annual_reload_prediction_bits_exact": true,
+      "actual_cold80_prefix_bits_exact": true
+    }
+  },
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\record_actual_optimization_handoff_v2_20261008.py": "9552d93fd5b6176ad99e371e4a5bfbf5ba42319927c39272e214f539e3572123",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\monitor_BF16wide135_progress_v1_20261008.py": "4cde78d22abc1c706b0f57b9bee2f9ac2e9145cc5ddfd86b9c0343ab2919bcd6",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\BF16wide40_prospective_routes_v1_20261008.json": "8cfe18899a72fe1ad51e1134c5666bd9abb0ac0d20370f7aee44c6f33d97d39e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\BF16wide135_complete_dependency_plan_v1_20261008.json": "29892859a9c75639aba804a2675bfccf9db487656ce5b25903f26bd98e2788ed",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\BF16wide135_complete_hidden_launches_v1_20261008.json": "f5830d7c341c476dc728e58bdcd1ed69c6ced1457f8802ef1219b712187fc9f7",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_BF16wide135_live_progress_monitor_launch_v1_20261008.json": "13a30b6c6a504ea5f2c66332f451f2450f95546c74755d08e21df59f6a8b0bae",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_BF16wide135_receiver_preflight_main_v1_20261008\\receipt.json": "7ad8c48147b4d1913b0b0f72d3c7cb3d6ad04cc0a493701ae4c1c0c0edf23b90",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\github_validation_sync_main_20261005\\round134_receipt.json": "448ff0f4a0beaaed1b50b88e33e184daa6b3160c5ba162984481b85059be674f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_user_submission_deadline_and_priority_20261008.json": "781700b454bed671e9d31be29acd54157b06575b058009cc82497938c198ca21"
+  },
+  "round135_entire_quality_pipeline_dispatched": true,
+  "actual135_quality_scores_at_handoff": 0,
+  "new_best134_full_QA45_and_remote_main_confirmed": true,
+  "new24_prospective_checks_and_dispatch_published_to_main": true,
+  "still_required135": [
+    "Remaining own-mature2022-2025 fixed32 BF16 fits, without duplicate workers or old-recipe weight reuse.",
+    "Actual full5 GPU independent forecasts,37 full CDF/111 cold controls and3 historical native hooks.",
+    "Actual source admission, controls main publication and all40 continuous official comparisons.",
+    "Selected complete graph/return mapping/source freeze; two native/independent full future replays and cold80 or exact anchor reuse.",
+    "Full six-view45-second QA46, original source/manifest checks and actual round135 main receipt."
+  ],
+  "next_uncovered_direction": {
+    "method": "cross_family_Ridge_RFF128_empirical_Bayes_signed_residual_ensembles",
+    "additional_bank_fits_expected": 0,
+    "bank_bytes_and_full_receivers_must_be_admitted_before_scores": true,
+    "current_135_result_needed_before_choosing_new_complete_parent": true,
+    "no_new_grid_quality_or_future_inference_dispatched_for_this_direction": true
+  },
+  "old_20261007_stop_guard_not_restarted": true,
+  "goal_not_paused_or_complete": true,
+  "global_feasible_direction_and_compute_boundary_not_established": true,
+  "test_labels_read": false
+}
