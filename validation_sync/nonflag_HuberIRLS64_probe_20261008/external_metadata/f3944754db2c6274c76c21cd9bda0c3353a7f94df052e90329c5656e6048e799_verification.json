@@ -1,0 +1,142 @@
+{
+  "status": "passed_actual2_small_HuberIRLS64_native_dense_oracle_decoder_and12_prefix_controls",
+  "at_local": "2026-10-08T09:05:37",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_nonflag_HuberIRLS64_small_v2_20261008.py": "12819b73f8c88bafa7d273f01428d7236951f545882f77cf4dfde0ab190dcc17",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\nonflag_HuberIRLS64_streamed_v1_20261008.py": "3b46c6cd3ec845518292d7a0ccefae2d64f676d964915b33c1a336da8fc050e0",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\nonflag_residual_HGB_preprocessing_20261007.py": "cd12e600a48bdeed5d9452013d45819b02a6eba88cc8999409930bc04b8cd2d6",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\nonflag_residual_Ridge_codec_20261007.py": "d85665dbc7698e89e81061a909f6f1f6778c1fcfb83fa62876fe51f01408cb6e"
+  },
+  "records": [
+    {
+      "name": "nonflag_residual_huberIRLS64_d010",
+      "fit_seconds": 0.35457680000035907,
+      "configuration": {
+        "delta": 0.1,
+        "alpha_per_training_row": 0.01,
+        "max_iter": 8,
+        "tol": 1e-06,
+        "batch_rows": 8192,
+        "target_not_clipped": true,
+        "intercept_penalized": false,
+        "initialization": "own_mature_L2_normal_equations"
+      },
+      "actual_training_rows": 24593,
+      "actual_inference_rows": 16397,
+      "independent_dense_IRLS_coefficients_and_all_training_objectives_close": true,
+      "native_reloaded_JSON_decoder_and6_prefixes_bits_exact": true,
+      "metadata": {
+        "training_solver_recipe": "fixed8192_Huber_IRLS65_v1",
+        "actual_rows": 24593,
+        "initial_blocks": 4,
+        "actual_iterations": 5,
+        "history": [
+          {
+            "iteration": 1,
+            "training_objective": 331.9721772714405,
+            "coefficient_delta": 0.008620737979960871,
+            "blocks": 4
+          },
+          {
+            "iteration": 2,
+            "training_objective": 331.85382314121364,
+            "coefficient_delta": 0.0009164876391606659,
+            "blocks": 4
+          },
+          {
+            "iteration": 3,
+            "training_objective": 331.85293540845873,
+            "coefficient_delta": 8.593097882513868e-05,
+            "blocks": 4
+          },
+          {
+            "iteration": 4,
+            "training_objective": 331.8529281736577,
+            "coefficient_delta": 8.193605956293912e-06,
+            "blocks": 4
+          },
+          {
+            "iteration": 5,
+            "training_objective": 331.85292811017416,
+            "coefficient_delta": 7.819233235079742e-07,
+            "blocks": 4
+          }
+        ],
+        "converged_by_own_training_coefficient_tolerance": true,
+        "fixed_maximum_iterations_recipe_not_global_optimum_claim": true,
+        "validation_early_stopping_or_target_clipping": false,
+        "maximum_block_rows": 8192,
+        "no_full_prepared_training_matrix_allocated": true
+      },
+      "native_model_sha256": "059053975b7607a04d808115d08d1f296c8d8351afd287a1fc499706ee9e508e",
+      "state_sha256": "80cee0dd0c53abdec2c45ccc9fabeb4e5ac01f32c4ac092821b15ecc3b1649d7",
+      "new_native_fits": 1,
+      "actual_official_scores": 0
+    },
+    {
+      "name": "nonflag_residual_huberIRLS64_d025",
+      "fit_seconds": 0.16869190000033996,
+      "configuration": {
+        "delta": 0.25,
+        "alpha_per_training_row": 0.01,
+        "max_iter": 8,
+        "tol": 1e-06,
+        "batch_rows": 8192,
+        "target_not_clipped": true,
+        "intercept_penalized": false,
+        "initialization": "own_mature_L2_normal_equations"
+      },
+      "actual_training_rows": 24593,
+      "actual_inference_rows": 16397,
+      "independent_dense_IRLS_coefficients_and_all_training_objectives_close": true,
+      "native_reloaded_JSON_decoder_and6_prefixes_bits_exact": true,
+      "metadata": {
+        "training_solver_recipe": "fixed8192_Huber_IRLS65_v1",
+        "actual_rows": 24593,
+        "initial_blocks": 4,
+        "actual_iterations": 4,
+        "history": [
+          {
+            "iteration": 1,
+            "training_objective": 745.6479720817061,
+            "coefficient_delta": 0.009287481799577479,
+            "blocks": 4
+          },
+          {
+            "iteration": 2,
+            "training_objective": 745.6466327276536,
+            "coefficient_delta": 9.549679349881053e-05,
+            "blocks": 4
+          },
+          {
+            "iteration": 3,
+            "training_objective": 745.646632532716,
+            "coefficient_delta": 1.2506547571828827e-06,
+            "blocks": 4
+          },
+          {
+            "iteration": 4,
+            "training_objective": 745.6466325326803,
+            "coefficient_delta": 1.753356958320712e-08,
+            "blocks": 4
+          }
+        ],
+        "converged_by_own_training_coefficient_tolerance": true,
+        "fixed_maximum_iterations_recipe_not_global_optimum_claim": true,
+        "validation_early_stopping_or_target_clipping": false,
+        "maximum_block_rows": 8192,
+        "no_full_prepared_training_matrix_allocated": true
+      },
+      "native_model_sha256": "bc93a04e9dd39c7250a6368e849406806d97e0733c08564a538314f7359d7c23",
+      "state_sha256": "d332be4e67c5e6500735dc7dce2cb144df7ff043a199d8d094d0cbe69dc54072",
+      "new_native_fits": 1,
+      "actual_official_scores": 0
+    }
+  ],
+  "actual_new_synthetic_native_fits": 2,
+  "elapsed_seconds": 0.8011298000001261,
+  "actual_official_scores": 0,
+  "full_own_mature10_model_bank_and_candidate_pipeline_not_yet_admitted": true,
+  "provided_train_or_future_X_and_Y_read": false,
+  "global_optimum_or_resource_exhaustion_not_claimed": true
+}

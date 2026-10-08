@@ -1,0 +1,65 @@
+{
+  "name": "nonflag_residual_huberIRLS64_d010",
+  "fit_seconds": 0.35457680000035907,
+  "configuration": {
+    "delta": 0.1,
+    "alpha_per_training_row": 0.01,
+    "max_iter": 8,
+    "tol": 1e-06,
+    "batch_rows": 8192,
+    "target_not_clipped": true,
+    "intercept_penalized": false,
+    "initialization": "own_mature_L2_normal_equations"
+  },
+  "actual_training_rows": 24593,
+  "actual_inference_rows": 16397,
+  "independent_dense_IRLS_coefficients_and_all_training_objectives_close": true,
+  "native_reloaded_JSON_decoder_and6_prefixes_bits_exact": true,
+  "metadata": {
+    "training_solver_recipe": "fixed8192_Huber_IRLS65_v1",
+    "actual_rows": 24593,
+    "initial_blocks": 4,
+    "actual_iterations": 5,
+    "history": [
+      {
+        "iteration": 1,
+        "training_objective": 331.9721772714405,
+        "coefficient_delta": 0.008620737979960871,
+        "blocks": 4
+      },
+      {
+        "iteration": 2,
+        "training_objective": 331.85382314121364,
+        "coefficient_delta": 0.0009164876391606659,
+        "blocks": 4
+      },
+      {
+        "iteration": 3,
+        "training_objective": 331.85293540845873,
+        "coefficient_delta": 8.593097882513868e-05,
+        "blocks": 4
+      },
+      {
+        "iteration": 4,
+        "training_objective": 331.8529281736577,
+        "coefficient_delta": 8.193605956293912e-06,
+        "blocks": 4
+      },
+      {
+        "iteration": 5,
+        "training_objective": 331.85292811017416,
+        "coefficient_delta": 7.819233235079742e-07,
+        "blocks": 4
+      }
+    ],
+    "converged_by_own_training_coefficient_tolerance": true,
+    "fixed_maximum_iterations_recipe_not_global_optimum_claim": true,
+    "validation_early_stopping_or_target_clipping": false,
+    "maximum_block_rows": 8192,
+    "no_full_prepared_training_matrix_allocated": true
+  },
+  "native_model_sha256": "059053975b7607a04d808115d08d1f296c8d8351afd287a1fc499706ee9e508e",
+  "state_sha256": "80cee0dd0c53abdec2c45ccc9fabeb4e5ac01f32c4ac092821b15ecc3b1649d7",
+  "new_native_fits": 1,
+  "actual_official_scores": 0
+}
