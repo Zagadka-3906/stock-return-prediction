@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\prepare_ConeRidgeAlpha100_selected_candidate_v6_20261008.py", line 191, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\prepare_ConeRidgeAlpha100_selected_candidate_v6_20261008.py", line 172, in main
+    prediction,storage=predict(ns,selection,CANDIDATE,parent_candidate/'cohort_curve.json',OUT/'future_return_mapping.json');output_scope.reverify()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_ConeRidgeAlpha8_64_complete_parent_scheme_v1_20261008.py", line 92, in predict
+    try:result,storage=namespace['predict'](proxy,record,candidate,parent_curve_source,mapping_path)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_ConeRidge64_complete_parent_scheme_v1_20261008.py", line 94, in predict
+    full=[row for row in calls if row['rows']==1599600];cold=[row for row in calls if row['rows']==80*4650]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_nonflag_residual_ReverseBayes_complete_scheme_20261007.py", line 57, in predict
+    assert len(full)>=2 and len(cold)>=1
+                       ^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_quantile_HGB_residual_CDF_scheme_v2_20261007.py", line 136, in predict
+    runtime.build_context = original_build
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_simplex_residual47_native_scheme_20261006.py", line 132, in predict
+    assert len(calls) >= 3 and sum(c['rows'] == 1599600 for c in calls) >= 2
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_cohort_calibrated_scheme_20261006.py", line 83, in predict
+    assert result['status'] == 'passed'
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_ready_goss_reference_scheme_v2_20261006.py", line 39, in predict
+    original(ns,record,candidate_path=candidate,mapping_path=mapping_path)
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_gradient_sampling_scheme_codec_20261005.py", line 27, in predict
+    original(ns, record, candidate_path=candidate, mapping_path=mapping_path)
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_nystrom_ridge_scheme_20261004.py", line 30, in predict
+    models=copy_models(native,root_sources,candidate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\predict_cohort_calibrated_scheme_20261006.py", line 73, in linked_models
+    assert ns.sha(target) == info['sha256']
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 262, in copyfile
+    with open(dst, 'wb') as fdst:
+         ^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'D:\\3.Study\\数据分析\\赛题五\\candidates\\ConeRidgeAlpha100_v1_20261008\\2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__2337d018ef9051af__model_final_rank512_o05_lr0005_e32.joblib'
