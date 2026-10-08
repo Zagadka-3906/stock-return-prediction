@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\relocate_verified_publisher_after_private_stat_refresh_v8_20261008.py", line 234, in <module>
+    main()
+  File "D:\3.Study\数据分析\赛题五\analysis\relocate_verified_publisher_after_private_stat_refresh_v8_20261008.py", line 152, in main
+    git(TARGET,'update-index','--refresh')
+  File "D:\3.Study\数据分析\赛题五\analysis\relocate_verified_publisher_after_private_stat_refresh_v8_20261008.py", line 30, in git
+    return git_bytes(path, *args).decode('utf-8').rstrip('\r\n')
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\relocate_verified_publisher_after_private_stat_refresh_v8_20261008.py", line 25, in git_bytes
+    assert result.returncode == 0, (args, result.stderr.decode('utf-8', errors='replace')[:1500])
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (('update-index', '--refresh'), '')
