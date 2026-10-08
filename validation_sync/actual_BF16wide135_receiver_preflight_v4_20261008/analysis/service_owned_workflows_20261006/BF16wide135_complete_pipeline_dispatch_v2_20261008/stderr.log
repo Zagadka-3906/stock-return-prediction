@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\start_nonflag_RFF128Low76_actual_admission_v4_20261007.py", line 8, in start
+    try:return start_service(name,driver,args,pins)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\handoff_ready_goss_full_execution_20261006.py", line 43, in start_service
+    row=read(folder/'native_launch.json');assert owned(row) and row['actual_native_console_handle']==0 and not row['independent_launch_root_in_any_job']
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\queue_BF16wide135_complete_pipeline_v2_20261008.py", line 38, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\queue_BF16wide135_complete_pipeline_v2_20261008.py", line 31, in main
+    rows[name]=start(name,driver,args,pins)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\start_nonflag_RFF128Low76_actual_admission_v4_20261007.py", line 11, in start
+    assert not owned(row) and read(folder/'service_execution.json')['status']=='passed'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
