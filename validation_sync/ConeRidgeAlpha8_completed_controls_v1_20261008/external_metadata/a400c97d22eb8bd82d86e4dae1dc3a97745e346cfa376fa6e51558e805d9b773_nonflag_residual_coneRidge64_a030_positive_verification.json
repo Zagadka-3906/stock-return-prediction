@@ -1,0 +1,49 @@
+{
+  "name": "nonflag_residual_coneRidge64_a030_positive",
+  "configuration": {
+    "alpha_per_training_row": 0.03,
+    "feature_sign": 1.0,
+    "batch_rows": 8192,
+    "maximum_nnls_iterations": 1280,
+    "target_not_clipped": true,
+    "intercept_penalized": false,
+    "centered_covariance_symmetrized": true
+  },
+  "training_rows": 200003,
+  "shared_statistics_seconds": 0.1449055999983102,
+  "head_fit_seconds_after_shared_statistics": 0.0004139000011491589,
+  "independent_dense_BVLS_seconds": 2.752131900000677,
+  "metadata": {
+    "training_solver_recipe": "fixed8192_centered_signed_ridge_NNLS64_Cholesky_v1",
+    "actual_rows": 200003,
+    "actual_blocks": 25,
+    "maximum_block_rows": 8192,
+    "alpha": 6000.09,
+    "active_coefficients": 29,
+    "actual_relative_KKT_violation": 1.7245490509123117e-16,
+    "actual64dim_transformed_residual_norm": 64.59636450141387,
+    "all_statistics_and_coefficient_constraints_from_own_training_window_only": true,
+    "validation_early_stopping_or_target_clipping": false,
+    "no_full_prepared_training_matrix_allocated": true,
+    "new_constrained_solver_recipe_not_unconstrained_ridge_identity_claim": true
+  },
+  "independent_BVLS_oracle": {
+    "dense_BVLS_success": true,
+    "iterations": 20,
+    "optimality": 6.842526545369765e-11,
+    "raw_minimum_parameter": 0.0,
+    "allowed_boundary_roundoff": 2e-12,
+    "projected_negative_parameters": 0,
+    "maximum_boundary_projection": 0.0,
+    "independent_dense_relative_KKT_violation": 2.162422833370521e-15,
+    "native_solver_and_comparison_tolerances_unchanged": true
+  },
+  "actual_dense_BVLS_coefficients_and_intercept_close": true,
+  "native_reload_decoder_six_prefixes_bits_exact": true,
+  "prediction_training_rows": 10017,
+  "native_model_sha256": "a8bf827f0500275a900ff0e7b6e0e6f5d78c2651ca2b3d74a22186dd065cae58",
+  "state_sha256": "42f40ea3f39624516c54b7061c823a5e00881d7a28ab08cf74704d363a863d69",
+  "process_RSS_GiB": 5.592952728271484,
+  "actual_official_scores": 0,
+  "full_annual_model_not_claimed": true
+}

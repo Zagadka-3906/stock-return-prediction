@@ -1,0 +1,49 @@
+{
+  "name": "nonflag_residual_coneRidge64_a300_positive",
+  "configuration": {
+    "alpha_per_training_row": 0.3,
+    "feature_sign": 1.0,
+    "batch_rows": 8192,
+    "maximum_nnls_iterations": 1280,
+    "target_not_clipped": true,
+    "intercept_penalized": false,
+    "centered_covariance_symmetrized": true
+  },
+  "training_rows": 200003,
+  "shared_statistics_seconds": 0.1449055999983102,
+  "head_fit_seconds_after_shared_statistics": 0.00047869999980321154,
+  "independent_dense_BVLS_seconds": 1.500952700000198,
+  "metadata": {
+    "training_solver_recipe": "fixed8192_centered_signed_ridge_NNLS64_Cholesky_v1",
+    "actual_rows": 200003,
+    "actual_blocks": 25,
+    "maximum_block_rows": 8192,
+    "alpha": 60000.899999999994,
+    "active_coefficients": 33,
+    "actual_relative_KKT_violation": 2.299398734549749e-16,
+    "actual64dim_transformed_residual_norm": 53.665844423023955,
+    "all_statistics_and_coefficient_constraints_from_own_training_window_only": true,
+    "validation_early_stopping_or_target_clipping": false,
+    "no_full_prepared_training_matrix_allocated": true,
+    "new_constrained_solver_recipe_not_unconstrained_ridge_identity_claim": true
+  },
+  "independent_BVLS_oracle": {
+    "dense_BVLS_success": true,
+    "iterations": 7,
+    "optimality": 3.61737306775467e-11,
+    "raw_minimum_parameter": 0.0,
+    "allowed_boundary_roundoff": 2e-12,
+    "projected_negative_parameters": 0,
+    "maximum_boundary_projection": 0.0,
+    "independent_dense_relative_KKT_violation": 1.1431873982024219e-15,
+    "native_solver_and_comparison_tolerances_unchanged": true
+  },
+  "actual_dense_BVLS_coefficients_and_intercept_close": true,
+  "native_reload_decoder_six_prefixes_bits_exact": true,
+  "prediction_training_rows": 10017,
+  "native_model_sha256": "c028d2e1c800bebc18edb90662a8e113862656626507cef736eb104de4a9d75c",
+  "state_sha256": "5bf6206af78f92268c4ae150e72c2fd78919835cbe9f1e7bf9177f3b2c6a6baa",
+  "process_RSS_GiB": 5.592952728271484,
+  "actual_official_scores": 0,
+  "full_annual_model_not_claimed": true
+}

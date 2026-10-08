@@ -1,0 +1,49 @@
+{
+  "name": "nonflag_residual_coneRidge64_a001_positive",
+  "configuration": {
+    "alpha_per_training_row": 0.001,
+    "feature_sign": 1.0,
+    "batch_rows": 8192,
+    "maximum_nnls_iterations": 1280,
+    "target_not_clipped": true,
+    "intercept_penalized": false,
+    "centered_covariance_symmetrized": true
+  },
+  "training_rows": 200003,
+  "shared_statistics_seconds": 0.1449055999983102,
+  "head_fit_seconds_after_shared_statistics": 0.0007484000016120262,
+  "independent_dense_BVLS_seconds": 2.6325045000012324,
+  "metadata": {
+    "training_solver_recipe": "fixed8192_centered_signed_ridge_NNLS64_Cholesky_v1",
+    "actual_rows": 200003,
+    "actual_blocks": 25,
+    "maximum_block_rows": 8192,
+    "alpha": 200.00300000000001,
+    "active_coefficients": 27,
+    "actual_relative_KKT_violation": 2.299398734549749e-16,
+    "actual64dim_transformed_residual_norm": 66.35593502909882,
+    "all_statistics_and_coefficient_constraints_from_own_training_window_only": true,
+    "validation_early_stopping_or_target_clipping": false,
+    "no_full_prepared_training_matrix_allocated": true,
+    "new_constrained_solver_recipe_not_unconstrained_ridge_identity_claim": true
+  },
+  "independent_BVLS_oracle": {
+    "dense_BVLS_success": true,
+    "iterations": 21,
+    "optimality": 2.6619595416832453e-11,
+    "raw_minimum_parameter": -1.0842021724855044e-19,
+    "allowed_boundary_roundoff": 2e-12,
+    "projected_negative_parameters": 1,
+    "maximum_boundary_projection": 1.0842021724855044e-19,
+    "independent_dense_relative_KKT_violation": 8.412509701317223e-16,
+    "native_solver_and_comparison_tolerances_unchanged": true
+  },
+  "actual_dense_BVLS_coefficients_and_intercept_close": true,
+  "native_reload_decoder_six_prefixes_bits_exact": true,
+  "prediction_training_rows": 10017,
+  "native_model_sha256": "596a3fbf2571f4834f3af68b026ba5d2e952655d604a0266ff81c8bf95f40a74",
+  "state_sha256": "98c4a0e9f196ed10a57344b38ffa7fa2fe841305b33762d27cd913de9654d40f",
+  "process_RSS_GiB": 5.7085723876953125,
+  "actual_official_scores": 0,
+  "full_annual_model_not_claimed": true
+}
