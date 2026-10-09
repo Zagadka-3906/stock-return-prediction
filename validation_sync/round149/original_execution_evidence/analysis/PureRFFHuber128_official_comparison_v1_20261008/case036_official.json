@@ -1,0 +1,140 @@
+{
+  "case": 36,
+  "configuration": {
+    "anchor_round": 134,
+    "model": "JointCrossHuber_ordered_case32",
+    "configuration": {
+      "order": [
+        "cross",
+        "huber"
+      ],
+      "cross": {
+        "group": 4,
+        "share": 0.0,
+        "amplitude": 0.0015
+      },
+      "huber": {
+        "group": 4,
+        "share": 0.625,
+        "amplitude": 0.0025
+      }
+    },
+    "joint_control_case": 32,
+    "role": "nonflag_valid_2021_onward",
+    "weight": 0.004,
+    "universe": "all_current_raw_forecasts"
+  },
+  "metrics": {
+    "ic_mean": 0.12225448517416757,
+    "ic_std": 0.10985987399454485,
+    "icir": 1.1128220043310644,
+    "ic_positive_ratio": 0.8952145214521452,
+    "annual_excess": 0.3732067039085818,
+    "top1_annual_ret": 0.39870045796883924,
+    "mean_turnover": 0.032468914193648675,
+    "final_score": 0.4511231309841469
+  },
+  "connected_final_score": 0.4511231309841469,
+  "expected_unique_native_models": 22,
+  "score_gain_over_qualified_parent": -6.86198156629736e-05,
+  "actual_comparison_parent_round": 148,
+  "actual_scheme_base_round": 134,
+  "prediction_numeric_bytes_sha256": "2d2aae46f0d57a657bdf76be9eca147d2dcb6dc7200b8899fd82cea9d372db10",
+  "official_date_index_runtime": {
+    "date_index_lookups": 1212,
+    "official_source_math_changed": false
+  },
+  "all_row_percentile_runtime": {
+    "actual_full_equivalence_proof": "D:\\3.Study\\数据分析\\赛题五\\analysis\\all_forecast_percentiles_full_scoring_benchmark_20261007\\verification.json",
+    "proof_sha256": "1de7371b395ba9c8ca2987f4ae69ff67ba1b94a8dd1ab5a31369319d3c01c4dd",
+    "actual_measured_phase_speedup": 1.1236306506626585,
+    "adopted": true,
+    "choice_based_on_equal_result_execution_cost_not_model_quality": true,
+    "statistics": {
+      "fast_calls": 2,
+      "fallback_calls": 0,
+      "all_current_rows_including_invalid_forecast_sentinels": true,
+      "no_price_valid_or_minus9_subset_filter": true,
+      "average_ties_divided_by_all_day_rows": true,
+      "retained_full_prediction_arrays": 0
+    }
+  },
+  "scoring_only_spearman_runtime": {
+    "actual_full_equivalence_proof": "D:\\3.Study\\数据分析\\赛题五\\analysis\\cached_official_spearman_full_scoring_benchmark_20261007\\verification.json",
+    "proof_sha256": "deccfb02ca2261debcb12983f259243e235cc859a20f8a91ff63c99f8a2e7f16",
+    "actual_measured_phase_speedup": 1.046487328164393,
+    "adopted": true,
+    "choice_based_only_on_equal_result_execution_cost": true,
+    "statistics": {
+      "fast_calls": 1212,
+      "target_rank_cache_hits": 1212,
+      "target_rank_cache_misses": 0,
+      "fallback_calls": 0,
+      "scoring_labels_never_used_as_features_or_training_inputs": true,
+      "cached_target_vectors": 1212,
+      "original_official_spearman_identity_restored": true
+    }
+  },
+  "official_score_cache": {
+    "cache_hit": false,
+    "cache_key": "47c0b82789a08e7fdb4c11cc6e26a7a3808e1904ebdff9d3bcba57df32f078c0",
+    "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\PureRFFHuber149_D_scoring_v1_20261008\\comparison\\identical_official_scores\\47c0b82789a08e7fdb4c11cc6e26a7a3808e1904ebdff9d3bcba57df32f078c0.json"
+  },
+  "official_metric_capsule_sha256": "76cbd355231a8530794f4be5a3e450b7dd29b8e38c81900f157c7f438b3b6120",
+  "actual_return_mapping": {
+    "actual_return_mapped_csv_scored": true,
+    "within_day_ranks_bit_identical": true,
+    "boundaries": [
+      {
+        "year": 2020,
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "method": "prevalidation training moments affine fallback"
+      },
+      {
+        "year": 2021,
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2022,
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2023,
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2024,
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "method": "past mature OOF isotonic"
+      }
+    ],
+    "test_labels_read": false,
+    "cross_round_identical_official_reuse": {
+      "cross_round_cache_hit": false
+    }
+  },
+  "whole_complete_parent_branches_preserved_before_new_stage": true,
+  "invalid_and_declared_unselected_raw_bits_preserved": true,
+  "actual_cold80_260_975_bits_exact": true,
+  "qualified_anchor_all8_metrics_exact": false,
+  "known_134_all8_metrics_exact": null,
+  "native_bank_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\PureRFFHuber128_actual_controls_index_v1_20261008.json",
+  "ordered_native_components": [
+    "rff_g00625",
+    "rff_g0125",
+    "huber_d010",
+    "huber_d025",
+    "bayes_diagonal"
+  ],
+  "first2020_identity": true,
+  "candidate_future_freeze_replays_QA60_and_main_pending": true,
+  "test_labels_read": false
+}
