@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_BF16Medium78_round153_sources_serial_v21_20261009.py", line 5, in <module>
+    if __name__=='__main__':execute(153,'verify_BF16Medium78_round153_sources_v1_20261009.py')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\bind_future151to153_serial_receivers_v21_20261009.py", line 70, in execute
+    else:ns['main'](*([phase] if phase else []))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_BF16Medium78_round153_sources_v1_20261009.py", line 16, in main
+    'BF16Medium153_prior_complete_forecast_duplicate_audit_v1_20261009'):closed(n)
+                                                                         ^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_BF16Medium78_round153_sources_v1_20261009.py", line 10, in closed
+    assert read(f/'service_execution.json')['status']=='passed',name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_dependency_queue_v3_20261006.py", line 19, in read
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16Medium153_prior_complete_forecast_duplicate_audit_v2_20261009\\service_execution.json'
