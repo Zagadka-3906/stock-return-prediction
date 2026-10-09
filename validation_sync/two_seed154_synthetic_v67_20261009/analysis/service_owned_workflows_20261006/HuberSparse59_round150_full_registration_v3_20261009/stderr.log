@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_HuberSparse59_round150_full_registration_recovery_v20_20261009.py", line 5, in <module>
+    if __name__=='__main__':execute('run_HuberSparse59_round150_full_registration_v2_20261009.py')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_data_path_bindings_v20_20261009.py", line 42, in execute
+    try:old.execute(name,phase)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_serial_publication_v18_20261009.py", line 53, in execute
+    try:previous.execute(150,name,phase)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\sparse150152_publication_safe_receivers_v16_20261009.py", line 61, in execute
+    ns['execute'](name,*([phase] if phase else []))
+  File "D:\3.Study\数据分析\赛题五\analysis\sparse150152_publication_safe_receivers_v16_20261009.py", line 61, in execute
+    ns['execute'](name,*([phase] if phase else []))
+    ^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_HuberSparse59_round150_full_registration_v2_20261009.py", line 20, in main
+    assert read(service/'service_execution.json')['status']=='passed',name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: HuberSparse59_selected_candidate_sealing_v3_20261009

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\reconcile_actual150_and65_remote_v33_20261009.py", line 65, in <module>
+    os.environ['GIT_CONFIG_COUNT']=str(count+2);main()
+                                                ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\reconcile_actual150_and65_remote_v33_20261009.py", line 26, in main
+    current=h.sync.git('rev-parse','HEAD');h.verify_main(current);h.sync.git('merge-base','--is-ancestor',commit150,current)
+                                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\finalize_main_branch_consolidation_20261005.py", line 35, in verify_main
+    assert sync.git('ls-remote', '--heads', 'origin').splitlines() == [f'{commit}\trefs/heads/main']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\sync_validated_rounds_main_20261005.py", line 56, in git
+    raise RuntimeError(f'git {args[0]} failed: {result.stderr.strip()[:1500]}')
+RuntimeError: git ls-remote failed: fatal: unable to access 'https://github.com/Zagadka-3906/stock-return-prediction.git/': OpenSSL SSL_read: OpenSSL/3.5.5: error:0A000126:SSL routines::unexpected eof while reading, errno 10004
