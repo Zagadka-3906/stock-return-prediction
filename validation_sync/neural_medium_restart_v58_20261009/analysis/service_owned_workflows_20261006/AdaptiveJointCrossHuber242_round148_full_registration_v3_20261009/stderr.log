@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_chunked_main_publication_v1_20261009.py", line 115, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_chunked_main_publication_v1_20261009.py", line 80, in main
+    git('update-index','--add','--cacheinfo','100644',object_id,name,isolated=True)
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_chunked_main_publication_v1_20261009.py", line 25, in git
+    assert r.returncode==0,r.stderr.decode('utf8',errors='replace')[-3000:]
+           ^^^^^^^^^^^^^^^
+AssertionError: error: Invalid path 'validation_sync\round148\complete_ranking_display\lossless_ranking_display_v2_20261006\round148\reconstruct_full_report.py'
+fatal: git update-index: --cacheinfo cannot add validation_sync\round148\complete_ranking_display\lossless_ranking_display_v2_20261006\round148\reconstruct_full_report.py
+

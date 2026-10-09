@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_chunked_main_publication_v3_20261009.py", line 121, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_chunked_main_publication_v3_20261009.py", line 96, in main
+    git('push','origin',commit+':refs/heads/main',timeout=300)
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_chunked_main_publication_v3_20261009.py", line 30, in git
+    if not transient or attempt==4:raise RuntimeError(message[-3000:])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: fatal: unable to access 'https://github.com/Zagadka-3906/stock-return-prediction.git/': TLS connect error: error:0A000126:SSL routines::unexpected eof while reading
+
