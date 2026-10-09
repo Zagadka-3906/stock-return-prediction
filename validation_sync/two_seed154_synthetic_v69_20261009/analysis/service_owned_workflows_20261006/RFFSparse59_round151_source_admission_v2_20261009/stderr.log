@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_RFFSparse59_round151_sources_serial_v37_20261009.py", line 5, in <module>
+    if __name__=='__main__':execute(151,'verify_RFFSparse59_round151_sources_v1_20261009.py')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\bind_future_import_namespaces_v37_20261009.py", line 48, in execute
+    with storage.installed_transfer(),registry_paths(),publication_paths(),git_io(Path('E:/赛题五_本机临时/future_typed_registry_v37_20261009')/(m['drivers'][str(number)][name]+('_'+phase if phase else ''))/'git_IO') if (name.startswith('publish_') or 'full_registration' in name) else nullcontext():previous.execute(number,name,phase)
+                                                                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_future_service_and_data_namespaces_v22_20261009.py", line 36, in execute
+    try:old.execute(number,name,phase)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\bind_future151to153_serial_receivers_v21_20261009.py", line 58, in execute
+    if number in (151,152) and not is_direct:earlier.execute(number,name,phase)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\sparse150152_publication_safe_receivers_v16_20261009.py", line 61, in execute
+    ns['execute'](name,*([phase] if phase else []))
+  File "D:\3.Study\数据分析\赛题五\analysis\sparse150152_publication_safe_receivers_v16_20261009.py", line 44, in execute
+    io.create=pinned
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_RFFSparse59_round151_sources_v1_20261009.py", line 24, in main
+    descriptor=read(pointer);full=Path(descriptor['output'])/'verification.json';assert sha(full)==descriptor['verification_sha256'];proofs.append(full)
+               ^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_dependency_queue_v3_20261006.py", line 19, in read
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_RFFSparse151_prior_complete_forecast_duplicate_audit_v9_20261009.json'
