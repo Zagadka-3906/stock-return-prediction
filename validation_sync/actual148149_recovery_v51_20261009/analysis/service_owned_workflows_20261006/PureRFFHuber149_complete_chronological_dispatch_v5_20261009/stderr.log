@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\dispatch_PureRFFHuber149_complete_pipeline_v5_20261009.py", line 5, in <module>
+    if __name__=='__main__':execute('dispatch_PureRFFHuber149_complete_pipeline_v4_20261008.py')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\resume_pending149_verified_gates_v6_20261009.py", line 55, in execute
+    exec(compile(source,str(A/original),'exec'),{'__file__':str(A/SCRIPTS[original]),'__name__':'__main__'})
+  File "D:\3.Study\数据分析\赛题五\analysis\dispatch_PureRFFHuber149_complete_pipeline_v4_20261008.py", line 31, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\dispatch_PureRFFHuber149_complete_pipeline_v4_20261008.py", line 15, in main
+    for n in ('Pure149_prior_complete_forecast_duplicate_audit_v1_20261008','AdaptiveJointCrossHuber242_round148_full_registration_v1_20261008','PureRFFHuber80_native_historical_calendar_controls_v2_20261008','PureRFFHuber124_actual_full_historical_controls_v2_20261008'):closed(n)
+                                                                                                                                                                                                                                                                                ^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\dispatch_PureRFFHuber149_complete_pipeline_v4_20261008.py", line 10, in closed
+    assert read(f/'service_execution.json')['status']=='passed',name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Pure149_prior_complete_forecast_duplicate_audit_v2_20261009
