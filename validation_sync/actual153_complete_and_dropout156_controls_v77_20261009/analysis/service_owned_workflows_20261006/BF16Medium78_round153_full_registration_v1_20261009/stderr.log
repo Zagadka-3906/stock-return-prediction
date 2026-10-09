@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_BF16Medium78_round153_full_registration_actual_v42_20261009.py", line 2, in <module>
+    if __name__=='__main__':execute('run_BF16Medium78_round153_full_registration_v3_20261009.py')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\bind_BF16Medium153_actual_receiver_dispatch_v42_20261009.py", line 50, in execute
+    try:runtime.execute(153,name,phase)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\bind_future_import_namespaces_v38_20261009.py", line 54, in execute
+    with registry_paths(),publication_paths():previous.execute(number,name,phase)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\verify_future_service_and_data_namespaces_v22_20261009.py", line 36, in execute
+    try:old.execute(number,name,phase)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\bind_future151to153_serial_receivers_v21_20261009.py", line 69, in execute
+    with installed_transfer(),git_io(log/'file_backed_git'):ns['main']()
+                                                            ^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_BF16Medium78_round153_full_registration_v3_20261009.py", line 83, in main
+    helpers.sync.git=retry_git;github()
+                               ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\external_publication_source_paths_runtime_v1_20261009.py", line 20, in main
+    if name in MODULES and name not in seen:
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\lossless_chunked_safe_main_runtime_v1_20261009.py", line 82, in collect
+    payload,evidence=original(*a,**k);descriptors.update(split_payload(payload,evidence));return payload,evidence
+                     ^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\collect_full_lossless_round153_qa64_20261009.py", line 19, in collect
+    try:return namespace['collect'](number, qa_version, expected_records)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\collect_full_lossless_round_publication_20261006.py", line 27, in collect
+    qa_proof = read(qa / 'verification.json')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\collect_full_lossless_round_publication_20261006.py", line 12, in read
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\lossless_ranking_display_qa_v64_20261007\\round153\\verification.json'

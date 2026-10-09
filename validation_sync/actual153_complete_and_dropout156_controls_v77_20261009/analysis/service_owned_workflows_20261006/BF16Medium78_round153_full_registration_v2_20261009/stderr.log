@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_BF16Medium153_verified_QA_main_v43_20261009.py", line 54, in <module>
+    with safe(log),serial(log/'serial_mutex.json'),git_io(log/'file_backed_git'),qa_paths(),publication_paths():main()
+                                                                                                                ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_BF16Medium153_verified_QA_main_v43_20261009.py", line 29, in main
+    publish();scope.reverify()
+    ^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\external_publication_source_paths_runtime_v1_20261009.py", line 101, in main
+  File "D:\3.Study\数据分析\赛题五\analysis\run_dependency_queue_v3_20261006.py", line 28, in create
+    with Path(path).open('x', encoding='utf-8') as stream:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\github_validation_sync_main_20261005\\round153_receipt.json'
