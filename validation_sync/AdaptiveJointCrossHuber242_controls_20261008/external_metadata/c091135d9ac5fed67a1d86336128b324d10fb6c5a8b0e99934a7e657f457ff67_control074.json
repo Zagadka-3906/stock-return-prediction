@@ -1,0 +1,398 @@
+{
+  "mode": "final2025_models_on_two_remapped_training_dates",
+  "model_year": 2025,
+  "prediction_calendar_years": [
+    2025,
+    2026
+  ],
+  "configuration": {
+    "order": [
+      "huber",
+      "cross"
+    ],
+    "cross": {
+      "group": 4,
+      "share": 0.375,
+      "amplitude": 0.0015
+    },
+    "huber": {
+      "group": 4,
+      "share": 0.625,
+      "amplitude": 0.00325
+    }
+  },
+  "full": {
+    "rows": 9300,
+    "explicit_order": [
+      "huber",
+      "cross"
+    ],
+    "configuration": {
+      "order": [
+        "huber",
+        "cross"
+      ],
+      "cross": {
+        "group": 4,
+        "share": 0.375,
+        "amplitude": 0.0015
+      },
+      "huber": {
+        "group": 4,
+        "share": 0.625,
+        "amplitude": 0.00325
+      }
+    },
+    "ordered_heads": [
+      "huber_d010",
+      "huber_d025",
+      "bayes_diagonal",
+      "ridge_l001",
+      "ridge_l025",
+      "rff_g00625",
+      "rff_g0125"
+    ],
+    "stage_reports": [
+      {
+        "stage": "huber",
+        "configuration": {
+          "group": 4,
+          "share": 0.625,
+          "amplitude": 0.00325
+        },
+        "actual_stage_index": 0,
+        "original_kernel_contract_adapter": {
+          "group": 4,
+          "share": 0.625,
+          "amplitude": 0.00325,
+          "universe": "all_current_raw_forecasts",
+          "position": "after_complete_qualified_parent",
+          "teacher_feature": "qualified106_current_forecast_average_rank_over_N"
+        },
+        "parent_is_previous_composite_output_after_qualified134": true,
+        "native_reload_independent_and_Pandas_report": {
+          "rows": 9300,
+          "year": 2025,
+          "prediction_calendar_years": [
+            2025,
+            2026
+          ],
+          "saved_fit_year_fixed_for_all_prediction_dates": true,
+          "actual_nonflag_rows": 9193,
+          "controls": [
+            {
+              "head": "huber_d010",
+              "name": "nonflag_residual_huberIRLS64_d010",
+              "sha256": "5a450a0fd3b0c3bc790faad43045757ec121891ba19b34df6c7c619e06fd6f4e",
+              "independent_state_sha256": "3e22bebaaca65956c8ee8c484a3c84ecf696a0bb94d71b39c662e0bd8396d7db",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 9193,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "huber_d025",
+              "name": "nonflag_residual_huberIRLS64_d025",
+              "sha256": "bd4d12a6d8bb3a2991e6dbb045db443cfa264827ee6cf87d2affaee99f27e5e5",
+              "independent_state_sha256": "47299bb960c4e5174cf45899bceed328aa8e2d16f7bc0cc17a9b58299b766a1b",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 9193,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "bayes_diagonal",
+              "name": "nonflag_residual_empirical_bayes64_diagonal",
+              "sha256": "9a6ca9e4b845d4f96ad4b6843be5bf3a6414f163db9e43454b93e35f197822ac",
+              "independent_state_sha256": "25f160b3cca3aaa8e8d52cbefde574e12877d9cd6e890f144f169ae8296ebdab",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 9193,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            }
+          ],
+          "native_reload_independent_arithmetic_and_Pandas_complete_parent_CDF_bits_exact": true,
+          "complete_parent_flag1_invalid_and2020_bits_preserved": true,
+          "original_teacher106_feature_used": true,
+          "predicted_all_nonflags_including_invalid_to_preserve_fixed_batch_alignment": true,
+          "prediction_numeric_sha256": "660d2155c898bf135a3775bb94281f1c6e29ad6d26644c8d3df4e5766c2800d2"
+        }
+      },
+      {
+        "stage": "cross",
+        "configuration": {
+          "group": 4,
+          "share": 0.375,
+          "amplitude": 0.0015
+        },
+        "actual_stage_index": 1,
+        "original_kernel_contract_adapter": {
+          "group": 4,
+          "share": 0.375,
+          "amplitude": 0.0015,
+          "universe": "all_current_raw_forecasts",
+          "position": "after_complete_qualified_parent",
+          "teacher_feature": "qualified106_current_forecast_average_rank_over_N"
+        },
+        "parent_is_previous_composite_output_after_qualified134": true,
+        "native_reload_independent_and_Pandas_report": {
+          "rows": 9300,
+          "year": 2025,
+          "prediction_calendar_years": [
+            2025,
+            2026
+          ],
+          "saved_fit_year_fixed_for_all_prediction_dates": true,
+          "actual_nonflag_rows": 9193,
+          "controls": [
+            {
+              "head": "ridge_l001",
+              "name": "nonflag_residual_ridge_l001",
+              "sha256": "754484ad64d4dfce39b4c80aa0a61d38373bd87dacccd9f18a79e33af916b921",
+              "independent_state_sha256": "d96b7c19519b54d3f408accb49f28bb887cf0e1478ca651d2f0130da61c4720d",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 9193,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "ridge_l025",
+              "name": "nonflag_residual_ridge_l025",
+              "sha256": "680bd800bcafbcedd791bee2368a6f83be67876a40db1361a8f71cb3718710de",
+              "independent_state_sha256": "db7aa19d18a3346cf438a8a94bcb41c88a68a995de4f2e95ca51a00d30cff4a7",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 9193,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "rff_g00625",
+              "name": "nonflag_residual_rff128streammid_g00625",
+              "sha256": "cf69c955f924c034cb9d49ff649c1172a185bd1765cbc47e642846660f481638",
+              "independent_state_sha256": "bc3fda8fc2b42f0a0b2a06a69f868a91da671a073b1a8822491e68282553caff",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 9193,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "rff_g0125",
+              "name": "nonflag_residual_rff128streammid_g0125",
+              "sha256": "cafdfbabf99ad8f5b0e042f3f8625b20ff239ca40731f798bde6149a3c86e401",
+              "independent_state_sha256": "5e47f0b189d04f1e33a36c16d67a40b5ae627904042af55979dd41f98654c892",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 9193,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            }
+          ],
+          "native_reload_independent_arithmetic_and_Pandas_complete_parent_CDF_bits_exact": true,
+          "complete_parent_flag1_invalid_and2020_bits_preserved": true,
+          "original_teacher106_feature_used": true,
+          "predicted_all_nonflags_including_invalid_to_preserve_fixed_batch_alignment": true,
+          "prediction_numeric_sha256": "84c789ac751e0591fa9f2de19d56b3bb0b8fd8d01454e139ce0e506dfa2b3efb"
+        }
+      }
+    ],
+    "all_nonzero_stages_use_same_original_teacher106": true,
+    "actual_complete_qualified_base_round": 134,
+    "no_separate_qualification_claim_for_intermediate_composite_output": true,
+    "complete_parent2020_flag1_invalid_bits_preserved": true,
+    "all_stage_native_reload_independent_and_Pandas_bits_checked": true,
+    "numeric_sha256": "84c789ac751e0591fa9f2de19d56b3bb0b8fd8d01454e139ce0e506dfa2b3efb"
+  },
+  "cold": {
+    "rows": 4650,
+    "explicit_order": [
+      "huber",
+      "cross"
+    ],
+    "configuration": {
+      "order": [
+        "huber",
+        "cross"
+      ],
+      "cross": {
+        "group": 4,
+        "share": 0.375,
+        "amplitude": 0.0015
+      },
+      "huber": {
+        "group": 4,
+        "share": 0.625,
+        "amplitude": 0.00325
+      }
+    },
+    "ordered_heads": [
+      "huber_d010",
+      "huber_d025",
+      "bayes_diagonal",
+      "ridge_l001",
+      "ridge_l025",
+      "rff_g00625",
+      "rff_g0125"
+    ],
+    "stage_reports": [
+      {
+        "stage": "huber",
+        "configuration": {
+          "group": 4,
+          "share": 0.625,
+          "amplitude": 0.00325
+        },
+        "actual_stage_index": 0,
+        "original_kernel_contract_adapter": {
+          "group": 4,
+          "share": 0.625,
+          "amplitude": 0.00325,
+          "universe": "all_current_raw_forecasts",
+          "position": "after_complete_qualified_parent",
+          "teacher_feature": "qualified106_current_forecast_average_rank_over_N"
+        },
+        "parent_is_previous_composite_output_after_qualified134": true,
+        "native_reload_independent_and_Pandas_report": {
+          "rows": 4650,
+          "year": 2025,
+          "prediction_calendar_years": [
+            2025
+          ],
+          "saved_fit_year_fixed_for_all_prediction_dates": true,
+          "actual_nonflag_rows": 4589,
+          "controls": [
+            {
+              "head": "huber_d010",
+              "name": "nonflag_residual_huberIRLS64_d010",
+              "sha256": "5a450a0fd3b0c3bc790faad43045757ec121891ba19b34df6c7c619e06fd6f4e",
+              "independent_state_sha256": "3e22bebaaca65956c8ee8c484a3c84ecf696a0bb94d71b39c662e0bd8396d7db",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 4589,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "huber_d025",
+              "name": "nonflag_residual_huberIRLS64_d025",
+              "sha256": "bd4d12a6d8bb3a2991e6dbb045db443cfa264827ee6cf87d2affaee99f27e5e5",
+              "independent_state_sha256": "47299bb960c4e5174cf45899bceed328aa8e2d16f7bc0cc17a9b58299b766a1b",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 4589,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "bayes_diagonal",
+              "name": "nonflag_residual_empirical_bayes64_diagonal",
+              "sha256": "9a6ca9e4b845d4f96ad4b6843be5bf3a6414f163db9e43454b93e35f197822ac",
+              "independent_state_sha256": "25f160b3cca3aaa8e8d52cbefde574e12877d9cd6e890f144f169ae8296ebdab",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 4589,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            }
+          ],
+          "native_reload_independent_arithmetic_and_Pandas_complete_parent_CDF_bits_exact": true,
+          "complete_parent_flag1_invalid_and2020_bits_preserved": true,
+          "original_teacher106_feature_used": true,
+          "predicted_all_nonflags_including_invalid_to_preserve_fixed_batch_alignment": true,
+          "prediction_numeric_sha256": "0e522b89feddb89f117b84c477fd034fb55a479447f388afff53bb6f61a6d217"
+        }
+      },
+      {
+        "stage": "cross",
+        "configuration": {
+          "group": 4,
+          "share": 0.375,
+          "amplitude": 0.0015
+        },
+        "actual_stage_index": 1,
+        "original_kernel_contract_adapter": {
+          "group": 4,
+          "share": 0.375,
+          "amplitude": 0.0015,
+          "universe": "all_current_raw_forecasts",
+          "position": "after_complete_qualified_parent",
+          "teacher_feature": "qualified106_current_forecast_average_rank_over_N"
+        },
+        "parent_is_previous_composite_output_after_qualified134": true,
+        "native_reload_independent_and_Pandas_report": {
+          "rows": 4650,
+          "year": 2025,
+          "prediction_calendar_years": [
+            2025
+          ],
+          "saved_fit_year_fixed_for_all_prediction_dates": true,
+          "actual_nonflag_rows": 4589,
+          "controls": [
+            {
+              "head": "ridge_l001",
+              "name": "nonflag_residual_ridge_l001",
+              "sha256": "754484ad64d4dfce39b4c80aa0a61d38373bd87dacccd9f18a79e33af916b921",
+              "independent_state_sha256": "d96b7c19519b54d3f408accb49f28bb887cf0e1478ca651d2f0130da61c4720d",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 4589,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "ridge_l025",
+              "name": "nonflag_residual_ridge_l025",
+              "sha256": "680bd800bcafbcedd791bee2368a6f83be67876a40db1361a8f71cb3718710de",
+              "independent_state_sha256": "db7aa19d18a3346cf438a8a94bcb41c88a68a995de4f2e95ca51a00d30cff4a7",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 4589,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "rff_g00625",
+              "name": "nonflag_residual_rff128streammid_g00625",
+              "sha256": "cf69c955f924c034cb9d49ff649c1172a185bd1765cbc47e642846660f481638",
+              "independent_state_sha256": "bc3fda8fc2b42f0a0b2a06a69f868a91da671a073b1a8822491e68282553caff",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 4589,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            },
+            {
+              "head": "rff_g0125",
+              "name": "nonflag_residual_rff128streammid_g0125",
+              "sha256": "cafdfbabf99ad8f5b0e042f3f8625b20ff239ca40731f798bde6149a3c86e401",
+              "independent_state_sha256": "5e47f0b189d04f1e33a36c16d67a40b5ae627904042af55979dd41f98654c892",
+              "reload_exact": true,
+              "independent_decoder_exact": true,
+              "actual_nonflag_rows": 4589,
+              "fixed8192_padded_recipe": true,
+              "year": 2025
+            }
+          ],
+          "native_reload_independent_arithmetic_and_Pandas_complete_parent_CDF_bits_exact": true,
+          "complete_parent_flag1_invalid_and2020_bits_preserved": true,
+          "original_teacher106_feature_used": true,
+          "predicted_all_nonflags_including_invalid_to_preserve_fixed_batch_alignment": true,
+          "prediction_numeric_sha256": "9408f1a59e64b5a05a5cd377741f6034f5685ed8a9626e7388e3bf330628e01c"
+        }
+      }
+    ],
+    "all_nonzero_stages_use_same_original_teacher106": true,
+    "actual_complete_qualified_base_round": 134,
+    "no_separate_qualification_claim_for_intermediate_composite_output": true,
+    "complete_parent2020_flag1_invalid_bits_preserved": true,
+    "all_stage_native_reload_independent_and_Pandas_bits_checked": true,
+    "numeric_sha256": "9408f1a59e64b5a05a5cd377741f6034f5685ed8a9626e7388e3bf330628e01c"
+  },
+  "prefit2024_dates_rejected": true,
+  "actual_future_features_not_read": true
+}
