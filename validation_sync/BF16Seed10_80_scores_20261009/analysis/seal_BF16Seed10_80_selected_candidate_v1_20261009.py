@@ -1,0 +1,73 @@
+"""Seal the executed lower-pool candidate; retain honest zero-inference anchor reuse."""
+from pathlib import Path
+import os
+import sys
+import time
+ROOT=Path(__file__).resolve().parents[1];A=ROOT/'analysis'
+sys.path[:0]=[str(ROOT),str(A)]
+from run_dependency_queue_v3_20261006 import read,sha,create,owned
+
+
+def main():
+    service=A/'service_owned_workflows_20261006/BF16Seed10_80_selected_candidate_preparation_v1_20261009'
+    while not (service/'native_launch.json').exists() or owned(read(service/'native_launch.json')):time.sleep(15)
+    assert read(service/'service_execution.json')['status']=='passed'
+    release=A/'BF16Seed10_80_selected_release_v1_20261009'
+    ready=read(release/'inference_ready.json');candidate=Path(ready['source_candidate'])
+    if not ready['new_inference_claimed']:
+        assert ready['status']=='passed_exact_selected_anchor80_candidate_reuse'
+        assert sha(candidate/'manifest.json')==ready['manifest_sha256']
+        for relative,info in read(candidate/'manifest.json')['files'].items():assert sha(candidate/relative)==info['sha256']
+        original_release=Path(ready['source_release'])
+        for name in ('protocol.json','selected_validation.npy','causal_validation.json','calibrated_csv_official.json'):os.link(original_release/name,release/name)
+        create(release/'source_package_verification.json',{'status':'passed_sealed_actual_conditional_residual_candidate',
+            'candidate':str(candidate),'manifest_sha256':sha(candidate/'manifest.json'),
+            'all_parent_sealed_bytes_graph_metrics_and_original_freeze_confirmed':True,'new_inference_claimed':False,'test_labels_read':False})
+        create(release/'selected_candidate_ready_for_registration.json',{**ready,'original_source_release':str(original_release),
+            'source_release':str(release),'status':'passed_actual80_selected_candidate_full_graph_and_metrics_and_source_bytes',
+            'source_manifest_sha256':sha(candidate/'manifest.json'),'sealed_candidate_complete':True})
+        return
+    assert ready['status']=='passed_actual_selected_new_BF16Seed10_80_candidate_inference'
+    assert not (candidate/'manifest.json').exists()
+    selection=read(candidate/'selection.json');assert selection==read(release/'selection.json')
+    before=read(release/'frozen_before_actual_candidate_inference.json')
+    assert sha(release/'selection.json')==before['selection_sha256']
+    prediction=read(candidate/'verification.json')
+    assert prediction['status']=='passed' and prediction['test_labels_read'] is False
+    for key in ('model_reload_bit_identical','pipeline_replay_bit_identical','csv_replay_byte_identical','cold80_day_prefix_bit_identical','pipeline_replay_bit_identical'):assert prediction[key]
+    assert sha(candidate/'submission.csv')==prediction['csv_sha256']
+    assert len(prediction['models'])==len(prediction['actual_model_reload_controls'])==len(prediction['actual80_day_prefix_model_controls'])==ready['actual_saved_native_models']
+    assert read(candidate/'BF16Seed10_155_complete_parent_native_replay_verification.json')['status']=='passed_actual_complete148_and_seed10_155_two_full_native_independent_replays_and_cold80'
+    freeze=Path(ready['pre_inference_source_snapshot']);sources=read(freeze/'manifest.json')
+    assert sources['at_local']<=selection['frozen_at_local']
+    for relative,info in sources['files'].items():
+        source=freeze/'repo'/relative;assert sha(ROOT/relative)==sha(source)==info['sha256']
+        target=candidate/'source_snapshot/repo'/relative;target.parent.mkdir(parents=True,exist_ok=True);os.link(source,target);assert sha(target)==info['sha256']
+    for name,info in prediction['models'].items():
+        assert Path(info['path']).resolve().is_relative_to(candidate.resolve())
+        assert sha(info['path'])==info['sha256'],name
+    evidence=[freeze/'manifest.json',*[release/n for n in ('selected_case_before_future_features.json','frozen_before_actual_candidate_inference.json','verification.json','causal_validation.json','calibrated_csv_official.json')],
+        service/'native_launch.json',service/'service_execution.json',
+        A/'BF16Seed10_80_actual_controls_index_v1_20261009.json',
+        A/'BF16Seed10_80_official_comparison_v1_20261009/verification.json']
+    for source in evidence:
+        relative=source.relative_to(A) if source.is_relative_to(A) else Path('external_frozen_metadata')/(sha(source)+'_'+source.name)
+        target=candidate/'evidence'/relative;target.parent.mkdir(parents=True,exist_ok=True)
+        if target.exists():assert sha(target)==sha(source)
+        else:os.link(source,target)
+        assert sha(target)==sha(source)
+    create(candidate/'source_package_verification.json',{'status':'passed_actual_pre_inference_source_snapshot_and_BF16Seed10_80_native_candidate',
+        'actual_source_files':len(sources['files']),'csv_sha256':prediction['csv_sha256'],'new_native_fits':0,'test_labels_read':False})
+    create(candidate/'manifest.json',{'status':'passed','files':{p.relative_to(candidate).as_posix():{'sha256':sha(p),'bytes':p.stat().st_size}
+        for p in sorted(candidate.rglob('*')) if p.is_file() and p!=candidate/'manifest.json'}})
+    for relative,info in read(candidate/'manifest.json')['files'].items():assert sha(candidate/relative)==info['sha256'],relative
+    create(release/'source_package_verification.json',{'status':'passed_sealed_actual_conditional_residual_candidate',
+        'candidate':str(candidate),'manifest_sha256':sha(candidate/'manifest.json'),'test_labels_read':False})
+    create(release/'selected_candidate_ready_for_registration.json',{**ready,
+        'status':'passed_actual80_selected_candidate_full_graph_and_metrics_and_source_bytes',
+        'source_manifest_sha256':sha(candidate/'manifest.json'),'sealed_candidate_complete':True})
+
+
+if __name__=='__main__':
+    from BF16Seed10_155_storage_v1_20261009 import installed_transfer
+    with installed_transfer():main()
