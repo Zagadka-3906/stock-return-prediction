@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_two_seed154_actual_controls_main_v69_20261009.py", line 175, in <module>
+    with safe(log),serial(log/'serial_publication_mutex.json'):main()
+                                                               ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_two_seed154_actual_controls_main_v69_20261009.py", line 161, in main
+    create(out/'receipt.json',value);create(A/'two_seed154_synthetic_main_v68_receipt_20261009.json',value);print(value,flush=True)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_dependency_queue_v3_20261006.py", line 28, in create
+    with Path(path).open('x', encoding='utf-8') as stream:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\two_seed154_synthetic_main_v68_receipt_20261009.json'
