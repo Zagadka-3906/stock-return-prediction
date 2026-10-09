@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_AdaptiveJointCrossHuber242_round148_full_registration_v6_20261009.py", line 5, in <module>
+    if __name__=='__main__':execute('run_AdaptiveJointCrossHuber242_round148_full_registration_v2_20261008.py')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_Adaptive148_candidate_entry_v6_20261009.py", line 54, in execute
+    prior.execute(original)
+  File "D:\3.Study\数据分析\赛题五\analysis\resume_pending148_verified_gates_v5_20261009.py", line 50, in execute
+    retained(148,original,phase)
+  File "D:\3.Study\数据分析\赛题五\analysis\prepare_pending148_149_phase_isolated_publishers_v1_20261008.py", line 50, in execute
+    if phase is None:prior.execute(original)
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_Adaptive148_own_full_service_identity_v4_20261008.py", line 15, in execute
+    prior.execute(original,phase)
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_Adaptive148_native_dispatch_v3_20261008.py", line 27, in execute
+    if phase is None:ns['main']()
+                     ^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_AdaptiveJointCrossHuber242_round148_full_registration_v2_20261008.py", line 83, in main
+    helpers.sync.git=retry_git;github()
+                               ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_AdaptiveJointCrossHuber242_round148_full_validation_20261008.py", line 97, in main
+    sync.git('push', 'origin', 'HEAD:refs/heads/main', timeout=180)
+  File "D:\3.Study\数据分析\赛题五\analysis\run_AdaptiveJointCrossHuber242_round148_full_registration_v2_20261008.py", line 52, in retry_git
+    try:return old_git(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\verified_TLS_Git_retry_runtime_v2_20261008.py", line 15, in retry
+    try:return original(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\file_backed_hidden_git_runtime_20261007.py", line 21, in git
+    raise RuntimeError('git '+args[0]+' failed: '+message[:1500])
+RuntimeError: git push failed: remote: warning: File validation_sync/round148/complete_ranking_display/lossless_ranking_display_v2_20261006/round148/complete_rankings_lossless.html is 51.49 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+remote: error: Trace: 0b3ef868747d43b78040cdb9fe1bd68c2e2a4f062127b1ca348ccebfcf362c7a        
+remote: error: See https://gh.io/lfs for more information.        
+remote: error: File validation_sync/round148/complete_ranking_display/lossless_ranking_display_v2_20261006/round148/full_report_reconstructed_for_publication.json.gz is 101.70 MB; this exceeds GitHub's file size limit of 100.00 MB        
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/Zagadka-3906/stock-return-prediction.git
+ ! [remote rejected]   HEAD -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/Zagadka-3906/stock-return-prediction.git'
+

@@ -1,0 +1,50 @@
+{
+  "status": "passed_actual_two_overlapping_hidden_Windows_processes_serial_named_mutex",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_serial_main_publication_mutex_v1_20261009.py": "f3928ce0acbb951a944b14dbe39f0d448160c9d664cdc278be7979918ae4e9bd",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\serial_main_publication_mutex_v1_20261009.py": "96040f542091f9ce9f346ec6d7fd1a1c317fea832045476f39a0a83b0b385bd3",
+    "E:\\赛题五_本机临时\\serial_main_publication_mutex_controls_v1_20261009\\worker.py": "41ad9f6b6925ac20f42d6a7ad7c45474e1be27da6d933fcce0f7694bb06576da"
+  },
+  "records": [
+    {
+      "pid": 33420,
+      "started": 1791533352.1344588,
+      "acquired": 1791533352.1344588,
+      "released": 1791533353.6350474,
+      "events": [
+        {
+          "pid": 33420,
+          "wait_seconds": 0.0,
+          "abandoned_owner_reconciled": false,
+          "acquired_at": 1791533352.1344588
+        },
+        {
+          "pid": 33420,
+          "released_at": 1791533353.6350474
+        }
+      ]
+    },
+    {
+      "pid": 2632,
+      "started": 1791533352.1344588,
+      "acquired": 1791533353.6350474,
+      "released": 1791533355.1356559,
+      "events": [
+        {
+          "pid": 2632,
+          "wait_seconds": 1.5,
+          "abandoned_owner_reconciled": false,
+          "acquired_at": 1791533353.6350474
+        },
+        {
+          "pid": 2632,
+          "released_at": 1791533355.1356559
+        }
+      ]
+    }
+  ],
+  "acquisition_intervals_nonoverlapping": true,
+  "second_process_waited_while_first_owned": true,
+  "actual_git_mutations_by_test": 0,
+  "test_labels_read": false
+}
