@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_verified_commit_transport_v4_20261009.py", line 102, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_verified_commit_transport_v4_20261009.py", line 79, in main
+    git('update-ref','refs/heads/main',commit,rejected);git('read-tree',commit)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_round148_verified_commit_transport_v4_20261009.py", line 30, in git
+    if not transient or attempt==4:raise RuntimeError(message[-3000:])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: fatal: update_ref failed for ref 'refs/heads/main': cannot lock ref 'refs/heads/main': is at a200cddeb715cffecf777dfbb10a781698fa0161 but expected b9160c369358910660656b7bae95860ce9e23b70
+
