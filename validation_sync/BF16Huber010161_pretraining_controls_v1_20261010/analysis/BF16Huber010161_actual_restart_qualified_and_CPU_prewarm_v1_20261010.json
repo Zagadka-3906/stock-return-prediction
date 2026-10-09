@@ -1,0 +1,57 @@
+{
+  "status": "passed_actual_small32_wide2_loss_weight_RNG_restart_and_input_rejection_CPU_independent_started",
+  "at_local": "2026-10-10T05:54:10.237706",
+  "restart_verification": "E:\\赛题五_本机临时\\GPU实测_20261009\\BF16_medium2048_huber010_seed09_restart_v1\\verification.json",
+  "restart_verification_sha256": "63ba0c06318423faa685c2f06bace4cddfcc47604e59057c234c430a18a280e4",
+  "actual_configuration": {
+    "kind": "mlp",
+    "target": "y_rank",
+    "hidden": [
+      2048,
+      1024,
+      512
+    ],
+    "epochs": 2,
+    "batch_size": 32768,
+    "microbatch_size": 8192,
+    "predict_batch_size": 8192,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "dropout": 0.0,
+    "seed": 20261009,
+    "loss": "Huber",
+    "huber_delta": 0.1,
+    "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+    "recipe": "own_mature_BF16_medium2048_huber010_seed09_e64_weighted_accum_v1_20261009"
+  },
+  "CPU_hidden_launch": {
+    "name": "BF16Huber010161_independent_small_CPU_v1_20261009",
+    "pid": 32996,
+    "script": "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_service_owned_windows_workflow_20261006.py",
+    "script_args": [
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16Huber010161_independent_small_CPU_v1_20261009\\job_definition.json"
+    ],
+    "owned_worker_pid": 15500,
+    "owned_worker_creation_time": 1791582849.6820867,
+    "owned_parent_creation_time": 1791582849.6655543,
+    "service_provider_pid": 7788,
+    "service_provider_creation_time": 1791574466.087819,
+    "service_provider_name": "WmiPrvSE.exe",
+    "independent_launch_root_in_any_job": false,
+    "actual_native_console_handle": 0,
+    "original_driver": "D:\\3.Study\\数据分析\\赛题五\\analysis\\manual_resume_service_alias_runtime_v5_20261010.py",
+    "original_arguments": [
+      "--driver",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_BF16Huber010161_independent_small_CPU_v1_20261009.py",
+      "--aliases",
+      "D:\\3.Study\\数据分析\\赛题五\\analysis\\manual_resume_service_aliases_v4_20261010.json"
+    ],
+    "at_local": "2026-10-10T05:54:09",
+    "stdout": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16Huber010161_independent_small_CPU_v1_20261009\\stdout.log",
+    "stderr": "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\BF16Huber010161_independent_small_CPU_v1_20261009\\stderr.log"
+  },
+  "actual_completed_new_annual_fits": 0,
+  "new_official_scores": 0,
+  "future_X_read": false,
+  "test_labels_read": false
+}
