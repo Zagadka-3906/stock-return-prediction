@@ -1,0 +1,18 @@
+from pathlib import Path
+import sys,os
+A=Path(__file__).resolve().parent;ROOT=A.parent
+sys.path[:0]=[str(ROOT),str(A)]
+def main():
+    from lossless_chunked_safe_main_runtime_v1_20261009 import installed as safe
+    from serial_main_publication_mutex_v1_20261009 import installed as serial
+    from verified_TLS_Git_retry_runtime_v2_20261008 import installed as git_io
+    from BF16FlagAfter152157_storage_v1_20261009 import installed_transfer
+    from actual_QA_collector_path_runtime_v43_20261009 import installed as qa_paths
+    count=int(os.environ.get('GIT_CONFIG_COUNT','0'))
+    for i,(k,v) in enumerate((('http.proxy','http://127.0.0.1:7897'),('http.version','HTTP/1.1'))):os.environ[f'GIT_CONFIG_KEY_{count+i}']=k;os.environ[f'GIT_CONFIG_VALUE_{count+i}']=v
+    os.environ['GIT_CONFIG_COUNT']=str(count+2)
+    log=Path('E:/赛题五_本机临时/第157轮_20261009/safe_full_main_v1')
+    with safe(log),serial(log/'serial_mutex.json'),git_io(log/'file_backed_git'),installed_transfer(),qa_paths():
+        import run_BF16FlagAfter15222_round157_full_registration_v1_20261009 as receiver
+        receiver.main()
+if __name__=='__main__':main()
