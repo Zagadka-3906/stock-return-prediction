@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_HuberSparse59_round150_full_registration_recovery_v30_20261009.py", line 5, in <module>
+    if __name__=='__main__':execute()
+                            ^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_registry_attempt_v30_20261009.py", line 21, in execute
+    try:previous.execute()
+        ^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_partial_registry_v29_20261009.py", line 42, in execute
+    try:previous.execute()
+        ^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_materialization_v27_20261009.py", line 34, in execute
+    try:previous.execute(NAME)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_volume_transfer_v25_20261009.py", line 29, in execute
+    previous.execute(name)
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_import_namespace_v23_20261009.py", line 38, in execute
+    try:previous.execute(name)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_data_path_bindings_v20_20261009.py", line 42, in execute
+    try:old.execute(name,phase)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\recover_HuberSparse150_serial_publication_v18_20261009.py", line 53, in execute
+    try:previous.execute(150,name,phase)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\sparse150152_publication_safe_receivers_v16_20261009.py", line 61, in execute
+    ns['execute'](name,*([phase] if phase else []))
+  File "D:\3.Study\数据分析\赛题五\analysis\sparse150152_publication_safe_receivers_v16_20261009.py", line 61, in execute
+    ns['execute'](name,*([phase] if phase else []))
+    ^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_HuberSparse59_round150_full_registration_v2_20261009.py", line 83, in main
+    helpers.sync.git=retry_git;github()
+                               ^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_HuberSparse59_round150_full_validation_20261008.py", line 63, in main
+    target = (prefix / 'original_execution_evidence' / path.relative_to(ROOT)).as_posix()
+                                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'E:\\赛题五_本机临时\\HuberSparse18_year2023_native_supplement_v1_20261009\\control000.json' is not in the subpath of 'D:\\3.Study\\数据分析\\赛题五'
