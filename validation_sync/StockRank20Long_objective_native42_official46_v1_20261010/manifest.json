@@ -1,0 +1,1457 @@
+{
+  "status": "actual_immutable_capacity_stage_records_only",
+  "stage": "native42_official46",
+  "configuration": {
+    "kind": "mlp",
+    "target": "y_rank_20mean",
+    "hidden": [
+      512,
+      256,
+      128
+    ],
+    "epochs": 64,
+    "batch_size": 32768,
+    "microbatch_size": 8192,
+    "predict_batch_size": 8192,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "dropout": 0.0,
+    "seed": 20261009,
+    "raw_feature_count": 63,
+    "encoded_feature_count": 121,
+    "numeric_feature_count": 120,
+    "stock_embedding_dim": 16,
+    "stock_vocabulary_size": 4651,
+    "feature_encoder_module": "daily_cross_sectional_feature_encoder120_v1_20261010",
+    "label_horizon_trading_days": 20,
+    "training_calendar_window": 504,
+    "loss": "Huber",
+    "huber_delta": 0.1,
+    "return_target_scale": 1.0,
+    "return_winsor_quantiles": [
+      0.005,
+      0.995
+    ],
+    "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+    "recipe": "own_mature_stock_rank20long_embedding16_cross120_rank20mean_recent504_small512_BF16_e64_v1_20261010"
+  },
+  "actual_future_X_read": false,
+  "submission_qualification_pending": true,
+  "new_quality_scores_by_publication": 0,
+  "long504_mature_population_controls_independently_passed": true,
+  "training_calendar_window": 504,
+  "files": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_StockRank20Long_objective_native42_official46_main_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/publish_StockRank20Long_objective_native42_official46_main_v1_20261010.py",
+      "raw_sha256": "51266bc86e5d9022a4ab8193903aefece13d6ad0e64c35984b0fbd8636577d0d"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\publish_stock_rank20long_objective_stages_main_v1_20261011.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/publish_stock_rank20long_objective_stages_main_v1_20261011.py",
+      "raw_sha256": "eb10c1da49691788e2d483a27f18a646359130ac055381ee2eead537a36833ed"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/后续选模标准.md",
+      "raw_sha256": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_identity_embedding_network_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/stock_identity_embedding_network_v1_20261010.py",
+      "raw_sha256": "4fac164ab3ddcdde4c37e2c89a9ad05113ff0609fc48b068cf1e4a028f612dca"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\recent504_rank20_mature_training_population_v1_20261011.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/recent504_rank20_mature_training_population_v1_20261011.py",
+      "raw_sha256": "9f61d5c997a04bd023dd034bed5d1fb8dabba16437b7d5c36aa1fb833e8e857d"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\recent504_rank20_mature_population_actual_CPU_controls_v1_20261011.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/recent504_rank20_mature_population_actual_CPU_controls_v1_20261011.json",
+      "raw_sha256": "7929df368603e8fba35509bdd2da6a42b4da8bbcfd5d471df742c2d2dfbe5f7c"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_stock_rank20long_504_own64_controls46_v1_20261011.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/prepare_stock_rank20long_504_own64_controls46_v1_20261011.py",
+      "raw_sha256": "2b1c248a5e788b399ecf9a63f215af88813ddc109ae6a1efe3991501290709b6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_stock_rank20long_embedding_after175_fast17_screen_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/run_stock_rank20long_embedding_after175_fast17_screen_v1_20261010.py",
+      "raw_sha256": "7a43d73f15407c8178a55c6718b72280a88f97558d30327b95582c08bc55af50"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/run_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010.py",
+      "raw_sha256": "b01906737ea9f5027e7b8c789874c7d1db8cc964fe5b57f68fa811740cb5c4e7"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank20long_embedding_after_complete_qualified_parent_native_stage_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/stock_rank20long_embedding_after_complete_qualified_parent_native_stage_v1_20261010.py",
+      "raw_sha256": "9f480bc3f4b884dc4b2d86053eedce59bd21353164373112ab57ee0cc39a81a0"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank20long_embedding_saved_tensor_decoder_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/stock_rank20long_embedding_saved_tensor_decoder_v1_20261010.py",
+      "raw_sha256": "5ad90dd26c882f7ce00be29d06b6f171fcdd3dbc6cbae0dd4f58d4c4edf5775b"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank20long_embedding_small512_BF16_native_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/stock_rank20long_embedding_small512_BF16_native_v1_20261010.py",
+      "raw_sha256": "392e2f9c0e981d2970e7191ca840e07f78f22d836f9272b008102ce5417ddc1f"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_stock_rank20long_embedding_small512_BF16_bank6_own64_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/train_stock_rank20long_embedding_small512_BF16_bank6_own64_v1_20261010.py",
+      "raw_sha256": "d5b82d14a77ef43cc83b9650c7129351d7b17fc96e5c90d088b3f99cf0e1a1fd"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_stock_rank20long_embedding_actual_mature_fixture_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/verify_stock_rank20long_embedding_actual_mature_fixture_v1_20261010.py",
+      "raw_sha256": "4c66d5429cf0cd025c152a57b4db449d72a3b16d814339c3ec569204110420df"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_stock_rank20long_embedding_six_state_native42_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/verify_stock_rank20long_embedding_six_state_native42_v1_20261010.py",
+      "raw_sha256": "15b929fabc6a30325f3868e2adfbc006540918193d5e061a8538e7a3b7e1c912"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_stock_rank20long_embedding_small512_full5_independent_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/verify_stock_rank20long_embedding_small512_full5_independent_v1_20261010.py",
+      "raw_sha256": "74348d5517e693d24a419090aff7505f9c4f3b7614aa7f09e8ae31dde7156942"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_stock_rank20long_embedding_small512_restart_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/verify_stock_rank20long_embedding_small512_restart_v1_20261010.py",
+      "raw_sha256": "fef6eb870b4df0ba26e2f6af18a014c83249c3ceea309ed49404e8bdc0cc8d56"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_stock_rank20long_embedding_small512_small_CPU_v1_20261010.py": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/verify_stock_rank20long_embedding_small512_small_CPU_v1_20261010.py",
+      "raw_sha256": "921cb79d01cfd8d4aeb1d496cdea539062f8b84cc3ae66bd28fb67f7224467fc"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_stock_rank20long_embedding_mature_fixture_location_v1_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/actual_stock_rank20long_embedding_mature_fixture_location_v1_20261010.json",
+      "raw_sha256": "32d35bbe384299f4cba9fc11cb42283afc9c2aa6deef1c4b43ec9417af556631"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_stock_rank20long_embedding_six_state_native42_location_v1_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/actual_stock_rank20long_embedding_six_state_native42_location_v1_20261010.json",
+      "raw_sha256": "2ece271e6a5749629b4d1ba9dbd508e281a7fb271529efbfd47035b549ef03f0"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_stock_rank20long_embedding_small512_bank6_location_v1_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/actual_stock_rank20long_embedding_small512_bank6_location_v1_20261010.json",
+      "raw_sha256": "b20913ae919e57ec6efe296d367d421a95f6411302def96ee726d22ce0b698e3"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_stock_rank20long_embedding_small512_restart_location_v1_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/actual_stock_rank20long_embedding_small512_restart_location_v1_20261010.json",
+      "raw_sha256": "3a538a2e267e75b04f1beed23892afafc60d1b25dfbe28c3a76a9d85be2c2da1"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank20long_embedding_native_stage_and_fast17_sources_admission_v1_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/stock_rank20long_embedding_native_stage_and_fast17_sources_admission_v1_20261010.json",
+      "raw_sha256": "82eb48e5a8fc1d9745e58b8f782aaebd31c0bea41bdedec7f51c351e95fb84b6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank20long_embedding_own64_native_sources_preparation_v1_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/stock_rank20long_embedding_own64_native_sources_preparation_v1_20261010.json",
+      "raw_sha256": "82eb48e5a8fc1d9745e58b8f782aaebd31c0bea41bdedec7f51c351e95fb84b6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long188_source_capsules_main_v1_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long188_source_capsules_main_v1_20261011/job_definition.json",
+      "raw_sha256": "d3bcdbf5641201e3062b4c5ea6d074f47107612f471fa7d82171f0d428100a37"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long188_source_capsules_main_v1_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long188_source_capsules_main_v1_20261011/launch_result.json",
+      "raw_sha256": "11b1400fb3ee6908d4f57d4926ec51c6fae41930f9df1d5c09fe686271c53af6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long188_source_capsules_main_v1_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long188_source_capsules_main_v1_20261011/native_launch.json",
+      "raw_sha256": "c67b2617d332d3de7808a67961282bf41ffad1f6e4c24f1640fbc926285479ec"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long188_source_capsules_main_v1_20261011\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long188_source_capsules_main_v1_20261011/service_execution.json",
+      "raw_sha256": "4cb84e9683db9dc6e03433a63f88d3807b77c2f9f9214bcb047c8e0554dd0d7a"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long188_source_capsules_main_v1_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long188_source_capsules_main_v1_20261011/verified_hidden_launch.json",
+      "raw_sha256": "2184db04f11406a4c31563cad8129ebab2757b5fbfa5d0e660e8413683ec6404"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long_504_objective_stages_main_v1_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long_504_objective_stages_main_v1_20261011/job_definition.json",
+      "raw_sha256": "6b96231bf25ed96756aa778fa21f4d9ab8ee054104ce89378d7e828f6fece298"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long_504_objective_stages_main_v1_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long_504_objective_stages_main_v1_20261011/launch_result.json",
+      "raw_sha256": "c68b10e602d45061a9fc7d0ad635b7c3595774cb90e8a0bfd3467568a8eb5272"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long_504_objective_stages_main_v1_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long_504_objective_stages_main_v1_20261011/native_launch.json",
+      "raw_sha256": "5642f8644e1929c53cfcde181007763c5f3ca319ec0cdba128902426f874b10c"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_StockRank20Long_504_objective_stages_main_v1_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_StockRank20Long_504_objective_stages_main_v1_20261011/verified_hidden_launch.json",
+      "raw_sha256": "1f5c7bc7b0a81983dbf494dff1e77ae3a2a63d5cbc59a87b8db3086a6e14c449"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011\\administrative_supersession_for_GOSS_20261006.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011/administrative_supersession_for_GOSS_20261006.json",
+      "raw_sha256": "674dba324a5d08d031526c8494944c5a2c6e1d5fbe1891b80fa85ada7f1d586f"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011/job_definition.json",
+      "raw_sha256": "894dca7f05d664de0c9b44bb396b757a2844e299bb4879b44d7a6836d65a1776"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011/launch_result.json",
+      "raw_sha256": "c76fd43092992b2eb4bdc8258ede88a8d5b404be16caea692c5912e22fa2526e"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011/native_launch.json",
+      "raw_sha256": "bc4301f655e42f758e7079664797f01057e5d99cd3750213e58923a2bbd8bb97"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011/verified_hidden_launch.json",
+      "raw_sha256": "81be72bf95a7fae4fc408e925d8a5d8ce457a32d29916bac2fb7275a21d8fa83"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011/job_definition.json",
+      "raw_sha256": "1755194fa3890240c2d957b84aacb076a4efedd0cdf166d7defe235ba96dabe6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011/launch_result.json",
+      "raw_sha256": "4d247052013f1564ba39e33982118a3af8eacc009047c9e62d207aa6f2aa16be"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011/native_launch.json",
+      "raw_sha256": "f7025ff002b6f4579a965b1a63927e5d3b6602cdc04f322932e33312e02f7ebb"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding48_after187_normalization_queue_v1_20261011_actual_candidate_closed_v10_20261011/verified_hidden_launch.json",
+      "raw_sha256": "31750355af48b1dfb6a203ea102f3b92d899a5e7717648fdff36c923d475b8ae"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011/job_definition.json",
+      "raw_sha256": "c537add371fc0398e23b088cc96b81623b1f6268bc3c2df7d78a46b5febc4e83"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011/launch_result.json",
+      "raw_sha256": "37d393fc2880db33a625b77f85d89f328abc51b3ae7b0790b4ee6ac8dda61bf6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011/native_launch.json",
+      "raw_sha256": "80b91640c9a82242aa7a7cddc7fdcecca44fa60fd08265cffb92992fcd0d2200"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_504_own64_controls46_queue_v1_20261011/verified_hidden_launch.json",
+      "raw_sha256": "95068173df76f9b4e712ed5970ef514a7c1834e8691dd06b577be8c101ad853b"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010/job_definition.json",
+      "raw_sha256": "e67006d8a7cb517b3eef58b13295c237aaade320ed77575cf84d11d074286a65"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010/launch_result.json",
+      "raw_sha256": "385326702bddef967f502af33aefac9632745d940fdcf7889079c3a02429d3b8"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010/native_launch.json",
+      "raw_sha256": "851cfebc7258d7e621fafa84658f0784f7f1673c8cbd7875814195f77688e2cd"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010/service_execution.json",
+      "raw_sha256": "51fe59b02e88aa0eff595fc2f7ff65acc96812a5ddbc0e80cabaf01a1462aef7"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_fast17_screen_v1_20261010/verified_hidden_launch.json",
+      "raw_sha256": "d019cfcce6e23c96b6ce744770ba35a8149532dc9096043491e79ae1bc5184e9"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010/job_definition.json",
+      "raw_sha256": "8d3a4ed9d282ed7ee964cd48c4019581c1a049e1754be9e4aae0f427255ecd0a"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010/launch_result.json",
+      "raw_sha256": "496b1a5f47eb11b291613634f713d2ccbcf990e492d30353899702ce8890e8a9"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010/native_launch.json",
+      "raw_sha256": "095b513563f2a19962c3c15592edaa1f9ed738266a0b36abf7141e841e96af1e"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010/service_execution.json",
+      "raw_sha256": "6a2a08a14c03acc4a7e6b84c95e07712ce9c810271ee7b02b1419ad70c662d44"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_after175_large_allocation29_screen_v1_20261010/verified_hidden_launch.json",
+      "raw_sha256": "8d09c4b552a17af344bae859201d040e18708eb1e0ec6be7f7442c9f0fe9c4d0"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_six_state_native42_v1_20261010\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_six_state_native42_v1_20261010/job_definition.json",
+      "raw_sha256": "9e52c6568ab9b9bfdb48378bc7b727068945381714c95c5cfa990d73a15e432f"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_six_state_native42_v1_20261010\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_six_state_native42_v1_20261010/launch_result.json",
+      "raw_sha256": "3dcd1c708721a599876117a883344412f02618041bb57edfee65f16ed46ec05f"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_six_state_native42_v1_20261010\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_six_state_native42_v1_20261010/native_launch.json",
+      "raw_sha256": "bfd1b451282a54e92c342b3f81176bdaedfcc7dc54da65ce901ba44a93ada2cf"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_six_state_native42_v1_20261010\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_six_state_native42_v1_20261010/service_execution.json",
+      "raw_sha256": "916a961ace934921f0871cb8a3e1513bb6a6fd49fdc631910e7ad449d5a77cb0"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_six_state_native42_v1_20261010\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_six_state_native42_v1_20261010/verified_hidden_launch.json",
+      "raw_sha256": "a11365b1c31b5739dffc7d2905718380d61e7b09fa57d094791aedecb8fadc21"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_bank6_v1_20261010\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_bank6_v1_20261010/job_definition.json",
+      "raw_sha256": "460f5b83911cb914b4166dd3e16134fa5a72b50ddcd1adba046612c3af966b70"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_bank6_v1_20261010\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_bank6_v1_20261010/launch_result.json",
+      "raw_sha256": "9a8d04fce8321e9533d48af92505e4db8746d74d0f0d482e650e36ae757bea2e"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_bank6_v1_20261010\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_bank6_v1_20261010/native_launch.json",
+      "raw_sha256": "5981d8054f334d5422c8c5fc63d6b0978ecf7747e292d31f66f8c70c2d73d32a"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_bank6_v1_20261010\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_bank6_v1_20261010/service_execution.json",
+      "raw_sha256": "2c1be3fa5b580eee3393161ba0ba586fac5ac74ee358fe17646ffb87a7582496"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_bank6_v1_20261010\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_bank6_v1_20261010/verified_hidden_launch.json",
+      "raw_sha256": "69a46e92b634f4eb72b23aec69a43f37467a6041cc662cbaf51f3f3cf086a64c"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_restart_v1_20261010\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_restart_v1_20261010/job_definition.json",
+      "raw_sha256": "6b2c539c0f36f1ece75e04bf6416f28db5b56862b12e1b106c7c71cb9afb9eaa"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_restart_v1_20261010\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_restart_v1_20261010/launch_result.json",
+      "raw_sha256": "d19d71a9857275720d600571fdde35071e1d6b7a5e6987b7267664a9f131e0e2"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_restart_v1_20261010\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_restart_v1_20261010/native_launch.json",
+      "raw_sha256": "6e4458a084e570cc6a6d6dd613e5813e1fde81aca93cf72f4da92cec775142fe"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_restart_v1_20261010\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_restart_v1_20261010/service_execution.json",
+      "raw_sha256": "9afc1b4c1ee21d71e23136f8ef1a3e0ccfe1416e92b9ae38bb403da8d36e99cf"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\actual_stock_rank20long_embedding_small512_restart_v1_20261010\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/actual_stock_rank20long_embedding_small512_restart_v1_20261010/verified_hidden_launch.json",
+      "raw_sha256": "6f10d43001d86d908f7abe9c3a68e6a7db17aa637bfa8c0971b7e84bbee6c6b6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011\\administrative_supersession_for_GOSS_20261006.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011/administrative_supersession_for_GOSS_20261006.json",
+      "raw_sha256": "41ed598f668e6ea5102b6a54fddf6b2829cc2eba68c16e4c0ba8ae1d9494a748"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011/job_definition.json",
+      "raw_sha256": "f48253c743f0aa9e70f54f829ef6aafad6e7da53beb11f47b72a9c417fadbc29"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011/launch_result.json",
+      "raw_sha256": "832266b4878e61dc52a14f5a503f2f66241c31900998aef07686901a0e4247ad"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011/native_launch.json",
+      "raw_sha256": "23e059525f0e304d8312cdb82158bab7a78fc47b650b357d6c064ef506e7dfe0"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_actual_queue_v2_20261011/verified_hidden_launch.json",
+      "raw_sha256": "f006c48f1d6221ab9bb68d39a4c513963ddfcc393c40d0c975f231cc81a60505"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011\\administrative_supersession_for_GOSS_20261006.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011/administrative_supersession_for_GOSS_20261006.json",
+      "raw_sha256": "c9c728aa1864d11f26570dae33f68bd11603a06a5c063ce69bc58ac6ccbd10cb"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011/job_definition.json",
+      "raw_sha256": "2ddb4a5b5544378bc8046adba285d056de5a870bbaaec09b232c3e9bdf6a1be8"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011/launch_result.json",
+      "raw_sha256": "a5c70a12e9cf664bed63392242fc988689621a26ae52f3cb2fdff9c06c8825f2"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011/native_launch.json",
+      "raw_sha256": "e5f5480d30a630bd63a3f9f20e598e389eed9483f2a3cd3d7512c3ef4a970743"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011/verified_hidden_launch.json",
+      "raw_sha256": "4ad62d126e2bda03d8dad2e1fdb42344b1c7de109719efb19ed54e4c9843a9e3"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011/job_definition.json",
+      "raw_sha256": "d5e357eb3afc76f9635992150aeb07bc9bd223f39e69bb0e8d4632628a46f454"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011/launch_result.json",
+      "raw_sha256": "5d438c8a059dc792e38d1a12f4e8cf66b5f9b5e6947975c4fae444a7736226ad"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011/native_launch.json",
+      "raw_sha256": "d67647e2c51cbe2dcead7323dbd545035279ebcbd6700e965c3cf0ac4336c727"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding188_complete48_family_v1_20261011_actual_candidate_closed_v10_20261011/verified_hidden_launch.json",
+      "raw_sha256": "9b023b8cf1a87e52488602ea8ff419e9f7f6dbd27e1c45e758d118479eac7b83"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011\\administrative_supersession_for_GOSS_20261006.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011/administrative_supersession_for_GOSS_20261006.json",
+      "raw_sha256": "a866e1a872ddf0806091edef64561b27b654d75517d4bd2f83099d93ae932d31"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011/job_definition.json",
+      "raw_sha256": "08fb33314058988e5302a2552a440a4423101df8ab9c50647209734fa6be18fd"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011/launch_result.json",
+      "raw_sha256": "95d1463e46c582ffab494fb6dc9a4d0620dbb3316d3537f1564efbe9e5782da7"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011/native_launch.json",
+      "raw_sha256": "f55b181e6fd9c3623daf38ebf3541d7a241ee3095defcbb887ecce14fa0f88fc"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011/verified_hidden_launch.json",
+      "raw_sha256": "a59138c484ea01d43a3c06edb75d09b1429a07ce3b00a34800d1ecd4385302b3"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011/job_definition.json",
+      "raw_sha256": "d1e66a6ed9ad1f42c31af112034b2062d920d17a266e05dd84c6efeb0ec50640"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011/launch_result.json",
+      "raw_sha256": "75f69ed067d24cb69fa7fcdedb8e84c62affe0b9d38b6610b53527bbc3465a44"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011/native_launch.json",
+      "raw_sha256": "083a4274425b8e40c4a149f9fc65c66c7cb535a455052a875b85367f1092c0d3"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding48_selected_native14_v1_20261011_actual_candidate_closed_v10_20261011/verified_hidden_launch.json",
+      "raw_sha256": "b31bad5dcb2f828a8194fbe171e48f65f514d8a466d046a172e59dd841b7ba56"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009/job_definition.json",
+      "raw_sha256": "3f5c66bee17825aa2b80f0b08b424e3d7d91e0e9c0683dc1ce6209d294f71f46"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009/launch_result.json",
+      "raw_sha256": "33b98fcd92c0a7ce8e9627c84885815b1330e166bf862b27fb308d83e04d13b6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009/native_launch.json",
+      "raw_sha256": "e7ca5fcb08764961570d5ae01aa6a03df4ed37f0e4e618ec506ac25d2d04c1cd"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009/service_execution.json",
+      "raw_sha256": "856a54d2000715eb6ec1fc9953a04e7d87a2fe0ba9474d50ab5b5a0cefad80be"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_full5_GPU_controls_v1_20261009/verified_hidden_launch.json",
+      "raw_sha256": "1630419801930189e03b2ef7cd163f7dee1d93b0e2d2abcf220a2dbc55c2bb3c"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009/job_definition.json",
+      "raw_sha256": "d5a266e89111c51807e12a55687a31bfbcc3230b549400d48d10097671f957d6"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009/launch_result.json",
+      "raw_sha256": "02fa0883eb7b564049a1e2e3d9a0202f1f88c3c89036435172f1b239ca5ff1fe"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009/native_launch.json",
+      "raw_sha256": "144ee23d8d88aef1317ab192f22066189a480f66bbd5ee56344597a30f35e2e4"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009/service_execution.json",
+      "raw_sha256": "ec8af3c5c70068de0c574a182158e29e56131086813669da2c2c90d8e016cd6d"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009/verified_hidden_launch.json",
+      "raw_sha256": "e0af0b40814a7cb17bb378f7e3f62625f6a983c6d09fd84330a381e67df59363"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010\\job_definition.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010/job_definition.json",
+      "raw_sha256": "c58726f150b23357fae3f471ff269b0e05758cd5155c4bf3f30d2a5277a011dc"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010\\launch_result.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010/launch_result.json",
+      "raw_sha256": "7169d88851202a4bc1c28cada4a2c2e45a83718645d97a7cc74a60ed5cb1580f"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010\\native_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010/native_launch.json",
+      "raw_sha256": "983079b65904cc82681be12e9cc3a7de8ece7345230088c7e7e6559937d511fe"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010\\service_execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010/service_execution.json",
+      "raw_sha256": "b02529a1917b2f20e1217afdccca94cbb8229c1cdae72e9f2ae2a9617464ceaa"
+    },
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\service_owned_workflows_20261006\\StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010\\verified_hidden_launch.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/analysis/service_owned_workflows_20261006/StockRank20LongEmbedding_actual_mature_fixture_CPU_v1_20261010/verified_hidden_launch.json",
+      "raw_sha256": "2f866e568362fe702f18b34b56e40673b1ce7cd57d781f8a087ef91e43e8397d"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long188_sources_main_v1_20261011\\frozen_before_publication.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/54579e3ec3560f8eff94d43bd958018bc8e3155f8560e21627f3c72700807305_frozen_before_publication.json",
+      "raw_sha256": "54579e3ec3560f8eff94d43bd958018bc8e3155f8560e21627f3c72700807305"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long188_sources_main_v1_20261011\\receipt.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/99a4d8bfff45dce6c279e8a71c57e7bbecb23077bb0dcb2561192c8295915a65_receipt.json",
+      "raw_sha256": "99a4d8bfff45dce6c279e8a71c57e7bbecb23077bb0dcb2561192c8295915a65"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long188_sources_main_v1_20261011\\serial_mutex.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e4ebac12c876897d3d1f41f29f596a2a47619b9d5ae1f490cafda73999a16860_serial_mutex.json",
+      "raw_sha256": "e4ebac12c876897d3d1f41f29f596a2a47619b9d5ae1f490cafda73999a16860"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long188_sources_main_v1_20261011\\file_backed_git\\actual_verified_TLS_transport_retries.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9_actual_verified_TLS_transport_retries.json",
+      "raw_sha256": "612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long188_sources_main_v1_20261011\\file_backed_git\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/db96c47ed62d429176f433a8605bf57da88d17facfb6a92eb612cd5615ce6cc7_execution.json",
+      "raw_sha256": "db96c47ed62d429176f433a8605bf57da88d17facfb6a92eb612cd5615ce6cc7"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long188_sources_main_v1_20261011\\safe\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e3bb1dfa2a87bc25162ab9e581236ec8aee259e4755fd3465e8e53ccc439201b_execution.json",
+      "raw_sha256": "e3bb1dfa2a87bc25162ab9e581236ec8aee259e4755fd3465e8e53ccc439201b"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\actual_E_TRAIN_cache_guard_binding_v2_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/73d40833882ced87db776fae5d3ba8b51731182dfe2249071ea8c87a5cbf1725_actual_E_TRAIN_cache_guard_binding_v2_20261010.json",
+      "raw_sha256": "73d40833882ced87db776fae5d3ba8b51731182dfe2249071ea8c87a5cbf1725"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case000_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/3c9422d17c3cabefcf27c4558a77eac3b643b3b81f950d5303f2532a26e217b4_case000_controls.json",
+      "raw_sha256": "3c9422d17c3cabefcf27c4558a77eac3b643b3b81f950d5303f2532a26e217b4"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case000_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8814b50bd432c717f4a30c6e1c9b240f6955e6d27b19287bb7b366c7c6686555_case000_official.json",
+      "raw_sha256": "8814b50bd432c717f4a30c6e1c9b240f6955e6d27b19287bb7b366c7c6686555"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case001_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/4236022887f567d8d322ec14d4d652266b6a344aeaec9de17ae3754088dbf6ca_case001_controls.json",
+      "raw_sha256": "4236022887f567d8d322ec14d4d652266b6a344aeaec9de17ae3754088dbf6ca"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case001_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c252c6fea27ac0c48f68ce32368ff81ca62d39e087a806acdc6c7e9bf9f365db_case001_official.json",
+      "raw_sha256": "c252c6fea27ac0c48f68ce32368ff81ca62d39e087a806acdc6c7e9bf9f365db"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case002_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/fa9351fed671276858a08a8bd4b4de2c044ea7d2676b56a6eb51c519440f4e60_case002_controls.json",
+      "raw_sha256": "fa9351fed671276858a08a8bd4b4de2c044ea7d2676b56a6eb51c519440f4e60"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case002_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/59cf3b064d1874aacc4070e78b8e91f3d9e31885e5a87b3f8554b926f3f0c801_case002_official.json",
+      "raw_sha256": "59cf3b064d1874aacc4070e78b8e91f3d9e31885e5a87b3f8554b926f3f0c801"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case003_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0455175386fc0aab22635b60d8519005ddfe93d271ef4fbf0badf309da17cbdc_case003_controls.json",
+      "raw_sha256": "0455175386fc0aab22635b60d8519005ddfe93d271ef4fbf0badf309da17cbdc"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case003_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/b8bb0d9c4352e286b4d66aa414e45d75339905e5e186a20b84eda3b3d6b8e8f1_case003_official.json",
+      "raw_sha256": "b8bb0d9c4352e286b4d66aa414e45d75339905e5e186a20b84eda3b3d6b8e8f1"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case004_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a3c2991c4c533be2bf639a7652ccdfa2b9ac99d3b5c821dbe6ecc7204260a65c_case004_controls.json",
+      "raw_sha256": "a3c2991c4c533be2bf639a7652ccdfa2b9ac99d3b5c821dbe6ecc7204260a65c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case004_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/781ee61e6f497cb92acad5d992be8ddb3e2e2c52e1795ab3a305cba1906f722e_case004_official.json",
+      "raw_sha256": "781ee61e6f497cb92acad5d992be8ddb3e2e2c52e1795ab3a305cba1906f722e"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case005_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e755072f3df5dcaf70e9fcf8cc8cd49e70df12cf8becaff350af075d436ec84e_case005_controls.json",
+      "raw_sha256": "e755072f3df5dcaf70e9fcf8cc8cd49e70df12cf8becaff350af075d436ec84e"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case005_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/76969b72cb2a90f255ef7990c35d7c5234001cf4e3201fca5df9e38c81f14c21_case005_official.json",
+      "raw_sha256": "76969b72cb2a90f255ef7990c35d7c5234001cf4e3201fca5df9e38c81f14c21"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case006_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/88604e8be063c60e68a80a35dde9e94ee48a9eded1807f85a17f4dc8cfc6a602_case006_controls.json",
+      "raw_sha256": "88604e8be063c60e68a80a35dde9e94ee48a9eded1807f85a17f4dc8cfc6a602"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case006_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/901a67fb1467e064de76af0fe5c20a4a6e51ca65953759753c52550666cf3e72_case006_official.json",
+      "raw_sha256": "901a67fb1467e064de76af0fe5c20a4a6e51ca65953759753c52550666cf3e72"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case007_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/64643184e8827510e88a13029987deb2a2e55c99bf9d1829c2629c4a6cdfd882_case007_controls.json",
+      "raw_sha256": "64643184e8827510e88a13029987deb2a2e55c99bf9d1829c2629c4a6cdfd882"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case007_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/9248d9ff92840f00522447d8b815fbf60ce065fdfd499447c562d9773a953c72_case007_official.json",
+      "raw_sha256": "9248d9ff92840f00522447d8b815fbf60ce065fdfd499447c562d9773a953c72"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case008_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/cd74f42e710fb6171b60bea041a877c8902f25a7556893b0544646f080605f25_case008_controls.json",
+      "raw_sha256": "cd74f42e710fb6171b60bea041a877c8902f25a7556893b0544646f080605f25"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case008_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/2c7318cf1ee05df90f29ee228caf38d13e4023daedeeb54079472590bbb65d41_case008_official.json",
+      "raw_sha256": "2c7318cf1ee05df90f29ee228caf38d13e4023daedeeb54079472590bbb65d41"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case009_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/505a0af39e102c768c33062c6f80d2dfc8aadf9a8e080d44d7ae55bd9b2a73db_case009_controls.json",
+      "raw_sha256": "505a0af39e102c768c33062c6f80d2dfc8aadf9a8e080d44d7ae55bd9b2a73db"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case009_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/438b8914d3257e6ddef50dfc2b0531357c473ec45ec36c2fa0d3b088fb8b8b96_case009_official.json",
+      "raw_sha256": "438b8914d3257e6ddef50dfc2b0531357c473ec45ec36c2fa0d3b088fb8b8b96"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case010_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1739ac1f820c33b3e98b52c808a5ad66ff7b8a999b05686f39d540c9980a3366_case010_controls.json",
+      "raw_sha256": "1739ac1f820c33b3e98b52c808a5ad66ff7b8a999b05686f39d540c9980a3366"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case010_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/4fd1b53eb4b1b03b6c651a386115e11d1a43ee0948aacd9be390a70f5b43084a_case010_official.json",
+      "raw_sha256": "4fd1b53eb4b1b03b6c651a386115e11d1a43ee0948aacd9be390a70f5b43084a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case011_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f86ec6561db49485053e8501984d59609619767917905ccc7ec4d014059708da_case011_controls.json",
+      "raw_sha256": "f86ec6561db49485053e8501984d59609619767917905ccc7ec4d014059708da"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case011_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a48ba8b156a7063751f2c8734a983bbc7b7155a7b5a04055aa9429cd2fffc21c_case011_official.json",
+      "raw_sha256": "a48ba8b156a7063751f2c8734a983bbc7b7155a7b5a04055aa9429cd2fffc21c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case012_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/be0be6473863f96350c2869902962f347740505e0504d6d6128e0ee10203bd27_case012_controls.json",
+      "raw_sha256": "be0be6473863f96350c2869902962f347740505e0504d6d6128e0ee10203bd27"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case012_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/be627b49578e32d0278bc212d3b8bbb3565b7d71487c09cfa8cdf90b91879ecc_case012_official.json",
+      "raw_sha256": "be627b49578e32d0278bc212d3b8bbb3565b7d71487c09cfa8cdf90b91879ecc"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case013_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8adf4d703b0865d7804cdca33502694c5b68f4c1028ca12f121e451eef50913c_case013_controls.json",
+      "raw_sha256": "8adf4d703b0865d7804cdca33502694c5b68f4c1028ca12f121e451eef50913c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case013_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/67d8bebd627da4d0490d678cb1a6d193dc9ee0a3c34992dc60bb28e10a23979c_case013_official.json",
+      "raw_sha256": "67d8bebd627da4d0490d678cb1a6d193dc9ee0a3c34992dc60bb28e10a23979c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case014_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/646db145a940542932879eedb7814fb2e41754ea6ef6f738c01f03b2102dd1ba_case014_controls.json",
+      "raw_sha256": "646db145a940542932879eedb7814fb2e41754ea6ef6f738c01f03b2102dd1ba"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case014_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ef6b9d727e830922012ede14f2805acc9ae565fb7e5b38d5d7b7773b9acb1a11_case014_official.json",
+      "raw_sha256": "ef6b9d727e830922012ede14f2805acc9ae565fb7e5b38d5d7b7773b9acb1a11"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case015_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/5233f9a3a7d9ea8adf86fee3c54c664461297b374aef6af1c88d00efbf1152fa_case015_controls.json",
+      "raw_sha256": "5233f9a3a7d9ea8adf86fee3c54c664461297b374aef6af1c88d00efbf1152fa"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case015_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/56a207d4b86d41fbb198c48cdf12f5c8118dd66f4ccbf727cd2c9372d14b792d_case015_official.json",
+      "raw_sha256": "56a207d4b86d41fbb198c48cdf12f5c8118dd66f4ccbf727cd2c9372d14b792d"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case016_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/5457af10249d81e8c54d83fc42214423cb1d3d24441c8b09c2332633a7f4098c_case016_controls.json",
+      "raw_sha256": "5457af10249d81e8c54d83fc42214423cb1d3d24441c8b09c2332633a7f4098c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\case016_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e6a0b4add2fac6b85f83f90cafcfd7003ba8b1783d1cd4773c66bb7dcc2b41b5_case016_official.json",
+      "raw_sha256": "e6a0b4add2fac6b85f83f90cafcfd7003ba8b1783d1cd4773c66bb7dcc2b41b5"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\frozen_before_any_new_controls_or_scores.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/bdf5d777986706a081463b5577735d1fe52ff5ed9e4b8b3759e516ab5c99105c_frozen_before_any_new_controls_or_scores.json",
+      "raw_sha256": "bdf5d777986706a081463b5577735d1fe52ff5ed9e4b8b3759e516ab5c99105c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a2e9a6c6cb93340c781f8289dde3c79a9cf1bfcecb90104337ba6d0c438a1da2_verification.json",
+      "raw_sha256": "a2e9a6c6cb93340c781f8289dde3c79a9cf1bfcecb90104337ba6d0c438a1da2"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\0211231ba4de0fd0ad5235c75c27769c28bbfe39540b33ec40cb5fd1a3af9da4.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0bf93f0674700e67665acda4b67661f7f0055d7c9a5c560ed41ffb3cbb0b6a07_0211231ba4de0fd0ad5235c75c27769c28bbfe39540b33ec40cb5fd1a3af9da4.json",
+      "raw_sha256": "0bf93f0674700e67665acda4b67661f7f0055d7c9a5c560ed41ffb3cbb0b6a07"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\03661df251888ef448384f76aa10efeee616923c795802ebbeaf89ab346dbba6.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8f5f7690847c8c3530662b2bd99cd72e1967ed925baa36ca9777457bde28c6ca_03661df251888ef448384f76aa10efeee616923c795802ebbeaf89ab346dbba6.json",
+      "raw_sha256": "8f5f7690847c8c3530662b2bd99cd72e1967ed925baa36ca9777457bde28c6ca"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\1b5189603e3aa32c7e086e839818b6aca7d2dd15128d0c35d3a42fdde8945322.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/81f50577415c4a353653ca879e113a5e4de48627d960e75708041a29301ff121_1b5189603e3aa32c7e086e839818b6aca7d2dd15128d0c35d3a42fdde8945322.json",
+      "raw_sha256": "81f50577415c4a353653ca879e113a5e4de48627d960e75708041a29301ff121"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\1f56c2fd40b38441b18b640fc906c605385194d0cec9b2938f8adf56a8c4b03a.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e50645c73813cd7f954392c23e963ee2177b249874fa176b63c048a746caea5b_1f56c2fd40b38441b18b640fc906c605385194d0cec9b2938f8adf56a8c4b03a.json",
+      "raw_sha256": "e50645c73813cd7f954392c23e963ee2177b249874fa176b63c048a746caea5b"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\6d09faee25b11e9f325f74ae8305e20cf45b4f0a0e9b5f09d65f792cd2c2c20c.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/827dbd0e567090b3f9441aaaf65c84a1d8a3c4cd0c2a0f269054ff814a7af5e0_6d09faee25b11e9f325f74ae8305e20cf45b4f0a0e9b5f09d65f792cd2c2c20c.json",
+      "raw_sha256": "827dbd0e567090b3f9441aaaf65c84a1d8a3c4cd0c2a0f269054ff814a7af5e0"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\6ded2436aa7d8321426213b592e2bba70755a57f88ec4b3f8d26dfc832801787.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/50417f5ab181b070cff32a0004b768a7ff6d5c30b31bb66fc6964085d201f592_6ded2436aa7d8321426213b592e2bba70755a57f88ec4b3f8d26dfc832801787.json",
+      "raw_sha256": "50417f5ab181b070cff32a0004b768a7ff6d5c30b31bb66fc6964085d201f592"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\71d03d4185c0540e0c85dfb00b327b983debf78f6c06d6ab5a077a2cd72afb72.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a874756982a5524440a3315e2c1ed49decf11d68fe6726b3c79c8f0c66fd8249_71d03d4185c0540e0c85dfb00b327b983debf78f6c06d6ab5a077a2cd72afb72.json",
+      "raw_sha256": "a874756982a5524440a3315e2c1ed49decf11d68fe6726b3c79c8f0c66fd8249"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\74d6294337b1661767ffe09c1fa207b067cb84f1ce51efab13c65a3eecdb4eee.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1de46bd5e6837eb0e94102b1ba542fe8e67ffe242d56c05e77d2728c1fd52263_74d6294337b1661767ffe09c1fa207b067cb84f1ce51efab13c65a3eecdb4eee.json",
+      "raw_sha256": "1de46bd5e6837eb0e94102b1ba542fe8e67ffe242d56c05e77d2728c1fd52263"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\85cae326d23cf81169d1416ba718e69a57d83dc67f03b460bb925aaea0f41d56.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ef19d79417d12fce8cdbbc1bc29b1d2ae7ef815e290afb979655ee6726dfcb0a_85cae326d23cf81169d1416ba718e69a57d83dc67f03b460bb925aaea0f41d56.json",
+      "raw_sha256": "ef19d79417d12fce8cdbbc1bc29b1d2ae7ef815e290afb979655ee6726dfcb0a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\9343fc2c6adde3849e1782eb61ba47a75142e60b433c3858690568c218476c18.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f7e31aea048a02b49d20d0a1f250c5dcf933dae555174c04a0a4ebb7432d035a_9343fc2c6adde3849e1782eb61ba47a75142e60b433c3858690568c218476c18.json",
+      "raw_sha256": "f7e31aea048a02b49d20d0a1f250c5dcf933dae555174c04a0a4ebb7432d035a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\94e6709d6d7910eeacc7feef089480c87297c120f3b22f35478f3167613281d7.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0c8ae13dcdf77bc10b8241ed670b633f41683a92b349023f3bf76f850e7218ed_94e6709d6d7910eeacc7feef089480c87297c120f3b22f35478f3167613281d7.json",
+      "raw_sha256": "0c8ae13dcdf77bc10b8241ed670b633f41683a92b349023f3bf76f850e7218ed"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\a31b396399d0d5c309c2288b59c7bc49b5a870da575b2296ef51e726e82f5a61.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/d27171b6b37b7146cbd50d8c029e2428fed18955dc1f5d8aa685924c435fcbd2_a31b396399d0d5c309c2288b59c7bc49b5a870da575b2296ef51e726e82f5a61.json",
+      "raw_sha256": "d27171b6b37b7146cbd50d8c029e2428fed18955dc1f5d8aa685924c435fcbd2"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\ba298e2ba49a2a70d81804c8258b9a867988a3bf2c6fbf2c36ef91a0417f81f3.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/bda0c9b5842bf2afe7196392e8c9660a457d07a32537ee2c2686b360121c8935_ba298e2ba49a2a70d81804c8258b9a867988a3bf2c6fbf2c36ef91a0417f81f3.json",
+      "raw_sha256": "bda0c9b5842bf2afe7196392e8c9660a457d07a32537ee2c2686b360121c8935"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\bc4d5a2fd952ceaaf10f07b3ded03e82f2ec329ae325cbe556dec570af7df1d4.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ea6f080d7c6af5d9dede08b2e761d6e8dfe43e3402198adf4bfaa65b5e7836b9_bc4d5a2fd952ceaaf10f07b3ded03e82f2ec329ae325cbe556dec570af7df1d4.json",
+      "raw_sha256": "ea6f080d7c6af5d9dede08b2e761d6e8dfe43e3402198adf4bfaa65b5e7836b9"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\caf154e8399faffa26019d38fe084305bbf4f9501cb1dbd88c664262a72da8b5.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/9bc3746d6cad4d36c1511cb0c2b940520e4ad0664d6a89caea815184d2f74451_caf154e8399faffa26019d38fe084305bbf4f9501cb1dbd88c664262a72da8b5.json",
+      "raw_sha256": "9bc3746d6cad4d36c1511cb0c2b940520e4ad0664d6a89caea815184d2f74451"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\e2b804bbfb7d5030db01eec99ec4ac024a070f2cd69604b36488d151841bfa29.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/4c42fae0266df8ac3e850fcc13dcb7ef9d062aaf100c2e2fa670af921e2e2bcd_e2b804bbfb7d5030db01eec99ec4ac024a070f2cd69604b36488d151841bfa29.json",
+      "raw_sha256": "4c42fae0266df8ac3e850fcc13dcb7ef9d062aaf100c2e2fa670af921e2e2bcd"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_high_impact17_screen_v1_20261010\\identical_official_scores\\f24a0dcfecf2fa2ab9f72d5157f29ab2c369a467c3aec22ebe3c34ac06655126.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/cd08a77dc56f362584b7147f4c405c2ef774b6c66f97d4264ae94a8889a7a0b7_f24a0dcfecf2fa2ab9f72d5157f29ab2c369a467c3aec22ebe3c34ac06655126.json",
+      "raw_sha256": "cd08a77dc56f362584b7147f4c405c2ef774b6c66f97d4264ae94a8889a7a0b7"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\actual_E_TRAIN_cache_guard_binding_v2_20261010.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/d4c0be2a612c6ab6f35f07439e07c3ef4ace3359cb38ce6a41cdbd5565628324_actual_E_TRAIN_cache_guard_binding_v2_20261010.json",
+      "raw_sha256": "d4c0be2a612c6ab6f35f07439e07c3ef4ace3359cb38ce6a41cdbd5565628324"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case000_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/3c9422d17c3cabefcf27c4558a77eac3b643b3b81f950d5303f2532a26e217b4_case000_controls.json",
+      "raw_sha256": "3c9422d17c3cabefcf27c4558a77eac3b643b3b81f950d5303f2532a26e217b4"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case000_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/018f4e3c8b595320d1417ae0dcc112b6111c295ba55a72f370bd49b217c7c7bd_case000_official.json",
+      "raw_sha256": "018f4e3c8b595320d1417ae0dcc112b6111c295ba55a72f370bd49b217c7c7bd"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case001_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/89fb68ee985506422995a40bffd27d80d358069a030eece8373e9468dd81595f_case001_controls.json",
+      "raw_sha256": "89fb68ee985506422995a40bffd27d80d358069a030eece8373e9468dd81595f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case001_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/2d51fb2252f13c6f67a40a97645f5c2c279cf91f46058050977957d5a9c7c04e_case001_official.json",
+      "raw_sha256": "2d51fb2252f13c6f67a40a97645f5c2c279cf91f46058050977957d5a9c7c04e"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case002_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/46f066077d5f59ad4a1de567c1d7f65030b337fb5c9c3c0a35443b7d155a38cc_case002_controls.json",
+      "raw_sha256": "46f066077d5f59ad4a1de567c1d7f65030b337fb5c9c3c0a35443b7d155a38cc"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case002_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/aa45e3b83171356ea87a4d74591b33237b882a8284082eaf21a36846ea3f5d74_case002_official.json",
+      "raw_sha256": "aa45e3b83171356ea87a4d74591b33237b882a8284082eaf21a36846ea3f5d74"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case003_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ca0d63d18bed19b8abd08d826d65a4210110a294266560e09ec71d4213735c07_case003_controls.json",
+      "raw_sha256": "ca0d63d18bed19b8abd08d826d65a4210110a294266560e09ec71d4213735c07"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case003_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/5f7640755116894359aee201f19cbb933aadc9c535318d46e84a0a7ffbd5c82b_case003_official.json",
+      "raw_sha256": "5f7640755116894359aee201f19cbb933aadc9c535318d46e84a0a7ffbd5c82b"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case004_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/6d0dfc02b183c35e9d14fde66ea3b5a3c2573a594abdbab3efba431616cb3fe6_case004_controls.json",
+      "raw_sha256": "6d0dfc02b183c35e9d14fde66ea3b5a3c2573a594abdbab3efba431616cb3fe6"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case004_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e2508b261d66b3c383a6759865de07a6fec5809da83cfe6464807fb3d8772f32_case004_official.json",
+      "raw_sha256": "e2508b261d66b3c383a6759865de07a6fec5809da83cfe6464807fb3d8772f32"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case005_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/045503134e60be59c0ecebb74346ea8cddb3e401eb27d86260202c130e5084ae_case005_controls.json",
+      "raw_sha256": "045503134e60be59c0ecebb74346ea8cddb3e401eb27d86260202c130e5084ae"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case005_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/07a1a92078ebcaec87dd9691925894469de5d17ab1a15df61e3a4910910fa962_case005_official.json",
+      "raw_sha256": "07a1a92078ebcaec87dd9691925894469de5d17ab1a15df61e3a4910910fa962"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case006_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8e7a9d86ff4969fea7395e37c0e5d235e0e2699642e0196177a1ce921ba64606_case006_controls.json",
+      "raw_sha256": "8e7a9d86ff4969fea7395e37c0e5d235e0e2699642e0196177a1ce921ba64606"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case006_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/3f2537acf1a993ccda341181918af1b4c4bba30bd829a83469b77f37d0b6759c_case006_official.json",
+      "raw_sha256": "3f2537acf1a993ccda341181918af1b4c4bba30bd829a83469b77f37d0b6759c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case007_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/7aafabf961a32ad8c345201b8ed411899618679518026963e02051102119c9c6_case007_controls.json",
+      "raw_sha256": "7aafabf961a32ad8c345201b8ed411899618679518026963e02051102119c9c6"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case007_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f9efb60a46d28bd8ae5dcfbf497215478cee4bdad834ba798423902b348f5f06_case007_official.json",
+      "raw_sha256": "f9efb60a46d28bd8ae5dcfbf497215478cee4bdad834ba798423902b348f5f06"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case008_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ae69ab2d8ca6d4a70ff7103f2f628acb0623851f70c27ca0a0d3bca2359778ca_case008_controls.json",
+      "raw_sha256": "ae69ab2d8ca6d4a70ff7103f2f628acb0623851f70c27ca0a0d3bca2359778ca"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case008_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/232054878449e47b0e7e07ff38a01704ccabbc564647da41abb2dcf06d122daf_case008_official.json",
+      "raw_sha256": "232054878449e47b0e7e07ff38a01704ccabbc564647da41abb2dcf06d122daf"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case009_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/9de586b88e41fa0a272ff910b276fabd86da57b8a35ec0bcb25642bae029e66f_case009_controls.json",
+      "raw_sha256": "9de586b88e41fa0a272ff910b276fabd86da57b8a35ec0bcb25642bae029e66f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case009_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/bda383232bc1d27ed380fb02ebd15afbcd99416c5d83075b921665475de629f5_case009_official.json",
+      "raw_sha256": "bda383232bc1d27ed380fb02ebd15afbcd99416c5d83075b921665475de629f5"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case010_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/d7fbdee9742b13758be772442f9f232d2625c90a05baa6dbd8c6471332c0ad81_case010_controls.json",
+      "raw_sha256": "d7fbdee9742b13758be772442f9f232d2625c90a05baa6dbd8c6471332c0ad81"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case010_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f3d88538bdf387390a1a26ff54aec7391809b9050733353af5dbb18e4de1fe74_case010_official.json",
+      "raw_sha256": "f3d88538bdf387390a1a26ff54aec7391809b9050733353af5dbb18e4de1fe74"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case011_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/d89f39407f06d3ebf4f122151f5e10f4bb3975cad0adfdb6797d93a4876bbb9c_case011_controls.json",
+      "raw_sha256": "d89f39407f06d3ebf4f122151f5e10f4bb3975cad0adfdb6797d93a4876bbb9c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case011_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c292dae815b17d99b512525da177586bb4e0fa320392552379fc1b37f68b9aff_case011_official.json",
+      "raw_sha256": "c292dae815b17d99b512525da177586bb4e0fa320392552379fc1b37f68b9aff"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case012_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1344a43aee3f549501076107701265a0dbf348a05f879158fd0d49b37d6b8178_case012_controls.json",
+      "raw_sha256": "1344a43aee3f549501076107701265a0dbf348a05f879158fd0d49b37d6b8178"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case012_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0e69b2ee802a7c3374c53e38756f9c5b2db6c21e2c9ceb8f7f0b53bd6d3022ad_case012_official.json",
+      "raw_sha256": "0e69b2ee802a7c3374c53e38756f9c5b2db6c21e2c9ceb8f7f0b53bd6d3022ad"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case013_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/48829ffe3853cb70e04e90a2a965dbb941114f1c37e4630e65f0b437c91a9b0f_case013_controls.json",
+      "raw_sha256": "48829ffe3853cb70e04e90a2a965dbb941114f1c37e4630e65f0b437c91a9b0f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case013_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/82c4d5a715224097456727d90cd36907ddfa59d741934fb338a3311e23fae68a_case013_official.json",
+      "raw_sha256": "82c4d5a715224097456727d90cd36907ddfa59d741934fb338a3311e23fae68a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case014_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/888bc20c9eaa9bbb0ad8e82ea99dbafcff88226bed6287da2ea1e109f046d5d1_case014_controls.json",
+      "raw_sha256": "888bc20c9eaa9bbb0ad8e82ea99dbafcff88226bed6287da2ea1e109f046d5d1"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case014_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0d358423ee37b9deec1b8249f06ee4bdee6f025940bb3d1a4abecf491e739345_case014_official.json",
+      "raw_sha256": "0d358423ee37b9deec1b8249f06ee4bdee6f025940bb3d1a4abecf491e739345"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case015_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a2207ef6d049e7230a84178905537ad38eaaa3c47dfbf3250f14e05a2f459791_case015_controls.json",
+      "raw_sha256": "a2207ef6d049e7230a84178905537ad38eaaa3c47dfbf3250f14e05a2f459791"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case015_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/724795bd928f8c9862f3654790cd1d30feb2b863be3d1de62c7b90eaa4cdf149_case015_official.json",
+      "raw_sha256": "724795bd928f8c9862f3654790cd1d30feb2b863be3d1de62c7b90eaa4cdf149"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case016_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/d91c874fd91e488d826d4793a08d432b79b530f804e53cde9f9e2bc25ed07f9a_case016_controls.json",
+      "raw_sha256": "d91c874fd91e488d826d4793a08d432b79b530f804e53cde9f9e2bc25ed07f9a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case016_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/2053a6b5f83f810e179f0300f9aa92fe2e0b06419e53f472f40bf1cd638167c3_case016_official.json",
+      "raw_sha256": "2053a6b5f83f810e179f0300f9aa92fe2e0b06419e53f472f40bf1cd638167c3"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case017_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/6c312d60c797ef2a333b7445770efd76cc84b08303da8a6d601e5311ab483a02_case017_controls.json",
+      "raw_sha256": "6c312d60c797ef2a333b7445770efd76cc84b08303da8a6d601e5311ab483a02"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case017_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f8b4709231eaecdca6f6f0aa33c02205edd6bf0dc7485de68d7f72989a0f43f3_case017_official.json",
+      "raw_sha256": "f8b4709231eaecdca6f6f0aa33c02205edd6bf0dc7485de68d7f72989a0f43f3"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case018_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/99ffc7c315784e6fc9b8f3c5066b0e17c335da92f7815e5d294cfc21c7057b0d_case018_controls.json",
+      "raw_sha256": "99ffc7c315784e6fc9b8f3c5066b0e17c335da92f7815e5d294cfc21c7057b0d"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case018_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c1ac75698384a8bba74e176bb4b996590d3a71220a05259cc38b96d8b998dbc5_case018_official.json",
+      "raw_sha256": "c1ac75698384a8bba74e176bb4b996590d3a71220a05259cc38b96d8b998dbc5"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case019_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/96f8b5c6c8b394a6d479ea2661fd9e8844b353bcea333254647578c6c843880b_case019_controls.json",
+      "raw_sha256": "96f8b5c6c8b394a6d479ea2661fd9e8844b353bcea333254647578c6c843880b"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case019_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0227c76774c2e6ebf2be51f69e8d083909ebad47b35a7c29ccf7e58a3c00a4e6_case019_official.json",
+      "raw_sha256": "0227c76774c2e6ebf2be51f69e8d083909ebad47b35a7c29ccf7e58a3c00a4e6"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case020_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/762fe913fe96a4bc6a71b5c418c7386b60fb9e46280914bed620085d769887ef_case020_controls.json",
+      "raw_sha256": "762fe913fe96a4bc6a71b5c418c7386b60fb9e46280914bed620085d769887ef"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case020_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1ebaad959e3809e89c68bdc1fbb239d8524e2d2d386bb2985c582a8edbc4298d_case020_official.json",
+      "raw_sha256": "1ebaad959e3809e89c68bdc1fbb239d8524e2d2d386bb2985c582a8edbc4298d"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case021_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8f50bac899c386d3d6b9b368256d8f6c5a380d52806d48de6e4019f910645a29_case021_controls.json",
+      "raw_sha256": "8f50bac899c386d3d6b9b368256d8f6c5a380d52806d48de6e4019f910645a29"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case021_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/7b1d20b06b83adc85d6983816102c061d8254e6abaed2858307172cf1035055b_case021_official.json",
+      "raw_sha256": "7b1d20b06b83adc85d6983816102c061d8254e6abaed2858307172cf1035055b"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case022_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a7124b474e9c056f41bd2e69aee309f2b0c284d302e04485f1e899952a67071c_case022_controls.json",
+      "raw_sha256": "a7124b474e9c056f41bd2e69aee309f2b0c284d302e04485f1e899952a67071c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case022_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/749a8ffb341339d18c213afcd0219163496eb5de136bf663934cc3575ff19737_case022_official.json",
+      "raw_sha256": "749a8ffb341339d18c213afcd0219163496eb5de136bf663934cc3575ff19737"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case023_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e58477b6fd51e0ce7bce200d6658553b6ff5c479eec1f3b83b26bed2fce63056_case023_controls.json",
+      "raw_sha256": "e58477b6fd51e0ce7bce200d6658553b6ff5c479eec1f3b83b26bed2fce63056"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case023_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1dfa2ebbfef224f0c7adb33d36fe41c11b79266a09914c9ce597e0f2441efad8_case023_official.json",
+      "raw_sha256": "1dfa2ebbfef224f0c7adb33d36fe41c11b79266a09914c9ce597e0f2441efad8"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case024_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/b473de9d45a12ab215b856c41947d73d7725cacb7b94756ad83567c7fd06184e_case024_controls.json",
+      "raw_sha256": "b473de9d45a12ab215b856c41947d73d7725cacb7b94756ad83567c7fd06184e"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case024_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/b73eb600062472171da233977c122551a008681c2161e3d7555b40a2309b01df_case024_official.json",
+      "raw_sha256": "b73eb600062472171da233977c122551a008681c2161e3d7555b40a2309b01df"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case025_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c18a70327b61de530e68dc997a4159889d8ee9874d31b1e4b42c447459dc4565_case025_controls.json",
+      "raw_sha256": "c18a70327b61de530e68dc997a4159889d8ee9874d31b1e4b42c447459dc4565"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case025_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ab2ff4dc505fd93c6beeac275c590691fce19bd20c4773386d82be32e8beb4b2_case025_official.json",
+      "raw_sha256": "ab2ff4dc505fd93c6beeac275c590691fce19bd20c4773386d82be32e8beb4b2"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case026_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c295cd3b79d00939a275dd559806d2418f1335a1f9ae3f39859f916d1fd2263b_case026_controls.json",
+      "raw_sha256": "c295cd3b79d00939a275dd559806d2418f1335a1f9ae3f39859f916d1fd2263b"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case026_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/eb2580b496f2658a1ca5deab5fc7da8ded06d84465f66df7902d2923e925f7d0_case026_official.json",
+      "raw_sha256": "eb2580b496f2658a1ca5deab5fc7da8ded06d84465f66df7902d2923e925f7d0"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case027_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/9c8c62814bacb3407580ba1b451fe05597fcfaa847ea81ad1c75e4afcea6ee66_case027_controls.json",
+      "raw_sha256": "9c8c62814bacb3407580ba1b451fe05597fcfaa847ea81ad1c75e4afcea6ee66"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case027_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0f427740ed4c5dc62f5f137aa70a1df45503dfcbf057071b0a52aaf9552b8e2a_case027_official.json",
+      "raw_sha256": "0f427740ed4c5dc62f5f137aa70a1df45503dfcbf057071b0a52aaf9552b8e2a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case028_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/83d997e86aad89c27068a39104368b885b939a5a99ae238c008acc6eddbcf61d_case028_controls.json",
+      "raw_sha256": "83d997e86aad89c27068a39104368b885b939a5a99ae238c008acc6eddbcf61d"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\case028_official.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e028258ff6775b2c3312266aa1fcea2d1eba5e2d920c241d17b4508583b39589_case028_official.json",
+      "raw_sha256": "e028258ff6775b2c3312266aa1fcea2d1eba5e2d920c241d17b4508583b39589"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\frozen_before_any_new_controls_or_scores.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e6327485ed198d27b3d0f6c8643427becd55e3806f8f797b3df2deca23d72746_frozen_before_any_new_controls_or_scores.json",
+      "raw_sha256": "e6327485ed198d27b3d0f6c8643427becd55e3806f8f797b3df2deca23d72746"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1bc37bd9e75571c8fa5de097fa23a342acdbf06c03e2a5e7b03e8a8b235eea44_verification.json",
+      "raw_sha256": "1bc37bd9e75571c8fa5de097fa23a342acdbf06c03e2a5e7b03e8a8b235eea44"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\02759f4a8605f0d0b6c8e3265d01bda3dd5ea548e01a2ad33c725c2b35f07b73.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/cc91e7c5c5a01e6fcee0989aff1e84201b356ab8e269ec8bfac48503bc5b0c0f_02759f4a8605f0d0b6c8e3265d01bda3dd5ea548e01a2ad33c725c2b35f07b73.json",
+      "raw_sha256": "cc91e7c5c5a01e6fcee0989aff1e84201b356ab8e269ec8bfac48503bc5b0c0f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\122bcc6b1e321046c9327592a28a49f32a60f598292f0b189c6146930d907a4a.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/4202281215b69e1fa19e9b10e5d1495f38c5e8f8f1404ae109579c105d7d9c2f_122bcc6b1e321046c9327592a28a49f32a60f598292f0b189c6146930d907a4a.json",
+      "raw_sha256": "4202281215b69e1fa19e9b10e5d1495f38c5e8f8f1404ae109579c105d7d9c2f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\13f0644221958d3e13969be3406acd65395bfc6c08acc7352b1b9fa425a04340.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/960344d2f48e57247400cfab0aef8f7b77bd06da573a68d2e892b04b828956ec_13f0644221958d3e13969be3406acd65395bfc6c08acc7352b1b9fa425a04340.json",
+      "raw_sha256": "960344d2f48e57247400cfab0aef8f7b77bd06da573a68d2e892b04b828956ec"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\1a09301e8b9ad9cf374ddc5aea3ae6ff72256437f7932064f25b69f34eea4f07.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/dbd62485b50ebaafcddb8ca21f6330395284e1e1566213a5f084a4f741dcbe9f_1a09301e8b9ad9cf374ddc5aea3ae6ff72256437f7932064f25b69f34eea4f07.json",
+      "raw_sha256": "dbd62485b50ebaafcddb8ca21f6330395284e1e1566213a5f084a4f741dcbe9f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\2b95ce0b55bf6213d8002eb6b89da7d186c253ad698072627f934354af3cf84e.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/9e80fcc3062724849a3c594a0ed0e9c7cad2932b13d29beaf238c14062a96169_2b95ce0b55bf6213d8002eb6b89da7d186c253ad698072627f934354af3cf84e.json",
+      "raw_sha256": "9e80fcc3062724849a3c594a0ed0e9c7cad2932b13d29beaf238c14062a96169"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\2c0652eedead98fb15cfacd1dcf0f79e2ae3d90481a1b4b5d4ba2a87e71ad048.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ad4a98bf6b2506571122bd52d4a598d22fbcb4f3bad4cd6c7894e47143712680_2c0652eedead98fb15cfacd1dcf0f79e2ae3d90481a1b4b5d4ba2a87e71ad048.json",
+      "raw_sha256": "ad4a98bf6b2506571122bd52d4a598d22fbcb4f3bad4cd6c7894e47143712680"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\37a084cc7847119312b7c9f6d7ffe2da79a35f33876ebbf86858fca934709802.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/fc012dfb3a25f5f75ec7b4a35dfb5d1eccbf740cd644ef2ed18f2b4354f3e53c_37a084cc7847119312b7c9f6d7ffe2da79a35f33876ebbf86858fca934709802.json",
+      "raw_sha256": "fc012dfb3a25f5f75ec7b4a35dfb5d1eccbf740cd644ef2ed18f2b4354f3e53c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\3b51f61c58785f6f866609af3121510f2b3c7dfc7ee2327c6f46cad16331d5c2.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/6f99b1264fb9f641e35ff22af4c005899f5621623faf73c70cbdf4919f2dccd1_3b51f61c58785f6f866609af3121510f2b3c7dfc7ee2327c6f46cad16331d5c2.json",
+      "raw_sha256": "6f99b1264fb9f641e35ff22af4c005899f5621623faf73c70cbdf4919f2dccd1"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\3e51a45297128160c956fa50f194d5f47f7687a9edb022f0bb97c78aad52f2f8.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/13ee02be7849b4543214fc1193b28abb8c6b26846f70abe9959a1659d620da2c_3e51a45297128160c956fa50f194d5f47f7687a9edb022f0bb97c78aad52f2f8.json",
+      "raw_sha256": "13ee02be7849b4543214fc1193b28abb8c6b26846f70abe9959a1659d620da2c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\4b7d8fa93d2482184fa636010dbc5859200f9067cc2c0b32bcca3698299d1b03.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/71bf6f411ddad7c21b61d50cec3e4d735f40a59676f889225c8cb7482b67ac2f_4b7d8fa93d2482184fa636010dbc5859200f9067cc2c0b32bcca3698299d1b03.json",
+      "raw_sha256": "71bf6f411ddad7c21b61d50cec3e4d735f40a59676f889225c8cb7482b67ac2f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\5639c71b2a2f256aae195ab93f8d528fbee0edeae6c3b0f1224a0657acaa843d.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a55ac28877d07e727b926a734def1203866700d804bd8a27ee7e44c7428ef78b_5639c71b2a2f256aae195ab93f8d528fbee0edeae6c3b0f1224a0657acaa843d.json",
+      "raw_sha256": "a55ac28877d07e727b926a734def1203866700d804bd8a27ee7e44c7428ef78b"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\5b3398250dfca7e924c8c56534a1d623ce5fae39b072c53807fb334b4de899e2.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c62d81b3d8c10cec3f8eeddbcf26bffb1bb7ca6eb29004979901086700c66e83_5b3398250dfca7e924c8c56534a1d623ce5fae39b072c53807fb334b4de899e2.json",
+      "raw_sha256": "c62d81b3d8c10cec3f8eeddbcf26bffb1bb7ca6eb29004979901086700c66e83"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\5bdbd019547e7bcf8c0cb2408a55ed10b5d28bdb8c8212012d9bcd2fd034a0d7.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/863a75bc660c98408ef7947d87a5259ae7a05dd96657f56dcc6ed7c584c8654a_5bdbd019547e7bcf8c0cb2408a55ed10b5d28bdb8c8212012d9bcd2fd034a0d7.json",
+      "raw_sha256": "863a75bc660c98408ef7947d87a5259ae7a05dd96657f56dcc6ed7c584c8654a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\66de332f16998eaa7aa504e42ed48f3d51453c744339c9d171d192c895eeb6a8.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/25c0f6ede10af999eb3862c5c032080fc169b6ae249619efcc103288a45bb114_66de332f16998eaa7aa504e42ed48f3d51453c744339c9d171d192c895eeb6a8.json",
+      "raw_sha256": "25c0f6ede10af999eb3862c5c032080fc169b6ae249619efcc103288a45bb114"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\6b1feeff63676f9def959351cbfeb417e964643f86f08b4e6a2195bf4808181c.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e05237f42d06588fd63e29fcb300ec0c986afaa398f72cf03f6e57a1ebc12f83_6b1feeff63676f9def959351cbfeb417e964643f86f08b4e6a2195bf4808181c.json",
+      "raw_sha256": "e05237f42d06588fd63e29fcb300ec0c986afaa398f72cf03f6e57a1ebc12f83"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\7aa2262a8808b3254227277aae6a3abd2e1717201d72bc83bbf8bd29e0828241.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/70ef72c4ad7c8a44070039c8b6987b8ed0878958aefe7b0749990a98a8163d59_7aa2262a8808b3254227277aae6a3abd2e1717201d72bc83bbf8bd29e0828241.json",
+      "raw_sha256": "70ef72c4ad7c8a44070039c8b6987b8ed0878958aefe7b0749990a98a8163d59"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\7e0c3f805cd0c01c0ecbde6eb7b34374e57586cbe2b251bf878e4a187a2de240.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/59db36ab502c32a7605ecd953b537e8026c268b6c154ea55acf24e6cc19eed86_7e0c3f805cd0c01c0ecbde6eb7b34374e57586cbe2b251bf878e4a187a2de240.json",
+      "raw_sha256": "59db36ab502c32a7605ecd953b537e8026c268b6c154ea55acf24e6cc19eed86"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\979d69a4c6cc536f227a9c8886c8a7da687435a2c3fae097c3526c18f8ea19b3.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/7e7c0aeafa6eda241c384bf9ad1e82bc78516fa4889c2a8c5b8ed24368e4171c_979d69a4c6cc536f227a9c8886c8a7da687435a2c3fae097c3526c18f8ea19b3.json",
+      "raw_sha256": "7e7c0aeafa6eda241c384bf9ad1e82bc78516fa4889c2a8c5b8ed24368e4171c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\9e8cf98d6345d2c2c8a632e62225e351c8977595777816dd3c3ccedf87cf49d5.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8444381c36b29b2222e948b5b1ff07efc7a5d5259616d9faab683be99c32e20d_9e8cf98d6345d2c2c8a632e62225e351c8977595777816dd3c3ccedf87cf49d5.json",
+      "raw_sha256": "8444381c36b29b2222e948b5b1ff07efc7a5d5259616d9faab683be99c32e20d"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\a48b4b705228bc406ba3b2bc7796ce3f2ebf25130bc9bee034897643d5b88f77.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/18fbef5b9539d1a3391dbc6f7cf4e571de543fd2df1a5e50fda921829e1f5257_a48b4b705228bc406ba3b2bc7796ce3f2ebf25130bc9bee034897643d5b88f77.json",
+      "raw_sha256": "18fbef5b9539d1a3391dbc6f7cf4e571de543fd2df1a5e50fda921829e1f5257"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\ac374b96cfa8ad2e66a9c52f6af94a648fb2c5622189f365707dc85005411b65.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8051fae73a42c2b59d2a097ee44c15a32e762f4b19ed103f32dca129c7f7780f_ac374b96cfa8ad2e66a9c52f6af94a648fb2c5622189f365707dc85005411b65.json",
+      "raw_sha256": "8051fae73a42c2b59d2a097ee44c15a32e762f4b19ed103f32dca129c7f7780f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\c258ffe9bb5acfa3d66ddd53d707f4510fe9376ae8cbfce54f0e4eecededcdbb.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8427acde587433a5174dd656bee76bed27b92fc16772d272f654c337e895d5aa_c258ffe9bb5acfa3d66ddd53d707f4510fe9376ae8cbfce54f0e4eecededcdbb.json",
+      "raw_sha256": "8427acde587433a5174dd656bee76bed27b92fc16772d272f654c337e895d5aa"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\dad620179a98516141175f9be10f35c697578715f9f4f4f0f655a3dd92dd6867.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/84f0de30a4549a119c47bc759e04e214d9dd8b043d9c2c3c045939db8f1c1b80_dad620179a98516141175f9be10f35c697578715f9f4f4f0f655a3dd92dd6867.json",
+      "raw_sha256": "84f0de30a4549a119c47bc759e04e214d9dd8b043d9c2c3c045939db8f1c1b80"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\dfbe41b4119df763a5d8fd0ee5d1b819d6cc7474dd7e7a087fd240a08aabd6d9.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/598eb155d6d3c5e24dfe3f2a52b989164b6a2cc394c0b5a5aa6af1ade4697e67_dfbe41b4119df763a5d8fd0ee5d1b819d6cc7474dd7e7a087fd240a08aabd6d9.json",
+      "raw_sha256": "598eb155d6d3c5e24dfe3f2a52b989164b6a2cc394c0b5a5aa6af1ade4697e67"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\e2b804bbfb7d5030db01eec99ec4ac024a070f2cd69604b36488d151841bfa29.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/d0803c1e00279a37cbd3f1ff45f7a6fb053384af282c42edef02731769f5b277_e2b804bbfb7d5030db01eec99ec4ac024a070f2cd69604b36488d151841bfa29.json",
+      "raw_sha256": "d0803c1e00279a37cbd3f1ff45f7a6fb053384af282c42edef02731769f5b277"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\eb23bbeb1807d3bf47cb18f4021b33baca7667a2b12f19e1cef80d9c0496df27.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ed465b389869de8cee1a66011dde8936e8d9d5c97264c2766ed7c366ab6be7f7_eb23bbeb1807d3bf47cb18f4021b33baca7667a2b12f19e1cef80d9c0496df27.json",
+      "raw_sha256": "ed465b389869de8cee1a66011dde8936e8d9d5c97264c2766ed7c366ab6be7f7"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\ef2983cd89ade6f9c3f53d75ca80494e262448f361e00484433f3b38d011c22e.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/108623d143b1330d31891485550504b3b6f7a7d2be06003c347b7dc64e989c87_ef2983cd89ade6f9c3f53d75ca80494e262448f361e00484433f3b38d011c22e.json",
+      "raw_sha256": "108623d143b1330d31891485550504b3b6f7a7d2be06003c347b7dc64e989c87"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\f315882ee7a5a718c529b8e1b19ad55b5f6a9155f3c4ed6beaa4f5ad576ecb35.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/2817bb6733a793310ba234b472dc77c960b83be6670698d39603e5fbd96e24d6_f315882ee7a5a718c529b8e1b19ad55b5f6a9155f3c4ed6beaa4f5ad576ecb35.json",
+      "raw_sha256": "2817bb6733a793310ba234b472dc77c960b83be6670698d39603e5fbd96e24d6"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_after175_large_allocation29_screen_v1_20261010\\identical_official_scores\\fb6a312ebda5845d0c1cb3bd1ae861eff77a35d93bff40c62d57863634ec7b9a.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/cc751a8d67eea10db432c70f4022f1c994fc5d2ca660443dc8af2e373d2fa0d0_fb6a312ebda5845d0c1cb3bd1ae861eff77a35d93bff40c62d57863634ec7b9a.json",
+      "raw_sha256": "cc751a8d67eea10db432c70f4022f1c994fc5d2ca660443dc8af2e373d2fa0d0"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_full5_independent_controls_v1_20261009\\frozen_before_actual_independent_full_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/cb107c762eab3f738f655f27d0ad0568c29a7eb12cd39291f764a71fd6524334_frozen_before_actual_independent_full_controls.json",
+      "raw_sha256": "cb107c762eab3f738f655f27d0ad0568c29a7eb12cd39291f764a71fd6524334"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_full5_independent_controls_v1_20261009\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/06665cf9a4e7b4e262bb647bf15fc5235e13bc329094ccd72b9d136e2926d716_verification.json",
+      "raw_sha256": "06665cf9a4e7b4e262bb647bf15fc5235e13bc329094ccd72b9d136e2926d716"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_full5_independent_controls_v1_20261009\\year2020_verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/277df67e2300fa06deab6da822b17c12a7fc9ca413e1cc8a4c3d64f1eee08e69_year2020_verification.json",
+      "raw_sha256": "277df67e2300fa06deab6da822b17c12a7fc9ca413e1cc8a4c3d64f1eee08e69"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_full5_independent_controls_v1_20261009\\year2021_verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f2ec7f408f52a297071fac1b5a38a2dda0128221c686cd3b1ced429ece84c3dc_year2021_verification.json",
+      "raw_sha256": "f2ec7f408f52a297071fac1b5a38a2dda0128221c686cd3b1ced429ece84c3dc"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_full5_independent_controls_v1_20261009\\year2022_verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/714aff84a371338a6737781903cec935f1acb18a0b6b5c8f80939f5f2ebcfaae_year2022_verification.json",
+      "raw_sha256": "714aff84a371338a6737781903cec935f1acb18a0b6b5c8f80939f5f2ebcfaae"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_full5_independent_controls_v1_20261009\\year2023_verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/958042c9a1611a9b3c949466fdd4bf38310e4b5fe2fc4130fa1c5e652c52fbb3_year2023_verification.json",
+      "raw_sha256": "958042c9a1611a9b3c949466fdd4bf38310e4b5fe2fc4130fa1c5e652c52fbb3"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_full5_independent_controls_v1_20261009\\year2024_verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/84425e51052de4de985d438f61532b8218309ae2d1f7ddc282732fd1fb9a116a_year2024_verification.json",
+      "raw_sha256": "84425e51052de4de985d438f61532b8218309ae2d1f7ddc282732fd1fb9a116a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009\\frozen_before_actual_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/22b585591b97fc56c67170127c2ee053cb95f306c3081787a515f3dbd4f58e0f_frozen_before_actual_controls.json",
+      "raw_sha256": "22b585591b97fc56c67170127c2ee053cb95f306c3081787a515f3dbd4f58e0f"
+    },
+    "E:\\赛题五_本机临时\\StockRank20LongEmbeddingSmall512_independent_small_CPU_v1_20261009\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/813548ad497ef42c337dc413ccb924fdfb78eb6186999aefc539c36cafbab891_verification.json",
+      "raw_sha256": "813548ad497ef42c337dc413ccb924fdfb78eb6186999aefc539c36cafbab891"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_own6_full5_main_v1_20261010\\frozen_before_publication.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c2c9ea7b7c92432fe2889700e6b5c63b20862d4778c9c6e6d117e1eaeb652fc7_frozen_before_publication.json",
+      "raw_sha256": "c2c9ea7b7c92432fe2889700e6b5c63b20862d4778c9c6e6d117e1eaeb652fc7"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_own6_full5_main_v1_20261010\\receipt.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8ac88174be584586e18629e31ed444640e2379d3061739ae67781ab37f9a58ce_receipt.json",
+      "raw_sha256": "8ac88174be584586e18629e31ed444640e2379d3061739ae67781ab37f9a58ce"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_own6_full5_main_v1_20261010\\serial_mutex.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f288daee59d644c3e1d9dfd38720cfc2bcf23ba00fabe7ab47b5c79ca5e414b8_serial_mutex.json",
+      "raw_sha256": "f288daee59d644c3e1d9dfd38720cfc2bcf23ba00fabe7ab47b5c79ca5e414b8"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_own6_full5_main_v1_20261010\\file_backed_git\\actual_verified_TLS_transport_retries.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9_actual_verified_TLS_transport_retries.json",
+      "raw_sha256": "612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_own6_full5_main_v1_20261010\\file_backed_git\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1fbad6991cd3ae32dcf63b174be972935a9d6e917dd278bf9bc00f704dc9fda4_execution.json",
+      "raw_sha256": "1fbad6991cd3ae32dcf63b174be972935a9d6e917dd278bf9bc00f704dc9fda4"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_own6_full5_main_v1_20261010\\safe\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/68739f300db2dc401d6db1179b7a761e76af96419325cc1b9ff825bc8cfe86c5_execution.json",
+      "raw_sha256": "68739f300db2dc401d6db1179b7a761e76af96419325cc1b9ff825bc8cfe86c5"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_restart_CPU_main_v1_20261010\\frozen_before_publication.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/56863967fb039bd708ca50487ca903adbc72b9b415ee11f509fabea0fb5d73f2_frozen_before_publication.json",
+      "raw_sha256": "56863967fb039bd708ca50487ca903adbc72b9b415ee11f509fabea0fb5d73f2"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_restart_CPU_main_v1_20261010\\receipt.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/2368299813e8ab853645628c25a8a0c03a2deb0747e724f9e1f49d604b699a2a_receipt.json",
+      "raw_sha256": "2368299813e8ab853645628c25a8a0c03a2deb0747e724f9e1f49d604b699a2a"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_restart_CPU_main_v1_20261010\\serial_mutex.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f3cb36c670c4a3449eef23cf6b2a34a1b60d5fddc2db4f2a23b4e2972eea47e9_serial_mutex.json",
+      "raw_sha256": "f3cb36c670c4a3449eef23cf6b2a34a1b60d5fddc2db4f2a23b4e2972eea47e9"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_restart_CPU_main_v1_20261010\\file_backed_git\\actual_verified_TLS_transport_retries.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9_actual_verified_TLS_transport_retries.json",
+      "raw_sha256": "612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_restart_CPU_main_v1_20261010\\file_backed_git\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/88e44fe905f6cbcdcba65f52f7276d45f4409101cbfbde3233eadb007907f2fa_execution.json",
+      "raw_sha256": "88e44fe905f6cbcdcba65f52f7276d45f4409101cbfbde3233eadb007907f2fa"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_restart_CPU_main_v1_20261010\\safe\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/4c96872ccfb2024cb4c23d7ff9edcfb618b22c5e1a14147dd8de6bbc63f6a86c_execution.json",
+      "raw_sha256": "4c96872ccfb2024cb4c23d7ff9edcfb618b22c5e1a14147dd8de6bbc63f6a86c"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_sources_main_v1_20261010\\frozen_before_publication.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0e6bb4673fe986e4dc3f3451e9918c4e1d7fee58db3887a4b154a0f46e865fe7_frozen_before_publication.json",
+      "raw_sha256": "0e6bb4673fe986e4dc3f3451e9918c4e1d7fee58db3887a4b154a0f46e865fe7"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_sources_main_v1_20261010\\receipt.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/9639b6ea3b56b93abe047ae850d4b0d72aad067d3fd8d6d3c954819d7bdae93e_receipt.json",
+      "raw_sha256": "9639b6ea3b56b93abe047ae850d4b0d72aad067d3fd8d6d3c954819d7bdae93e"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_sources_main_v1_20261010\\serial_mutex.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/a6a9aee3f05d57cef4904fb827cce69c5722bb305937b1e6edf61704b7ddeee7_serial_mutex.json",
+      "raw_sha256": "a6a9aee3f05d57cef4904fb827cce69c5722bb305937b1e6edf61704b7ddeee7"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_sources_main_v1_20261010\\file_backed_git\\actual_verified_TLS_transport_retries.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9_actual_verified_TLS_transport_retries.json",
+      "raw_sha256": "612643d9aced5a4457ed34426f19795cb131521a5f94281dc740059a08d1f5e9"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_sources_main_v1_20261010\\file_backed_git\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/44c49028c3ab5de22d7aff1da51343c81cfc59a46264d820c601e82173a00c94_execution.json",
+      "raw_sha256": "44c49028c3ab5de22d7aff1da51343c81cfc59a46264d820c601e82173a00c94"
+    },
+    "E:\\赛题五_本机临时\\StockRank20Long_objective_sources_main_v1_20261010\\safe\\execution.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f9ea31cea7b2999814c99fb222a3659eb8b3103d730a706f927ebf7b88897e1a_execution.json",
+      "raw_sha256": "f9ea31cea7b2999814c99fb222a3659eb8b3103d730a706f927ebf7b88897e1a"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_mature_fixture_v1_20261010\\frozen_before_actual_fixture.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/2ddebe6e04906ffce9b55d6ea4d47e4746de1e9d482c9abd343a0f435d30baab_frozen_before_actual_fixture.json",
+      "raw_sha256": "2ddebe6e04906ffce9b55d6ea4d47e4746de1e9d482c9abd343a0f435d30baab"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_mature_fixture_v1_20261010\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/240d42d63f4997718f0a51726876c6848661b96be8ff4b4a49818d34e17aed56_verification.json",
+      "raw_sha256": "240d42d63f4997718f0a51726876c6848661b96be8ff4b4a49818d34e17aed56"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\frozen_before_native42.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8edd633ef19fdeaa1a377a46e4092e22f0a80e16d9a7c33bc39e729d34b6cb24_frozen_before_native42.json",
+      "raw_sha256": "8edd633ef19fdeaa1a377a46e4092e22f0a80e16d9a7c33bc39e729d34b6cb24"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native00.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/be7080dea5d79ba0ae60e7dfd8c798b4eed608df88cae9a5a22d6fd93d48f08d_native00.json",
+      "raw_sha256": "be7080dea5d79ba0ae60e7dfd8c798b4eed608df88cae9a5a22d6fd93d48f08d"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native01.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/089d046095f47dce575683313496e2793df2adae817a225a56cc379f9d3fe7eb_native01.json",
+      "raw_sha256": "089d046095f47dce575683313496e2793df2adae817a225a56cc379f9d3fe7eb"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native02.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/92ecb319f09ddf845796b72bde1f2e98b68d7eb411276a94fe617baaca26a5e7_native02.json",
+      "raw_sha256": "92ecb319f09ddf845796b72bde1f2e98b68d7eb411276a94fe617baaca26a5e7"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native03.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e704c2135c27f10c27f1be3319b46f6b54355924c47cab89179ecf7e58a8510e_native03.json",
+      "raw_sha256": "e704c2135c27f10c27f1be3319b46f6b54355924c47cab89179ecf7e58a8510e"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native04.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f2128da18bb36a7ad37285e01b9a16515b9256b810ec149ee038646ee23e18a4_native04.json",
+      "raw_sha256": "f2128da18bb36a7ad37285e01b9a16515b9256b810ec149ee038646ee23e18a4"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native05.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/5f561f81cef010adca994e8f2364c87733908d5e573e69bd33e8ae10d5880281_native05.json",
+      "raw_sha256": "5f561f81cef010adca994e8f2364c87733908d5e573e69bd33e8ae10d5880281"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native06.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0398012b3a3592ba8bf3577b2922405c51a215f0dacb8d3646b0424d2e4b8646_native06.json",
+      "raw_sha256": "0398012b3a3592ba8bf3577b2922405c51a215f0dacb8d3646b0424d2e4b8646"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native07.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/aaf906731886eff70e7861fced90160f3573124551ad910696cd90dfad470ce4_native07.json",
+      "raw_sha256": "aaf906731886eff70e7861fced90160f3573124551ad910696cd90dfad470ce4"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native08.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/3bf339091f30b9e681f39cc1d92221f4fb740f0d0d4d7900e0b39e5254e9cb62_native08.json",
+      "raw_sha256": "3bf339091f30b9e681f39cc1d92221f4fb740f0d0d4d7900e0b39e5254e9cb62"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native09.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/6d6a39d43ffe2b0845a48a52b06e06fd2af1799bb8ddd43f9b12bd3e5f671277_native09.json",
+      "raw_sha256": "6d6a39d43ffe2b0845a48a52b06e06fd2af1799bb8ddd43f9b12bd3e5f671277"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native10.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/16df31b4c57e1583460551ff19a144c5733e639bc1c584336f8777f94623dac0_native10.json",
+      "raw_sha256": "16df31b4c57e1583460551ff19a144c5733e639bc1c584336f8777f94623dac0"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native11.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/516dfbcd86920b15cdf4e9063b27780f9a69a338cb93c9b2195ee3d464b6cfb5_native11.json",
+      "raw_sha256": "516dfbcd86920b15cdf4e9063b27780f9a69a338cb93c9b2195ee3d464b6cfb5"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native12.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/359b52d2617f4bfb442b653122cf7bdcbc263074cd0490990b93e6c952df3b9a_native12.json",
+      "raw_sha256": "359b52d2617f4bfb442b653122cf7bdcbc263074cd0490990b93e6c952df3b9a"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native13.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/186868aa7f3ec8121ba1fdf649c0589a170ef67346e09a068299e627c0db6ab7_native13.json",
+      "raw_sha256": "186868aa7f3ec8121ba1fdf649c0589a170ef67346e09a068299e627c0db6ab7"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native14.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/132e2d5576a2ecf3c7ee4d035caf1402806d4ecf0c5c5ef68607e115e356f26f_native14.json",
+      "raw_sha256": "132e2d5576a2ecf3c7ee4d035caf1402806d4ecf0c5c5ef68607e115e356f26f"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native15.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f6073d48fb5ea5b3655e4a279286a422b8e2786d945cddba70f68bbe6c86c1ee_native15.json",
+      "raw_sha256": "f6073d48fb5ea5b3655e4a279286a422b8e2786d945cddba70f68bbe6c86c1ee"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native16.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/6d6ffa517302e94c53f30e8aa88ae4922dafd77cf66b755af34ad286338a0ee5_native16.json",
+      "raw_sha256": "6d6ffa517302e94c53f30e8aa88ae4922dafd77cf66b755af34ad286338a0ee5"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native17.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f62ae06753bab463ebac48d9f09b901dab3a4b7b9190fc0a3b3e9763bd19cae9_native17.json",
+      "raw_sha256": "f62ae06753bab463ebac48d9f09b901dab3a4b7b9190fc0a3b3e9763bd19cae9"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native18.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f06dc71c84bf0ac3ca16af247957c0e32eb2afdded8d8aed7cb83970b038202b_native18.json",
+      "raw_sha256": "f06dc71c84bf0ac3ca16af247957c0e32eb2afdded8d8aed7cb83970b038202b"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native19.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/245bffe79582312cccfbf1c6c65245f4aa4dd8310bd0503f4add471e224eb154_native19.json",
+      "raw_sha256": "245bffe79582312cccfbf1c6c65245f4aa4dd8310bd0503f4add471e224eb154"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native20.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/78e388168683eb999c3b7301e1d652e7f58ddc3e559ea0a0721677bb1d308087_native20.json",
+      "raw_sha256": "78e388168683eb999c3b7301e1d652e7f58ddc3e559ea0a0721677bb1d308087"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native21.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/b9dc743b37e3ec7403f0b09106905da3b318ca9c9ca819e1a6f4fe74d379cf0e_native21.json",
+      "raw_sha256": "b9dc743b37e3ec7403f0b09106905da3b318ca9c9ca819e1a6f4fe74d379cf0e"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native22.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f5f29607a54a7733befa78d01bf0c5f72205ef3142cecb919d66415e0675362a_native22.json",
+      "raw_sha256": "f5f29607a54a7733befa78d01bf0c5f72205ef3142cecb919d66415e0675362a"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native23.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/20ecf5360954db6a70276c64b158c30439dcb55f941d7d4415134241c663d8e8_native23.json",
+      "raw_sha256": "20ecf5360954db6a70276c64b158c30439dcb55f941d7d4415134241c663d8e8"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native24.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/4f5ae67ab286d9b0bb542d8ecda44963ea738fb4320e7281fb54f3a6596bb27b_native24.json",
+      "raw_sha256": "4f5ae67ab286d9b0bb542d8ecda44963ea738fb4320e7281fb54f3a6596bb27b"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native25.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/db05d2858af9f525dabaeba1cc7b30a4fc0a8c289ced6b082fb1067c333a9d67_native25.json",
+      "raw_sha256": "db05d2858af9f525dabaeba1cc7b30a4fc0a8c289ced6b082fb1067c333a9d67"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native26.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/7cf29bd84d61e44f0a03458eca4aaae377f51f514788070019d33bfb34b2c711_native26.json",
+      "raw_sha256": "7cf29bd84d61e44f0a03458eca4aaae377f51f514788070019d33bfb34b2c711"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native27.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/b4565266cd53cd753ee60091ca3791dfaf2464ec6c32007059ce2ce275b890cb_native27.json",
+      "raw_sha256": "b4565266cd53cd753ee60091ca3791dfaf2464ec6c32007059ce2ce275b890cb"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native28.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f0351283cfcaae17240eb0b125cdd981fc9e187128daf641b9a1dfd9fbaad59c_native28.json",
+      "raw_sha256": "f0351283cfcaae17240eb0b125cdd981fc9e187128daf641b9a1dfd9fbaad59c"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native29.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/b586c620b436c2ee65fa73e97bc6d70f6d9b832c594d34642285859d5ee7c9a6_native29.json",
+      "raw_sha256": "b586c620b436c2ee65fa73e97bc6d70f6d9b832c594d34642285859d5ee7c9a6"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native30.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/95be2c5e5c43478698f611d827c65eb9d222e928bc97eec7862abe29e1a72f0f_native30.json",
+      "raw_sha256": "95be2c5e5c43478698f611d827c65eb9d222e928bc97eec7862abe29e1a72f0f"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native31.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f4e81eb3276e9150be49319f8404e37abdf678c810cf046a2e009ed2d881ec0d_native31.json",
+      "raw_sha256": "f4e81eb3276e9150be49319f8404e37abdf678c810cf046a2e009ed2d881ec0d"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native32.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/478fa099ff8f2ea4dc130a29366bffe172ea1f76805626126a2440233698e286_native32.json",
+      "raw_sha256": "478fa099ff8f2ea4dc130a29366bffe172ea1f76805626126a2440233698e286"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native33.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1dbb02d088efff9d1face9b1ce9bb4f55001e45e4e123d64bc205f266f8c4001_native33.json",
+      "raw_sha256": "1dbb02d088efff9d1face9b1ce9bb4f55001e45e4e123d64bc205f266f8c4001"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native34.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/21b35d7e7b316cae1f66c03a9ea899e27bf06507a2edb4234aa0b42867e9f6f9_native34.json",
+      "raw_sha256": "21b35d7e7b316cae1f66c03a9ea899e27bf06507a2edb4234aa0b42867e9f6f9"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native35.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/1788b29dbfcbd5f83c767dcf95f6995026e5ad17c219a548c8d57e45121fb237_native35.json",
+      "raw_sha256": "1788b29dbfcbd5f83c767dcf95f6995026e5ad17c219a548c8d57e45121fb237"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native36.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/af72205f1b7662519e27696bb296277a969750adf9e5ae9e542d436e0850f706_native36.json",
+      "raw_sha256": "af72205f1b7662519e27696bb296277a969750adf9e5ae9e542d436e0850f706"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native37.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/e519e1fd67d465cd78967da71608e979ec072fd904448addd04a6eeb8d5edfa1_native37.json",
+      "raw_sha256": "e519e1fd67d465cd78967da71608e979ec072fd904448addd04a6eeb8d5edfa1"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native38.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/f20937a11e7388a458752b4a6f7c4767bd1eaa6dc8b92969b2a81a411327cb85_native38.json",
+      "raw_sha256": "f20937a11e7388a458752b4a6f7c4767bd1eaa6dc8b92969b2a81a411327cb85"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native39.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/c62759734d240274c43b379568623daf7bf9fa6ac8c6c9a045175e69f504d96b_native39.json",
+      "raw_sha256": "c62759734d240274c43b379568623daf7bf9fa6ac8c6c9a045175e69f504d96b"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native40.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8826ff1fbfc7cf8fe8d3386f55e14ea4835d35bb35966c7448605ade1f2c8a80_native40.json",
+      "raw_sha256": "8826ff1fbfc7cf8fe8d3386f55e14ea4835d35bb35966c7448605ade1f2c8a80"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\native41.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/3a1ed09192236540b70c07c715eb69b3c46b151b380ee7b8b1f7fa945c0a52ae_native41.json",
+      "raw_sha256": "3a1ed09192236540b70c07c715eb69b3c46b151b380ee7b8b1f7fa945c0a52ae"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_six_state_native42_v1_20261010\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/bfb2e7ece5298ff980dd27e4aa9a1870b60b2adaabd6520f7af7ad674631ceeb_verification.json",
+      "raw_sha256": "bfb2e7ece5298ff980dd27e4aa9a1870b60b2adaabd6520f7af7ad674631ceeb"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\protocol.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0047f07a62006774246e2c02ae174fdad8ae6feeb48e8c9ef56a7415f99e57f4_protocol.json",
+      "raw_sha256": "0047f07a62006774246e2c02ae174fdad8ae6feeb48e8c9ef56a7415f99e57f4"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ddff742d9c538d8e7d77cdab9faaa5c186bdddc214c1bd90c2a8b96f26cb9692_verification.json",
+      "raw_sha256": "ddff742d9c538d8e7d77cdab9faaa5c186bdddc214c1bd90c2a8b96f26cb9692"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2020\\frozen_training_inputs.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/5b4aad4d864f24e0994846ddf513c78bfd881291fe052283a405f0b72d4cf35f_frozen_training_inputs.json",
+      "raw_sha256": "5b4aad4d864f24e0994846ddf513c78bfd881291fe052283a405f0b72d4cf35f"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2020\\info.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/06de0254895ceeecd4db83090e3d37caeb927d6046e7c71c571566ad5e2c3b7f_info.json",
+      "raw_sha256": "06de0254895ceeecd4db83090e3d37caeb927d6046e7c71c571566ad5e2c3b7f"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2021\\frozen_training_inputs.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/21aadb518e90f4d8feec039aedd4ab16a17b2fac671b089acf9d012a072a8f7e_frozen_training_inputs.json",
+      "raw_sha256": "21aadb518e90f4d8feec039aedd4ab16a17b2fac671b089acf9d012a072a8f7e"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2021\\info.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/58c399468ceb4163e31e22cd14008f8275b372129d7936517bf60070ea0a2b53_info.json",
+      "raw_sha256": "58c399468ceb4163e31e22cd14008f8275b372129d7936517bf60070ea0a2b53"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2022\\frozen_training_inputs.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0fdd7c7fdb3c607bc40c761450c7c6c284a3e8bc78be17782bfb47d4c829db16_frozen_training_inputs.json",
+      "raw_sha256": "0fdd7c7fdb3c607bc40c761450c7c6c284a3e8bc78be17782bfb47d4c829db16"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2022\\info.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/2e985e461502ed1b2b2d2cd05a9a0ebf83b7cccd2fffc8629b9b03bfd0ad4e7f_info.json",
+      "raw_sha256": "2e985e461502ed1b2b2d2cd05a9a0ebf83b7cccd2fffc8629b9b03bfd0ad4e7f"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2023\\frozen_training_inputs.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/376dc236351bcc74aacd77a9f3042ebefd1857210d352af5707782a548e75ce8_frozen_training_inputs.json",
+      "raw_sha256": "376dc236351bcc74aacd77a9f3042ebefd1857210d352af5707782a548e75ce8"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2023\\info.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/673047d9723833a985705c2eef07c44141b148ff1774c231a3c7f35c8caaf290_info.json",
+      "raw_sha256": "673047d9723833a985705c2eef07c44141b148ff1774c231a3c7f35c8caaf290"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2024\\frozen_training_inputs.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/4459abb6f4b7a594e7f8c48230d2994c3d6b5d2cc7363f701c6e335508ab4c96_frozen_training_inputs.json",
+      "raw_sha256": "4459abb6f4b7a594e7f8c48230d2994c3d6b5d2cc7363f701c6e335508ab4c96"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2024\\info.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/aefeb785dd72768274f90ffcf31135d978c78235ea7f9aed3ba5b160dfd1f503_info.json",
+      "raw_sha256": "aefeb785dd72768274f90ffcf31135d978c78235ea7f9aed3ba5b160dfd1f503"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2025\\frozen_training_inputs.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/7564e59618fd3d8646b7032ffff19bb43764c91ac28300ae709b729b091976d8_frozen_training_inputs.json",
+      "raw_sha256": "7564e59618fd3d8646b7032ffff19bb43764c91ac28300ae709b729b091976d8"
+    },
+    "E:\\赛题五_本机临时\\stock_rank20long_embedding_small512_BF16_bank6_v1_20261010\\2025\\info.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/cf366fd6bb02cc7fce4a91585e689235ac131bf10bfd8f0d0b3681bc17d7720b_info.json",
+      "raw_sha256": "cf366fd6bb02cc7fce4a91585e689235ac131bf10bfd8f0d0b3681bc17d7720b"
+    },
+    "E:\\赛题五_本机临时\\GPU实测_20261009\\stock_rank20long_embedding_small512_restart_v1_20261010\\actual_hidden_children.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/548322ea107b3b8c60c4b52a2538d0bcf8dfbb42dcae4e1933b2d7345f586dcf_actual_hidden_children.json",
+      "raw_sha256": "548322ea107b3b8c60c4b52a2538d0bcf8dfbb42dcae4e1933b2d7345f586dcf"
+    },
+    "E:\\赛题五_本机临时\\GPU实测_20261009\\stock_rank20long_embedding_small512_restart_v1_20261010\\frozen_before_actual_controls.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/caf55e6f54e37364caca5cdbf0e2f5a42317cf3ced1c5ee1ffcc3d6d75655bed_frozen_before_actual_controls.json",
+      "raw_sha256": "caf55e6f54e37364caca5cdbf0e2f5a42317cf3ced1c5ee1ffcc3d6d75655bed"
+    },
+    "E:\\赛题五_本机临时\\GPU实测_20261009\\stock_rank20long_embedding_small512_restart_v1_20261010\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8a81ad8cdac9b553b74b52f376416a81c035e64ce88f5930d076f98873860558_verification.json",
+      "raw_sha256": "8a81ad8cdac9b553b74b52f376416a81c035e64ce88f5930d076f98873860558"
+    },
+    "E:\\赛题五_本机临时\\GPU实测_20261009\\stock_rank20long_embedding_small512_restart_v1_20261010\\small32\\first_actual.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/25e19abca4b9879be03fd29e7808a653f3e73e626dca737d96e303f5fd557bf7_first_actual.json",
+      "raw_sha256": "25e19abca4b9879be03fd29e7808a653f3e73e626dca737d96e303f5fd557bf7"
+    },
+    "E:\\赛题五_本机临时\\GPU实测_20261009\\stock_rank20long_embedding_small512_restart_v1_20261010\\small32\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/0375a262a2d2075662c7d875297ee819c33e107e3fa3b288d22a4138886b5eb4_verification.json",
+      "raw_sha256": "0375a262a2d2075662c7d875297ee819c33e107e3fa3b288d22a4138886b5eb4"
+    },
+    "E:\\赛题五_本机临时\\GPU实测_20261009\\stock_rank20long_embedding_small512_restart_v1_20261010\\wide2\\first_actual.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/ce72056f7e6f282d3c313c6fb2f13bd7b820f1ff265e43ce49bd89feac4e03b8_first_actual.json",
+      "raw_sha256": "ce72056f7e6f282d3c313c6fb2f13bd7b820f1ff265e43ce49bd89feac4e03b8"
+    },
+    "E:\\赛题五_本机临时\\GPU实测_20261009\\stock_rank20long_embedding_small512_restart_v1_20261010\\wide2\\verification.json": {
+      "path": "validation_sync/StockRank20Long_objective_native42_official46_v1_20261010/external_metadata/8f907f1bfce0ad82363c86e84dbec42931a2637a2565b7f2760aae0c19898f66_verification.json",
+      "raw_sha256": "8f907f1bfce0ad82363c86e84dbec42931a2637a2565b7f2760aae0c19898f66"
+    }
+  }
+}
