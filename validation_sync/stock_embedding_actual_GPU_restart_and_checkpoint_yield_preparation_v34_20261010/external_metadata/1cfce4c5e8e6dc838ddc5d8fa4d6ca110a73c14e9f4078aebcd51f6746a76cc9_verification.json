@@ -1,0 +1,60 @@
+{
+  "case": "small32",
+  "status": "passed_actual_fresh_process_BF16_micro_restart",
+  "configuration": {
+    "kind": "mlp",
+    "target": "y_ret_1d",
+    "hidden": [
+      128,
+      64
+    ],
+    "epochs": 32,
+    "batch_size": 257,
+    "microbatch_size": 67,
+    "predict_batch_size": 8192,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "dropout": 0.05,
+    "seed": 20261009,
+    "raw_feature_count": 63,
+    "encoded_feature_count": 121,
+    "numeric_feature_count": 120,
+    "stock_embedding_dim": 16,
+    "stock_vocabulary_size": 4651,
+    "feature_encoder_module": "daily_cross_sectional_feature_encoder120_v1_20261010",
+    "training_calendar_window": 252,
+    "loss": "Huber",
+    "huber_delta": 0.5,
+    "return_target_scale": 20.0,
+    "return_winsor_quantiles": [
+      0.005,
+      0.995
+    ],
+    "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+    "recipe": "own_mature_stock_embedding16_cross120_return1d_recent252_small512_BF16_e24_v1_20261010"
+  },
+  "training_rows": 1024,
+  "phases": [
+    {
+      "phase": "original",
+      "elapsed_seconds": 20.4690000000046,
+      "actual_child_exit": 0
+    },
+    {
+      "phase": "first",
+      "elapsed_seconds": 19.639999999999418,
+      "actual_child_exit": 0
+    },
+    {
+      "phase": "resumed",
+      "elapsed_seconds": 23.265999999995984,
+      "actual_child_exit": 0
+    }
+  ],
+  "all_training_losses_and_all_weight_bits_exact": true,
+  "preprocessing_and_native_prediction_bits_exact": true,
+  "actual_fixed8192_cold_prefix_bits_exact": true,
+  "changed_training_input_checkpoint_rejected": true,
+  "parameter_count": 100657,
+  "actual_checkpoint_sha256": "cb189662e4590cc083ab7ef10240c73b8057a995171a608460cca34002e4b017"
+}
