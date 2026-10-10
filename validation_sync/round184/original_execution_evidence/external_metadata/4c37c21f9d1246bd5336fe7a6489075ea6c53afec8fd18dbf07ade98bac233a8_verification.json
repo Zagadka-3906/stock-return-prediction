@@ -1,0 +1,1386 @@
+{
+  "status": "passed17_own_stock_embedding_one_day_return_after174_TRAIN_only_CDF_tiny_weights_and_protected_tail_official_comparisons",
+  "at_local": "2026-10-10T23:09:48.042126",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_stock_pairrank_embedding_six_state_native42_location_v1_20261010.json": "663398949a8460732a8eb830186eb943f7fe839a67dacc803959a592e163fa55",
+    "E:\\赛题五_本机临时\\stock_pairrank_embedding_six_state_native42_v1_20261010\\verification.json": "d4b3b09df52901506b5da5b1fb79bb6b801e41ebb8c466bcc0a8f6edd558076f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_stock_pairrank_embedding_after174_fast17_screen_v1_20261010.py": "af5d602fee7e7361e3cb5a9632e6b94bc017d50108a4df96b7fc209ed2430f3a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\exact_E_TRAIN_validation_cache_guard_runtime_v2_20261010.py": "63bbd0fcac8bfa1d56a77a4864c57b8a671e2b29aa589e302d035fafa3983b6a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\exact_E_TRAIN_validation_cache_guard_actual_CPU_controls_v2_20261010.json": "08c028a25526ed7fe2d513921da45da97f940b9f14cde537f0630c435e0bce26",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\exact_E_TRAIN_validation_actual_anchor169_all8_compatibility_v1_20261010.json": "a93458dee84c4f0f8e09cb50e404dd917cbc5a1dadec0d8b047e255f2ef89b71",
+    "D:\\3.Study\\数据分析\\赛题五\\后续选模标准.md": "4bf5f45709427b459c503e4dcc911d97264cbb0509b028a480f61ffaf22bde37",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_StockPairRankEmbeddingSmall512_full5_independent_location_v1_20261009.json": "945c580fb5013d580c0be44961a8654d64bf1c9eca6eb86fc7bd7046c8ec0ba3",
+    "E:\\赛题五_本机临时\\stock_pairrank_embedding_small512_BF16_bank6_v1_20261010\\verification.json": "a8da4f645dddc58d8860ea1acf8e9f490cb6580255476522db0549987072e17e",
+    "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_full5_independent_controls_v1_20261009\\verification.json": "b014cf5e7c6c71c662dabb224c6fb8c2cf0a3d8439c190da45a8a793f7a4c2fa",
+    "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_full5_independent_controls_v1_20261009\\combined_raw.parquet": "1aba21a89b5c692e700b482c55323bcabd5bb350dcf96f679e6e0f2aab44857d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r174\\selected_validation.npy": "2ef6f221f977ddddd0bec4854e89c375e907143241b064affebf1da43a4a5d91",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\optimization_20261003_r174\\calibrated_csv_official.json": "d2708a47a2b274202adb40ec9e129e3bb24359a3a9af9f4866f20d781106cd80",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\connected_validation_20261002\\combined_fold_frame.parquet": "20417ef5294010fdd18970450a75665f1faf2b7bc136c8a68cafffafede88789",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\BF16Medium153_complete_parent_rank_CDF_v1_20261009.py": "e1586037e3f22d912774ef903f1651c04e4ce1f768023f7fe93cefe725969dbe",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\protected_upper_tail_rank_permutation_v1_20261010.py": "575635798f6c9bc3fe305e3195aa58320e01bdb5ecaaac18a7500a91b2b9dd7c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\protected_official_top_rank_permutation_v2_20261010.py": "cef3a3521eb51f8b47bd051e3fd90721ae190649427a5b78d1d53aa2b88c833a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\protected_upper_tail_rank_permutation_controls_v1_20261010.json": "d1a5ee9c3161396cb9df6ccbf305a72f4a7008d54fd2cfb5a8d2df221c2ae437",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\protected_official_top_rank_permutation_controls_v2_20261010.json": "81743b224367564f85787686d9355949c50cb0219d36d1dccc4e8f95a599e736",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\immutable_prepared_rank_panel_cache_v1_20261010.py": "9e5bd6c731ed4d408d0c1ea2446fcbddd759836fd86e5100484e34b2e7f5e35c",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\immutable_prepared_rank_panel_cache_actual_full_TRAIN_benchmark_v1_20261010.json": "7d92212252c07972dd587ac51ec4121ba9be8bf31d6e46070b5a9b93ead9bf8f"
+  },
+  "records": [
+    {
+      "case": 0,
+      "configuration": {
+        "kind": "anchor174",
+        "role": null,
+        "weight": 0.0,
+        "sign": 1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12267645404131496,
+        "ic_std": 0.11028200099238417,
+        "icir": 1.1123887210732304,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.37329945533256637,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.4513605544703164
+      },
+      "connected_final_score": 0.4513605544703164,
+      "score_gain_over_qualified_parent": 0.0,
+      "control_sha256": "850ba64e4a102dfdc2a89f7e3c36441c031f8e7312ffcd32ca608187f901fc7b",
+      "prediction_numeric_sha256": "9e0cdf41cacc5311e66297ed29d601beca4c095afd44a1786a1c41ad0bee22c4",
+      "official_metric_capsule_sha256": "c88c6c9e8ec1027e2580283b27fd6f765111f5e72d7d408beb7b37b3f6c7f441",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "7c44af8976ac656920241c219fb4532dfc6db30e4a17fbf62a6e83c39902da51",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\7c44af8976ac656920241c219fb4532dfc6db30e4a17fbf62a6e83c39902da51.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 1,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.00025,
+        "sign": 1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.1226764552482474,
+        "ic_std": 0.11028206769645532,
+        "icir": 1.1123880591893405,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.37332546430131136,
+        "top1_annual_ret": 0.39881921836156886,
+        "mean_turnover": 0.03281447746625976,
+        "final_score": 0.4512238781498144
+      },
+      "connected_final_score": 0.4512238781498144,
+      "score_gain_over_qualified_parent": -0.00013667632050201606,
+      "control_sha256": "0b26ad73d67628838c37bae191719f1bc7f1a478d604c1f5cc86d1d0a5a43835",
+      "prediction_numeric_sha256": "21b0a2ed4d2b51c536c535c77c636838b4e6bf843ad1f9793ebd6ce5cd01f8d3",
+      "official_metric_capsule_sha256": "2afae23da5fd48ed74ad7806d6fec9c61a8f54b8b6b82c14f962e8307d76d31a",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "ec81867679db70692c65ed81551a980d2457af262a0b0bc290be472e55f975b5",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\ec81867679db70692c65ed81551a980d2457af262a0b0bc290be472e55f975b5.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 2,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.001,
+        "sign": 1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.1226789051320411,
+        "ic_std": 0.11028769023606357,
+        "icir": 1.1123535624824037,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.3729224375040238,
+        "top1_annual_ret": 0.39841619156428126,
+        "mean_turnover": 0.0426496161199951,
+        "final_score": 0.4481534084680251
+      },
+      "connected_final_score": 0.4481534084680251,
+      "score_gain_over_qualified_parent": -0.003207146002291328,
+      "control_sha256": "3c854bfa8adbe3accb60714bb5d208327e557e4d4df8484068b54acb416e4e9c",
+      "prediction_numeric_sha256": "721a24f71d46533d46bf8c6fb74139f9a067ecf2c4b54bca35ccda18076bcf95",
+      "official_metric_capsule_sha256": "73b6f5b98d23f24dbd41c31ebc9c6e4189f9c9ded68b463c9847da5e12ca2689",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "41d0f4d2641a16ea23a0fad66f8ba3350def91160dc5d3c64a5835fcbf330d1f",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\41d0f4d2641a16ea23a0fad66f8ba3350def91160dc5d3c64a5835fcbf330d1f.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 3,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.004,
+        "sign": 1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12269309861676138,
+        "ic_std": 0.11031063108406797,
+        "icir": 1.1122508992198286,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.37144120261553193,
+        "top1_annual_ret": 0.3969349566757894,
+        "mean_turnover": 0.06925899765019909,
+        "final_score": 0.4397319009363044
+      },
+      "connected_final_score": 0.4397319009363044,
+      "score_gain_over_qualified_parent": -0.011628653534012046,
+      "control_sha256": "52473cc5141e9768dabbc8883467384f3d9c912483babb85e503ee6533fe7f4a",
+      "prediction_numeric_sha256": "097a16149a091ce4dde02441e9fd9edbee286d8f1481d34273bf19f61f2e8cee",
+      "official_metric_capsule_sha256": "4c2e663014a4aaa57767dd4e3c096c0ef54c4af789b45e23598aaf506184bba5",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "788eef22eb790fd862524f1bfe406b17bc5a3cdcd42101d54be9a312c729b529",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\788eef22eb790fd862524f1bfe406b17bc5a3cdcd42101d54be9a312c729b529.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 4,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.016,
+        "sign": 1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12277815800156279,
+        "ic_std": 0.11042082294204959,
+        "icir": 1.1119112747964077,
+        "ic_positive_ratio": 0.8976897689768977,
+        "annual_excess": 0.37150870746056774,
+        "top1_annual_ret": 0.39700246152082513,
+        "mean_turnover": 0.14926885206543436,
+        "final_score": 0.4157832198191651
+      },
+      "connected_final_score": 0.4157832198191651,
+      "score_gain_over_qualified_parent": -0.035577334651151316,
+      "control_sha256": "05320f17e24521bd39dc45f31c772b10bf2528a92746c6751396044c4d5259b7",
+      "prediction_numeric_sha256": "2f9e7a30ef414446fbee4abcc128921bf9f5ae672468c4bbfc5ed159a114aed4",
+      "official_metric_capsule_sha256": "c8599255e19810620a4ac41dd25f6982f0917826910aa9d828bf40cfec435b6d",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "d543caf764ca9a0ef7db7a125caee747f55942ee934ff1cddec7af270e9dc5f8",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\d543caf764ca9a0ef7db7a125caee747f55942ee934ff1cddec7af270e9dc5f8.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 5,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.00025,
+        "sign": -1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12267650890240699,
+        "ic_std": 0.11028171460546433,
+        "icir": 1.1123921072617102,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.37329945533256637,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.45136057641475325
+      },
+      "connected_final_score": 0.45136057641475325,
+      "score_gain_over_qualified_parent": 2.194443682324021e-08,
+      "control_sha256": "26bd2821dabd8d2ed0f9cb08bd99afbf2f567bd664b4e394fc02c82df0ae0962",
+      "prediction_numeric_sha256": "992b80d988140e9b2f00e32e2dd5e269c5771f09b85fd3147d1f38124e5a243b",
+      "official_metric_capsule_sha256": "8b12841db07c7dd13af57768e796c29a7f1df209b0d8b145599f7817f372565e",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "4eec3d4567c2fbcfa97412d302338f554b2f9688a1238f004069a22c879c355a",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\4eec3d4567c2fbcfa97412d302338f554b2f9688a1238f004069a22c879c355a.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 6,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.001,
+        "sign": -1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12267566073877328,
+        "ic_std": 0.11027279338367883,
+        "icir": 1.1124744098205657,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.37264232110088236,
+        "top1_annual_ret": 0.3981360751611398,
+        "mean_turnover": 0.032482987482097825,
+        "final_score": 0.45111806438114466
+      },
+      "connected_final_score": 0.45111806438114466,
+      "score_gain_over_qualified_parent": -0.00024249008917176518,
+      "control_sha256": "cc48407fa77ac873bc158940309b3f273765a31d8eab594cc1db2b39960620fc",
+      "prediction_numeric_sha256": "71e383f79660662dd0b518936571d0bcc0a2d50e2804a8fc2c849b8450fe2b2d",
+      "official_metric_capsule_sha256": "691f8e11cfcfb94dbf2d57a58eb814a6779662b7d79964075e7c14ab3589d4f6",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "2d7dc531c969d1f31464fa16bb500db58cd3bd7736e25eee379884cb03c8685e",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\2d7dc531c969d1f31464fa16bb500db58cd3bd7736e25eee379884cb03c8685e.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 7,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.004,
+        "sign": -1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12266951699812251,
+        "ic_std": 0.11023804485629399,
+        "icir": 1.1127693452658214,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.3692053695780438,
+        "top1_annual_ret": 0.3946991236383013,
+        "mean_turnover": 0.03371344273509272,
+        "final_score": 0.4497153848521343
+      },
+      "connected_final_score": 0.4497153848521343,
+      "score_gain_over_qualified_parent": -0.0016451696181821185,
+      "control_sha256": "971d12fd8503a0b8f7a5242f9e5eb11263ff515832ef573b446c4de378cd8103",
+      "prediction_numeric_sha256": "2f18b74f6770b9a05c69ca2d1c4a5bc25f090b0ee844abbb5ba38969740b34bf",
+      "official_metric_capsule_sha256": "bbca7290dafe8c4a02c99de9d66d62c033f98a7ba771342b9989629fbf771487",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "31e488318524ffa6cfb2829900f7afd11815cdce9e0315302f6ef7d8516f6c7d",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\31e488318524ffa6cfb2829900f7afd11815cdce9e0315302f6ef7d8516f6c7d.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 8,
+      "configuration": {
+        "kind": "CDF",
+        "role": "nonflag_valid",
+        "weight": 0.016,
+        "sign": -1.0,
+        "protect_fraction": null
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12261700958267838,
+        "ic_std": 0.11010021323635868,
+        "icir": 1.1136854868704853,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.35960577477202693,
+        "top1_annual_ret": 0.3850995288322843,
+        "mean_turnover": 0.04124260526867698,
+        "final_score": 0.4445557546840764
+      },
+      "connected_final_score": 0.4445557546840764,
+      "score_gain_over_qualified_parent": -0.0068047997862400456,
+      "control_sha256": "9ff97766305727691cfb8cc254f9704e82ca77822b275f9b6eca2298d42d3d32",
+      "prediction_numeric_sha256": "7b37aa64bd767bc234f55e8b30292f46b86f9ab89ca2e02fa386bf56c6a3f3d8",
+      "official_metric_capsule_sha256": "9a8bf63fd0feec1c38f16dd265ddadb265c9bc008aaac78c8a1d84fbb11fdec9",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "bebac5e99805f021bb862d7ea9579b21c6111e66df0bd7ef14b7bb2ae744566c",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\bebac5e99805f021bb862d7ea9579b21c6111e66df0bd7ef14b7bb2ae744566c.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 9,
+      "configuration": {
+        "kind": "valid_pool_protection_v1",
+        "role": "nonflag_valid",
+        "weight": 0.004,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.1226799665594365,
+        "ic_std": 0.11030948964274687,
+        "icir": 1.1121433609814821,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.3732994553325664,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.451361959477565
+      },
+      "connected_final_score": 0.451361959477565,
+      "score_gain_over_qualified_parent": 1.4050072486004872e-06,
+      "control_sha256": "27cd16624612e61d7b1a7dc7612059810bcf183e4c25047751e90bdb6067e215",
+      "prediction_numeric_sha256": "43dcdad6fdc531c3e6c66fdfca42db652d362c3b7e46cfaa5c2da89122088762",
+      "official_metric_capsule_sha256": "3f3e94e5fb574597bd56b6076df67e7acef841fc8ee1edf64ba6cdcc5d1fdd8c",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "80c3bab7e32c46c1187ee092ea0e5b2ded9a6efb7173b8dfe383932fbd49b98b",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\80c3bab7e32c46c1187ee092ea0e5b2ded9a6efb7173b8dfe383932fbd49b98b.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 10,
+      "configuration": {
+        "kind": "valid_pool_protection_v1",
+        "role": "nonflag_valid",
+        "weight": 0.016,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12268653610739777,
+        "ic_std": 0.11039472811837416,
+        "icir": 1.1113441574478389,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.3732994553325664,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.45136458729674955
+      },
+      "connected_final_score": 0.45136458729674955,
+      "score_gain_over_qualified_parent": 4.032826433131298e-06,
+      "control_sha256": "824ac39d584847137bb351a13d5c31a61fb50cddae805f2be156859b4109f760",
+      "prediction_numeric_sha256": "a6c37260605f962e92ddfc8160f6e6b5163cb30da785ab867b5cfb8a040a7c94",
+      "official_metric_capsule_sha256": "5a388464d3eda3c71d8239b9dc03e9908cc3dfd296b8fb71ed51ff8f2aa69118",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "54ed6917920c38237ed42736af5897392990f63e43fe469cf25fb934253d87e4",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\54ed6917920c38237ed42736af5897392990f63e43fe469cf25fb934253d87e4.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 11,
+      "configuration": {
+        "kind": "valid_pool_protection_v1",
+        "role": "nonflag_valid",
+        "weight": 0.064,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.1225859808389194,
+        "ic_std": 0.11068357952293828,
+        "icir": 1.1075353848084977,
+        "ic_positive_ratio": 0.8960396039603961,
+        "annual_excess": 0.3732994553325665,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.4513243651893582
+      },
+      "connected_final_score": 0.4513243651893582,
+      "score_gain_over_qualified_parent": -3.618928095822094e-05,
+      "control_sha256": "4350d335abfff854b2eca45fc98cec005df223138cea6174f4a9af700e3864f6",
+      "prediction_numeric_sha256": "3b55f5494ec32588efdfca3e57de98a442878d1f0db1bb022b014cb2001a6103",
+      "official_metric_capsule_sha256": "ce2e11b2bbcf0d8ec0123d2b13ca0d60ef50567d415bb817c34c8bb0e50d1de5",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "b5cfd8373bc995da51c1ff329758062e3fb6c3e77e72bf324d7a354f7ea2da03",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\b5cfd8373bc995da51c1ff329758062e3fb6c3e77e72bf324d7a354f7ea2da03.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 12,
+      "configuration": {
+        "kind": "valid_pool_protection_v1",
+        "role": "nonflag_valid",
+        "weight": 0.25,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12031811070284207,
+        "ic_std": 0.1108608384768983,
+        "icir": 1.0853076014567085,
+        "ic_positive_ratio": 0.891914191419142,
+        "annual_excess": 0.37329945533256637,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.4504172171349272
+      },
+      "connected_final_score": 0.4504172171349272,
+      "score_gain_over_qualified_parent": -0.0009433373353892049,
+      "control_sha256": "5936533fe4ee3cc6acf845bd2f3f12f43d987142616b7bd59c5a563f2e236486",
+      "prediction_numeric_sha256": "08a45b3a6bdcbb0858d9eb9347995599173f3e7b08d6c765ecbf252f577a9efd",
+      "official_metric_capsule_sha256": "d4c2ffa81859c6961b8d5646032620aba776417e9530b1e27263167187dd3d11",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "6355849224d29994897ff2d0cada9cb1dc8a32f9c159b2e56b06a00554f54065",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\6355849224d29994897ff2d0cada9cb1dc8a32f9c159b2e56b06a00554f54065.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 13,
+      "configuration": {
+        "kind": "official_Top_protection_v2",
+        "role": "nonflag_valid",
+        "weight": 0.004,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12268011676089444,
+        "ic_std": 0.1103094608466838,
+        "icir": 1.1121450129414039,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.3732994553325665,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.45136201955814825
+      },
+      "connected_final_score": 0.45136201955814825,
+      "score_gain_over_qualified_parent": 1.465087831831191e-06,
+      "control_sha256": "e589e22c65b871e88ce16e05590a3f18430d3f4859b6f2947e9837f68851416a",
+      "prediction_numeric_sha256": "116069f39ee1e3c1842f526f46f5a2aa048be78860e7efa0b199fabdb1abbbb1",
+      "official_metric_capsule_sha256": "5153c0392520bfcb848d1b1205db984556d4c4aa92dcb5257a9713662ba03ded",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "4fc2b01bc41433c991180ea4f027ada8f04b757062a9e1373becc809b7604282",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\4fc2b01bc41433c991180ea4f027ada8f04b757062a9e1373becc809b7604282.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 14,
+      "configuration": {
+        "kind": "official_Top_protection_v2",
+        "role": "nonflag_valid",
+        "weight": 0.016,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12268698799076554,
+        "ic_std": 0.11039484128773443,
+        "icir": 1.111347111510335,
+        "ic_positive_ratio": 0.8993399339933993,
+        "annual_excess": 0.3732994553325664,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.4513647680500966
+      },
+      "connected_final_score": 0.4513647680500966,
+      "score_gain_over_qualified_parent": 4.213579780198984e-06,
+      "control_sha256": "a093a4512d99315fc8ddd43aa9a6b23f13bad089588b7864ec2ffaca1949ced3",
+      "prediction_numeric_sha256": "606df4f72590e9f18c39eaae71118bda989a580eb550e6e579c6b3beb9d84d85",
+      "official_metric_capsule_sha256": "79ff8a75f84890e2af82d6ad1d68c590472c65920413b230ae74a0910f41fd96",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "54ccc1e31b374bd04195b811fc88762119850c4ee4d9194b6828035e1177c270",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\54ccc1e31b374bd04195b811fc88762119850c4ee4d9194b6828035e1177c270.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 15,
+      "configuration": {
+        "kind": "official_Top_protection_v2",
+        "role": "nonflag_valid",
+        "weight": 0.064,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12258879937736737,
+        "ic_std": 0.11068583351447592,
+        "icir": 1.1075382954164115,
+        "ic_positive_ratio": 0.8960396039603961,
+        "annual_excess": 0.3732994553325665,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.4513254926047374
+      },
+      "connected_final_score": 0.4513254926047374,
+      "score_gain_over_qualified_parent": -3.506186557900026e-05,
+      "control_sha256": "316471adb311988198b8d96b6cf240a67cdda8d6cd088a0771ef8fbeaaf485e9",
+      "prediction_numeric_sha256": "7f1e2c988c4cdc6b32f0a44f7f45d9b96e6a749774cc74ea26d7436e7cf96f5d",
+      "official_metric_capsule_sha256": "7001f201a042397b4070cd3cd293d701a70c27783f3c912390b24d3e0d2511da",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "e62b94107886a72f23d68565d71b00291c89b330655172a0887656c216fa0de6",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\e62b94107886a72f23d68565d71b00291c89b330655172a0887656c216fa0de6.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    },
+    {
+      "case": 16,
+      "configuration": {
+        "kind": "official_Top_protection_v2",
+        "role": "nonflag_valid",
+        "weight": 0.25,
+        "sign": 1.0,
+        "protect_fraction": 0.15
+      },
+      "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+      "metrics": {
+        "ic_mean": 0.12035061805193446,
+        "ic_std": 0.11088194658470121,
+        "icir": 1.085394167029709,
+        "ic_positive_ratio": 0.8902640264026402,
+        "annual_excess": 0.3732994553325665,
+        "top1_annual_ret": 0.39879320939282387,
+        "mean_turnover": 0.03233287915326493,
+        "final_score": 0.45043022007456424
+      },
+      "connected_final_score": 0.45043022007456424,
+      "score_gain_over_qualified_parent": -0.0009303343957521859,
+      "control_sha256": "8560f4ef119425e255b2e6af0ddad3d6b642cb4be543d31aef0109685a445400",
+      "prediction_numeric_sha256": "8a08a82ad54a5210b6c9bc1e6dcfa126cc3ed5982ca92bc5861bad7160e0dd6f",
+      "official_metric_capsule_sha256": "9a5ad54ae38cb7f14ba33233d2e905c3b680cdad52b527f7e5e866aeddf80e07",
+      "official_score_cache": {
+        "cache_hit": false,
+        "cache_key": "1e4fddba4e1dc99568ab1d3684eb7e9d32bb7e214b02452ec6d1f985d16fca20",
+        "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\1e4fddba4e1dc99568ab1d3684eb7e9d32bb7e214b02452ec6d1f985d16fca20.json"
+      },
+      "actual_return_mapping": {
+        "actual_return_mapped_csv_scored": true,
+        "within_day_ranks_bit_identical": true,
+        "boundaries": [
+          {
+            "year": 2020,
+            "mapping_last_label_date": 20191230,
+            "exclusive_cutoff": 20191231,
+            "method": "prevalidation training moments affine fallback"
+          },
+          {
+            "year": 2021,
+            "mapping_last_label_date": 20201230,
+            "exclusive_cutoff": 20201231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2022,
+            "mapping_last_label_date": 20211230,
+            "exclusive_cutoff": 20211231,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2023,
+            "mapping_last_label_date": 20221229,
+            "exclusive_cutoff": 20221230,
+            "method": "past mature OOF isotonic"
+          },
+          {
+            "year": 2024,
+            "mapping_last_label_date": 20231228,
+            "exclusive_cutoff": 20231229,
+            "method": "past mature OOF isotonic"
+          }
+        ],
+        "test_labels_read": false,
+        "cross_round_identical_official_reuse": {
+          "cross_round_cache_hit": false
+        }
+      },
+      "submission_qualified": false,
+      "future_X_read": false,
+      "test_labels_read": false,
+      "selection_bias_uncorrected": true
+    }
+  ],
+  "best": {
+    "case": 14,
+    "configuration": {
+      "kind": "official_Top_protection_v2",
+      "role": "nonflag_valid",
+      "weight": 0.016,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    "recipe": "stock_pairrank_embedding16_cross120_pairrank1d_recent252_small512_BF16_e32",
+    "metrics": {
+      "ic_mean": 0.12268698799076554,
+      "ic_std": 0.11039484128773443,
+      "icir": 1.111347111510335,
+      "ic_positive_ratio": 0.8993399339933993,
+      "annual_excess": 0.3732994553325664,
+      "top1_annual_ret": 0.39879320939282387,
+      "mean_turnover": 0.03233287915326493,
+      "final_score": 0.4513647680500966
+    },
+    "connected_final_score": 0.4513647680500966,
+    "score_gain_over_qualified_parent": 4.213579780198984e-06,
+    "control_sha256": "a093a4512d99315fc8ddd43aa9a6b23f13bad089588b7864ec2ffaca1949ced3",
+    "prediction_numeric_sha256": "606df4f72590e9f18c39eaae71118bda989a580eb550e6e579c6b3beb9d84d85",
+    "official_metric_capsule_sha256": "79ff8a75f84890e2af82d6ad1d68c590472c65920413b230ae74a0910f41fd96",
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "54ccc1e31b374bd04195b811fc88762119850c4ee4d9194b6828035e1177c270",
+      "official_metrics_source": "E:\\赛题五_本机临时\\StockPairRankEmbeddingSmall512_after174_high_impact17_screen_v1_20261010\\identical_official_scores\\54ccc1e31b374bd04195b811fc88762119850c4ee4d9194b6828035e1177c270.json"
+    },
+    "actual_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "submission_qualified": false,
+    "future_X_read": false,
+    "test_labels_read": false,
+    "selection_bias_uncorrected": true
+  },
+  "new_quality_score_records": 17,
+  "actual_nonidentity_full_controls": 16,
+  "actual_nonidentity_prefix_controls": 48,
+  "submission_qualified": false,
+  "future_X_read": false,
+  "test_labels_read": false,
+  "global_feasible_direction_exhaustion_not_proven": true
+}
