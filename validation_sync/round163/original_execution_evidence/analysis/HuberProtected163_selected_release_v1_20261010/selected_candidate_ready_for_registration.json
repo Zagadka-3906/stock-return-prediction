@@ -1,0 +1,115 @@
+{
+  "status": "passed_actual67_selected_candidate_full_graph_and_metrics_and_source_bytes",
+  "source_candidate": "D:\\3.Study\\数据分析\\赛题五\\candidates\\HuberProtected163_v1_20261010",
+  "source_release": "D:\\3.Study\\数据分析\\赛题五\\analysis\\HuberProtected163_selected_release_v1_20261010",
+  "selected_configuration": {
+    "kind": "valid_pool_protection_v1",
+    "role": "nonflag_valid",
+    "weight": 0.064,
+    "sign": 1.0,
+    "protect_fraction": 0.35,
+    "recipe": "huber010",
+    "codec": "valid_pool_protection_v1",
+    "anchor_round": 157,
+    "universe": "all_current_raw_forecasts",
+    "model": "rank_MLP2048_BF16_Huber010_seed09_e64"
+  },
+  "best": {
+    "case": 45,
+    "configuration": {
+      "kind": "valid_pool_protection_v1",
+      "role": "nonflag_valid",
+      "weight": 0.064,
+      "sign": 1.0,
+      "protect_fraction": 0.35,
+      "recipe": "huber010",
+      "codec": "valid_pool_protection_v1",
+      "anchor_round": 157,
+      "universe": "all_current_raw_forecasts",
+      "model": "rank_MLP2048_BF16_Huber010_seed09_e64"
+    },
+    "recipe": "huber010",
+    "metrics": {
+      "ic_mean": 0.12232780297202418,
+      "ic_std": 0.10939454554867428,
+      "icir": 1.1182257978081307,
+      "ic_positive_ratio": 0.8943894389438944,
+      "annual_excess": 0.3732994553325665,
+      "top1_annual_ret": 0.39879320939282387,
+      "mean_turnover": 0.03233287915326493,
+      "final_score": 0.45122109404260013
+    },
+    "connected_final_score": 0.45122109404260013,
+    "score_gain_over_qualified_parent": 2.8813063052801624e-05,
+    "control_sha256": "8e4d5befc0cda39e07266b682df046f9215a409aeecf308f26f332617bf2a457",
+    "prediction_numeric_sha256": "7bd608fa744359933277c49835dc32b172d617d6cba460320eedbad561de90f2",
+    "official_metric_capsule_sha256": "7bd0f9bb2b7458896fa5c3884c920f9b10e5e7ac7a7d8c4de87ecf80814e8ae2",
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "fa79806f5a7dc63e17cd7695ff8a97bda5f232a3a828eb684b0282ce6c8bde8e",
+      "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\Huber010_high_impact65_D_scoring_v1_20261010\\identical_official_scores\\fa79806f5a7dc63e17cd7695ff8a97bda5f232a3a828eb684b0282ce6c8bde8e.json"
+    },
+    "actual_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "submission_qualified": false,
+    "future_X_read": false,
+    "test_labels_read": false,
+    "selection_bias_uncorrected": true,
+    "original_screen_record": "E:\\赛题五_本机临时\\Huber010_high_impact65_screen_v1_20261010\\case043_official.json",
+    "original_screen_case": 43,
+    "prediction_numeric_bytes_sha256": "7bd608fa744359933277c49835dc32b172d617d6cba460320eedbad561de90f2",
+    "expected_unique_native_models": 27,
+    "qualified_anchor_all8_metrics_exact": false,
+    "ordered_native_components": [
+      "rank_MLP2048_BF16_Huber010_seed09_e64"
+    ],
+    "whole_complete_parent_branches_preserved_before_new_stage": true,
+    "invalid_and_declared_unselected_raw_bits_preserved": true,
+    "actual_cold80_260_975_bits_exact": true,
+    "first2020_active": true
+  },
+  "actual_saved_native_models": 27,
+  "new_inference_claimed": true,
+  "pre_inference_source_snapshot": "E:\\赛题五_本机临时\\第163轮_20261010\\pre_inference_source_freeze_v1",
+  "test_labels_read": false,
+  "source_manifest_sha256": "2880a3075e308f34447f2098f998c11c9734226b7f56197bdba3c3427cd2d74c",
+  "sealed_candidate_complete": true
+}
