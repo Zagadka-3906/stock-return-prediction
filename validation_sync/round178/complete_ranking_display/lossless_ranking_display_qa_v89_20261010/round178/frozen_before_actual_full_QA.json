@@ -1,0 +1,23 @@
+{
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_lossless_ranking_display_round178_v2_20261008.py": "8769e6572ba1426367a65a96e85a3c3f6556690ad2a2ced10f133861cd19ecf8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_all_model_rankings_20261003.py": "dd0edfdab8ba788f743d6b06b5679e74d31056de1a0b24ad555a2b50c4ea704a",
+    "E:\\赛题五_本机临时\\current_mutable_rankings_v1_20261008\\all_model_rankings_20261003.json": "f168a39cfafdd89730d34525d90bff511687efd92a6dc8f0b8db2a404abc1f2a",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\build_lossless_ranking_display_round178_v2_20261008.py": "43675444ba8d5b85f241f8ed88a963f0b87bc36add2bf4f7074ca45930b56863",
+    "E:\\赛题五_本机临时\\第178轮_20261010\\display\\verification.json": "fe840643cebe89caed9f0261a92952e0bed16bcf28eb6dcfd895150890a95319",
+    "E:\\赛题五_本机临时\\第178轮_20261010\\display\\complete_rankings_lossless.html": "138c1103ce50c6aaafd530f1ffd42527191d793ffb93511f1b76bfa9e0fd0ea3"
+  },
+  "original_entire_QA_used_with_all_original_scientific_and_interaction_assertions": true,
+  "only_explicit_changes": {
+    "number=max(map(int,later_records));latest=f'r{number}';new_records=later_records[str(number)]": "number=REQUESTED_ROUND;latest=f'r{number}';new_records=later_records[str(number)]",
+    "    assert report['connected'][0]['score']==selection['winner']['connected_final_score']": "    assert report['connected'][0]['score']==max(row['score'] for row in report['connected'])\n    assert any(row['score']==selection['winner']['connected_final_score'] and f'/optimization_20261003_r{REQUESTED_ROUND}/' in Path(row['source']).as_posix() and not row['known_restriction'] for row in report['connected']), 'actual current-round selected winner present in full ranking'",
+    "f\"{selection['winner']['connected_final_score']:.9f}\" in dom": "f\"{report['connected'][0]['score']:.9f}\" in dom",
+    "document.getElementById('pageSize').value='10000';": "document.getElementById('pageSize').value=String(report.connected.length);",
+    "tempfile.mkdtemp(prefix='codex-model-ranking-qa-')": "tempfile.mkdtemp(prefix='codex-model-ranking-qa-',dir=str(PROFILES))",
+    "check(document.querySelectorAll('#body tr').length>10,'initial rows');": "check(fullCodecVerified,'all lossless nodes fully reconstructed');\n check(document.querySelectorAll('#body tr').length>10,'initial rows');"
+  },
+  "effective_QA_source_sha256": "2cf8548644da067731110525251c6cdcbbd89ed87d37a3ed75af072092041b4e",
+  "Chrome_timeout_seconds_unchanged": 45,
+  "actual_browser_profile_root": "D:\\3.Study\\数据分析\\赛题五\\tmp\\ranking_display_qa_v71_20261007\\round178",
+  "all_original_records_must_be_rendered_without_fixed10000_cap": true
+}
