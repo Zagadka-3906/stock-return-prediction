@@ -1,0 +1,43 @@
+{
+  "status": "passed_three_actual_helper_expression_CPU_fixtures_idle_mutex_transition_race_and_all_binding_restoration",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_publication_dynamic_idle_boundary_controls_v3_20261011.py": "c0f3ee3e2b6a2a494c236fe74a79b2f4d3c3c45ffa2854c83273893329e50508",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\owned_idle_publication_wait_reboot_dynamic_boundary_v3_20261011.py": "46efbfa888b683d678032bbb8c5a14114fd44bbacb0d5186a2a2707c9b2880db",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\owned_idle_publication_wait_reboot_identity_v2_20261011.py": "21fa643371a1b25c0be33f91efa9df8ede8d875cdefd79d7d95c2ad24c8dd335"
+  },
+  "records": [
+    {
+      "case": "unchanged_idle",
+      "events": [
+        "suspend_worker",
+        "suspend_parent"
+      ],
+      "actual_selected_fixture_boundary": "    main (watch_validations_main_v7_20261006.py:71)",
+      "real_process_suspended": false
+    },
+    {
+      "case": "busy_then_mutex_wait",
+      "events": [
+        "suspend_worker",
+        "suspend_parent"
+      ],
+      "actual_selected_fixture_boundary": "guarded (watch_validations_main_safe_v11_20261010.py:24)",
+      "real_process_suspended": false
+    },
+    {
+      "case": "idle_race_moves_to_mutex",
+      "events": [
+        "suspend_worker",
+        "suspend_parent",
+        "resume_parent",
+        "resume_worker",
+        "suspend_worker",
+        "suspend_parent"
+      ],
+      "actual_selected_fixture_boundary": "guarded (watch_validations_main_safe_v11_20261010.py:24)",
+      "real_process_suspended": false
+    }
+  ],
+  "real_processes_suspended": 0,
+  "new_fits_or_scores": 0
+}
