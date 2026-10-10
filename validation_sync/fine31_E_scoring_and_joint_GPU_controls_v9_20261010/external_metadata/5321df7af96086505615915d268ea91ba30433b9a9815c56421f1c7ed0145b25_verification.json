@@ -1,0 +1,138 @@
+{
+  "status": "passed_actual_small32_and_wide2_BF16_micro_fresh_process_restart",
+  "at_local": "2026-10-10T13:32:25",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_neural_BF16_medium2048_recent252forward20huber050_seed09_restart_v1_20261009.py": "978ee7d72d51ff7d393181ffad90525eef30c5c26bc9f74ecb1c6b354778dc5d",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\neural_BF16_medium2048_recent252forward20huber050_seed09_e64_native_v1_20261009.py": "4724e63a699b94b588bfc7f8af82e1a95f800ffd24804cd56daf42f1e5275821",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\train_diverse_backbones_20261003.py": "6524e642f540bc0c79e6296d3c67959330d4126cb248b26f535110c8f05daa4e",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\epoch_durable_neural_checkpoint_adapter_v2_20261007.py": "d7ae73e5f78bdc9506a95d75601ade4f0bc9bfce982c606dfec6f7878957588f",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_wide_GPU_precision3_benchmark_location_20261008.json": "984675309fbc14965d2fabeb55c47f84f5baf82777ad8ee478d73104768d881f",
+    "E:\\赛题五_本机临时\\GPU实测_20261008\\wide16384_micro8192_precision3_v3\\verification.json": "b77303f54e0a719296047b4cf0d0a75b45e3382462bfbf36e1aadd8b8ead1900",
+    "E:\\赛题五_本机临时\\GPU实测_20261008\\wide16384_micro8192_precision3_v3\\frozen_before_actual_GPU_benchmark.json": "3f36866cb99e36dcff5a216a042308ef500e85f14a6ad3127c6281a7c32e7816",
+    "E:\\赛题五_本机临时\\GPU实测_20261008\\wide16384_micro8192_precision3_v3\\past_only_features.npy": "8b15c75254ac08ae05575220959897b0b4ad005ed54191b009766a3c88c252cb",
+    "E:\\赛题五_本机临时\\GPU实测_20261008\\wide16384_micro8192_precision3_v3\\past_only_rank_targets.npy": "b41ea50e8be64bd9246f0bc3d1db026954ae3cc0c4749ab5d8d34a596422bad4",
+    "E:\\赛题五_本机临时\\Recent252Forward20Huber050_past_fixture_v2_20261010\\past_features.npy": "9bead70ec0342fbe4d7b2e834cf52cdd965fa748e68980158f1c69e26e58cd61",
+    "E:\\赛题五_本机临时\\Recent252Forward20Huber050_past_fixture_v2_20261010\\past_return_targets.npy": "1338007b7febe42839dd82e1e58e0f457ccf672c386031c878499abdc342cba0",
+    "E:\\赛题五_本机临时\\Recent252Forward20Huber050_past_fixture_v2_20261010\\verification.json": "1b486ae58a0b5af97237669d09f17c98dc95a972741b6cfdebf9cb5a99e37442",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_Recent252Forward20Huber050_past_fixture_location_v2_20261010.json": "45be03c8c3d74a9b167eca8db731e32464ea291305c5e39badb89ee3d0909ec1",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\Forward20Huber050_independent_targets_loss_gradient_controls_v1_20261010.json": "a93336fdec536b58cd992cfdfb31814ddc8cf610458762aa6d290faa613cf2a2"
+  },
+  "records": [
+    {
+      "case": "small32",
+      "status": "passed_actual_fresh_process_BF16_micro_restart",
+      "configuration": {
+        "kind": "mlp",
+        "target": "y_ret_20mean",
+        "hidden": [
+          128,
+          64
+        ],
+        "epochs": 32,
+        "batch_size": 257,
+        "microbatch_size": 67,
+        "predict_batch_size": 8192,
+        "learning_rate": 0.0005,
+        "weight_decay": 0.0001,
+        "dropout": 0.05,
+        "seed": 20261009,
+        "training_calendar_window": 252,
+        "loss": "Huber",
+        "huber_delta": 0.5,
+        "label_horizon_trading_days": 20,
+        "return_target_scale": 100.0,
+        "return_winsor_quantiles": [
+          0.005,
+          0.995
+        ],
+        "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+        "recipe": "own_mature_BF16_medium2048_recent252forward20huber050_seed09_e64_weighted_accum_v1_20261009"
+      },
+      "training_rows": 1024,
+      "phases": [
+        {
+          "phase": "original",
+          "elapsed_seconds": 23.485000000000582,
+          "actual_child_exit": 0
+        },
+        {
+          "phase": "first",
+          "elapsed_seconds": 22.92199999999866,
+          "actual_child_exit": 0
+        },
+        {
+          "phase": "resumed",
+          "elapsed_seconds": 26.625,
+          "actual_child_exit": 0
+        }
+      ],
+      "all_training_losses_and_all_weight_bits_exact": true,
+      "preprocessing_and_native_prediction_bits_exact": true,
+      "actual_fixed8192_cold_prefix_bits_exact": true,
+      "changed_training_input_checkpoint_rejected": true,
+      "parameter_count": 16897,
+      "actual_checkpoint_sha256": "b92b28fb3eeddf23f6bb4a8aa2d7952976416853389f6edae210cbb68e1002b2"
+    },
+    {
+      "case": "wide2",
+      "status": "passed_actual_fresh_process_BF16_micro_restart",
+      "configuration": {
+        "kind": "mlp",
+        "target": "y_ret_20mean",
+        "hidden": [
+          2048,
+          1024,
+          512
+        ],
+        "epochs": 2,
+        "batch_size": 32768,
+        "microbatch_size": 8192,
+        "predict_batch_size": 8192,
+        "learning_rate": 0.0005,
+        "weight_decay": 0.0001,
+        "dropout": 0.0,
+        "seed": 20261009,
+        "training_calendar_window": 252,
+        "loss": "Huber",
+        "huber_delta": 0.5,
+        "label_horizon_trading_days": 20,
+        "return_target_scale": 100.0,
+        "return_winsor_quantiles": [
+          0.005,
+          0.995
+        ],
+        "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+        "recipe": "own_mature_BF16_medium2048_recent252forward20huber050_seed09_e64_weighted_accum_v1_20261009"
+      },
+      "training_rows": 49153,
+      "phases": [
+        {
+          "phase": "original",
+          "elapsed_seconds": 21.70300000000134,
+          "actual_child_exit": 0
+        },
+        {
+          "phase": "first",
+          "elapsed_seconds": 20.875,
+          "actual_child_exit": 0
+        },
+        {
+          "phase": "resumed",
+          "elapsed_seconds": 21.514999999999418,
+          "actual_child_exit": 0
+        }
+      ],
+      "all_training_losses_and_all_weight_bits_exact": true,
+      "preprocessing_and_native_prediction_bits_exact": true,
+      "actual_fixed8192_cold_prefix_bits_exact": true,
+      "changed_training_input_checkpoint_rejected": true,
+      "parameter_count": 2761729,
+      "actual_checkpoint_sha256": "3fd7d14386fb2b2d27908f312fcc5d795a66d35d5b076cfa94b1c7ed7567611d"
+    }
+  ],
+  "GPU_device_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "actual_new_complete_annual_fits": 0,
+  "new_quality_scores": 0,
+  "wide32_full_annual_equivalence_not_claimed": true,
+  "test_labels_read": false
+}
