@@ -1,0 +1,76 @@
+{
+  "case": 36,
+  "configuration": {
+    "kind": "CDF",
+    "role": "nonflag_valid",
+    "weight": 0.01,
+    "sign": -1.0,
+    "protect_fraction": null,
+    "rank60_weight": 0.875
+  },
+  "recipe": "stock_rank60_rank20_mixed_label_horizon_ID16_cross120_recent252_e64",
+  "metrics": {
+    "ic_mean": 0.12260139873833394,
+    "ic_std": 0.11003112559753203,
+    "icir": 1.1142428842069743,
+    "ic_positive_ratio": 0.8993399339933993,
+    "annual_excess": 0.3619982218647856,
+    "top1_annual_ret": 0.38749197592504303,
+    "mean_turnover": 0.056623591286431706,
+    "final_score": 0.4406529486688397
+  },
+  "connected_final_score": 0.4406529486688397,
+  "score_gain_over_qualified_parent": -0.01075796504585741,
+  "control_sha256": "9fad8e32dce3812dafebdb72db85ee5c03aaaaa2d93a8e8b9160a9a798737691",
+  "prediction_numeric_sha256": "ccc2e7cabbf15ccc837924243e7aac775c44bc0d549a16fe365a37fd564ab0ec",
+  "official_metric_capsule_sha256": "eca8dfe88c0e30f9277f191d66d7f991fe6430122f28102b4eb3ab72328fdcc3",
+  "official_score_cache": {
+    "cache_hit": false,
+    "cache_key": "e4c95f41c932d4bbe5975e8c8e63a60aeb1b1e43b1b9f4df5ac2647a28c4bf2c",
+    "official_metrics_source": "E:\\赛题五_本机临时\\StockRank60Rank20_after183_higher_allocation49_screen_v1_20261011\\identical_official_scores\\e4c95f41c932d4bbe5975e8c8e63a60aeb1b1e43b1b9f4df5ac2647a28c4bf2c.json"
+  },
+  "actual_return_mapping": {
+    "actual_return_mapped_csv_scored": true,
+    "within_day_ranks_bit_identical": true,
+    "boundaries": [
+      {
+        "year": 2020,
+        "mapping_last_label_date": 20191230,
+        "exclusive_cutoff": 20191231,
+        "method": "prevalidation training moments affine fallback"
+      },
+      {
+        "year": 2021,
+        "mapping_last_label_date": 20201230,
+        "exclusive_cutoff": 20201231,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2022,
+        "mapping_last_label_date": 20211230,
+        "exclusive_cutoff": 20211231,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2023,
+        "mapping_last_label_date": 20221229,
+        "exclusive_cutoff": 20221230,
+        "method": "past mature OOF isotonic"
+      },
+      {
+        "year": 2024,
+        "mapping_last_label_date": 20231228,
+        "exclusive_cutoff": 20231229,
+        "method": "past mature OOF isotonic"
+      }
+    ],
+    "test_labels_read": false,
+    "cross_round_identical_official_reuse": {
+      "cross_round_cache_hit": false
+    }
+  },
+  "submission_qualified": false,
+  "future_X_read": false,
+  "test_labels_read": false,
+  "selection_bias_uncorrected": true
+}
