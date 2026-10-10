@@ -1,0 +1,18 @@
+"""Record complete163 delivery, current164, actual73 screening and new training admission."""
+from pathlib import Path
+import sys,time
+A=Path(__file__).resolve().parent;ROOT=A.parent;sys.path[:0]=[str(ROOT),str(A)]
+from run_dependency_queue_v3_20261006 import read,sha,create,owned
+from prepare_protected_tail_pilot76_and_selected_native14_v1_20261010 import allowed
+def main():
+    assert allowed();state=read(A/'optimization_live_progress_v18_20261010.json');best=read(A/'latest_verified_submission_delivery_v2_20261008.json')
+    assert best['selected_round']==163 and best['official_score']==.45122109404260013
+    assert sha(Path(best['output'])/'submission.csv')==best['csv_sha256']
+    receipt=read(A/'github_validation_sync_main_20261005/round163_receipt.json');assert receipt['status']=='pushed_and_remote_head_verified' and receipt['scored_records']==67 and receipt['connected_records']==15795
+    jobs={}
+    for name in ['continuous_fast_reused_frontiers_v18_20261010','actual_fast_optimization_progress_v18_20261010','main_publisher_v11_20261010','actual_user_stop1100_wait_manual_continue_v1_20261011','ReusedNN164Quality19_round164_full_registration_v1_20261009','actual_causal_neural_smoothing73_screen_v1_20261010','actual_priority_Huber163_temporal73_temporal73_main_v10_20261010']:
+        folder=A/'service_owned_workflows_20261006'/name;p=folder/'native_launch.json'
+        if p.is_file():identity=read(p);jobs[name]={'identity':identity,'owned_running':owned(identity),'execution':read(folder/'service_execution.json') if (folder/'service_execution.json').exists() else None}
+    create(A/'actual_optimization_fast_runtime_handoff_v13_20261010.json',{'status':'active_complete163_new_training_and73_screen_not_goal_complete','at_local':time.strftime('%Y-%m-%dT%H:%M:%S'),'deadline_local':read(A/'current_user_runtime_control_20261010.json')['stop_at_local'],'best_fully_qualified':best,'actual_main_receipt':receipt,'jobs':jobs,'live_progress':str(A/'optimization_live_progress_v18_20261010.json'),'current_controller':state['continuous_reused_frontiers'],'actual_smoothing73_progress':state['causal_neural_smoothing73_screen'],'new_TopWeighted_own_training_progress':state['actual_new_TopWeighted_training'],'TopWeighted_loss_CPU_controls':str(A/'TopWeightedHuber_independent_loss_micro_gradient_controls_v1_20261010.json'),'TopWeighted_actual_annual_fits_not_inferred_from_scheduled_plan':True,'storage_cleanup':str(A/'discarded_quantization_budget_csv_cleanup_v1_20261010/verification.json'),'root_git_index_sha256':sha(ROOT/'.git/index'),'required_next_work':['Finish actual164 scores/main before any new GPU consumer','Run own TopWeighted restart small CPU six mature fits full5 native42 and7 prefits sequentially; preserve actual failed evidence','Build dedicated TopWeighted round165 after own bank qualification, apply complete scheme official S selection and original all-six-view QA/main','Complete actual73 smoothing cases, export all original controls/capsules via queued main10 publisher; qualify a winner only if its complete score exceeds latest qualified scheme','If D guard waits again, delete only separately audited completed transient scoring CSVs after main, preserving model states and records','Continue until actual Oct11 11:00; keep goal active until then, no unsupported exhaustion claim'],'global_feasible_direction_exhaustion_proven':False,'compute_resource_boundary_proven':False,'goal_status_to_keep':'active','test_labels_read':False})
+    print('Actual handoff13 saved; complete163, current164, admitted new training,73 actual screen',flush=True)
+if __name__=='__main__':main()
