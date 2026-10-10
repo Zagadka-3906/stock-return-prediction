@@ -1,0 +1,53 @@
+{
+  "status": "compiled_new_rank10_embedding_native_and_independent_decoder_after_actual7_mean10_maturity_CPU_controls",
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank5_embedding_small512_BF16_native_v1_20261010.py": "be123f37c41fe6a9273fbbeed286623aecdfd686e7f47e89e3501d763460f514",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank5_embedding_saved_tensor_decoder_v1_20261010.py": "c872c089b8f6ec61f0187c87da4d6149b2532bc8794a3df2ee529dcee5979cf1",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank10_embedding_small512_BF16_native_v1_20261011.py": "fdaf5280056c854eb38487818162da1ba0999735169961ce7846c18595860d73",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_rank10_embedding_saved_tensor_decoder_v1_20261011.py": "ccc2523ef8c71d7148089f836f48ddd1b6e8bdc37103ab25827b3dfe426f1c04",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\recent252_rank10_mature_population_actual_CPU_controls_v2_20261011.json": "73b505c91c4173bff387714490183de9c67ada0d91e2f15f61798bbb911c45fd",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\forward10_mature_training_labels_v2_20261011.py": "b72f248e4036bb6947074e6d2b29a1480490c8eda5e8e5eac778849c79aa01da",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\recent252_rank10_mature_training_population_v2_20261011.py": "3291f044ef9dee7c9d4ca7cadbdfd9faac56e3d55fea6f9915e8a733f16fe440",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_identity_rank10_own64_prospective_direction_plan_v2_20261011.json": "6bc2ddc23b3b92839011fabf915aa9a51a368704b9469bc106ae87f942134625"
+  },
+  "configuration": {
+    "kind": "mlp",
+    "target": "y_rank_10mean",
+    "hidden": [
+      512,
+      256,
+      128
+    ],
+    "epochs": 64,
+    "batch_size": 32768,
+    "microbatch_size": 8192,
+    "predict_batch_size": 8192,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "dropout": 0.0,
+    "seed": 20261009,
+    "raw_feature_count": 63,
+    "encoded_feature_count": 121,
+    "numeric_feature_count": 120,
+    "stock_embedding_dim": 16,
+    "stock_vocabulary_size": 4651,
+    "feature_encoder_module": "daily_cross_sectional_feature_encoder120_v1_20261010",
+    "label_horizon_trading_days": 10,
+    "training_calendar_window": 252,
+    "loss": "Huber",
+    "huber_delta": 0.1,
+    "return_target_scale": 1.0,
+    "return_winsor_quantiles": [
+      0.005,
+      0.995
+    ],
+    "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+    "recipe": "own_mature_stock_rank10_embedding16_cross120_rank10mean_recent252_small512_BF16_e64_v1_20261011"
+  },
+  "actual_mean10_maturity_CPU_controls": 7,
+  "small_centering_CPU_array_exact": true,
+  "new_native_fits": 0,
+  "new_quality_scores": 0,
+  "actual_mature_fixture_and_GPU_restart_and_training_not_yet_dispatched": true,
+  "test_labels_read": false
+}
