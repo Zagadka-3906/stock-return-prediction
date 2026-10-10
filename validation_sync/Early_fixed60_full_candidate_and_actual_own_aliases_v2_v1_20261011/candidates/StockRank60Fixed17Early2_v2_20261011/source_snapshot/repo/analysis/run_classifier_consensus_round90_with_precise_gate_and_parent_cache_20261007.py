@@ -1,0 +1,134 @@
+"""Prospective original138-case R90 bridge: strict R89 closure and bounded exact caches."""
+from pathlib import Path
+import runpy
+import sys
+import time
+
+ROOT = Path(__file__).resolve().parents[1]
+A = ROOT / 'analysis'
+sys.path[:0] = [str(ROOT), str(A), str(A / 'connected_validation_20261002')]
+from run_dependency_queue_v3_20261006 import read, sha, create, owned
+
+
+def closed(name):
+    service = A / 'service_owned_workflows_20261006' / name
+    while not (service / 'native_launch.json').exists() or owned(read(service / 'native_launch.json')):
+        time.sleep(15)
+    assert read(service / 'service_execution.json')['status'] == 'passed', name
+
+
+def main():
+    driver, run_path, *arguments = sys.argv[1:]
+    driver, run_path = Path(driver).resolve(), Path(run_path).resolve()
+    assert driver == A / 'run_training_round90_v3_pipeline.py'
+    run = read(run_path)
+    assert run['round'] == 90 and run['original_driver'] == str(driver) and run['original_arguments'] == arguments
+    assert not (A / 'optimization_20261003_r90/protocol.json').exists()
+    for name in ('classifier_consensus_round89_status_recovery_main_publication',
+                 'CPU_MLP44_round110_full_registration', 'parent_graph_rank_cache_preflight_v3'):
+        closed(name)
+    assert read(A / 'optimization_20261003_r110/full_registration_execution.json')['status'] == 'passed'
+    assert read(A / 'github_validation_sync_main_20261005/round110_receipt.json')['actual_full_QA_version'] == 21
+    proof = A / 'parent_graph_rank_cache_preflight_v3_20261007/verification.json'
+    assert read(proof)['status'] == 'passed_actual_R88_parent5635800_and_empty_cache_cold80_260_975_bits'
+    for path, digest in run['input_sha256'].items():
+        assert sha(path) == digest, path
+    import qualified_round_recovery_evidence_v4_20261007 as qualification4
+    import qualified_round_recovery_evidence_v3_20261006 as qualification3
+    import qualified_round_recovery_evidence_v2_20261005 as qualification2
+    from win32_read_handle_hash_cache_with_filename_v2_20261006 import LockedReadHashCache
+    old_qualification = qualification3.complete_round_evidence
+    # V4 captures its old delegate when imported above, before this replacement.
+    qualification3.complete_round_evidence = qualification4.complete_round_evidence
+    old_caches = [(m, m.LockedReadHashCache) for m in (qualification2, qualification3)]
+    for m, _ in old_caches:
+        m.LockedReadHashCache = LockedReadHashCache
+    assert qualification4.complete_round_evidence(89) is not None
+    from classifier_consensus_status_gate_recovery_runtime_20261007 import install as install_gate
+    restore_gate = install_gate()
+    import frozen_provenance_execution_scope_20261004 as provenance
+    old_cache, original_factory = provenance.LockedReadHashCache, provenance.FrozenProvenanceExecutionScope
+    provenance.LockedReadHashCache = LockedReadHashCache
+    import exact_rank_cache_official_worker_adapter_20261006 as rank
+    import classifier_consensus_recovery_official_speed_adapter_20261007 as speed
+    original_rank_install = rank.install
+    def combined_install():
+        rank.install = original_rank_install
+        try:
+            return speed.install()
+        finally:
+            rank.install = combined_install
+    rank.install = combined_install
+    from exact_daily_rank_memoization_20261006 import install as install_parent_cache
+    cache, restore_parent_cache = install_parent_cache(maximum_bytes=2**30)
+    additions = [Path(__file__), run_path, proof,
+        A / 'qualified_round_recovery_evidence_v4_20261007.py',
+        A / 'classifier_consensus_status_gate_recovery_runtime_20261007.py',
+        A / 'classifier_consensus_status_gate_recovery_preflight_20261007/verification.json',
+        A / 'classifier_consensus_recovery_official_speed_adapter_20261007.py',
+        A / 'official_date_index_dataframe_adapter_20261007.py',
+        A / 'rank_date_index_combined_worker_preflight_20261007/verification.json',
+        A / 'exact_daily_rank_memoization_20261006.py',
+        A / 'win32_read_handle_hash_cache_with_filename_v2_20261006.py',
+        A / 'github_validation_sync_main_20261005/round89_receipt.json',
+        A / 'github_validation_sync_main_20261005/round110_receipt.json',
+        A / 'optimization_20261003_r89/provenance_scope_execution_status_recovery_20261007.json',
+        *[Path(p) for p in run['input_sha256']]]
+    routed = []
+    def extended(module, extra_sources, metadata, analysis_root):
+        original_dump, context = module.dump, module.Context
+        original_init = context.__init__
+        def init(instance, *args, **kwargs):
+            original_init(instance, *args, **kwargs)
+            speed.install_context(instance)
+        context.__init__ = init
+        def dump(path, value, *args, **kwargs):
+            if Path(path).resolve() == (module.OUT / 'provenance_scope_execution.json').resolve():
+                count = sum(len(read(p)['results']) for p in module.OUT.glob('wave*_results.json'))
+                if value['status'] == 'passed':
+                    assert count == 138
+                value = {**value, 'actual_original138_quality_records': count,
+                    'original_driver_scope_metadata_new_quality_scores': value.get('new_quality_scores'),
+                    'strict_actual_R89_alternate_closed_scope_and_main_QA4_required': True,
+                    'original138_case_math_parameters_and_samples_unchanged': True,
+                    'actual_parent_rank_cache_statistics': cache.statistics(),
+                    'Windows_read_share_only_raw_handles_full_initial_and_final_hash': True}
+            return original_dump(path, value, *args, **kwargs)
+        module.dump = dump
+        routed.append((module, original_dump, context, original_init))
+        return original_factory(module, list(dict.fromkeys([*extra_sources, *additions])),
+            {**metadata, 'actual_precise_consensus_gate_required': True,
+                'R89_actual_complete_full_QA4_and_main_required': True,
+                'MLP44_full_round110_QA21_and_main_closed_before_this_writer': True,
+                'actual_R88_full_and_empty_rank_cache_cold80_260_975_proof': str(proof),
+                'parent_rank_cache_maximum_bytes': 2**30, 'worker_rank_cache_maximum_bytes': 2**30,
+                'all_original138_scientific_cases_retained': True}, analysis_root)
+    provenance.FrozenProvenanceExecutionScope = extended
+    original_args = sys.argv
+    try:
+        sys.argv = [str(A / 'run_recovery_qualified_workflow_with_exact_rank_cache_v2_20261006.py'),
+            str(driver), str(run_path), *arguments]
+        runpy.run_path(sys.argv[0], run_name='__main__')
+        actual = read(A / 'optimization_20261003_r90/provenance_scope_execution.json')
+        assert actual['status'] == 'passed' and actual['actual_original138_quality_records'] == 138
+        create(run_path.parent / 'parent_rank_cache_actual138_execution.json', {
+            'status': 'passed_actual_original138_science_candidate_and_full_QA_with_exact_parent_cache',
+            'actual_parent_rank_cache_statistics': cache.statistics(), 'new_native_fits': 0,
+            'actual_official_records': 138, 'main_publication_still_required': True, 'test_labels_read': False})
+    finally:
+        sys.argv = original_args
+        rank.original.shutdown()
+        provenance.LockedReadHashCache, provenance.FrozenProvenanceExecutionScope = old_cache, original_factory
+        rank.install = original_rank_install
+        for module, old_dump, context, old_init in routed:
+            module.dump, context.__init__ = old_dump, old_init
+        restore_parent_cache()
+        restore_gate()
+        qualification3.complete_round_evidence = old_qualification
+        for m, old_class in old_caches:
+            m.LockedReadHashCache = old_class
+        qualification4.close()
+
+
+if __name__ == '__main__':
+    main()
