@@ -1,0 +1,124 @@
+{
+  "status": "passed_actual133_selected_candidate_full_graph_and_metrics_and_source_bytes",
+  "source_candidate": "D:\\3.Study\\数据分析\\赛题五\\candidates\\Frontier133172_v1_20261010",
+  "source_release": "D:\\3.Study\\数据分析\\赛题五\\analysis\\Frontier133172_selected_release_v1_20261010",
+  "selected_configuration": {
+    "kind": "official_Top_protection_v2",
+    "role": "nonflag_valid",
+    "weight": 0.064,
+    "sign": 1.0,
+    "protect_fraction": 0.15,
+    "stage_kind": "cross120_return1d_direct",
+    "anchor_round": 169,
+    "model": "rank_MLP2048_BF16_Cross120RecentReturn252Huber050_seed09_e64",
+    "recipe": "cross120recent252returnhuber050",
+    "codec": "official_Top_protection_v2",
+    "decay": null,
+    "first2020_active": true
+  },
+  "best": {
+    "case": 70,
+    "configuration": {
+      "kind": "official_Top_protection_v2",
+      "role": "nonflag_valid",
+      "weight": 0.064,
+      "sign": 1.0,
+      "protect_fraction": 0.15,
+      "stage_kind": "cross120_return1d_direct",
+      "anchor_round": 169,
+      "model": "rank_MLP2048_BF16_Cross120RecentReturn252Huber050_seed09_e64",
+      "recipe": "cross120recent252returnhuber050",
+      "codec": "official_Top_protection_v2",
+      "decay": null,
+      "first2020_active": true
+    },
+    "recipe": "cross120recent252returnhuber050",
+    "metrics": {
+      "ic_mean": 0.12263768225996949,
+      "ic_std": 0.11016589296691943,
+      "icir": 1.1132091698906763,
+      "ic_positive_ratio": 0.8976897689768977,
+      "annual_excess": 0.3732994553325664,
+      "top1_annual_ret": 0.39879320939282387,
+      "mean_turnover": 0.03233287915326493,
+      "final_score": 0.45134504575777823
+    },
+    "connected_final_score": 0.45134504575777823,
+    "score_gain_over_qualified_parent": 3.880810368306342e-05,
+    "control_sha256": "26c9dac503dd31394231dd3ed63e6d5ac05544fcbe80031ccf905c5922fb4423",
+    "prediction_numeric_sha256": "2fa26bf54e714559476ce074fbc238d2a148ded8e15d9937e1b0bd19998a897a",
+    "official_metric_capsule_sha256": "0f071971ec4b95dd3976aefdf1ad70a7a9ea23970297705e3a35bc517a214439",
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "7bd78c4771bd646c72b57f60444e5ee961fe5b16d2b3c8ee6f3b288e539e49f9",
+      "official_metrics_source": "E:\\赛题五_本机临时\\Cross120RecentReturn252_after169_high_impact81_screen_v1_20261010\\identical_official_scores\\7bd78c4771bd646c72b57f60444e5ee961fe5b16d2b3c8ee6f3b288e539e49f9.json"
+    },
+    "actual_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "submission_qualified": false,
+    "future_X_read": false,
+    "test_labels_read": false,
+    "selection_bias_uncorrected": true,
+    "family": "Cross120RecentReturn252_after169_high_impact81",
+    "original_screen_case": 67,
+    "original_screen_record": "E:\\赛题五_本机临时\\Cross120RecentReturn252_after169_high_impact81_screen_v1_20261010\\case067_official.json",
+    "prediction_numeric_bytes_sha256": "2fa26bf54e714559476ce074fbc238d2a148ded8e15d9937e1b0bd19998a897a",
+    "expected_unique_native_models": 31,
+    "ordered_native_components": [
+      "rank_MLP2048_BF16_Cross120RecentReturn252Huber050_seed09_e64"
+    ],
+    "native_bank_components": [
+      {
+        "name": "rank_MLP2048_BF16_Cross120RecentReturn252Huber050_seed09_e64",
+        "recipe": "cross120recent252returnhuber050",
+        "bank": "E:\\赛题五_本机临时\\neural_BF16_medium2048_cross120recent252returnhuber050_seed09_e64_bank6_v1_20261009",
+        "sha256": "55f89446758d78f6bbbdd6efed887fda99f7029bd39d9f97e074b283fc24a8ce"
+      }
+    ],
+    "qualified_anchor_all8_metrics_exact": false
+  },
+  "actual_saved_native_models": 31,
+  "new_inference_claimed": true,
+  "pre_inference_source_snapshot": "E:\\赛题五_本机临时\\第172轮_20261010\\pre_inference_source_freeze_v1",
+  "test_labels_read": false,
+  "source_manifest_sha256": "0d4a81b1abe9ef52cb159f6c6ed5a36738ea66bffd4a65afd97a38fd0a4cd838",
+  "sealed_candidate_complete": true
+}
