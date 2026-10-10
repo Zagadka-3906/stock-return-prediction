@@ -1,0 +1,80 @@
+{
+  "model_year": 2020,
+  "calendar_year": 2020,
+  "historical_source_year": 2020,
+  "sign": 1.0,
+  "full": {
+    "rows": 13950,
+    "controls": [
+      {
+        "name": "rank_MLP512_StockEmbedding16_Cross120Recent252ReturnHuber050_seed09_e24",
+        "sha256": "543bca073f3bfaed2ab684b3089294fd2b179b926913cd09410322034eb82fe4",
+        "recipe": "stock_embedding16_cross120_return1d_recent252_small512_BF16_e24",
+        "reload_exact": true,
+        "independent_saved_tensor_forward_exact": true,
+        "rows": 13950,
+        "feature_count": 121,
+        "numeric_feature_count": 120,
+        "fixed8192_padded_FP32_inference": true,
+        "vocabulary_fitted_only_mature_training_rows": true
+      },
+      {
+        "name": "rank_MLP512_StockRankEmbedding16_Cross120Recent252RankHuber010_seed09_e24",
+        "sha256": "cbd2cbada2889f34df14a7ceef8d466138dbce512f0d278b9374753680accfaf",
+        "recipe": "stock_rank_embedding16_cross120_rank1d_recent252_small512_BF16_e24",
+        "reload_exact": true,
+        "independent_saved_tensor_forward_exact": true,
+        "rows": 13950,
+        "feature_count": 121,
+        "numeric_feature_count": 120,
+        "fixed8192_padded_FP32_inference": true,
+        "vocabulary_fitted_only_mature_training_rows": true
+      }
+    ],
+    "native_reload_independent_tensor_and_Pandas_stage_bits_exact": true,
+    "mean_weight": 0.25,
+    "return_embedding_first_rank_embedding_second": true,
+    "complete_selected_parent_executed_before_new_stage": true,
+    "labels_read_by_stage": false,
+    "prediction_numeric_sha256": "03b37058a908decf05c271161a475bcb824c827930e57999671e2fd382028ad2",
+    "selected44_original_parent_round": 173
+  },
+  "cold": {
+    "rows": 4650,
+    "controls": [
+      {
+        "name": "rank_MLP512_StockEmbedding16_Cross120Recent252ReturnHuber050_seed09_e24",
+        "sha256": "543bca073f3bfaed2ab684b3089294fd2b179b926913cd09410322034eb82fe4",
+        "recipe": "stock_embedding16_cross120_return1d_recent252_small512_BF16_e24",
+        "reload_exact": true,
+        "independent_saved_tensor_forward_exact": true,
+        "rows": 4650,
+        "feature_count": 121,
+        "numeric_feature_count": 120,
+        "fixed8192_padded_FP32_inference": true,
+        "vocabulary_fitted_only_mature_training_rows": true
+      },
+      {
+        "name": "rank_MLP512_StockRankEmbedding16_Cross120Recent252RankHuber010_seed09_e24",
+        "sha256": "cbd2cbada2889f34df14a7ceef8d466138dbce512f0d278b9374753680accfaf",
+        "recipe": "stock_rank_embedding16_cross120_rank1d_recent252_small512_BF16_e24",
+        "reload_exact": true,
+        "independent_saved_tensor_forward_exact": true,
+        "rows": 4650,
+        "feature_count": 121,
+        "numeric_feature_count": 120,
+        "fixed8192_padded_FP32_inference": true,
+        "vocabulary_fitted_only_mature_training_rows": true
+      }
+    ],
+    "native_reload_independent_tensor_and_Pandas_stage_bits_exact": true,
+    "mean_weight": 0.25,
+    "return_embedding_first_rank_embedding_second": true,
+    "complete_selected_parent_executed_before_new_stage": true,
+    "labels_read_by_stage": false,
+    "prediction_numeric_sha256": "91b3fa0392ddae0f9b02642b0d2b80b746394695fdd90309f08e5b482ab19632",
+    "selected44_original_parent_round": 173
+  },
+  "whole_day_prefix_bits_exact": true,
+  "actual_future_X_read": false
+}
