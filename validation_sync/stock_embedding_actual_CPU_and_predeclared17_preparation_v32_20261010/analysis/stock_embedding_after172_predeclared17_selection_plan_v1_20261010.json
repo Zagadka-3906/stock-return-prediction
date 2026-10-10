@@ -1,0 +1,175 @@
+{
+  "status": "predeclared_before_any_stock_embedding_quality_scores",
+  "cases": [
+    {
+      "kind": "anchor172",
+      "role": null,
+      "weight": 0.0,
+      "sign": 1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.00025,
+      "sign": 1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.001,
+      "sign": 1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.004,
+      "sign": 1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.016,
+      "sign": 1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.00025,
+      "sign": -1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.001,
+      "sign": -1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.004,
+      "sign": -1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.016,
+      "sign": -1.0,
+      "protect_fraction": null
+    },
+    {
+      "kind": "valid_pool_protection_v1",
+      "role": "nonflag_valid",
+      "weight": 0.004,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    {
+      "kind": "valid_pool_protection_v1",
+      "role": "nonflag_valid",
+      "weight": 0.016,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    {
+      "kind": "valid_pool_protection_v1",
+      "role": "nonflag_valid",
+      "weight": 0.064,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    {
+      "kind": "valid_pool_protection_v1",
+      "role": "nonflag_valid",
+      "weight": 0.25,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    {
+      "kind": "official_Top_protection_v2",
+      "role": "nonflag_valid",
+      "weight": 0.004,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    {
+      "kind": "official_Top_protection_v2",
+      "role": "nonflag_valid",
+      "weight": 0.016,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    {
+      "kind": "official_Top_protection_v2",
+      "role": "nonflag_valid",
+      "weight": 0.064,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    },
+    {
+      "kind": "official_Top_protection_v2",
+      "role": "nonflag_valid",
+      "weight": 0.25,
+      "sign": 1.0,
+      "protect_fraction": 0.15
+    }
+  ],
+  "configuration": {
+    "kind": "mlp",
+    "target": "y_ret_1d",
+    "hidden": [
+      512,
+      256,
+      128
+    ],
+    "epochs": 24,
+    "batch_size": 32768,
+    "microbatch_size": 8192,
+    "predict_batch_size": 8192,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "dropout": 0.0,
+    "seed": 20261009,
+    "raw_feature_count": 63,
+    "encoded_feature_count": 121,
+    "numeric_feature_count": 120,
+    "stock_embedding_dim": 16,
+    "stock_vocabulary_size": 4651,
+    "feature_encoder_module": "daily_cross_sectional_feature_encoder120_v1_20261010",
+    "training_calendar_window": 252,
+    "loss": "Huber",
+    "huber_delta": 0.5,
+    "return_target_scale": 20.0,
+    "return_winsor_quantiles": [
+      0.005,
+      0.995
+    ],
+    "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+    "recipe": "own_mature_stock_embedding16_cross120_return1d_recent252_small512_BF16_e24_v1_20261010"
+  },
+  "expected_scores": 17,
+  "nonidentity_full_controls": 16,
+  "nonidentity_prefix_controls": 48,
+  "fully_qualified_parent_round": 172,
+  "physical_models_addition": 1,
+  "all_training_only_and_mature": true,
+  "future_X_for_selection": false,
+  "test_labels_read": false,
+  "actual_GPU_restart_training_and_selected_stage_pending": true,
+  "input_sha256": {
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\prepare_stock_embedding_CPU_output_and_screen17_v2_20261010.py": "fecec13fb262cad1659022d5672dc75f22f78af3882f155c7458b66616342fad",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_stock_embedding_mature_fixture_and_CPU_v1_20261010.py": "0cdd38ae4778702d89e2df5e2ad64f0c2476d01caa4623bc6457d2f9683b6fbd",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\verify_stock_embedding_mature_fixture_and_CPU_v2_20261010.py": "23d6271168369e370647268c180ee48721a00a9a33b0a93030db0076f0b93a74",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_Cross120RecentReturn252_after169_high_impact81_screen_v2_20261010.py": "965fc067df83022f6af6fcca454213d05ad05efc51e783f1bc7c50f3ac4368b1",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\run_stock_embedding_after172_high_impact17_screen_v1_20261010.py": "832d2bdc7fb4bf6842b346ad4183ecd7083d3c7ab4708d66ee5e3d953d99f6f8",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_embedding_small512_sources_admission_v1_20261010.json": "5ffa69bf37b4f1a7754cf3b5db3aae69c0d1609de91515632c54531f74ab34f5",
+    "D:\\3.Study\\数据分析\\赛题五\\analysis\\stock_embedding_actual_full5_routes_admission_v2_20261010.json": "fdce57d726342f48b43f00870dfebf5ff968af1d5aac346ac1f964567a26f7e7"
+  }
+}
