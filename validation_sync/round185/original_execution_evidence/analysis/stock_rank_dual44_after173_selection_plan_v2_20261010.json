@@ -1,0 +1,45 @@
+{
+  "status": "declared44_existing_frozen_cases_and_qualified170_173_anchors_before_dual25_scores",
+  "expected_records": 44,
+  "fully_qualified_anchors": [
+    170,
+    173
+  ],
+  "families": [
+    {
+      "folder": "StockRankEmbeddingSmall512_after170_high_impact17_screen_v1_20261010",
+      "base_round": 170,
+      "records": 17,
+      "stage_kind": "stock_rank_embedding_rank1d_direct",
+      "recipes": [
+        "stock_rank_embedding16_cross120_rank1d_recent252_small512_BF16_e24"
+      ],
+      "recipe": "stock_rank_embedding16_cross120_rank1d_recent252_small512_BF16_e24",
+      "actual_service": "actual_stock_rank_embedding_after170_fast17_screen_v1_20261010",
+      "publisher": "actual_stock_rank_embedding_after170_completion_main_v55_20261010",
+      "main_receipt": "stock_rank_embedding17_after170_completion_main_receipt_v55_20261010.json"
+    },
+    {
+      "folder": "StockDualEmbedding_after173_high_impact25_screen_v1_20261010",
+      "base_round": 173,
+      "records": 25,
+      "stage_kind": "stock_return_rank_embedding_consensus",
+      "recipes": [
+        "stock_embedding16_cross120_return1d_recent252_small512_BF16_e24",
+        "stock_rank_embedding16_cross120_rank1d_recent252_small512_BF16_e24"
+      ],
+      "recipe": "stock_return1d_rank1d_embedding_daily_rank_consensus",
+      "actual_service": "actual_stock_dual_embedding_after173_high_impact25_screen_v1_20261010",
+      "publisher": "actual_stock_dual_embedding_after173_completion_main_v57_20261010",
+      "main_receipt": "stock_dual_embedding25_after173_completion_main_receipt_v57_20261010.json"
+    }
+  ],
+  "actual_nonidentity_full_controls_required": 40,
+  "actual_nonidentity_prefix_controls_required": 120,
+  "selection": "highest_connected_official_S_then_unique_physical_models_then_absolute_weight_then_case",
+  "partial_rank17_TRAIN_scores_already_seen_without_changing_cases": true,
+  "new_quality_scores": 0,
+  "future_X_read": false,
+  "test_labels_read": false,
+  "full174_pipeline_not_yet_built": true
+}
