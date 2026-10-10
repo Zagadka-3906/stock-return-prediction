@@ -1,0 +1,53 @@
+{
+  "case": "small32",
+  "status": "passed_actual_fresh_process_BF16_micro_restart",
+  "configuration": {
+    "kind": "mlp",
+    "target": "y_ret_1d",
+    "hidden": [
+      128,
+      64
+    ],
+    "epochs": 32,
+    "batch_size": 257,
+    "microbatch_size": 67,
+    "predict_batch_size": 8192,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "dropout": 0.05,
+    "seed": 20261009,
+    "loss": "Huber",
+    "huber_delta": 0.5,
+    "return_target_scale": 20.0,
+    "return_winsor_quantiles": [
+      0.005,
+      0.995
+    ],
+    "training_precision": "BF16_autocast_FP32_loss_and_AdamW",
+    "recipe": "own_mature_BF16_medium2048_returnhuber050_seed09_e64_weighted_accum_v1_20261009"
+  },
+  "training_rows": 1024,
+  "phases": [
+    {
+      "phase": "original",
+      "elapsed_seconds": 22.89099999999962,
+      "actual_child_exit": 0
+    },
+    {
+      "phase": "first",
+      "elapsed_seconds": 21.67199999999866,
+      "actual_child_exit": 0
+    },
+    {
+      "phase": "resumed",
+      "elapsed_seconds": 25.2970000000023,
+      "actual_child_exit": 0
+    }
+  ],
+  "all_training_losses_and_all_weight_bits_exact": true,
+  "preprocessing_and_native_prediction_bits_exact": true,
+  "actual_fixed8192_cold_prefix_bits_exact": true,
+  "changed_training_input_checkpoint_rejected": true,
+  "parameter_count": 16897,
+  "actual_checkpoint_sha256": "5593b01fc291dab3a386f0330e274bc3d114bb3216a8884b691498ceef48c518"
+}
