@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_Recent252Forward5_after168_65_completion_v25_20261010.py", line 79, in <module>
+    os.environ['GIT_CONFIG_COUNT']=str(count+2);main(args.phase)
+                                                ^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\publish_Recent252Forward5_after168_65_completion_v25_20261010.py", line 19, in main
+    sources.append(A/pointer);sources.extend(Path(read(A/pointer)['output']).glob('*.json'))
+                                                  ^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_dependency_queue_v3_20261006.py", line 19, in read
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\esesl\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\3.Study\\数据分析\\赛题五\\analysis\\actual_BF16Recent252Forward5Huber050171_full5_independent_location_v1_20261009.json'
