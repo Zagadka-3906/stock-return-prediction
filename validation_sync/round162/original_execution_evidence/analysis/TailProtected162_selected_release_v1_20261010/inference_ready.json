@@ -1,0 +1,114 @@
+{
+  "status": "passed_actual_selected_new_TailProtected162_candidate_inference",
+  "source_candidate": "D:\\3.Study\\数据分析\\赛题五\\candidates\\TailProtected162_v1_20261010",
+  "source_release": "D:\\3.Study\\数据分析\\赛题五\\analysis\\TailProtected162_selected_release_v1_20261010",
+  "selected_configuration": {
+    "recipe": "seed09",
+    "sign": 1.0,
+    "weight": 0.016,
+    "protect_fraction": 0.25,
+    "codec": "valid_pool_protection_v1",
+    "anchor_round": 157,
+    "role": "nonflag_valid",
+    "universe": "all_current_raw_forecasts",
+    "model": "rank_MLP2048_BF16_seed09_e64"
+  },
+  "best": {
+    "case": 11,
+    "configuration": {
+      "recipe": "seed09",
+      "sign": 1.0,
+      "weight": 0.016,
+      "protect_fraction": 0.25,
+      "codec": "valid_pool_protection_v1",
+      "anchor_round": 157,
+      "role": "nonflag_valid",
+      "universe": "all_current_raw_forecasts",
+      "model": "rank_MLP2048_BF16_seed09_e64"
+    },
+    "metrics": {
+      "ic_mean": 0.12228120451008628,
+      "ic_std": 0.10972892330913174,
+      "icir": 1.114393551147785,
+      "ic_positive_ratio": 0.8952145214521452,
+      "annual_excess": 0.3732994553325664,
+      "top1_annual_ret": 0.39879320939282387,
+      "mean_turnover": 0.03233287915326493,
+      "final_score": 0.45120245465782494
+    },
+    "connected_final_score": 0.45120245465782494,
+    "score_gain_over_qualified_parent": 1.017367827760296e-05,
+    "control_sha256": "d29f5de3d1938aab94d60ef9c8d848bab3d1f308eca008e60273a2ba912e4c49",
+    "prediction_numeric_sha256": "5797817ad61d296f4485e203c5862abe276e239f88ece9991b552cf9c61e5263",
+    "official_metric_capsule_sha256": "bedff2f22bccfa32bea10cdba8831950b239abd8b9835891ecca9c69234a3169",
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "edeaaaeb4c86c1cbb722813e993f4df7705d903ac79e75f64db3712e73e81cfb",
+      "official_metrics_source": "D:\\3.Study\\数据分析\\赛题五\\analysis\\protected_upper_tail_screen_D_scoring_v1_20261010\\identical_official_scores\\edeaaaeb4c86c1cbb722813e993f4df7705d903ac79e75f64db3712e73e81cfb.json"
+    },
+    "actual_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "full_independent_and_three_cold_prefixes_passed": true,
+    "submission_qualified": false,
+    "future_X_read": false,
+    "test_labels_read": false,
+    "annual_excess_exactly_matches_parent": false,
+    "turnover_exactly_matches_parent": true,
+    "selection_bias_uncorrected": true,
+    "new_scheme_native_replay_freeze_and_full_registration_required_before_adoption": true,
+    "original_screen_record": "E:\\赛题五_本机临时\\protected_upper_tail_screen_v1_20261010\\case009_official.json",
+    "original_screen_case": 9,
+    "prediction_numeric_bytes_sha256": "5797817ad61d296f4485e203c5862abe276e239f88ece9991b552cf9c61e5263",
+    "expected_unique_native_models": 26,
+    "qualified_anchor_all8_metrics_exact": false,
+    "ordered_native_components": [
+      "rank_MLP2048_BF16_seed09_e64"
+    ],
+    "whole_complete_parent_branches_preserved_before_new_stage": true,
+    "invalid_and_declared_unselected_raw_bits_preserved": true,
+    "actual_cold80_260_975_bits_exact": true,
+    "first2020_active": true
+  },
+  "actual_saved_native_models": 26,
+  "new_inference_claimed": true,
+  "pre_inference_source_snapshot": "E:\\赛题五_本机临时\\第162轮_20261010\\pre_inference_source_freeze_v1",
+  "test_labels_read": false
+}
