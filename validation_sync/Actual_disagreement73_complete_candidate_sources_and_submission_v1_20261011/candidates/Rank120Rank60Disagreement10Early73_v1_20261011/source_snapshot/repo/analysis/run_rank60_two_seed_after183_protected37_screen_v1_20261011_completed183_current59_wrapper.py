@@ -1,2 +1,0 @@
-from route_raw_science_completed183_current59_v1_20261011 import execute
-execute('run_rank60_two_seed_after183_protected37_screen_v1_20261011.py')

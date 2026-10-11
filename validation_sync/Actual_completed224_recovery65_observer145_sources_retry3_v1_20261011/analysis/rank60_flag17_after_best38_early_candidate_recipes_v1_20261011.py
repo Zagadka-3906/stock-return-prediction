@@ -1,1 +1,0 @@
-RECIPES={'stock_rank60_embedding16_cross120_rank60mean_recent252_small512_BF16_e64':('rank_MLP512_StockRank60FlagOnly_ID16_Cross120_seed20261009_e64','stock_rank60_embedding_small512_BF16_bank6_v1_20261011')}

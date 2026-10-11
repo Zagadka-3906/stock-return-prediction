@@ -21,6 +21,8 @@
 
 `validation_sync/`是Git发布工作副本中的主要归档目录，本机研究目录可能没有检出所有归档文件。GitHub以 `main`为唯一工作分支。
 
+2026-10-11已整理重复导出与旧累计排名展示。保留文件、历史路径查询及存储影响见[仓库整理说明](REPOSITORY_CLEANUP.md)与[验证归档导航](../validation_sync/README.md)。旧发布manifest按对应历史提交读取。
+
 ## 一份验证记录包含什么
 
 常见文件的职责：

@@ -1,2 +1,0 @@
-from route_actual189_evidence_failed_descendants61_v1_20261011 import execute
-if __name__=='__main__':execute('run_Rank10Rank20Higher193_full_registration_v4_20261011.py')
