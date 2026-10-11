@@ -1,0 +1,1 @@
+RECIPES={'stock_rank120medium_embedding16_cross120_rank120mean_recent252_medium2048_BF16_e64':('rank_MLP2048_StockRank120Medium_ID16_Cross120_seed20261009_e64','stock_rank120medium_embedding_medium2048_BF16_bank6_v1_20261011')}
