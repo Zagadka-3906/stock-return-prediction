@@ -1,8 +1,8 @@
 # 历史实验源码索引
 
-本目录保留模型研究与验证源码。每一轮实验曾在独立子目录中保存冻结协议、预测缓存、评分和审计结果；本次整理将这些运行产物移至项目目录外的本地历史归档，避免研究源码与大量中间文件混在一起。
+本目录保留早期模型研究、验证和诊断源码。各轮运行产物分布于本地历史归档、研究目录及GitHub的 `validation_sync/`，部分弃用权重和缓存已经清理。这里是研究路径索引，最新37模型方案的后续流程主要在 `analysis/`。
 
-当前可直接使用的主流程是根目录的 `run.py`、`train_ensemble.py` 和 `predict.py`。本目录记录研究路径，其中许多程序依赖先前轮次的结果，不宜按文件名逐个执行。
+根目录 `run.py`提供早期LightGBM基准和特征构建；`train_ensemble.py`、`predict.py`运行67特征、16种子XGBoost基准。这些入口不生成最新高分候选。本目录许多程序依赖先前轮次的结果，不宜按文件名逐个执行。最新方法、运行条件和交付状态见[模型与验证](../docs/METHODS.md)、[使用与复现](../docs/GETTING_STARTED.md)及[成果与交付](../docs/RESULTS.md)。
 
 ## 研究主题
 
@@ -28,4 +28,4 @@
 3. 部分实验会校验历史源文件哈希。整理后源码和路径已经变化，复核原协议时应在原始归档副本中执行；开展新实验时应创建新的协议和运行目录。
 4. 不覆盖旧协议、结果或保存模型。历史收益标签用于回顾诊断；当前训练和预测入口不把它们作为模型输入。
 
-核心数值逻辑已提取到 `src/research_stats.py`、`src/postprocessing.py`、`src/peer_features.py`、`src/pooled_target.py`，当前方案的配置在 `config/`。可浏览的成果摘要集中于 [results/](../results/)，项目整体说明见 [README](../README.md)。
+部分通用数值逻辑已提取到 `src/research_stats.py`、`src/postprocessing.py`、`src/peer_features.py`、`src/pooled_target.py`；`config/`保存固定历史基准配置，最新候选有单独冻结协议。可浏览的历史成果摘要在 [results/](../results/)，后续已完成验证归档在 [validation_sync/](../validation_sync/)，项目整体说明见 [README](../README.md)。
