@@ -1,0 +1,2 @@
+from route_current_parents71_ancestor_guard83_v1_20261011 import execute
+if __name__=="__main__":execute('run_StockRank20Class10Embedding196_full_registration_v1_20261011_current_completed_parents71_child.py')

@@ -1,0 +1,2 @@
+from route_current_parents71_ancestor_guard83_v1_20261011 import execute
+if __name__=="__main__":execute('qualify_stock_rank60_embedding48_selected_native14_v1_20261011_completed_parents71_wrapper.py')

@@ -1,0 +1,2 @@
+from route_flag17_gain_main_delivery_recovery65_v2_20261011 import execute
+if __name__=="__main__":execute('publish_actual_rank60_flag17_after_best38_best17_complete_candidate_main_v1_20261011.py')

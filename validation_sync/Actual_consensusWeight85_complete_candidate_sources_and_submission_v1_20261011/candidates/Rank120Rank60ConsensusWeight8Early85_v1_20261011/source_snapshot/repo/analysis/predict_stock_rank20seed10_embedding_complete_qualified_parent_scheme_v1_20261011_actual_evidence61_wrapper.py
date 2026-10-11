@@ -1,0 +1,2 @@
+from route_actual189_evidence_failed_descendants61_v1_20261011 import execute
+if __name__=='__main__':execute('predict_stock_rank20seed10_embedding_complete_qualified_parent_scheme_v1_20261011.py')
