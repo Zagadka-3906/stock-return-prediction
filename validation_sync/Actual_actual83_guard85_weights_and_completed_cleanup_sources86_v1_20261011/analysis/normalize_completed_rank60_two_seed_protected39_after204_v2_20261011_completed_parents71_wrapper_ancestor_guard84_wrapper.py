@@ -1,0 +1,2 @@
+from route_current_parents71_ancestor_guard83_v1_20261011 import execute
+if __name__=="__main__":execute('normalize_completed_rank60_two_seed_protected39_after204_v2_20261011_completed_parents71_wrapper.py')
