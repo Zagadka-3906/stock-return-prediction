@@ -1,0 +1,32 @@
+2026-10-11 12:24:48.807 | INFO     | evaluate:evaluate:33 - 合并后样本数: 5635800, 交易日数: 1212
+2026-10-11 12:24:50.946 | INFO     | evaluate:evaluate:49 - Rank IC: mean=0.122676, std=0.110280, ICIR=1.1124, IC>0占比=89.93%
+2026-10-11 12:24:54.234 | INFO     | evaluate:evaluate:75 - Top组超额收益: 年化=0.3735, Top1年化绝对收益=0.3990
+2026-10-11 12:24:56.208 | INFO     | evaluate:evaluate:101 - 预测换手率: mean=0.0324, (1-turnover)=0.9676
+2026-10-11 12:24:56.208 | INFO     | evaluate:evaluate:105 - 综合得分 = 0.122676×0.4 + 0.3735×0.3 + 0.9676×0.3 = 0.451411
+2026-10-11 12:25:21.332 | INFO     | evaluate:evaluate:33 - 合并后样本数: 5635800, 交易日数: 1212
+2026-10-11 12:25:23.092 | INFO     | evaluate:evaluate:49 - Rank IC: mean=0.122787, std=0.110956, ICIR=1.1066, IC>0占比=89.85%
+2026-10-11 12:25:26.348 | INFO     | evaluate:evaluate:75 - Top组超额收益: 年化=0.3735, Top1年化绝对收益=0.3990
+2026-10-11 12:25:28.375 | INFO     | evaluate:evaluate:101 - 预测换手率: mean=0.0324, (1-turnover)=0.9676
+2026-10-11 12:25:28.375 | INFO     | evaluate:evaluate:105 - 综合得分 = 0.122787×0.4 + 0.3735×0.3 + 0.9676×0.3 = 0.451455
+Traceback (most recent call last):
+  File "D:\3.Study\数据分析\赛题五\analysis\run_service_owned_windows_workflow_20261006.py", line 77, in main
+    runpy.run_path(run['driver'], run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\3.Study\数据分析\赛题五\analysis\run_rank120_rank60_after183_consensusFraction8_screen88_v1_20261011.py", line 154, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_rank120_rank60_after183_consensusFraction8_screen88_v1_20261011.py", line 127, in main
+    value=transformed(c)
+          ^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\run_rank120_rank60_after183_consensusFraction8_screen88_v1_20261011.py", line 112, in transformed
+    if not oracle:return panel.transform(c,n)
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\immutable_prepared_rank_panel_cache_v1_20261010.py", line 32, in transform
+    return codec.apply_prepared(self.parent[:n],self.flags[:n],self.valid[:n],*args,self.prepared[key])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\3.Study\数据分析\赛题五\analysis\protected_upper_tail_rank_permutation_v1_20261010.py", line 7, in apply_prepared
+    assert 0.<=weight<=1. and .1<=protect_fraction<=.5
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
