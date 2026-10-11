@@ -1,0 +1,212 @@
+"""Freeze the best of28 original official comparisons before any selected future inference."""
+from pathlib import Path
+from copy import deepcopy
+from types import SimpleNamespace
+import hashlib
+import os
+import shutil
+import sys
+import time
+
+ROOT=Path(__file__).resolve().parents[1]
+A=ROOT/'analysis'
+sys.path[:0]=[str(ROOT),str(A),str(A/'connected_validation_20261002')]
+from run_dependency_queue_v3_20261006 import read,sha,create,owned
+OUT=A/'HGB_quarter_numeric28_selected_release_v4_20261007'
+CANDIDATE=ROOT/'candidates/HGB_quarter_numeric28_v4_20261007'
+GRAPH_FIELD='conditional_flag_residual_scheme_graph'
+
+
+def closed(name):
+    folder=A/'service_owned_workflows_20261006'/name
+    while not (folder/'native_launch.json').exists() or owned(read(folder/'native_launch.json')):time.sleep(15)
+    assert read(folder/'service_execution.json')['status']=='passed',name
+
+
+def rebase_graph(node):
+    if isinstance(node,dict):
+        if 'source_path' in node and 'path' in node:
+            node['path']=str(CANDIDATE/Path(node['path']).name)
+            for key in ('independent_dump_path','independent_state_path'):
+                if key in node:node[key]=str(CANDIDATE/Path(node[key]).name)
+        for value in node.values():rebase_graph(value)
+    elif isinstance(node,list):
+        for value in node:rebase_graph(value)
+
+
+def main():
+    import numpy as np
+    import pandas as pd
+    import polars as pl
+    import psutil
+    from run import fold_cutoff
+    from refine_flagged_HGB_compatible_parent_transform_20261007 import transform
+    from score_calibrated_candidates_20261003 import score
+    from return_mapping import daily_percentile,fit_mapping
+    from win32_read_handle_hash_cache_with_filename_v2_20261006 import LockedReadHashCache
+    assert not OUT.exists()
+    OUT.mkdir()
+    closed('HGB_quarter_numeric28_full25_transform_preflight_v4')
+    closed('HGB_quarter_numeric28_official_comparison_v4')
+    closed('HGB_quarter_numeric28_scores_main_publication_v4')
+    while psutil.virtual_memory().available<9*2**30:time.sleep(15)
+    pilot_path=A/'HGB_quarter_numeric28_official_comparison_v4_20261007/verification.json'
+    pilot=read(pilot_path)
+    assert pilot['status']=='passed_actual28_HGB_quarter_numeric_full_official_comparisons'
+    assert len(pilot['records'])==28
+    best=min(pilot['records'],key=lambda r:(-r['connected_final_score'],r['configuration']['weight'],r['case']))
+    assert best==pilot['best']
+    cfg=best['configuration']
+    comparison_parent=pilot['actual_comparison_parent_round']
+    parent_number=cfg['anchor_round'] if cfg['model'] is None else pilot['actual_scheme_base_round']
+    assert parent_number in (112,116,117)
+    if cfg['model'] is None:assert cfg['anchor_round']==parent_number
+    parent_candidate=ROOT/f'candidates/optimization_20261003_r{parent_number}'
+    parent_release=A/f'optimization_20261003_r{parent_number}'
+    parent_record=read(parent_candidate/'selection.json')
+    parent_prediction=read(parent_candidate/'verification.json')
+    parent_manifest=read(parent_candidate/'manifest.json')
+    assert read(parent_release/'full_registration_execution.json')['status']=='passed'
+    import optimize_training_round95_v3 as protocol_runtime
+    from resolve_sealed_scientific_protocol_20261007 import resolve
+    scientific_protocol, protocol_pins, protocol_proof=resolve(parent_candidate,parent_release,parent_prediction['whole_scheme_graph'],protocol_runtime)
+    create(OUT/'scientific_protocol_resolution_before_future_features.json',protocol_proof)
+    bank=A/'cpu_conditional_residual_hgb_bank20_20261007'
+    sources=[Path(__file__),A/'predict_refined_weighted_flagged_CPU_HGB_scheme_v2_20261007.py',
+        A/'seal_HGB_quarter_numeric28_selected_candidate_v4_20261007.py',
+        A/'refine_flagged_HGB_compatible_parent_transform_20261007.py',A/'cpu_conditional_residual_hgb_codec_20261007.py',
+        A/'HGB_quarter_numeric28_transform_preflight_v4_20261007/verification.json',
+        pilot_path,A/'HGB_quarter_numeric28_scores_github_v4_20261007/receipt.json',
+        parent_candidate/'manifest.json',parent_candidate/'source_package_verification.json',parent_release/'full_registration_execution.json']
+    assert read(sources[5])['status']=='passed_actual25_full5635800_HGB_quarter_numeric_independent_oracle_and_cold80_260_975_controls'
+    pins={**protocol_pins,**pilot['input_sha256'],**{str(p):sha(p) for p in sources}}
+    pins[str(A/'resolve_sealed_scientific_protocol_20261007.py')]=sha(A/'resolve_sealed_scientific_protocol_20261007.py')
+    for relative,info in parent_manifest['files'].items():
+        path=parent_candidate/relative
+        assert sha(path)==info['sha256'],path
+        pins[str(path)]=info['sha256']
+    create(OUT/'selected_case_before_future_features.json',{'status':'selected_by_all28_actual_official_scores',
+        'at_local':time.strftime('%Y-%m-%dT%H:%M:%S'),'input_sha256':pins,'best':best,'explicit_parent_round':comparison_parent, 'actual_scheme_base_round':parent_number,
+        'future_features_for_new_selected_scheme_not_yet_read':True,'new_native_fits':0,'test_labels_read':False})
+    raw_path=parent_release/'selected_validation.npy'
+    if cfg['model'] is None:
+        raw=np.load(raw_path,mmap_mode='r')
+        assert hashlib.sha256(memoryview(np.ascontiguousarray(raw)).cast('B')).hexdigest()==best['prediction_numeric_bytes_sha256']
+        assert best['metrics']==parent_record['winner']['metrics']
+        assert parent_prediction['status']=='passed'
+        assert parent_prediction['whole_scheme_graph']==parent_record['winner'][GRAPH_FIELD]
+        for key in ('model_reload_bit_identical','pipeline_replay_bit_identical','csv_replay_byte_identical','cold80_day_prefix_bit_identical'):assert parent_prediction[key]
+        assert sha(parent_candidate/'submission.csv')==parent_prediction['csv_sha256']
+        create(OUT/'inference_ready.json',{'status':'passed_exact_selected_anchor28_candidate_reuse',
+            'source_candidate':str(parent_candidate),'source_release':str(parent_release),
+            'selected_configuration':cfg,'best':best,'manifest_sha256':sha(parent_candidate/'manifest.json'),
+            'actual_saved_native_models':len(parent_prediction['models']),'actual_rehashed_candidate_files':len(parent_manifest['files']),
+            'original_inference_freeze_timestamp':parent_record['frozen_at_local'],
+            'all5635800_validation_raw_bits_and_all8_metrics_exact':True,'new_inference_claimed':False,'test_labels_read':False})
+        return
+    assert cfg['anchor_round']==parent_number and cfg['weight']>=0.
+    names=pilot['components'][cfg['model']]
+    infos=[read(bank/name/'info_2025.json') for name in dict.fromkeys(names)]
+    components=[]
+    for info in infos:
+        meta=info
+        assert info['year']==2025 and info['actual_iterations']==64
+        assert meta['last_training_label_date']<meta['exclusive_cutoff']==fold_cutoff(2025)
+        assert meta['last_training_label_end']<=meta['exclusive_cutoff']
+        components.append({'name':info['name'],'source_path':info['native_model_path'],'sha256':info['native_model_sha256'],
+            'path':str(CANDIDATE/(info['name']+'.joblib')),'independent_state_source_path':info['independent_hist_tree_state_path'],
+            'independent_state_path':str(CANDIDATE/(info['name']+'.json')),
+            'independent_state_sha256':info['independent_hist_tree_state_sha256'],'training_info':info})
+        for key,digest in ((info['native_model_path'],info['native_model_sha256']),(info['independent_hist_tree_state_path'],info['independent_hist_tree_state_sha256'])):pins[key]=digest
+    freeze=A/'HGB_quarter_numeric28_pre_inference_source_freeze_v4_20261007'
+    assert not freeze.exists() and not CANDIDATE.exists()
+    freeze.mkdir()
+    python_sources=sorted(set(ROOT.glob('*.py'))|set(A.glob('*.py'))|set((A/'connected_validation_20261002').glob('*.py'))|set((ROOT/'src').rglob('*.py'))|set((ROOT/'experiments').rglob('*.py')))
+    snapshot={}
+    for source in python_sources:
+        digest=sha(source);target=freeze/'repo'/source.relative_to(ROOT);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(source,target);assert sha(target)==sha(source)==digest
+        snapshot[source.relative_to(ROOT).as_posix()]={'sha256':digest,'bytes':source.stat().st_size};pins[str(source)]=digest
+    import importlib.metadata
+    create(freeze/'manifest.json',{'status':'passed_pre_inference_local_Python_source_snapshot',
+        'at_local':time.strftime('%Y-%m-%dT%H:%M:%S'),'files':snapshot,
+        'library_versions':{n:importlib.metadata.version(n) for n in ('numpy','pandas','polars','scikit-learn','joblib','lightgbm','torch')},'test_labels_read':False})
+    pins[str(freeze/'manifest.json')]=sha(freeze/'manifest.json')
+    heads_paths=[bank/name/'flagged_oof_predictions.npy' for name in names]
+    reference_path=A/'optimization_20261003_r106/selected_validation.npy'
+    pins[str(reference_path)]=sha(reference_path)
+    pins.update({str(p):sha(p) for p in [raw_path,*heads_paths]})
+    with LockedReadHashCache(pins) as scope:
+        frame=pl.read_parquet(A/'connected_validation_20261002/combined_fold_frame.parquet',columns=['ts_code','trade_date','flag_limit_up','price_valid','y_ret_1d'])
+        dates,flags,valid=[frame[k].to_numpy() for k in ('trade_date','flag_limit_up','price_valid')]
+        raw=np.load(raw_path,mmap_mode='r')
+        heads=[np.load(p,mmap_mode='r') for p in heads_paths]
+        reference=np.load(reference_path,mmap_mode='r')
+        residual=np.zeros(len(raw),dtype=np.float64)
+        for head in heads:residual+=head
+        if heads:residual/=len(heads)
+        selected=transform(raw,reference,dates,flags,valid,residual,cfg['weight'],cfg['universe'])
+        assert hashlib.sha256(memoryview(np.ascontiguousarray(selected)).cast('B')).hexdigest()==best['prediction_numeric_bytes_sha256']
+        np.save(OUT/'selected_validation.npy',selected)
+        scoring=OUT/'scoring_validation_only';scoring.mkdir()
+        for filename in ('测试集_X.csv','测试集_Y.csv'):os.link(A/'optimization_20261003_r95/scoring_validation_only'/filename,scoring/filename)
+        ctx=SimpleNamespace(frame=frame,dates=dates,scoring=scoring)
+        assert score(ctx,selected)==best['metrics']
+        capsule=read(ctx.last_official_score_cache['official_metrics_source'])
+        create(OUT/'calibrated_csv_official.json',{'status':'passed','metrics':best['metrics'],'csv_sha256':capsule['scope']['submission_csv_sha256'],
+            'actual_official_capsule':ctx.last_official_score_cache,'actual_mature_return_mapping':ctx.last_candidate_return_mapping,'test_labels_read':False})
+        labels=pd.read_csv(scoring/'测试集_Y.csv').sort_values(['trade_date','ts_code']).reset_index(drop=True)
+        assert np.array_equal(labels.trade_date.to_numpy(),dates)
+        cutoff=fold_cutoff(2025);y=labels.y_ret_1d.to_numpy(dtype=np.float64);historical=(dates<cutoff)&np.isfinite(y)
+        pct=daily_percentile(frame.select('trade_date').to_pandas(),selected)
+        create(OUT/'future_return_mapping.json',fit_mapping(pct[historical],y[historical]))
+        create(OUT/'causal_validation.json',{'status':'passed','actual_all28_official_controls':str(pilot_path),
+            'actual20_mature_native_independent_prefix_controls':str(bank/'verification.json'),
+            'actual_selected_full5635800_numeric_bits_match_pilot':True,'final_mapping_training_rows':int(historical.sum()),
+            'exclusive_cutoff':cutoff,'new_native_fits':0,'test_labels_read':False})
+        graph=deepcopy(parent_prediction['whole_scheme_graph']);rebase_graph(graph)
+        graph['cohort_rank_calibration']['future_curve_model']['path']=str(CANDIDATE/'cohort_curve.json')
+        if names:
+            assert len(names)==4 and 2<=len(set(names))<=3
+            assert len(components)==len(set(names))
+            graph['conditional_flag_CPU_HGB_residual_CDF']={**cfg,'native_components':components,
+                'ordered_equal_mean_components':names,'first2020_identity':True,
+                'training_teacher_round':106,'current_prediction_teacher_exact106_core':True,'ordered_quarter_counts':{name:names.count(name) for name in dict.fromkeys(names)},'native_components_unique':True}
+        else:
+            assert cfg['model']=='remove_flagged_HGB' and cfg['weight']==0.
+            graph.pop('conditional_flag_CPU_HGB_residual_CDF',None)
+        winner=deepcopy(parent_record['winner']);winner.update(metrics=best['metrics'],connected_final_score=best['connected_final_score']);winner[GRAPH_FIELD]=graph
+        protocol=deepcopy(scientific_protocol);protocol.update(input_sha256=pins,explicit_parent_round=comparison_parent,
+            expected_scored_records=28,status='frozen_selected_HGB_quarter_numeric28_before_future_inference',current_parameter_authority=GRAPH_FIELD)
+        create(OUT/'protocol.json',protocol)
+        frozen={Path(p).relative_to(ROOT).as_posix():digest for p,digest in pins.items() if Path(p).is_relative_to(ROOT)}
+        for path in (OUT/'protocol.json',OUT/'selected_validation.npy',OUT/'future_return_mapping.json',ROOT/'active_release.json'):frozen[path.relative_to(ROOT).as_posix()]=sha(path)
+        unique={c['sha256'] for key,c in parent_prediction['models'].items() if not key.startswith('conditional_cpu_hgb_')}|{c['sha256'] for c in components}
+        selection={'status':'frozen_before_test_prediction','frozen_at_local':time.strftime('%Y-%m-%dT%H:%M:%S'),'winner':winner,
+            'scored_records':28,'explicit_parent_round':comparison_parent, 'actual_scheme_base_round':parent_number,'chosen_postprocessor':cfg,
+            'native_component_names':list(dict.fromkeys([*[n for n in parent_record['native_component_names'] if not n.startswith('flagged_residual_hgb')],*names])),
+            'new_HGB_component_names':names,'actual_expected_unique_native_models':len(unique),'current_parameter_authority':GRAPH_FIELD,
+            'actual_official_pilot_source':str(pilot_path),'frozen_sha256':frozen,'all_training_validation_years_previously_viewed':True,
+            'selection_bias_uncorrected':True,'test_labels_read':False}
+        create(OUT/'selection.json',selection)
+        create(OUT/'frozen_before_actual_candidate_inference.json',{'input_sha256':pins,'selection_sha256':sha(OUT/'selection.json'),
+            'source_snapshot_manifest_sha256':sha(freeze/'manifest.json'),'parent_curve_sha256':sha(parent_candidate/'cohort_curve.json'),'test_labels_read':False})
+        import optimize_training_round95_v3 as native_parent
+        ns=SimpleNamespace(**vars(native_parent));ns.OUT,ns.GRAPH_FIELD=OUT,GRAPH_FIELD;ns.cohort_saved_models=parent_prediction['models']
+        from predict_refined_weighted_flagged_CPU_HGB_scheme_v2_20261007 import predict
+        locked_outputs={str(OUT/n):sha(OUT/n) for n in ('protocol.json','selection.json','selected_validation.npy','future_return_mapping.json')}
+        with LockedReadHashCache(locked_outputs) as output_scope:
+            prediction,storage=predict(ns,selection,CANDIDATE,parent_candidate/'cohort_curve.json',OUT/'future_return_mapping.json');output_scope.reverify()
+        scope.reverify()
+        assert (prediction['rows'],prediction['days'],prediction['codes'])==(1599600,344,4650)
+        assert len(prediction['models'])==len(storage)==len(unique)
+        create(OUT/'verification.json',{'status':'passed_frozen_HGB_quarter_numeric28_complete_native_parent_independent_and_cold80',
+            'input_sha256':pins,'candidate':str(CANDIDATE),'csv_sha256':prediction['csv_sha256'],'selected_configuration':cfg,
+            'selected_official_score':best['connected_final_score'],'actual_native_model_storage':storage,'actual_saved_model_count':len(unique),
+            'all_inputs_initial_and_final_full_Windows_read_locked_hash':True,'new_native_fits':0,'test_labels_read':False})
+        create(OUT/'inference_ready.json',{'status':'passed_actual_selected_new_HGB_quarter_numeric28_candidate_inference',
+            'source_candidate':str(CANDIDATE),'source_release':str(OUT),'selected_configuration':cfg,'best':best,
+            'actual_saved_native_models':len(unique),'new_inference_claimed':True,'pre_inference_source_snapshot':str(freeze),'test_labels_read':False})
+
+
+if __name__=='__main__':main()

@@ -1,0 +1,2 @@
+from route_raw_science_completed183_current59_v1_20261011 import execute
+execute('run_stock_rank60window504_embedding_after183_direct_allocation33_v1_20261011.py')
