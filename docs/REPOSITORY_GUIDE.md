@@ -36,7 +36,7 @@
 - `service_execution.json`：独立工作流的实际终态；`passed`与`failed`保留原义。
 - 发布回执：提交SHA、main分支、远端核验及原始Git blob检查。
 
-“冻结”“已评分”“完整推理通过”“正式榜已登记”“已封装”和“比赛平台已提交”是不同状态。判断资格需看相应记录，不能由某个上游 `passed`推断全部完成。
+“冻结”“已评分”“完整推理通过”“正式榜已登记”“已封装”“比赛平台已提交”和“选模来源合规”是不同状态。原记录的 `passed`保留当时原义；历史测试反馈更正见[合规说明](SELECTION_COMPLIANCE.md)，不能由旧登记或因果推理检查推断选模来源合规。
 
 ## 当前状态指针
 
@@ -46,7 +46,8 @@
 | `analysis/actual_fraction101_delivery_bundle137_verification_v1_20261011.json` | 方案ZIP条目核验与清理汇总 |
 | `analysis/latest_verified_submission_delivery_v2_20261008.json` | 正式资格登记已完成的第189轮交付，S=0.4514130257498636 |
 | `analysis/complete191_plus_completed_raw_TRAIN_score_catalog_location_v7_20261011.json` | 18,959项训练评分明细与最新已核验交付位置 |
-| `active_release.json` | 早期交付指针，保留历史用途；不作为最新高分候选入口 |
+| `active_release.json` | 早期交付指针及原文件路径仍保留，当前状态为 `selection_compliance_suspended`，停止合规推荐 |
+| `selection_compliance.json` | 当前选模来源更正：历史测试反馈已确认，尚未选定可证明完整训练内选模的替代 |
 
 外部读者可从[最新状态](latest_results.json)和[成果与交付](RESULTS.md)进入已发布归档，不需要猜测本机路径。
 

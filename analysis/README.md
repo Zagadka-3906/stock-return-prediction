@@ -2,6 +2,8 @@
 
 本目录承载后续模型搜索、年度训练、官方评分、方案冻结、因果检查、候选推理、榜单登记、GitHub同步和Windows运行管理。大量脚本按轮次和版本保留，包含失败恢复过程；文件数量不是独立模型数量。
 
+2026-10-11已确认历史重建测试收益影响过推荐及研究路线；现有方案不能宣称严格训练内选模，见[合规更正](../docs/SELECTION_COMPLIANCE.md)和[机器可读状态](../selection_compliance.json)。旧核验通过与榜单登记是当时事实，不消除历史选择反馈。
+
 新读者先看[项目首页](../README.md)、[模型与验证](../docs/METHODS.md)和[目录与记录](../docs/REPOSITORY_GUIDE.md)。实际运行条件见[使用与复现](../docs/GETTING_STARTED.md)。
 
 ## 当前阅读入口

@@ -2,6 +2,8 @@
 
 状态日期：2026-10-11。这里的“官方评分”指使用赛题官方脚本计算训练内部验证区间的指标；比赛平台测试成绩另行判定。
 
+**选模来源合规暂停：历史上从测试X重建的343天收益影响了推荐与研究路线，当前方案继承该研究链。撤回严格训练内选模的推荐结论。** 下表的分数、推理通过和榜单登记仍按原事实保留，不作为选模来源合规证明；详见[合规更正](SELECTION_COMPLIANCE.md)。
+
 ## 当前方案
 
 | 方案 | 训练内部连接S | 当前状态 |
@@ -64,7 +66,7 @@ d3928b57be66ee0747eb0751c22923ff804e2496b32568beb9643594c80ee6d5
 - [排除已知非因果限制后的明细（CSV.gz）](../validation_sync/Actual_fraction101_complete_bundle_catalog_v7_and_discarded_weights_cleanup137_20261011/external_metadata/a77376323e14d93bb9ab523fbb5931cd6169d2d10aa0f6ce9df0b9006cad4fdd_排除已知非因果限制后的训练分数明细.csv.gz)
 - [榜单位置与核验指针](../validation_sync/Actual_fraction101_complete_bundle_catalog_v7_and_discarded_weights_cleanup137_20261011/analysis/complete191_plus_completed_raw_TRAIN_score_catalog_location_v7_20261011.json)
 
-解压gzip后按CSV阅读，保留 `known_restriction`、`qualification`、`source`、`source_sha256`和 `official_capsule_sha256`等列。高分记录是否可提交，还需另行查看完整候选资格。
+解压gzip后按CSV阅读，保留 `known_restriction`、`qualification`、`source`、`source_sha256`和 `official_capsule_sha256`等列。原“排除已知非因果限制”的CSV仅按当时记录的数值限制过滤，未排除本次确认的历史测试反馈；不能将它直接当作合规选模榜。另见[当前选模状态](../selection_compliance.json)。
 
 ## 核验与发布证据
 
@@ -79,4 +81,4 @@ d3928b57be66ee0747eb0751c22923ff804e2496b32568beb9643594c80ee6d5
 
 最新候选的训练验证S略高于上一完整候选，提升主要来自IC，年化超额与换手保持相同。长期反复搜索同一验证区间会产生选择偏差，目前未校正；不能据此承诺盲测或交易表现。
 
-旧README中2026-10-03的交付分数和测试回顾分数属于历史材料。后续的最新候选未读取实际测试标签，因此没有可以写作其比赛测试成绩的新分数。模型优化已按用户截止时间暂停；文档和封装整理不代表优化任务自动恢复。
+本次未修改官方评分器、未使用缓存的两次全量复核均得到S=0.4514612196682616，当前数值评分没有因此被撤销。但历史测试结果曾反馈到选模路线，新阶段未再读取测试标签不能修复这一事实；最新研究候选及第189轮已登记方案均不自动取得严格训练内选模推荐。模型优化继续暂停。
