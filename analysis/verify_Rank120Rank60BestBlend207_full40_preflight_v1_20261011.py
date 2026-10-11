@@ -1,0 +1,47 @@
+"""Admit actual40 completed official records and selected native or pure postprocessing controls."""
+from pathlib import Path
+import sys
+A=Path(__file__).resolve().parent;ROOT=A.parent;sys.path[:0]=[str(ROOT),str(A)]
+from run_dependency_queue_v3_20261006 import read,sha,create
+from prepare_protected_tail_pilot76_and_selected_native14_v1_20261010 import allowed
+
+def main():
+    assert allowed()
+    import prepare_Rank120Rank60BestBlend207_complete40_pipeline_v1_20261011 as routes
+    for name in ('rank120_rank60_bestblend207_candidate_sources_preparation_v1_20261011.json','rank120_rank60_bestblend207_full_registry_sources_preparation_v1_20261011.json'):
+        for path,digest in read(A/name)['input_sha256'].items():assert sha(path)==digest,path
+    sources=list(dict.fromkeys([*routes.source_paths(),Path(__file__),A/'run_Rank120Rank60BestBlend207_full_registration_v1_20261011.py',A/'run_Rank120Rank60BestBlend207_complete_family_v1_20261011.py']))
+    for p in sources:
+        assert p.is_file(),p
+        if p.suffix=='.py':compile(p.read_text(encoding='utf8'),str(p),'exec')
+    from verify_protected162_full_family_preflight_v1_20261010 import literal_assignments
+    opt=literal_assignments(A/'optimize_training_round207_v1_20261011.py');assert (opt['NUMBER'],opt['PREVIOUS_NUMBER'],opt['WAVES'])==(207,206,(490,))
+    import rank120_rank60_bestblend207_storage_v1_20261011 as storage
+    assert len(storage.OUTPUTS)==6 and A/'optimization_20261003_r207' in storage.OUTPUTS
+    assert 'assert number == 207' in (A/'rank120_rank60_bestblend207_storage_v1_20261011.py').read_text(encoding='utf8')
+    folder=Path(read(A/'actual_rank120_rank60_bestblend51_selected_native14_location_v1_20261011.json')['output'])
+    pilot=read(folder/'pilot40.json');control=read(folder/'verification.json');best=pilot['best'];cfg=best['configuration']
+    assert len(pilot['records'])==pilot['expected_scored_records']==40
+    assert (pilot['actual_nonidentity_full_controls'],pilot['actual_nonidentity_prefix_controls'])==(37,111)
+    assert pilot['actual_comparison_parent_round']==206 and control['best']==best
+    assert best==min(pilot['records'],key=lambda r:(-r['connected_final_score'],r['expected_unique_native_models'],abs(r['configuration']['weight']),r['case']))
+    baseline=read(A/'optimization_20261003_r206/calibrated_csv_official.json')['metrics']
+    assert best['connected_final_score']>=baseline['final_score']
+    for row in pilot['records']:
+        cap=Path(row['official_score_cache']['official_metrics_source'])
+        assert sha(cap)==row['official_metric_capsule_sha256'] and read(cap)['metrics']==row['metrics']
+        assert row['configuration']['anchor_round'] in (183,206)
+    if cfg['stage_kind']=='anchor':
+        assert control['status']=='passed_selected_fully_qualified_anchor40_no_new_native_stage_claimed'
+        assert read(A/f"optimization_20261003_r{cfg['anchor_round']}/full_registration_execution.json")['status']=='passed'
+    else:
+        assert control['status']=='passed_selected_rank120_rank60_bestblend51_six_pairs14_native14_cold7_prefit_refusals'
+        assert (len(control['records']),control['actual_native_cases'],control['actual_cold_cases'])==(14,14,14)
+        assert control['actual_saved_states']==12 and len(control['prefit_rejections'])==7
+        assert best['connected_final_score']>=baseline['final_score']
+    for path,digest in pilot['input_sha256'].items():assert sha(path)==digest,path
+    assert sha(ROOT/'.git/index')=='ed2fa41598113343f7cf84c4ff16f7685c9ed3e079c16edf869c2c32019d3406'
+    create(A/'rank120_rank60_bestblend207_full_family_preflight_v1_20261011.json',{'status':'passed_complete40_actual_capsules_selected_stage_and_QA118_routes_before_future_dispatch','input_sha256':{str(p):sha(p) for p in [*sources,folder/'pilot40.json',folder/'verification.json']},'actual_stage_kind':cfg['stage_kind'],'new_native_fits':0,'new_quality_scores':0,'actual_future_X_read':False,'test_labels_read':False})
+    print({'admitted_records':40,'QA':118,'stage_kind':cfg['stage_kind'],'future_dispatch_not_started':True},flush=True)
+
+if __name__=='__main__':main()
