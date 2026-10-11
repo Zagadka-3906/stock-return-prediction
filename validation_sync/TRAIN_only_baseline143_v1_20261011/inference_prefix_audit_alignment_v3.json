@@ -1,0 +1,13 @@
+{
+  "status": "date_mask_only_prefix_audit_repair",
+  "at_local": "2026-10-11T22:14:49.862004+08:00",
+  "reason": "Original TEST rows are stock-major. Its first N rows are not its first 80 dates.",
+  "old_assertion": "exact(pred[:len(p)],p)",
+  "new_assertion": "exact(pred[f['trade_date'].to_numpy()<=cut],p)",
+  "adapter_sha256": "3330cf0f9b47980a262de9fe70c9f8e69a4c2071d23227a5430866685c2da214",
+  "only_assertion_row_selection_changed": true,
+  "prediction_computation_unchanged": true,
+  "original_training_source_model_feature_protocol_unchanged": true,
+  "no_scientific_choice_based_on_TEST_outcomes": true,
+  "previous_unverified_submission_sha256": "ce281b9100807b7b61b938f86517a0aaa996b19b6d5edd0d0ffdcbd31a3c397f"
+}
