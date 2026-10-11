@@ -1,0 +1,140 @@
+{
+  "status": "passed_actual149_selected_candidate_full_graph_and_metrics_and_source_bytes",
+  "source_candidate": "D:\\3.Study\\数据分析\\赛题五\\candidates\\MixedObjectiveWindow189_v1_20261010",
+  "source_release": "D:\\3.Study\\数据分析\\赛题五\\analysis\\MixedObjectiveWindow189_selected_release_v1_20261010",
+  "selected_configuration": {
+    "kind": "CDF",
+    "role": "nonflag_valid",
+    "weight": 0.0003125,
+    "sign": -1.0,
+    "protect_fraction": null,
+    "rank5_weight": 0.03125,
+    "stage_kind": "rank5_rank20_mixed_raw_average",
+    "anchor_round": 175,
+    "model": "Rank20_Rank5_NearPure_ID16_Cross120_e64",
+    "recipe": "stock_rank5_rank20_near_pure_label_horizon_ID16_cross120_recent252_e64",
+    "codec": "CDF",
+    "decay": null,
+    "first2020_active": true
+  },
+  "best": {
+    "case": 55,
+    "configuration": {
+      "kind": "CDF",
+      "role": "nonflag_valid",
+      "weight": 0.0003125,
+      "sign": -1.0,
+      "protect_fraction": null,
+      "rank5_weight": 0.03125,
+      "stage_kind": "rank5_rank20_mixed_raw_average",
+      "anchor_round": 175,
+      "model": "Rank20_Rank5_NearPure_ID16_Cross120_e64",
+      "recipe": "stock_rank5_rank20_near_pure_label_horizon_ID16_cross120_recent252_e64",
+      "codec": "CDF",
+      "decay": null,
+      "first2020_active": true
+    },
+    "recipe": "stock_rank5_rank20_mixed_label_horizon_ID16_cross120_recent252_e64",
+    "metrics": {
+      "ic_mean": 0.12267632160052366,
+      "ic_std": 0.11027982233285981,
+      "icir": 1.1124094961836921,
+      "ic_positive_ratio": 0.8993399339933993,
+      "annual_excess": 0.3735093425702569,
+      "top1_annual_ret": 0.39900309663051436,
+      "mean_turnover": 0.032367685538076535,
+      "final_score": 0.4514130257498636
+    },
+    "connected_final_score": 0.4514130257498636,
+    "score_gain_over_qualified_parent": 4.369371943541145e-05,
+    "control_sha256": "d931ac9e24a68a0162fae52870b01772055829c1a78df1c37e019591cae09697",
+    "prediction_numeric_sha256": "c025c2ffb3686a2a5542e36f87f0cadd2d12edd6cc2c4d543f9ace88abe9c520",
+    "official_metric_capsule_sha256": "f50ab8009977130b33bace922c24b88247a6c24945cd294b26ce1f28bdbbe327",
+    "official_score_cache": {
+      "cache_hit": false,
+      "cache_key": "6036256c94dfeb7106d6e08204fcf03c86b43307dcf51eaaf4e2299e3168e8c3",
+      "official_metrics_source": "E:\\赛题五_本机临时\\Rank5Rank20_after175_near_pure49_screen_v1_20261011\\identical_official_scores\\6036256c94dfeb7106d6e08204fcf03c86b43307dcf51eaaf4e2299e3168e8c3.json"
+    },
+    "actual_return_mapping": {
+      "actual_return_mapped_csv_scored": true,
+      "within_day_ranks_bit_identical": true,
+      "boundaries": [
+        {
+          "year": 2020,
+          "mapping_last_label_date": 20191230,
+          "exclusive_cutoff": 20191231,
+          "method": "prevalidation training moments affine fallback"
+        },
+        {
+          "year": 2021,
+          "mapping_last_label_date": 20201230,
+          "exclusive_cutoff": 20201231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2022,
+          "mapping_last_label_date": 20211230,
+          "exclusive_cutoff": 20211231,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2023,
+          "mapping_last_label_date": 20221229,
+          "exclusive_cutoff": 20221230,
+          "method": "past mature OOF isotonic"
+        },
+        {
+          "year": 2024,
+          "mapping_last_label_date": 20231228,
+          "exclusive_cutoff": 20231229,
+          "method": "past mature OOF isotonic"
+        }
+      ],
+      "test_labels_read": false,
+      "cross_round_identical_official_reuse": {
+        "cross_round_cache_hit": false
+      }
+    },
+    "submission_qualified": false,
+    "future_X_read": false,
+    "test_labels_read": false,
+    "selection_bias_uncorrected": true,
+    "family": "near_pure49",
+    "native_stage_module": "rank5_rank20_near_pure_after_qualified_parent_native_stage_v1_20261011",
+    "native_graph_key": "rank5_rank20_near_pure_after_complete_qualified_parent_v1_20261011",
+    "original_screen_case": 4,
+    "original_screen_record": "E:\\赛题五_本机临时\\Rank5Rank20_after175_near_pure49_screen_v1_20261011\\case004_official.json",
+    "prediction_numeric_bytes_sha256": "c025c2ffb3686a2a5542e36f87f0cadd2d12edd6cc2c4d543f9ace88abe9c520",
+    "expected_unique_native_models": 36,
+    "ordered_native_components": [
+      "Rank20_ID16_Cross120_seed20261009_e64",
+      "Rank5_ID16_Cross120_seed20261009_e64"
+    ],
+    "native_bank_components": [
+      {
+        "name": "Rank20_ID16_Cross120_seed20261009_e64",
+        "bank": "E:\\赛题五_本机临时\\stock_rank20_embedding_small512_BF16_bank6_v1_20261010",
+        "sha256": "d623b2dd10c38cc824855de2d36892a8ae0877fe05a9a7ad9ef499b81e831481",
+        "seed": 20261009,
+        "label_horizon_trading_days": 20,
+        "training_calendar_window": 252
+      },
+      {
+        "name": "Rank5_ID16_Cross120_seed20261009_e64",
+        "bank": "E:\\赛题五_本机临时\\stock_rank5_embedding_small512_BF16_bank6_v1_20261010",
+        "sha256": "f8da4ffe716f298209ece5905411964eb5f385c02045e9fdd1c3d30acaf7f3da",
+        "seed": 20261009,
+        "label_horizon_trading_days": 5,
+        "training_calendar_window": 252
+      }
+    ],
+    "physical_models_for_signal": 2,
+    "qualified_anchor_all8_metrics_exact": false
+  },
+  "actual_saved_native_models": 36,
+  "new_inference_claimed": true,
+  "pre_inference_source_snapshot": "E:\\赛题五_本机临时\\第189轮_20261010\\pre_inference_source_freeze_v1",
+  "test_labels_read": false,
+  "source_manifest_sha256": "a58b080f06fd8e98ab835c3935dd16d401a1b415a8e005929cb8ff91f9ea8f75",
+  "sealed_candidate_complete": true
+}

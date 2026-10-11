@@ -1,0 +1,2 @@
+from route_actual189_evidence_failed_descendants61_v1_20261011 import execute
+if __name__=='__main__':execute('prepare_StockRank10Embedding192_selected_candidate_v1_20261011.py')
