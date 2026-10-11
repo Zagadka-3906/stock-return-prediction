@@ -1,0 +1,83 @@
+"""Publish frozen priority changes or all completed screen records to main under the shared mutex."""
+from pathlib import Path
+from datetime import datetime,timezone,timedelta
+import sys,os,time,gzip,hashlib,argparse
+A=Path(__file__).resolve().parent;ROOT=A.parent;sys.path[:0]=[str(ROOT),str(A)]
+from run_dependency_queue_v3_20261006 import read,sha,create,owned
+
+def allowed():
+    c=read(A/'current_user_runtime_control_20261010.json');read(A/'current_user_runtime_control_20261009.json')
+    return c['status']=='optimization_active_after_explicit_manual_resume' and datetime.now(timezone(timedelta(hours=8)))<datetime.fromisoformat(c['stop_at_local'])
+
+def main(phase):
+    assert allowed()
+    screen=Path('E:/赛题五_本机临时')/({'temporal73':'causal_neural_smoothing73_screen_v1_20261010','protected':'protected_official_top_screen_v2_20261010','valid':'protected_upper_tail_screen_v1_20261010','huber65':'Huber010_high_impact65_screen_v1_20261010','quant37':'protected_quantization37_screen_v1_20261010','budget37':'budgeted_neural_Top37_screen_v1_20261010'}.get(phase,'high_impact_cumulative_screen_v2_20261010'))
+    sources=[A/name for name in ['prepare_protected163_full_registry_sources_v1_20261010.py', 'protected163_full_registry_source_preparation_v1_20261010.json', 'protected163_candidate_sources_preparation_v2_20261010.json', 'protected163_storage_v2_20261010.py', 'prepare_protected163_selected_candidate_v2_20261010.py', 'seal_protected163_selected_candidate_v2_20261010.py', 'prepare_Huber_protected_pilot67_and_selected_native14_v1_20261010.py', 'protected_tail_after157_native_stage_v2_20261010.py', 'predict_protected_tail_after157_complete_scheme_v2_20261010.py', 'protected_Huber_after157_native_predictor_preparation_v1_20261010.json', 'run_protected163_complete_family_v1_20261010.py', 'run_protected163_full_registration_v1_20261010.py', 'owned_idle_publication_wait_runtime_v1_20261010.py', 'lossless_chunked_safe_main_runtime_v1_20261009.py', 'serial_main_publication_mutex_v1_20261009.py', 'byte_exact_ranking_stream_runtime_v1_20261010.py', 'byte_exact_publication_encoder_runtime_v1_20261010.py', 'register_HuberProtected163_round163_artifacts_20261010.py', 'publish_HuberProtected163_round163_full_validation_20261010.py', 'optimize_training_round163.py', 'finalize_training_round163.py', 'lossless_ranking_runtime_adapter_round163_v2_20261008.py', 'build_lossless_ranking_display_round163_v2_20261008.py', 'verify_lossless_ranking_display_round163_v2_20261008.py', 'collect_full_lossless_round163_qa74_20261010.py', 'prepare_Huber163_complete67_sources_v1_20261010.py', 'run_Huber163_complete_family_admitted_v2_20261010.py', 'run_Huber163_full_registration_cleanup_v2_20261010.py', 'verify_Huber163_complete67_preflight_v1_20261010.py', 'protected163_full_family_preflight_v1_20261010.json', 'HuberProtected163_full67_ready_dispatch_v1_20261010.json', 'run_continuous_fast_reused_frontiers_v16_20261010.py', 'run_continuous_fast_reused_frontiers_v17_20261010.py', 'handoff_superior_Huber_priority_controller_v16_20261010.py', 'Huber163_admitted_controller17_actual_launch_v1_20261010.json', 'reconcile_completed162_post_publication_cleanup_v1_20261010.py', 'actual_complete162_post_publication_cleanup_reconciliation_v1_20261010.json', 'monitor_fast_optimization_v16_20261010.py', 'monitor_fast_optimization_v17_20261010.py', 'prepare_progress_observer17_Huber163_smoothing73_v1_20261010.py', 'causal_neural_rank_smoothing_v1_20261010.py', 'verify_causal_neural_rank_smoothing_v1_20261010.py', 'causal_neural_rank_smoothing_controls_v1_20261010.json', 'causal_neural_smoothing_synthetic_count_clarification_v1_20261010.json', 'prepare_causal_neural_smoothing73_screen_v1_20261010.py', 'run_causal_neural_smoothing73_screen_v1_20261010.py', 'causal_neural_smoothing73_screen_plan_v1_20261010.json', 'causal_neural_smoothing73_actual_hidden_launch_v1_20261010.json', 'high_impact_priority_huber65_main_receipt_v7_20261010.json', 'high_impact_priority_quant37_main_receipt_v8_20261010.json', 'high_impact_priority_budget37_main_receipt_v9_20261010.json', 'github_validation_sync_main_20261005/round162_receipt.json', 'optimization_20261003_r162/full_registration_execution.json', 'optimization_20261003_r162/full_registration_failure.json']]
+    for tag in ('superior_Huber_priority_controller_handoff_v16_20261010','Huber163_smoothing73_observer_handoff_v17_20261010'):
+        sources.extend((A/tag).glob('*.json'))
+    for tag in ('TailProtected162_round162_full_registration_v1_20261010_original_cleanup_failure_evidence_v1_20261010','TailProtected162_complete76_family_v1_20261010_original_cleanup_failure_evidence_v1_20261010','continuous_fast_reused_frontiers_v16_20261010','actual_complete162_post_publication_cleanup_reconciliation_v1_20261010'):
+        folder=A/'service_owned_workflows_20261006'/tag
+        sources.extend(folder.glob('*.json'));sources.extend(folder.glob('*.log'))
+    sources.extend(A/name for name in ['prepare_topweighted_Huber_training_frontier_v1_20261010.py', 'neural_BF16_medium2048_topweightedhuber010_seed09_e64_native_v1_20261009.py', 'neural_BF16_medium2048_topweightedhuber010_seed09_independent_forward_v1_20261009.py', 'train_neural_BF16_medium2048_topweightedhuber010_seed09_e64_bank6_v1_20261009.py', 'neural_BF16_medium2048_topweightedhuber010_seed09_e64_frontier_v1_20261010.json', 'verify_topweighted_Huber_loss_micro_gradients_v1_20261010.py', 'TopWeightedHuber_independent_loss_micro_gradient_controls_v1_20261010.json', 'prepare_topweighted_Huber_own_bank_controls_v1_20261010.py', 'TopWeightedHuber_own_bank_controls_source_admission_v1_20261010.json', 'run_continuous_fast_reused_frontiers_v18_20261010.py', 'handoff_topweighted_training_priority_controller_v18_20261010.py', 'prepare_progress_observer18_topweighted_training_v1_20261010.py', 'monitor_fast_optimization_v18_20261010.py', 'save_high_impact_runtime_handoff_v13_20261010.py', 'actual_optimization_fast_runtime_handoff_v13_20261010.json', 'cleanup_discarded_quantization_budget_scoring_csv_v1_20261010.py', 'github_validation_sync_main_20261005/round163_receipt.json', 'optimization_20261003_r163/full_registration_execution.json', 'high_impact_priority_preparation_main_receipt_v10_20261010.json', 'verify_neural_BF16_medium2048_huber010_seed09_restart_v1_20261009.py', 'verify_BF16Huber010161_independent_small_CPU_v1_20261009.py', 'verify_BF16Huber010161_full5_independent_GPU_v1_20261009.py', 'BF16Huber010161_complete_parent_native_stage_v1_20261009.py', 'verify_BF16Huber010161_native42_calendar_v1_20261009.py', 'build_reused_neural_frontier_v9_20261010.py', 'verify_neural_BF16_medium2048_topweightedhuber010_seed09_restart_v1_20261009.py', 'verify_BF16TopWeightedHuber010165_independent_small_CPU_v1_20261009.py', 'verify_BF16TopWeightedHuber010165_full5_independent_GPU_v1_20261009.py', 'BF16TopWeightedHuber010165_complete_parent_native_stage_v1_20261009.py', 'verify_BF16TopWeightedHuber010165_native42_calendar_v1_20261009.py', 'build_reused_topweighted_neural_frontier_v10_20261010.py'])
+    for tag in ('topweighted_training_priority_handoff_v18_20261010','TopWeighted_training_observer_handoff_v18_20261010','discarded_quantization_budget_csv_cleanup_v1_20261010'):
+        sources.extend((A/tag).glob('*.json'))
+    if phase in ('scores','protected','valid','huber65','quant37','budget37','temporal73'):
+        folder=A/'service_owned_workflows_20261006'/({'temporal73':'actual_causal_neural_smoothing73_screen_v1_20261010','protected':'actual_protected_official_top_screen_v2_20261010','valid':'actual_protected_upper_tail_screen_v1_20261010','huber65':'actual_Huber010_high_impact65_screen_v1_20261010','quant37':'actual_protected_quantization37_screen_v1_20261010','budget37':'actual_budgeted_neural_Top37_screen_v1_20261010'}.get(phase,'actual_high_impact_cumulative_screen_v2_20261010'))
+        while not (folder/'service_execution.json').is_file() or owned(read(folder/'native_launch.json')):
+            assert allowed();time.sleep(15)
+        assert read(folder/'service_execution.json')['status']=='passed'
+        proof=read(screen/'verification.json');expected=73 if phase=='temporal73' else 65 if phase=='huber65' else 37 if phase in ('protected','valid','quant37','budget37') else 97
+        assert proof['new_quality_score_records']==expected and len(proof['records'])==expected
+        assert proof['actual_nonidentity_full_controls']==expected-1 and proof['actual_nonidentity_prefix_controls']==3*(expected-1)
+        sources.extend(screen.glob('*.json'))
+        if phase!='valid':sources.append(A/('actual_causal_neural_smoothing73_screen_location_v1_20261010.json' if phase=='temporal73' else 'actual_budgeted_neural_Top37_screen_location_v1_20261010.json' if phase=='budget37' else 'actual_protected_quantization37_screen_location_v1_20261010.json' if phase=='quant37' else 'actual_Huber010_high_impact65_screen_location_v1_20261010.json' if phase=='huber65' else 'actual_protected_official_top_screen_location_v2_20261010.json' if phase=='protected' else 'actual_high_impact_cumulative_screen_location_v2_20261010.json'))
+        sources.extend(folder/n for n in ('service_execution.json','native_launch.json','job_definition.json'))
+        for row in proof['records']:
+            p=Path(row['official_score_cache']['official_metrics_source']);assert sha(p)==row['official_metric_capsule_sha256'];sources.append(p)
+    else:proof=None
+    assert allowed()
+    import publish_classifier_consensus_workflows_20261006 as h
+    from owned_idle_publication_wait_runtime_v1_20261010 import hold as suspended_idle
+    from lossless_chunked_safe_main_runtime_v1_20261009 import installed as safe
+    from serial_main_publication_mutex_v1_20261009 import installed as serial
+    from verified_TLS_Git_retry_runtime_v2_20261008 import installed as git_io
+    out=Path('E:/赛题五_本机临时')/('high_impact_priority_'+phase+'_main_v11_20261010');out.mkdir(exist_ok=False)
+    prefix=Path('validation_sync')/('high_impact_priority_'+phase+'_v11_20261010')
+    payload={};bindings={}
+    for p in dict.fromkeys(sources):
+        raw=p.read_bytes();assert not h.sync.SECRET.search(raw),p;digest=hashlib.sha256(raw).hexdigest()
+        target=(prefix/(p.relative_to(ROOT) if p.is_relative_to(ROOT) else Path('external_metadata')/(digest+'_'+p.name))).as_posix()
+        blob=raw
+        if len(blob)>=5*1024**2:blob=gzip.compress(blob,mtime=0);target+='.gz';assert gzip.decompress(blob)==raw
+        assert len(blob)<95*1024**2;payload[target]=blob;bindings[str(p)]={'published_path':target,'raw_sha256':digest}
+    payload[(prefix/'.gitattributes').as_posix()]=b'* -text\n'
+    payload[(prefix/'manifest.json').as_posix()]=h.sync.encoded({'status':'frozen_priority_preparation' if proof is None else 'completed_training_only_official_screen_not_submission_qualified',
+        'phase':phase,'files':bindings,'screen_records':0 if proof is None else len(proof['records']),'screen_full_and_prefix_checks':[0,0] if proof is None else [proof['actual_nonidentity_full_controls'],proof['actual_nonidentity_prefix_controls']],
+        'best_screen':None if proof is None else proof['best'],'submission_qualified':False,'complete_ranking_registration_still_required_for_new_screen_scheme':True,
+        'test_labels_read':False,'new_native_fits_by_publication':0,'deadline_local':read(A/'current_user_runtime_control_20261010.json')['stop_at_local']})
+    create(out/'frozen_before_publication.json',{'files':bindings,'phase':phase})
+    with serial(out/'serial_mutex.json') as mutex,safe(out/'safe'),git_io(out/'file_backed_git'):
+        mutex.acquire();assert allowed()
+        launch=read(A/'service_owned_workflows_20261006/main_publisher_v11_20261010/native_launch.json')
+        parent,worker,idle=suspended_idle(launch,'    main (watch_validations_main_v7_20261006.py:71)')
+        try:
+            sync=h.sync;previous=sync.git('rev-parse','HEAD');h.verify_main(previous);assert not sync.git('status','--porcelain')
+            for name,data in payload.items():sync.atomic(sync.WORKTREE/name,data)
+            names=sorted(payload)
+            for i in range(0,len(names),50):sync.git('add','-f','--',*names[i:i+50])
+            assert set(sync.git('-c','core.quotepath=false','diff','--cached','--name-only').splitlines())==set(names)
+            sync.git('-c','maintenance.auto=false','-c','gc.auto=0','commit','-m','发布新TopWeightedHuber20项独立损失梯度控制与完整163候选及新训练安排 '+phase,timeout=180)
+            commit=sync.git('rev-parse','HEAD');hashes={n:hashlib.sha256(d).hexdigest() for n,d in payload.items()};assert h.blob_hashes(commit,hashes)==hashes
+            sync.git('push','origin','HEAD:refs/heads/main',timeout=180);h.verify_main(commit);h.watcher.advance_source_index(commit)
+            value={'status':'pushed_and_remote_head_verified','phase':phase,'commit':commit,'branch':'main','raw_git_blobs_verified':len(hashes),
+                'url':'https://github.com/Zagadka-3906/stock-return-prediction/tree/main/'+prefix.as_posix(),'submission_qualified':False}
+            create(out/'receipt.json',value);create(A/('high_impact_priority_'+phase+'_main_receipt_v11_20261010.json'),value);print(value,flush=True)
+        finally:
+            for p in (parent,worker):
+                if p.is_running():p.resume()
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('phase',choices=['preparation','scores','protected','valid','huber65','quant37','budget37','temporal73']);args=parser.parse_args()
+    count=int(os.environ.get('GIT_CONFIG_COUNT','0'))
+    for i,(k,v) in enumerate((('http.proxy','http://127.0.0.1:7897'),('http.version','HTTP/1.1'))):os.environ[f'GIT_CONFIG_KEY_{count+i}']=k;os.environ[f'GIT_CONFIG_VALUE_{count+i}']=v
+    os.environ['GIT_CONFIG_COUNT']=str(count+2);main(args.phase)

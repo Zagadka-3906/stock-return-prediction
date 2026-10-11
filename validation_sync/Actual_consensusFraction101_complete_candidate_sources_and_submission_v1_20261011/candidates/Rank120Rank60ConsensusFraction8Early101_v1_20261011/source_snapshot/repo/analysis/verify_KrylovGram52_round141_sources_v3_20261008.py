@@ -1,0 +1,66 @@
+"""Admit139 after completed native checks, exact current-parent controls and24 source routes."""
+from pathlib import Path
+import hashlib,sys,time
+ROOT=Path(__file__).resolve().parents[1];A=ROOT/'analysis';sys.path[:0]=[str(ROOT),str(A)]
+from run_dependency_queue_v3_20261006 import read,sha,create,owned
+
+
+def closed(name):
+    folder=A/'service_owned_workflows_20261006'/name
+    while not (folder/'native_launch.json').exists() or owned(read(folder/'native_launch.json')):time.sleep(10)
+    assert read(folder/'service_execution.json')['status']=='passed',name
+
+
+def main():
+    for name in ('KrylovGram24_native_historical_hooks_v1_20261008','KrylovGram_multiyear_native_calendar_v1_20261008',
+        'KrylovGram141_historical_causal_main_publication_v1_20261008','KrylovGram20_causal_refit_controls_v2_20261008','SpectralGram52_round140_full_registration_v3_20261008',
+        'KrylovGram49_current_parent_controls_v3_20261008','all_forecast_percentiles_full_scoring_benchmark',
+        'cached_official_spearman_full12_benchmark','exact_native_JSON_archive_runtime_full_preflight'):closed(name)
+    import prepare_KrylovGram52_round141_sources_v3_20261008 as generator
+    prospective_path=A/'KrylovGram52_prospective_routes_v3_20261008.json';prospective=read(prospective_path)
+    assert prospective['status']=='passed_actual24_prospective141_sources_schema_graphs_baselines_status_paths_model_counts_and_cross_volume_bytes'
+    for path,digest in prospective['input_sha256'].items():assert sha(path)==digest,path
+    plan_path=A/'KrylovGram52_round141_plan_v1_20261008.json';plan=read(plan_path)
+    assert len(plan['heads'])==4 and plan['actual_existing_own_mature_annual_models']==20
+    for path,digest in plan['input_sha256'].items():assert sha(path)==digest,path
+    metadata=[plan_path];proofs={}
+    for label,pointer in (('historical','actual_KrylovGram49_parent134_location_v1_20261008.json'),
+        ('current','actual_KrylovGram49_current_parent_location_v3_20261008.json'),
+        ('hooks','actual_KrylovGram24_native_hooks_location_v1_20261008.json'),
+        ('calendar','actual_KrylovGram_multiyear_calendar_location_v1_20261008.json'),('causal','actual_KrylovGram20_causal_refit_location_v2_20261008.json')):
+        path=Path(read(A/pointer)['output'])/'verification.json';metadata += [A/pointer,path];proofs[label]=read(path)
+    current=proofs['current'];assert current['actual_full_cases']==49 and current['actual_cold_cases']==147
+    assert current['final141_exact_current_parent_controls_fulfilled'] and current['actual_comparison_parent_round'] in (138,139,140)
+    assert proofs['hooks']['actual_hooks']==proofs['hooks']['actual_cold_hooks']==24
+    assert proofs['calendar']['actual_calendar_cases']==24 and proofs['calendar']['actual_whole_day_controls']==48
+    assert proofs['causal']['actual_causal_same_configuration_refit_controls']==20 and proofs['causal']['actual_maturity_windows']==5
+    for row in plan['heads'].values():
+        metadata.append(Path(row['folder'])/'oof_verification.json')
+        for path in row['infos'].values():
+            path=Path(path);info=read(path);metadata += [path,Path(info['independent_'+row['state_kind']+'_state_path'])]
+    metadata=list(dict.fromkeys(metadata));index_path=A/'KrylovGram52_actual_controls_index_v3_20261008.json'
+    create(index_path,{'status':'passed_actual20_heads49_current_CDF147cold24_historical_native_hooks',
+        'input_sha256':{str(path):sha(path) for path in metadata},'original_external_metadata':{str(path):read(path) for path in metadata},
+        'actual_comparison_parent_round':current['actual_comparison_parent_round'],'no_large_weights_copied_into_Git':True,
+        'new_quality_scores':0,'test_labels_read':False})
+    outputs={str(parent):{name:hashlib.sha256(text.encode()).hexdigest() for name,text in generator.generate(parent).items()} for parent in (138,139,140)}
+    assert outputs==prospective['generated_source_sha256']
+    runtime=A/'actual4_official_scoring_8_5GiB_gate_preflight_20261007/verification.json'
+    assert read(runtime)['status']=='passed_actual4_uncached_full_official_calls_at_8_5GiB_start_gate_all8_and_CSV_and_input_bits_exact'
+    pins={**prospective['input_sha256'],**plan['input_sha256'],**{str(p):sha(p) for p in [Path(__file__),plan_path,index_path,prospective_path,runtime,*[p for p in generator.source_paths() if p.is_file()]]}}
+    for proof in proofs.values():
+        for path,digest in proof['input_sha256'].items():
+            assert path not in pins or pins[path]==digest,path
+            pins[path]=digest
+    for path,digest in pins.items():assert sha(path)==digest,path
+    create(A/'KrylovGram52_round141_source_admission_v3_20261008.json',{
+        'status':'passed_actual20_heads49_current_CDF147cold24hooks_and24_prospective141_sources',
+        'at_local':time.strftime('%Y-%m-%dT%H:%M:%S'),'input_sha256':pins,'generated_source_sha256':outputs,
+        'actual_existing_native_model_audits':20,'actual_full_OOF_heads':4,'actual_full_transform_controls':49,
+        'actual_cold_transform_controls':147,'actual_historical_native_hooks':24,'actual_calendar_cases':24,
+        'actual_comparison_parent_round':current['actual_comparison_parent_round'],'new_quality_scores':0,
+        'candidate_future_inference_and_QA52_pending':True,'test_labels_read':False})
+    print('140 first quality admitted after actual20,49/147,24 hooks and24 receiver checks.',flush=True)
+
+
+if __name__=='__main__':main()

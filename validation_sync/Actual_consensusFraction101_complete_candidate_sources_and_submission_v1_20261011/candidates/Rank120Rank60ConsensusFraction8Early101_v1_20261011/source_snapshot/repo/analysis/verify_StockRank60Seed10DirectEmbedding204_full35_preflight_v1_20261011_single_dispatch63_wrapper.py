@@ -1,0 +1,2 @@
+from route_verified_idle_future_single_dispatch63_v1_20261011 import execute
+if __name__=='__main__':execute('verify_StockRank60Seed10DirectEmbedding204_full35_preflight_v1_20261011.py')

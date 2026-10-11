@@ -1,0 +1,2 @@
+from route_verified_future_byte_exact64_v1_20261011 import execute
+if __name__=='__main__':execute('normalize_completed_stock_rank20long_embedding_complete48_after187_v1_20261011.py')

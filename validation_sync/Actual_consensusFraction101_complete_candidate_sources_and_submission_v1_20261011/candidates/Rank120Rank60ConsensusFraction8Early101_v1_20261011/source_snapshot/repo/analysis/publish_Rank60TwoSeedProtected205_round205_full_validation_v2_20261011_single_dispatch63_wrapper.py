@@ -1,0 +1,2 @@
+from route_verified_idle_future_single_dispatch63_v1_20261011 import execute
+if __name__=='__main__':execute('publish_Rank60TwoSeedProtected205_round205_full_validation_v2_20261011.py')
