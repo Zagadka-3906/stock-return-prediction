@@ -1,56 +1,132 @@
-# 使用与复现
+# 安装与运行
 
-现有方案的严格训练内选模推荐已暂停，原因是[历史测试信息反馈](SELECTION_COMPLIANCE.md)。以下命令与文件用于复现研究产物；可运行或哈希一致不代表选模来源合规。
+先跑通根目录的固定 XGBoost 基准，可以完整经历数据准备、特征构建、模型训练和预测输出。该入口使用 67 项特征、16 个 XGBoost 种子模型及一个 LightGBM 辅助模型。复杂的 37 模型研究方案和单模型基线有各自的冻结入口，见[复现指南](REPRODUCIBILITY.md)。
 
-## 先选择你要做的事
+## 运行前需要什么
 
-| 目的 | 入口 |
+| 条件 | 说明 |
 |---|---|
-| 了解项目和结论 | [README](../README.md)、[关于项目](../ABOUT.md)、[成果与交付](RESULTS.md) |
-| 核查最新提交文件 | 当前候选的交付指针、`submission_manifest.json` 和 `方案包核验.json` |
-| 从头运行一个固定配方 | 根目录 `run.py features`、`train_ensemble.py`、`predict.py` 的67特征基准 |
-| 复现最新37模型方案 | 取得最新方案包、原始数据及所需历史依赖后，按冻结协议恢复；不是执行根目录基准入口 |
-| 继续新实验 | 阅读[模型与验证](METHODS.md)和[后续选模标准](../后续选模标准.md)，建立新的独立输出目录 |
+| Python | 原研究环境为 Python 3.12 |
+| 操作系统 | 基准命令提供 Windows 与 Linux / macOS 写法；历史进程管理脚本依赖 Windows |
+| 数据 | 自行取得原始行情 CSV，字段见[数据指南](DATA_GUIDE.md) |
+| 计算资源 | 可用 CPU 训练；完整面板约 790 万训练行，特征矩阵与模型需要额外内存和磁盘 |
+| GPU | 固定基准支持 `--device cuda`，需匹配的 XGBoost 与驱动；不是运行基准的前提 |
 
-## 1. 准备数据
+仓库未提供通用的最低内存配置或跨平台性能基准。请根据数据规模安排资源，先看脚本和配置，再启动全量训练。
 
-需自行取得赛题数据，放在项目根目录下：
+## 获取代码
 
-```text
-data/raw/训练集.csv
-data/raw/测试集_X.csv
+```shell
+git clone https://github.com/Zagadka-3906/stock-return-prediction.git
+cd stock-return-prediction
 ```
 
-训练集应包含 `ts_code, trade_date, open, high, low, close, vol, amount, flag_limit_up, flag_limit_down, y_ret_1d`。预测输入具有相同行情字段，不含收益标签。股票代码保持字符串，交易日期采用 `YYYYMMDD`。
+仓库含大量历史证据。只读主流程时，可采用稀疏检出，先获取通用代码和文档：
 
-正常训练、选模和推理不需要实际 `测试集_Y.csv`。为训练内部评分准备的同名X/Y副本来自训练集验证区间，其数据来源须与实际比赛测试集区别记录。
+```shell
+git clone --depth 1 --filter=blob:none --sparse https://github.com/Zagadka-3906/stock-return-prediction.git
+cd stock-return-prediction
+git sparse-checkout set src config docs tests tools
+```
 
-## 2. 安装基准环境
+稀疏检出会省略未选择目录。阅读历史方案前，用 `git sparse-checkout add analysis experiments results` 补充相应源码；冻结证据按[复现指南](REPRODUCIBILITY.md)中的具体归档目录获取。
 
-项目本机运行环境为Windows 11、Python 3.12；基础依赖版本记录在[requirements.txt](../requirements.txt)。以下是新环境的基准操作，命令在仓库根目录执行：
+## 安装环境
+
+<details open>
+<summary><strong>Windows · PowerShell</strong></summary>
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-基础流程主要使用Polars、NumPy、SciPy、LightGBM、XGBoost和Qlib。Qlib用于提供所采用的Alpha158公式定义；特征在赛题数据上计算，不另行下载Qlib市场数据。
+后续直接调用虚拟环境的 Python，无需更改 PowerShell 执行策略或激活脚本。
 
-`requirements.txt`不覆盖全部研究脚本。历史搜索依赖见[requirements-experiments.txt](../requirements-experiments.txt)；最新神经网络方案还涉及PyTorch、CatBoost、joblib等库，CUDA版本须与设备兼容。本机实际使用PyTorch `2.11.0+cu128`、CatBoost `1.2.10`、joblib `1.6.0`，这些是已运行环境的记录。Windows隐藏工作流管理还使用psutil、PowerShell及Windows进程接口。
+</details>
 
-## 3. 运行67特征、16种子基准
+<details>
+<summary><strong>Linux / macOS · shell</strong></summary>
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+下面命令中的 `.\.venv\Scripts\python.exe` 对应替换为 `.venv/bin/python`。此处提供命令转换，未承诺全部历史脚本可跨平台运行。
+
+</details>
+
+基础依赖由 [requirements.txt](../requirements.txt)固定，主要包括 Polars、PyArrow、NumPy、SciPy、Pandas、LightGBM、XGBoost 和 Qlib。Qlib 仅提供所选 Alpha158 特征公式定义，无需另外下载它的市场数据。
+
+历史实验的附加依赖见 [requirements-experiments.txt](../requirements-experiments.txt)。神经网络与 CatBoost 等研究还有独立环境依赖；这些不属于根目录固定基准的必需安装步骤。
+
+## 准备数据
+
+```text
+data/raw/
+├── 训练集.csv
+└── 测试集_X.csv
+```
+
+训练数据需要 `y_ret_1d`，预测数据仅需行情字段。股票代码保留字符串，日期使用 `YYYYMMDD`；完整字段列表见[数据指南](DATA_GUIDE.md#字段约定)。
+
+特征构建会读取训练和预测行情，按股票、日期排序，以便预测起点能够使用此前的行情历史。测试标签不会作为特征输入。处理自己的数据时，需要保持时间顺序和主键唯一，并满足固定推理入口的完整矩形面板要求。
+
+## 构建 63 项基础特征
 
 ```powershell
 .\.venv\Scripts\python.exe -B -X utf8 run.py features
+```
+
+主要产物为 `data/features.parquet` 和 `data/feature_manifest.json`。前者缓存基础特征，后者记录特征名称、数量与 Qlib 公式等信息。
+
+当原始数据或特征实现变化时，显式重建缓存：
+
+```powershell
+.\.venv\Scripts\python.exe -B -X utf8 run.py features --rebuild-features
+```
+
+同伴特征使用独立缓存 `data/peer_features.parquet`。重建基础特征后，也应让同伴缓存与它保持同源；入口不会自动证明旧缓存与新数据一致。建议将旧缓存移至单独备份目录后重新生成，并使用新的模型输出目录。
+
+## 训练固定集成
+
+```powershell
 .\.venv\Scripts\python.exe -B -X utf8 train_ensemble.py --threads 8 --device cpu
+```
+
+入口读取 [config/ensemble.json](../config/ensemble.json)，追加四项同伴特征，生成 `data/peer_features.parquet`，训练并保存：
+
+```text
+models/ensemble/
+├── xgboost_seed2026.ubj
+├── ...
+├── xgboost_seed2041.ubj
+└── auxiliary.txt
+```
+
+16 个 XGBoost 模型学习一天收益的横截面排名；LightGBM 辅助模型提供收益信号。已存在的模型文件默认复用。需要重新训练时可传 `--retrain`，该参数会替换配置指向的模型文件，应先确认工作目录。
+
+可传入独立配置：
+
+```powershell
+.\.venv\Scripts\python.exe -B -X utf8 train_ensemble.py --config config/ensemble.json --threads 8 --device cpu
+```
+
+这里的配置接口支持该固定配方；实现会检查 67 项特征、种子唯一性和既定后处理参数，不能把它当成通用的任意模型搜索接口。
+
+## 生成预测
+
+```powershell
 .\.venv\Scripts\python.exe -B -X utf8 predict.py --threads 8 --output outputs/baseline_predictions.csv
 ```
 
-第一步生成基础63特征缓存；集成流程追加4个同伴特征。第二步按[config/ensemble.json](../config/ensemble.json)训练16种子XGBoost集成及辅助模型。第三步从保存模型输出预测。已保存且符合配方的模型会按入口逻辑复用；`--retrain`会要求重新训练。
+推理按日期和股票排序计算，再恢复输入行顺序。输出列为 `ts_code,trade_date,pred`，入口会检查记录数、主键顺序、重复与非有限值。成功后会打印行数、日期数、股票数、成员数和输出位置。
 
-这一流程生成历史基准，不会生成最新 `0.45146122` 候选。`run.py all`运行更早的LightGBM基准，代码中的验证年份是2022—2024，也不等于后续2020—2024连接验证流程。
+> [!NOTE]
+> 固定 XGBoost 基准的输出是后处理排名的仿射变换：有效值为 `0.04 × (ranked − 0.5)`，无效价格哨兵值为 `−0.05`。这种变换保持排序，并不等同于经过经验校准的收益率预测。
 
-先查看入口参数：
+## 查看参数与评分
 
 ```powershell
 .\.venv\Scripts\python.exe -B -X utf8 run.py --help
@@ -58,24 +134,8 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -B -X utf8 predict.py --help
 ```
 
-## 4. 使用最新交付
+`run.py all` 运行的是更早的 LightGBM 流程，其验证年份为 2022—2024。它与上述固定 XGBoost 基准、基线143和37模型方案分别对应不同实现。
 
-最新研究交付位置、CSV和ZIP的SHA256见[成果与交付](RESULTS.md)及[机器可读状态](latest_results.json)。方案包中的 `submission.csv`保持原样以供复现；当前暂停合规推荐，不能仅凭文件已生成或已核验就认定应按既定标准提交。
+评分函数为 `evaluate.evaluate(_submission_path, _data_dir)`。评分目录内的 `测试集_X.csv` 和 `测试集_Y.csv` 应由所评估的验证区间构成。训练内部研究只使用训练期留出的标签；具体调用和边界见[方法详解](METHODS.md#评分定义)。
 
-方案包包含37个原生模型、选择配置、冻结源码和验证证据，但没有原始比赛数据或Python环境。冻结协议包含本机D/E盘绝对路径，部分流程依赖父方案与历史缓存。因此，ZIP是一份已核验交付及复现材料，不是跨机器解压后即可自动重新训练的安装包。
-
-若要完整复现，先按[目录与记录](REPOSITORY_GUIDE.md)确定父方案、数据、配置和模型依赖，核验文件哈希，再恢复对应路径与环境。弃用权重已删除的历史方案需要重新训练或从另有保存的副本恢复，不能假定Git克隆中存在全部权重。带冻结哈希的源码副本应保持原样，新尝试使用新目录。
-
-## 5. 理解评分入口
-
-[evaluate.py](../evaluate.py)暴露 `evaluate(submission_path, data_dir)`，会从 `data_dir`读取名为 `测试集_X.csv` 和 `测试集_Y.csv` 的文件。脚本末尾的默认路径是原评分示例路径，不是通用命令行配置。
-
-训练内部比较时，传入由训练期样本构造的独立评分目录；不要把实际测试答案放入选模流程。具体过滤规则和公式见[模型与验证](METHODS.md)。最新记录已保存官方指标，阅读文档或提交现成CSV无需重跑评分。
-
-## 常见疑问
-
-**为什么克隆后不能运行某轮脚本？** Git主要保存代码和记录；原始数据、二进制权重、预测缓存和旧运行路径可能未随克隆提供，部分弃用产物已经清理。
-
-**为什么两个“最新方案”分数不同？** 一个是完整推理已通过的新候选，一个是正式完整榜登记已完成的交付。它们的资格状态不同，见[成果与交付](RESULTS.md)。
-
-**18,959是模型数量吗？** 这是评分记录数量，包含对照、配置变化、复用与重复记录，不是独立模型或独立试验数量。
+下一步可阅读[系统架构](ARCHITECTURE.md)，理解每个入口背后的模块；如果目标是复算某份历史文件，请使用[复现指南](REPRODUCIBILITY.md)。

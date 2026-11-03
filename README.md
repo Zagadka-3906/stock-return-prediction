@@ -1,96 +1,208 @@
-# 赛题五：股票未来一天收益预测
+<div align="center">
 
-利用赛题提供的A股日频量价数据，预测股票未来一天收益，并在同一天对股票进行排序。项目比较树模型、神经网络、集成与后处理的完整方案，保存训练内连续向前验证分数及可核验的 `submission.csv`。
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/assets/hero-light.svg">
+  <img alt="Stock Return Prediction — A 股日频量价建模、横截面排序与可核验的预测流程" src="docs/assets/hero-light.svg" width="100%">
+</picture>
 
-**选模合规更正（2026-10-11）：历史上曾从测试X的后续价格重建343天收益，并据测试结果调整推荐和后续研究方向。当前方案继承了这条研究链，因此撤回“严格仅在训练内部选模”的结论，暂停其合规推荐。** 详见[选模合规更正](docs/SELECTION_COMPLIANCE.md)。后续程序不再读取测试标签，不能消除历史测试反馈。
+<h1>Stock Return Prediction</h1>
 
-**截至2026-10-11：最新已封装候选训练验证S为0.45146122，包含37个已保存原生模型；模型重载、独立全量复算、提交CSV重放和80日冷启动因果检查均已通过。正式完整榜登记仍待完成，尚未向比赛平台上传。** 该分数不是官方测试集成绩。
+<p><strong>从每日量价数据，到数千只股票的相对收益预测。</strong></p>
+<p>A 股横截面建模研究 · 树模型与神经网络 · 连续向前验证 · 预测产物核验</p>
 
-## 阅读入口
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](requirements.txt) [![Data](https://img.shields.io/badge/Data-Polars_%2B_Parquet-0F766E?style=flat-square)](docs/DATA_GUIDE.md) [![Models](https://img.shields.io/badge/Models-Trees_%2B_Neural_Nets-475569?style=flat-square)](docs/METHODS.md) [![Validation](https://img.shields.io/badge/Validation-Walk_Forward-0F766E?style=flat-square)](docs/METHODS.md#连续向前验证) [![Research](https://img.shields.io/badge/Status-Research_Archive-B45309?style=flat-square)](docs/RESULTS.md)
 
-| 想了解什么 | 文档 |
-|---|---|
-| 项目目的、输入输出和适用场景 | [关于项目](ABOUT.md) |
-| 数据准备、基准运行与最新方案复现条件 | [使用与复现](docs/GETTING_STARTED.md) |
-| 特征、模型、评分与未来信息检查 | [模型与验证](docs/METHODS.md) |
-| 最新分数、提交文件、方案包和完整榜位置 | [成果与交付](docs/RESULTS.md) |
-| 目录职责、状态文件及历史记录 | [目录与记录](docs/REPOSITORY_GUIDE.md) |
-| 可供程序读取的成果快照 | [最新状态JSON](docs/latest_results.json) |
-| 后续选模应遵循的标准 | [后续选模标准](后续选模标准.md) |
-| 历史测试反馈与当前推荐状态 | [选模合规更正](docs/SELECTION_COMPLIANCE.md) |
+<p>
+<a href="#项目亮点">项目亮点</a> ·
+<a href="#快速开始">快速开始</a> ·
+<a href="docs/METHODS.md">方法详解</a> ·
+<a href="docs/RESULTS.md">实验结果</a> ·
+<a href="docs/README.md">完整文档</a>
+</p>
 
-## 项目解决什么问题
+</div>
 
-对数千只股票每天形成预测，不仅需要识别未来表现的相对强弱，还要考虑头部名单的收益与稳定性。赛题将这三个目标合成一个评分：
+## 每天为 4,650 只股票建立一份相对收益排序
 
-```text
-S = 0.4 × 每日Rank IC均值
-  + 0.3 × Top 10%股票的年化超额收益
-  + 0.3 × (1 − 相邻Top 10%名单的平均换手率)
+本项目使用股票的日频开高低收、成交量、成交金额和涨跌停标记，学习未来一天的收益信号。研究同时关注三个问题：预测能否正确排序、排名靠前的股票是否跑赢同日股票池、头部名单能否保持稳定。
+
+仓库记录了从单模型到多模型组合的实现：量价特征计算、同伴特征、树模型与神经网络、排名融合、因果平滑、收益映射，以及模型重载和预测文件复算。你可以从固定配方的基准入口开始，也可以沿着冻结源码和哈希记录阅读复杂方案的演进。
+
+| 数据规模 | 验证跨度 | 预测输出 | 实验记录 |
+|:---:|:---:|:---:|:---:|
+| **790 万**训练样本 | **1,212** 个验证交易日 | **160 万**条预测 | **18,959** 条评分记录 |
+| 2018—2024 年，4,650 只股票 | 2020—2024 年连续连接 | 344 日 × 4,650 只股票 | 含对照、复用与重复配置[^records] |
+
+## 项目亮点
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>01 · 从量价到横截面</h3>
+<p>63 项基础特征覆盖 K 线、趋势、波动、流动性和同日相对位置；固定集成基准再加入 4 项同伴特征。Qlib 提供所选 Alpha158 公式定义，Polars 在项目数据上计算。</p>
+</td>
+<td width="50%" valign="top">
+<h3>02 · 比较完整预测流程</h3>
+<p>研究覆盖 LightGBM、XGBoost、CatBoost、MLP、GRU、Transformer 和线性残差方法，进一步考察排名融合、头部保护、名单留存与收益校准。</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<h3>03 · 沿时间向前验证</h3>
+<p>逐年生成样本外预测，再连接成同一验证区间。预处理、标签成熟和年度交界处的换手都有明确口径，便于理解各个分数从何而来。</p>
+</td>
+<td valign="top">
+<h3>04 · 让产物能够核对</h3>
+<p>保留配置、源码快照、原生模型哈希、重载结果、独立推理、CSV 重放与前缀一致性记录，让读者能从结论追到文件和执行证据。</p>
+</td>
+</tr>
+</table>
+
+## 一条从数据到预测的研究流水线
+
+![数据经特征、模型、排序处理和核验后生成预测文件的流程动画](docs/assets/pipeline.gif)
+
+动画展示处理顺序，不表示训练进度或真实市场表现。[查看静态流程图](docs/assets/pipeline.svg)。
+
+```mermaid
+flowchart LR
+    A["日频行情面板"] --> B["量价与横截面特征"]
+    B --> C["树模型 / 神经网络 / 线性模型"]
+    C --> D["排名融合与因果后处理"]
+    D --> E["收益预测 CSV"]
+    B --> F["逐年向前验证"]
+    F --> G["连接评分与诊断"]
+    E --> H["重载 / 重放 / 前缀核验"]
 ```
 
-项目以该S为计分目标。标准要求训练、特征选择、参数、集成权重、后处理和收益映射都在训练集内部确定，冻结后才生成提交文件。现有历史路线未完整满足这一要求；最新阶段的训练与评分使用训练期数据，不能据此断言整个研究链未受测试信息影响。最终 `pred`对应未来一天收益预测，内部排名信号不能直接当作收益率解释。
+输入以 `(ts_code, trade_date)` 标识股票与日期；输出统一为三列：
 
-## 数据与产物
-
-| 数据 | 日期范围 | 股票数 | 行数 |
-|---|---|---:|---:|
-| 赛题训练集 | 2018-01-02—2024-12-31 | 4,650 | 7,900,350 |
-| 后续选模的连接验证区间 | 2020—2024，1,212个交易日 | 4,650 | 5,635,800 |
-| 实际预测输入 | 2025-01-02—2026-06-08，344个交易日 | 4,650 | 1,599,600 |
-
-输入字段包括股票代码、交易日期、开高低收、成交量、成交金额和涨跌停标记；训练集另有 `y_ret_1d`。数据由赛题提供，原始CSV不随普通Git源码克隆分发。
-
-输出CSV的列名及顺序：
-
-```text
+```csv
 ts_code,trade_date,pred
 ```
 
-仓库还保存配置、官方指标、模型与源码哈希、因果检查、失败恢复记录及main发布回执。最新二进制权重方案ZIP在维护者本地保存，具体位置与取得文件后的核验方法见[成果与交付](docs/RESULTS.md)。
+`pred` 的含义随路线而有所区别：直接回归基线输出模型预测的收益率；固定 XGBoost 基准对排名作仿射变换；复杂研究方案使用对应的训练期映射。读取文件前，应先确认它来自哪条路线。
 
-## 方法概览
+## 两条值得先读的路线
 
-基础63项量价特征覆盖K线、趋势、波动、量额变化和同日横截面位置；历史XGBoost基准加入4项同伴特征，共67项。后续研究还测试更宽的横截面特征、股票身份嵌入、不同训练窗口与标签期限。
+| | 直接收益基线 | 多模型集成研究 |
+|---|---|---|
+| 核心设计 | 63 特征 → 单个 LightGBM → 一天收益 | 多种信号 → 排名融合 → 稳定性处理 → 收益映射 |
+| 最终推理模型 | 1 个；另保留 5 个年度验证模型 | 37 个原生模型，具有不同分工 |
+| 阅读价值 | 理解标签、时间边界和完整验证流程 | 研究信号互补、成员选择与排序的相互影响 |
+| 训练期连接综合分 | `0.3387488124` | `0.4514612197` |
+| 详细入口 | [固定 LightGBM 基线](docs/TRAIN_ONLY_BASELINE143.md) | [模型与验证](docs/METHODS.md#多模型研究方案) |
 
-模型探索包括LightGBM、XGBoost、CatBoost、MLP、GRU、Transformer、线性和条件残差模型。完整方案结合排名融合、因果平滑、名单留存、条件分支、头部保护和训练期收益映射。方法被测试过不等于最终采用，具体记录保留各自的分数与资格。
+另有便于从根目录运行的 **67 特征、16 种子 XGBoost 固定基准**。它包含一个 LightGBM 辅助模型；下面的快速开始运行这条路线。
 
-最新方案保留第183轮完整父方案，加入60日和120日股票身份网络的一致性信号，以0.04权重调整非涨停有效股票池的下部排序，保护前15%区域。新增阶段的 `disagreement_penalty`参数为0.75。此次提分主要来自IC，保存的Top年化超额和平均换手没有变化。
+## 快速开始
 
-## 当前成果与状态
-
-| 方案或记录 | 训练内部连接S / 数量 | 状态 |
-|---|---:|---|
-| 最新候选101：60/120日融合、15%保护区 | **0.4514612196682616** | 37模型完整推理、封装、main发布完成；正式榜待登记 |
-| 保留备份候选85 | 0.4514555940046018 | 完整核验的备份 |
-| 第189轮已登记交付 | 0.4514130257498636 | 正式完整资格登记已完成，继续保留 |
-| 正式完成登记 | 至第191轮 | 第192轮登记中断，未算完成 |
-| 最新训练评分明细 | 18,959项 | 17,753项正式评分实例＋1,206项已完成原始评分实例 |
-
-评分记录包含对照、配置变化、复用及重复，不能将18,959解释为独立模型数。最新候选虽已完成模型与提交文件核验，尚未替换正式已登记交付指针。完整榜、过滤后明细、八项指标及文件哈希集中在[成果与交付](docs/RESULTS.md)。
-
-## 从哪里运行
-
-首次运行可使用固定的67特征、16种子XGBoost基准，在准备数据和依赖后依次执行：
+### 1. 获取代码并准备环境
 
 ```powershell
+git clone https://github.com/Zagadka-3906/stock-return-prediction.git
+cd stock-return-prediction
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+以上为 Windows / PowerShell 命令。Python 3.12 是原研究环境；依赖版本见 [requirements.txt](requirements.txt)。Linux / macOS 的对应命令见[安装与运行](docs/GETTING_STARTED.md)。
+
+### 2. 放置原始数据
+
+```text
+data/raw/
+├── 训练集.csv
+└── 测试集_X.csv
+```
+
+原始数据需要自行取得，Git 源码克隆不包含这些 CSV。字段要求、缺失值和面板结构见[数据指南](docs/DATA_GUIDE.md)。
+
+### 3. 构建特征、训练并输出预测
+
+```powershell
 .\.venv\Scripts\python.exe -B -X utf8 run.py features
 .\.venv\Scripts\python.exe -B -X utf8 train_ensemble.py --threads 8 --device cpu
 .\.venv\Scripts\python.exe -B -X utf8 predict.py --threads 8 --output outputs/baseline_predictions.csv
 ```
 
-**以上是历史固定基准，不是最新37模型候选的复现命令。** 根目录 `run.py all`运行更早的LightGBM流程。最新方案需指定冻结协议、父方案、保存权重、数据与环境；现成方案包作为研究产物保存，不能据当前状态认定为严格符合选模标准的推荐提交。详细条件见[使用与复现](docs/GETTING_STARTED.md)。
+预测入口会检查列名、记录数、股票与日期顺序、重复主键和有限值。模型保存在 `models/ensemble/`，输出在 `outputs/baseline_predictions.csv`。
 
-## 如何阅读仓库
+> [!NOTE]
+> 这些命令运行固定 XGBoost 基准。37 模型研究方案依赖冻结协议、保存权重和父方案；原始数据与权重 ZIP 均未作为 GitHub Release 提供。详见[复现指南](docs/REPRODUCIBILITY.md)。
 
-`src/`和 `config/`保存通用逻辑与基准配置，`experiments/`保存早期主题研究，`analysis/`保存后续验证和运行工具，`results/`保存成果摘要。已完成验证及交付的源码、指标和哈希归档主要在 `validation_sync/`；大文本可能以gzip保存。
+## 怎样衡量预测质量
 
-`data/`、`models/`、`candidates/`和临时目录主要由本地D/E盘管理。为释放存储，已删除一批确认未采用的权重和恢复缓存，保留分数、配置和验证记录。历史脚本可能依赖已归档或已清理文件，不能按文件名随意批量执行。目录及记录解释见[目录与记录](docs/REPOSITORY_GUIDE.md)。
+项目沿用既有评分器，将排序、头部超额与名单稳定性放在一起观察：
 
-## 结果应如何理解
+```math
+S = 0.4\,\overline{\mathrm{RankIC}}
+  + 0.3\,R_{\mathrm{excess,annual}}
+  + 0.3\,(1-\overline{\mathrm{turnover}})
+```
 
-后续选模使用2020—2024逐年样本外预测连接后的官方S，年度交界处连续计算换手。验证区间被多次用于研究，选择偏差尚未校正，训练验证分不是独立盲测结果。
+这里的换手是相邻 Top 10% 股票集合的 **Jaccard 距离**，年化收益是日均收益乘 252。基准股票池为同日过滤后的股票平均，不是指数。具体过滤与样本门槛见[评分定义](docs/METHODS.md#评分定义)。
 
-历史测试结果不仅被查看，还反馈到了候选推荐与研究方向。当前阶段没有再次读取实际测试标签，不能使整条研究链成为严格训练内选模。分数、正式榜登记、推理核验、封装和选模来源合规分别记录；当前暂停合规推荐，模型优化仍暂停。
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/score-dark.svg">
+  <img src="docs/assets/score-light.svg" alt="37 模型方案的综合分贡献：Rank IC 0.049121、年化超额 0.112053、名单稳定性 0.290288，合计 0.451461" width="100%">
+</picture>
+
+37 模型方案在 **2020—2024 年训练期连接验证**中记录的指标为：
+
+| Rank IC 均值 | Top 10% 年化超额 | 相邻名单平均换手 | 综合分 S |
+|---:|---:|---:|---:|
+| `0.122802` | `37.3509%` | `3.2375%` | `0.45146122` |
+
+稳定性项对总分贡献较大，阅读结果时需要同时查看三项原始指标。完整八项指标、基线对照、文件哈希和归档入口见[结果与产物](docs/RESULTS.md)。
+
+> [!IMPORTANT]
+> 上述为历史研究验证结果。验证区间被反复用于研究，且旧集成路线曾受测试期结果反馈，不能将这些数字解释为独立盲测或实盘收益。已知限制与更正记录见[研究边界](docs/SELECTION_COMPLIANCE.md)。[^snapshot]
+
+## 代码地图
+
+```text
+stock-return-prediction/
+├── src/                 特征、同伴信号、集成、评分和后处理
+├── config/              固定基准的特征顺序与训练配方
+├── experiments/         早期模型与特征研究
+├── analysis/            后续研究、冻结、推理与核验脚本
+├── tests/               评分与预测相关检查
+├── results/             指标、轮次摘要与结果索引
+├── validation_sync/     冻结源码、协议、哈希与执行证据
+├── docs/                使用、方法、数据与复现文档
+├── tools/               归档查询与文档工具
+├── run.py               基础特征与早期 LightGBM 流程
+├── train_ensemble.py    固定 XGBoost 集成训练
+├── predict.py           已保存集成的推理入口
+└── evaluate.py          原始评分实现
+```
+
+根目录入口与 `src/` 适合先读；历史研究脚本通常依赖特定快照和本机路径。更详细的职责与文件关系见[仓库导航](docs/REPOSITORY_GUIDE.md)。
+
+## 继续探索
+
+| 你想做什么 | 从这里开始 |
+|---|---|
+| 了解动机、适用范围和项目定位 | [关于项目](ABOUT.md) |
+| 跑通固定基准 | [安装与运行](docs/GETTING_STARTED.md) |
+| 换成自己的股票数据 | [数据指南](docs/DATA_GUIDE.md) |
+| 理解模块与数据流 | [系统架构](docs/ARCHITECTURE.md) |
+| 阅读特征、模型与时间验证方法 | [方法详解](docs/METHODS.md) |
+| 核对指标或复算已有文件 | [结果与产物](docs/RESULTS.md) · [复现指南](docs/REPRODUCIBILITY.md) |
+| 提出改进或补充文档 | [贡献指南](CONTRIBUTING.md) |
+
+<details>
+<summary><strong>常见问题：能一键运行吗？数据和模型在哪？可以用于交易吗？</strong></summary>
+
+准备数据与依赖后，根目录的固定基准可按上面的顺序运行。复杂历史方案还需要原始权重、冻结配置和路径依赖。普通 Git 克隆包含研究源码与记录，数据和完整模型包需另行准备。
+
+项目目前是离线建模研究，没有行情接入、券商接口、完整撮合或生产部署流程。评分中的收益与集合换手也不包含完整的执行成本模型。
+
+更多问题见 [FAQ](docs/FAQ.md)。
+
+</details>
+
+[^records]: 18,959 是评分实例数，包含正式登记的 17,753 项与新增已完成原始评分 1,206 项，不能当成独立模型数量。
+[^snapshot]: 本文于 2026-11-03 重写；实验数字来自 2026-10-11 的既有记录。本次文档更新没有重新训练或刷新实验成绩。

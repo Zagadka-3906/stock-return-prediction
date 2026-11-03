@@ -1,28 +1,28 @@
-# 后续研究与验证工具
+# 后续研究与核验脚本
 
-本目录承载后续模型搜索、年度训练、官方评分、方案冻结、因果检查、候选推理、榜单登记、GitHub同步和Windows运行管理。大量脚本按轮次和版本保留，包含失败恢复过程；文件数量不是独立模型数量。
+本目录保存后续模型研究、训练期评分、冻结、推理、候选封装、完整榜登记和Windows运行管理源码。脚本往往对应具体轮次与执行版本，适合沿某个结果的依赖链阅读。
 
-2026-10-11已确认历史重建测试收益影响过推荐及研究路线；现有方案不能宣称严格训练内选模，见[合规更正](../docs/SELECTION_COMPLIANCE.md)和[机器可读状态](../selection_compliance.json)。旧核验通过与榜单登记是当时事实，不消除历史选择反馈。
+## 从具体路线进入
 
-新读者先看[项目首页](../README.md)、[模型与验证](../docs/METHODS.md)和[目录与记录](../docs/REPOSITORY_GUIDE.md)。实际运行条件见[使用与复现](../docs/GETTING_STARTED.md)。
+| 目标 | 源码或指针 | 阅读前提 |
+|---|---|---|
+| 理解直接收益基线 | `train_only_baseline143_v1_20261011.py` | [设计与时间边界](../docs/TRAIN_ONLY_BASELINE143.md) |
+| 阅读修正后的基线推理 | `train_only_baseline143_inference_v3_20261011.py` | 需要其导入的原训练脚本与完整工作目录 |
+| 查37模型候选 | `alternate_verified_consensusFraction101_submission_delivery_v1_20261011.json` | 公开副本从[结果页](../docs/RESULTS.md)进入 |
+| 查包内条目核验 | `actual_fraction101_delivery_bundle137_verification_v1_20261011.json` | 对应候选和原ZIP |
+| 查评分目录 | `complete191_plus_completed_raw_TRAIN_score_catalog_location_v7_20261011.json` | 18,959是评分记录，不是模型数量 |
+| 查正式登记 | `optimization_20261003_r191/full_registration_execution.json` | 以实际终态为准 |
 
-## 当前阅读入口
+本机生成的部分JSON和运行目录不在原路径分发，相同证据保存在`validation_sync/`快照中。源码克隆也不包含所有模型、数据和缓存。
 
-| 本机文件 | 含义 |
-|---|---|
-| `alternate_verified_consensusFraction101_submission_delivery_v1_20261011.json` | 最新37模型高分候选及提交CSV，正式完整榜待登记 |
-| `actual_fraction101_delivery_bundle137_verification_v1_20261011.json` | 已核验方案ZIP与弃用模型清理汇总 |
-| `latest_verified_submission_delivery_v2_20261008.json` | 第189轮正式已登记交付 |
-| `complete191_plus_completed_raw_TRAIN_score_catalog_location_v7_20261011.json` | 18,959项训练评分明细的位置及核验 |
-| `optimization_20261003_r191/full_registration_execution.json` | 第191轮正式登记的实际完成终态 |
-| `service_owned_workflows_20261006/` | 每个独立工作流的定义、进程身份、日志与实际终态 |
+## 读懂脚本阶段
 
-Git克隆未必包含每个本机运行文件；外部读者请通过[成果与交付](../docs/RESULTS.md)访问已发布的 `validation_sync/`归档。
+`prepare_`通常准备输入，`run_`执行研究，`seal_`封存，`register_`登记，`publish_`发布。前缀是定位线索，实际依赖和行为仍需查看代码与协议；某阶段成功不代表整条链完成。
 
-## 执行与证据
+带版本号的脚本可能用于修复连接列顺序、路径、服务恢复或核验逻辑，不一定增加新模型。不要按文件名批量运行，也不要用较新文件覆盖冻结快照。
 
-`prepare_`、`run_`、`seal_`、`publish_`及 `register_`分别处理准备、运行、封存、发布与正式登记，按对应协议依赖执行。某阶段 `passed`不代表下游全部完成。选模、冻结与提交流程以[后续选模标准](../后续选模标准.md)为准。
+## 开展自己的实验
 
-历史脚本可能依赖本机D/E盘路径、旧版本源码哈希、父方案、完整数据和已清理权重。不要批量执行目录中的脚本或覆盖旧输出。新的尝试应在新协议与独立目录中保存；已经冻结的候选、服务失败终态和评分记录继续保留原始内容。
+先读[系统架构](../docs/ARCHITECTURE.md)与[实验比较约定](../后续选模标准.md)，使用独立目录记录数据、协议和输出。根目录固定基准通常比重放历史服务更适合作为起点。
 
-模型优化已按用户截止安排暂停。阅读、改写说明或整理已有成果不表示授权自动恢复训练、评分队列或停工守护。
+旧集成路线的测试期反馈、重复搜索和结果解释见[研究边界](../docs/SELECTION_COMPLIANCE.md)。本次文档更新不启动或恢复历史训练与优化服务。
