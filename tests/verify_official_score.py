@@ -7,7 +7,6 @@ import sys
 import tempfile
 from pathlib import Path
 
-import numpy as np
 import polars as pl
 
 ROOT = Path(__file__).resolve().parents[1]

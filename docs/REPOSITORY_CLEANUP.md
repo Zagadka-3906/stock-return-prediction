@@ -1,6 +1,18 @@
 # 归档维护与历史路径查询
 
-仓库历史中保存了重复导出、累计排名页面、冻结源码与运行记录。2026-10-11的整理减少了当前Git树中的重复展示，同时保留唯一的科学记录与当前主要快照。本页说明如何在文件路径变化后继续查证旧结果。
+仓库历史中保存了重复导出、累计排名页面、冻结源码与运行记录。2026-10-11的整理减少重复展示；2026-11-03进一步删除未被保留代码引用的旧运维脚本和重复日志。每个新删除路径都保留字节相同的副本，可通过查询目录追溯。
+
+## 2026-11-03清理结果
+
+| 清理内容 | 数量 | 判断依据 |
+|---|---:|---|
+| 旧发布、监控、恢复与清理脚本 | 653 | 不在保留代码、当前文档和状态记录的传递引用范围内，且有相同Git blob的冻结副本 |
+| 重复运行日志 | 2,479 | 同一内容在其他路径保留；其中1,329份为空日志 |
+| 未使用的导入 | 2 | `run.py`的`add_top_persistence`、评分核验脚本的`numpy` |
+
+共删除3,132个路径，删除前后的既有唯一Git blob数量均为65,130；没有丢失这些文件的唯一内容。基础特征、模型、预测和数值评分实现未改，主要模型快照保持完整。判断采用文件内容身份与引用检查，没有将所有未被`import`的独立脚本一并删除。
+
+完整路径映射在[本次清理目录](../validation_sync/archive_index_20261103.jsonl.gz)，统计见[执行摘要](../validation_sync/cleanup_20261103_summary.json)。删除减少当前目录的冗余路径，不改写Git历史，也不承诺相同大小的磁盘释放。
 
 ## 保留的内容
 
@@ -14,7 +26,7 @@
 python tools/find_archive_record.py 'validation_sync/某旧目录/某文件'
 ```
 
-工具读取 [archive_index_20261011.jsonl.gz](../validation_sync/archive_index_20261011.jsonl.gz)，返回匹配路径的记录。字段可能包括：
+工具默认按日期从新到旧读取`validation_sync/archive_index_*.jsonl.gz`，包括[2026-11-03目录](../validation_sync/archive_index_20261103.jsonl.gz)和[2026-10-11目录](../validation_sync/archive_index_20261011.jsonl.gz)，返回匹配路径及最终保留位置。字段可能包括：
 
 | 字段 | 如何使用 |
 |---|---|
@@ -23,8 +35,18 @@ python tools/find_archive_record.py 'validation_sync/某旧目录/某文件'
 | `historical_url` | 整理前提交中的原文件链接 |
 | Git blob与大小 | 核对内容身份与文件规模 |
 | 删除原因 | 区分重复副本、旧展示等情况 |
+| `original_retained_path` | 旧记录原来指向的副本，仅发生后续转移时返回 |
+| `retained_path_chain` | 多次清理后经过的路径链，仅发生后续转移时返回 |
 
-若有`retained_path`，先读取该副本；若需原路径，使用返回的历史链接或 `git show 提交号:原路径`。完整Git历史或相应对象需要已获取；`--depth 1`克隆不自动包含旧提交。
+若有`retained_path`，先读取该副本；若需原路径，使用返回的历史链接或 `git show 提交号:原路径`。本次有652个被删除路径曾作为旧目录的保留副本，影响3,789条旧查询记录，工具会继续跳转，不改写原目录。完整Git历史或相应对象需要已获取；`--depth 1`克隆不自动包含旧提交。
+
+可用真实的已删除路径查询：
+
+```powershell
+python tools/find_archive_record.py 'analysis/cleanup_completed165166_transient_score_csv_v1_20261010.py'
+```
+
+`--catalog`仍支持指定单份查询目录，也可重复传入多份；指定后仅在这些目录中查找。稀疏检出需要先取得相应的压缩查询目录。
 
 gzip分片仍需按原清单的顺序重组。工具未找到某路径，只说明它不在该查询清单中，不能据此断言文件从未存在。
 
@@ -38,4 +60,4 @@ gzip分片仍需按原清单的顺序重组。工具未找到某路径，只说�
 
 manifest描述生成它时的文件与路径，不承诺该路径永远在当前main中存在。验证旧发布时，应使用对应历史提交或清理目录中的相同内容映射，不应修改原manifest来适配新目录。
 
-这次文档更新不清理模型、不改写Git历史，也不重新训练或更新历史结果。原清理执行摘要见 [cleanup140_summary.json](../validation_sync/cleanup140_summary.json)。
+2026-11-03没有清理原始数据或模型权重，没有重新训练或更新历史分数。2026-10-11的旧清理摘要仍见 [cleanup140_summary.json](../validation_sync/cleanup140_summary.json)。

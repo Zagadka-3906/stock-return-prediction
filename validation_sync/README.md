@@ -14,10 +14,14 @@
 | [测试反馈更正](Actual_selection_compliance142_correction_v1_20261011/) | 重建收益、反馈链条与评分复核证据 |
 | [原文档更新快照](Actual_project_documentation138_refresh_20261011/) | 2026-10-11的旧文档与当时记录 |
 | [归档路径目录](archive_index_20261011.jsonl.gz) | 旧路径、相同内容副本与历史提交映射 |
+| [2026-11-03去重目录](archive_index_20261103.jsonl.gz) | 653个旧运维脚本与2,479份重复日志的原路径、保留副本和Git blob |
+| [本次清理摘要](cleanup_20261103_summary.json) | 引用检查、内容保留与清理统计 |
 
 ## 按快照解释文件
 
 `manifest.json`绑定的是生成时的文件与哈希。某份旧导出在当前main被去重后，原路径应从对应提交读取，或查找相同Git blob的保留路径。完整归档查询方法见[归档维护](../docs/REPOSITORY_CLEANUP.md)。
+
+查询工具会按日期读取多份清理目录；若旧记录的保留副本又被去重，会继续解析到最终路径。原始目录和冻结manifest不随清理改写。
 
 ```powershell
 python tools/find_archive_record.py '原归档相对路径'

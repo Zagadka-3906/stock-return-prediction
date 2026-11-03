@@ -16,7 +16,7 @@ import numpy as np
 import polars as pl
 
 from src.features import build_features
-from src.scoring import Panel, add_top_persistence, make_scores, postprocess_scores, score
+from src.scoring import Panel, make_scores, postprocess_scores, score
 
 
 ROOT = Path(__file__).resolve().parent

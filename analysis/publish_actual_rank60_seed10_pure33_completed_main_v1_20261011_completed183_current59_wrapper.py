@@ -1,2 +1,0 @@
-from route_raw_science_completed183_current59_v1_20261011 import execute
-execute('publish_actual_rank60_seed10_pure33_completed_main_v1_20261011.py')
